@@ -228,8 +228,17 @@
             <right>0</right>
             <height>48</height>
             <include>Furniture_BottomBar_Texture</include>
+            <include>Furniture_PlayerProgress</include>
             <include>Furniture_DateTime</include>
-            <include condition="!Window.IsVisible(MusicVisualisation.xml) + !Window.IsVisible(VideoFullScreen.xml)">Furniture_ItemCount</include>
+            <control type="group">
+                <visible>!Player.HasMedia</visible>
+                <include condition="!Window.IsVisible(MusicVisualisation.xml) + !Window.IsVisible(VideoFullScreen.xml)">Furniture_ItemCount</include>
+            </control>
+            <control type="group">
+                <visible>Player.HasMedia</visible>
+                <visible>!Window.IsVisible(MusicVisualisation.xml) + !Window.IsVisible(VideoFullScreen.xml)</visible>
+                <include>Furniture_NowPlayingInfo</include>
+            </control>
             <include condition="Window.IsVisible(MusicVisualisation.xml)">Furniture_MusicVis_Items</include>
             <include condition="Window.IsVisible(VideoFullScreen.xml)">Furniture_VideoFullScreen_Items</include>
             <control type="grouplist">
