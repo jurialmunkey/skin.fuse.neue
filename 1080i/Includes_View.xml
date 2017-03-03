@@ -17,10 +17,12 @@
     </include>
 
     <include name="View_PVR">
-        <control type="fixedlist" id="50">
-            <include content="View_Square_Layout">
-                <param name="id" value="50" />
-            </include>
+        <control type="group" id="50">
+            <control type="fixedlist" id="54">
+                <include content="View_List_Layout">
+                    <param name="id" value="54" />
+                </include>
+            </control>
         </control>
     </include>
 
@@ -386,12 +388,12 @@
             <pagecontrol>60</pagecontrol>
             <onfocus>SetProperty(ViewType,Tiles,Home)</onfocus>
             <scrolltime tween="quadratic">400</scrolltime>
-            <itemlayout width="415.33" height="128.5" condition="!Window.IsVisible(EventLog.xml)">
+            <itemlayout width="415.33" height="128.5" condition="!Window.IsVisible(EventLog.xml) + !Window.IsVisible(MyPVRChannels.xml)">
                 <include content="View_List_ItemLayout">
                     <param name="id" value="$PARAM[id]"/>
                 </include>
             </itemlayout>
-            <focusedlayout width="415.33" height="128.5" condition="!Window.IsVisible(EventLog.xml)">
+            <focusedlayout width="415.33" height="128.5" condition="!Window.IsVisible(EventLog.xml) + !Window.IsVisible(MyPVRChannels.xml)">
                 <control type="button">
                     <visible allowhiddenfocus="true">false</visible>
                     <onfocus>SetProperty(ContextPosition,$INFO[Container($PARAM[id]).Column],Home)</onfocus>
@@ -413,6 +415,20 @@
                     <onfocus>SetProperty(ContextRow,$INFO[Container($PARAM[id]).Row],Home)</onfocus>
                 </control>
                 <include content="View_List_FocusedLayout">
+                    <param name="id" value="$PARAM[id]"/>
+                </include>
+            </focusedlayout>
+            <itemlayout width="623" height="257" condition="Window.IsVisible(MyPVRChannels.xml)">
+                <include content="View_BigList_ItemLayout">
+                    <param name="id" value="$PARAM[id]"/>
+                </include>
+            </itemlayout>
+            <focusedlayout width="623" height="257" condition="Window.IsVisible(MyPVRChannels.xml)">
+                <control type="button">
+                    <visible allowhiddenfocus="true">false</visible>
+                    <onfocus>SetProperty(ContextPosition,1,Home)</onfocus>
+                </control>
+                <include content="View_BigList_FocusedLayout">
                     <param name="id" value="$PARAM[id]"/>
                 </include>
             </focusedlayout>
@@ -617,6 +633,38 @@
                     <textcolor>main_fg_70</textcolor>
                     <font>font_listlabel</font>
                     <label>$INFO[ListItem.Label]$INFO[ListItem.Label2,  [COLOR=main_fg_30](,)[/COLOR]]</label>
+                    <visible>!Window.IsVisible(MyPVRChannels.xml)</visible>
+                </control>
+                <control type="label">
+                    <left>50</left>
+                    <width>340</width>
+                    <height>100%</height>
+                    <aligny>center</aligny>
+                    <textcolor>main_fg_30</textcolor>
+                    <font>font_listlabel</font>
+                    <label>$INFO[ListItem.ChannelNumber,,. ]$INFO[ListItem.ChannelName,,]</label>
+                    <visible>Window.IsVisible(MyPVRChannels.xml)</visible>
+                </control>
+                <control type="label">
+                    <left>400</left>
+                    <right>300</right>
+                    <height>100%</height>
+                    <aligny>center</aligny>
+                    <textcolor>main_fg_70</textcolor>
+                    <font>font_listlabel</font>
+                    <label>$INFO[ListItem.Title]</label>
+                    <visible>Window.IsVisible(MyPVRChannels.xml)</visible>
+                </control>
+                <control type="label">
+                    <left>800</left>
+                    <right>30</right>
+                    <height>100%</height>
+                    <aligny>center</aligny>
+                    <align>right</align>
+                    <textcolor>main_fg_30</textcolor>
+                    <font>font_listlabel</font>
+                    <label>$INFO[ListItem.StartTime,   (,]$INFO[ListItem.EndTime, | ,)]</label>
+                    <visible>Window.IsVisible(MyPVRChannels.xml)</visible>
                 </control>
             </itemlayout>
             <focusedlayout width="1356" height="64.25">
@@ -652,13 +700,46 @@
                 
                 <control type="label">
                     <left>50</left>
-                    <right>30</right>
+                    <width>340</width>
                     <height>100%</height>
                     <aligny>center</aligny>
                     <textcolor>Selected</textcolor>
                     <font>font_listlabel</font>
                     <shadowcolor>4f000000</shadowcolor>
                     <label>$INFO[ListItem.Label]$INFO[ListItem.Label2,  [COLOR=main_fg_70](,)[/COLOR]]</label>
+                    <visible>!Window.IsVisible(MyPVRChannels.xml)</visible>
+                </control>
+                <control type="label">
+                    <left>50</left>
+                    <right>30</right>
+                    <height>100%</height>
+                    <aligny>center</aligny>
+                    <textcolor>main_fg_70</textcolor>
+                    <font>font_listlabel</font>
+                    <shadowcolor>4f000000</shadowcolor>
+                    <label>$INFO[ListItem.ChannelNumber,,. ]$INFO[ListItem.ChannelName,,]</label>
+                    <visible>Window.IsVisible(MyPVRChannels.xml)</visible>
+                </control>
+                <control type="label">
+                    <left>400</left>
+                    <right>300</right>
+                    <height>100%</height>
+                    <aligny>center</aligny>
+                    <textcolor>Selected</textcolor>
+                    <font>font_listlabel</font>
+                    <label>$INFO[ListItem.Title]</label>
+                    <visible>Window.IsVisible(MyPVRChannels.xml)</visible>
+                </control>
+                <control type="label">
+                    <left>800</left>
+                    <right>30</right>
+                    <height>100%</height>
+                    <aligny>center</aligny>
+                    <align>right</align>
+                    <textcolor>main_fg_70</textcolor>
+                    <font>font_listlabel</font>
+                    <label>$INFO[ListItem.StartTime,   (,]$INFO[ListItem.EndTime, | ,)]</label>
+                    <visible>Window.IsVisible(MyPVRChannels.xml)</visible>
                 </control>
             </focusedlayout>
         </definition>
@@ -682,7 +763,6 @@
             <texture colordiffuse="main_fg_12">common/white.png</texture>
         </control>
         <control type="group">
-            <!-- <visible>String.IsEmpty(ListItem.Art(banner))</visible> -->
             <control type="image">
                 <left>10</left>
                 <width>108.5</width>
@@ -709,18 +789,7 @@
                 <label>$INFO[ListItem.Label]$INFO[ListItem.Label2, [COLOR=main_fg_30](,)[/COLOR]]</label>
             </control>
         </control>
-        <!-- <control type="group">
-            <visible>!String.IsEmpty(ListItem.Art(banner))</visible>
-            <control type="image">
-                <left>10</left>
-                <right>10</right>
-                <bottom>10</bottom>
-                <top>10</top>
-                <texture background="true">$INFO[ListItem.Art(banner)]</texture>
-            </control>
-        </control> -->
     </include>
-
     <include name="View_List_FocusedLayout">
         <control type="image">
             <bordersize>10</bordersize>
@@ -728,7 +797,6 @@
             <texture colordiffuse="Highlight">common/white.png</texture>
         </control>
         <control type="group">
-            <!-- <visible>String.IsEmpty(ListItem.Art(banner))</visible> -->
             <control type="image">
                 <left>10</left>
                 <width>108.5</width>
@@ -755,31 +823,75 @@
                 <label>$INFO[ListItem.Label]$INFO[ListItem.Label2, [COLOR=bfededed](,)[/COLOR]]</label>
             </control>
         </control>
-        <!-- <control type="group">
-            <visible>!String.IsEmpty(ListItem.Art(banner))</visible>
+    </include>
+
+    <include name="View_BigList_ItemLayout">
+        <control type="image">
+            <bordersize>10</bordersize>
+            <bordertexture border="12">common/nofocus-shadow10.png</bordertexture>
+            <texture colordiffuse="main_fg_12">common/white.png</texture>
+        </control>
+        <control type="group">
             <control type="image">
                 <left>10</left>
-                <right>10</right>
+                <width>237</width>
                 <bottom>10</bottom>
                 <top>10</top>
-                <texture background="true">$INFO[ListItem.Art(banner)]</texture>
+                <texture colordiffuse="main_fg_12">common/white.png</texture>
             </control>
             <control type="image">
-                <left>3</left>
-                <top>3</top>
-                <right>3</right>
-                <bottom>3</bottom>
-                <animation type="Focus">
-                    <effect type="zoom" start="90" end="100" time="150" tween="sine" easing="inout" center="auto" />
-                    <effect type="fade" start="0" end="100" time="150" tween="sine" easing="in" />
-                </animation>
-                <animation type="Unfocus">
-                    <effect type="zoom" start="100" end="90" time="150" tween="sine" easing="inout" center="auto" />
-                    <effect type="fade" start="100" end="0" time="150" tween="sine" easing="out" />
-                </animation>
-                <texture colordiffuse="Highlight" border="20">common/selectbox.png</texture>
+                <left>10</left>
+                <width>237</width>
+                <bottom>10</bottom>
+                <top>10</top>
+                <aspectratio>scale</aspectratio>
+                <texture background="true">$INFO[ListItem.Icon]</texture>
             </control>
-        </control> -->
+            <control type="textbox">
+                <left>267</left>
+                <right>30</right>
+                <top>10</top>
+                <bottom>10</bottom>
+                <aligny>center</aligny>
+                <textcolor>main_fg_70</textcolor>
+                <font>font_listlabel</font>
+                <label>$INFO[ListItem.Title,,[CR]]$INFO[ListItem.ChannelName,[COLOR=main_fg_30],[/COLOR]]$INFO[ListItem.ChannelNumber,[COLOR=main_fg_30] (,)[/COLOR]]</label>
+            </control>
+        </control>
+    </include>
+    <include name="View_BigList_FocusedLayout">
+        <control type="image">
+            <bordersize>10</bordersize>
+            <bordertexture border="12">common/focus-shadow10.png</bordertexture>
+            <texture colordiffuse="Highlight">common/white.png</texture>
+        </control>
+        <control type="group">
+            <control type="image">
+                <left>10</left>
+                <width>237</width>
+                <bottom>10</bottom>
+                <top>10</top>
+                <texture colordiffuse="1fffffff">common/white.png</texture>
+            </control>
+            <control type="image">
+                <left>10</left>
+                <width>237</width>
+                <bottom>10</bottom>
+                <top>10</top>
+                <aspectratio>scale</aspectratio>
+                <texture background="true">$INFO[ListItem.Icon]</texture>
+            </control>
+            <control type="textbox">
+                <left>267</left>
+                <right>30</right>
+                <top>10</top>
+                <bottom>10</bottom>
+                <aligny>center</aligny>
+                <textcolor>Selected</textcolor>
+                <font>font_listlabel</font>
+                <label>$INFO[ListItem.Title,,[CR]]$INFO[ListItem.ChannelName,[COLOR=main_fg_70],[/COLOR]]$INFO[ListItem.ChannelNumber,[COLOR=main_fg_70] (,)[/COLOR]]</label>
+            </control>
+        </control>
     </include>
 </includes>
 

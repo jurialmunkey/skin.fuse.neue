@@ -261,6 +261,7 @@
         <value condition="Container.Content(songs) + !String.IsEmpty(ListItem.Artist)">$INFO[ListItem.Artist,,  •  ]$INFO[ListItem.Album,,  •  ]$INFO[ListItem.Year]</value>
         <value condition="Container.Content(albums) + !String.IsEmpty(ListItem.Artist)">$INFO[ListItem.Artist,,  •  ]$INFO[ListItem.Year]</value>
         <value condition="Container.Content(artists)">$INFO[ListItem.Property(Artist_YearsActive),,  •  ]$INFO[Window(Home).Property(SkinHelper.ListItem.AlbumCount),, $LOCALIZE[36919]]</value>
+        <value condition="Window.IsVisible(MyPVRChannels.xml)">$INFO[ListItem.Title]$INFO[ListItem.EndTime,  •  $LOCALIZE[31106] ,]</value>
         <value condition="String.Contains(Container.FolderPath,/tvshows/)">$LOCALIZE[20343]$INFO[Container.FolderName,  •  ,]</value>
         <value condition="String.Contains(Container.FolderPath,/movies/)">$LOCALIZE[20342]$INFO[Container.FolderName,  •  ,]</value>
         <value condition="!String.IsEmpty(System.CurrentWindow) + !Window.IsVisible(SettingsCategory.xml) + !Window.IsVisible(Settings.xml)">$INFO[System.CurrentWindow]$INFO[Container.FolderName,  •  ,]</value>
