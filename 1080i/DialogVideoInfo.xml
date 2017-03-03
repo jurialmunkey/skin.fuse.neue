@@ -15,7 +15,7 @@
             <control type="grouplist">
                 <left>614</left>
                 <top>672</top>
-                <right>600</right>
+                <right>30</right>
                 <include>Dialog_Info_Details_Grouplist</include>
                 <!-- Director -->
                 <control type="group">
@@ -151,6 +151,7 @@
                     </control>
                     <control type="label">
                         <left>176</left>
+                        <right>600</right>
                         <textcolor>main_fg_70</textcolor>
                         <font>Tiny</font>
                         <aligny>top</aligny>
@@ -161,7 +162,7 @@
 
             <!-- Ratings -->
             <control type="grouplist">
-                <top>674</top>
+                <top>896</top>
                 <width>600</width>
                 <right>30</right>
                 <height>32</height>
@@ -170,10 +171,10 @@
                 <itemgap>12</itemgap>
                 <usecontrolcoords>true</usecontrolcoords>
                 <control type="image">
-                    <top>1</top>
+                    <top>0</top>
                     <width>32</width>
                     <height>32</height>
-                    <texture>indicator/metacritic.png</texture>
+                    <texture colordiffuse="main_fg_100">indicator/metacritic.png</texture>
                     <visible>!String.IsEmpty(Window(Home).Property(SkinHelper.ListItem.MetaCritic.Rating))</visible>
                 </control>
                 <control type="label">
@@ -189,14 +190,14 @@
                 <control type="image">
                     <width>32</width>
                     <height>32</height>
-                    <texture>indicator/rtrotten.png</texture>
+                    <texture colordiffuse="main_fg_100">indicator/rtrotten.png</texture>
                     <visible>!String.IsEmpty(Window(Home).Property(SkinHelper.ListItem.RottenTomatoes.Meter))</visible>
                     <visible>!Integer.IsGreater(Window(home).Property(SkinHelper.ListItem.RottenTomatoes.Meter),59)</visible>
                 </control>
                 <control type="image">
                     <width>32</width>
                     <height>32</height>
-                    <texture>indicator/rtfresh.png</texture>
+                    <texture colordiffuse="main_fg_100">indicator/rtfresh.png</texture>
                     <visible>!String.IsEmpty(Window(Home).Property(SkinHelper.ListItem.RottenTomatoes.Meter))</visible>
                     <visible>Integer.IsGreater(Window(home).Property(SkinHelper.ListItem.RottenTomatoes.Meter),59)</visible>
                 </control>
@@ -214,7 +215,7 @@
                     <top>1</top>
                     <width>40</width>
                     <height>32</height>
-                    <texture>indicator/imdbicon.png</texture>
+                    <texture colordiffuse="main_fg_100">indicator/imdbicon.png</texture>
                     <visible>!String.IsEmpty(ListItem.RatingAndVotes) | !String.IsEmpty(Window(home).Property(SkinHelper.ListItem.Rating.IMDB))</visible>
                 </control>
                 <control type="label">
@@ -237,15 +238,6 @@
                     <label>$INFO[ListItem.RatingAndVotes, ,]</label>
                     <visible>String.IsEmpty(Window(home).Property(SkinHelper.ListItem.Rating.IMDB)) + !String.IsEmpty(ListItem.RatingAndVotes)</visible>
                 </control>
-            </control>
-
-            <!-- DiscArt -->
-            <control type="image">
-                <top>722</top>
-                <right>20</right>
-                <bottom>146</bottom>
-                <aspectratio align="right" aligny="center">keep</aspectratio>
-                <texture>$INFO[ListItem.Art(discart)]</texture>
             </control>
 
             <!-- Buttons -->
