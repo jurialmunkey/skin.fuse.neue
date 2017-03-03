@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- Foundation -->
+<window id="147">
+    <defaultcontrol>61</defaultcontrol>
+
+    <controls>
+
+        <include>GlobalOverlay</include>
+
+        <control type="group">
+            <left>240</left>
+            <top>83</top>
+            <width>1500</width>
+            <height>950</height>
+
+            <include>DefDialogInfoPanel</include>
+
+            <control type="label" id="1">
+                <description>header label</description>
+                <left>30</left>
+                <right>30</right>
+                <top>48</top>
+                <font>MediumBold</font>
+                <textcolor>dialog_fg_70</textcolor>
+                <height>45</height>
+            </control>
+
+            <control type="textbox" id="5">
+                <description>textarea</description>
+                <left>60</left>
+                <right>90</right>
+                <top>108</top>
+                <height>780</height>
+                <align>justify</align>
+            </control>
+
+            <control type="scrollbar" id="61">
+                <right>30</right>
+                <top>108</top>
+                <width>8</width>
+                <height>780</height>
+                <onleft>Close</onleft>
+                <onright>Close</onright>
+                <ondown>61</ondown>
+                <onup>61</onup>
+                <texturesliderbackground colordiffuse="dialog_fg_12">common/white.png</texturesliderbackground>
+                <texturesliderbar colordiffuse="Highlight">common/white.png</texturesliderbar>
+            </control>
+
+        </control>
+
+    </controls>
+
+</window>

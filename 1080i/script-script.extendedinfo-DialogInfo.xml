@@ -1,0 +1,263 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- Foundation -->
+<window>
+    <defaultcontrol always="true">9000</defaultcontrol>
+
+    <onload>SetProperty(150_onback,SetFocus(9000))</onload>
+    <onload>SetProperty(250_onback,SetFocus(9000))</onload>
+    <onload>SetProperty(350_onback,SetFocus(9000))</onload>
+    <onload>SetProperty(550_onback,SetFocus(9000))</onload>
+    <onload>ClearProperty(content)</onload>
+    <controls>
+
+        <include>GlobalOverlay</include>
+
+        <control type="group">
+            <animation effect="slide" start="0" end="0,890" time="400" delay="0" tween="quadratic" easing="out" reversible="false">WindowClose</animation>
+            <animation effect="slide" end="0" start="0,890" time="400" delay="0" tween="quadratic" easing="out" reversible="false">WindowOpen</animation>
+            <bottom>0</bottom>
+            <left>0</left>
+            <right>0</right>
+            <height>890</height>
+            <include>Dialog_Info_Panel</include>
+
+            <!-- Header -->
+            <control type="label">
+                <textcolor>main_fg_70</textcolor>
+                <left>SidePad</left>
+                <include>Dialog_Info_Header</include>
+                <label>$INFO[Window.Property(label)]</label>
+            </control>
+
+            <!-- Fanart -->
+            <control type="group">
+                <left>SidePad</left>
+                <top>100</top>
+                <width>426</width>
+                <height>640</height>
+                <control type="image">
+                    <centerbottom>0</centerbottom>
+                    <width>100%</width>
+                    <height>48</height>
+                    <aspectratio>stretch</aspectratio>
+                    <texture border="24,12,24,12">diffuse/shadowspot.png</texture>
+                </control>
+                <control type="image">
+                    <include>Defs_Shadow</include>
+                    <aspectratio scalediffuse="false">scale</aspectratio>
+                    <texture>$INFO[Window.Property(thumb)]</texture>
+                </control>
+            </control>
+
+            <!-- Info -->
+            <control type="grouplist">
+                <left>536</left>
+                <height>595</height>
+                <include>Dialog_Info_Details_Grouplist</include>
+                
+                <!-- Also Known -->
+                <control type="label">
+                    <textcolor>main_fg_70</textcolor>
+                    <width>100%</width>
+                    <height>25</height>
+                    <font>SmallBold</font>
+                    <label>$ADDON[script.extendedinfo 32016]</label>
+                    <aligny>center</aligny>
+                </control>
+                <control type="label">
+                    <textcolor>main_fg_70</textcolor>
+                    <width>100%</width>
+                    <height>60</height>
+                    <font>Tiny</font>
+                    <aligny>top</aligny>
+                    <label fallback="19055">$INFO[Window.Property(AlsoKnownAs)]</label>
+                </control>
+                
+                <!-- Place of Birth -->
+                <control type="label">
+                    <textcolor>main_fg_70</textcolor>
+                    <width>100%</width>
+                    <height>25</height>
+                    <font>SmallBold</font>
+                    <label>$ADDON[script.extendedinfo 32014]</label>
+                    <aligny>center</aligny>
+                </control>
+                <control type="label">
+                    <textcolor>main_fg_70</textcolor>
+                    <width>100%</width>
+                    <height>60</height>
+                    <font>Tiny</font>
+                    <aligny>top</aligny>
+                    <label fallback="19055">$INFO[Window.Property(PlaceOfBirth)]</label>
+                </control>
+                
+                <!-- Birthday -->
+                <control type="label">
+                    <textcolor>main_fg_70</textcolor>
+                    <width>100%</width>
+                    <height>25</height>
+                    <font>SmallBold</font>
+                    <label>$ADDON[script.extendedinfo 32012]</label>
+                    <aligny>center</aligny>
+                </control>
+                <control type="label">
+                    <textcolor>main_fg_70</textcolor>
+                    <width>100%</width>
+                    <height>60</height>
+                    <font>Tiny</font>
+                    <aligny>top</aligny>
+                    <label fallback="19055">$INFO[Window.Property(Birthday)]</label>
+                </control>
+                
+                <!-- Death Day -->
+                <control type="label">
+                    <textcolor>main_fg_70</textcolor>
+                    <width>100%</width>
+                    <height>25</height>
+                    <font>SmallBold</font>
+                    <label>$ADDON[script.extendedinfo 32013]</label>
+                    <aligny>center</aligny>
+                    <visible>!String.IsEmpty(Window.Property(DeathDay))</visible>
+                </control>
+                <control type="label">
+                    <textcolor>main_fg_70</textcolor>
+                    <width>100%</width>
+                    <height>60</height>
+                    <font>Tiny</font>
+                    <aligny>top</aligny>
+                    <label fallback="19055">$INFO[Window.Property(DeathDay)]</label>
+                    <visible>!String.IsEmpty(Window.Property(DeathDay))</visible>
+                </control>
+
+                <!-- Age -->
+                <control type="label">
+                    <textcolor>main_fg_70</textcolor>
+                    <width>100%</width>
+                    <height>25</height>
+                    <font>SmallBold</font>
+                    <label>$ADDON[script.extendedinfo 32020]</label>
+                    <aligny>center</aligny>
+                </control>
+                <control type="label">
+                    <textcolor>main_fg_70</textcolor>
+                    <width>100%</width>
+                    <height>60</height>
+                    <font>Tiny</font>
+                    <aligny>top</aligny>
+                    <label fallback="19055">$INFO[Window.Property(Age)]</label>
+                </control>
+
+                <!-- Bio -->
+                <control type="label">
+                    <textcolor>main_fg_70</textcolor>
+                    <label>21887</label>
+                    <width>100%</width>
+                    <height>25</height>
+                    <font>SmallBold</font>
+                    <aligny>center</aligny>
+                </control>
+                <control type="textbox">
+                    <width>100%</width>
+                    <height>120</height>
+                    <font>Tiny</font>
+                    <aligny>top</aligny>
+                    <textcolor>main_fg_70</textcolor>
+                    <label>$INFO[Window.Property(Biography)]</label>
+                </control>
+                
+            </control>
+
+            <!-- Buttons -->
+            <control type="grouplist" id="9000">
+                <include>Dialog_Info_Button_Grouplist</include>
+
+                <!-- Movies -->
+                <control type="button" id="9001">
+                    <label>$ADDON[script.extendedinfo 32010]</label>
+                    <onclick>SetProperty(content,150)</onclick>
+                    <onclick>SetFocus(150)</onclick>
+                    <onfocus>ClearProperty(content)</onfocus>
+                    <include>Dialog_Info_Buttons</include>
+                    <enable>Integer.IsGreater(Container(150).NumItems,0)</enable>
+                </control>
+                
+                <!-- TvShows -->
+                <control type="button" id="9002">
+                    <label>20343</label>
+                    <onclick>SetProperty(content,250)</onclick>
+                    <onclick>SetFocus(250)</onclick>
+                    <onfocus>ClearProperty(content)</onfocus>
+                    <include>Dialog_Info_Buttons</include>
+                    <enable>Integer.IsGreater(Container(250).NumItems,0)</enable>
+                </control>
+
+                <!-- YouTube -->
+                <control type="button" id="9003">
+                    <label>$ADDON[script.extendedinfo 32118]</label>
+                    <onclick>SetProperty(content,350)</onclick>
+                    <onclick>SetFocus(350)</onclick>
+                    <onfocus>ClearProperty(content)</onfocus>
+                    <include>Dialog_Info_Buttons</include>
+                    <enable>Integer.IsGreater(Container(350).NumItems,0)</enable>
+                </control>
+
+                <!-- As Crew -->
+                <control type="button" id="9004">
+                    <label>$ADDON[script.extendedinfo 32115]</label>
+                    <onclick>SetProperty(content,550)</onclick>
+                    <onclick>SetFocus(550)</onclick>
+                    <onfocus>ClearProperty(content)</onfocus>
+                    <include>Dialog_Info_Buttons</include>
+                    <enable>Integer.IsGreater(Container(550).NumItems,0)</enable>
+                </control>
+            </control>
+        </control>
+
+        <include>Furniture_InfoClock</include>
+        
+        <!-- Movies -->
+        <include content="Dialog_Custom_List">
+            <param name="id" value="150" />
+            <param name="cancelid" value="8150" />
+            <param name="content" value="false" />
+            <param name="header" value="$ADDON[script.extendedinfo 32010]" />
+            <param name="visible" value="String.IsEqual(Window.Property(Content),150)" />
+            <param name="cancelaction" value="SetFocus(9000)" />
+            <param name="label2" value="ListItem.Property(character)" />
+        </include>
+        <!-- TV -->
+        <include content="Dialog_Custom_List">
+            <param name="id" value="250" />
+            <param name="cancelid" value="8250" />
+            <param name="content" value="false" />
+            <param name="header" value="20343" />
+            <param name="visible" value="String.IsEqual(Window.Property(Content),250)" />
+            <param name="cancelaction" value="SetFocus(9000)" />
+            <param name="label2" value="ListItem.Property(character)" />
+        </include>
+        <!-- Youtube -->
+        <include content="Dialog_Custom_List">
+            <param name="id" value="350" />
+            <param name="cancelid" value="8350" />
+            <param name="content" value="false" />
+            <param name="header" value="$ADDON[script.extendedinfo 32118]" />
+            <param name="visible" value="String.IsEqual(Window.Property(Content),350)" />
+            <param name="cancelaction" value="SetFocus(9000)" />
+        </include>
+        <!-- Crew -->
+        <include content="Dialog_Custom_List">
+            <param name="id" value="550" />
+            <param name="cancelid" value="8550" />
+            <param name="content" value="false" />
+            <param name="header" value="$ADDON[script.extendedinfo 32115]" />
+            <param name="visible" value="String.IsEqual(Window.Property(Content),550)" />
+            <param name="cancelaction" value="SetFocus(9000)" />
+            <param name="label2" value="ListItem.Property(job)" />
+        </include>
+
+        <control type="list" id="450"><visible>false</visible></control>
+        <control type="list" id="650"><visible>false</visible></control>
+        <control type="list" id="750"><visible>false</visible></control>
+    </controls>
+
+</window>

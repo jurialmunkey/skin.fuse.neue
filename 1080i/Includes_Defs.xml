@@ -1,0 +1,208 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<includes>
+
+    <include name="Defs_SetStartWindow">
+        <onload condition="!Window.Previous(MusicVisualisation.xml) + !Window.Previous(VideoFullScreen.xml) + !Window.Previous(1111)">SetProperty(Container_FolderPath,$INFO[Container.FolderPath],Home)</onload>
+    </include>
+
+    <!-- Options Menu -->
+    <include name="Defs_Options_Menu">
+        <left>8</left>
+        <bottom>56</bottom>
+        <include>Animation_ZoomIn</include>
+        <include>Animation_FadeOut</include>
+        <width>466</width>
+        <height>312</height>
+        <control type="image">
+            <description>background image</description>
+            <texture border="16" colordiffuse="dialog_bg_100">common/rounded-shadow8.png</texture>
+        </control>
+        <control type="image">
+            <left>64</left>
+            <bottom>0</bottom>
+            <width>48</width>
+            <height>24</height>
+            <texture colordiffuse="dialog_bg_100">common/contextboxarrow.png</texture>
+        </control>
+    </include>
+    <include name="Defs_Options_Grouplist">
+        <left>8</left>
+        <bottom>16</bottom>
+        <width>450</width>
+        <top>16</top>
+        <itemgap>0</itemgap>
+        <onback>50</onback>
+        <onleft>9100</onleft>
+        <onright>9100</onright>
+    </include>
+
+    <!-- Widget Content -->
+    <variable name="Defs_Widget_Content">
+        <value condition="!IsEmpty(Container(300).ListItem.Property(widgetPath))">$INFO[Container(300).ListItem.Property(widgetPath)]</value>
+        <value condition="substring(Container(300).ListItem.Property(widget),Weather,left) + !IsEmpty(Skin.String(weather.fanart))">noop</value>
+        <value condition="!IsEmpty(Container(300).ListItem.Property(Background))">noop</value>
+        <value condition="!IsEmpty(Skin.String(home.slideshowpath)) + IsEmpty(Container(300).ListItem.Property(widget))">noop</value>
+        <value condition="!IsEmpty(Skin.String(home.fallbackwidget))">$INFO[Skin.String(home.fallbackwidget)]</value>
+        <value>plugin://service.library.data.provider?type=randommovies&amp;reload=$INFO[Window.Property(randommovies)]</value>
+    </variable>
+
+    <variable name="Defs_Widget_Target">
+        <value condition="!IsEmpty(Container(300).ListItem.Property(widgetTarget))">$INFO[Container(300).ListItem.Property(widgetTarget)]</value>
+        <value>videos</value>
+    </variable>
+
+    <!-- Keyboard and Numeric Keys -->
+    <include name="Defs_Keyboard_Button">
+        <width>85</width>
+        <height>75</height>
+        <texturenofocus border="5" colordiffuse="dialog_fg_12">common/box.png</texturenofocus>
+        <texturefocus border="5" colordiffuse="Highlight">common/box.png</texturefocus>
+        <textoffsetx>0</textoffsetx>
+        <textcolor>dialog_fg_70</textcolor>
+        <focusedcolor>Selected</focusedcolor>
+        <radioposx>320</radioposx>
+        <radioposy>22</radioposy>
+    </include>
+
+    <!-- Context Button -->
+    <include name="Defs_Context_Button">
+        <radioposx>400</radioposx>
+        <width>450</width>
+        <height>70</height>
+        <font>Tiny</font>
+        <textcolor>dialog_fg_70</textcolor>
+        <textureradiofocus colordiffuse="dialog_fg_70">buttons/radio-on.png</textureradiofocus>
+        <textureradionofocus colordiffuse="dialog_fg_30">buttons/radio-off.png</textureradionofocus>
+        <focusedcolor>Selected</focusedcolor>
+        <alttexturefocus colordiffuse="Highlight" border="16">common/white.png</alttexturefocus>
+        <texturefocus colordiffuse="Highlight" border="16">common/white.png</texturefocus>
+        <onunfocus>SetProperty(ShowFurniture_TopBar,1,Home)</onunfocus>
+        <onfocus>SetProperty(ShowFurniture_TopBar,0,Home)</onfocus>
+    </include>
+
+    <!-- Settings Buttons -->
+    <include name="Defs_Settings_Button">
+        <align>left</align>
+        <font>Small</font>
+        <radioposx>1395</radioposx>
+        <textcolor>panel_fg_100</textcolor>
+        <disabledcolor>panel_fg_12</disabledcolor>
+        <height>70</height>
+        <textoffsetx>50</textoffsetx>
+        <textureup flipy="true" colordiffuse="panel_fg_30">buttons/spin-down.png</textureup>
+        <texturedown colordiffuse="panel_fg_30">buttons/spin-down.png</texturedown>
+        <textureupfocus flipy="true" colordiffuse="panel_fg_100">buttons/spin-down.png</textureupfocus>
+        <texturedownfocus colordiffuse="panel_fg_100">buttons/spin-down.png</texturedownfocus>
+        <textureradiofocus colordiffuse="panel_fg_70">buttons/radio-on.png</textureradiofocus>
+        <textureradionofocus colordiffuse="panel_fg_12">buttons/radio-off.png</textureradionofocus>
+        <texturefocus colordiffuse="$VAR[Defs_Settings_ColorHighlight]">common/white.png</texturefocus>
+        <alttexturefocus colordiffuse="$VAR[Defs_Settings_ColorHighlight]">common/white.png</alttexturefocus>
+    </include>
+    <variable name="Defs_Settings_ColorHighlight">
+        <value condition="Control.HasFocus(300) | Control.HasFocus(302) | Control.HasFocus(20)">00ffffff</value>
+        <value>Highlight</value>
+    </variable>
+
+    <!-- Grouplist 9000 -->
+    <include name="Defs_9000_Grouplist">
+        <visible allowhiddenfocus="true">ControlGroup(9000).HasFocus()</visible>
+        <onleft>50</onleft>
+        <onright>50</onright>
+        <onback>50</onback>
+        <left>8</left>
+        <top>16</top>
+        <width>510</width>
+        <height>350</height>
+        <itemgap>0</itemgap>
+    </include>
+
+    <!-- Context Type Menu Background -->
+    <include name="Defs_9000_Background">
+        <visible allowhiddenfocus="true">ControlGroup(9000).HasFocus()</visible>
+        <include>Animation_ZoomIn</include>
+        <include>Animation_FadeOut</include>
+        <top>184</top>
+        <centerleft>50%</centerleft>
+        <height>382</height>
+        <width>466</width>
+
+        <control type="image">
+            <description>background image</description>
+            <left>0</left>
+            <top>0</top>
+            <width>466</width>
+            <height>100%</height>
+            <texture border="16" colordiffuse="dialog_bg_100">common/rounded-shadow8.png</texture>
+        </control>
+    </include>
+
+    <!-- Shadows -->
+    <include name="Defs_DarkShadow">
+        <left>-24</left>
+        <right>-24</right>
+        <top>-24</top>
+        <bottom>-24</bottom>
+        <bordersize>24</bordersize>
+        <bordertexture border="24">common/dark-shadow-24.png</bordertexture>
+    </include>
+    <include name="Defs_Shadow">
+        <left>-24</left>
+        <right>-24</right>
+        <top>-24</top>
+        <bottom>-24</bottom>
+        <bordersize>24</bordersize>
+        <bordertexture border="32" colordiffuse="dialog_fg_12">common/shadow-24.png</bordertexture>
+    </include>
+    <include name="Defs_Shadow_Opaque">
+        <left>-24</left>
+        <right>-24</right>
+        <top>-24</top>
+        <bottom>-24</bottom>
+        <bordersize>24</bordersize>
+        <bordertexture border="32" colordiffuse="main_bg_100">common/shadow-24.png</bordertexture>
+    </include>
+
+    <!-- Busy Spinner -->
+    <include name="Defs_BusySpinner">
+        <param name="label" default="$LOCALIZE[20186]..." />
+        <definition>
+            <control type="group">
+                <height>170</height>
+                <width>720</width>
+                <centerleft>50%</centerleft>
+                <centertop>50%</centertop>
+                <control type="image">
+                    <description>Busy animation</description>
+                    <centerleft>50%</centerleft>
+                    <top>0</top>
+                    <width>100</width>
+                    <height>100</height>
+                    <texture>dialog/loading-back.png</texture>
+                    <aspectratio>keep</aspectratio>
+                </control>
+                <control type="image">
+                    <description>Busy animation</description>
+                    <centerleft>50%</centerleft>
+                    <top>0</top>
+                    <width>100</width>
+                    <height>100</height>
+                    <animation effect="rotate" condition="true" start="0" end="360" loop="true" time="1000" center="auto">Conditional</animation>
+                    <texture colordiffuse="Highlight">dialog/loading-spinner.png</texture>
+                    <aspectratio>keep</aspectratio>
+                </control>
+                <control type="label">
+                    <description>Busy label</description>
+                    <centerleft>50%</centerleft>
+                    <bottom>0</bottom>
+                    <width>720</width>
+                    <height>100</height>
+                    <aligny>center</aligny>
+                    <align>center</align>
+                    <label>$PARAM[label]</label>
+                    <textcolor>ffededed</textcolor>
+                </control>
+            </control>
+        </definition>
+    </include>
+
+</includes>

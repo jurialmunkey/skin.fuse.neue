@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- Foundation -->
+<window id="0">
+    <defaultcontrol always="true">300</defaultcontrol>
+    <onload>Skin.SetString(SkinHelper.RandomFanartDelay,10)</onload>
+    <onload>RunScript(script.skinshortcuts,type=buildxml&amp;mainmenuID=300&amp;group=mainmenu|x1111|x1112|x1113|x1114|x1115|x1116|x1117|x1118|x1119)</onload>
+    <onload>SetProperty(LowerFurniture_BottomBar,0,Home)</onload>
+    <onload condition="!Skin.HasSetting(SkinHelper.EnablePVRThumbs)">Skin.SetBool(SkinHelper.EnablePVRThumbs)</onload>
+    <onload condition="!Skin.HasSetting(SkinHelper.EnableMusicArt)">Skin.SetBool(SkinHelper.EnableMusicArt)</onload>
+    <controls>
+        <include>GlobalBackground</include>
+        <include>Furniture_TopBar</include>
+        <include>Furniture_BottomBar</include>
+        <include content="Furniture_BigPoster">
+            <param name="container" value="Container(301)." />
+            <param name="visible" value="!Container(301).IsUpdating" />
+            <param name="variable" value="$VAR[HomePosterImage]" />
+        </include>
+        <include>Furniture_Clock</include>
+        
+    </controls>
+</window>

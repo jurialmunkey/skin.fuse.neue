@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- Foundation -->
+<window id="502">
+    <defaultcontrol always="true">50</defaultcontrol>
+    <menucontrol>9000</menucontrol>
+    <views>50,51,52,53,54</views>
+    <onload>SetFocus(50)</onload>
+    <onload>SetProperty(LowerFurniture_BottomBar,0,Home)</onload>
+    <include>Defs_SetStartWindow</include>
+    <controls>
+
+        <include>GlobalBackground</include>
+        <include>Furniture_TopBar</include>
+        <include>Furniture_BottomBar</include>
+        <include content="Furniture_BigPoster">
+            <param name="height" value="504" />
+        </include>
+        
+        <include>Furniture_Clock</include>
+
+        <control type="group">
+            <include>GlobalOverlay</include>
+            <include>Animation_FadeIn</include>
+            <visible allowhiddenfocus="true">ControlGroup(6000).HasFocus()</visible>
+            <control type="group">
+                <include>Defs_Options_Menu</include>
+                <control type="grouplist" id="6000">
+                    <include>Defs_Options_Grouplist</include>
+                    <control type="togglebutton" id="4">
+                        <label>$LOCALIZE[580]: $LOCALIZE[584]</label>
+                        <altlabel>$LOCALIZE[580]: $LOCALIZE[585]</altlabel>
+                        <usealttexture>Container.SortDirection(Descending)</usealttexture>
+                        <include>Defs_Context_Button</include>
+                    </control>
+                    <control type="button" id="8">
+                        <description>Search</description>
+                        <label>137</label>
+                        <include>Defs_Context_Button</include>
+                    </control>
+                    <control type="button" id="16">
+                        <description>Party Mode</description>
+                        <label>589</label>
+                        <include>Defs_Context_Button</include>
+                    </control>
+                    <control type="button" id="20">
+                        <description>Library</description>
+                        <label>653</label>
+                        <include>Defs_Context_Button</include>
+                    </control>
+                </control>
+                
+            </control>
+        </control>
+
+    </controls>
+
+</window>

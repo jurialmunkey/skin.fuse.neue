@@ -1,0 +1,149 @@
+<window type="dialog">
+    <defaultcontrol always="true">120</defaultcontrol>
+    <controls>
+        <include>GlobalOverlay</include>
+
+        <control type="group">
+            <include>Dialog_Standard_Group</include>
+            
+            <control type="label" id="100">
+                <include>Dialog_Standard_Header</include>
+                <label>13388</label>
+            </control>
+
+            <control type="label">
+                <description>Path</description>
+                <bottom>10</bottom>
+                <height>84</height>
+                <aligny>center</aligny>
+                <left>30</left>
+                <width>750</width>
+                <haspath>true</haspath>
+                <font>Tiny</font>
+                <textcolor>dialog_fg_70</textcolor>
+                <label>$INFO[Control.GetLabel(140),,   ]$INFO[Player.FileName]</label>
+            </control>
+
+            <control type="label" id="140"><visible allowhiddenfocus="true">false</visible></control>
+
+            <!-- Selection List -->
+            <control type="panel" id="120">
+                <include>Dialog_Standard_List_Left</include>
+                <onleft>8000</onleft>
+                <onright>8000</onright>
+                <onup>450</onup>
+                <ondown>450</ondown>
+                <itemlayout height="138" width="700">
+                    <control type="image">
+                        <include>Dialog_Standard_List_Left_Icon</include>
+                    </control>
+                    <control type="label">
+                        <animation effect="slide" end="0,18" condition="IsEmpty(ListItem.AddonSummary)">Conditional</animation>
+                        <include>Dialog_Standard_List_Left_Label</include>
+                    </control>
+                    <control type="label">
+                        <label>$INFO[ListItem.AddonSummary]</label>
+                        <include>Dialog_Standard_List_Left_Label2</include>
+                    </control>
+                </itemlayout>
+                <focusedlayout height="138" width="700">
+                    <control type="image">
+                        <width>100%</width>
+                        <height>135</height>
+                        <texture border="5" colordiffuse="Highlight">common/white.png</texture>
+                    </control>
+                    <control type="image">
+                        <include>Dialog_Standard_List_Left_Icon</include>
+                    </control>
+                    <control type="label">
+                        <textcolor>Selected</textcolor>
+                        <selectedcolor>Selected</selectedcolor>
+                        <animation effect="slide" end="0,18" condition="IsEmpty(ListItem.AddonSummary)">Conditional</animation>
+                        <include>Dialog_Standard_List_Left_Label</include>
+                    </control>
+                    <control type="label">
+                        <textcolor>Selected</textcolor>
+                        <selectedcolor>Selected</selectedcolor>
+                        <label>$INFO[ListItem.AddonSummary]</label>
+                        <include>Dialog_Standard_List_Left_Label2</include>
+                    </control>
+                </focusedlayout>
+            </control>
+
+            <!-- Buttons -->
+            <control type="grouplist" id="8000">
+                <include>Dialog_Standard_Right_Grouplist</include>
+                <onright>120</onright>
+                <onleft>120</onleft>
+                <control type="button" id="8001">
+                    <description>Cancel</description>
+                    <label>222</label>
+                    <onclick>Close</onclick>
+                    <include>Dialog_Standard_Right_Buttons</include>
+                </control>
+                <control type="button" id="160">
+                    <description>Manual Search</description>
+                    <label>413</label>
+                    <include>Dialog_Standard_Right_Buttons</include>
+                </control>
+                <!-- Providers -->
+                <control type="list" id="150">
+                    <description>Button Area</description>
+                    <left>1130</left>
+                    <top>0</top>
+                    <height>350</height>
+                    <width>300</width>
+                    <onleft>120</onleft>
+                    <onright>120</onright>
+                    <onup>160</onup>
+                    <orientation>vertical</orientation>
+                    <scrolltime>0</scrolltime>
+                    <itemlayout height="70" width="300">
+                        <control type="label">
+                            <label>$INFO[ListItem.Label]</label>
+                            <include>Dialog_Standard_Right_Buttons</include>
+                        </control>
+                    </itemlayout>
+                    <focusedlayout height="70" width="300">
+                        <control type="image">
+                            <texture border="5" colordiffuse="Highlight">common/box.png</texture>
+                            <visible>Control.HasFocus(150)</visible>
+                        </control>
+                        <control type="label">
+                            <label>$INFO[ListItem.Label]</label>
+                            <textcolor>Selected</textcolor>
+                            <include>Dialog_Standard_Right_Buttons</include>
+                            <visible>Control.HasFocus(150)</visible>
+                        </control>
+                        <control type="label">
+                            <label>$INFO[ListItem.Label]</label>
+                            <include>Dialog_Standard_Right_Buttons</include>
+                            <visible>!Control.HasFocus(150)</visible>
+                        </control>
+                    </focusedlayout>
+                </control>
+            </control>
+
+            <!-- Big Image -->
+            <control type="group">
+                <centerright>190</centerright>
+                <top>357</top>
+                <width>300</width>
+                <height>450</height>
+                <control type="image" id="110">
+                    <aspectratio align="center" aligny="bottom">keep</aspectratio>
+                </control>
+            </control>
+
+            <!-- Separator -->
+            <control type="image">
+                <left>699</left>
+                <top>120</top>
+                <height>687</height>
+                <width>1</width>
+                <texture colordiffuse="dialog_fg_12">common/white.png</texture>
+            </control>
+
+        </control>
+    </controls>
+</window>

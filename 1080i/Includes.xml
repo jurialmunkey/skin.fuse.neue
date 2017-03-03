@@ -1,0 +1,219 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- Foundation -->
+<includes>
+
+    <include file="Defaults.xml" />
+
+    <include file="Includes_Labels.xml" />
+    <include file="Includes_Images.xml" />
+    <include file="Includes_Animations.xml" />
+    <include file="Includes_Defs.xml" />
+    <include file="Includes_OSD.xml" />    
+    <include file="Includes_Furniture.xml" />
+    <include file="Includes_Dialog.xml" />
+    <include file="Includes_View.xml" />
+
+    <include file="script-skinshortcuts-includes.xml"/>
+
+
+    <expression name="Expression_InfoSlide">[[Control.HasFocus(54) | Control.HasFocus(53) | Control.HasFocus(52) | Control.HasFocus(51) | Control.HasFocus(50) | Control.HasFocus(8000) | Control.HasFocus(60) | Control.HasFocus(61) | ControlGroup(9100).HasFocus() | ControlGroup(6000).HasFocus()] + [Container.Content(movies) | Container.Content(tvshows) | Container.Content(sets) | Container.Content(episodes) | Container.Content(seasons) | Container.Content(videos)] + [!String.IsEmpty(Control.GetLabel(9399)) | ListItem.IsCollection]]</expression>
+
+
+    <include name="HiddenButton">
+        <left>-20</left>
+        <top>-20</top>
+        <width>1</width>
+        <height>1</height>
+        <label>-</label>
+        <texturenofocus>-</texturenofocus>
+        <texturefocus>-</texturefocus>
+    </include>
+
+    <include name="Dimensions_Fullscreen">
+        <left>0</left>
+        <top>0</top>
+        <width>1920</width>
+        <height>1080</height>
+    </include>
+
+    <include name="WindowID">
+        <width>780</width>
+        <height>21</height>
+        <textcolor>Blue</textcolor>
+        <shadowcolor>Black</shadowcolor>
+        <align>left</align>
+    </include>
+
+    <include name="DialogID">
+        <width>780</width>
+        <height>21</height>
+        <textcolor>Green</textcolor>
+        <shadowcolor>Black</shadowcolor>
+        <align>left</align>
+    </include>
+
+    <include name="PathID">
+        <left>15r</left>
+        <top>15</top>
+        <width>780</width>
+        <height>21</height>
+        <textcolor>Blue</textcolor>
+        <shadowcolor>Black</shadowcolor>
+        <align>right</align>
+    </include>
+
+    <include name="ControlID">
+        <left>15r</left>
+        <top>48</top>
+        <width>780</width>
+        <height>21</height>
+        <textcolor>Red</textcolor>
+        <shadowcolor>Black</shadowcolor>
+        <align>right</align>
+    </include>
+
+    <include name="GlobalOverlay">
+
+        <control type="image">
+            <include>Animation_FadeIn</include>
+            <include condition="!Window.IsVisible(DialogButtonMenu.xml)">Animation_FadeOut</include>
+            <include>Dimensions_Fullscreen</include>
+            <texture border="2">common/black-back.png</texture>
+        </control>
+
+    </include>
+
+    <variable name="GlobalFanart">
+
+        <!-- Misc -->
+        <!-- <value condition="[Window.IsVisible(script-script.extendedinfo-DialogVideoInfo.xml) + IsEmpty(Window(home).Property(ExtendedInfo_fanart))] | Window.IsVisible(script-script.extendedinfo-DialogInfo.xml) | Window.IsVisible(script-NextAired-TVGuide.xml) | Window.IsVisible(script-NextAired-TVGuide2.xml)">special://skin/extras/backgrounds/default.jpg</value> -->
+        <!-- <value condition="Window.IsVisible(script-script.extendedinfo-DialogVideoInfo.xml) + !IsEmpty(Window(home).Property(ExtendedInfo_fanart))">$INFO[Window(home).Property(ExtendedInfo_fanart)]</value> -->
+        <value condition="Window.IsVisible(weather) + !IsEmpty(Skin.String(weather.fanart.path))">$INFO[Skin.String(weather.fanart.path)]$INFO[Window(Weather).Property(Current.FanartCode)]/</value>
+        
+
+        <!-- Home Window -->
+        <value condition="Window.IsVisible(home) + !IsEmpty(Skin.String(weather.fanart.path)) + substring(Container(300).ListItem.Property(widget),Weather,left) + !Skin.HasSetting(home.dontshowfanart)">$INFO[Skin.String(weather.fanart.path)]$INFO[Window(Weather).Property(Current.FanartCode)]/</value>
+        <value condition="Window.IsVisible(home) + !IsEmpty(Container(301).ListItem.Art(fanart)) + [!Skin.HasSetting(home.dontshowfanart) | Control.HasFocus(301)] + Control.IsVisible(301)">$INFO[Container(301).ListItem.Art(fanart)]</value>
+        <value condition="Window.IsVisible(home) + !IsEmpty(Container(301).ListItem.Property(fanart)) + [!Skin.HasSetting(home.dontshowfanart) | Control.HasFocus(301)] + Control.IsVisible(301)">$INFO[Container(301).ListItem.Property(fanart)]</value>
+
+        <value condition="Window.IsVisible(home) + StringCompare(Container(300).ListItem.Property(background),playlistBackground)">$INFO[Container(9988).ListItem.Art(fanart)]</value>
+        <value condition="Window.IsVisible(home) + !IsEmpty(Container(300).ListItem.Property(Background))">$INFO[Container(300).ListItem.Property(Background)]</value>
+        <value condition="Window.IsVisible(home) + !IsEmpty(Skin.String(home.slideshowpath)) + [substring(Container(300).ListItem.Property(widget),Weather,left) | IsEmpty(Container(300).ListItem.Property(widget)) | Container(301).IsUpdating |  Skin.HasSetting(home.dontshowfanart)]">$INFO[Skin.String(home.slideshowpath)]</value>
+        <value condition="Window.IsVisible(home) + !IsEmpty(Skin.String(weather.fanart.path)) + Skin.HasSetting(home.showweatherfanart) + [IsEmpty(Container(300).ListItem.Property(widget)) | Container(301).IsUpdating]">$INFO[Skin.String(weather.fanart.path)]$INFO[Window(Weather).Property(Current.FanartCode)]/</value>
+        <value condition="Window.IsVisible(home) + !Container(301).IsUpdating + !IsEmpty(Skin.String(fanart.fallback))">$INFO[Skin.String(fanart.fallback)]</value>
+        <value condition="Window.IsVisible(home) + !Container(301).IsUpdating">special://skin/extras/backgrounds/default.jpg</value>
+
+        <!-- Fanart -->
+        <value condition="!IsEmpty(Window(Home).Property(SkinHelper.ListItem.Art.ExtraFanArt)) + Skin.HasSetting(SkinHelper.EnableExtraFanart) + System.HasAddon(script.skin.helper.service) + Window.IsVisible(MyVideoNav.xml)">$INFO[Window(Home).Property(SkinHelper.ListItem.Art.ExtraFanArt)]</value>
+        <value condition="!IsEmpty(ListItem.Art(fanart))">$INFO[ListItem.Art(fanart)]</value>
+        <value condition="!IsEmpty(Container(9500).ListItem.Art(fanart))">$INFO[Container(9500).ListItem.Art(fanart)]</value>
+        <value condition="!IsEmpty(ListItem.Property(Fanart_Image))">$INFO[ListItem.Property(Fanart_Image)]</value>
+        <value condition="!IsEmpty(ListItem.Property(Fanart))">$INFO[ListItem.Property(Fanart)]</value>
+        <value condition="!IsEmpty(Window(Home).Property(SkinHelper.ListItem.Art.Fanart))">$INFO[Window(Home).Property(SkinHelper.ListItem.Art.Fanart)]</value>
+
+        <!-- Fallback -->
+        <value condition="!IsEmpty(Skin.String(fanart.fallback))">$INFO[Skin.String(fanart.fallback)]</value>
+
+        <!-- Default -->
+        <value>special://skin/extras/backgrounds/default.jpg</value>
+    </variable>
+
+    <include name="GlobalVideoWindow">
+        <control type="image" description="Background">
+            <include>Dimensions_Fullscreen</include>
+            <texture colordiffuse="Background">common/bg.jpg</texture>
+        </control>
+        <control type="image" description="Background">
+            <include>Dimensions_Fullscreen</include>
+            <texture colordiffuse="Black">common/white.png</texture>
+            <visible>Player.HasVideo + Skin.HasSetting(global.showvideo)</visible>
+        </control>
+        <control type="videowindow">
+            <visible>Skin.HasSetting(global.showvideo)</visible>
+            <include>Dimensions_Fullscreen</include>
+        </control>
+    </include>
+    <include name="GlobalVisualisation">
+        <control type="group">
+            <visible>Player.HasAudio + Skin.HasSetting(global.showvisualisation)</visible>
+            <animation effect="fade" end="0" start="100" time="400" condition="!Window.IsVisible(SettingsCategory.xml) | [Window.IsVisible(SettingsCategory.xml) + !Window.Next(SettingsCategory.xml)]">WindowClose</animation>
+            <animation effect="fade" start="0" end="100" time="400" condition="!Window.IsVisible(SettingsCategory.xml) | [Window.IsVisible(SettingsCategory.xml) + !Window.Previous(SettingsCategory.xml)]">WindowOpen</animation>
+            <control type="visualisation">
+                <visible>Skin.HasSetting(ArtistSlideShow.Disabled) | !System.HasAddon(script.artistslideshow)</visible>
+                <description>visualisation</description>
+                <include>Dimensions_Fullscreen</include>
+            </control>
+            <control type="multiimage">
+                <aspectratio>scale</aspectratio>
+                <include>Dimensions_Fullscreen</include>
+                <timeperimage>10000</timeperimage>
+                <randomize>true</randomize>
+                <fadetime>600</fadetime>
+                <loop>yes</loop>
+                <imagepath background="true">$INFO[Window(Visualisation).Property(ArtistSlideshow)]</imagepath>
+                <visible>System.HasAddon(script.artistslideshow) + !Skin.HasSetting(ArtistSlideShow.Disabled)</visible>
+                <animation effect="zoom" start="110" end="130" center="auto" time="10000" tween="sine" easing="inout" pulse="true" condition="Skin.HasSetting(ArtistSlideshow.Animate)">Conditional</animation>
+                <animation effect="slide" start="-30,-30" end="30,30" time="6000" tween="sine" easing="inout" pulse="true" condition="Skin.HasSetting(ArtistSlideshow.Animate)">Conditional</animation>
+            </control>
+        </control>
+    </include>
+    <include name="GlobalBackground">
+        <include>GlobalVideoWindow</include>
+        <include>GlobalVisualisation</include>
+        <control type="group">
+            <animation effect="slide" start="0" easing="out" end="0,-33" time="600" tween="quadratic" reversible="true" condition="[String.IsEqual(Window(Home).Property(ShowFurniture_TopBar),1) + !Control.HasFocus(60) + !Window.IsVisible(MyWeather.xml)]">Conditional</animation>
+            <animation effect="slide" end="0" easing="out" start="0,-33" time="600" delay="0" tween="quadratic" reversible="true" condition="![String.IsEqual(Window(Home).Property(ShowFurniture_TopBar),1) + !Control.HasFocus(60) + !Window.IsVisible(MyWeather.xml)]">Conditional</animation>
+            <control type="multiimage" description="Fanart">
+                <visible>!Player.HasMedia | [!Skin.HasSetting(global.showvideo) + Player.HasVideo] | [!Skin.HasSetting(global.showvisualisation) + Player.HasAudio]</visible>
+                <visible>!Skin.HasSetting(global.hidefanart) | Window.IsVisible(home)</visible>
+                <include>Dimensions_Fullscreen</include>
+                <fadetime>600</fadetime>
+                <timeperimage>12000</timeperimage>
+                <randomize>true</randomize>
+                <aspectratio>scale</aspectratio>
+                <imagepath background="true">$VAR[GlobalFanart]</imagepath>
+                <animation effect="fade" end="0" start="100" time="400" condition="!Window.IsVisible(SettingsCategory.xml) | [Window.IsVisible(SettingsCategory.xml) + !Window.Next(SettingsCategory.xml)]">WindowClose</animation>
+                <animation effect="fade" start="0" end="100" time="400" condition="!Window.IsVisible(SettingsCategory.xml) | [Window.IsVisible(SettingsCategory.xml) + !Window.Previous(SettingsCategory.xml)]">WindowOpen</animation>
+            </control>
+            <control type="image" description="Fanart Fallback always">
+                <visible>!Player.HasMedia | [!Skin.HasSetting(global.showvideo) + Player.HasVideo] | [!Skin.HasSetting(global.showvisualisation) + Player.HasAudio]</visible>
+                <include>Dimensions_Fullscreen</include>
+                <visible>!Window.IsVisible(home) + Skin.HasSetting(global.hidefanart) + !IsEmpty(Skin.String(fanart.fallback))</visible>
+                <aspectratio>scale</aspectratio>
+                <texture background="true">$INFO[Skin.String(fanart.fallback)]</texture>
+                <animation effect="fade" end="0" start="100" time="400" condition="!Window.IsVisible(SettingsCategory.xml) | [Window.IsVisible(SettingsCategory.xml) + !Window.Next(SettingsCategory.xml)]">WindowClose</animation>
+                <animation effect="fade" start="0" end="100" time="400" condition="!Window.IsVisible(SettingsCategory.xml) | [Window.IsVisible(SettingsCategory.xml) + !Window.Previous(SettingsCategory.xml)]">WindowOpen</animation>
+            </control>
+        </control>
+    </include>
+    <include name="GlobalSettingsDefaultControl"><defaultcontrol always="true">300</defaultcontrol></include>
+    <include name="GlobalSettingsCategoryDefaultControl"><defaultcontrol always="true">3</defaultcontrol></include>
+    <include name="GlobalSettingsBackground">
+        <include>GlobalVideoWindow</include>
+        <include>GlobalVisualisation</include>
+        <control type="group">
+            <control type="multiimage" description="Fanart">
+                <visible>!Player.HasMedia | [!Skin.HasSetting(global.showvideo) + Player.HasVideo] | [!Skin.HasSetting(global.showvisualisation) + Player.HasAudio]</visible>
+                <visible>!Skin.HasSetting(global.hidefanart) | Window.IsVisible(home)</visible>
+                <include>Dimensions_Fullscreen</include>
+                <fadetime>0</fadetime>
+                <timeperimage>12000</timeperimage>
+                <randomize>true</randomize>
+                <aspectratio>scale</aspectratio>
+                <imagepath background="true">$VAR[GlobalFanart]</imagepath>
+                <animation effect="fade" end="0" start="100" time="400" condition="!Window.Next(SettingsCategory.xml) + !Window.Next(Settings.xml) + !Window.Next(AddonBrowser.xml) + !Window.Next(SkinSettings.xml)">WindowClose</animation>
+                <animation effect="fade" start="0" end="100" time="400" condition="!Window.Previous(SettingsCategory.xml) + !Window.Previous(Settings.xml) + !Window.Previous(AddonBrowser.xml) + !Window.Previous(SkinSettings.xml)">WindowOpen</animation>
+            </control>
+            <control type="image" description="Fanart Fallback always">
+                <visible>!Player.HasMedia | [!Skin.HasSetting(global.showvideo) + Player.HasVideo] | [!Skin.HasSetting(global.showvisualisation) + Player.HasAudio]</visible>
+                <include>Dimensions_Fullscreen</include>
+                <visible>!Window.IsVisible(home) + Skin.HasSetting(global.hidefanart) + !IsEmpty(Skin.String(fanart.fallback))</visible>
+                <aspectratio>scale</aspectratio>
+                <texture background="true">$INFO[Skin.String(fanart.fallback)]</texture>
+                <animation effect="fade" end="0" start="100" time="400" condition="!Window.Next(SettingsCategory.xml) + !Window.Next(Settings.xml) + !Window.Next(AddonBrowser.xml) + !Window.Next(SkinSettings.xml)">WindowClose</animation>
+                <animation effect="fade" start="0" end="100" time="400" condition="!Window.Previous(SettingsCategory.xml) + !Window.Previous(Settings.xml) + !Window.Previous(AddonBrowser.xml) + !Window.Previous(SkinSettings.xml)">WindowOpen</animation>
+            </control>
+        </control>
+    </include>
+
+</includes>

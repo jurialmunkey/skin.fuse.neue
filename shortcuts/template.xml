@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<template>
+    <other include="home-widget">
+        <property name="content" tag="property" attribute="name|widgetPath" />
+        <property name="content">$VAR[Defs_Widget_Content]</property>
+        <property name="target" tag="property" attribute="name|widgetTarget" />
+
+        <controls>
+            <control type="fixedlist" id="301">
+                <skinshortcuts>visibility</skinshortcuts>
+                <include content="View_Posters_Layout">
+                    <param name="id" value="301" />
+                    <param name="visible" value="true" />
+                    <param name="autoscroll" value="!Control.HasFocus(301)" />
+                </include>
+                <content target="$SKINSHORTCUTS[target]">$SKINSHORTCUTS[content]</content>
+            </control>
+        </controls>
+    </other>
+</template>

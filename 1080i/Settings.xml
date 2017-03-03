@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- Foundation -->
+<window id="4">
+    <include condition="Window.Previous(SettingsCategory.xml)">GlobalSettingsDefaultControl</include>
+    <onload>SetProperty(ShowFurniture_TopBar,1,Home)</onload>
+    <onload>SetProperty(ShowFurniture_TopBar_Highlight,1,Home)</onload>
+    <onunload>ClearProperty(ShowFurniture_TopBar_Highlight,Home)</onunload>
+    <onload condition="Window.Previous(SettingsCategory.xml)">SetProperty(LowerFurniture_BottomBar,1,Home)</onload>
+    <onload condition="!Window.Previous(SettingsCategory.xml)">SetProperty(FromSettings,1,Home)</onload>
+    <onload condition="Window.Previous(SettingsCategory.xml)">SetProperty(FromSettings,0,Home)</onload>
+    <onload condition="!Window.Previous(SettingsCategory.xml)">ActivateWindow(InterfaceSettings)</onload>
+    <controls>
+        <include>GlobalSettingsBackground</include>
+        <include>Furniture_TopBar</include>
+        <include>Furniture_BottomBar</include>
+        <!--  -->
+        <include>Furniture_Clock</include>
+    </controls>
+</window>

@@ -1,0 +1,155 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- Foundation -->
+<window id="12">
+    <include condition="!Window.Previous(settings)">GlobalSettingsCategoryDefaultControl</include>
+    <include condition="Window.Previous(settings)">GlobalSettingsDefaultControl</include>
+    <onload>SetProperty(ShowFurniture_TopBar,1,Home)</onload>
+    <onload>SetProperty(LowerFurniture_BottomBar,1,Home)</onload>
+    <onload>SetProperty(ShowFurniture_TopBar_Highlight,1,Home)</onload>
+    <onunload>ClearProperty(ShowFurniture_TopBar_Highlight,Home)</onunload>
+    <onunload condition="!Skin.HasSetting(startup.init)">Skin.SetBool(startup.init)</onunload>
+    <controls>
+
+        <include>GlobalSettingsBackground</include>
+
+        <!-- GroupList -->
+        <control type="group">
+            <include>Furniture_SettingsPanel</include>
+
+            <control type="group">
+                <left>16</left>
+                <right>16</right>
+                <top>8</top>
+                <bottom>8</bottom>
+                <!-- Right Group -->
+                <control type="grouplist" id="5">
+                    <description>Control Area</description>
+                    <left>450</left>
+                    <right>0</right>
+                    <top>140</top>
+                    <bottom>10</bottom>
+                    <itemgap>0</itemgap>
+                    <onleft>3</onleft>
+                    <onup>302</onup>
+                    <ondown>noop</ondown>
+                    <onback>300</onback>
+                    <onright>SetFocus(300,5)</onright>
+                    <orientation>vertical</orientation>
+                </control>
+
+                <!-- Left Group -->
+                <control type="grouplist" id="3">
+                    <description>Button Area</description>
+                    <width>450</width>
+                    <top>140</top>
+                    <bottom>0</bottom>
+                    <itemgap>0</itemgap>
+                    <onback>300</onback>
+                    <onright>5</onright>
+                    <onup>20</onup>
+                    <ondown>noop</ondown>
+                    <onleft>SetFocus(300,0)</onleft>
+                    <orientation>vertical</orientation>
+                </control>
+
+                <!-- Lines -->
+                <control type="image">
+                    <top>10</top>
+                    <left>450</left>
+                    <width>1</width>
+                    <bottom>10</bottom>
+                    <colordiffuse>dialog_fg_12</colordiffuse>
+                    <texture>common/white.png</texture>
+                </control>
+
+
+                <!-- Header -->
+                <control type="label">
+                    <left>50</left>
+                    <width>390</width>
+                    <top>15</top>
+                    <height>70</height>
+                    <font>MediumBold</font>
+                    <label>5</label>
+                    <textcolor>panel_fg_100</textcolor>
+                </control>
+                <control type="button" id="20">
+                    <left>50</left>
+                    <right>50</right>
+                    <top>77</top>
+                    <height>30</height>
+                    <font>Tiny</font>
+                    <textcolor>panel_fg_70</textcolor>
+                    <scroll>true</scroll>
+                    <align>left</align>
+                    <textoffsetx>0</textoffsetx>
+                    <texturenofocus>noop</texturenofocus>
+                    <texturefocus>noop</texturefocus>
+                    <focusedcolor>Highlight</focusedcolor>
+                    <ondown>3</ondown>
+                    <onback>300</onback>
+                    <onright>5</onright>
+                    <onup>302</onup>
+                    <onclick>SettingsLevelChange</onclick>
+                </control>
+                <control type="label">
+                    <left>500</left>
+                    <width>390</width>
+                    <top>15</top>
+                    <height>70</height>
+                    <font>MediumBold</font>
+                    <label>$VAR[Label_SettingsHeader]</label>
+                    <textcolor>panel_fg_100</textcolor>
+                </control>
+                <control type="label" id="6">
+                    <left>500</left>
+                    <right>30</right>
+                    <top>87</top>
+                    <height>20</height>
+                    <font>Tiny</font>
+                    <textcolor>panel_fg_70</textcolor>
+                    <scroll>true</scroll>
+                </control>
+            </control>
+        </control>
+
+        <control type="button" id="7">
+            <description>Default Button</description>
+            <onback>300</onback>
+            <include>Defs_Settings_Button</include>
+        </control>
+
+        <control type="radiobutton" id="8">
+            <description>Default Radio Button</description>
+            <onback>300</onback>
+            <include>Defs_Settings_Button</include>
+        </control>
+
+        <control type="spincontrolex" id="9">
+            <description>Default Spin Control</description>
+            <onback>300</onback>
+            <include>Defs_Settings_Button</include>
+        </control>
+
+        <control type="togglebutton" id="10">
+            <width>450</width>
+            <description>Default Category Button</description>
+            <onback>300</onback>
+            <include>Defs_Settings_Button</include>
+        </control>
+
+        <control type="label" id="14">
+            <textoffsetx>50</textoffsetx>
+            <font>Button</font>
+            <textcolor>panel_fg_30</textcolor>
+            <include>Defs_Settings_Button</include>
+        </control>
+
+        <!-- Standard Furniture -->
+        <include>Furniture_TopBar</include>
+        <include>Furniture_BottomBar</include>
+        <include>Furniture_Clock</include>
+
+    </controls>
+
+</window>

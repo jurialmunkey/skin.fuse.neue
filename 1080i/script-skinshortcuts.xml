@@ -1,0 +1,233 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<window>
+    <defaultcontrol always="true">401</defaultcontrol>
+    <controls>
+        <include>GlobalOverlay</include>
+
+        <control type="group">
+            <include>Animation_FadeIn_Slide</include>
+            <centerleft>50%</centerleft>
+            <centertop>50%</centertop>
+            <width>1465</width>
+            <height>657</height>
+            <control type="image">
+                <description>background image</description>
+                <top>-8</top>
+                <bottom>-8</bottom>
+                <left>-8</left>
+                <right>-8</right>
+                <texture border="16" colordiffuse="dialog_bg_100">common/rounded-shadow8.png</texture>
+            </control>
+
+            <control type="label" id="500">
+                <description>header label</description>
+                <top>10</top>
+                <left>22</left>
+                <right>22</right>
+                <height>66</height>
+                <font>SmallBold</font>
+                <align>left</align>
+                <textcolor>dialog_fg_70</textcolor>
+            </control>
+
+            <!-- Left List: Current Shortcuts -->
+            <control type="list" id="211">
+                <description>Rules List Control</description>
+                <left>15</left>
+                <bottom>15</bottom>
+                <width>600</width>
+                <height>552</height>
+                <onup>211</onup>
+                <onleft>211</onleft>
+                <onright>9100</onright>
+                <ondown>211</ondown>
+                <scrolltime>0</scrolltime>
+                <itemlayout width="600" height="69">
+                    <control type="image">
+                        <left>0</left>
+                        <top>0</top>
+                        <width>100%</width>
+                        <height>66</height>
+                        <texture border="5" colordiffuse="dialog_fg_12">common/box.png</texture>
+                    </control>
+                    <control type="label">
+                        <left>30</left>
+                        <right>30</right>
+                        <height>66</height>
+                        <info>ListItem.Label</info>
+                    </control>
+                </itemlayout>
+                <focusedlayout width="600" height="69">
+                    <control type="image">
+                        <left>0</left>
+                        <top>0</top>
+                        <width>100%</width>
+                        <height>66</height>
+                        <texture border="5" colordiffuse="Highlight">common/box.png</texture>
+                    </control>
+                    <control type="label">
+                        <left>30</left>
+                        <right>30</right>
+                        <height>66</height>
+                        <info>ListItem.Label</info>
+                        <textcolor>Selected</textcolor>
+                    </control>
+                </focusedlayout>
+            </control>
+
+            <control type="grouplist" id="9200">
+                <left>15</left>
+                <top>91</top>
+                <width>600</width>
+                <align>right</align>
+                <itemgap>-20</itemgap>
+                <onright>9100</onright>
+                <onup>Control.Move(211,-1)</onup>
+                <ondown>Control.Move(211,1)</ondown>
+                <orientation>horizontal</orientation>
+                <animation effect="slide" end="0,69" condition="IntegerGreaterThan(Container(211).Position,0)">Conditional</animation>
+                <animation effect="slide" end="0,69" condition="IntegerGreaterThan(Container(211).Position,1)">Conditional</animation>
+                <animation effect="slide" end="0,69" condition="IntegerGreaterThan(Container(211).Position,2)">Conditional</animation>
+                <animation effect="slide" end="0,69" condition="IntegerGreaterThan(Container(211).Position,3)">Conditional</animation>
+                <animation effect="slide" end="0,69" condition="IntegerGreaterThan(Container(211).Position,4)">Conditional</animation>
+                <animation effect="slide" end="0,69" condition="IntegerGreaterThan(Container(211).Position,5)">Conditional</animation>
+                <animation effect="slide" end="0,69" condition="IntegerGreaterThan(Container(211).Position,6)">Conditional</animation>
+                <animation effect="slide" end="0,69" condition="IntegerGreaterThan(Container(211).Position,7)">Conditional</animation>
+                <animation effect="slide" end="0,69" condition="IntegerGreaterThan(Container(211).Position,8)">Conditional</animation>
+                <animation effect="slide" end="0,69" condition="IntegerGreaterThan(Container(211).Position,9)">Conditional</animation>
+                <animation effect="slide" end="0,69" condition="IntegerGreaterThan(Container(211).Position,10)">Conditional</animation>
+                <animation effect="slide" end="0,69" condition="IntegerGreaterThan(Container(211).Position,11)">Conditional</animation>
+                <control type="button" id="302" description="Delete">
+                    <width>64</width>
+                    <height>64</height>
+                    <font>-</font>
+                    <texturenofocus colordiffuse="dialog_fg_30">buttons/delete.png</texturenofocus>
+                    <texturefocus colordiffuse="Selected">buttons/delete.png</texturefocus>
+                </control>
+                <control type="button" id="301" description="Add">
+                    <width>64</width>
+                    <height>64</height>
+                    <font>-</font>
+                    <texturenofocus colordiffuse="dialog_fg_30">buttons/add.png</texturenofocus>
+                    <texturefocus colordiffuse="Selected">buttons/add.png</texturefocus>
+                </control>
+                <control type="button" id="303" description="Up">
+                    <width>64</width>
+                    <height>64</height>
+                    <font>-</font>
+                    <texturenofocus colordiffuse="dialog_fg_30">buttons/moveup.png</texturenofocus>
+                    <texturefocus colordiffuse="Selected">buttons/moveup.png</texturefocus>
+                </control>
+                <control type="button" id="304" description="Down">
+                    <width>64</width>
+                    <height>64</height>
+                    <font>-</font>
+                    <texturenofocus colordiffuse="dialog_fg_30" flipy="true">buttons/moveup.png</texturenofocus>
+                    <texturefocus colordiffuse="Selected" flipy="true">buttons/moveup.png</texturefocus>
+                </control>
+
+            </control>
+
+            <!-- Right Buttons -->
+            <control type="grouplist" id="9100">
+                <onleft>304</onleft>
+                <onright>303</onright>
+                <onup>9100</onup>
+                <ondown>9100</ondown>
+                <right>15</right>
+                <bottom>15</bottom>
+                <width>820</width>
+                <height>552</height>
+                <orientation>vertical</orientation>
+                <itemgap>3</itemgap>
+
+
+
+                <control type="button" id="401" description="Alt chooser">
+                    <width>100%</width>
+                    <height>66</height>
+                    <texturenofocus colordiffuse="dialog_fg_12" border="5">common/box.png</texturenofocus>
+                    <align>left</align>
+                    <include>Dialog_Standard_Right_Buttons</include>
+                </control>
+                <control type="button" id="307" description="Custom">
+                    <width>100%</width>
+                    <height>66</height>
+                    <label>31267</label>
+                    <label2>$INFO[Container(211).ListItem.Property(Path)]</label2>
+                    <texturenofocus colordiffuse="dialog_fg_12" border="5">common/box.png</texturenofocus>
+                    <align>left</align>
+                    <include>Dialog_Standard_Right_Buttons</include>
+                </control>
+                <control type="button" id="305" description="Set Label">
+                    <width>100%</width>
+                    <height>66</height>
+                    <label>31268</label>
+                    <label2>$INFO[Container(211).ListItem.Label]</label2>
+                    <texturenofocus colordiffuse="dialog_fg_12" border="5">common/box.png</texturenofocus>
+                    <align>left</align>
+                    <include>Dialog_Standard_Right_Buttons</include>
+                </control>
+
+                <control type="button" id="312" description="Widget">
+                    <width>100%</width>
+                    <height>66</height>
+                    <label>31266</label>
+                    <label2>$VAR[LabelWidgetShortcutsName]</label2>
+                    <visible>stringcompare(Window.Property(groupname),mainmenu)</visible>
+                    <texturenofocus colordiffuse="dialog_fg_12" border="5">common/box.png</texturenofocus>
+                    <align>left</align>
+                    <include>Dialog_Standard_Right_Buttons</include>
+                    <visible>stringcompare(Window.Property(groupname),mainmenu)</visible>
+                </control>
+                <control type="button" id="9401" description="Widget Aspect">
+                    <width>100%</width>
+                    <height>66</height>
+                    <label>$LOCALIZE[31261]</label>
+                    <label2>$VAR[LabelWidgetType]</label2>
+                    <visible>stringcompare(Window.Property(groupname),mainmenu)</visible>
+                    <texturenofocus colordiffuse="dialog_fg_12" border="5">common/box.png</texturenofocus>
+                    <align>left</align>
+                    <include>Dialog_Standard_Right_Buttons</include>
+                    <onclick>SetProperty(customProperty,widgetaspect)</onclick>
+                    <onclick condition="IsEmpty(Container(211).ListItem.Property(widgetaspect)) | StringCompare(Container(211).ListItem.Property(widgetaspect),Poster)">SetProperty(customValue,Square)</onclick>
+                    <onclick condition="StringCompare(Container(211).ListItem.Property(widgetaspect),Square)">SetProperty(customValue,Fanart)</onclick>
+                    <onclick condition="StringCompare(Container(211).ListItem.Property(widgetaspect),Fanart)">SetProperty(customValue,Thumbnail)</onclick>
+                    <onclick condition="StringCompare(Container(211).ListItem.Property(widgetaspect),Thumbnail)">SetProperty(customValue,Poster)</onclick>
+                    <onclick>SendClick(404)</onclick>
+                </control>
+                <control type="button" id="310" description="Background">
+                    <width>100%</width>
+                    <height>66</height>
+                    <label>31110</label>
+                    <label2>$INFO[Container(211).ListItem.Property(background)]</label2>
+                    <visible>stringcompare(Window.Property(groupname),mainmenu)</visible>
+                    <texturenofocus colordiffuse="dialog_fg_12" border="5">common/box.png</texturenofocus>
+                    <align>left</align>
+                    <include>Dialog_Standard_Right_Buttons</include>
+                </control>
+                <control type="button" id="405" description="Set Submenu">
+                    <width>100%</width>
+                    <height>66</height>
+                    <label>31112</label>
+                    <visible>stringcompare(Window.Property(groupname),mainmenu)</visible>
+                    <texturenofocus colordiffuse="dialog_fg_12" border="5">common/box.png</texturenofocus>
+                    <align>left</align>
+                    <include>Dialog_Standard_Right_Buttons</include>
+                </control>
+
+                <control type="button" id="308" description="Reset">
+                    <width>100%</width>
+                    <height>66</height>
+                    <texturenofocus colordiffuse="dialog_fg_12" border="5">common/box.png</texturenofocus>
+                    <align>left</align>
+                    <include>Dialog_Standard_Right_Buttons</include>
+                </control>
+            </control>
+
+
+
+        </control>
+        <control type="button" id="404"><visible allowhiddenfocus="true">false</visible></control>
+    </controls>
+</window>

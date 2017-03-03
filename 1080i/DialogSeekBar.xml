@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- Foundation -->
+<window id="115">
+    <defaultcontrol always="true">901</defaultcontrol>
+    <visible>[VideoPlayer.IsFullscreen | Window.IsVisible(MusicVisualisation.xml)] + [Window.IsVisible(musicosd) | Window.IsVisible(videoosd) | Window.IsVisible(fullscreeninfo) | Player.Seeking | Player.DisplayAfterSeek | Player.Paused | Player.Forwarding | Player.Rewinding | Player.ShowInfo | !IsEmpty(Window(home).Property(osdshowinfo)) | Window.IsVisible(script-cu-lrclyrics-main.xml) | Window.IsVisible(DialogFullScreenInfo.xml)]</visible>
+    <controls>
+
+        <include condition="Window.IsVisible(MusicVisualisation.xml)">OSD_Music</include>
+        <include condition="Window.IsVisible(VideoFullScreen.xml)">OSD_Video</include>
+
+    </controls>
+
+</window>

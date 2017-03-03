@@ -1,0 +1,425 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- Foundation -->
+<window>
+    <defaultcontrol always="true">9000</defaultcontrol>
+    <onload>SetProperty(150_onback,SetFocus(9000))</onload>
+    <onload>SetProperty(350_onback,SetFocus(9000))</onload>
+    <onload>SetProperty(750_onback,SetFocus(9000))</onload>
+    <onload>SetProperty(850_onback,SetFocus(9000))</onload>
+    <onload>SetProperty(950_onback,SetFocus(9000))</onload>
+    <onload>SetProperty(1000_onback,SetFocus(9000))</onload>
+    <onload>SetProperty(1150_onback,SetFocus(9000))</onload>
+    <onload>ClearProperty(content)</onload>
+    <onload>Dialog.Close(1131)</onload>
+    <controls>
+        <include>GlobalOverlay</include>
+
+        <control type="group">
+            <animation effect="slide" start="0" end="0,890" time="400" delay="0" tween="quadratic" easing="out" reversible="false">WindowClose</animation>
+            <animation effect="slide" end="0" start="0,890" time="400" delay="0" tween="quadratic" easing="out" reversible="false">WindowOpen</animation>
+            <bottom>0</bottom>
+            <left>0</left>
+            <right>0</right>
+            <height>890</height>
+            <include>Dialog_Info_Panel</include>
+
+            <!-- Header -->
+            <control type="label">
+                <textcolor>main_fg_70</textcolor>
+                <left>SidePad</left>
+                <include>Dialog_Info_Header</include>
+                <label>$INFO[Window.Property(label)]$INFO[Window.Property(year), (,)]</label>
+            </control>
+
+            <!-- Fanart -->
+            <control type="group">
+                <left>SidePad</left>
+                <top>100</top>
+                <width>426</width>
+                <height>640</height>
+                <control type="image">
+                    <centerbottom>0</centerbottom>
+                    <width>100%</width>
+                    <height>48</height>
+                    <aspectratio>stretch</aspectratio>
+                    <texture border="24,12,24,12">diffuse/shadowspot.png</texture>
+                </control>
+                <control type="image">
+                    <include>Defs_Shadow</include>
+                    <aspectratio scalediffuse="false">scale</aspectratio>
+                    <texture>$INFO[Window.Property(thumb)]</texture>
+                </control>
+            </control>
+
+            <!-- Flags -->
+            <control type="grouplist">
+                <right>SidePad</right>
+                <centertop>50</centertop>
+                <width>600</width>
+                <height>32</height>
+                <orientation>horizontal</orientation>
+                <align>right</align>
+                <itemgap>24</itemgap>
+                <usecontrolcoords>true</usecontrolcoords>
+                <control type="image">
+                    <top>2</top>
+                    <width>40</width>
+                    <height>32</height>
+                    <texture>indicator/imdbicon.png</texture>
+                </control>
+                <control type="label">
+                    <textcolor>main_fg_70</textcolor>
+                    <top>2</top>
+                    <left>-12</left>
+                    <width>auto</width>
+                    <height>28</height>
+                    <align>right</align>
+                    <font>Tiny</font>
+                    <label>$INFO[Window.Property(rating), ,]$INFO[Window.Property(votes), (, [LOWERCASE]$LOCALIZE[205][/LOWERCASE])]</label>
+                </control>
+            </control>
+
+            <!-- Info -->
+            <control type="grouplist">
+                <left>536</left>
+                <height>595</height>
+                <include>Dialog_Info_Details_Grouplist</include>
+                
+                <!-- MPAA -->
+                <control type="label">
+                    <textcolor>main_fg_70</textcolor>
+                    <width>100%</width>
+                    <height>25</height>
+                    <font>SmallBold</font>
+                    <label>20074</label>
+                    <aligny>center</aligny>
+                </control>
+                <control type="label">
+                    <textcolor>main_fg_70</textcolor>
+                    <width>65%</width>
+                    <height>60</height>
+                    <font>Tiny</font>
+                    <aligny>top</aligny>
+                    <label fallback="19055">$INFO[Window.Property(MPAA)]</label>
+                </control>
+                
+                <!-- Run Time -->
+                <control type="label">
+                    <textcolor>main_fg_70</textcolor>
+                    <top>-95</top>
+                    <width>100%</width>
+                    <height>25</height>
+                    <align>right</align>
+                    <font>SmallBold</font>
+                    <label>2050</label>
+                    <aligny>center</aligny>
+                </control>
+                <control type="label">
+                    <textcolor>main_fg_70</textcolor>
+                    <right>0</right>
+                    <width>35%</width>
+                    <height>60</height>
+                    <font>Tiny</font>
+                    <align>right</align>
+                    <aligny>top</aligny>
+                    <label fallback="19055">$INFO[Window.Property(Duration),, $LOCALIZE[12391]]</label>
+                </control>
+                
+                <!-- Director -->
+                <control type="label">
+                    <textcolor>main_fg_70</textcolor>
+                    <width>100%</width>
+                    <height>25</height>
+                    <font>SmallBold</font>
+                    <label>20339</label>
+                    <aligny>center</aligny>
+                </control>
+                <control type="label">
+                    <textcolor>main_fg_70</textcolor>
+                    <width>65%</width>
+                    <height>60</height>
+                    <font>Tiny</font>
+                    <aligny>top</aligny>
+                    <label fallback="19055">$INFO[Window.Property(Director)]</label>
+                </control>
+                
+                <!-- Budget -->
+                <control type="label">
+                    <textcolor>main_fg_70</textcolor>
+                    <top>-95</top>
+                    <width>100%</width>
+                    <height>25</height>
+                    <align>right</align>
+                    <font>SmallBold</font>
+                    <label>$ADDON[script.extendedinfo 32109]</label>
+                    <aligny>center</aligny>
+                </control>
+                <control type="label">
+                    <textcolor>main_fg_70</textcolor>
+                    <right>0</right>
+                    <width>35%</width>
+                    <height>60</height>
+                    <font>Tiny</font>
+                    <align>right</align>
+                    <aligny>top</aligny>
+                    <label fallback="19055">$INFO[Window.Property(Budget),$,]</label>
+                </control>
+                
+                <!-- Writer -->
+                <control type="label">
+                    <textcolor>main_fg_70</textcolor>
+                    <width>100%</width>
+                    <height>25</height>
+                    <font>SmallBold</font>
+                    <label>20417</label>
+                    <aligny>center</aligny>
+                </control>
+                <control type="label">
+                    <textcolor>main_fg_70</textcolor>
+                    <width>75%</width>
+                    <height>60</height>
+                    <font>Tiny</font>
+                    <aligny>top</aligny>
+                    <label fallback="19055">$INFO[Window.Property(Writer)]</label>
+                </control>
+
+                <!-- Revenue -->
+                <control type="label">
+                    <textcolor>main_fg_70</textcolor>
+                    <top>-95</top>
+                    <width>100%</width>
+                    <height>25</height>
+                    <align>right</align>
+                    <font>SmallBold</font>
+                    <label>$ADDON[script.extendedinfo 32108]</label>
+                    <aligny>center</aligny>
+                </control>
+                <control type="label">
+                    <textcolor>main_fg_70</textcolor>
+                    <right>0</right>
+                    <width>35%</width>
+                    <height>60</height>
+                    <font>Tiny</font>
+                    <align>right</align>
+                    <aligny>top</aligny>
+                    <label fallback="19055">$INFO[Window.Property(Revenue),$,]</label>
+                </control>
+                
+                <!-- Genre -->
+                <control type="label">
+                    <textcolor>main_fg_70</textcolor>
+                    <width>100%</width>
+                    <height>25</height>
+                    <font>SmallBold</font>
+                    <label>515</label>
+                    <aligny>center</aligny>
+                </control>
+                <control type="label">
+                    <textcolor>main_fg_70</textcolor>
+                    <width>75%</width>
+                    <height>60</height>
+                    <font>Tiny</font>
+                    <aligny>top</aligny>
+                    <label fallback="19055">$INFO[Window.Property(Genre)]</label>
+                </control>
+
+                <!-- Studio -->
+                <control type="label">
+                    <textcolor>main_fg_70</textcolor>
+                    <width>100%</width>
+                    <height>25</height>
+                    <font>SmallBold</font>
+                    <label>572</label>
+                    <aligny>center</aligny>
+                </control>
+                <control type="label">
+                    <textcolor>main_fg_70</textcolor>
+                    <width>100%</width>
+                    <height>60</height>
+                    <font>Tiny</font>
+                    <aligny>top</aligny>
+                    <label fallback="19055">$INFO[Window.Property(Studio)]</label>
+                </control>
+                <control type="label">
+                    <textcolor>main_fg_70</textcolor>
+                    <label>207</label>
+                    <width>100%</width>
+                    <height>25</height>
+                    <font>SmallBold</font>
+                    <aligny>center</aligny>
+                </control>
+                <control type="textbox">
+                    <width>100%</width>
+                    <height>120</height>
+                    <font>Tiny</font>
+                    <aligny>top</aligny>
+                    <textcolor>main_fg_70</textcolor>
+                    <label>$INFO[Window.Property(Plot)]</label>
+                </control>
+                
+            </control>
+
+            <!-- Buttons -->
+            <control type="grouplist" id="9000">
+                <include>Dialog_Info_Button_Grouplist</include>
+
+                <control type="button" id ="8">
+                    <description>Play</description>
+                    <label>208</label>
+                    <onfocus>ClearProperty(content)</onfocus>
+                    <include>Dialog_Info_Buttons</include>
+                    <visible>!String.IsEmpty(Window.Property(DBID)) + !String.IsEqual(Window.Property(Type),tvshow)</visible>
+                    <visible>String.IsEmpty(Window(home).Property(globalsearch))</visible>
+                    <visible>!Window.IsVisible(VideoFullScreen.xml)</visible>
+                </control>
+
+                <control type="button" id ="120">
+                    <description>Browse</description>
+                    <label>21385</label>
+                    <onfocus>ClearProperty(content)</onfocus>
+                    <include>Dialog_Info_Buttons</include>
+                    <visible>!String.IsEmpty(Window.Property(DBID)) + String.IsEqual(Window.Property(Type),tvshow)</visible>
+                    <visible>String.IsEmpty(Window(home).Property(globalsearch))</visible>
+                    <visible>!Window.IsVisible(VideoFullScreen.xml)</visible>
+                </control>
+
+                <control type="button" id ="9002">
+                    <description>Cast</description>
+                    <label>206</label>
+                    <onfocus>ClearProperty(content)</onfocus>
+                    <include>Dialog_Info_Buttons</include>
+                    <onclick>SetProperty(content,1000)</onclick>
+                    <onclick>SetFocus(1000)</onclick>
+                    <enable>Integer.IsGreater(Container(1000).NumItems,0)</enable>
+                </control>
+                
+                <control type="button" id ="9003">
+                    <description>Similar</description>
+                    <label>31206</label>
+                    <onfocus>ClearProperty(content)</onfocus>
+                    <include>Dialog_Info_Buttons</include>
+                    <onclick>SetProperty(content,150)</onclick>
+                    <onclick>SetFocus(150)</onclick>
+                    <enable>Integer.IsGreater(Container(150).NumItems,0)</enable>
+                </control>
+                
+                <control type="button" id ="9004">
+                    <description>Youtube</description>
+                    <label>31141</label>
+                    <onfocus>ClearProperty(content)</onfocus>
+                    <include>Dialog_Info_Buttons</include>
+                    <onclick>SetProperty(content,350)</onclick>
+                    <onclick>SetFocus(350)</onclick>
+                    <enable>Integer.IsGreater(Container(350).NumItems,0)</enable>
+                </control>
+                
+
+                <control type="button" id ="9005">
+                    <description>Crew</description>
+                    <label>$ADDON[script.extendedinfo 32115]</label>
+                    <onfocus>ClearProperty(content)</onfocus>
+                    <include>Dialog_Info_Buttons</include>
+                    <onclick>SetProperty(content,750)</onclick>
+                    <onclick>SetFocus(750)</onclick>
+                    <enable>Integer.IsGreater(Container(750).NumItems,0)</enable>
+                </control>
+                
+                <control type="button" id ="9006">
+                    <description>Genres</description>
+                    <label>135</label>
+                    <onfocus>ClearProperty(content)</onfocus>
+                    <include>Dialog_Info_Buttons</include>
+                    <onclick>SetProperty(content,850)</onclick>
+                    <onclick>SetFocus(850)</onclick>
+                    <enable>Integer.IsGreater(Container(850).NumItems,0)</enable>
+                </control>
+
+                <control type="button" id ="9007">
+                    <description>Keywords</description>
+                    <label>$ADDON[script.extendedinfo 32114]</label>
+                    <onfocus>ClearProperty(content)</onfocus>
+                    <include>Dialog_Info_Buttons</include>
+                    <onclick>SetProperty(content,950)</onclick>
+                    <onclick>SetFocus(950)</onclick>
+                    <enable>Integer.IsGreater(Container(950).NumItems,0)</enable>
+                </control>
+            </control>
+        </control>
+
+        <include>Furniture_InfoClock</include>
+
+        <!-- Cast -->
+        <include content="Dialog_Custom_List">
+            <param name="id" value="1000" />
+            <param name="cancelid" value="81000" />
+            <param name="content" value="false" />
+            <param name="header" value="206" />
+            <param name="visible" value="String.IsEqual(Window.Property(Content),1000)" />
+            <param name="cancelaction" value="SetFocus(9000)" />
+            <param name="label2" value="ListItem.Property(character)" />
+        </include>
+
+        <!-- Similar -->
+        <include content="Dialog_Custom_List">
+            <param name="id" value="150" />
+            <param name="cancelid" value="8150" />
+            <param name="content" value="false" />
+            <param name="header" value="31206" />
+            <param name="visible" value="String.IsEqual(Window.Property(Content),150)" />
+            <param name="cancelaction" value="SetFocus(9000)" />
+        </include>
+
+        <!-- Youtube -->
+        <include content="Dialog_Custom_List">
+            <param name="id" value="350" />
+            <param name="cancelid" value="8350" />
+            <param name="content" value="false" />
+            <param name="header" value="31141" />
+            <param name="visible" value="String.IsEqual(Window.Property(Content),350)" />
+            <param name="cancelaction" value="SetFocus(9000)" />
+        </include>
+
+        <!-- Crew -->
+        <include content="Dialog_Custom_List">
+            <param name="id" value="750" />
+            <param name="cancelid" value="8750" />
+            <param name="content" value="false" />
+            <param name="header" value="$ADDON[script.extendedinfo 32115]" />
+            <param name="visible" value="String.IsEqual(Window.Property(Content),750)" />
+            <param name="cancelaction" value="SetFocus(9000)" />
+            <param name="label2" value="ListItem.Property(job)" />
+        </include>
+
+        <!-- Genres -->
+        <include content="Dialog_Custom_List">
+            <param name="id" value="850" />
+            <param name="cancelid" value="8850" />
+            <param name="content" value="false" />
+            <param name="header" value="135" />
+            <param name="visible" value="String.IsEqual(Window.Property(Content),850)" />
+            <param name="cancelaction" value="SetFocus(9000)" />
+        </include>
+
+        <!-- Keywords -->
+        <include content="Dialog_Custom_List">
+            <param name="id" value="950" />
+            <param name="cancelid" value="8950" />
+            <param name="content" value="false" />
+            <param name="header" value="$ADDON[script.extendedinfo 32114]" />
+            <param name="visible" value="String.IsEqual(Window.Property(Content),950)" />
+            <param name="cancelaction" value="SetFocus(9000)" />
+        </include>
+
+        <!-- Dummy Lists -->
+        <control type="list" id="250"><visible>false</visible></control>
+        <control type="list" id="450"><visible>false</visible></control>
+        <control type="list" id="550"><visible>false</visible></control>
+        <control type="list" id="650"><visible>false</visible></control>
+        <control type="list" id="1050"><visible>false</visible></control>
+        <control type="list" id="1150"><visible>false</visible></control>
+        <control type="list" id="1250"><visible>false</visible></control>
+        <control type="list" id="1350"><visible>false</visible></control>
+        <control type="list" id="1450"><visible>false</visible></control>
+    </controls>
+
+</window>

@@ -1,0 +1,335 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- Foundation -->
+<window id="2003">
+    <defaultcontrol always="true">8</defaultcontrol>
+
+    <zorder>0</zorder>
+    <onload condition="System.HasAddon(script.videoextras)">RunScript(script.videoextras,check,"$INFO[ListItem.FilenameAndPath]")</onload>
+    <controls>
+
+        <control type="group">
+            <!-- <visible>!Window.IsVisible(script-script.extendedinfo-DialogVideoInfo.xml) + !Window.IsVisible(script-script.extendedinfo-DialogInfo.xml)</visible> -->
+            <include>Animation_FadeIn</include>
+            <include>Animation_FadeOut</include>
+            <!-- Information -->
+            <control type="grouplist">
+                <left>614</left>
+                <top>672</top>
+                <right>600</right>
+                <include>Dialog_Info_Details_Grouplist</include>
+                <!-- Director -->
+                <control type="group">
+                    <height>32</height>
+                    <control type="label">
+                        <left>0</left>
+                        <width>160</width>
+                        <align>right</align>
+                        <textcolor>main_fg_30</textcolor>
+                        <font>Tiny</font>
+                        <label>20339</label>
+                        <aligny>top</aligny>
+                    </control>
+                    <control type="label">
+                        <left>176</left>
+                        <textcolor>main_fg_70</textcolor>
+                        <font>Tiny</font>
+                        <aligny>top</aligny>
+                        <label fallback="19055">$INFO[ListItem.Director]</label>
+                    </control>
+                </control>
+                <!-- Writer -->
+                <control type="group">
+                    <height>32</height>
+                    <control type="label">
+                        <left>0</left>
+                        <width>160</width>
+                        <align>right</align>
+                        <textcolor>main_fg_30</textcolor>
+                        <font>Tiny</font>
+                        <label>20417</label>
+                        <aligny>top</aligny>
+                    </control>
+                    <control type="label">
+                        <left>176</left>
+                        <textcolor>main_fg_70</textcolor>
+                        <font>Tiny</font>
+                        <aligny>top</aligny>
+                        <label fallback="19055">$INFO[ListItem.Writer]</label>
+                    </control>
+                </control>
+                <!-- Studio -->
+                <control type="group">
+                    <height>32</height>
+                    <control type="label">
+                        <left>0</left>
+                        <width>160</width>
+                        <align>right</align>
+                        <textcolor>main_fg_30</textcolor>
+                        <font>Tiny</font>
+                        <label>572</label>
+                        <aligny>top</aligny>
+                    </control>
+                    <control type="label">
+                        <left>176</left>
+                        <textcolor>main_fg_70</textcolor>
+                        <font>Tiny</font>
+                        <aligny>top</aligny>
+                        <label fallback="19055">$INFO[ListItem.Studio]</label>
+                    </control>
+                </control>
+                <!-- Genre -->
+                <control type="group">
+                    <height>32</height>
+                    <control type="label">
+                        <left>0</left>
+                        <width>160</width>
+                        <align>right</align>
+                        <textcolor>main_fg_30</textcolor>
+                        <font>Tiny</font>
+                        <label>515</label>
+                        <aligny>top</aligny>
+                    </control>
+                    <control type="label">
+                        <left>176</left>
+                        <textcolor>main_fg_70</textcolor>
+                        <font>Tiny</font>
+                        <aligny>top</aligny>
+                        <label fallback="19055">$INFO[ListItem.Genre]</label>
+                    </control>
+                </control>
+                <!-- MPAA -->
+                <control type="group">
+                    <height>32</height>
+                    <control type="label">
+                        <left>0</left>
+                        <width>160</width>
+                        <align>right</align>
+                        <textcolor>main_fg_30</textcolor>
+                        <font>Tiny</font>
+                        <label>31284</label>
+                        <aligny>top</aligny>
+                    </control>
+                    <control type="label">
+                        <left>176</left>
+                        <textcolor>main_fg_70</textcolor>
+                        <font>Tiny</font>
+                        <aligny>top</aligny>
+                        <label fallback="19055">$INFO[ListItem.MPAA]</label>
+                    </control>
+                </control>
+                <!-- Last Played -->
+                <control type="group">
+                    <height>32</height>
+                    <control type="label">
+                        <left>0</left>
+                        <width>160</width>
+                        <align>right</align>
+                        <textcolor>main_fg_30</textcolor>
+                        <font>Tiny</font>
+                        <label>568</label>
+                        <aligny>top</aligny>
+                    </control>
+                    <control type="label">
+                        <left>176</left>
+                        <textcolor>main_fg_70</textcolor>
+                        <font>Tiny</font>
+                        <aligny>top</aligny>
+                        <label fallback="19055">$INFO[ListItem.LastPlayed]</label>
+                    </control>
+                </control>
+                <!-- Languages -->
+                <control type="group">
+                    <height>32</height>
+                    <control type="label">
+                        <left>0</left>
+                        <width>160</width>
+                        <align>right</align>
+                        <textcolor>main_fg_30</textcolor>
+                        <font>Tiny</font>
+                        <label>14218</label>
+                        <aligny>top</aligny>
+                    </control>
+                    <control type="label">
+                        <left>176</left>
+                        <textcolor>main_fg_70</textcolor>
+                        <font>Tiny</font>
+                        <aligny>top</aligny>
+                        <label fallback="19055">$INFO[Window(Home).Property(SkinHelper.ListItem.Languages),[CAPITALIZE],[/CAPITALIZE]]$INFO[Window(Home).Property(SkinHelper.ListItem.Subtitles), ([CAPITALIZE],[/CAPITALIZE])]</label>
+                    </control>
+                </control>
+            </control>
+
+            <!-- Ratings -->
+            <control type="grouplist">
+                <top>674</top>
+                <width>600</width>
+                <right>30</right>
+                <height>32</height>
+                <orientation>horizontal</orientation>
+                <align>right</align>
+                <itemgap>12</itemgap>
+                <usecontrolcoords>true</usecontrolcoords>
+                <control type="image">
+                    <top>1</top>
+                    <width>32</width>
+                    <height>32</height>
+                    <texture>indicator/metacritic.png</texture>
+                    <visible>!String.IsEmpty(Window(Home).Property(SkinHelper.ListItem.MetaCritic.Rating))</visible>
+                </control>
+                <control type="label">
+                    <textcolor>main_fg_70</textcolor>
+                    <top>2</top>
+                    <width>auto</width>
+                    <height>28</height>
+                    <align>right</align>
+                    <font>Tiny</font>
+                    <label>$INFO[Window(Home).Property(SkinHelper.ListItem.MetaCritic.Rating), ,%   ]</label>
+                    <visible>!String.IsEmpty(Window(Home).Property(SkinHelper.ListItem.MetaCritic.Rating))</visible>
+                </control>
+                <control type="image">
+                    <width>32</width>
+                    <height>32</height>
+                    <texture>indicator/rtrotten.png</texture>
+                    <visible>!String.IsEmpty(Window(Home).Property(SkinHelper.ListItem.RottenTomatoes.Meter))</visible>
+                    <visible>!Integer.IsGreater(Window(home).Property(SkinHelper.ListItem.RottenTomatoes.Meter),59)</visible>
+                </control>
+                <control type="image">
+                    <width>32</width>
+                    <height>32</height>
+                    <texture>indicator/rtfresh.png</texture>
+                    <visible>!String.IsEmpty(Window(Home).Property(SkinHelper.ListItem.RottenTomatoes.Meter))</visible>
+                    <visible>Integer.IsGreater(Window(home).Property(SkinHelper.ListItem.RottenTomatoes.Meter),59)</visible>
+                </control>
+                <control type="label">
+                    <textcolor>main_fg_70</textcolor>
+                    <top>2</top>
+                    <width>auto</width>
+                    <height>28</height>
+                    <align>right</align>
+                    <font>Tiny</font>
+                    <label>$INFO[Window(Home).Property(SkinHelper.ListItem.RottenTomatoes.Meter), ,%   ]</label>
+                    <visible>!String.IsEmpty(Window(Home).Property(SkinHelper.ListItem.RottenTomatoes.Meter))</visible>
+                </control>
+                <control type="image">
+                    <top>1</top>
+                    <width>40</width>
+                    <height>32</height>
+                    <texture>indicator/imdbicon.png</texture>
+                    <visible>!String.IsEmpty(ListItem.RatingAndVotes) | !String.IsEmpty(Window(home).Property(SkinHelper.ListItem.Rating.IMDB))</visible>
+                </control>
+                <control type="label">
+                    <textcolor>main_fg_70</textcolor>
+                    <top>2</top>
+                    <width>auto</width>
+                    <height>28</height>
+                    <align>right</align>
+                    <font>Tiny</font>
+                    <label>$INFO[Window(home).Property(SkinHelper.ListItem.Rating.IMDB), ,]$INFO[Window(home).Property(SkinHelper.ListItem.Votes.IMDB), (, $LOCALIZE[205])]</label>
+                    <visible>!String.IsEmpty(Window(home).Property(SkinHelper.ListItem.Rating.IMDB))</visible>
+                </control>
+                <control type="label">
+                    <textcolor>main_fg_70</textcolor>
+                    <top>2</top>
+                    <width>auto</width>
+                    <height>28</height>
+                    <align>right</align>
+                    <font>Tiny</font>
+                    <label>$INFO[ListItem.RatingAndVotes, ,]</label>
+                    <visible>String.IsEmpty(Window(home).Property(SkinHelper.ListItem.Rating.IMDB)) + !String.IsEmpty(ListItem.RatingAndVotes)</visible>
+                </control>
+            </control>
+
+            <!-- DiscArt -->
+            <control type="image">
+                <top>722</top>
+                <right>20</right>
+                <bottom>146</bottom>
+                <aspectratio align="right" aligny="center">keep</aspectratio>
+                <texture>$INFO[ListItem.Art(discart)]</texture>
+            </control>
+
+            <!-- Buttons -->
+            <control type="grouplist" id="9000">
+                <left>614</left>
+                <right>30</right>
+                <align>left</align>
+                <top>954</top>
+                <height>60</height>
+                <include>Dialog_Info_Button_Grouplist</include>
+
+                <control type="button" id ="8">
+                    <description>Play</description>
+                    <label>208</label>
+                    <include>Dialog_Info_Buttons</include>
+                </control>
+
+                <control type="button" id="9003">
+                    <label>206</label>
+                    <onclick condition="Container.Content(movies)">SetProperty(CustomInfoList.Content,plugin://script.skin.helper.service/?action=getcast&amp;movie=$INFO[ListItem.DBID]&amp;castaction=extendedinfo,Home)</onclick>
+                    <onclick condition="Container.Content(tvshows)">SetProperty(CustomInfoList.Content,plugin://script.skin.helper.service/?action=getcast&amp;tvshow=$INFO[ListItem.DBID]&amp;castaction=extendedinfo,Home)</onclick>
+                    <onclick condition="Container.Content(episodes)">SetProperty(CustomInfoList.Content,plugin://script.skin.helper.service/?action=getcast&amp;episode=$INFO[ListItem.DBID]&amp;castaction=extendedinfo,Home)</onclick>
+                    <onclick>SetProperty(CustomInfoList.Target,,Home)</onclick>
+                    <onclick>SetProperty(CustomInfoList.Title,$INFO[ListItem.Title,$LOCALIZE[206]  (,)],Home)</onclick>
+                    <onclick>ActivateWindow(1131)</onclick>
+                    <include>Dialog_Info_Buttons</include>
+                    <visible>!String.IsEmpty(ListItem.Cast)</visible>
+                </control>
+
+                <control type="button" id="9002">
+                    <label>20339</label>
+                    <onclick>SetProperty(CustomInfoList.Content,plugin://script.extendedinfo?info=personmovies&amp;&amp;person=$INFO[ListItem.Director],Home)</onclick>
+                    <onclick>SetProperty(CustomInfoList.Target,,Home)</onclick>
+                    <onclick>SetProperty(CustomInfoList.Title,$INFO[ListItem.Director,,  ($LOCALIZE[20339])],Home)</onclick>
+                    <onclick>ActivateWindow(1131)</onclick>
+                    <visible>Container.Content(movies)</visible>
+                    <visible>!IsEmpty(ListItem.Director)</visible>
+                    <include>Dialog_Info_Buttons</include>
+                </control>
+                
+                <control type="button" id="11">
+                    <description>Trailer button</description>
+                    <label>20410</label>
+                    <include>Dialog_Info_Buttons</include>
+                    <visible>!IsEmpty(ListItem.Trailer)</visible>
+                </control>
+
+                <control type="button" id="105">
+                    <description>Extras</description>
+                    <include>Dialog_Info_Buttons</include>
+                    <label>31171</label>
+                    <onclick>RunScript(script.videoextras,display,"$INFO[ListItem.FilenameAndPath]")</onclick>
+                    <visible>System.HasAddon(script.videoextras) + [Container.Content(movies) | Container.Content(episodes) | Container.Content(TVShows) | Container.Content(musicvideos)] + IsEmpty(Window(movieinformation).Property("HideVideoExtrasButton"))</visible>
+                </control>
+
+                <control type="button" id ="6">
+                    <description>Refresh</description>
+                    <label>184</label>
+                    <include>Dialog_Info_Buttons</include>
+                    <visible>!Skin.HasSetting(global.kioskmode)</visible>
+                </control>
+
+                <control type="button" id ="10">
+                    <description>Get Thumb</description>
+                    <label>13405</label>
+                    <include>Dialog_Info_Buttons</include>
+                    <visible>!Skin.HasSetting(global.kioskmode)</visible>
+                </control>
+
+                <control type="button" id="9001">
+                    <label>$LOCALIZE[31203]</label>
+                    <onclick condition="Container.Content(tvshows)">XBMC.RunScript(script.artwork.downloader, mode=gui, mediatype=tvshow, dbid=$INFO[ListItem.DBID])</onclick>
+                    <onclick condition="Container.Content(movies)">XBMC.RunScript(script.artwork.downloader, mode=gui, mediatype=movie, dbid=$INFO[ListItem.DBID])</onclick>
+                    <onclick condition="Container.Content(musicvideos)">XBMC.RunScript(script.artwork.downloader, mode=gui, mediatype=musicvideo, dbid=$INFO[ListItem.DBID])</onclick>
+                    <description>Get Artwork</description>
+                    <include>Dialog_Info_Buttons</include>
+                    <visible>!Skin.HasSetting(global.kioskmode)</visible>
+                    <visible>[Container.Content(tvshows) | Container.Content(movies) | Container.Content(musicvideos)] + system.hasaddon(script.artwork.downloader)</visible>
+                </control>
+            </control>
+        </control>
+
+        <include>Furniture_InfoClock</include>
+        
+    </controls>
+
+</window>
