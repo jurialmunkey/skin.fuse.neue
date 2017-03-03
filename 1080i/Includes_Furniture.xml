@@ -16,8 +16,8 @@
                 <animation effect="slide" reversible="false" condition="!String.IsEqual(Window(Home).Property(LowerFurniture_BottomBar),1)" end="0" start="0,160" time="400" delay="0" tween="quadratic" easing="out">Conditional</animation>
                 <animation effect="slide" reversible="false" condition="String.IsEqual(Window(Home).Property(LowerFurniture_BottomBar),1)" start="0" end="0,160" time="400" delay="0" tween="quadratic" easing="out">Conditional</animation>
 
-                <animation effect="slide" start="0" end="0,-160" time="400" delay="0" tween="quadratic" easing="out" reversible="false" condition="[Control.HasFocus(301) | Control.HasFocus(60) | Control.HasFocus(61) | ControlGroup(9100).HasFocus()] + Window.IsVisible(Home)">Conditional</animation>
-                <animation effect="slide" end="0" start="0,-160" time="400" delay="0" tween="quadratic" easing="out" reversible="false" condition="![Control.HasFocus(301) | Control.HasFocus(60) | Control.HasFocus(61) | ControlGroup(9100).HasFocus()] + Window.IsVisible(Home)">Conditional</animation>
+                <animation effect="slide" start="0" end="0,-160" time="400" delay="0" tween="quadratic" easing="out" reversible="false" condition="[[Control.HasFocus(301) | Control.HasFocus(60) | Control.HasFocus(61) | ControlGroup(9100).HasFocus()] + !Integer.IsEqual(Container(301).NumItems,0)] + Window.IsVisible(Home)">Conditional</animation>
+                <animation effect="slide" end="0" start="0,-160" time="400" delay="0" tween="quadratic" easing="out" reversible="false" condition="![[Control.HasFocus(301) | Control.HasFocus(60) | Control.HasFocus(61) | ControlGroup(9100).HasFocus()] + !Integer.IsEqual(Container(301).NumItems,0)] + Window.IsVisible(Home)">Conditional</animation>
 
                 <animation effect="slide" start="0" end="0,-160" time="400" delay="0" tween="quadratic" easing="out" reversible="false" condition="$EXP[Expression_InfoSlide] + !Window.IsVisible(Home)">Conditional</animation>
                 <animation effect="slide" end="0" start="0,-160" time="400" delay="0" tween="quadratic" easing="out" reversible="false" condition="!$EXP[Expression_InfoSlide] + !Window.IsVisible(Home)">Conditional</animation>
@@ -149,6 +149,7 @@
             </control>
             <control type="group">
                 <visible>!Window.IsVisible(DialogVideoInfo.xml) + !Window.IsVisible(DialogMusicInfo.xml) + !Window.IsVisible(DialogAddonInfo.xml) + !Window.IsVisible(script-script.extendedinfo-DialogVideoInfo.xml) + !Window.IsVisible(script-script.extendedinfo-DialogInfo.xml)</visible>
+                <visible>!Integer.IsEqual(Container(301).NumItems,0) | Container(301).IsUpdating</visible>
                 <include>Furniture_AlphabetStrip</include>
                 <!-- Busy Spinner -->
                 <control type="group">
@@ -635,9 +636,21 @@
                     <control type="group">
                         <visible>!$PARAM[container]ListItem.IsParentFolder + !String.StartsWith($PARAM[container]ListItem.Icon,Default)</visible>
                         <visible>Window.IsVisible(home)</visible>
+                        <visible>!String.IsEmpty(Container(301).ListItem.Art(tvshow.poster)) | !String.IsEmpty(Container(301).ListItem.Art(poster))</visible>
                         <control type="image">
-                            <include>Defs_Shadow_Opaque</include>
                             <fadetime>0</fadetime>
+                            <include>Defs_Shadow_Opaque</include>
+                            <aspectratio aligny="bottom">scale</aspectratio>
+                            <texture fallback="DefaultAddonImages.png">$PARAM[variable]</texture>
+                        </control>
+                    </control>
+                    <control type="group">
+                        <visible>!$PARAM[container]ListItem.IsParentFolder + !String.StartsWith($PARAM[container]ListItem.Icon,Default)</visible>
+                        <visible>Window.IsVisible(home)</visible>
+                        <visible>String.IsEmpty(Container(301).ListItem.Art(tvshow.poster)) + String.IsEmpty(Container(301).ListItem.Art(poster))</visible>
+                        <control type="image">
+                            <fadetime>0</fadetime>
+                            <include>Defs_Shadow_Opaque</include>
                             <aspectratio>scale</aspectratio>
                             <texture colordiffuse="main_bg_100">common/white.png</texture>
                         </control>
