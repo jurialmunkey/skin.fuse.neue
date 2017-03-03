@@ -437,7 +437,7 @@
 
     <include name="View_Square">
         <control type="fixedlist" id="53">
-            <visible>![Container.Content(episodes) | Container.Content(movies) | Container.Content(sets) | Container.Content(seasons) | Container.Content(tvshows) | Container.Content(songs) | Container.Content(files) | Container.Content() | Container.Content(directors) | Container.Content(countries) | Container.Content(playlists) | Container.Content(tags)]</visible>
+            <visible>![Container.Content(episodes) | Container.Content(movies) | Container.Content(sets) | Container.Content(seasons) | Container.Content(tvshows) | Container.Content(songs) | Container.Content(files) | Container.Content() | Container.Content(playlists) | Container.Content(tags)]</visible>
             <include>View_Square_Layout</include>
         </control>
     </include>
@@ -483,7 +483,7 @@
                         <aspectratio scalediffuse="false">scale</aspectratio>
                         <aspectratio aligny="center">scale</aspectratio>
                         <texture colordiffuse="main_fg_100" background="true">$INFO[ListItem.Icon]</texture>
-                        <visible>[!Container.Content(genres) + !Container.Content(years) + !Container.Content(studios)] | ListItem.IsParentFolder</visible>
+                        <visible>[!Container.Content(genres) + !Container.Content(years) + !Container.Content(studios) + !Container.Content(directors) + !Container.Content(countries)] | ListItem.IsParentFolder</visible>
                     </control>
                     <control type="image">
                         <bordersize>50</bordersize>
@@ -503,7 +503,7 @@
                         <texture colordiffuse="main_fg_100" background="true" fallback="DefaultFolder.png">$INFO[ListItem.Label,resource://resource.images.studios.white/,.png]</texture>
                         <visible>Container.Content(studios) + !ListItem.IsParentFolder</visible>
                     </control>
-                    <control type="label">
+                    <control type="textbox">
                         <left>20</left>
                         <right>20</right>
                         <top>0</top>
@@ -512,7 +512,20 @@
                         <align>center</align>
                         <label>$INFO[ListItem.Label]</label>
                         <font>Large</font>
-                        <visible>Container.Content(years) + !ListItem.IsParentFolder</visible>
+                        <textcolor>main_fg_70</textcolor>
+                        <visible>[Container.Content(years)] + !ListItem.IsParentFolder</visible>
+                    </control>
+                    <control type="textbox">
+                        <left>10</left>
+                        <right>10</right>
+                        <top>0</top>
+                        <height>207.66</height>
+                        <aligny>center</aligny>
+                        <align>center</align>
+                        <label>$INFO[ListItem.Label]</label>
+                        <font>Medium</font>
+                        <textcolor>main_fg_70</textcolor>
+                        <visible>[Container.Content(directors) | Container.Content(countries)] + !ListItem.IsParentFolder</visible>
                     </control>
                 </control>
                 
@@ -573,7 +586,7 @@
                         <aspectratio scalediffuse="false">scale</aspectratio>
                         <aspectratio aligny="center">scale</aspectratio>
                         <texture colordiffuse="main_fg_100" background="true">$INFO[ListItem.Icon]</texture>
-                        <visible>[!Container.Content(genres) + !Container.Content(years) + !Container.Content(studios)] | ListItem.IsParentFolder</visible>
+                        <visible>[!Container.Content(genres) + !Container.Content(years) + !Container.Content(studios) + !Container.Content(directors) + !Container.Content(countries)] | ListItem.IsParentFolder</visible>
                     </control>
                     <control type="image">
                         <bordersize>50</bordersize>
@@ -593,7 +606,7 @@
                         <texture colordiffuse="main_fg_100" background="true" fallback="DefaultFolder.png">$INFO[ListItem.Label,resource://resource.images.studios.white/,.png]</texture>
                         <visible>Container.Content(studios) + !ListItem.IsParentFolder</visible>
                     </control>
-                    <control type="label">
+                    <control type="textbox">
                         <left>20</left>
                         <right>20</right>
                         <top>0</top>
@@ -603,7 +616,19 @@
                         <label>$INFO[ListItem.Label]</label>
                         <font>Large</font>
                         <textcolor>Selected</textcolor>
-                        <visible>Container.Content(years) + !ListItem.IsParentFolder</visible>
+                        <visible>[Container.Content(years)] + !ListItem.IsParentFolder</visible>
+                    </control>
+                    <control type="textbox">
+                        <left>10</left>
+                        <right>10</right>
+                        <top>0</top>
+                        <height>207.66</height>
+                        <aligny>center</aligny>
+                        <align>center</align>
+                        <label>$INFO[ListItem.Label]</label>
+                        <font>Medium</font>
+                        <textcolor>Selected</textcolor>
+                        <visible>[Container.Content(directors) | Container.Content(countries)] + !ListItem.IsParentFolder</visible>
                     </control>
                 </control>
                 
