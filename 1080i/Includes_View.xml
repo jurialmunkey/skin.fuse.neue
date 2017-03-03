@@ -16,6 +16,14 @@
         </control>
     </include>
 
+    <include name="View_PVR">
+        <control type="fixedlist" id="50">
+            <include content="View_Square_Layout">
+                <param name="id" value="50" />
+            </include>
+        </control>
+    </include>
+
     <include name="View_EventLog">
         <control type="list" id="50">
             <orientation>vertical</orientation>

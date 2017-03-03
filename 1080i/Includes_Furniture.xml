@@ -141,15 +141,16 @@
                     <include>Animation_FadeIn</include>
                     <include>Animation_FadeOut</include>
                     <include condition="Window.IsVisible(Home)">View_Home_Widget</include>
-                    <include condition="!Window.IsVisible(Home) + !Window.IsVisible(script-script.extendedinfo-VideoList.xml) + !Window.IsVisible(1111) + !Window.IsVisible(EventLog.xml)">View_Library</include>
+                    <include condition="!Window.IsVisible(Home) + !Window.IsVisible(script-script.extendedinfo-VideoList.xml) + !Window.IsVisible(1111) + !Window.IsVisible(EventLog.xml) + !Window.IsVisible(MyPVRChannels.xml)">View_Library</include>
                     <include condition="Window.IsVisible(script-script.extendedinfo-VideoList.xml)">View_ExtendedInfo</include>
                     <include condition="Window.IsVisible(1111)">View_AddonsPage</include>
                     <include condition="Window.IsVisible(EventLog.xml)">View_EventLog</include>
+                    <include condition="Window.IsVisible(MyPVRChannels.xml)">View_PVR</include>
                 </control>
             </control>
             <control type="group">
                 <visible>!Window.IsVisible(DialogVideoInfo.xml) + !Window.IsVisible(DialogMusicInfo.xml) + !Window.IsVisible(DialogAddonInfo.xml) + !Window.IsVisible(script-script.extendedinfo-DialogVideoInfo.xml) + !Window.IsVisible(script-script.extendedinfo-DialogInfo.xml)</visible>
-                <visible>!Integer.IsEqual(Container(301).NumItems,0) | Container(301).IsUpdating</visible>
+                <visible>[Window.IsVisible(home) + [!Integer.IsEqual(Container(301).NumItems,0) | Container(301).IsUpdating]] | !Window.IsVisible(home)</visible>
                 <include>Furniture_AlphabetStrip</include>
                 <!-- Busy Spinner -->
                 <control type="group">
