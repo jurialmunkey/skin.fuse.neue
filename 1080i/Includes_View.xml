@@ -37,7 +37,7 @@
 
     <include name="View_AddonsPage">
         <control type="panel" id="50">
-            <include content="View_Square_Layout">
+            <include content="View_Tiles_Layout">
                 <param name="id" value="50" />
             </include>
             <content>
@@ -366,10 +366,10 @@
     </include>
 
     <include name="View_Tiles">
-        <!-- <control type="panel" id="52">
-            <visible>![Container.Content(episodes) | Container.Content(movies) | Container.Content(sets) | Container.Content(seasons) | Container.Content(albums) | Container.Content(artists) | Container.Content(tvshows) | Container.Content(songs) | Container.Content(files)]</visible>
+        <control type="panel" id="52">
+            <visible>Container.Content() | Container.Content(directors) | Container.Content(countries) | Container.Content(years)</visible>
             <include>View_Tiles_Layout</include>
-        </control> -->
+        </control>
     </include>
 
     <include name="View_Tiles_Layout">
@@ -437,8 +437,7 @@
 
     <include name="View_Square">
         <control type="fixedlist" id="53">
-            <!-- <visible>Container.Content(albums) | Container.Content(artists)</visible> -->
-            <visible>![Container.Content(episodes) | Container.Content(movies) | Container.Content(sets) | Container.Content(seasons) | Container.Content(tvshows) | Container.Content(songs) | Container.Content(files)]</visible>
+            <visible>![Container.Content(episodes) | Container.Content(movies) | Container.Content(sets) | Container.Content(seasons) | Container.Content(tvshows) | Container.Content(songs) | Container.Content(files) | Container.Content() | Container.Content(directors) | Container.Content(countries) | Container.Content(years)]</visible>
             <include>View_Square_Layout</include>
         </control>
     </include>
