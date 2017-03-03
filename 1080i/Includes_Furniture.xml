@@ -871,12 +871,13 @@
             <onfocus>ClearProperty(ViewType,Home)</onfocus>
             <onfocus>ClearProperty(ContextModifier,Home)</onfocus>
             <onfocus>ClearProperty(ContextPosition,Home)</onfocus>
-            <onup condition="Container(302).Position(0)">SetFocus(300,0)</onup>
-            <onup condition="Container(302).Position(1)">SetFocus(300,1)</onup>
-            <onup condition="Container(302).Position(2)">SetFocus(300,2)</onup>
-            <onup condition="Container(302).Position(3)">SetFocus(300,3)</onup>
-            <onup condition="Container(302).Position(4)">SetFocus(300,4)</onup>
-            <onup condition="Container(302).Position(5)">SetFocus(300,5)</onup>
+            <onup condition="[Window.IsVisible(settings) | Window.IsVisible(SettingsCategory.xml) | Window.IsVisible(FileManager.xml) | Window.IsVisible(AddonBrowser.xml) | Window.IsVisible(SkinSettings.xml) | Window.IsVisible(SettingsSystemInfo.xml) | Window.IsVisible(SettingsProfile.xml) | Window.IsVisible(EventLog.xml)] + Container(302).Position(0)">SetFocus(300,0)</onup>
+            <onup condition="[Window.IsVisible(settings) | Window.IsVisible(SettingsCategory.xml) | Window.IsVisible(FileManager.xml) | Window.IsVisible(AddonBrowser.xml) | Window.IsVisible(SkinSettings.xml) | Window.IsVisible(SettingsSystemInfo.xml) | Window.IsVisible(SettingsProfile.xml) | Window.IsVisible(EventLog.xml)] + Container(302).Position(1)">SetFocus(300,1)</onup>
+            <onup condition="[Window.IsVisible(settings) | Window.IsVisible(SettingsCategory.xml) | Window.IsVisible(FileManager.xml) | Window.IsVisible(AddonBrowser.xml) | Window.IsVisible(SkinSettings.xml) | Window.IsVisible(SettingsSystemInfo.xml) | Window.IsVisible(SettingsProfile.xml) | Window.IsVisible(EventLog.xml)] + Container(302).Position(2)">SetFocus(300,2)</onup>
+            <onup condition="[Window.IsVisible(settings) | Window.IsVisible(SettingsCategory.xml) | Window.IsVisible(FileManager.xml) | Window.IsVisible(AddonBrowser.xml) | Window.IsVisible(SkinSettings.xml) | Window.IsVisible(SettingsSystemInfo.xml) | Window.IsVisible(SettingsProfile.xml) | Window.IsVisible(EventLog.xml)] + Container(302).Position(3)">SetFocus(300,3)</onup>
+            <onup condition="[Window.IsVisible(settings) | Window.IsVisible(SettingsCategory.xml) | Window.IsVisible(FileManager.xml) | Window.IsVisible(AddonBrowser.xml) | Window.IsVisible(SkinSettings.xml) | Window.IsVisible(SettingsSystemInfo.xml) | Window.IsVisible(SettingsProfile.xml) | Window.IsVisible(EventLog.xml)] + Container(302).Position(4)">SetFocus(300,4)</onup>
+            <onup condition="[Window.IsVisible(settings) | Window.IsVisible(SettingsCategory.xml) | Window.IsVisible(FileManager.xml) | Window.IsVisible(AddonBrowser.xml) | Window.IsVisible(SkinSettings.xml) | Window.IsVisible(SettingsSystemInfo.xml) | Window.IsVisible(SettingsProfile.xml) | Window.IsVisible(EventLog.xml)] + Container(302).Position(5)">SetFocus(300,5)</onup>
+            <onup condition="![Window.IsVisible(settings) | Window.IsVisible(SettingsCategory.xml) | Window.IsVisible(FileManager.xml) | Window.IsVisible(AddonBrowser.xml) | Window.IsVisible(SkinSettings.xml) | Window.IsVisible(SettingsSystemInfo.xml) | Window.IsVisible(SettingsProfile.xml) | Window.IsVisible(EventLog.xml)]">300</onup>
             <orientation>horizontal</orientation>
             <itemlayout height="40" width="320">
                 <control type="label">

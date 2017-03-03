@@ -212,14 +212,14 @@
                         <onclick condition="!IsEmpty(Skin.String(StartupPlaylist))">Skin.Reset(StartupPlaylist)</onclick>
                     </control>
                     
-                    <control type="radiobutton" id="9272" description="Kiosk Mode">
+                    <!-- <control type="radiobutton" id="9272" description="Kiosk Mode">
                         <visible>ControlGroup(9100).HasFocus(9107)</visible>
                         <onback>300</onback>
                         <include>Defs_Settings_Button</include>
                         <label>31199</label>
                         <selected>Skin.HasSetting(global.kioskmode)</selected>
                         <onclick>Skin.ToggleSetting(global.kioskmode)</onclick>
-                    </control>
+                    </control> -->
                     
                 </control>
 
