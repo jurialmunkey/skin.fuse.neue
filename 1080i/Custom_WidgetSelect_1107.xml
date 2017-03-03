@@ -96,7 +96,7 @@
                         <label>31105</label>
                         <onclick>Close</onclick>
                         <onclick>Skin.Reset(home.slideshowpath)</onclick>
-                        <onclick>RunScript(script.skinshortcuts,type=shortcuts&amp;grouping=video&amp;skinList=home.fallbackwidget&amp;skinLabel=home.fallbackwidget.name&amp;skinType=home.fallbackwidget.type)</onclick>
+                        <onclick>RunScript(script.skinshortcuts,type=widgets&amp;grouping=widget&amp;skinWidgetPath=home.fallbackwidget&amp;skinWidget=home.fallbackwidget.node&amp;skinWidgetName=home.fallbackwidget.name&amp;skinWidgetType=home.fallbackwidget.type&amp;skinWidgetTarget=home.fallbackwidget.target)</onclick>
                     </item>
                 </content>
             </control>

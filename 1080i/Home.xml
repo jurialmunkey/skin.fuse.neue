@@ -7,13 +7,14 @@
     <onload>SetProperty(LowerFurniture_BottomBar,0,Home)</onload>
     <onload condition="!Skin.HasSetting(SkinHelper.EnablePVRThumbs)">Skin.SetBool(SkinHelper.EnablePVRThumbs)</onload>
     <onload condition="!Skin.HasSetting(SkinHelper.EnableMusicArt)">Skin.SetBool(SkinHelper.EnableMusicArt)</onload>
+    <onload>ClearProperty(ViewType,Home)</onload>
     <controls>
         <include>GlobalBackground</include>
         <include>Furniture_TopBar</include>
         <include>Furniture_BottomBar</include>
         <include content="Furniture_BigPoster">
             <param name="container" value="Container(301)." />
-            <param name="visible" value="!Container(301).IsUpdating" />
+            <param name="visible" value="!Container(301).IsUpdating + !Integer.IsEqual(Container(301).NumItems,0)" />
             <param name="variable" value="$VAR[HomePosterImage]" />
         </include>
         <include>Furniture_Clock</include>
