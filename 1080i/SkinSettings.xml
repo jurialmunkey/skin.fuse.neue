@@ -105,14 +105,14 @@
                         <onclick>Skin.ToggleSetting(home.dontshowfanart)</onclick>
                     </control>
 
-                    <!-- <control type="radiobutton" id="9214" description="Never hide top bar">
+                    <control type="radiobutton" id="9214" description="Never hide top bar">
                         <visible>ControlGroup(9100).HasFocus(9101)</visible>
                         <onback>300</onback>
                         <include>Defs_Settings_Button</include>
                         <label>31283</label>
                         <selected>Skin.HasSetting(ShowFurniture_TopBar)</selected>
                         <onclick>Skin.ToggleSetting(ShowFurniture_TopBar)</onclick>
-                    </control> -->
+                    </control>
 
                     <!-- Fanart -->
                     <control type="button" id="9221" description="Set Fallback Image">

@@ -4,7 +4,7 @@
     <defaultcontrol always="true">8</defaultcontrol>
 
     <zorder>0</zorder>
-    <onload condition="System.HasAddon(script.videoextras)">RunScript(script.videoextras,check,"$INFO[ListItem.FilenameAndPath]")</onload>
+    <!-- <onload condition="System.HasAddon(script.videoextras)">RunScript(script.videoextras,check,"$INFO[ListItem.FilenameAndPath]")</onload> -->
     <controls>
 
         <control type="group">
@@ -293,13 +293,13 @@
                     <visible>!IsEmpty(ListItem.Trailer)</visible>
                 </control>
 
-                <control type="button" id="105">
+                <!-- <control type="button" id="105">
                     <description>Extras</description>
                     <include>Dialog_Info_Buttons</include>
                     <label>31171</label>
                     <onclick>RunScript(script.videoextras,display,"$INFO[ListItem.FilenameAndPath]")</onclick>
                     <visible>System.HasAddon(script.videoextras) + [Container.Content(movies) | Container.Content(episodes) | Container.Content(TVShows) | Container.Content(musicvideos)] + IsEmpty(Window(movieinformation).Property("HideVideoExtrasButton"))</visible>
-                </control>
+                </control> -->
 
                 <control type="button" id ="6">
                     <description>Refresh</description>
