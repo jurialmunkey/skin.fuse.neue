@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <addon
     id="skin.fuse.neue"
-    version="0.9.1"
+    version="0.9.2"
     name="(fuse)neue"
     provider-name="jurialmunkey">
     <requires>
@@ -11,6 +11,8 @@
         <import addon="script.extendedinfo" version="3.0.0"/>
         <import addon="script.image.resource.select" version="0.0.5"/>
         <import addon="plugin.program.autocompletion" version="1.0.1"/>
+        <import addon="resource.images.studios.white" version="0.0.10"/>
+        <import addon="resource.images.moviegenreicons.transparent" version="0.0.6"/>
     </requires>
     <extension
     point="xbmc.gui.skin"

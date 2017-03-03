@@ -367,7 +367,7 @@
 
     <include name="View_Tiles">
         <control type="panel" id="52">
-            <visible>Container.Content() | Container.Content(directors) | Container.Content(countries) | Container.Content(years) | Container.Content(playlists)</visible>
+            <visible>Container.Content() | Container.Content(playlists) | Container.Content(tags)</visible>
             <include>View_Tiles_Layout</include>
         </control>
     </include>
@@ -437,7 +437,7 @@
 
     <include name="View_Square">
         <control type="fixedlist" id="53">
-            <visible>![Container.Content(episodes) | Container.Content(movies) | Container.Content(sets) | Container.Content(seasons) | Container.Content(tvshows) | Container.Content(songs) | Container.Content(files) | Container.Content() | Container.Content(directors) | Container.Content(countries) | Container.Content(years) | Container.Content(playlists)]</visible>
+            <visible>![Container.Content(episodes) | Container.Content(movies) | Container.Content(sets) | Container.Content(seasons) | Container.Content(tvshows) | Container.Content(songs) | Container.Content(files) | Container.Content() | Container.Content(directors) | Container.Content(countries) | Container.Content(playlists) | Container.Content(tags)]</visible>
             <include>View_Square_Layout</include>
         </control>
     </include>
@@ -483,6 +483,36 @@
                         <aspectratio scalediffuse="false">scale</aspectratio>
                         <aspectratio aligny="center">scale</aspectratio>
                         <texture colordiffuse="main_fg_100" background="true">$INFO[ListItem.Icon]</texture>
+                        <visible>[!Container.Content(genres) + !Container.Content(years) + !Container.Content(studios)] | ListItem.IsParentFolder</visible>
+                    </control>
+                    <control type="image">
+                        <bordersize>50</bordersize>
+                        <top>0</top>
+                        <height>207.66</height>
+                        <aspectratio scalediffuse="false">scale</aspectratio>
+                        <aspectratio aligny="center">scale</aspectratio>
+                        <texture colordiffuse="main_fg_100" background="true" fallback="DefaultFolder.png">$INFO[ListItem.Label,resource://resource.images.moviegenreicons.transparent/,.png]</texture>
+                        <visible>Container.Content(genres) + !ListItem.IsParentFolder</visible>
+                    </control>
+                    <control type="image">
+                        <bordersize>20</bordersize>
+                        <top>0</top>
+                        <height>207.66</height>
+                        <aspectratio scalediffuse="false">keep</aspectratio>
+                        <aspectratio aligny="center">scale</aspectratio>
+                        <texture colordiffuse="main_fg_100" background="true" fallback="DefaultFolder.png">$INFO[ListItem.Label,resource://resource.images.studios.white/,.png]</texture>
+                        <visible>Container.Content(studios) + !ListItem.IsParentFolder</visible>
+                    </control>
+                    <control type="label">
+                        <left>20</left>
+                        <right>20</right>
+                        <top>0</top>
+                        <height>207.66</height>
+                        <aligny>center</aligny>
+                        <align>center</align>
+                        <label>$INFO[ListItem.Label]</label>
+                        <font>Large</font>
+                        <visible>Container.Content(years) + !ListItem.IsParentFolder</visible>
                     </control>
                 </control>
                 
@@ -543,6 +573,37 @@
                         <aspectratio scalediffuse="false">scale</aspectratio>
                         <aspectratio aligny="center">scale</aspectratio>
                         <texture colordiffuse="main_fg_100" background="true">$INFO[ListItem.Icon]</texture>
+                        <visible>[!Container.Content(genres) + !Container.Content(years) + !Container.Content(studios)] | ListItem.IsParentFolder</visible>
+                    </control>
+                    <control type="image">
+                        <bordersize>50</bordersize>
+                        <top>0</top>
+                        <height>207.66</height>
+                        <aspectratio scalediffuse="false">keep</aspectratio>
+                        <aspectratio aligny="center">scale</aspectratio>
+                        <texture colordiffuse="main_fg_100" background="true" fallback="DefaultFolder.png">$INFO[ListItem.Label,resource://resource.images.moviegenreicons.transparent/,.png]</texture>
+                        <visible>Container.Content(genres) + !ListItem.IsParentFolder</visible>
+                    </control>
+                    <control type="image">
+                        <bordersize>20</bordersize>
+                        <top>0</top>
+                        <height>207.66</height>
+                        <aspectratio scalediffuse="false">keep</aspectratio>
+                        <aspectratio aligny="center">scale</aspectratio>
+                        <texture colordiffuse="main_fg_100" background="true" fallback="DefaultFolder.png">$INFO[ListItem.Label,resource://resource.images.studios.white/,.png]</texture>
+                        <visible>Container.Content(studios) + !ListItem.IsParentFolder</visible>
+                    </control>
+                    <control type="label">
+                        <left>20</left>
+                        <right>20</right>
+                        <top>0</top>
+                        <height>207.66</height>
+                        <aligny>center</aligny>
+                        <align>center</align>
+                        <label>$INFO[ListItem.Label]</label>
+                        <font>Large</font>
+                        <textcolor>Selected</textcolor>
+                        <visible>Container.Content(years) + !ListItem.IsParentFolder</visible>
                     </control>
                 </control>
                 
@@ -599,7 +660,7 @@
 
     <include name="View_List">
         <control type="fixedlist" id="54">
-            <visible>Container.Content(songs) | Container.Content(files) | Window.IsVisible(MyPlaylist.xml)</visible>
+            <visible>Container.Content(songs) | Container.Content(files) | Window.IsVisible(MyPlaylist.xml) | Container.Content(directors) | Container.Content(countries) | Container.Content(years)</visible>
             <include>View_List_Layout</include>
         </control>
     </include>
