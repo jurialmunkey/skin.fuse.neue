@@ -35,7 +35,7 @@
 
     <include name="View_AddonsPage">
         <control type="panel" id="50">
-            <include content="View_Tiles_Layout">
+            <include content="View_Square_Layout">
                 <param name="id" value="50" />
             </include>
             <content>
@@ -364,10 +364,10 @@
     </include>
 
     <include name="View_Tiles">
-        <control type="panel" id="52">
+        <!-- <control type="panel" id="52">
             <visible>![Container.Content(episodes) | Container.Content(movies) | Container.Content(sets) | Container.Content(seasons) | Container.Content(albums) | Container.Content(artists) | Container.Content(tvshows) | Container.Content(songs) | Container.Content(files)]</visible>
             <include>View_Tiles_Layout</include>
-        </control>
+        </control> -->
     </include>
 
     <include name="View_Tiles_Layout">
@@ -421,7 +421,8 @@
 
     <include name="View_Square">
         <control type="fixedlist" id="53">
-            <visible>Container.Content(albums) | Container.Content(artists)</visible>
+            <!-- <visible>Container.Content(albums) | Container.Content(artists)</visible> -->
+            <visible>![Container.Content(episodes) | Container.Content(movies) | Container.Content(sets) | Container.Content(seasons) | Container.Content(tvshows) | Container.Content(songs) | Container.Content(files)]</visible>
             <include>View_Square_Layout</include>
         </control>
     </include>
@@ -454,7 +455,7 @@
                     <bordersize>10</bordersize>
                     <bordertexture border="10">common/nofocus-shadow10.png</bordertexture>
                     <aspectratio scalediffuse="false">scale</aspectratio>
-                    <texture colordiffuse="main_bg_100">common/white.png</texture>
+                    <texture colordiffuse="main_fg_12">common/white.png</texture>
                 </control>
 
                 <!-- Parent Folder -->
@@ -480,6 +481,13 @@
                     <texture fallback="DefaultAddonNone.png" background="true">$VAR[ThumbImage]</texture>
                     <visible>!ListItem.IsParentFolder</visible>
                     <visible>!String.StartsWith(ListItem.Icon,Default)</visible>
+                </control>
+                <control type="image">
+                    <left>10</left>
+                    <right>10</right>
+                    <height>49.34</height>
+                    <bottom>10</bottom>
+                    <texture colordiffuse="main_bg_100">common/white.png</texture>
                 </control>
                 <control type="label">
                     <left>20</left>
@@ -507,7 +515,7 @@
                     <bordersize>10</bordersize>
                     <bordertexture border="10">common/nofocus-shadow10.png</bordertexture>
                     <aspectratio scalediffuse="false">scale</aspectratio>
-                    <texture colordiffuse="main_bg_100">common/white.png</texture>
+                    <texture colordiffuse="main_fg_12">common/white.png</texture>
                 </control>
 
                 <!-- Parent Folder -->
@@ -533,6 +541,13 @@
                     <texture fallback="DefaultAddonNone.png" background="true">$VAR[ThumbImage]</texture>
                     <visible>!ListItem.IsParentFolder</visible>
                     <visible>!String.StartsWith(ListItem.Icon,Default)</visible>
+                </control>
+                <control type="image">
+                    <left>10</left>
+                    <right>10</right>
+                    <height>49.34</height>
+                    <bottom>10</bottom>
+                    <texture colordiffuse="main_bg_100">common/white.png</texture>
                 </control>
                 <control type="label">
                     <left>20</left>
