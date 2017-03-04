@@ -56,14 +56,6 @@
                 </control>
             </control>
 
-            <!-- DiscArt -->
-            <control type="image">
-                <top>722</top>
-                <right>20</right>
-                <bottom>146</bottom>
-                <aspectratio align="right" aligny="center">keep</aspectratio>
-                <texture>$INFO[ListItem.Art(discart)]</texture>
-            </control>
 
             <!-- Buttons -->
             <control type="grouplist" id="9000">

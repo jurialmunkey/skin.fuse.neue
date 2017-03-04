@@ -702,6 +702,7 @@
             <height>325.25</height>
             <onleft>9100</onleft>
             <onright>300</onright>
+            <onback condition="Window.IsVisible(Home) | [String.IsEqual(Container.FolderPath,Window(Home).Property(Container_FolderPath)) + !Skin.HasSetting(DisableNeverHome)]">300</onback>
             <onunfocus>SetProperty(ShowFurniture_TopBar,1,Home)</onunfocus>
             <onfocus>SetProperty(ShowFurniture_TopBar,0,Home)</onfocus>
             <preloaditems>2</preloaditems>

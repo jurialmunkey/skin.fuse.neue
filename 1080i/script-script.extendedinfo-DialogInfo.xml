@@ -29,7 +29,7 @@
                 <label>$INFO[Window.Property(label)]</label>
             </control>
 
-            <!-- Fanart -->
+            <!-- Thumb -->
             <control type="group">
                 <left>SidePad</left>
                 <top>100</top>
