@@ -437,14 +437,14 @@
                 <include>Furniture_MenuBar_Button</include>
                 <visible>![Window.IsVisible(MyVideoNav.xml) | Window.IsVisible(MyMusicNav.xml) | Window.IsVisible(MyPics.xml) | Window.IsVisible(MyPrograms.xml) | Window.IsVisible(AddonBrowser.xml) | Window.IsVisible(MyPlaylist.xml) | Window.IsVisible(MyWeather.xml)] | [!Control.IsVisible(3) + !Control.IsVisible(9600)]</visible>
             </control>
-            <control type="button" id="9002">
+            <!-- <control type="button" id="9002">
                 <label>5</label>
                 <onclick>ActivateWindow(interfacesettings)</onclick>
                 <texturenofocus colordiffuse="main_fg_70" border="42,0,8,0">buttons/settings.png</texturenofocus>
                 <texturefocus colordiffuse="Highlight" border="42,0,8,0">buttons/settings.png</texturefocus>
                 <include>Furniture_MenuBar_Button</include>
                 <visible>![Window.IsVisible(MyVideoNav.xml) | Window.IsVisible(MyMusicNav.xml) | Window.IsVisible(MyPics.xml) | Window.IsVisible(MyPrograms.xml) | Window.IsVisible(AddonBrowser.xml) | Window.IsVisible(MyPlaylist.xml) | Window.IsVisible(MyWeather.xml)] | [!Control.IsVisible(3) + !Control.IsVisible(9600)]</visible>
-            </control>
+            </control> -->
             <include condition="[Window.IsVisible(MyVideoNav.xml) | Window.IsVisible(MyMusicNav.xml) | Window.IsVisible(MyPics.xml) | Window.IsVisible(MyPrograms.xml) | Window.IsVisible(AddonBrowser.xml) | Window.IsVisible(MyPlaylist.xml) | Window.IsVisible(MyWeather.xml)]">Furniture_SortButtons</include>
         </control>
     </include>

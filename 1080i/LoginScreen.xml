@@ -8,10 +8,8 @@
         <control type="group">
             <visible>!Player.HasVideo</visible>
             <visible>!IsEmpty(Window(home).Property(SkinInitStarted))</visible>
-            <include>GlobalBackground</include>
-            <include>Furniture_Header</include>
+            <include>GlobalSettingsBackground</include>
             <include>Furniture_Clock</include>
-            <include>Furniture_BottomBar_Weather</include>
             
             <control type="list" id="52">
                 <visible>!Window.IsVisible(ProfileSettings.xml)</visible>
@@ -28,68 +26,59 @@
                 <movement>1</movement>
                 <itemlayout height="120">
                     <control type="label">
-                        <left>140</left>
+                        <left>150</left>
                         <top>22</top>
                         <width>490</width>
                         <height>40</height>
-                        <textcolor>main_bg_100</textcolor>
+                        <textcolor>main_fg_70</textcolor>
                         <font>SmallBold</font>
                         <label>$INFO[ListItem.Label]</label>
                     </control>
                     <control type="label">
-                        <left>140</left>
+                        <left>150</left>
                         <top>61</top>
                         <width>490</width>
                         <height>40</height>
-                        <textcolor>main_bg_70</textcolor>
+                        <textcolor>main_fg_30</textcolor>
                         <label>$INFO[ListItem.Label2]</label>
                         <font>Font-ListInfo</font>
                     </control>
                 </itemlayout>
                 <focusedlayout height="120">
-                    <control type="image">
+                    <control type="group">
+                        <animation effect="slide" start="0,120" end="0,0" time="300" reversible="false" tween="back" easing="out" condition="Container(52).OnPrevious">Focus</animation>
+                        <animation effect="slide" start="0,-120" end="0,0" time="300" reversible="false" tween="back" easing="out" condition="Container(52).OnNext">Focus</animation>
                         <left>8</left>
                         <centertop>50%</centertop>
                         <width>111</width>
                         <height>111</height>
-                        <aspectratio scalediffuse="false">scale</aspectratio>
-                        <texture diffuse="diffuse/dialogselect.png" fallback="DefaultAddonNone.png">$INFO[Listitem.Icon]</texture>
-                        <animation effect="slide" start="0,120" end="0,0" time="300" reversible="false" tween="back" easing="out" condition="Container(52).OnPrevious">Focus</animation>
-                        <animation effect="slide" start="0,-120" end="0,0" time="300" reversible="false" tween="back" easing="out" condition="Container(52).OnNext">Focus</animation>
-                        <visible>!Skin.HasSetting(global.hidecirles)</visible>
-                    </control>
-                    <control type="image">
-                        <left>8</left>
-                        <centertop>50%</centertop>
-                        <width>111</width>
-                        <height>111</height>
-                        <aspectratio scalediffuse="false">scale</aspectratio>
-                        <texture fallback="DefaultAddonNone.png">$INFO[Listitem.Icon]</texture>
-                        <animation effect="slide" start="0,120" end="0,0" time="300" reversible="false" tween="back" easing="out" condition="Container(52).OnPrevious">Focus</animation>
-                        <animation effect="slide" start="0,-120" end="0,0" time="300" reversible="false" tween="back" easing="out" condition="Container(52).OnNext">Focus</animation>
-                        <visible>Skin.HasSetting(global.hidecirles)</visible>
+                        <control type="image">
+                            <aspectratio scalediffuse="false">scale</aspectratio>
+                            <texture colordiffuse="main_fg_30">diffuse/dialogselect.png</texture>
+                        </control>
+                        <control type="image">
+                            <aspectratio scalediffuse="false">scale</aspectratio>
+                            <texture diffuse="diffuse/dialogselect.png" fallback="DefaultArtist.png" colordiffuse="dfFFFFFF">$INFO[Listitem.Icon]</texture>
+                        </control>
                     </control>
 
                     <control type="group">
-                        <animation type="Focus" condition="Container(52).OnNext | Container(52).OnPrevious" reversible="false">
-                            <effect type="fade" start="50" end="100" time="300" tween="sine" easing="inout" />
-                        </animation>
-                        <animation effect="fade" start="100" end="50" time="300" tween="sine" easing="inout" condition="!Control.HasFocus(52)">Conditional</animation>
                         <control type="label">
-                            <left>140</left>
+                            <left>150</left>
                             <top>22</top>
                             <width>490</width>
                             <height>40</height>
                             <font>SmallBold</font>
-                            <textcolor>main_bg_100</textcolor>
+                            <textcolor>Selected</textcolor>
                             <label>$INFO[ListItem.Label]</label>
                         </control>
                         <control type="label">
-                            <left>140</left>
+                            <left>150</left>
                             <top>61</top>
                             <width>490</width>
                             <height>40</height>
-                            <textcolor>main_bg_70</textcolor>
+                            <textcolor>Selected</textcolor>
+                            <animation effect="fade" start="100" end="75" condition="true">Conditional</animation>
                             <label>$INFO[ListItem.Label2]</label>
                             <font>Font-ListInfo</font>
                         </control>

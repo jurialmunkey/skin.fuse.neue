@@ -13,7 +13,7 @@
         <include>Animation_ZoomIn</include>
         <include>Animation_FadeOut</include>
         <width>466</width>
-        <height>312</height>
+        <height>382</height>
         <control type="image">
             <description>background image</description>
             <texture border="16" colordiffuse="dialog_bg_100">common/rounded-shadow8.png</texture>
@@ -32,9 +32,9 @@
         <width>450</width>
         <top>16</top>
         <itemgap>0</itemgap>
-        <onback>50</onback>
-        <onleft>9100</onleft>
-        <onright>9100</onright>
+        <onback condition="!Window.IsVisible(DialogButtonMenu.xml)">50</onback>
+        <onleft condition="!Window.IsVisible(DialogButtonMenu.xml)">9100</onleft>
+        <onright condition="!Window.IsVisible(DialogButtonMenu.xml)">9100</onright>
     </include>
 
     <!-- Widget Content -->
