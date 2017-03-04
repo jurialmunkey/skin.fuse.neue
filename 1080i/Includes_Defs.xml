@@ -1,6 +1,19 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <includes>
 
+    <include name="Defs_PVRGuide_Lines">
+        <control type="image" id="2">
+            <height>1</height>
+            <top>0</top>
+            <texture colordiffuse="7f000000">common/white.png</texture>
+        </control>
+        <control type="image" id="2">
+            <height>1</height>
+            <top>1</top>
+            <texture colordiffuse="1fcccccc">common/white.png</texture>
+        </control>
+    </include>
+
     <include name="Defs_SetStartWindow">
         <onload condition="!Window.Previous(MusicVisualisation.xml) + !Window.Previous(VideoFullScreen.xml) + !Window.Previous(1111)">SetProperty(Container_FolderPath,$INFO[Container.FolderPath],Home)</onload>
         <onload>ClearProperty(ViewType,Home)</onload>

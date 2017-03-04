@@ -196,9 +196,8 @@
         </font>
         <font>
             <name>EPGTimeline</name>
-            <filename>RobotoCondensed-Bold.ttf</filename>
-            <size>20</size>
-            <style>uppercase</style>
+            <filename>RobotoCondensed-Regular.ttf</filename>
+            <size>18</size>
         </font>
         
         <font>
