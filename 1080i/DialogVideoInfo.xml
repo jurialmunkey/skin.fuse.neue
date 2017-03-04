@@ -257,9 +257,9 @@
 
                 <control type="button" id="9003">
                     <label>206</label>
-                    <onclick condition="Container.Content(movies)">SetProperty(CustomInfoList.Content,plugin://script.skin.helper.service/?action=getcast&amp;movie=$INFO[ListItem.DBID]&amp;castaction=extendedinfo,Home)</onclick>
-                    <onclick condition="Container.Content(tvshows)">SetProperty(CustomInfoList.Content,plugin://script.skin.helper.service/?action=getcast&amp;tvshow=$INFO[ListItem.DBID]&amp;castaction=extendedinfo,Home)</onclick>
-                    <onclick condition="Container.Content(episodes)">SetProperty(CustomInfoList.Content,plugin://script.skin.helper.service/?action=getcast&amp;episode=$INFO[ListItem.DBID]&amp;castaction=extendedinfo,Home)</onclick>
+                    <onclick condition="Container.Content(movies)">SetProperty(CustomInfoList.Content,plugin://script.skin.helper.service/?action=getcast&amp;movie=$INFO[ListItem.Title]&amp;castaction=extendedinfo,Home)</onclick>
+                    <onclick condition="Container.Content(tvshows)">SetProperty(CustomInfoList.Content,plugin://script.skin.helper.service/?action=getcast&amp;tvshow=$INFO[ListItem.Title]&amp;castaction=extendedinfo,Home)</onclick>
+                    <onclick condition="Container.Content(episodes)">SetProperty(CustomInfoList.Content,plugin://script.skin.helper.service/?action=getcast&amp;episode=$INFO[ListItem.Title]&amp;castaction=extendedinfo,Home)</onclick>
                     <onclick>SetProperty(CustomInfoList.Target,,Home)</onclick>
                     <onclick>SetProperty(CustomInfoList.Title,$INFO[ListItem.Title,$LOCALIZE[206]  (,)],Home)</onclick>
                     <onclick>ActivateWindow(1131)</onclick>

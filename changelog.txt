@@ -1,3 +1,7 @@
+[B]0.9.3[/B]
+Fix bug where empty submenu prevents focus
+Cast lookup by title rather than dbid to fix plugin cast lookups
+
 [B]0.9.2[/B]
 Add views with icons for years genres and studios
 Add list views for directors and countries

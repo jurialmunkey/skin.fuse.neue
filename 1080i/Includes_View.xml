@@ -836,7 +836,7 @@
         <ondown condition="Control.IsVisible(8000)">8000</ondown>
         <ondown condition="Control.IsVisible(60)">61</ondown>
         <ondown condition="!Control.IsVisible(60) + !Control.IsVisible(8000) + Control.IsVisible(9100)">9100</ondown>
-        <onback condition="Window.IsVisible(Home) | String.IsEqual(Container.FolderPath,Window(Home).Property(Container_FolderPath))">300</onback>
+        <onback condition="Window.IsVisible(Home) | Window.Next(Home)">300</onback>
         <onunfocus>SetProperty(ShowFurniture_TopBar,1,Home)</onunfocus>
         <onfocus>SetProperty(ShowFurniture_TopBar,0,Home)</onfocus>
     </include>
