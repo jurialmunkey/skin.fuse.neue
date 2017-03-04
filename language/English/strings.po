@@ -464,3 +464,7 @@ msgstr ""
 msgctxt "#31287"
 msgid "Reset to default"
 msgstr ""
+
+msgctxt "#31288"
+msgid "Show home widgets when top menu is focused"
+msgstr ""

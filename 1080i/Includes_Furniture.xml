@@ -477,7 +477,8 @@
             <align>left</align>
             <itemgap>-24</itemgap>
             <usecontrolcoords>true</usecontrolcoords>
-            <onback>300</onback>
+            <onback condition="!$EXP[Expression_ReplaceWindowHome]">300</onback>
+            <onback condition="$EXP[Expression_ReplaceWindowHome]">ReplaceWindow(home)</onback>
             <onup condition="Control.IsVisible(8000)">8000</onup>
             <onup condition="Control.IsVisible(60)">60</onup>
             <onup condition="!Control.IsVisible(8000) + !Control.IsVisible(60) + Window.IsVisible(Home)">301</onup>
@@ -919,6 +920,7 @@
             <!-- <onfocus>ClearProperty(ViewType,Home)</onfocus> -->
             <onfocus>ClearProperty(ContextModifier,Home)</onfocus>
             <onfocus>ClearProperty(ContextPosition,Home)</onfocus>
+            <onfocus condition="$EXP[Expression_ReplaceWindowHome]">ReplaceWindow(Home)</onfocus>
             <itemlayout height="80" width="320">
                 <control type="label">
                     <left>20</left>

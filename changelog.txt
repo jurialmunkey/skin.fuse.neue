@@ -1,3 +1,6 @@
+[B]0.9.4[/B]
+Add option to show home widgets with top bar
+
 [B]0.9.3[/B]
 Fix bug where empty submenu prevents focus
 Cast lookup by title rather than dbid to fix plugin cast lookups

@@ -123,6 +123,15 @@
                         <onclick>Skin.ToggleSetting(DisableNeverHome)</onclick>
                     </control>
 
+                    <control type="radiobutton" id="9216" description="Show home widgets when top menu is focused">
+                        <visible>ControlGroup(9100).HasFocus(9101)</visible>
+                        <onback>300</onback>
+                        <include>Defs_Settings_Button</include>
+                        <label>31288</label>
+                        <selected>Skin.HasSetting(ReturnHomeOnFocus)</selected>
+                        <onclick>Skin.ToggleSetting(ReturnHomeOnFocus)</onclick>
+                    </control>
+
                     <!-- Fanart -->
                     <control type="button" id="9221" description="Set Fallback Image">
                         <visible>ControlGroup(9100).HasFocus(9102)</visible>
