@@ -18,6 +18,12 @@
 
     <expression name="Expression_InfoSlide">[[[Control.HasFocus(54) | Control.HasFocus(53) | Control.HasFocus(52) | Control.HasFocus(51) | Control.HasFocus(50) | Control.HasFocus(8000) | Control.HasFocus(60) | Control.HasFocus(61) | ControlGroup(9100).HasFocus() | ControlGroup(6000).HasFocus()] + [Container.Content(movies) | Container.Content(tvshows) | Container.Content(sets) | Container.Content(episodes) | Container.Content(seasons) | Container.Content(videos)] | Window.IsVisible(MyPVRGuide.xml)] + [!String.IsEmpty(Control.GetLabel(9399)) | ListItem.IsCollection]]</expression>
 
+    <expression name="Expression_DontLowerBottomBar">[[!Window.IsVisible(home) + !String.IsEqual(Window(Home).Property(LowerFurniture_BottomBar),1)] | [Window.IsVisible(Home) + !Integer.IsEqual(Container(301).NumItems,0)]]</expression>
+
+    <expression name="Expression_LowerBottomBar">[String.IsEqual(Window(Home).Property(LowerFurniture_BottomBar),1) | [Window.IsVisible(Home) + Integer.IsEqual(Container(301).NumItems,0)]]</expression>
+
+    <expression name="Expression_InfoSlide_Home">[[Control.HasFocus(301) | Control.HasFocus(60) | Control.HasFocus(61) | ControlGroup(9100).HasFocus()] + !Integer.IsEqual(Container(301).NumItems,0)]</expression>
+
     <variable name="ColorHighlight">
         <value condition="!IsEmpty(Skin.String(focuscolor.name))">$INFO[Skin.String(focuscolor.name)]</value>
         <value>Highlight</value>
@@ -165,8 +171,8 @@
         <include>GlobalVideoWindow</include>
         <include>GlobalVisualisation</include>
         <control type="group">
-            <animation effect="slide" start="0" easing="out" end="0,-33" time="600" tween="quadratic" reversible="true" condition="[String.IsEqual(Window(Home).Property(ShowFurniture_TopBar),1) + !Control.HasFocus(60) + !Window.IsVisible(MyWeather.xml)]">Conditional</animation>
-            <animation effect="slide" end="0" easing="out" start="0,-33" time="600" delay="0" tween="quadratic" reversible="true" condition="![String.IsEqual(Window(Home).Property(ShowFurniture_TopBar),1) + !Control.HasFocus(60) + !Window.IsVisible(MyWeather.xml)]">Conditional</animation>
+            <animation effect="slide" start="0" easing="out" end="0,-33" time="400" tween="quadratic" reversible="true" condition="[String.IsEqual(Window(Home).Property(ShowFurniture_TopBar),1) + !Control.HasFocus(60) + !Window.IsVisible(MyWeather.xml)] + $EXP[Expression_DontLowerBottomBar]">Conditional</animation>
+            <animation effect="slide" end="0" easing="out" start="0,-33" time="400" delay="0" tween="quadratic" reversible="true" condition="![String.IsEqual(Window(Home).Property(ShowFurniture_TopBar),1) + !Control.HasFocus(60) + !Window.IsVisible(MyWeather.xml)] + $EXP[Expression_DontLowerBottomBar]">Conditional</animation>
             <control type="multiimage" description="Fanart">
                 <visible>!Player.HasMedia | [!Skin.HasSetting(global.showvideo) + Player.HasVideo] | [!Skin.HasSetting(global.showvisualisation) + Player.HasAudio]</visible>
                 <visible>!Skin.HasSetting(global.hidefanart) | Window.IsVisible(home)</visible>

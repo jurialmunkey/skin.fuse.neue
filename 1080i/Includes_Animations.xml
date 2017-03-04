@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <includes>
     <include name="Animation_Notification_Follow">
-        <animation effect="slide" end="0,-120" start="0" tween="quadratic" easing="out" time="400" reversible="false" condition="!Integer.IsEqual(Window(Home).Property(ShowFurniture_TopBar),1)">Conditional</animation>
-        <animation effect="slide" start="0,-120" end="0" tween="quadratic" easing="out" time="400" reversible="false" condition="Integer.IsEqual(Window(Home).Property(ShowFurniture_TopBar),1)">Conditional</animation>
+        <animation effect="slide" end="0,-120" start="0" tween="quadratic" easing="out" time="400" reversible="false" condition="!Integer.IsEqual(Window(Home).Property(ShowFurniture_TopBar),1) + !Skin.HasSetting(ShowFurniture_TopBar)">Conditional</animation>
+        <animation effect="slide" start="0,-120" end="0" tween="quadratic" easing="out" time="400" reversible="false" condition="Integer.IsEqual(Window(Home).Property(ShowFurniture_TopBar),1) | Skin.HasSetting(ShowFurniture_TopBar)">Conditional</animation>
     </include>
 
     <include name="Animation_Common">

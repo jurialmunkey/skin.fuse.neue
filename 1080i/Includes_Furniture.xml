@@ -5,19 +5,19 @@
             <animation type="WindowOpen" reversible="false" condition="Window.Previous(MusicVisualisation.xml) | Window.Previous(VideoFullScreen.xml) | Window.Previous(Startup.xml)">
                 <effect type="fade" start="0" end="100" time="200" delay="0" />
             </animation>
-            <animation effect="slide" start="0" end="0,400" time="400" delay="0" tween="quadratic" easing="out" reversible="false" condition="String.IsEqual(Window(Home).Property(LowerFurniture_BottomBar),1)">Conditional</animation>
-            <animation effect="slide" end="0" start="0,400" time="400" delay="0" tween="quadratic" easing="out" reversible="false" condition="!String.IsEqual(Window(Home).Property(LowerFurniture_BottomBar),1)">Conditional</animation>
+            <animation effect="slide" start="0" end="0,400" time="400" delay="0" tween="quadratic" easing="out" reversible="false" condition="$EXP[Expression_LowerBottomBar]">Conditional</animation>
+            <animation effect="slide" end="0" start="0,400" time="400" delay="0" tween="quadratic" easing="out" reversible="false" condition="$EXP[Expression_DontLowerBottomBar]">Conditional</animation>
             <control type="group">
                 <bottom>0</bottom>
                 <left>0</left>
                 <right>0</right>
                 <height>520</height>
                 <!-- Hide the Infobar when Furniture_BottomBar is lowered -->
-                <animation effect="slide" reversible="false" condition="!String.IsEqual(Window(Home).Property(LowerFurniture_BottomBar),1)" end="0" start="0,160" time="400" delay="0" tween="quadratic" easing="out">Conditional</animation>
-                <animation effect="slide" reversible="false" condition="String.IsEqual(Window(Home).Property(LowerFurniture_BottomBar),1)" start="0" end="0,160" time="400" delay="0" tween="quadratic" easing="out">Conditional</animation>
+                <animation effect="slide" reversible="false" condition="$EXP[Expression_DontLowerBottomBar]" end="0" start="0,160" time="400" delay="0" tween="quadratic" easing="out">Conditional</animation>
+                <animation effect="slide" reversible="false" condition="$EXP[Expression_LowerBottomBar]" start="0" end="0,160" time="400" delay="0" tween="quadratic" easing="out">Conditional</animation>
 
-                <animation effect="slide" start="0" end="0,-160" time="400" delay="0" tween="quadratic" easing="out" reversible="false" condition="[[Control.HasFocus(301) | Control.HasFocus(60) | Control.HasFocus(61) | ControlGroup(9100).HasFocus()] + !Integer.IsEqual(Container(301).NumItems,0)] + Window.IsVisible(Home)">Conditional</animation>
-                <animation effect="slide" end="0" start="0,-160" time="400" delay="0" tween="quadratic" easing="out" reversible="false" condition="![[Control.HasFocus(301) | Control.HasFocus(60) | Control.HasFocus(61) | ControlGroup(9100).HasFocus()] + !Integer.IsEqual(Container(301).NumItems,0)] + Window.IsVisible(Home)">Conditional</animation>
+                <animation effect="slide" start="0" end="0,-160" time="400" delay="0" tween="quadratic" easing="out" reversible="false" condition="$EXP[Expression_InfoSlide_Home] + Window.IsVisible(Home)">Conditional</animation>
+                <animation effect="slide" end="0" start="0,-160" time="400" delay="0" tween="quadratic" easing="out" reversible="false" condition="!$EXP[Expression_InfoSlide_Home] + Window.IsVisible(Home)">Conditional</animation>
 
                 <animation effect="slide" start="0" end="0,-160" time="400" delay="0" tween="quadratic" easing="out" reversible="false" condition="$EXP[Expression_InfoSlide] + !Window.IsVisible(Home)">Conditional</animation>
                 <animation effect="slide" end="0" start="0,-160" time="400" delay="0" tween="quadratic" easing="out" reversible="false" condition="!$EXP[Expression_InfoSlide] + !Window.IsVisible(Home)">Conditional</animation>

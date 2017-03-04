@@ -80,7 +80,7 @@
                     <item>
                         <label>16018</label>
                         <onclick>Close</onclick>
-                        <onclick>Skin.SetString(home.slideshowpath,pvr/background.jpg)</onclick>
+                        <onclick>Skin.SetString(home.slideshowpath,special://skin/extras/backgrounds/default.jpg)</onclick>
                     </item>
                     <item>
                         <label>31271</label>

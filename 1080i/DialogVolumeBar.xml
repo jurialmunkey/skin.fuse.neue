@@ -1,8 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!-- Foundation -->
 <window id="104">
-
-
+    <zorder>10</zorder>
     <controls>
 
         <control type="group">

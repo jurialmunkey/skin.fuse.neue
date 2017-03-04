@@ -5,7 +5,7 @@
     <onload condition="Player.PauseEnabled">SetFocus(14)</onload>
     <onload>SetProperty(ShowFurniture_TopBar,1,Home)</onload>
     <onunload>SetProperty(ShowFurniture_TopBar,0,Home)</onunload>
-    <zorder>10</zorder>
+    <zorder>1</zorder>
     <controls>
         <control type="group">
             <include>Animation_FadeIn</include>
