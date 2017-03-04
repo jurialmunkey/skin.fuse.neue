@@ -29,7 +29,7 @@
                     <orientation>vertical</orientation>
                     <control type="togglebutton" id="9101" description="Home">
                         <usealttexture>!Control.HasFocus(300) + !Control.HasFocus(302) + ControlGroup(9100).HasFocus(9101)</usealttexture>
-                        <alttexturenofocus colordiffuse="Highlight">common/white.png</alttexturenofocus>
+                        <alttexturenofocus colordiffuse="$VAR[ColorHighlight]">common/white.png</alttexturenofocus>
                         <width>450</width>
                         <onback>300</onback>
                         <include>Defs_Settings_Button</include>
@@ -37,7 +37,7 @@
                     </control>
                     <control type="togglebutton" id="9102" description="Background">
                         <usealttexture>!Control.HasFocus(300) + !Control.HasFocus(302) + ControlGroup(9100).HasFocus(9102)</usealttexture>
-                        <alttexturenofocus colordiffuse="Highlight">common/white.png</alttexturenofocus>
+                        <alttexturenofocus colordiffuse="$VAR[ColorHighlight]">common/white.png</alttexturenofocus>
                         <width>450</width>
                         <onback>300</onback>
                         <include>Defs_Settings_Button</include>
@@ -46,7 +46,7 @@
 
                     <control type="togglebutton" id="9103" description="OSD">
                         <usealttexture>!Control.HasFocus(300) + !Control.HasFocus(302) + ControlGroup(9100).HasFocus(9103)</usealttexture>
-                        <alttexturenofocus colordiffuse="Highlight">common/white.png</alttexturenofocus>
+                        <alttexturenofocus colordiffuse="$VAR[ColorHighlight]">common/white.png</alttexturenofocus>
                         <width>450</width>
                         <onback>300</onback>
                         <include>Defs_Settings_Button</include>
@@ -55,7 +55,7 @@
 
                     <control type="togglebutton" id="9107" description="Extras">
                         <usealttexture>!Control.HasFocus(300) + !Control.HasFocus(302) + ControlGroup(9100).HasFocus(9107)</usealttexture>
-                        <alttexturenofocus colordiffuse="Highlight">common/white.png</alttexturenofocus>
+                        <alttexturenofocus colordiffuse="$VAR[ColorHighlight]">common/white.png</alttexturenofocus>
                         <width>450</width>
                         <onback>300</onback>
                         <include>Defs_Settings_Button</include>
@@ -229,6 +229,15 @@
                         <selected>Skin.HasSetting(global.kioskmode)</selected>
                         <onclick>Skin.ToggleSetting(global.kioskmode)</onclick>
                     </control> -->
+
+                    <control type="button" id="9273" description="Color Highlight">
+                        <visible>ControlGroup(9100).HasFocus(9107)</visible>
+                        <onback>300</onback>
+                        <include>Defs_Settings_Button</include>
+                        <label>31286</label>
+                        <label2>$INFO[Skin.String(focuscolor.name)]</label2>
+                        <onclick>RunScript(script.skin.helper.colorpicker,skinstring=focuscolor.name)</onclick>
+                    </control>
                     
                 </control>
 

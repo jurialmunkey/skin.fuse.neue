@@ -239,10 +239,10 @@
             <height>48</height>
             <label></label>
             <font>noop</font>
-            <texturefocus colordiffuse="Highlight">osd/record.png</texturefocus>
+            <texturefocus colordiffuse="$VAR[ColorHighlight]">osd/record.png</texturefocus>
             <texturenofocus colordiffuse="main_fg_70">osd/record.png</texturenofocus>
             <usealttexture>Player.Recording</usealttexture>
-            <alttexturefocus colordiffuse="Highlight">osd/record-on.png</alttexturefocus>
+            <alttexturefocus colordiffuse="$VAR[ColorHighlight]">osd/record-on.png</alttexturefocus>
             <alttexturenofocus colordiffuse="main_fg_70">osd/record-on.png</alttexturenofocus>
             <onclick>PlayerControl(Record)</onclick>
             <enable>Player.CanRecord</enable>
@@ -257,7 +257,7 @@
             <height>48</height>
             <label></label>
             <font>noop</font>
-            <texturefocus colordiffuse="Highlight" flipx="true">osd/next.png</texturefocus>
+            <texturefocus colordiffuse="$VAR[ColorHighlight]" flipx="true">osd/next.png</texturefocus>
             <texturenofocus colordiffuse="main_fg_70" flipx="true">osd/next.png</texturenofocus>
             <onclick>PlayerControl(Previous)</onclick>
         </control>
@@ -269,7 +269,7 @@
             <height>48</height>
             <label></label>
             <font>noop</font>
-            <texturefocus colordiffuse="Highlight" flipx="true">osd/ff.png</texturefocus>
+            <texturefocus colordiffuse="$VAR[ColorHighlight]" flipx="true">osd/ff.png</texturefocus>
             <texturenofocus colordiffuse="main_fg_70" flipx="true">osd/ff.png</texturenofocus>
             <onclick>PlayerControl(Rewind)</onclick>
         </control>
@@ -282,10 +282,10 @@
             <label></label>
             <altlabel></altlabel>
             <font>noop</font>
-            <texturefocus colordiffuse="Highlight">osd/pause.png</texturefocus>
+            <texturefocus colordiffuse="$VAR[ColorHighlight]">osd/pause.png</texturefocus>
             <texturenofocus colordiffuse="main_fg_70">osd/pause.png</texturenofocus>
             <usealttexture>Player.Paused | Player.Forwarding | Player.Rewinding</usealttexture>
-            <alttexturefocus colordiffuse="Highlight">osd/play.png</alttexturefocus>
+            <alttexturefocus colordiffuse="$VAR[ColorHighlight]">osd/play.png</alttexturefocus>
             <alttexturenofocus colordiffuse="main_fg_70">osd/play.png</alttexturenofocus>
             <onclick>PlayerControl(Play)</onclick>
         </control>
@@ -297,7 +297,7 @@
             <height>48</height>
             <label></label>
             <font>noop</font>
-            <texturefocus colordiffuse="Highlight">osd/stop.png</texturefocus>
+            <texturefocus colordiffuse="$VAR[ColorHighlight]">osd/stop.png</texturefocus>
             <texturenofocus colordiffuse="main_fg_70">osd/stop.png</texturenofocus>
             <onclick>PlayerControl(Stop)</onclick>
         </control>
@@ -309,7 +309,7 @@
             <height>48</height>
             <label></label>
             <font>noop</font>
-            <texturefocus colordiffuse="Highlight">osd/ff.png</texturefocus>
+            <texturefocus colordiffuse="$VAR[ColorHighlight]">osd/ff.png</texturefocus>
             <texturenofocus colordiffuse="main_fg_70">osd/ff.png</texturenofocus>
             <onclick>PlayerControl(Forward)</onclick>
         </control>
@@ -321,7 +321,7 @@
             <height>48</height>
             <label></label>
             <font>noop</font>
-            <texturefocus colordiffuse="Highlight">osd/next.png</texturefocus>
+            <texturefocus colordiffuse="$VAR[ColorHighlight]">osd/next.png</texturefocus>
             <texturenofocus colordiffuse="main_fg_70">osd/next.png</texturenofocus>
             <onclick>PlayerControl(Next)</onclick>
         </control>
@@ -420,7 +420,7 @@
         <textoffsetx>10</textoffsetx>
         <textcolor>main_fg_70</textcolor>
         <disabledcolor>main_fg_12</disabledcolor>
-        <texturefocus colordiffuse="Highlight">common/gradient-diffuse.png</texturefocus>
+        <texturefocus colordiffuse="$VAR[ColorHighlight]">common/gradient-diffuse.png</texturefocus>
         <font>font_osd_textbutton</font>
     </include>
 </includes>

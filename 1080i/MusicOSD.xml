@@ -44,7 +44,7 @@
                     </itemlayout>
                     <focusedlayout height="40" width="640">
                         <control type="image">
-                            <texture colordiffuse="Highlight">common/white.png</texture>
+                            <texture colordiffuse="$VAR[ColorHighlight]">common/white.png</texture>
                         </control>
                         <control type="label">
                             <left>20</left>

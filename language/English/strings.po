@@ -456,3 +456,11 @@ msgstr ""
 msgctxt "#31285"
 msgid "Allow pressing back to open the top bar"
 msgstr ""
+
+msgctxt "#31286"
+msgid "Select highlight colour"
+msgstr ""
+
+msgctxt "#31287"
+msgid "Reset to default"
+msgstr ""

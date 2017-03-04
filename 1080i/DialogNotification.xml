@@ -16,7 +16,7 @@
                     <include>Dialog_Notification_MainLabel</include>
                 </control>
                 <control type="label" id="402">
-                    <textcolor>Highlight</textcolor>
+                    <textcolor>$VAR[ColorHighlight]</textcolor>
                     <include>Dialog_Notification_SubLabel</include>
                 </control>
             </control>

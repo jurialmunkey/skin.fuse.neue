@@ -50,7 +50,7 @@
                     <control type="image">
                         <width>100%</width>
                         <height>135</height>
-                        <texture border="5" colordiffuse="Highlight">common/white.png</texture>
+                        <texture border="5" colordiffuse="$VAR[ColorHighlight]">common/white.png</texture>
                     </control>
                     <control type="image">
                         <include>Dialog_Standard_List_Left_Icon</include>
@@ -106,7 +106,7 @@
                     </itemlayout>
                     <focusedlayout height="70" width="300">
                         <control type="image">
-                            <texture border="5" colordiffuse="Highlight">common/box.png</texture>
+                            <texture border="5" colordiffuse="$VAR[ColorHighlight]">common/box.png</texture>
                             <visible>Control.HasFocus(150)</visible>
                         </control>
                         <control type="label">

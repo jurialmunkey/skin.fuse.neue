@@ -51,7 +51,7 @@
                         <left>0</left>
                         <right>0</right>
                         <height>66</height>
-                        <texture border="5" colordiffuse="Highlight">common/white.png</texture>
+                        <texture border="5" colordiffuse="$VAR[ColorHighlight]">common/white.png</texture>
                         <animation effect="fade" start="100" end="50" condition="!Control.HasFocus(3)">Conditional</animation>
                     </control>
                     <control type="label">
@@ -98,7 +98,7 @@
                     <control type="image">
                         <width>100%</width>
                         <height>135</height>
-                        <texture border="5" colordiffuse="Highlight">common/white.png</texture>
+                        <texture border="5" colordiffuse="$VAR[ColorHighlight]">common/white.png</texture>
                     </control>
                     <control type="image">
                         <include>Dialog_Standard_List_Left_Icon</include>

@@ -57,7 +57,7 @@
         <width>85</width>
         <height>75</height>
         <texturenofocus border="5" colordiffuse="dialog_fg_12">common/box.png</texturenofocus>
-        <texturefocus border="5" colordiffuse="Highlight">common/box.png</texturefocus>
+        <texturefocus border="5" colordiffuse="$VAR[ColorHighlight]">common/box.png</texturefocus>
         <textoffsetx>0</textoffsetx>
         <textcolor>dialog_fg_70</textcolor>
         <focusedcolor>Selected</focusedcolor>
@@ -75,8 +75,8 @@
         <textureradiofocus colordiffuse="dialog_fg_70">buttons/radio-on.png</textureradiofocus>
         <textureradionofocus colordiffuse="dialog_fg_30">buttons/radio-off.png</textureradionofocus>
         <focusedcolor>Selected</focusedcolor>
-        <alttexturefocus colordiffuse="Highlight" border="16">common/white.png</alttexturefocus>
-        <texturefocus colordiffuse="Highlight" border="16">common/white.png</texturefocus>
+        <alttexturefocus colordiffuse="$VAR[ColorHighlight]" border="16">common/white.png</alttexturefocus>
+        <texturefocus colordiffuse="$VAR[ColorHighlight]" border="16">common/white.png</texturefocus>
         <onunfocus>SetProperty(ShowFurniture_TopBar,1,Home)</onunfocus>
         <onfocus>SetProperty(ShowFurniture_TopBar,0,Home)</onfocus>
     </include>
@@ -101,7 +101,7 @@
     </include>
     <variable name="Defs_Settings_ColorHighlight">
         <value condition="Control.HasFocus(300) | Control.HasFocus(302) | Control.HasFocus(20)">00ffffff</value>
-        <value>Highlight</value>
+        <value>$VAR[ColorHighlight]</value>
     </variable>
 
     <!-- Grouplist 9000 -->
@@ -188,7 +188,7 @@
                     <width>100</width>
                     <height>100</height>
                     <animation effect="rotate" condition="true" start="0" end="360" loop="true" time="1000" center="auto">Conditional</animation>
-                    <texture colordiffuse="Highlight">dialog/loading-spinner.png</texture>
+                    <texture colordiffuse="$VAR[ColorHighlight]">dialog/loading-spinner.png</texture>
                     <aspectratio>keep</aspectratio>
                 </control>
                 <control type="label">

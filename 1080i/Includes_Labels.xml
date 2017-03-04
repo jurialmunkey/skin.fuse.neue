@@ -48,28 +48,27 @@
     </variable>
     <variable name="SubHeaderLabel">
         <value condition="Window.IsVisible(script-script.extendedinfo-YoutubeList.xml)">$INFO[Window.Property(Filter_Label),,  ]$INFO[Window.Property(TotalItems),, $LOCALIZE[31101]]</value>
-        <value condition="Window.IsVisible(script-NextAired-TVGuide.xml) | Window.IsVisible(script-NextAired-TVGuide2.xml)">[COLOR=Highlight]$INFO[Window(home).Property(NextAired.Total),,[/COLOR] $LOCALIZE[20343]]</value>
+        <value condition="Window.IsVisible(script-NextAired-TVGuide.xml) | Window.IsVisible(script-NextAired-TVGuide2.xml)">[COLOR=$VAR[ColorHighlight]]$INFO[Window(home).Property(NextAired.Total),,[/COLOR] $LOCALIZE[20343]]</value>
         <value condition="[Window.IsVisible(script-globalsearch-main.xml) | Window.IsVisible(script-globalsearch-info.xml)] + IsEmpty(Control.GetLabel(190)) + IsEmpty(Control.GetLabel(191)) + IsEmpty(Control.GetLabel(199))">$VAR[GlobalSearchHeaderLabel]</value>
         <value condition="Window.IsVisible(LoginScreen.xml)">$LOCALIZE[10029]</value>
-        <value condition="Window.IsVisible(Custom_SetCustomColor.xml)">$LOCALIZE[31239] [COLOR=Highlight]Highlight[/COLOR]  •  $LOCALIZE[31240] [COLOR=$INFO[Control.GetLabel(9500)]]$INFO[Control.GetLabel(9500)][/COLOR]</value>
-        <value condition="!IsEmpty(Container.NumItems) + !Window.IsVisible(home)">[COLOR=Highlight]$INFO[Container.NumItems,,[/COLOR] $LOCALIZE[31101]]</value>
-        <value condition="!IsEmpty(Container(9500).NumItems) + !Window.IsVisible(home)">[COLOR=Highlight]$INFO[Container(9500).NumItems,,[/COLOR] $LOCALIZE[31101]]</value>
-        <value condition="Window.IsVisible(MyWeather.xml) + !IsEmpty(Window(Weather).Property(Location))">[COLOR=Highlight]$INFO[Weather.Temperature,,[/COLOR]  ]$INFO[Window(Weather).Property(Location)]</value>
-        <value condition="!Library.HasContent(Music) + IsEmpty(Pvr.BackendChannels)">[COLOR=Highlight]$INFO[Window(home).Property(Movies.Count)][/COLOR] $LOCALIZE[20342]  •  [COLOR=Highlight]$INFO[Window(home).Property(Episodes.Count)][/COLOR] $LOCALIZE[20360]</value>
-        <value condition="!Library.HasContent(Music)">[COLOR=Highlight]$INFO[Window(home).Property(Movies.Count)][/COLOR] $LOCALIZE[20342]  •  [COLOR=Highlight]$INFO[Window(home).Property(Episodes.Count)][/COLOR] $LOCALIZE[20360]  •  [COLOR=Highlight]$INFO[Pvr.BackendChannels][/COLOR] $LOCALIZE[19019]</value>
-        <value condition="IsEmpty(Pvr.BackendChannels)">[COLOR=Highlight]$INFO[Window(home).Property(Movies.Count)][/COLOR] $LOCALIZE[20342]  •  [COLOR=Highlight]$INFO[Window(home).Property(Episodes.Count)][/COLOR] $LOCALIZE[20360]  •  [COLOR=Highlight]$INFO[Window(home).Property(Music.SongsCount)][/COLOR] $LOCALIZE[134]</value>
-        <value>[COLOR=Highlight]$INFO[Window(home).Property(Movies.Count)][/COLOR] $LOCALIZE[20342]  •  [COLOR=Highlight]$INFO[Window(home).Property(Episodes.Count)][/COLOR] $LOCALIZE[20360]  •  [COLOR=Highlight]$INFO[Window(home).Property(Music.SongsCount)][/COLOR] $LOCALIZE[134]  •  [COLOR=Highlight]$INFO[Pvr.BackendChannels][/COLOR] $LOCALIZE[19019]</value>
+        <value condition="!IsEmpty(Container.NumItems) + !Window.IsVisible(home)">[COLOR=$VAR[ColorHighlight]]$INFO[Container.NumItems,,[/COLOR] $LOCALIZE[31101]]</value>
+        <value condition="!IsEmpty(Container(9500).NumItems) + !Window.IsVisible(home)">[COLOR=$VAR[ColorHighlight]]$INFO[Container(9500).NumItems,,[/COLOR] $LOCALIZE[31101]]</value>
+        <value condition="Window.IsVisible(MyWeather.xml) + !IsEmpty(Window(Weather).Property(Location))">[COLOR=$VAR[ColorHighlight]]$INFO[Weather.Temperature,,[/COLOR]  ]$INFO[Window(Weather).Property(Location)]</value>
+        <value condition="!Library.HasContent(Music) + IsEmpty(Pvr.BackendChannels)">[COLOR=$VAR[ColorHighlight]]$INFO[Window(home).Property(Movies.Count)][/COLOR] $LOCALIZE[20342]  •  [COLOR=$VAR[ColorHighlight]]$INFO[Window(home).Property(Episodes.Count)][/COLOR] $LOCALIZE[20360]</value>
+        <value condition="!Library.HasContent(Music)">[COLOR=$VAR[ColorHighlight]]$INFO[Window(home).Property(Movies.Count)][/COLOR] $LOCALIZE[20342]  •  [COLOR=$VAR[ColorHighlight]]$INFO[Window(home).Property(Episodes.Count)][/COLOR] $LOCALIZE[20360]  •  [COLOR=$VAR[ColorHighlight]]$INFO[Pvr.BackendChannels][/COLOR] $LOCALIZE[19019]</value>
+        <value condition="IsEmpty(Pvr.BackendChannels)">[COLOR=$VAR[ColorHighlight]]$INFO[Window(home).Property(Movies.Count)][/COLOR] $LOCALIZE[20342]  •  [COLOR=$VAR[ColorHighlight]]$INFO[Window(home).Property(Episodes.Count)][/COLOR] $LOCALIZE[20360]  •  [COLOR=$VAR[ColorHighlight]]$INFO[Window(home).Property(Music.SongsCount)][/COLOR] $LOCALIZE[134]</value>
+        <value>[COLOR=$VAR[ColorHighlight]]$INFO[Window(home).Property(Movies.Count)][/COLOR] $LOCALIZE[20342]  •  [COLOR=$VAR[ColorHighlight]]$INFO[Window(home).Property(Episodes.Count)][/COLOR] $LOCALIZE[20360]  •  [COLOR=$VAR[ColorHighlight]]$INFO[Window(home).Property(Music.SongsCount)][/COLOR] $LOCALIZE[134]  •  [COLOR=$VAR[ColorHighlight]]$INFO[Pvr.BackendChannels][/COLOR] $LOCALIZE[19019]</value>
     </variable>
     <variable name="GlobalSearchHeaderLabel">
-        <value condition="Control.HasFocus(211)">[COLOR=Highlight]$INFO[Control.GetLabel(210)][/COLOR] $LOCALIZE[20337] $LOCALIZE[31101]</value>
-        <value condition="Control.HasFocus(111)">[COLOR=Highlight]$INFO[Control.GetLabel(110)][/COLOR] $LOCALIZE[20342]</value>
-        <value condition="Control.HasFocus(121)">[COLOR=Highlight]$INFO[Control.GetLabel(120)][/COLOR] $LOCALIZE[20343]</value>
-        <value condition="Control.HasFocus(131)">[COLOR=Highlight]$INFO[Control.GetLabel(130)][/COLOR] $LOCALIZE[33054]</value>
-        <value condition="Control.HasFocus(141)">[COLOR=Highlight]$INFO[Control.GetLabel(140)][/COLOR] $LOCALIZE[20360]</value>
-        <value condition="Control.HasFocus(151)">[COLOR=Highlight]$INFO[Control.GetLabel(150)][/COLOR] $LOCALIZE[20389]</value>
-        <value condition="Control.HasFocus(161)">[COLOR=Highlight]$INFO[Control.GetLabel(160)][/COLOR] $LOCALIZE[133]</value>
-        <value condition="Control.HasFocus(171)">[COLOR=Highlight]$INFO[Control.GetLabel(170)][/COLOR] $LOCALIZE[132]</value>
-        <value condition="Control.HasFocus(181)">[COLOR=Highlight]$INFO[Control.GetLabel(180)][/COLOR] $LOCALIZE[134]</value>
+        <value condition="Control.HasFocus(211)">[COLOR=$VAR[ColorHighlight]]$INFO[Control.GetLabel(210)][/COLOR] $LOCALIZE[20337] $LOCALIZE[31101]</value>
+        <value condition="Control.HasFocus(111)">[COLOR=$VAR[ColorHighlight]]$INFO[Control.GetLabel(110)][/COLOR] $LOCALIZE[20342]</value>
+        <value condition="Control.HasFocus(121)">[COLOR=$VAR[ColorHighlight]]$INFO[Control.GetLabel(120)][/COLOR] $LOCALIZE[20343]</value>
+        <value condition="Control.HasFocus(131)">[COLOR=$VAR[ColorHighlight]]$INFO[Control.GetLabel(130)][/COLOR] $LOCALIZE[33054]</value>
+        <value condition="Control.HasFocus(141)">[COLOR=$VAR[ColorHighlight]]$INFO[Control.GetLabel(140)][/COLOR] $LOCALIZE[20360]</value>
+        <value condition="Control.HasFocus(151)">[COLOR=$VAR[ColorHighlight]]$INFO[Control.GetLabel(150)][/COLOR] $LOCALIZE[20389]</value>
+        <value condition="Control.HasFocus(161)">[COLOR=$VAR[ColorHighlight]]$INFO[Control.GetLabel(160)][/COLOR] $LOCALIZE[133]</value>
+        <value condition="Control.HasFocus(171)">[COLOR=$VAR[ColorHighlight]]$INFO[Control.GetLabel(170)][/COLOR] $LOCALIZE[132]</value>
+        <value condition="Control.HasFocus(181)">[COLOR=$VAR[ColorHighlight]]$INFO[Control.GetLabel(180)][/COLOR] $LOCALIZE[134]</value>
 
     </variable>
     <variable name="LabelImageList">
@@ -302,8 +301,8 @@
         <value condition="Pvr.HasTimer">$LOCALIZE[19157]...</value>
     </variable>
     <variable name="LabelNextRecording">
-        <value condition="Pvr.IsRecording">[COLOR=Highlight]$INFO[Pvr.NowRecordingTitle,,][/COLOR]$INFO[Pvr.NowRecordingChannel,  ,]</value>
-        <value condition="Pvr.HasTimer">[COLOR=Highlight]$INFO[Pvr.NextRecordingTitle,,][/COLOR]$INFO[Pvr.NextRecordingDateTime,  ,]$INFO[Pvr.NextRecordingChannel,  ,]</value>
+        <value condition="Pvr.IsRecording">[COLOR=$VAR[ColorHighlight]]$INFO[Pvr.NowRecordingTitle,,][/COLOR]$INFO[Pvr.NowRecordingChannel,  ,]</value>
+        <value condition="Pvr.HasTimer">[COLOR=$VAR[ColorHighlight]]$INFO[Pvr.NextRecordingTitle,,][/COLOR]$INFO[Pvr.NextRecordingDateTime,  ,]$INFO[Pvr.NextRecordingChannel,  ,]</value>
     </variable>
     <variable name="HDSD">
         <value condition="Container.Content(tvshows) | Container.Content(seasons)">$INFO[ListItem.Property(UnWatchedEpisodes)]</value>

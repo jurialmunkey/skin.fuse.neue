@@ -112,7 +112,7 @@
                     <width>100</width>
                     <height>100</height>
                     <aspectratio align="center" aligny="center">keep</aspectratio>
-                    <texture colordiffuse="Highlight">$INFO[Control.GetLabel(933),progress/circle/p,.png]</texture>
+                    <texture colordiffuse="$VAR[ColorHighlight]">$INFO[Control.GetLabel(933),progress/circle/p,.png]</texture>
                     <visible>!IsEmpty(Player.Duration)</visible>
                 </control>
 
@@ -187,7 +187,7 @@
         <align>center</align>
         <font>Button</font>
         <textcolor>dialog_fg_70</textcolor>
-        <texturefocus colordiffuse="Highlight" border="5">common/box.png</texturefocus>
+        <texturefocus colordiffuse="$VAR[ColorHighlight]" border="5">common/box.png</texturefocus>
     </include>
 
     <include name="Dialog_Standard_Right_Grouplist">
@@ -212,7 +212,7 @@
         <align>left</align>
         <height>66</height>
         <texturenofocus colordiffuse="dialog_fg_12" border="8">common/box.png</texturenofocus>
-        <texturefocus colordiffuse="Highlight" border="8">common/box.png</texturefocus>
+        <texturefocus colordiffuse="$VAR[ColorHighlight]" border="8">common/box.png</texturefocus>
     </include>
 
     <include name="Dialog_Standard_OkCancel">
@@ -220,7 +220,7 @@
         <font>font_dialog_okcancel</font>
         <width>300</width>
         <texturenofocus colordiffuse="dialog_fg_12" border="8">common/box.png</texturenofocus>
-        <texturefocus colordiffuse="Highlight" border="8">common/box.png</texturefocus>
+        <texturefocus colordiffuse="$VAR[ColorHighlight]" border="8">common/box.png</texturefocus>
     </include>
 
     <include name="Dialog_Standard_OkCancel_GroupList">
@@ -298,7 +298,7 @@
         <width>auto</width>
         <height>48</height>
         <texturenofocus colordiffuse="main_fg_12" border="5">common/box.png</texturenofocus>
-        <texturefocus colordiffuse="Highlight" border="5">common/box.png</texturefocus>
+        <texturefocus colordiffuse="$VAR[ColorHighlight]" border="5">common/box.png</texturefocus>
     </include>
 
     <include name="Dialog_Info_Label">
@@ -440,7 +440,7 @@
                             <control type="image">
                                 <width>100%</width>
                                 <height>135</height>
-                                <texture border="5" colordiffuse="Highlight">common/white.png</texture>
+                                <texture border="5" colordiffuse="$VAR[ColorHighlight]">common/white.png</texture>
                             </control>
                             <control type="image">
                                 <include>Dialog_Standard_List_Left_Icon</include>
@@ -517,7 +517,7 @@
                         <width>100</width>
                         <height>100</height>
                         <animation effect="rotate" condition="true" start="0" end="360" loop="true" time="1000" center="auto">Conditional</animation>
-                        <texture colordiffuse="Highlight">dialog/loading-spinner.png</texture>
+                        <texture colordiffuse="$VAR[ColorHighlight]">dialog/loading-spinner.png</texture>
                         <aspectratio>keep</aspectratio>
                     </control>
                     <control type="label">

@@ -24,7 +24,7 @@
             <height>100%</height>
             <align>center</align>
             <aligny>center</aligny>
-            <label>(fuse)[COLOR=Highlight]neue[/COLOR]</label>
+            <label>(fuse)[COLOR=$VAR[ColorHighlight]]neue[/COLOR]</label>
             <font>EpisodeNumber</font>
             <textcolor>main_fg_70</textcolor>
             <animation effect="fade" start="100" end="0" time="500" tween="quadratic">WindowClose</animation>

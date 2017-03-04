@@ -73,7 +73,7 @@
                     <align>center</align>
                     <width>380</width>
                     <label>10043</label>
-                    <texturefocus colordiffuse="Highlight" border="5">common/box.png</texturefocus>
+                    <texturefocus colordiffuse="$VAR[ColorHighlight]" border="5">common/box.png</texturefocus>
                     <texturenofocus colordiffuse="dialog_fg_12" border="5">common/box.png</texturenofocus>
                     <include>Dialog_Standard_Right_Buttons</include>
                 </control>
@@ -81,7 +81,7 @@
                     <align>center</align>
                     <width>380</width>
                     <label>186</label>
-                    <texturefocus colordiffuse="Highlight" border="5">common/box.png</texturefocus>
+                    <texturefocus colordiffuse="$VAR[ColorHighlight]" border="5">common/box.png</texturefocus>
                     <texturenofocus colordiffuse="dialog_fg_12" border="5">common/box.png</texturenofocus>
                     <include>Dialog_Standard_Right_Buttons</include>
                 </control>
@@ -89,7 +89,7 @@
                     <align>center</align>
                     <width>380</width>
                     <label>10035</label>
-                    <texturefocus colordiffuse="Highlight" border="5">common/box.png</texturefocus>
+                    <texturefocus colordiffuse="$VAR[ColorHighlight]" border="5">common/box.png</texturefocus>
                     <texturenofocus colordiffuse="dialog_fg_12" border="5">common/box.png</texturenofocus>
                     <include>Dialog_Standard_Right_Buttons</include>
                 </control>
@@ -97,7 +97,7 @@
                     <align>center</align>
                     <width>380</width>
                     <label>21452</label>
-                    <texturefocus colordiffuse="Highlight" border="5">common/box.png</texturefocus>
+                    <texturefocus colordiffuse="$VAR[ColorHighlight]" border="5">common/box.png</texturefocus>
                     <texturenofocus colordiffuse="dialog_fg_12" border="5">common/box.png</texturenofocus>
                     <include>Dialog_Standard_Right_Buttons</include>
                 </control>
@@ -107,14 +107,14 @@
         <control type="button" id="7">
             <align>center</align>
             <width>380</width>
-            <texturefocus colordiffuse="Highlight" border="5">common/box.png</texturefocus>
+            <texturefocus colordiffuse="$VAR[ColorHighlight]" border="5">common/box.png</texturefocus>
             <texturenofocus colordiffuse="dialog_fg_12" border="5">common/box.png</texturenofocus>
             <include>Dialog_Standard_Right_Buttons</include>
         </control>
         <control type="button" id="10">
             <align>center</align>
             <width>380</width>
-            <texturefocus colordiffuse="Highlight" border="5">common/box.png</texturefocus>
+            <texturefocus colordiffuse="$VAR[ColorHighlight]" border="5">common/box.png</texturefocus>
             <texturenofocus colordiffuse="dialog_fg_12" border="5">common/box.png</texturenofocus>
             <include>Dialog_Standard_Right_Buttons</include>
         </control>

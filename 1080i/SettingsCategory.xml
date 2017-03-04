@@ -85,7 +85,7 @@
                     <textoffsetx>0</textoffsetx>
                     <texturenofocus>noop</texturenofocus>
                     <texturefocus>noop</texturefocus>
-                    <focusedcolor>Highlight</focusedcolor>
+                    <focusedcolor>$VAR[ColorHighlight]</focusedcolor>
                     <ondown>3</ondown>
                     <onback>300</onback>
                     <onright>5</onright>

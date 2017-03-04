@@ -24,7 +24,7 @@
                 <onright>500</onright>
                 <onleft>500</onleft>
                 <texturenofocus colordiffuse="main_fg_70" border="42,0,8,0">buttons/options.png</texturenofocus>
-                <texturefocus colordiffuse="Highlight" border="42,0,8,0">buttons/options.png</texturefocus>
+                <texturefocus colordiffuse="$VAR[ColorHighlight]" border="42,0,8,0">buttons/options.png</texturefocus>
                 <include>Furniture_MenuBar_Button</include>
                 <onclick>SetFocus(9000)</onclick>
             </control>

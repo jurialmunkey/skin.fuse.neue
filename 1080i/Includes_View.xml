@@ -176,13 +176,13 @@
                     <visible>!ListItem.IsParentFolder</visible>
                     <visible>!String.StartsWith(ListItem.Icon,Default)</visible>
                 </control>
-                <control type="image" description="Highlight">
+                <control type="image" description="$VAR[ColorHighlight]">
                     <left>3</left>
                     <top>3</top>
                     <right>3</right>
                     <bottom>3</bottom>
                     <visible>Control.HasFocus($PARAM[id]) | Window.IsVisible(DialogContextMenu.xml)</visible>
-                    <texture colordiffuse="Highlight" border="20">common/selectbox.png</texture>
+                    <texture colordiffuse="$VAR[ColorHighlight]" border="20">common/selectbox.png</texture>
                     <animation type="Focus">
                         <effect type="zoom" start="90" end="100" time="150" tween="sine" easing="inout" center="auto" />
                         <effect type="fade" start="0" end="100" time="150" tween="sine" easing="in" />
@@ -351,7 +351,7 @@
                     <top>3</top>
                     <right>3</right>
                     <bottom>3</bottom>
-                    <texture colordiffuse="Highlight" border="20">common/selectbox.png</texture>
+                    <texture colordiffuse="$VAR[ColorHighlight]" border="20">common/selectbox.png</texture>
                     <animation type="Focus">
                         <effect type="zoom" start="90" end="100" time="150" tween="sine" easing="inout" center="auto" />
                         <effect type="fade" start="0" end="100" time="150" tween="sine" easing="in" />
@@ -677,7 +677,7 @@
                         <effect type="zoom" start="100" end="90" time="150" tween="sine" easing="inout" center="auto" />
                         <effect type="fade" start="100" end="0" time="150" tween="sine" easing="out" />
                     </animation>
-                    <texture colordiffuse="Highlight" border="20">common/selectbox.png</texture>
+                    <texture colordiffuse="$VAR[ColorHighlight]" border="20">common/selectbox.png</texture>
                 </control>
             </focusedlayout>
         </definition>
@@ -779,13 +779,13 @@
                 <control type="image">
                     <height>4</height>
                     <bottom>-3</bottom>
-                    <texture colordiffuse="Highlight">common/white.png</texture>
+                    <texture colordiffuse="$VAR[ColorHighlight]">common/white.png</texture>
                     <visible>Control.HasFocus($PARAM[id])</visible>
                 </control>
                 
                 <control type="label">
                     <left>50</left>
-                    <width>340</width>
+                    <right>30</right>
                     <height>100%</height>
                     <aligny>center</aligny>
                     <textcolor>Selected</textcolor>
@@ -879,7 +879,7 @@
         <control type="image">
             <bordersize>10</bordersize>
             <bordertexture border="12">common/focus-shadow10.png</bordertexture>
-            <texture colordiffuse="Highlight">common/white.png</texture>
+            <texture colordiffuse="$VAR[ColorHighlight]">common/white.png</texture>
         </control>
         <control type="group">
             <control type="image">
@@ -948,7 +948,7 @@
         <control type="image">
             <bordersize>10</bordersize>
             <bordertexture border="12">common/focus-shadow10.png</bordertexture>
-            <texture colordiffuse="Highlight">common/white.png</texture>
+            <texture colordiffuse="$VAR[ColorHighlight]">common/white.png</texture>
         </control>
         <control type="group">
             <control type="image">

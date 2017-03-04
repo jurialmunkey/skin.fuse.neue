@@ -48,7 +48,7 @@
                         <top>0</top>
                         <bottom>0</bottom>
                         <right>0</right>
-                        <texture colordiffuse="Highlight">common/white.png</texture>
+                        <texture colordiffuse="$VAR[ColorHighlight]">common/white.png</texture>
                         <visible>StringCompare(ListItem.Thumb,special://skin/extras/icons/error.png)</visible>
                     </control>
                     <control type="image">
@@ -87,7 +87,7 @@
                         <top>0</top>
                         <bottom>0</bottom>
                         <right>0</right>
-                        <texture colordiffuse="Highlight">common/white.png</texture>
+                        <texture colordiffuse="$VAR[ColorHighlight]">common/white.png</texture>
                         <visible>StringCompare(ListItem.Thumb,special://skin/extras/icons/error.png)</visible>
                         <bordertexture>common/white.png</bordertexture>
                         <bordersize>7</bordersize>
