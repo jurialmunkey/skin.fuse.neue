@@ -22,11 +22,11 @@
         <action>ActivateWindow(Music)</action>
     </shortcut>
     <shortcut>
-        <label>31103</label>
+        <label>19023</label>
         <label2>Common Shortcut</label2>
         <defaultID>livetv</defaultID>
         <icon />
-        <action>ActivateWindow(MyPVR)</action>
+        <action>ActivateWindow(TVChannels)</action>
     </shortcut>
     <shortcut>
         <label>Addons</label>
