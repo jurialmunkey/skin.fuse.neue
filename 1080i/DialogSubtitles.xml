@@ -4,6 +4,7 @@
         <include>GlobalOverlay</include>
 
         <control type="group">
+            <width>1700</width>
             <include>Dialog_Standard_Group</include>
             
             <control type="label" id="100">
@@ -28,50 +29,149 @@
 
             <!-- Selection List -->
             <control type="panel" id="120">
-                <include>Dialog_Standard_List_Left</include>
+                <left>20</left>
+                <top>100</top>
+                <width>1300</width>
+                <height>690</height>
                 <onleft>8000</onleft>
                 <onright>8000</onright>
                 <onup>450</onup>
                 <ondown>450</ondown>
-                <itemlayout height="138" width="700">
+                <itemlayout height="69" width="1300">
                     <control type="image">
-                        <include>Dialog_Standard_List_Left_Icon</include>
+                        <left>11</left>
+                        <posy>12</posy>
+                        <width>44</width>
+                        <height>44</height>
+                        <texture fallback="DefaultAddonNone.png">subs/$INFO[ListItem.Thumb].png</texture>
                     </control>
+                    <control type="image">
+                        <left>77</left>
+                        <top>22</top>
+                        <width>100</width>
+                        <height>24</height>
+                        <aspectratio align="left">keep</aspectratio>
+                        <texture>subs/icon_close_caption.png</texture>
+                        <visible>!ListItem.property(hearing_imp)</visible>
+                        <colordiffuse>dialog_fg_30</colordiffuse>
+                        <animation effect="fade" start="100" end="25" condition="true">Conditional</animation>
+                    </control>
+                    <control type="image">
+                        <left>130</left>
+                        <top>22</top>
+                        <width>100</width>
+                        <height>24</height>
+                        <aspectratio align="left">keep</aspectratio>
+                        <texture>subs/icon_sync.png</texture>
+                        <visible>!ListItem.property(sync)</visible>
+                        <colordiffuse>dialog_fg_30</colordiffuse>
+                        <animation effect="fade" start="100" end="25" condition="true">Conditional</animation>
+                    </control>
+                    <control type="image">
+                        <left>77</left>
+                        <top>22</top>
+                        <width>100</width>
+                        <height>24</height>
+                        <aspectratio align="left">keep</aspectratio>
+                        <colordiffuse>dialog_fg_70</colordiffuse>
+                        <texture>subs/icon_close_caption.png</texture>
+                        <visible>ListItem.property(hearing_imp)</visible>
+                    </control>
+                    <control type="image">
+                        <left>130</left>
+                        <top>22</top>
+                        <width>100</width>
+                        <height>24</height>
+                        <aspectratio align="left">keep</aspectratio>
+                        <texture>subs/icon_sync.png</texture>
+                        <colordiffuse>dialog_fg_70</colordiffuse>
+                        <visible>ListItem.property(sync)</visible>
+                    </control>
+
                     <control type="label">
-                        <animation effect="slide" end="0,18" condition="IsEmpty(ListItem.AddonSummary)">Conditional</animation>
-                        <include>Dialog_Standard_List_Left_Label</include>
+                        <left>227</left>
+                        <right>30</right>
+                        <height>66</height>
+                        <aligny>center</aligny>
+                        <label>$INFO[ListItem.Label,,  •  ]$INFO[ListItem.Label2]</label>
+                        <textcolor>dialog_fg_70</textcolor>
+                        <font>Small</font>
                     </control>
-                    <control type="label">
-                        <label>$INFO[ListItem.AddonSummary]</label>
-                        <include>Dialog_Standard_List_Left_Label2</include>
-                    </control>
+
                 </itemlayout>
-                <focusedlayout height="138" width="700">
+
+                <focusedlayout height="69" width="1300">
                     <control type="image">
+                        <height>66</height>
                         <width>100%</width>
-                        <height>135</height>
-                        <texture border="5" colordiffuse="$VAR[ColorHighlight]">common/white.png</texture>
+                        <texture border="5" colordiffuse="$VAR[ColorHighlight]">common/box.png</texture>
                     </control>
                     <control type="image">
-                        <include>Dialog_Standard_List_Left_Icon</include>
+                        <left>11</left>
+                        <posy>12</posy>
+                        <width>44</width>
+                        <height>44</height>
+                        <texture fallback="DefaultAddonNone.png">subs/$INFO[ListItem.Thumb].png</texture>
+                    </control>
+                    <control type="image">
+                        <left>77</left>
+                        <top>22</top>
+                        <width>100</width>
+                        <height>24</height>
+                        <aspectratio align="left">keep</aspectratio>
+                        <texture>subs/icon_close_caption.png</texture>
+                        <visible>!ListItem.property(hearing_imp)</visible>
+                        <colordiffuse>main_fg_30</colordiffuse>
+                        <animation effect="fade" start="100" end="25" condition="true">Conditional</animation>
+                    </control>
+                    <control type="image">
+                        <left>130</left>
+                        <top>22</top>
+                        <width>100</width>
+                        <height>24</height>
+                        <aspectratio align="left">keep</aspectratio>
+                        <texture>subs/icon_sync.png</texture>
+                        <visible>!ListItem.property(sync)</visible>
+                        <colordiffuse>main_fg_30</colordiffuse>
+                        <animation effect="fade" start="100" end="25" condition="true">Conditional</animation>
+                    </control>
+                    <control type="image">
+                        <left>77</left>
+                        <top>22</top>
+                        <width>100</width>
+                        <height>24</height>
+                        <colordiffuse>Selected</colordiffuse>
+                        <aspectratio align="left">keep</aspectratio>
+                        <texture>subs/icon_close_caption.png</texture>
+                        <visible>ListItem.property(hearing_imp)</visible>
+                    </control>
+                    <control type="image">
+                        <left>130</left>
+                        <top>22</top>
+                        <width>100</width>
+                        <height>24</height>
+                        <colordiffuse>Selected</colordiffuse>
+                        <aspectratio align="left">keep</aspectratio>
+                        <texture>subs/icon_sync.png</texture>
+                        <visible>ListItem.property(sync)</visible>
                     </control>
                     <control type="label">
+                        <left>227</left>
+                        <right>30</right>
+                        <height>66</height>
+                        <aligny>center</aligny>
+                        <label>$INFO[ListItem.Label,,  •  ]$INFO[ListItem.Label2]</label>
                         <textcolor>Selected</textcolor>
-                        <selectedcolor>Selected</selectedcolor>
-                        <animation effect="slide" end="0,18" condition="IsEmpty(ListItem.AddonSummary)">Conditional</animation>
-                        <include>Dialog_Standard_List_Left_Label</include>
+                        <font>Small</font>
+                        <scroll>true</scroll>
                     </control>
-                    <control type="label">
-                        <textcolor>Selected</textcolor>
-                        <selectedcolor>Selected</selectedcolor>
-                        <label>$INFO[ListItem.AddonSummary]</label>
-                        <include>Dialog_Standard_List_Left_Label2</include>
-                    </control>
+
                 </focusedlayout>
             </control>
 
             <!-- Buttons -->
             <control type="grouplist" id="8000">
+                <top>100</top>
                 <include>Dialog_Standard_Right_Grouplist</include>
                 <onright>120</onright>
                 <onleft>120</onleft>
@@ -137,10 +237,10 @@
 
             <!-- Separator -->
             <control type="image">
-                <left>699</left>
-                <top>120</top>
+                <right>380</right>
+                <top>100</top>
                 <height>687</height>
-                <width>1</width>
+                <width>2</width>
                 <texture colordiffuse="dialog_fg_12">common/white.png</texture>
             </control>
 
