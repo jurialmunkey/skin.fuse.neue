@@ -586,7 +586,7 @@
                         <textcolor>main_fg_70</textcolor>
                         <font>Tiny</font>
                         <aligny>top</aligny>
-                        <label fallback="19055">$INFO[ListItem.StartDate] - $INFO[ListItem.StartTime]</label>
+                        <label fallback="19055">$INFO[ListItem.StartDate,, - ]$INFO[ListItem.StartTime]</label>
                     </control>
                 </control>
                 <!-- End Time -->
@@ -606,7 +606,7 @@
                         <textcolor>main_fg_70</textcolor>
                         <font>Tiny</font>
                         <aligny>top</aligny>
-                        <label fallback="19055">$INFO[ListItem.EndDate] - $INFO[ListItem.EndTime]</label>
+                        <label fallback="19055">$INFO[ListItem.EndDate,, - ]$INFO[ListItem.EndTime]</label>
                     </control>
                 </control>
                 <!-- Duration -->
