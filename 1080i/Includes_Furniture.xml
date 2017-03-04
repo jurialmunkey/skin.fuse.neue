@@ -837,6 +837,7 @@
             <onright condition="Window.IsVisible(FileManager.xml)">21</onright>
             <orientation>horizontal</orientation>
             <onback>ReplaceWindow(home)</onback>
+            
             <!-- Go to Submenu -->
             <ondown condition="!Integer.IsEqual(Container(302).NumItems,0) + Container(300).Position(0)">SetFocus(302,0)</ondown>
             <ondown condition="!Integer.IsEqual(Container(302).NumItems,0) + Container(300).Position(1)">SetFocus(302,1)</ondown>

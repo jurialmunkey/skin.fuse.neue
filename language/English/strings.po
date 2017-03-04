@@ -452,3 +452,7 @@ msgstr ""
 msgctxt "#31284"
 msgid "Classification"
 msgstr ""
+
+msgctxt "#31285"
+msgid "Allow pressing back to open the top bar"
+msgstr ""
