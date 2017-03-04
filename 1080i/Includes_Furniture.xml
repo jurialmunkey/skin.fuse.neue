@@ -890,10 +890,6 @@
             <height>80</height>
             <left>0</left>
             <right>0</right>
-            <onleft condition="Window.IsVisible(SettingsCategory.xml)">3</onleft>
-            <onright condition="Window.IsVisible(SettingsCategory.xml)">5</onright>
-            <onleft condition="Window.IsVisible(FileManager.xml)">20</onleft>
-            <onright condition="Window.IsVisible(FileManager.xml)">21</onright>
             <orientation>horizontal</orientation>
             <onback>ReplaceWindow(home)</onback>
             
