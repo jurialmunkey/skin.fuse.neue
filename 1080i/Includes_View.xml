@@ -4,16 +4,16 @@
         <control type="image">
             <top>18</top>
             <right>18</right>
-            <width>28</width>
-            <height>28</height>
+            <width>24</width>
+            <height>24</height>
             <texture colordiffuse="$VAR[ColorHighlight]">$VAR[PosterPercentWatchedBacking]</texture>
         </control>
         <control type="image">
             <top>18</top>
             <right>18</right>
-            <width>28</width>
-            <height>28</height>
-            <texture colordiffuse="ff181818">$VAR[PosterPercentWatched]</texture>
+            <width>24</width>
+            <height>24</height>
+            <texture colordiffuse="ffededed">$VAR[PosterPercentWatched]</texture>
         </control>
     </include>
 
