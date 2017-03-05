@@ -536,7 +536,7 @@
                     <top>10</top>
                     <height>187.66</height>
                     <aspectratio scalediffuse="false">scale</aspectratio>
-                    <texture fallback="DefaultAddonNone.png" background="true">$VAR[ThumbImage]</texture>
+                    <texture fallback="DefaultAddonNone.png" background="true">$VAR[PosterImage]</texture>
                     <visible>!ListItem.IsParentFolder</visible>
                     <visible>!String.StartsWith(ListItem.Icon,Default)</visible>
                 </control>
@@ -639,7 +639,7 @@
                     <top>10</top>
                     <height>187.66</height>
                     <aspectratio scalediffuse="false">scale</aspectratio>
-                    <texture fallback="DefaultAddonNone.png" background="true">$VAR[ThumbImage]</texture>
+                    <texture fallback="DefaultAddonNone.png" background="true">$VAR[PosterImage]</texture>
                     <visible>!ListItem.IsParentFolder</visible>
                     <visible>!String.StartsWith(ListItem.Icon,Default)</visible>
                 </control>

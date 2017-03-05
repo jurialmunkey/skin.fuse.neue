@@ -40,6 +40,10 @@
     <other include="home-widget">
         <condition tag="property" attribute="name|widgetType">artists</condition>
         <condition tag="property" attribute="name|widgetType">albums</condition>
+        <condition tag="property" attribute="name|widgetType">addons</condition>
+        <condition tag="property" attribute="name|widgetType">program</condition>
+        <condition tag="property" attribute="name|widgetType">pictures</condition>
+        <condition tag="property" attribute="name|widgetType">video</condition>
         <match>any</match>
         <property name="content" tag="property" attribute="name|widgetPath" />
         <property name="target" tag="property" attribute="name|widgetTarget" />
@@ -65,25 +69,6 @@
                 <skinshortcuts>visibility</skinshortcuts>
                 <autoscroll time="10000">!Control.HasFocus(301)</autoscroll>
                 <include content="View_List_Layout">
-                    <param name="id" value="301" />
-                </include>
-                <content target="$SKINSHORTCUTS[target]">$SKINSHORTCUTS[content]</content>
-            </control>
-        </controls>
-    </other>
-    <other include="home-widget">
-        <condition tag="property" attribute="name|widgetType">addons</condition>
-        <condition tag="property" attribute="name|widgetType">program</condition>
-        <condition tag="property" attribute="name|widgetType">pictures</condition>
-        <condition tag="property" attribute="name|widgetType">video</condition>
-        <match>any</match>
-        <property name="content" tag="property" attribute="name|widgetPath" />
-        <property name="target" tag="property" attribute="name|widgetTarget" />
-        <controls>
-            <control type="panel" id="301">
-                <skinshortcuts>visibility</skinshortcuts>
-                <autoscroll time="10000">!Control.HasFocus(301)</autoscroll>
-                <include content="View_Tiles_Layout">
                     <param name="id" value="301" />
                 </include>
                 <content target="$SKINSHORTCUTS[target]">$SKINSHORTCUTS[content]</content>

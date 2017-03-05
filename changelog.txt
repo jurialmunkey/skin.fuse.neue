@@ -2,6 +2,8 @@
 Add scroll to long titles in info box
 Add tmdb ratings in video info
 Add box office, awards, budget and critic consensus to video info
+Fix widget types for addons to be square rather than tiles
+Fix artist image not showing for music
 
 [B]0.9.4[/B]
 Add option to show home widgets with top bar
