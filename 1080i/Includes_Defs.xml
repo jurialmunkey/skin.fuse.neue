@@ -186,7 +186,7 @@
         <top>-24</top>
         <bottom>-24</bottom>
         <bordersize>24</bordersize>
-        <bordertexture border="32" colordiffuse="main_bg_100">common/shadow-24.png</bordertexture>
+        <bordertexture border="32" colordiffuse="PosterBack">common/shadow-24.png</bordertexture>
     </include>
 
     <!-- Busy Spinner -->

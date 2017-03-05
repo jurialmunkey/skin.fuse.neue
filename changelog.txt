@@ -1,3 +1,6 @@
+[B]0.9.7[/B]
+Add flat theme
+
 [B]0.9.6[/B]
 Add weather next to clock if enabled
 Add imdb top 250 rating in video info

@@ -83,7 +83,7 @@
         <value>$LOCALIZE[31269]</value>
     </variable>
     <variable name="LabelFallbackWidgetName">
-        <value condition="stringcompare(Skin.String(home.slideshowpath),pvr/background.jpg)">$LOCALIZE[16018]</value>
+        <value condition="stringcompare(Skin.String(home.slideshowpath),special://skin/extras/backgrounds/default.jpg)">$LOCALIZE[16018]</value>
         <value condition="!IsEmpty(Skin.String(home.slideshowpath))">$INFO[Skin.String(home.slideshowpath)]</value>
         <value>$LOCALIZE[31105]</value>
     </variable>

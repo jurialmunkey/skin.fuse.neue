@@ -135,16 +135,7 @@
                     <top>0</top>
                     <texture>common/gradient-solid.png</texture>
                 </control>
-                <control type="image">
-                    <top>0</top>
-                    <height>1</height>
-                    <texture colordiffuse="highlight_bottombar">common/white.png</texture>
-                </control>
-                <control type="image">
-                    <bottom>0</bottom>
-                    <height>1</height>
-                    <texture colordiffuse="ff000000">common/white.png</texture>
-                </control>
+                
                 <control type="grouplist" id="9001">
                     <align>left</align>
                     <left>0</left>
@@ -181,6 +172,16 @@
                     <orientation>horizontal</orientation>
                     <usecontrolcoords>true</usecontrolcoords>
                     <include>OSD_Controls_Music_Right</include>
+                </control>
+                <control type="image">
+                    <top>0</top>
+                    <height>1</height>
+                    <texture colordiffuse="highlight_bottombar">common/white.png</texture>
+                </control>
+                <control type="image">
+                    <bottom>0</bottom>
+                    <height>1</height>
+                    <texture colordiffuse="darkline_topbar">common/white.png</texture>
                 </control>
             </control>
         </control>

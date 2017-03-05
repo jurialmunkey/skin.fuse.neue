@@ -12,6 +12,7 @@
     <color name="main_fg_12">1fcccccc</color>
 
     <color name="highlight_bottombar">1fffffff</color>
+    <color name="darkline_topbar">ff080808</color>
     <color name="gradient_main">7f000000</color>
 
     <!-- Panels -->
@@ -34,6 +35,7 @@
     <color name="highlight_dialog">1fffffff</color>
 
     <color name="Background">ff000000</color>
+    <color name="PosterBack">ff202020</color>
     
     <color name="Highlight">ffe53564</color>
     <color name="Highlight2">ffe5b535</color>

@@ -200,7 +200,7 @@
                         <bordersize>10</bordersize>
                         <bordertexture border="10">common/nofocus-shadow10.png</bordertexture>
                         <aspectratio scalediffuse="false">scale</aspectratio>
-                        <texture colordiffuse="main_bg_100">common/white.png</texture>
+                        <texture colordiffuse="PosterBack">common/white.png</texture>
                     </control>
                     <control type="image">
                         <bordersize>10</bordersize>
@@ -233,7 +233,7 @@
                         <bordersize>10</bordersize>
                         <bordertexture border="10">common/nofocus-shadow10.png</bordertexture>
                         <aspectratio scalediffuse="false">scale</aspectratio>
-                        <texture colordiffuse="main_bg_100">common/white.png</texture>
+                        <texture colordiffuse="PosterBack">common/white.png</texture>
                     </control>
                     <control type="image">
                         <bordersize>10</bordersize>
@@ -305,7 +305,7 @@
                         <bordersize>10</bordersize>
                         <bordertexture border="10">common/nofocus-shadow10.png</bordertexture>
                         <aspectratio scalediffuse="false">scale</aspectratio>
-                        <texture colordiffuse="main_bg_100">common/white.png</texture>
+                        <texture colordiffuse="PosterBack">common/white.png</texture>
                     </control>
                     <control type="image">
                         <bordersize>10</bordersize>
@@ -368,7 +368,7 @@
                         <bordersize>10</bordersize>
                         <bordertexture border="10">common/nofocus-shadow10.png</bordertexture>
                         <aspectratio scalediffuse="false">scale</aspectratio>
-                        <texture colordiffuse="main_bg_100">common/white.png</texture>
+                        <texture colordiffuse="PosterBack">common/white.png</texture>
                     </control>
                     <control type="image">
                         <bordersize>10</bordersize>
@@ -604,7 +604,7 @@
                     <right>10</right>
                     <height>49.34</height>
                     <bottom>10</bottom>
-                    <texture colordiffuse="main_bg_100">common/white.png</texture>
+                    <texture colordiffuse="PosterBack">common/white.png</texture>
                 </control>
                 <control type="label">
                     <left>20</left>
@@ -707,7 +707,7 @@
                     <right>10</right>
                     <height>49.34</height>
                     <bottom>10</bottom>
-                    <texture colordiffuse="main_bg_100">common/white.png</texture>
+                    <texture colordiffuse="PosterBack">common/white.png</texture>
                 </control>
                 <control type="label">
                     <left>20</left>
@@ -956,7 +956,7 @@
     <include name="View_List_FocusedLayout">
         <control type="image">
             <bordersize>10</bordersize>
-            <bordertexture border="12">common/focus-shadow10.png</bordertexture>
+            <bordertexture border="12">common/nofocus-shadow10.png</bordertexture>
             <texture colordiffuse="$VAR[ColorHighlight]">common/white.png</texture>
         </control>
         <control type="group">
@@ -1037,7 +1037,7 @@
     <include name="View_BigList_FocusedLayout">
         <control type="image">
             <bordersize>10</bordersize>
-            <bordertexture border="12">common/focus-shadow10.png</bordertexture>
+            <bordertexture border="12">common/nofocus-shadow10.png</bordertexture>
             <texture colordiffuse="$VAR[ColorHighlight]">common/white.png</texture>
         </control>
         <control type="group">

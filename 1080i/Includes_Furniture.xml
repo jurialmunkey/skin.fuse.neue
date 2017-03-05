@@ -714,7 +714,7 @@
                             <fadetime>0</fadetime>
                             <include>Defs_Shadow_Opaque</include>
                             <aspectratio>scale</aspectratio>
-                            <texture colordiffuse="main_bg_100">common/white.png</texture>
+                            <texture colordiffuse="PosterBack">common/white.png</texture>
                         </control>
                         <control type="image">
                             <fadetime>0</fadetime>
@@ -736,7 +736,7 @@
                             <fadetime>0</fadetime>
                             <include>Defs_Shadow_Opaque</include>
                             <aspectratio aligny="center">scale</aspectratio>
-                            <texture colordiffuse="main_bg_100" background="true">common/white.png</texture>
+                            <texture colordiffuse="PosterBack" background="true">common/white.png</texture>
                             <visible>Container.Content(genres) + !ListItem.IsParentFolder</visible>
                         </control>
                         <control type="image">
@@ -750,7 +750,7 @@
                             <fadetime>0</fadetime>
                             <include>Defs_Shadow_Opaque</include>
                             <aspectratio aligny="center">scale</aspectratio>
-                            <texture colordiffuse="main_bg_100" background="true">common/white.png</texture>
+                            <texture colordiffuse="PosterBack" background="true">common/white.png</texture>
                             <visible>Container.Content(studios) + !ListItem.IsParentFolder</visible>
                         </control>
                         <control type="image">
@@ -1081,6 +1081,16 @@
                 <texture>common/gradient-solid.png</texture>
             </control>
             <include>Furniture_TopBar_MainMenu_Home</include>
+            <control type="image">
+                <top>0</top>
+                <height>1</height>
+                <texture colordiffuse="highlight_bottombar">common/white.png</texture>
+            </control>
+            <control type="image">
+                <bottom>0</bottom>
+                <height>1</height>
+                <texture colordiffuse="darkline_topbar">common/white.png</texture>
+            </control>
         </control>
     </include>
     <include name="Furniture_TopBar_SubMenu">
