@@ -288,6 +288,8 @@
             <alttexturefocus colordiffuse="$VAR[ColorHighlight]">osd/play.png</alttexturefocus>
             <alttexturenofocus colordiffuse="main_fg_70">osd/play.png</alttexturenofocus>
             <onclick>PlayerControl(Play)</onclick>
+            <enable>Player.PauseEnabled</enable>
+            <animation effect="fade" start="100" end="33" time="100" condition="!Player.PauseEnabled">Conditional</animation>
         </control>
 
         <control type="button" id="15">
@@ -348,6 +350,29 @@
             <label>298</label>
             <onclick>ActivateWindow(125)</onclick>
             <include>OSD_TextButton</include>
+        </control>
+    </include>
+
+    <include name="OSD_Controls_LiveTV_Right">
+        <control type="button" id="4">
+            <description>CHANNELS</description>
+            <label>19019</label>
+            <include>OSD_TextButton</include>
+            <onclick>ActivateWindow(pvrosdchannels)</onclick>
+        </control>
+        <control type="button" id="5">
+            <description>EPG</description>
+            <label>$LOCALIZE[19030] / $LOCALIZE[19031]</label>
+            <onclick>ActivateWindow(pvrosdguide)</onclick>
+            <include>OSD_TextButton</include>
+        </control>
+
+        <control type="button" id="6">
+            <description>TIMELINE</description>
+            <include>OSD_TextButton</include>
+            <label>19032</label>
+            <onclick>Close</onclick>
+            <onclick>ActivateWindow(tvguide,,return)</onclick>
         </control>
     </include>
 

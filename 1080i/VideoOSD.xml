@@ -169,7 +169,8 @@
                     <ondown>9003</ondown>
                     <orientation>horizontal</orientation>
                     <usecontrolcoords>true</usecontrolcoords>
-                    <include>OSD_Controls_Video_Right</include>
+                    <include condition="!VideoPlayer.Content(LiveTV)">OSD_Controls_Video_Right</include>
+                    <include condition="VideoPlayer.Content(LiveTV)">OSD_Controls_LiveTV_Right</include>
                 </control>
             </control>
         </control>
