@@ -11,3 +11,4 @@ addon.xml merge=ours
 *.ttf binary
 *.wav binary
 *.mp3 binary
+*.xbt binary
