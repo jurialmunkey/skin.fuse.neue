@@ -461,12 +461,12 @@
             <pagecontrol>60</pagecontrol>
             <onfocus>SetProperty(ViewType,Tiles,Home)</onfocus>
             <scrolltime tween="quadratic">400</scrolltime>
-            <itemlayout width="415.33" height="128.5" condition="!Window.IsVisible(EventLog.xml) + !Window.IsVisible(MyPVRChannels.xml)">
+            <itemlayout width="415.33" height="128.5" condition="!Window.IsVisible(EventLog.xml)">
                 <include content="View_List_ItemLayout">
                     <param name="id" value="$PARAM[id]"/>
                 </include>
             </itemlayout>
-            <focusedlayout width="415.33" height="128.5" condition="!Window.IsVisible(EventLog.xml) + !Window.IsVisible(MyPVRChannels.xml)">
+            <focusedlayout width="415.33" height="128.5" condition="!Window.IsVisible(EventLog.xml)">
                 <control type="button">
                     <visible allowhiddenfocus="true">false</visible>
                     <onfocus>SetProperty(ContextPosition,$INFO[Container($PARAM[id]).Column],Home)</onfocus>
@@ -488,20 +488,6 @@
                     <onfocus>SetProperty(ContextRow,$INFO[Container($PARAM[id]).Row],Home)</onfocus>
                 </control>
                 <include content="View_List_FocusedLayout">
-                    <param name="id" value="$PARAM[id]"/>
-                </include>
-            </focusedlayout>
-            <itemlayout width="623" height="257" condition="Window.IsVisible(MyPVRChannels.xml)">
-                <include content="View_BigList_ItemLayout">
-                    <param name="id" value="$PARAM[id]"/>
-                </include>
-            </itemlayout>
-            <focusedlayout width="623" height="257" condition="Window.IsVisible(MyPVRChannels.xml)">
-                <control type="button">
-                    <visible allowhiddenfocus="true">false</visible>
-                    <onfocus>SetProperty(ContextPosition,1,Home)</onfocus>
-                </control>
-                <include content="View_BigList_FocusedLayout">
                     <param name="id" value="$PARAM[id]"/>
                 </include>
             </focusedlayout>
