@@ -1,5 +1,22 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <includes>
+    <include name="View_WatchedOverlay">
+        <control type="image">
+            <top>18</top>
+            <right>18</right>
+            <width>28</width>
+            <height>28</height>
+            <texture colordiffuse="$VAR[ColorHighlight]">$VAR[PosterPercentWatchedBacking]</texture>
+        </control>
+        <control type="image">
+            <top>18</top>
+            <right>18</right>
+            <width>28</width>
+            <height>28</height>
+            <texture colordiffuse="ff181818">$VAR[PosterPercentWatched]</texture>
+        </control>
+    </include>
+
     <include name="View_Home_Widget">
         <control type="group">
             <animation effect="fade" start="100" end="0" time="0" condition="Container(301).IsUpdating" reversible="false">Conditional</animation>
@@ -207,6 +224,7 @@
                     <visible>!ListItem.IsParentFolder</visible>
                     <visible>!String.StartsWith(ListItem.Icon,Default)</visible>
                 </control>
+                <include>View_WatchedOverlay</include>
             </itemlayout>
             <focusedlayout width="178" height="257">
                 <control type="button">
@@ -255,6 +273,7 @@
                         <effect type="fade" start="100" end="0" time="150" tween="sine" easing="out" />
                     </animation>
                 </control>
+                <include>View_WatchedOverlay</include>
             </focusedlayout>
         </definition>
     </include>
@@ -343,6 +362,7 @@
                     <textcolor>bfededed</textcolor>
                     <label>$INFO[ListItem.Label2]</label>
                 </control>
+                <include>View_WatchedOverlay</include>
             </itemlayout>
             <focusedlayout width="415.33" height="257">
                 <control type="button">
@@ -424,6 +444,7 @@
                         <effect type="fade" start="100" end="0" time="150" tween="sine" easing="out" />
                     </animation>
                 </control>
+                <include>View_WatchedOverlay</include>
             </focusedlayout>
         </definition>
     </include>
@@ -607,6 +628,7 @@
                     <textcolor>main_fg_70</textcolor>
                     <label>$INFO[ListItem.Label]</label>
                 </control>
+                <include>View_WatchedOverlay</include>
             </itemlayout>
             <focusedlayout width="207.66" height="257">
 
@@ -728,6 +750,7 @@
                     </animation>
                     <texture colordiffuse="$VAR[ColorHighlight]" border="20">common/selectbox.png</texture>
                 </control>
+                <include>View_WatchedOverlay</include>
             </focusedlayout>
         </definition>
     </include>
