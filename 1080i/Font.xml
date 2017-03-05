@@ -34,6 +34,13 @@
             <aspect>0.9</aspect>
         </font>
         <font>
+            <name>font_textviewer</name>
+            <filename>Roboto-Regular.ttf</filename>
+            <size>30</size>
+            <linespacing>1.4</linespacing>
+            <aspect>0.9</aspect>
+        </font>
+        <font>
             <name>font_time</name>
             <filename>RobotoCondensed-Regular.ttf</filename>
             <size>22</size>

@@ -336,6 +336,8 @@
                 <align>left</align>
                 <top>954</top>
                 <height>60</height>
+                <onup>RunScript(script.skin.helper.service,action=textviewer,header=$INFO[ListItem.Title],message='"$VAR[Label_Plot]"')</onup>
+                <ondown>Close</ondown>
                 <include>Dialog_Info_Button_Grouplist</include>
 
                 <control type="button" id ="8">

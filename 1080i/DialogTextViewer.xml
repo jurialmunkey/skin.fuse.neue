@@ -8,43 +8,38 @@
         <include>GlobalOverlay</include>
 
         <control type="group">
-            <left>240</left>
-            <top>83</top>
-            <width>1500</width>
-            <height>950</height>
+            <height>500</height>
+            <include>Dialog_Standard_Group</include>
 
-            <include>DefDialogInfoPanel</include>
-
+            <!-- Header -->
             <control type="label" id="1">
-                <description>header label</description>
-                <left>30</left>
-                <right>30</right>
-                <top>48</top>
-                <font>MediumBold</font>
-                <textcolor>dialog_fg_70</textcolor>
-                <height>45</height>
+                <include>Dialog_Standard_Header</include>
+                <label>13406</label>
             </control>
 
             <control type="textbox" id="5">
                 <description>textarea</description>
                 <left>60</left>
-                <right>90</right>
-                <top>108</top>
-                <height>780</height>
-                <align>justify</align>
+                <right>60</right>
+                <top>110</top>
+                <font>font_textviewer</font>
+                <height>350</height>
+                <align>left</align>
             </control>
 
             <control type="scrollbar" id="61">
                 <right>30</right>
-                <top>108</top>
+                <top>110</top>
                 <width>8</width>
-                <height>780</height>
+                <height>350</height>
                 <onleft>Close</onleft>
                 <onright>Close</onright>
                 <ondown>61</ondown>
                 <onup>61</onup>
-                <texturesliderbackground colordiffuse="dialog_fg_12">common/white.png</texturesliderbackground>
-                <texturesliderbar colordiffuse="$VAR[ColorHighlight]">common/white.png</texturesliderbar>
+                <showonepage>true</showonepage>
+                <texturesliderbackground colordiffuse="00ffffff">common/white.png</texturesliderbackground>
+                <texturesliderbar colordiffuse="00ffffff">common/white.png</texturesliderbar>
+                <texturesliderbarfocus colordiffuse="00ffffff">common/white.png</texturesliderbarfocus>
             </control>
 
         </control>
