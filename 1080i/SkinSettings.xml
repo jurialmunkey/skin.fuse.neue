@@ -93,7 +93,7 @@
                         <include>Defs_Settings_Button</include>
                         <label>31269</label>
                         <label2>$VAR[LabelFallbackWidgetName]</label2>
-                        <onclick>ActivateWindow(1106)</onclick>
+                        <onclick>ActivateWindow(1113)</onclick>
                     </control>
 
                     <control type="radiobutton" id="9213" description="Show slideshow instead of fanart">

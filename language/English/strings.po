@@ -476,3 +476,19 @@ msgstr ""
 msgctxt "#31290"
 msgid "Consensus"
 msgstr ""
+
+msgctxt "#31291"
+msgid "Hub items"
+msgstr ""
+
+msgctxt "#31292"
+msgid "Hub"
+msgstr ""
+
+msgctxt "#31293"
+msgid "Addon hub"
+msgstr ""
+
+msgctxt "#31294"
+msgid "Hubs"
+msgstr ""

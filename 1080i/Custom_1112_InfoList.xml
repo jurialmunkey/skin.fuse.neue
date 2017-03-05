@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!-- Foundation -->
-<window id="1131" type="dialog">
+<window id="1112" type="dialog">
     <defaultcontrol always="true">9000</defaultcontrol>
     <onunload>ClearProperty(CustomInfoList.Content,Home)</onunload>
     <onunload>ClearProperty(CustomInfoList.Target,Home)</onunload>

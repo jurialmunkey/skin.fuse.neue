@@ -10,7 +10,7 @@
     <onload>SetProperty(1000_onback,SetFocus(9000))</onload>
     <onload>SetProperty(1150_onback,SetFocus(9000))</onload>
     <onload>ClearProperty(content)</onload>
-    <onload>Dialog.Close(1131)</onload>
+    <onload>Dialog.Close(1112)</onload>
     <controls>
         <include>GlobalOverlay</include>
 

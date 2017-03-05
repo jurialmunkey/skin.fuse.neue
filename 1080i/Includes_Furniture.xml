@@ -76,11 +76,20 @@
                     <include>Animation_FadeIn</include>
                     <include>Animation_FadeOut</include>
                     <include condition="Window.IsVisible(Home)">View_Home_Widget</include>
-                    <include condition="!Window.IsVisible(Home) + !Window.IsVisible(script-script.extendedinfo-VideoList.xml) + !Window.IsVisible(1111) + !Window.IsVisible(EventLog.xml) + ![Window.IsVisible(MyPVRChannels.xml) | Window.IsVisible(MyPVRTimers.xml) | Window.IsVisible(MyPVRRecordings.xml)]">View_Library</include>
+                    <include condition="!Window.IsVisible(Home) + !Window.IsVisible(script-script.extendedinfo-VideoList.xml) + !Window.IsVisible(1111) + !Window.IsVisible(EventLog.xml) + ![Window.IsVisible(MyPVRChannels.xml) | Window.IsVisible(MyPVRTimers.xml) | Window.IsVisible(MyPVRRecordings.xml) + !Window.IsVisible(1101) + !Window.IsVisible(1102) + !Window.IsVisible(1103) + !Window.IsVisible(1104) + !Window.IsVisible(1105) + !Window.IsVisible(1106) + !Window.IsVisible(1107) + !Window.IsVisible(1108) + !Window.IsVisible(1109)]">View_Library</include>
                     <include condition="Window.IsVisible(script-script.extendedinfo-VideoList.xml)">View_ExtendedInfo</include>
                     <include condition="Window.IsVisible(1111)">View_AddonsPage</include>
                     <include condition="Window.IsVisible(EventLog.xml)">View_EventLog</include>
                     <include condition="[Window.IsVisible(MyPVRChannels.xml) | Window.IsVisible(MyPVRTimers.xml) | Window.IsVisible(MyPVRRecordings.xml)]">View_PVR</include>
+                    <include condition="Window.IsVisible(1101)">View_Hub_1101</include>
+                    <include condition="Window.IsVisible(1102)">View_Hub_1102</include>
+                    <include condition="Window.IsVisible(1103)">View_Hub_1103</include>
+                    <include condition="Window.IsVisible(1104)">View_Hub_1104</include>
+                    <include condition="Window.IsVisible(1105)">View_Hub_1105</include>
+                    <include condition="Window.IsVisible(1106)">View_Hub_1106</include>
+                    <include condition="Window.IsVisible(1107)">View_Hub_1107</include>
+                    <include condition="Window.IsVisible(1108)">View_Hub_1108</include>
+                    <include condition="Window.IsVisible(1109)">View_Hub_1109</include>
                 </control>
             </control>
             <control type="group">
@@ -700,12 +709,12 @@
                         <fadetime>0</fadetime>
                         <aspectratio aligny="center">scale</aspectratio>
                         <texture fallback="DefaultAddonImages.png">$PARAM[variable]</texture>
-                        <visible>[!$PARAM[container]ListItem.IsParentFolder + !String.StartsWith($PARAM[container]ListItem.Icon,Default) + [!String.IsEmpty($PARAM[container]ListItem.Art(tvshow.poster)) | !String.IsEmpty($PARAM[container]ListItem.Art(poster)) | Container.Content(albums) | Container.Content(songs) | Container.Content(actors) | Container.Content(addons) | Container.Content(artists) | [Window.IsVisible(MyPVRChannels.xml) | Window.IsVisible(MyPVRTimers.xml) | Window.IsVisible(MyPVRRecordings.xml)]]]</visible>
+                        <visible>[!$PARAM[container]ListItem.IsParentFolder + !String.StartsWith($PARAM[container]ListItem.Icon,Default) + [!String.IsEmpty($PARAM[container]ListItem.Art(tvshow.poster)) | !String.IsEmpty($PARAM[container]ListItem.Art(poster)) | Container.Content(albums) | Container.Content(songs) | Container.Content(actors) | Container.Content(addons) | Container.Content(artists) | Window.IsVisible(1101) | Window.IsVisible(1102) | Window.IsVisible(1103) | Window.IsVisible(1104) | Window.IsVisible(1105) | Window.IsVisible(1106) | Window.IsVisible(1107) | Window.IsVisible(1108) | Window.IsVisible(1109) | [Window.IsVisible(MyPVRChannels.xml) | Window.IsVisible(MyPVRTimers.xml) | Window.IsVisible(MyPVRRecordings.xml)]]]</visible>
                         <visible>!Window.IsVisible(home)</visible>
                     </control>
                     
                     <control type="group">
-                        <visible>[[!$PARAM[container]ListItem.IsParentFolder + !String.StartsWith($PARAM[container]ListItem.Icon,Default)] + ![!String.IsEmpty($PARAM[container]ListItem.Art(tvshow.poster)) | !String.IsEmpty($PARAM[container]ListItem.Art(poster)) | Container.Content(albums) | Container.Content(songs) | Container.Content(actors) | Container.Content(addons) | Container.Content(artists) | [Window.IsVisible(MyPVRChannels.xml) | Window.IsVisible(MyPVRTimers.xml) | Window.IsVisible(MyPVRRecordings.xml)]]]</visible>
+                        <visible>[[!$PARAM[container]ListItem.IsParentFolder + !String.StartsWith($PARAM[container]ListItem.Icon,Default)] + ![!String.IsEmpty($PARAM[container]ListItem.Art(tvshow.poster)) | !String.IsEmpty($PARAM[container]ListItem.Art(poster)) | Container.Content(albums) | Container.Content(songs) | Container.Content(actors) | Container.Content(addons) | Container.Content(artists) | Window.IsVisible(1101) | Window.IsVisible(1102) | Window.IsVisible(1103) | Window.IsVisible(1104) | Window.IsVisible(1105) | Window.IsVisible(1106) | Window.IsVisible(1107) | Window.IsVisible(1108) | Window.IsVisible(1109) | [Window.IsVisible(MyPVRChannels.xml) | Window.IsVisible(MyPVRTimers.xml) | Window.IsVisible(MyPVRRecordings.xml)]]]</visible>
                         <visible>!Window.IsVisible(home)</visible>
                         <control type="image">
                             <fadetime>0</fadetime>

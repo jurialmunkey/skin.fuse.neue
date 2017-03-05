@@ -216,6 +216,52 @@
                     <include>Dialog_Standard_Right_Buttons</include>
                 </control>
 
+                <include content="Defs_Shortcuts_SetHub">
+                    <param name="hubid" value="1101" />
+                    <param name="buttonid1" value="9301" />
+                    <param name="buttonid2" value="9501" />
+                </include>
+                <include content="Defs_Shortcuts_SetHub">
+                    <param name="hubid" value="1102" />
+                    <param name="buttonid1" value="9302" />
+                    <param name="buttonid2" value="9502" />
+                </include>
+                <include content="Defs_Shortcuts_SetHub">
+                    <param name="hubid" value="1103" />
+                    <param name="buttonid1" value="9303" />
+                    <param name="buttonid2" value="9503" />
+                </include>
+                <include content="Defs_Shortcuts_SetHub">
+                    <param name="hubid" value="1104" />
+                    <param name="buttonid1" value="9304" />
+                    <param name="buttonid2" value="9504" />
+                </include>
+                <include content="Defs_Shortcuts_SetHub">
+                    <param name="hubid" value="1105" />
+                    <param name="buttonid1" value="9305" />
+                    <param name="buttonid2" value="9505" />
+                </include>
+                <include content="Defs_Shortcuts_SetHub">
+                    <param name="hubid" value="1106" />
+                    <param name="buttonid1" value="9306" />
+                    <param name="buttonid2" value="9506" />
+                </include>
+                <include content="Defs_Shortcuts_SetHub">
+                    <param name="hubid" value="1107" />
+                    <param name="buttonid1" value="9307" />
+                    <param name="buttonid2" value="9507" />
+                </include>
+                <include content="Defs_Shortcuts_SetHub">
+                    <param name="hubid" value="1108" />
+                    <param name="buttonid1" value="9308" />
+                    <param name="buttonid2" value="9508" />
+                </include>
+                <include content="Defs_Shortcuts_SetHub">
+                    <param name="hubid" value="1109" />
+                    <param name="buttonid1" value="9309" />
+                    <param name="buttonid2" value="9509" />
+                </include>
+
                 <control type="button" id="308" description="Reset">
                     <width>100%</width>
                     <height>66</height>

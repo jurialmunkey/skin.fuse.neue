@@ -19,6 +19,19 @@
         <onload>ClearProperty(ViewType,Home)</onload>
     </include>
 
+    <include name="Defs_Shortcuts_SetHub">
+        <control type="button" id="$PARAM[buttonid1]" description="Set HUB">
+            <width>100%</width>
+            <label>31291</label>
+            <height>66</height>
+            <texturenofocus colordiffuse="dialog_fg_12" border="5">common/box.png</texturenofocus>
+            <align>left</align>
+            <include>Dialog_Standard_Right_Buttons</include>
+            <visible>String.IsEqual(Container(211).ListItem.Property(Path),ActivateWindow($PARAM[hubid]))</visible>
+            <onclick>RunScript(script.skinshortcuts,type=manage&amp;group=x$PARAM[hubid])</onclick>
+        </control>
+    </include>
+
     <!-- Options Menu -->
     <include name="Defs_Options_Menu">
         <left>8</left>

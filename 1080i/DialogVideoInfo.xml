@@ -353,7 +353,7 @@
                     <onclick condition="Container.Content(episodes)">SetProperty(CustomInfoList.Content,plugin://script.skin.helper.service/?action=getcast&amp;episode=$INFO[ListItem.Title]&amp;castaction=extendedinfo,Home)</onclick>
                     <onclick>SetProperty(CustomInfoList.Target,,Home)</onclick>
                     <onclick>SetProperty(CustomInfoList.Title,$INFO[ListItem.Title,$LOCALIZE[206]  (,)],Home)</onclick>
-                    <onclick>ActivateWindow(1131)</onclick>
+                    <onclick>ActivateWindow(1112)</onclick>
                     <include>Dialog_Info_Buttons</include>
                     <visible>!String.IsEmpty(ListItem.Cast)</visible>
                 </control>
@@ -363,7 +363,7 @@
                     <onclick>SetProperty(CustomInfoList.Content,plugin://script.extendedinfo?info=personmovies&amp;&amp;person=$INFO[ListItem.Director],Home)</onclick>
                     <onclick>SetProperty(CustomInfoList.Target,,Home)</onclick>
                     <onclick>SetProperty(CustomInfoList.Title,$INFO[ListItem.Director,,  ($LOCALIZE[20339])],Home)</onclick>
-                    <onclick>ActivateWindow(1131)</onclick>
+                    <onclick>ActivateWindow(1112)</onclick>
                     <visible>Container.Content(movies)</visible>
                     <visible>!IsEmpty(ListItem.Director)</visible>
                     <include>Dialog_Info_Buttons</include>

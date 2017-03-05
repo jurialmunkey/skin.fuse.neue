@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- Foundation -->
+<window id="1107" type="window">
+    <defaultcontrol always="true">50</defaultcontrol>
+    <include>Defs_SetStartWindow</include>
+    <onload>SetProperty(LowerFurniture_BottomBar,0,Home)</onload>
+    <controls>
+
+        <include>GlobalBackground</include>
+        <include>Furniture_TopBar</include>
+        <include>Furniture_BottomBar</include>
+        <include content="Furniture_BigPoster">
+            <param name="height" value="504" />
+            <param name="variable" value="$INFO[Container(50).ListItem.Icon]" />
+            <param name="container" value="Container(50)." />
+        </include>
+        
+        <include>Furniture_Clock</include>
+
+    </controls>
+
+</window>
