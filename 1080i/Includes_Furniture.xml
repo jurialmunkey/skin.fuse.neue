@@ -394,20 +394,28 @@
             <itemgap>12</itemgap>
             <usecontrolcoords>true</usecontrolcoords>
             <orientation>horizontal</orientation>
+            <control type="label" id="9904">
+                <textcolor>main_fg_30</textcolor>
+                <include>Furniture_MenuBar_Items</include>
+                <label>$VAR[LabelNextAiredDetails]</label>
+            </control>
             <control type="label" id="9902">
                 <include>Furniture_MenuBar_Items</include>
                 <label>$VAR[SubHeaderLabel]</label>
+                <visible>String.IsEmpty(Control.GetLabel(9904))</visible>
             </control>
             <control type="label">
                 <include>Furniture_MenuBar_Items</include>
                 <label>  •  </label>
                 <visible>!String.IsEmpty(Control.GetLabel(9903))</visible>
                 <visible>Control.IsVisible(9903)</visible>
+                <visible>String.IsEmpty(Control.GetLabel(9904))</visible>
             </control>
             <control type="label" id="9903">
                 <include>Furniture_MenuBar_Items</include>
                 <label>[COLOR=$VAR[ColorHighlight]]$INFO[Container.CurrentPage,,[/COLOR] $LOCALIZE[20163] ][COLOR=$VAR[ColorHighlight]]$INFO[Container.NumPages,,[/COLOR] $LOCALIZE[31243]]</label>
                 <visible>!String.IsEmpty(Container.CurrentPage)</visible>
+                <visible>String.IsEmpty(Control.GetLabel(9904))</visible>
             </control>
         </control>
     </include>

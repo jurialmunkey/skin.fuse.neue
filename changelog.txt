@@ -4,6 +4,7 @@ Remove null includes and variables
 Fix progressline
 Fix fullscreen video not setting correct property for notification positioning
 Fix onback condition in hubs when returning home with option
+Next aired details
 
 [B]0.9.6[/B]
 Add weather next to clock if enabled
