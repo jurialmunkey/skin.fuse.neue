@@ -288,7 +288,7 @@
             <alttexturefocus colordiffuse="$VAR[ColorHighlight]">osd/play.png</alttexturefocus>
             <alttexturenofocus colordiffuse="main_fg_70">osd/play.png</alttexturenofocus>
             <onclick>PlayerControl(Play)</onclick>
-            <enable>Player.PauseEnabled</enable>
+            <visible>Player.PauseEnabled</visible>
             <animation effect="fade" start="100" end="33" time="100" condition="!Player.PauseEnabled">Conditional</animation>
         </control>
 
