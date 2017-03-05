@@ -317,7 +317,6 @@
             </control>
             <control type="group">
                 <visible>Player.HasMedia</visible>
-                <visible>!Window.IsVisible(MusicVisualisation.xml) + !Window.IsVisible(VideoFullScreen.xml)</visible>
                 <include>Furniture_NowPlayingInfo</include>
             </control>
             <include condition="Window.IsVisible(MusicVisualisation.xml)">Furniture_MusicVis_Items</include>
@@ -447,24 +446,12 @@
     </include>
 
     <include name="Furniture_MusicVis_Items">
-        
         <control type="progress" id="401">
             <width>100%</width>
             <height>100%</height>
             <lefttexture colordiffuse="main_fg_12">osd/progress-end.png</lefttexture>
             <midtexture colordiffuse="main_fg_12">osd/progress-end.png</midtexture>
             <righttexture colordiffuse="main_fg_12">osd/progress-end.png</righttexture>
-        </control>
-        <control type="grouplist">
-            <height>48</height>
-            <align>center</align>
-            <itemgap>12</itemgap>
-            <usecontrolcoords>true</usecontrolcoords>
-            <orientation>horizontal</orientation>
-            <control type="label" id="9903">
-                <include>Furniture_MenuBar_Items</include>
-                <label>$LOCALIZE[554] [COLOR=$VAR[ColorHighlight]]$INFO[MusicPlayer.PlaylistPosition][/COLOR] $LOCALIZE[20163] [COLOR=$VAR[ColorHighlight]]$INFO[MusicPlayer.PlaylistLength][/COLOR] $LOCALIZE[1405] $LOCALIZE[559]  •  [COLOR=main_fg_30]$INFO[Player.Time][/COLOR]  |  [COLOR=main_fg_30]$INFO[Player.Duration][/COLOR]</label>
-            </control>
         </control>
     </include>
 
@@ -487,17 +474,6 @@
             <lefttexture colordiffuse="main_fg_12">osd/progress-end.png</lefttexture>
             <midtexture colordiffuse="main_fg_12">osd/progress-end.png</midtexture>
             <righttexture colordiffuse="main_fg_12">osd/progress-end.png</righttexture>
-        </control>
-        <control type="grouplist">
-            <height>48</height>
-            <align>center</align>
-            <itemgap>12</itemgap>
-            <usecontrolcoords>true</usecontrolcoords>
-            <orientation>horizontal</orientation>
-            <control type="label" id="9903">
-                <include>Furniture_MenuBar_Items</include>
-                <label>[COLOR=main_fg_30]$INFO[Player.Time][/COLOR]  |  [COLOR=main_fg_30]$INFO[Player.Duration][/COLOR]</label>
-            </control>
         </control>
     </include>
 
@@ -528,14 +504,6 @@
                 <include>Furniture_MenuBar_Button</include>
                 <visible>![Window.IsVisible(MyVideoNav.xml) | Window.IsVisible(MyMusicNav.xml) | Window.IsVisible(MyPics.xml) | Window.IsVisible(MyPrograms.xml) | Window.IsVisible(AddonBrowser.xml) | Window.IsVisible(MyPlaylist.xml) | Window.IsVisible(MyWeather.xml)] | [!Control.IsVisible(3) + !Control.IsVisible(9600)]</visible>
             </control>
-            <!-- <control type="button" id="9002">
-                <label>5</label>
-                <onclick>ActivateWindow(interfacesettings)</onclick>
-                <texturenofocus colordiffuse="main_fg_70" border="42,0,8,0">buttons/settings.png</texturenofocus>
-                <texturefocus colordiffuse="$VAR[ColorHighlight]" border="42,0,8,0">buttons/settings.png</texturefocus>
-                <include>Furniture_MenuBar_Button</include>
-                <visible>![Window.IsVisible(MyVideoNav.xml) | Window.IsVisible(MyMusicNav.xml) | Window.IsVisible(MyPics.xml) | Window.IsVisible(MyPrograms.xml) | Window.IsVisible(AddonBrowser.xml) | Window.IsVisible(MyPlaylist.xml) | Window.IsVisible(MyWeather.xml)] | [!Control.IsVisible(3) + !Control.IsVisible(9600)]</visible>
-            </control> -->
             <include condition="[Window.IsVisible(MyVideoNav.xml) | Window.IsVisible(MyMusicNav.xml) | Window.IsVisible(MyPics.xml) | Window.IsVisible(MyPrograms.xml) | Window.IsVisible(AddonBrowser.xml) | Window.IsVisible(MyPlaylist.xml) | Window.IsVisible(MyWeather.xml)]">Furniture_SortButtons</include>
         </control>
     </include>
@@ -557,13 +525,6 @@
             <include>Furniture_MenuBar_Button</include>
             <visible>Window.IsVisible(MyWeather.xml)</visible>
         </control>
-        <!-- <control type="button" id="3">
-            <texturenofocus colordiffuse="main_fg_70" border="42,0,8,0">buttons/sort-method.png</texturenofocus>
-            <texturefocus colordiffuse="$VAR[ColorHighlight]" border="42,0,8,0">buttons/sort-method.png</texturefocus>
-            <include>Furniture_MenuBar_Button</include>
-            <visible>Control.IsEnabled(3)</visible>
-            <visible>!Window.IsVisible(MyWeather.xml)</visible>
-        </control> -->
         <control type="togglebutton" id="3">
             <texturenofocus colordiffuse="main_fg_70" border="42,0,8,0">buttons/sort-up.png</texturenofocus>
             <texturefocus colordiffuse="$VAR[ColorHighlight]" border="42,0,8,0">buttons/sort-up.png</texturefocus>
