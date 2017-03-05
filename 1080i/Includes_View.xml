@@ -948,6 +948,18 @@
                 <textcolor>main_fg_70</textcolor>
                 <font>font_listlabel</font>
                 <label>$INFO[ListItem.Label]$INFO[ListItem.Label2, [COLOR=main_fg_30](,)[/COLOR]]</label>
+                <visible>![Window.IsVisible(1101) | Window.IsVisible(1102) | Window.IsVisible(1103) | Window.IsVisible(1104) | Window.IsVisible(1105) | Window.IsVisible(1106) | Window.IsVisible(1107) | Window.IsVisible(1108) | Window.IsVisible(1109)]</visible>
+            </control>
+            <control type="textbox">
+                <left>138.5</left>
+                <right>30</right>
+                <top>10</top>
+                <bottom>10</bottom>
+                <aligny>center</aligny>
+                <textcolor>main_fg_70</textcolor>
+                <font>font_listlabel</font>
+                <label>$INFO[ListItem.Label]</label>
+                <visible>[Window.IsVisible(1101) | Window.IsVisible(1102) | Window.IsVisible(1103) | Window.IsVisible(1104) | Window.IsVisible(1105) | Window.IsVisible(1106) | Window.IsVisible(1107) | Window.IsVisible(1108) | Window.IsVisible(1109)]</visible>
             </control>
         </control>
     </include>
@@ -982,6 +994,18 @@
                 <textcolor>Selected</textcolor>
                 <font>font_listlabel</font>
                 <label>$INFO[ListItem.Label]$INFO[ListItem.Label2, [COLOR=bfededed](,)[/COLOR]]</label>
+                <visible>![Window.IsVisible(1101) | Window.IsVisible(1102) | Window.IsVisible(1103) | Window.IsVisible(1104) | Window.IsVisible(1105) | Window.IsVisible(1106) | Window.IsVisible(1107) | Window.IsVisible(1108) | Window.IsVisible(1109)]</visible>
+            </control>
+            <control type="textbox">
+                <left>138.5</left>
+                <right>30</right>
+                <top>10</top>
+                <bottom>10</bottom>
+                <aligny>center</aligny>
+                <textcolor>Selected</textcolor>
+                <font>font_listlabel</font>
+                <label>$INFO[ListItem.Label]</label>
+                <visible>[Window.IsVisible(1101) | Window.IsVisible(1102) | Window.IsVisible(1103) | Window.IsVisible(1104) | Window.IsVisible(1105) | Window.IsVisible(1106) | Window.IsVisible(1107) | Window.IsVisible(1108) | Window.IsVisible(1109)]</visible>
             </control>
         </control>
     </include>
