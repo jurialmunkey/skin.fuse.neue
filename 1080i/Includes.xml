@@ -19,9 +19,9 @@
 
     <expression name="Expression_InfoSlide">[[[Control.HasFocus(54) | Control.HasFocus(53) | Control.HasFocus(52) | Control.HasFocus(51) | Control.HasFocus(50) | Control.HasFocus(8000) | Control.HasFocus(60) | Control.HasFocus(61) | ControlGroup(9100).HasFocus() | ControlGroup(6000).HasFocus()] + [Container.Content(movies) | Container.Content(tvshows) | Container.Content(sets) | Container.Content(episodes) | Container.Content(seasons) | Container.Content(videos)] | Window.IsVisible(MyPVRGuide.xml)] + [!String.IsEmpty(Control.GetLabel(9399)) | ListItem.IsCollection]]</expression>
 
-    <expression name="Expression_DontLowerBottomBar">[[!Window.IsVisible(home) + !String.IsEqual(Window(Home).Property(LowerFurniture_BottomBar),1)] | [Window.IsVisible(Home) + !Integer.IsEqual(Container(301).NumItems,0)]]</expression>
+    <expression name="Expression_DontLowerBottomBar">[[!Window.IsVisible(home) + !String.IsEqual(Window(Home).Property(LowerFurniture_BottomBar),1)] | [Window.IsVisible(Home) + [!Integer.IsEqual(Container(301).NumItems,0) | Container(301).IsUpdating]]]</expression>
 
-    <expression name="Expression_LowerBottomBar">[String.IsEqual(Window(Home).Property(LowerFurniture_BottomBar),1) | [Window.IsVisible(Home) + Integer.IsEqual(Container(301).NumItems,0)]]</expression>
+    <expression name="Expression_LowerBottomBar">[String.IsEqual(Window(Home).Property(LowerFurniture_BottomBar),1) | [Window.IsVisible(Home) + Integer.IsEqual(Container(301).NumItems,0) + !Container(301).IsUpdating]]</expression>
 
     <expression name="Expression_InfoSlide_Home">[[Control.HasFocus(301) | Control.HasFocus(60) | Control.HasFocus(61) | ControlGroup(9100).HasFocus()] + !Integer.IsEqual(Container(301).NumItems,0)]</expression>
 
