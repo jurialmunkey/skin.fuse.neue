@@ -1,3 +1,8 @@
+[B]0.9.5[/B]
+Add scroll to long titles in info box
+Add tmdb ratings in video info
+Add box office, awards, budget and critic consensus to video info
+
 [B]0.9.4[/B]
 Add option to show home widgets with top bar
 

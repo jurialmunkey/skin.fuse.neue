@@ -265,7 +265,7 @@ msgid "Kiosk mode"
 msgstr ""
 
 msgctxt "#31203"
-msgid "Artwork Downloader"
+msgid "Artwork"
 msgstr ""
 
 msgctxt "#31204"
@@ -467,4 +467,12 @@ msgstr ""
 
 msgctxt "#31288"
 msgid "Show home widgets when top menu is focused"
+msgstr ""
+
+msgctxt "#31289"
+msgid "Awards"
+msgstr ""
+
+msgctxt "#31290"
+msgid "Consensus"
 msgstr ""
