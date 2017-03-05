@@ -16,6 +16,7 @@
                 <!-- Director -->
                 <control type="group">
                     <height>32</height>
+                    <visible>!String.IsEmpty(ListItem.Director)</visible>
                     <control type="label">
                         <left>0</left>
                         <width>160</width>
@@ -38,6 +39,7 @@
                 <!-- Writer -->
                 <control type="group">
                     <height>32</height>
+                    <visible>!String.IsEmpty(ListItem.Writer)</visible>
                     <control type="label">
                         <left>0</left>
                         <width>160</width>
@@ -60,6 +62,7 @@
                 <!-- Studio -->
                 <control type="group">
                     <height>32</height>
+                    <visible>!String.IsEmpty(ListItem.Studio)</visible>
                     <control type="label">
                         <left>0</left>
                         <width>160</width>
@@ -82,6 +85,7 @@
                 <!-- Genre -->
                 <control type="group">
                     <height>32</height>
+                    <visible>!String.IsEmpty(ListItem.Genre)</visible>
                     <control type="label">
                         <left>0</left>
                         <width>160</width>
@@ -104,6 +108,7 @@
                 <!-- MPAA Classification -->
                 <control type="group">
                     <height>32</height>
+                    <visible>!String.IsEmpty(ListItem.MPAA)</visible>
                     <control type="label">
                         <left>0</left>
                         <width>160</width>
@@ -124,6 +129,7 @@
                 <!-- Languages -->
                 <control type="group">
                     <height>32</height>
+                    <visible>!String.IsEmpty(Window(Home).Property(SkinHelper.ListItem.Languages)) | !String.IsEmpty(Window(Home).Property(SkinHelper.ListItem.Subtitles))</visible>
                     <control type="label">
                         <left>0</left>
                         <width>160</width>
@@ -144,6 +150,7 @@
                 <!-- Budget -->
                 <control type="group">
                     <height>32</height>
+                    <visible>!String.IsEmpty(Window(Home).Property(SkinHelper.ListItem.Budget.formatted))</visible>
                     <control type="label">
                         <left>0</left>
                         <width>160</width>
@@ -172,6 +179,7 @@
                 <!-- Box Office -->
                 <control type="group">
                     <height>32</height>
+                    <visible>!String.IsEmpty(Window(Home).Property(SkinHelper.ListItem.BoxOffice))</visible>
                     <control type="label">
                         <left>0</left>
                         <width>160</width>
@@ -213,6 +221,7 @@
                 <!-- Awards -->
                 <control type="group">
                     <height>64</height>
+                    <visible>!String.IsEmpty(Window(Home).Property(SkinHelper.ListItem.Awards))</visible>
                     <control type="label">
                         <left>0</left>
                         <width>160</width>
@@ -242,23 +251,7 @@
                 <align>right</align>
                 <itemgap>12</itemgap>
                 <usecontrolcoords>true</usecontrolcoords>
-                <control type="image">
-                    <top>0</top>
-                    <width>32</width>
-                    <height>32</height>
-                    <texture colordiffuse="main_fg_100">indicator/popcorn.png</texture>
-                    <visible>!String.IsEmpty(Window(Home).Property(SkinHelper.ListItem.Rating.TMDB))</visible>
-                </control>
-                <control type="label">
-                    <textcolor>main_fg_70</textcolor>
-                    <top>2</top>
-                    <width>auto</width>
-                    <height>28</height>
-                    <align>right</align>
-                    <font>Tiny</font>
-                    <label>$INFO[Window(Home).Property(SkinHelper.ListItem.Rating.TMDB), ,   ]</label>
-                    <visible>!String.IsEmpty(Window(Home).Property(SkinHelper.ListItem.Rating.TMDB))</visible>
-                </control>
+                
                 <control type="image">
                     <top>0</top>
                     <width>32</width>
@@ -275,6 +268,40 @@
                     <font>Tiny</font>
                     <label>$INFO[Window(Home).Property(SkinHelper.ListItem.MetaCritic.Rating), ,%   ]</label>
                     <visible>!String.IsEmpty(Window(Home).Property(SkinHelper.ListItem.MetaCritic.Rating))</visible>
+                </control>
+                <control type="image">
+                    <top>0</top>
+                    <width>32</width>
+                    <height>32</height>
+                    <texture colordiffuse="main_fg_100">indicator/tmdb.png</texture>
+                    <visible>!String.IsEmpty(Window(Home).Property(SkinHelper.ListItem.Rating.TMDB))</visible>
+                </control>
+                <control type="label">
+                    <textcolor>main_fg_70</textcolor>
+                    <top>2</top>
+                    <width>auto</width>
+                    <height>28</height>
+                    <align>right</align>
+                    <font>Tiny</font>
+                    <label>$INFO[Window(Home).Property(SkinHelper.ListItem.Rating.TMDB), ,   ]</label>
+                    <visible>!String.IsEmpty(Window(Home).Property(SkinHelper.ListItem.Rating.TMDB))</visible>
+                </control>
+                <control type="image">
+                    <top>0</top>
+                    <width>32</width>
+                    <height>32</height>
+                    <texture colordiffuse="main_fg_100">indicator/popcorn.png</texture>
+                    <visible>!String.IsEmpty(Window(Home).Property(SkinHelper.ListItem.RottenTomatoes.UserMeter))</visible>
+                </control>
+                <control type="label">
+                    <textcolor>main_fg_70</textcolor>
+                    <top>2</top>
+                    <width>auto</width>
+                    <height>28</height>
+                    <align>right</align>
+                    <font>Tiny</font>
+                    <label>$INFO[Window(Home).Property(SkinHelper.ListItem.RottenTomatoes.UserMeter), ,%   ]</label>
+                    <visible>!String.IsEmpty(Window(Home).Property(SkinHelper.ListItem.RottenTomatoes.UserMeter))</visible>
                 </control>
                 <control type="image">
                     <width>32</width>
