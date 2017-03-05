@@ -1,3 +1,7 @@
+[B]0.9.6[/B]
+Add weather next to clock if enabled
+Add imdb top 250 rating in video info
+
 [B]0.9.5[/B]
 Add scroll to long titles in info box
 Add tmdb ratings in video info

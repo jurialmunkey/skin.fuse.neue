@@ -358,6 +358,16 @@
             <align>right</align>
             <itemgap>20</itemgap>
             <control type="label">
+                <font>font_time</font>
+                <align>right</align>
+                <textcolor>main_fg_30</textcolor>
+                <label>$INFO[Weather.Temperature]</label>
+                <aligny>center</aligny>
+                <width>auto</width>
+                <height>100%</height>
+                <visible>Weather.IsFetched</visible>
+            </control>
+            <control type="label">
                 <font>font_date</font>
                 <align>right</align>
                 <textcolor>main_fg_70</textcolor>
