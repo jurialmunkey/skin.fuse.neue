@@ -13,7 +13,7 @@
             </include>
             <control type="label">
                 <description>Header Label</description>
-                <label>[UPPERCASE]$LOCALIZE[298][/UPPERCASE] - ($INFO[Container(11).NumItems]) $LOCALIZE[31027] - $LOCALIZE[31028] ($INFO[Container(11).CurrentPage]/$INFO[Container(11).NumPages])</label>
+                <label>[UPPERCASE]$LOCALIZE[298][/UPPERCASE]</label>
                 <include>Dialog_Standard_Header</include>
             </control>
 

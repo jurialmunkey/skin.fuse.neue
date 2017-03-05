@@ -1126,7 +1126,6 @@
         <content>
             <item id="1">
                 <label>14206</label>
-                <label2>31275</label2>
                 <icon>special://skin/extras/icons/swissarmy.png</icon>
                 <onclick>ReplaceWindow(InterfaceSettings)</onclick>
                 <property name="path">ReplaceWindow(InterfaceSettings)</property>
@@ -1134,7 +1133,6 @@
             </item>
             <item id="2">
                 <label>14202</label>
-                <label2>31276</label2>
                 <icon>special://skin/extras/icons/tags.png</icon>
                 <onclick>ReplaceWindow(MediaSettings)</onclick>
                 <property name="path">ReplaceWindow(MediaSettings)</property>
@@ -1142,7 +1140,6 @@
             </item>
             <item id="3">
                 <label>14200</label>
-                <label2>31277</label2>
                 <icon>special://skin/extras/icons/equalizer.png</icon>
                 <onclick>ReplaceWindow(PlayerSettings)</onclick>
                 <property name="path">ReplaceWindow(PlayerSettings)</property>
@@ -1150,7 +1147,6 @@
             </item>
             <item id="5">
                 <label>13000</label>
-                <label2>31161</label2>
                 <icon>special://skin/extras/icons/configure.png</icon>
                 <onclick>ReplaceWindow(SystemSettings)</onclick>
                 <property name="path">ReplaceWindow(SystemSettings)</property>
@@ -1158,7 +1154,6 @@
             </item>
             <item id="6">
                 <label>14036</label>
-                <label2>31164</label2>
                 <icon>special://skin/extras/icons/network.png</icon>
                 <onclick>ReplaceWindow(servicesettings)</onclick>
                 <property name="path">ReplaceWindow(servicesettings)</property>
@@ -1166,7 +1161,6 @@
             </item>
             <item id="4">
                 <label>20077</label>
-                <label2>31166</label2>
                 <icon>special://skin/extras/icons/year.png</icon>
                 <onclick>ReplaceWindow(SkinSettings)</onclick>
                 <property name="path">ReplaceWindow(SkinSettings)</property>
@@ -1178,7 +1172,6 @@
         <content>
             <item id="7">
                 <label>13200</label>
-                <label2>31165</label2>
                 <icon>special://skin/extras/icons/actor.png</icon>
                 <onclick>ReplaceWindow(Profiles)</onclick>
                 <property name="path">ReplaceWindow(Profiles)</property>
@@ -1186,7 +1179,6 @@
             </item>
             <item id="8">
                 <label>24001</label>
-                <label2>31162</label2>
                 <icon>special://skin/extras/icons/addons.png</icon>
                 <onclick>ReplaceWindow(AddonBrowser)</onclick>
                 <property name="path">ReplaceWindow(AddonBrowser)</property>
@@ -1194,7 +1186,6 @@
             </item>
             <item id="9">
                 <label>130</label>
-                <label2>31167</label2>
                 <icon>special://skin/extras/icons/sysinfo.png</icon>
                 <onclick>ReplaceWindow(7)</onclick>
                 <property name="path">ReplaceWindow(7)</property>
@@ -1202,7 +1193,6 @@
             </item>
             <item id="10">
                 <label>19191</label>
-                <label2>31163</label2>
                 <icon>special://skin/extras/icons/livetv.png</icon>
                 <onclick>ReplaceWindow(pvrsettings)</onclick>
                 <property name="path">ReplaceWindow(pvrsettings)</property>

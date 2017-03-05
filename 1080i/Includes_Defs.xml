@@ -73,11 +73,6 @@
         <value>plugin://service.library.data.provider?type=randommovies&amp;reload=$INFO[Window.Property(randommovies)]</value>
     </variable>
 
-    <variable name="Defs_Widget_Target">
-        <value condition="!IsEmpty(Container(300).ListItem.Property(widgetTarget))">$INFO[Container(300).ListItem.Property(widgetTarget)]</value>
-        <value>videos</value>
-    </variable>
-
     <!-- Keyboard and Numeric Keys -->
     <include name="Defs_Keyboard_Button">
         <width>85</width>

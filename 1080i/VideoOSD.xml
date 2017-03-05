@@ -1,17 +1,17 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!-- Foundation -->
 <window id="2901">
-    <onload condition="!Player.PauseEnabled + String.IsEmpty(Window(Home).Property(OSDViewMode)">SetFocus(15)</onload>
-    <onload condition="Player.PauseEnabled + String.IsEmpty(Window(Home).Property(OSDViewMode)">SetFocus(14)</onload>
-    <onload condition="!String.IsEmpty(Window(Home).Property(OSDViewMode)">SetFocus(9003)</onload>
-    <onload condition="!String.IsEmpty(Window(Home).Property(OSDViewMode)">ClearProperty(OSDViewMode,Home)</onload>
+    <onload condition="!Player.PauseEnabled + String.IsEmpty(Window(Home).Property(OSDViewMode))">SetFocus(15)</onload>
+    <onload condition="Player.PauseEnabled + String.IsEmpty(Window(Home).Property(OSDViewMode))">SetFocus(14)</onload>
+    <onload condition="!String.IsEmpty(Window(Home).Property(OSDViewMode))">SetFocus(9003)</onload>
+    <onload condition="!String.IsEmpty(Window(Home).Property(OSDViewMode))">ClearProperty(OSDViewMode,Home)</onload>
     <onload>SetProperty(ShowFurniture_TopBar,1,Home)</onload>
     <onunload>SetProperty(ShowFurniture_TopBar,0,Home)</onunload>
     <zorder>1</zorder>
     <controls>
 
         <control type="group">
-            <include condition="String.IsEmpty(Window(Home).Property(OSDViewMode)">Animation_FadeIn</include>
+            <include condition="String.IsEmpty(Window(Home).Property(OSDViewMode))">Animation_FadeIn</include>
             <!-- Mini Blade -->
             <control type="group">
                 <top>80</top>

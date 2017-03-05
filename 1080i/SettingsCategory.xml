@@ -80,7 +80,6 @@
                     <height>30</height>
                     <font>Tiny</font>
                     <textcolor>panel_fg_70</textcolor>
-                    <scroll>true</scroll>
                     <align>left</align>
                     <textoffsetx>0</textoffsetx>
                     <texturenofocus>noop</texturenofocus>

@@ -31,7 +31,7 @@
             <timeperimage>10000</timeperimage>
             <randomize>true</randomize>
             <fadetime>600</fadetime>
-            <loop>yes</loop>
+            <loop>true</loop>
             <imagepath background="true">$INFO[Window(Visualisation).Property(ArtistSlideshow)]</imagepath>
             <visible>System.HasAddon(script.artistslideshow) + !Skin.HasSetting(ArtistSlideShow.Disabled)</visible>
             <animation effect="fade" start="100" end="65" time="0" condition="Skin.HasSetting(OSDVisualisation.ShowFanart)">Conditional</animation>

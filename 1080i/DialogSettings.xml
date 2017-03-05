@@ -65,7 +65,6 @@
 
             <control type="spincontrolex" id="9">
                 <description>Default spincontrolex</description>
-                <reverse>yes</reverse>
                 <include>Dialog_Standard_ListButton</include>
             </control>
 

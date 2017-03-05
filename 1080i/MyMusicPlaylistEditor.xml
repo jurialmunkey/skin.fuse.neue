@@ -85,7 +85,6 @@
                             <width max="840">auto</width>
                             <align>left</align>
                             <textcolor>Selected</textcolor>
-                            <focusedcolor>Selected</focusedcolor>
                             <selectedcolor>Selected</selectedcolor>
                             <info>ListItem.Label</info>
                         </control>

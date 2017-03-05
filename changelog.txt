@@ -1,5 +1,8 @@
 [B]0.9.7[/B]
 Add flat theme
+Remove null includes and variables
+Fix progressline
+Number of error corrections
 
 [B]0.9.6[/B]
 Add weather next to clock if enabled

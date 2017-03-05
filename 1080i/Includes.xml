@@ -30,57 +30,11 @@
         <value>Highlight</value>
     </variable>
 
-    <include name="HiddenButton">
-        <left>-20</left>
-        <top>-20</top>
-        <width>1</width>
-        <height>1</height>
-        <label>-</label>
-        <texturenofocus>-</texturenofocus>
-        <texturefocus>-</texturefocus>
-    </include>
-
     <include name="Dimensions_Fullscreen">
         <left>0</left>
         <top>0</top>
         <width>1920</width>
         <height>1080</height>
-    </include>
-
-    <include name="WindowID">
-        <width>780</width>
-        <height>21</height>
-        <textcolor>Blue</textcolor>
-        <shadowcolor>Black</shadowcolor>
-        <align>left</align>
-    </include>
-
-    <include name="DialogID">
-        <width>780</width>
-        <height>21</height>
-        <textcolor>Green</textcolor>
-        <shadowcolor>Black</shadowcolor>
-        <align>left</align>
-    </include>
-
-    <include name="PathID">
-        <left>15r</left>
-        <top>15</top>
-        <width>780</width>
-        <height>21</height>
-        <textcolor>Blue</textcolor>
-        <shadowcolor>Black</shadowcolor>
-        <align>right</align>
-    </include>
-
-    <include name="ControlID">
-        <left>15r</left>
-        <top>48</top>
-        <width>780</width>
-        <height>21</height>
-        <textcolor>Red</textcolor>
-        <shadowcolor>Black</shadowcolor>
-        <align>right</align>
     </include>
 
     <include name="GlobalOverlay">
@@ -117,7 +71,6 @@
         <!-- Fanart -->
         <value condition="!IsEmpty(Window(Home).Property(SkinHelper.ListItem.Art.ExtraFanArt)) + Skin.HasSetting(SkinHelper.EnableExtraFanart) + System.HasAddon(script.skin.helper.service) + Window.IsVisible(MyVideoNav.xml)">$INFO[Window(Home).Property(SkinHelper.ListItem.Art.ExtraFanArt)]</value>
         <value condition="!IsEmpty(ListItem.Art(fanart))">$INFO[ListItem.Art(fanart)]</value>
-        <value condition="!IsEmpty(Container(9500).ListItem.Art(fanart))">$INFO[Container(9500).ListItem.Art(fanart)]</value>
         <value condition="!IsEmpty(ListItem.Property(Fanart_Image))">$INFO[ListItem.Property(Fanart_Image)]</value>
         <value condition="!IsEmpty(ListItem.Property(Fanart))">$INFO[ListItem.Property(Fanart)]</value>
         <value condition="!IsEmpty(Window(Home).Property(SkinHelper.ListItem.Art.Fanart))">$INFO[Window(Home).Property(SkinHelper.ListItem.Art.Fanart)]</value>
@@ -160,7 +113,7 @@
                 <timeperimage>10000</timeperimage>
                 <randomize>true</randomize>
                 <fadetime>600</fadetime>
-                <loop>yes</loop>
+                <loop>true</loop>
                 <imagepath background="true">$INFO[Window(Visualisation).Property(ArtistSlideshow)]</imagepath>
                 <visible>System.HasAddon(script.artistslideshow) + !Skin.HasSetting(ArtistSlideShow.Disabled)</visible>
                 <animation effect="zoom" start="110" end="130" center="auto" time="10000" tween="sine" easing="inout" pulse="true" condition="Skin.HasSetting(ArtistSlideshow.Animate)">Conditional</animation>

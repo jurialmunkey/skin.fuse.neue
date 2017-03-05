@@ -60,7 +60,6 @@
                     <top>77</top>
                     <height>30</height>
                     <font>Tiny</font>
-                    <height>40</height>
                     <textcolor>panel_fg_70</textcolor>
                     <scroll>true</scroll>
                 </control>
@@ -140,7 +139,6 @@
                     </control>
                     <control type="progress" id="22">
                         <description>CPU BAR</description>
-                        <font>Tiny</font>
                         <left>50</left>
                         <height>10</height>
                         <width>750</width>
@@ -170,7 +168,6 @@
 
                     <control type="progress" id="24">
                         <description>Memory BAR</description>
-                        <font>Tiny</font>
                         <left>850</left>
                         <right>50</right>
                         <height>10</height>
@@ -180,8 +177,7 @@
 
                     <control type="label" id="25">
                         <description>Spacer</description>
-                        <font>-</font>
-                        <font>Tiny</font>
+                        <font>noop</font>
                         <height>25</height>
                     </control>
 

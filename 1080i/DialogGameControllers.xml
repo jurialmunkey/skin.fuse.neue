@@ -45,7 +45,6 @@
                 <top>120</top>
                 <width>740</width>
                 <height>450</height>
-                <aspectratio>scale</aspectratio>
             </control>
             <control type="grouplist" id="5">
                 <width>380</width>

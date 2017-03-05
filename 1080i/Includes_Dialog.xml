@@ -45,81 +45,6 @@
         <textcolor>panel_fg_100</textcolor>
     </include>
 
-    <!-- ======================== -->
-    <!-- Now Playing Notification -->
-    <!-- ======================== -->
-    <include name="Dialog_NowPlaying">
-        <control type="group">
-            <visible>!Skin.HasSetting(furniture.nowplaying)</visible>
-            <include>Animation_Notification_Follow</include>
-            <animation effect="slide" end="0,100" tween="quadratic" easing="out" time="300" condition="Window.IsActive(DialogNotification.xml)">Conditional</animation>
-            <animation effect="slide" end="0,100" tween="quadratic" easing="out" time="300" condition="Window.IsActive(DialogExtendedProgressBar.xml)">Conditional</animation>
-            <animation effect="slide" end="0,100" tween="quadratic" easing="out" time="300" condition="Window.IsActive(DialogVolumeBar.xml) + !Player.Muted">Conditional</animation>
-            <include>Animation_FurnitureFadeInOut</include>
-            <visible>Player.HasMedia</visible>
-            <visible>!IsEmpty(Player.Duration) | Player.HasAudio</visible>
-            <include>Dialog_Notification_Group</include>
-            <control type="label">
-                <include>Dialog_Notification_MainLabel</include>
-                <label>$INFO[Player.Title]</label>
-            </control>
-            <control type="label">
-                <include>Dialog_Notification_SubLabel</include>
-                <label>$INFO[VideoPlayer.TvShowTitle,,  ]$INFO[MusicPlayer.Artist,,  ]$INFO[Player.Time]$INFO[Player.Duration, / ,]</label>
-            </control>
-            <control type="group">
-                <include>Dialog_Notification_Icon</include>
-                <control type="image" description="Back">
-                    <centerleft>50%</centerleft>
-                    <centertop>50%</centertop>
-                    <width>100</width>
-                    <height>100</height>
-                    <aspectratio align="center" aligny="center">keep</aspectratio>
-                    <texture>progress/back.png</texture>
-                    <animation effect="fade" start="0" end="100" time="150">VisibleChange</animation>
-                </control>
-                <control type="image" description="Play">
-                    <centerleft>50%</centerleft>
-                    <centertop>50%</centertop>
-                    <width>100</width>
-                    <height>100</height>
-                    <aspectratio align="center" aligny="center">keep</aspectratio>
-                    <texture colordiffuse="panel_fg_100">progress/play.png</texture>
-                    <animation effect="fade" start="0" end="100" time="150">VisibleChange</animation>
-                    <visible>!Player.Paused</visible>
-                </control>
-                <control type="image" description="Pause">
-                    <centerleft>50%</centerleft>
-                    <centertop>50%</centertop>
-                    <width>100</width>
-                    <height>100</height>
-                    <aspectratio align="center" aligny="center">keep</aspectratio>
-                    <texture colordiffuse="panel_fg_100">progress/pause.png</texture>
-                    <animation effect="fade" start="0" end="100" time="150">VisibleChange</animation>
-                    <visible>Player.Paused</visible>
-                </control>
-                <control type="progress" id="933">
-                    <texturebg>-</texturebg>
-                    <lefttexture>-</lefttexture>
-                    <midtexture>-</midtexture>
-                    <righttexture>-</righttexture>
-                    <info>Player.Progress</info>
-                    <visible>false</visible>
-                </control>
-                <control type="image">
-                    <centerleft>50%</centerleft>
-                    <centertop>50%</centertop>
-                    <width>100</width>
-                    <height>100</height>
-                    <aspectratio align="center" aligny="center">keep</aspectratio>
-                    <texture colordiffuse="$VAR[ColorHighlight]">$INFO[Control.GetLabel(933),progress/circle/p,.png]</texture>
-                    <visible>!IsEmpty(Player.Duration)</visible>
-                </control>
-
-            </control>
-        </control>
-    </include>
-
     <!-- ================ -->
     <!-- Standard Dialogs -->
     <!-- ================ -->
@@ -282,14 +207,6 @@
         <orientation>horizontal</orientation>
     </include>
 
-    <include name="Dialog_Info_Plot_Grouplist">
-        <left>SidePad</left>
-        <right>SidePad</right>
-        <top>590</top>
-        <height>170</height>
-        <orientation>vertical</orientation>
-        <usecontrolcoords>true</usecontrolcoords>
-    </include>
 
     <include name="Dialog_Info_Buttons">
         <font>Button</font>
@@ -301,31 +218,6 @@
         <texturefocus colordiffuse="$VAR[ColorHighlight]" border="5">common/box.png</texturefocus>
     </include>
 
-    <include name="Dialog_Info_Label">
-        <width>100%</width>
-        <height>25</height>
-        <font>SmallBold</font>
-        <aligny>center</aligny>
-    </include>
-
-    <include name="Dialog_Info_Plotbox">
-        <width>100%</width>
-        <height>95</height>
-        <font>Tiny</font>
-        <textcolor>main_fg_70</textcolor>
-        <align>justify</align>
-    </include>
-
-    <include name="Dialog_Info_Pathline">
-        <width>100%</width>
-        <height>50</height>
-        <font>Mini</font>
-        <scroll>true</scroll>
-        <textcolor>main_fg_30</textcolor>
-        <aligny>center</aligny>
-        <align>right</align>
-    </include>
-
     <include name="Dialog_Info_Details_Grouplist">
         <left>910</left>
         <right>SidePad</right>
@@ -334,14 +226,6 @@
         <orientation>vertical</orientation>
         <usecontrolcoords>true</usecontrolcoords>
     </include>
-
-    <include name="Dialog_Info_Label_Details">
-        <width>65%</width>
-        <height>60</height>
-        <font>Tiny</font>
-        <aligny>top</aligny>
-    </include>
-
 
     <!-- Ok Cancel Progress Yes No Dialog -->
     <include name="Dialog_Confirm">
