@@ -7,7 +7,7 @@
             <include>Animation_FadeOut</include>
             <!-- Overlay -->
             <control type="image">
-                <texture colordiffuse="9f000000">common/white.png</texture>
+                <texture colordiffuse="bf000000">common/white.png</texture>
             </control>
 
             <control type="group">
@@ -109,7 +109,7 @@
                 <include>Animation_FadeOut</include>
                 <!-- Overlay -->
                 <control type="image">
-                    <texture colordiffuse="9f000000">common/white.png</texture>
+                    <texture colordiffuse="bf000000">common/white.png</texture>
                 </control>
 
                 <control type="group">
