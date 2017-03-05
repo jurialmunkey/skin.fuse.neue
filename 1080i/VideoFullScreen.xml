@@ -2,7 +2,7 @@
 <!-- Foundation -->
 <window id="2005">
     <defaultcontrol>-</defaultcontrol>
-
+    <onload>SetProperty(ShowFurniture_TopBar,0,Home)</onload>
     <controls>
 
         <control type="group" id="0">

@@ -2,7 +2,8 @@
 Add flat theme
 Remove null includes and variables
 Fix progressline
-Number of error corrections
+Fix fullscreen video not setting correct property for notification positioning
+Fix onback condition in hubs when returning home with option
 
 [B]0.9.6[/B]
 Add weather next to clock if enabled
