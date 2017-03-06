@@ -552,7 +552,7 @@
                 <visible>!Skin.HasSetting(furniture.flags)</visible>
                 <visible>!Window.IsVisible(script-script.extendedinfo-DialogVideoInfo.xml)</visible>
                 <visible>!Window.IsVisible(script-script.extendedinfo-DialogInfo.xml)</visible>
-                <visible>!stringcompare($PARAM[container]ListItem.Label,..)</visible>
+                <visible>!String.IsEqual($PARAM[container]ListItem.Label,..)</visible>
                 <include>Animation_FadeIn</include>
                 <include>Animation_FadeOut</include>
                 <right>30</right>
@@ -575,21 +575,21 @@
                     <centertop>50%</centertop>
                     <height>64</height>
                     <texture colordiffuse="panel_fg_100">flags/bluray.png</texture>
-                    <visible>[substring($PARAM[container]ListItem.FilenameAndPath,bluray) | substring($PARAM[container]ListItem.FilenameAndPath,bdrip) | substring($PARAM[container]ListItem.FilenameAndPath,bd25) | substring($PARAM[container]ListItem.FilenameAndPath,bd50)]</visible>
+                    <visible>[String.StartsWith($PARAM[container]ListItem.FilenameAndPath,bluray) | String.StartsWith($PARAM[container]ListItem.FilenameAndPath,bdrip) | String.StartsWith($PARAM[container]ListItem.FilenameAndPath,bd25) | String.StartsWith($PARAM[container]ListItem.FilenameAndPath,bd50)]</visible>
                 </control>
                 <control type="image">
                     <width>95</width>
                     <centertop>50%</centertop>
                     <height>64</height>
                     <texture colordiffuse="panel_fg_100">flags/hddvd.png</texture>
-                    <visible>substring($PARAM[container]ListItem.FilenameAndPath,hddvd)</visible>
+                    <visible>String.StartsWith($PARAM[container]ListItem.FilenameAndPath,hddvd)</visible>
                 </control>
                 <control type="image">
                     <width>64</width>
                     <centertop>50%</centertop>
                     <height>64</height>
                     <texture colordiffuse="panel_fg_100">flags/dvd.png</texture>
-                    <visible>substring($PARAM[container]ListItem.FilenameAndPath,dvd) + !substring($PARAM[container]ListItem.FilenameAndPath,hddvd)</visible>
+                    <visible>String.StartsWith($PARAM[container]ListItem.FilenameAndPath,dvd) + !String.StartsWith($PARAM[container]ListItem.FilenameAndPath,hddvd)</visible>
                 </control>
                 <control type="image">
                     <width>88</width>
@@ -597,7 +597,7 @@
                     <centertop>50%</centertop>
                     <texture colordiffuse="panel_fg_100" fallback="flags/fallback.png">$INFO[$PARAM[container]ListItem.VideoResolution,flags/resolution/,.png]</texture>
                     <aspectratio align="right">keep</aspectratio>
-                    <visible>!IsEmpty($PARAM[container]ListItem.VideoResolution) + !substring($PARAM[container]ListItem.Path,videodb://movies/sets,left)</visible>
+                    <visible>!String.IsEmpty($PARAM[container]ListItem.VideoResolution) + !String.StartsWith($PARAM[container]ListItem.Path,videodb://movies/sets)</visible>
                 </control>
                 <control type="image">
                     <width>88</width>
@@ -605,7 +605,7 @@
                     <centertop>50%</centertop>
                     <texture colordiffuse="panel_fg_100" fallback="flags/fallback.png">$INFO[$PARAM[container]ListItem.VideoCodec,flags/source/,.png]</texture>
                     <aspectratio align="right">keep</aspectratio>
-                    <visible>!IsEmpty($PARAM[container]ListItem.VideoCodec)</visible>
+                    <visible>!String.IsEmpty($PARAM[container]ListItem.VideoCodec)</visible>
                 </control>
                 <control type="image">
                     <width>88</width>
@@ -613,7 +613,7 @@
                     <centertop>50%</centertop>
                     <texture colordiffuse="panel_fg_100" fallback="flags/fallback.png">$INFO[$PARAM[container]ListItem.VideoAspect,flags/aspectratio/,.png]</texture>
                     <aspectratio align="right">keep</aspectratio>
-                    <visible>!IsEmpty($PARAM[container]ListItem.VideoAspect)</visible>
+                    <visible>!String.IsEmpty($PARAM[container]ListItem.VideoAspect)</visible>
                 </control>
                 <control type="image">
                     <width>88</width>
@@ -621,7 +621,7 @@
                     <centertop>50%</centertop>
                     <texture colordiffuse="panel_fg_100" fallback="flags/fallback.png">$INFO[$PARAM[container]ListItem.AudioCodec,flags/audio/,.png]</texture>
                     <aspectratio align="right">keep</aspectratio>
-                    <visible>!IsEmpty($PARAM[container]ListItem.AudioCodec)</visible>
+                    <visible>!String.IsEmpty($PARAM[container]ListItem.AudioCodec)</visible>
                 </control>
                 <control type="image">
                     <width>88</width>
@@ -629,7 +629,7 @@
                     <centertop>50%</centertop>
                     <texture colordiffuse="panel_fg_100" fallback="flags/fallback.png">$INFO[$PARAM[container]ListItem.AudioChannels,flags/channels/,.png]</texture>
                     <aspectratio align="right">keep</aspectratio>
-                    <visible>!IsEmpty($PARAM[container]ListItem.AudioChannels)</visible>
+                    <visible>!String.IsEmpty($PARAM[container]ListItem.AudioChannels)</visible>
                 </control>
             </control>
         </definition>
@@ -785,7 +785,7 @@
                     <height>48</height>
                     <label>$INFO[ListItem.Label]</label>
                     <textcolor>main_fg_12</textcolor>
-                    <animation effect="fade" start="100" end="10" time="0" condition="!IsEmpty(ListItem.Property(NotAvailable))">Conditional</animation>
+                    <animation effect="fade" start="100" end="10" time="0" condition="!String.IsEmpty(ListItem.Property(NotAvailable))">Conditional</animation>
                 </control>
                 <control type="label">
                     <aligny>center</aligny>
@@ -793,7 +793,7 @@
                     <height>48</height>
                     <label>$INFO[ListItem.Label]</label>
                     <textcolor>main_fg_70</textcolor>
-                    <visible>StringCompare(ListItem.Label,Container.ListItem.SortLetter)</visible>
+                    <visible>String.IsEqual(ListItem.Label,Container.ListItem.SortLetter)</visible>
                 </control>
             </itemlayout>
             <focusedlayout height="48" width="46">
@@ -808,7 +808,7 @@
                     <height>48</height>
                     <label>$INFO[ListItem.Label]</label>
                     <textcolor>Selected</textcolor>
-                    <animation effect="fade" start="100" end="10" time="0" condition="!IsEmpty(ListItem.Property(NotAvailable))">Conditional</animation>
+                    <animation effect="fade" start="100" end="10" time="0" condition="!String.IsEmpty(ListItem.Property(NotAvailable))">Conditional</animation>
                 </control>
             </focusedlayout>
             <content>plugin://script.skin.helper.service/?action=alphabet&amp;reload=$INFO[Container.NumItems]</content>

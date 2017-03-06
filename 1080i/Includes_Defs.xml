@@ -65,11 +65,11 @@
 
     <!-- Widget Content -->
     <variable name="Defs_Widget_Content">
-        <value condition="!IsEmpty(Container(300).ListItem.Property(widgetPath))">$INFO[Container(300).ListItem.Property(widgetPath)]</value>
-        <value condition="substring(Container(300).ListItem.Property(widget),Weather,left) + !IsEmpty(Skin.String(weather.fanart))">noop</value>
-        <value condition="!IsEmpty(Container(300).ListItem.Property(Background))">noop</value>
-        <value condition="!IsEmpty(Skin.String(home.slideshowpath)) + IsEmpty(Container(300).ListItem.Property(widget))">noop</value>
-        <value condition="!IsEmpty(Skin.String(home.fallbackwidget))">$INFO[Skin.String(home.fallbackwidget)]</value>
+        <value condition="!String.IsEmpty(Container(300).ListItem.Property(widgetPath))">$INFO[Container(300).ListItem.Property(widgetPath)]</value>
+        <value condition="String.StartsWith(Container(300).ListItem.Property(widget),Weather) + !String.IsEmpty(Skin.String(weather.fanart))">noop</value>
+        <value condition="!String.IsEmpty(Container(300).ListItem.Property(Background))">noop</value>
+        <value condition="!String.IsEmpty(Skin.String(home.slideshowpath)) + String.IsEmpty(Container(300).ListItem.Property(widget))">noop</value>
+        <value condition="!String.IsEmpty(Skin.String(home.fallbackwidget))">$INFO[Skin.String(home.fallbackwidget)]</value>
         <value>plugin://service.library.data.provider?type=randommovies&amp;reload=$INFO[Window.Property(randommovies)]</value>
     </variable>
 

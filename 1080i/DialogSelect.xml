@@ -87,7 +87,7 @@
                         <include>Dialog_Standard_List_Left_Icon</include>
                     </control>
                     <control type="label">
-                        <animation effect="slide" end="0,18" condition="IsEmpty(ListItem.Label2)">Conditional</animation>
+                        <animation effect="slide" end="0,18" condition="String.IsEmpty(ListItem.Label2)">Conditional</animation>
                         <include>Dialog_Standard_List_Left_Label</include>
                     </control>
                     <control type="label">
@@ -106,7 +106,7 @@
                     <control type="label">
                         <textcolor>Selected</textcolor>
                         <selectedcolor>Selected</selectedcolor>
-                        <animation effect="slide" end="0,18" condition="IsEmpty(ListItem.Label2)">Conditional</animation>
+                        <animation effect="slide" end="0,18" condition="String.IsEmpty(ListItem.Label2)">Conditional</animation>
                         <include>Dialog_Standard_List_Left_Label</include>
                     </control>
                     <control type="label">

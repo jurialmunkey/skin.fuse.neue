@@ -1,3 +1,7 @@
+[B]0.9.8[/B]
+Season posters at episode level
+Replace outdated IsEmpty, Substring and StringCompare with String.IsEmpty String.Contains and String.IsEqual
+
 [B]0.9.7[/B]
 Add flat theme
 Remove null includes and variables

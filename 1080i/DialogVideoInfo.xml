@@ -402,7 +402,7 @@
                     <onclick>SetProperty(CustomInfoList.Title,$INFO[ListItem.Director,,  ($LOCALIZE[20339])],Home)</onclick>
                     <onclick>ActivateWindow(1112)</onclick>
                     <visible>Container.Content(movies)</visible>
-                    <visible>!IsEmpty(ListItem.Director)</visible>
+                    <visible>!String.IsEmpty(ListItem.Director)</visible>
                     <include>Dialog_Info_Buttons</include>
                 </control>
                 
@@ -410,7 +410,7 @@
                     <description>Trailer button</description>
                     <label>20410</label>
                     <include>Dialog_Info_Buttons</include>
-                    <visible>!IsEmpty(ListItem.Trailer)</visible>
+                    <visible>!String.IsEmpty(ListItem.Trailer)</visible>
                 </control>
 
                 <!-- <control type="button" id="105">
@@ -418,7 +418,7 @@
                     <include>Dialog_Info_Buttons</include>
                     <label>31171</label>
                     <onclick>RunScript(script.videoextras,display,"$INFO[ListItem.FilenameAndPath]")</onclick>
-                    <visible>System.HasAddon(script.videoextras) + [Container.Content(movies) | Container.Content(episodes) | Container.Content(TVShows) | Container.Content(musicvideos)] + IsEmpty(Window(movieinformation).Property("HideVideoExtrasButton"))</visible>
+                    <visible>System.HasAddon(script.videoextras) + [Container.Content(movies) | Container.Content(episodes) | Container.Content(TVShows) | Container.Content(musicvideos)] + String.IsEmpty(Window(movieinformation).Property("HideVideoExtrasButton"))</visible>
                 </control> -->
 
                 <control type="button" id ="10">

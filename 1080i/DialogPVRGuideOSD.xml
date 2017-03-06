@@ -65,7 +65,7 @@
                         <texture>common/selected.png</texture>
                         <aspectratio aligny="top">center</aspectratio>
                         <animation effect="fade" start="100" end="10" condition="true">Conditional</animation>
-                        <visible>StringCompare(ListItem.Title,VideoPlayer.Title) + StringCompare(ListItem.ChannelNumberLabel,VideoPlayer.ChannelNumberLabel) + StringCompare(ListItem.EndTime,VideoPlayer.EndTime)</visible>
+                        <visible>String.IsEqual(ListItem.Title,VideoPlayer.Title) + String.IsEqual(ListItem.ChannelNumberLabel,VideoPlayer.ChannelNumberLabel) + String.IsEqual(ListItem.EndTime,VideoPlayer.EndTime)</visible>
                     </control>
                     <control type="image">
                         <centertop>54</centertop>
@@ -112,7 +112,7 @@
                         <texture>common/selected.png</texture>
                         <aspectratio aligny="top">center</aspectratio>
                         <animation effect="fade" start="100" end="30" condition="true">Conditional</animation>
-                        <visible>StringCompare(ListItem.Title,VideoPlayer.Title) + StringCompare(ListItem.ChannelNumberLabel,VideoPlayer.ChannelNumberLabel) + StringCompare(ListItem.EndTime,VideoPlayer.EndTime)</visible>
+                        <visible>String.IsEqual(ListItem.Title,VideoPlayer.Title) + String.IsEqual(ListItem.ChannelNumberLabel,VideoPlayer.ChannelNumberLabel) + String.IsEqual(ListItem.EndTime,VideoPlayer.EndTime)</visible>
                     </control>
                     <control type="image">
                         <centertop>54</centertop>
