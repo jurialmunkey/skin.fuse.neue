@@ -75,11 +75,12 @@
     </variable>
 
     <variable name="Label_Title">
-        <value condition="Window.IsVisible(MyPVRChannels.xml)">$INFO[ListItem.Title]</value>
+        <value condition="[Window.IsVisible(MyPVRChannels.xml) | Window.IsVisible(MyPVRSearch.xml) | Window.IsVisible(MyPVRRecordings.xml) | Window.IsVisible(MyPVRTimers.xml)] + !String.IsEmpty(ListItem.Title)">$INFO[ListItem.Title]</value>
         <value condition="Container.Content(songs)">$INFO[ListItem.TrackNumber,,. ]$INFO[ListItem.Title]</value>
-        <value>$INFO[ListItem.Label]</value>
+        <value condition="!String.IsEqual(ListItem.Label,..)">$INFO[ListItem.Label]</value>
     </variable>
     <variable name="Label_InfoLine">
+        <value condition="String.IsEqual(ListItem.Label,..)"></value>
         <value condition="[Container.Content(movies) | Window.IsVisible(script-script.extendedinfo-VideoList.xml)] + [!String.IsEmpty(ListItem.Year) | !String.IsEmpty(ListItem.Duration) | !String.IsEmpty(ListItem.Rating)]">$INFO[ListItem.Year,,  •  ]$INFO[ListItem.Duration,, $LOCALIZE[31102]  •  ]$INFO[ListItem.Rating]</value>
         <value condition="Container.Content(episodes) + !String.IsEmpty(ListItem.TvShowTitle)">$INFO[ListItem.TvShowTitle,,  •  ]$INFO[ListItem.Premiered,,  •  ]$INFO[ListItem.Duration,, $LOCALIZE[31102]  •  ]$INFO[ListItem.Rating]</value>
         <value condition="Container.Content(tvshows) + !String.IsEmpty(ListItem.Property(UnWatchedEpisodes))">$INFO[ListItem.Property(UnWatchedEpisodes),, $LOCALIZE[31215]  •  ]$INFO[ListItem.Property(TotalSeasons),, $LOCALIZE[33054]  •  ]$INFO[ListItem.Duration,, $LOCALIZE[31102]  •  ]$INFO[ListItem.Rating]</value>
@@ -87,10 +88,11 @@
         <value condition="Container.Content(songs) + !String.IsEmpty(ListItem.Artist)">$INFO[ListItem.Artist,,  •  ]$INFO[ListItem.Album,,  •  ]$INFO[ListItem.Year]</value>
         <value condition="Container.Content(albums) + !String.IsEmpty(ListItem.Artist)">$INFO[ListItem.Artist,,  •  ]$INFO[ListItem.Year]</value>
         <value condition="Container.Content(artists)">$INFO[ListItem.Property(Artist_YearsActive),,  •  ]$INFO[Window(Home).Property(SkinHelper.ListItem.AlbumCount),, $LOCALIZE[36919]]</value>
-        <value condition="Window.IsVisible(MyPVRChannels.xml)">$INFO[ListItem.EndTime,$LOCALIZE[31106] ,]$INFO[ListItem.Plot,  •  ,]</value>
+        <value condition="[Window.IsVisible(MyPVRChannels.xml) | Window.IsVisible(MyPVRSearch.xml) | Window.IsVisible(MyPVRRecordings.xml) | Window.IsVisible(MyPVRTimers.xml)] + [!String.IsEmpty(ListItem.EndTime) | !String.IsEmpty(ListItem.Plot)]">$INFO[ListItem.EndTime,$LOCALIZE[31106] ,  •  ]$INFO[ListItem.Plot]</value>
         <value condition="String.Contains(Container.FolderPath,/tvshows/)">$LOCALIZE[20343]$INFO[Container.FolderName,  •  ,]</value>
         <value condition="String.Contains(Container.FolderPath,/movies/)">$LOCALIZE[20342]$INFO[Container.FolderName,  •  ,]</value>
         <value condition="!String.IsEmpty(System.CurrentWindow) + !Window.IsVisible(SettingsCategory.xml) + !Window.IsVisible(Settings.xml)">$INFO[System.CurrentWindow]$INFO[Container.FolderName,  •  ,]</value>
+        <value condition="!String.IsEmpty(Container.FolderName)">$INFO[Container.FolderName]</value>
     </variable>
     <variable name="Label_Plot">
         <value condition="Window.IsVisible(MyPVRGuide.xml) + Player.HasVideo"></value>
