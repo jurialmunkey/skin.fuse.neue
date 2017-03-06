@@ -817,12 +817,25 @@
                 </control>
                 <control type="label">
                     <left>800</left>
+                    <right>285</right>
+                    <height>100%</height>
+                    <aligny>center</aligny>
+                    <align>right</align>
+                    <textcolor>main_fg_30</textcolor>
+                    <font>font_listlabel</font>
+                    <scroll>false</scroll>
+                    <label>$INFO[ListItem.NextTitle]</label>
+                    <visible>Window.IsVisible(MyPVRChannels.xml)</visible>
+                </control>
+                <control type="label">
+                    <width>280</width>
                     <right>30</right>
                     <height>100%</height>
                     <aligny>center</aligny>
                     <align>right</align>
                     <textcolor>main_fg_30</textcolor>
                     <font>font_listlabel</font>
+                    <scroll>false</scroll>
                     <label>$INFO[ListItem.StartTime,   (,]$INFO[ListItem.EndTime, | ,)]</label>
                     <visible>Window.IsVisible(MyPVRChannels.xml)</visible>
                 </control>
@@ -888,16 +901,30 @@
                     <textcolor>Selected</textcolor>
                     <font>font_listlabel</font>
                     <label>$INFO[ListItem.Title]</label>
+                    <scroll>false</scroll>
                     <visible>Window.IsVisible(MyPVRChannels.xml)</visible>
                 </control>
                 <control type="label">
                     <left>800</left>
+                    <right>285</right>
+                    <height>100%</height>
+                    <aligny>center</aligny>
+                    <align>right</align>
+                    <textcolor>main_fg_70</textcolor>
+                    <font>font_listlabel</font>
+                    <scroll>false</scroll>
+                    <label>$INFO[ListItem.NextTitle]</label>
+                    <visible>Window.IsVisible(MyPVRChannels.xml)</visible>
+                </control>
+                <control type="label">
+                    <width>280</width>
                     <right>30</right>
                     <height>100%</height>
                     <aligny>center</aligny>
                     <align>right</align>
                     <textcolor>main_fg_70</textcolor>
                     <font>font_listlabel</font>
+                    <scroll>false</scroll>
                     <label>$INFO[ListItem.StartTime,   (,]$INFO[ListItem.EndTime, | ,)]</label>
                     <visible>Window.IsVisible(MyPVRChannels.xml)</visible>
                 </control>
