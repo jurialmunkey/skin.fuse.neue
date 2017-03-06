@@ -938,6 +938,16 @@
         <include>View_StandardMovement_OnBack</include>
     </include>
     <include name="View_StandardMovement_OnBack">
+        <include condition="!Window.IsVisible(Home)">View_StandardMovement_OnBack_Library</include>
+        <include condition="Window.IsVisible(Home)">View_StandardMovement_OnBack_Home</include>
+
+        <onunfocus>SetProperty(ShowFurniture_TopBar,1,Home)</onunfocus>
+        <onfocus>SetProperty(ShowFurniture_TopBar,0,Home)</onfocus>
+    </include>
+
+    <include name="View_StandardMovement_OnBack_Home"><onback>300</onback></include>
+
+    <include name="View_StandardMovement_OnBack_Library">
         <!-- On Back Opens Top Bar -->
         <onback condition="Window.IsVisible(Home) | [!String.IsEqual(Window(Home).Property(OpenHub),1) + String.IsEqual(Container.FolderPath,Window(Home).Property(Container_FolderPath)) + !Skin.HasSetting(DisableNeverHome) + !$EXP[Expression_ReplaceWindowHome]]">300</onback>
 
@@ -955,9 +965,6 @@
 
         <!-- Replace Window Home Go Back -->
         <onback condition="[!String.IsEqual(Window(Home).Property(OpenHub),1) + String.IsEqual(Container.FolderPath,Window(Home).Property(Container_FolderPath)) + !Skin.HasSetting(DisableNeverHome) + $EXP[Expression_ReplaceWindowHome]]">ReplaceWindow(home)</onback>
-
-        <onunfocus>SetProperty(ShowFurniture_TopBar,1,Home)</onunfocus>
-        <onfocus>SetProperty(ShowFurniture_TopBar,0,Home)</onfocus>
     </include>
 
     <include name="View_List_ItemLayout">
