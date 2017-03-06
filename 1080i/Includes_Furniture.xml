@@ -415,6 +415,7 @@
                 <include>Furniture_MenuBar_Items</include>
                 <label>$VAR[Label_NumItems]</label>
                 <visible>String.IsEmpty(Control.GetLabel(9904))</visible>
+                <visible>!Window.IsVisible(DialogVideoInfo.xml) + !Window.IsVisible(DialogMusicInfo.xml) + !Window.IsVisible(DialogAddonInfo.xml) + !Window.IsVisible(script-script.extendedinfo-DialogVideoInfo.xml) + !Window.IsVisible(script-script.extendedinfo-DialogInfo.xml) + !Window.IsVisible(DialogPVRInfo.xml)</visible>
             </control>
             <control type="label">
                 <include>Furniture_MenuBar_Items</include>
@@ -427,6 +428,7 @@
                 <include>Furniture_MenuBar_Items</include>
                 <label>$VAR[Label_NumPages]</label>
                 <visible>String.IsEmpty(Control.GetLabel(9904))</visible>
+                <visible>!Window.IsVisible(DialogVideoInfo.xml) + !Window.IsVisible(DialogMusicInfo.xml) + !Window.IsVisible(DialogAddonInfo.xml) + !Window.IsVisible(script-script.extendedinfo-DialogVideoInfo.xml) + !Window.IsVisible(script-script.extendedinfo-DialogInfo.xml) + !Window.IsVisible(DialogPVRInfo.xml)</visible>
             </control>
         </control>
     </include>
