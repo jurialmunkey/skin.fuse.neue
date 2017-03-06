@@ -290,11 +290,25 @@
     </include>
 
     <include name="Furniture_PlayerProgress">
-        <control type="progress">
+        <control type="progress" description="cache">
+            <width>100%</width>
+            <top>0</top>
+            <bottom>0</bottom>
+            <info>Player.ProgressCache</info>
+            <texturebg colordiffuse="00ffffff">osd/progress-bg.png</texturebg>
+            <lefttexture colordiffuse="main_fg_12">osd/progress-end.png</lefttexture>
+            <midtexture colordiffuse="main_fg_12">osd/progress-end.png</midtexture>
+            <righttexture colordiffuse="main_fg_12">osd/progress-end.png</righttexture>
+            <visible>Player.Playing | Player.Paused | Player.Caching</visible>
+            <visible>!Player.Seeking</visible>
+            <visible>Player.HasMedia</visible>
+        </control>
+        <control type="progress" id="401">
             <width>100%</width>
             <top>0</top>
             <bottom>0</bottom>
             <info>Player.Progress</info>
+            <texturebg colordiffuse="00ffffff">osd/progress-bg.png</texturebg>
             <lefttexture colordiffuse="main_fg_12">osd/progress-end.png</lefttexture>
             <midtexture colordiffuse="main_fg_12">osd/progress-end.png</midtexture>
             <righttexture colordiffuse="main_fg_12">osd/progress-end.png</righttexture>
@@ -319,8 +333,6 @@
                 <visible>Player.HasMedia</visible>
                 <include>Furniture_NowPlayingInfo</include>
             </control>
-            <include condition="Window.IsVisible(MusicVisualisation.xml)">Furniture_MusicVis_Items</include>
-            <include condition="Window.IsVisible(VideoFullScreen.xml)">Furniture_VideoFullScreen_Items</include>
             <control type="grouplist">
                 <orientation>horizontal</orientation>
                 <left>8</left>
@@ -450,38 +462,6 @@
                 <include>Furniture_MenuBar_Items</include>
                 <label>$INFO[Player.Duration]</label>
             </control>
-        </control>
-    </include>
-
-    <include name="Furniture_MusicVis_Items">
-        <control type="progress" id="401">
-            <width>100%</width>
-            <height>100%</height>
-            <lefttexture colordiffuse="main_fg_12">osd/progress-end.png</lefttexture>
-            <midtexture colordiffuse="main_fg_12">osd/progress-end.png</midtexture>
-            <righttexture colordiffuse="main_fg_12">osd/progress-end.png</righttexture>
-        </control>
-    </include>
-
-    <include name="Furniture_VideoFullScreen_Items">
-        <control type="progress" description="cache">
-            <width>100%</width>
-            <top>0</top>
-            <bottom>0</bottom>
-            <info>Player.ProgressCache</info>
-            <texturebg colordiffuse="00ffffff">osd/progress-bg.png</texturebg>
-            <lefttexture colordiffuse="main_fg_12">osd/progress-end.png</lefttexture>
-            <midtexture colordiffuse="main_fg_12">osd/progress-end.png</midtexture>
-            <righttexture colordiffuse="main_fg_12">osd/progress-end.png</righttexture>
-            <visible>Player.Playing | Player.Paused | Player.Caching</visible>
-        </control>
-        <control type="progress" id="401">
-            <width>100%</width>
-            <top>0</top>
-            <bottom>0</bottom>
-            <lefttexture colordiffuse="main_fg_12">osd/progress-end.png</lefttexture>
-            <midtexture colordiffuse="main_fg_12">osd/progress-end.png</midtexture>
-            <righttexture colordiffuse="main_fg_12">osd/progress-end.png</righttexture>
         </control>
     </include>
 
