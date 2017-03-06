@@ -413,7 +413,7 @@
             </control>
             <control type="label" id="9902">
                 <include>Furniture_MenuBar_Items</include>
-                <label>$VAR[SubHeaderLabel]</label>
+                <label>$VAR[Label_NumItems]</label>
                 <visible>String.IsEmpty(Control.GetLabel(9904))</visible>
             </control>
             <control type="label">
@@ -425,8 +425,7 @@
             </control>
             <control type="label" id="9903">
                 <include>Furniture_MenuBar_Items</include>
-                <label>[COLOR=$VAR[ColorHighlight]]$INFO[Container.CurrentPage,,[/COLOR] $LOCALIZE[20163] ][COLOR=$VAR[ColorHighlight]]$INFO[Container.NumPages,,[/COLOR] $LOCALIZE[31243]]</label>
-                <visible>!String.IsEmpty(Container.CurrentPage)</visible>
+                <label>$VAR[Label_NumPages]</label>
                 <visible>String.IsEmpty(Control.GetLabel(9904))</visible>
             </control>
         </control>
