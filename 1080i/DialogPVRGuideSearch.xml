@@ -51,10 +51,12 @@
                 <bottom>126</bottom>
                 <itemgap>10</itemgap>
                 <control type="radiobutton" id="10" description="Include Description">
+                    <radioposx>620</radioposx>
                     <include>Dialog_Standard_ListButton</include>
                     <label>19134</label>
                 </control>
                 <control type="radiobutton" id="11" description="Casesensitive">
+                    <radioposx>620</radioposx>
                     <include>Dialog_Standard_ListButton</include>
                     <label>19135</label>
                 </control>
@@ -71,14 +73,17 @@
                     <label>515</label>
                 </control>
                 <control type="radiobutton" id="20" description="unknowngenre">
+                    <radioposx>620</radioposx>
                     <include>Dialog_Standard_ListButton</include>
                     <label>19132</label>
                 </control>
                 <control type="radiobutton" id="22" description="ftaonly">
+                    <radioposx>620</radioposx>
                     <include>Dialog_Standard_ListButton</include>
                     <label>19123</label>
                 </control>
                 <control type="radiobutton" id="24" description="ignoretimers">
+                    <radioposx>620</radioposx>
                     <include>Dialog_Standard_ListButton</include>
                     <label>19124</label>
                 </control>
@@ -114,6 +119,7 @@
                     <label>19127</label>
                 </control>
                 <control type="radiobutton" id="19" description="avoidrepeats">
+                    <radioposx>620</radioposx>
                     <include>Dialog_Standard_ListButton</include>
                     <label>19121</label>
                 </control>
@@ -126,6 +132,7 @@
                     <label>19148</label>
                 </control>
                 <control type="radiobutton" id="27" description="ignrec">
+                    <radioposx>620</radioposx>
                     <include>Dialog_Standard_ListButton</include>
                     <label>19125</label>
                 </control>

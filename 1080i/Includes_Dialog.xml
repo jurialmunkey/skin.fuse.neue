@@ -573,8 +573,8 @@
         <include>GlobalOverlay</include>
         <control type="group">
             <include content="Dialog_Standard_Group">
-                <param name="width" value="900" />
-                <param name="height" value="320" />
+                <param name="width" value="1200" />
+                <param name="height" value="500" />
             </include>
 
             <control type="label" id="2">
@@ -584,7 +584,7 @@
             <control type="grouplist">
                 <left>30</left>
                 <top>100</top>
-                <right>30</right>
+                <right>60</right>
                 <include>Dialog_Info_Details_Grouplist</include>
                 <!-- Start Time -->
                 <control type="group">
@@ -644,6 +644,26 @@
                         <font>Tiny</font>
                         <aligny>top</aligny>
                         <label fallback="19055">$INFO[ListItem.ChannelName]$INFO[ListItem.ChannelNumber, (,)]</label>
+                    </control>
+                </control>
+                <!-- Plot -->
+                <control type="group">
+                    <height>182</height>
+                    <control type="label">
+                        <left>0</left>
+                        <width>160</width>
+                        <align>right</align>
+                        <textcolor>main_fg_30</textcolor>
+                        <font>Tiny</font>
+                        <label>21821</label>
+                        <aligny>top</aligny>
+                    </control>
+                    <control type="textbox">
+                        <left>176</left>
+                        <textcolor>main_fg_70</textcolor>
+                        <font>Tiny</font>
+                        <aligny>top</aligny>
+                        <label fallback="19055">$INFO[ListItem.Plot]</label>
                     </control>
                 </control>
             </control>

@@ -124,6 +124,7 @@
                             <height>48</height>
                             <aspectratio>stretch</aspectratio>
                             <texture border="24,12,24,12">diffuse/shadowspot.png</texture>
+                            <visible>!String.IsEmpty(Player.Art(tvshow.poster)) | !String.IsEmpty(Player.Art(thumb))</visible>
                         </control>
                         <control type="image">
                             <include>Defs_Shadow</include>

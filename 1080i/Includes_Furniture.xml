@@ -115,19 +115,6 @@
 
     <include name="Furniture_BottomBar_PVRGuideInfo">
         <control type="group">
-            <right>20</right>
-            <top>20</top>
-            <width>220</width>
-            <height>220</height>
-            <visible>!String.IsEmpty(Control.GetLabel(9399))</visible>
-            <control type="image">
-                <texture colordiffuse="panel_fg_12">common/white.png</texture>
-            </control>
-            <control type="image">
-                <texture>$INFO[ListItem.Icon]</texture>
-            </control>
-        </control>
-        <control type="group">
             <left>30</left>
             <right>260</right>
             <height>100</height>
@@ -152,17 +139,6 @@
                 <aligny>center</aligny>
                 <bottom>0</bottom>
                 <top>33%</top>
-            </control>
-        </control>                
-        <control type="group">
-            <top>108</top>
-            <height>130</height>
-            <left>30</left>
-            <right>260</right>
-            <control type="textbox" id="9399">
-                <label>$INFO[ListItem.Plot]</label>
-                <font>font_plotbox</font>
-                <textcolor>panel_fg_100</textcolor>
             </control>
         </control>
     </include>
@@ -1209,7 +1185,7 @@
             <animation effect="slide" end="0,-120" start="0" time="400" tween="quadratic" easing="out" reversible="true">Hidden</animation>
             <animation effect="slide" end="0,-120" start="0" time="400" tween="quadratic" easing="out" reversible="false" condition="Window.Next(MusicVisualisation.xml) | Window.Next(VideoFullScreen.xml)">WindowClose</animation>
             <animation effect="slide" start="0,-120" end="0" time="400" delay="0" tween="quadratic" easing="out" reversible="false" condition="Window.Previous(MusicVisualisation.xml) | Window.Previous(VideoFullScreen.xml)">WindowOpen</animation>
-            <visible allowhiddenfocus="true">[String.IsEqual(Window(Home).Property(ShowFurniture_TopBar),1) + !Control.HasFocus(60)] | Skin.HasSetting(ShowFurniture_TopBar)</visible>
+            <visible allowhiddenfocus="true">[String.IsEqual(Window(Home).Property(ShowFurniture_TopBar),1) + !Control.HasFocus(60) + ![Window.IsVisible(MyPVRGuide.xml) + Control.HasFocus(10)]] | Skin.HasSetting(ShowFurniture_TopBar)</visible>
             <include>Furniture_TopBar_SubMenu</include>
             <include>Furniture_TopBar_MainMenu</include>
         </control>
