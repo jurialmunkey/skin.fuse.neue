@@ -762,7 +762,7 @@
                             <fadetime>0</fadetime>
                             <include>Defs_Shadow_Opaque</include>
                             <aspectratio aligny="center">scale</aspectratio>
-                            <texture colordiffuse="main_fg_100" fallback="DefaultAddonNone.png">$INFO[$PARAM[container]ListItem.ActualIcon]</texture>
+                            <texture colordiffuse="main_fg_100" fallback="DefaultAddonNone.png">$INFO[$PARAM[container]ListItem.Icon]</texture>
                             <visible>[!Container.Content(genres) + !Container.Content(studios)] | ListItem.IsParentFolder</visible>
                         </control>
                         <control type="image">

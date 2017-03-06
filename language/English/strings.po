@@ -16,6 +16,11 @@ msgstr ""
 "Language: en\n"
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
 
+#: /1080i/SkinSettings.xml
+msgctxt "#31000"
+msgid "Enable skin helper backgrounds for hub windows"
+msgstr ""
+
 msgctxt "#31101"
 msgid "items"
 msgstr ""

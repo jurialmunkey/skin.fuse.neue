@@ -61,6 +61,15 @@
                         <include>Defs_Settings_Button</include>
                         <label>31169</label>
                     </control>
+
+                    <control type="togglebutton" id="9108" description="Dependencies">
+                        <usealttexture>!Control.HasFocus(300) + !Control.HasFocus(302) + ControlGroup(9100).HasFocus(9018)</usealttexture>
+                        <alttexturenofocus colordiffuse="$VAR[ColorHighlight]">common/white.png</alttexturenofocus>
+                        <width>450</width>
+                        <onback>300</onback>
+                        <include>Defs_Settings_Button</include>
+                        <label>$LOCALIZE[24996]</label>
+                    </control>
                 </control>
 
 
@@ -247,7 +256,117 @@
                         <label2>$INFO[Skin.String(focuscolor.name)]</label2>
                         <onclick>RunScript(script.skin.helper.colorpicker,skinstring=focuscolor.name)</onclick>
                     </control>
-                    
+
+                    <control type="radiobutton" id="9274">
+                        <visible>ControlGroup(9100).HasFocus(9107)</visible>
+                        <onback>300</onback>
+                        <label>$LOCALIZE[31000]</label>
+                        <onclick>Skin.ToggleSetting(SkinHelper.EnableWallBackgrounds)</onclick>
+                        <selected>Skin.HasSetting(SkinHelper.EnableWallBackgrounds)</selected>
+                        <include>Defs_Settings_Button</include>
+                    </control>
+
+                    <!-- Dependencies -->
+                    <control type="radiobutton" id="9281">
+                        <visible>ControlGroup(9100).HasFocus(9108)</visible>
+                        <onback>300</onback>
+                        <label>script.skin.helper.service</label>
+                        <label2>$INFO[System.AddonVersion(script.skin.helper.service)]        </label2>
+                        <onclick condition="!System.HasAddon(script.skin.helper.service)">InstallAddon(script.skin.helper.service)</onclick>
+                        <onclick condition="System.HasAddon(script.skin.helper.service)">Addon.OpenSettings(script.skin.helper.service)</onclick>
+                        <selected>System.HasAddon(script.skin.helper.service)</selected>
+                        <include>Defs_Settings_Button</include>
+                    </control>
+                    <control type="radiobutton" id="9282">
+                        <visible>ControlGroup(9100).HasFocus(9108)</visible>
+                        <onback>300</onback>
+                        <label>script.skin.helper.widgets</label>
+                        <label2>$INFO[System.AddonVersion(script.skin.helper.widgets)]        </label2>
+                        <onclick condition="!System.HasAddon(script.skin.helper.widgets)">InstallAddon(script.skin.helper.widgets)</onclick>
+                        <onclick condition="System.HasAddon(script.skin.helper.widgets)">Addon.OpenSettings(script.skin.helper.widgets)</onclick>
+                        <selected>System.HasAddon(script.skin.helper.widgets)</selected>
+                        <include>Defs_Settings_Button</include>
+                    </control>
+                    <control type="radiobutton" id="9283">
+                        <visible>ControlGroup(9100).HasFocus(9108)</visible>
+                        <onback>300</onback>
+                        <label>script.skin.helper.colorpicker</label>
+                        <label2>$INFO[System.AddonVersion(script.skin.helper.colorpicker)]        </label2>
+                        <onclick condition="!System.HasAddon(script.skin.helper.colorpicker)">InstallAddon(script.skin.helper.colorpicker)</onclick>
+                        <onclick condition="System.HasAddon(script.skin.helper.colorpicker)">Addon.OpenSettings(script.skin.helper.colorpicker)</onclick>
+                        <selected>System.HasAddon(script.skin.helper.colorpicker)</selected>
+                        <include>Defs_Settings_Button</include>
+                    </control>
+                    <control type="radiobutton" id="9284">
+                        <visible>ControlGroup(9100).HasFocus(9108)</visible>
+                        <onback>300</onback>
+                        <label>script.skin.helper.backgrounds</label>
+                        <label2>$INFO[System.AddonVersion(script.skin.helper.backgrounds)]        </label2>
+                        <onclick condition="!System.HasAddon(script.skin.helper.backgrounds)">InstallAddon(script.skin.helper.backgrounds)</onclick>
+                        <onclick condition="System.HasAddon(script.skin.helper.backgrounds)">Addon.OpenSettings(script.skin.helper.backgrounds)</onclick>
+                        <selected>System.HasAddon(script.skin.helper.backgrounds)</selected>
+                        <include>Defs_Settings_Button</include>
+                    </control>
+                    <control type="radiobutton" id="9285">
+                        <visible>ControlGroup(9100).HasFocus(9108)</visible>
+                        <onback>300</onback>
+                        <label>script.extendedinfo</label>
+                        <label2>$INFO[System.AddonVersion(script.extendedinfo)]        </label2>
+                        <onclick condition="!System.HasAddon(script.extendedinfo)">InstallAddon(script.extendedinfo)</onclick>
+                        <onclick condition="System.HasAddon(script.extendedinfo)">Addon.OpenSettings(script.extendedinfo)</onclick>
+                        <selected>System.HasAddon(script.extendedinfo)</selected>
+                        <include>Defs_Settings_Button</include>
+                    </control>
+                    <control type="radiobutton" id="9286">
+                        <visible>ControlGroup(9100).HasFocus(9108)</visible>
+                        <onback>300</onback>
+                        <label>script.skinshortcuts</label>
+                        <label2>$INFO[System.AddonVersion(script.skinshortcuts)]        </label2>
+                        <onclick condition="!System.HasAddon(script.skinshortcuts)">InstallAddon(script.skinshortcuts)</onclick>
+                        <onclick condition="System.HasAddon(script.skinshortcuts)">Addon.OpenSettings(script.skinshortcuts)</onclick>
+                        <selected>System.HasAddon(script.skinshortcuts)</selected>
+                        <include>Defs_Settings_Button</include>
+                    </control>
+                    <control type="radiobutton" id="9287">
+                        <visible>ControlGroup(9100).HasFocus(9108)</visible>
+                        <onback>300</onback>
+                        <label>script.extendedinfo</label>
+                        <label2>$INFO[System.AddonVersion(script.extendedinfo)]        </label2>
+                        <onclick condition="!System.HasAddon(script.extendedinfo)">InstallAddon(script.extendedinfo)</onclick>
+                        <onclick condition="System.HasAddon(script.extendedinfo)">Addon.OpenSettings(script.extendedinfo)</onclick>
+                        <selected>System.HasAddon(script.extendedinfo)</selected>
+                        <include>Defs_Settings_Button</include>
+                    </control>
+                    <control type="radiobutton" id="9288">
+                        <visible>ControlGroup(9100).HasFocus(9108)</visible>
+                        <onback>300</onback>
+                        <label>plugin.program.autocompletion</label>
+                        <label2>$INFO[System.AddonVersion(plugin.program.autocompletion)]        </label2>
+                        <onclick condition="!System.HasAddon(plugin.program.autocompletion)">InstallAddon(plugin.program.autocompletion)</onclick>
+                        <onclick condition="System.HasAddon(plugin.program.autocompletion)">Addon.OpenSettings(plugin.program.autocompletion)</onclick>
+                        <selected>System.HasAddon(plugin.program.autocompletion)</selected>
+                        <include>Defs_Settings_Button</include>
+                    </control>
+                    <control type="radiobutton" id="9289">
+                        <visible>ControlGroup(9100).HasFocus(9108)</visible>
+                        <onback>300</onback>
+                        <label>resource.images.studios.white</label>
+                        <label2>$INFO[System.AddonVersion(resource.images.studios.white)]        </label2>
+                        <onclick condition="!System.HasAddon(resource.images.studios.white)">InstallAddon(resource.images.studios.white)</onclick>
+                        <onclick condition="System.HasAddon(resource.images.studios.white)">Addon.OpenSettings(resource.images.studios.white)</onclick>
+                        <selected>System.HasAddon(resource.images.studios.white)</selected>
+                        <include>Defs_Settings_Button</include>
+                    </control>
+                    <control type="radiobutton" id="9290">
+                        <visible>ControlGroup(9100).HasFocus(9108)</visible>
+                        <onback>300</onback>
+                        <label>resource.images.moviegenreicons.transparent</label>
+                        <label2>$INFO[System.AddonVersion(resource.images.moviegenreicons.transparent)]        </label2>
+                        <onclick condition="!System.HasAddon(resource.images.moviegenreicons.transparent)">InstallAddon(resource.images.moviegenreicons.transparent)</onclick>
+                        <onclick condition="System.HasAddon(resource.images.moviegenreicons.transparent)">Addon.OpenSettings(resource.images.moviegenreicons.transparent)</onclick>
+                        <selected>System.HasAddon(resource.images.moviegenreicons.transparent)</selected>
+                        <include>Defs_Settings_Button</include>
+                    </control>
                 </control>
 
 

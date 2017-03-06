@@ -56,6 +56,15 @@
                         <height>66</height>
                         <info>ListItem.Label</info>
                     </control>
+                    <control type="image">
+                        <right>0</right>
+                        <top>0</top>
+                        <width>66</width>
+                        <height>66</height>
+                        <texture colordiffuse="dialog_fg_30">$INFO[ListItem.Icon]</texture>
+                        <visible>String.Contains(ListItem.Icon,special://skin/extras/icons)</visible>
+                        <visible>String.Contains(Window.Property(groupname),x110)</visible>
+                    </control>
                 </itemlayout>
                 <focusedlayout width="600" height="69">
                     <control type="image">
@@ -72,6 +81,15 @@
                         <info>ListItem.Label</info>
                         <textcolor>Selected</textcolor>
                     </control>
+                    <control type="image">
+                        <right>0</right>
+                        <top>0</top>
+                        <width>66</width>
+                        <height>66</height>
+                        <texture colordiffuse="Selected">$INFO[ListItem.Icon]</texture>
+                        <visible>String.Contains(ListItem.Icon,special://skin/extras/icons)</visible>
+                        <visible>String.Contains(Window.Property(groupname),x110)</visible>
+                    </control>
                 </focusedlayout>
             </control>
 
@@ -85,6 +103,7 @@
                 <onup>Control.Move(211,-1)</onup>
                 <ondown>Control.Move(211,1)</ondown>
                 <orientation>horizontal</orientation>
+                <animation effect="slide" end="-48" condition="String.Contains(Window.Property(groupname),x110)">Conditional</animation>
                 <animation effect="slide" end="0,69" condition="Integer.IsGreater(Container(211).Position,0)">Conditional</animation>
                 <animation effect="slide" end="0,69" condition="Integer.IsGreater(Container(211).Position,1)">Conditional</animation>
                 <animation effect="slide" end="0,69" condition="Integer.IsGreater(Container(211).Position,2)">Conditional</animation>
@@ -205,6 +224,15 @@
                     <texturenofocus colordiffuse="dialog_fg_12" border="5">common/box.png</texturenofocus>
                     <align>left</align>
                     <include>Dialog_Standard_Right_Buttons</include>
+                </control>
+                <control type="button" id="311" description="Browse for Thumb">
+                    <width>100%</width>
+                    <height>66</height>
+                    <label>31181</label>
+                    <texturenofocus colordiffuse="dialog_fg_12" border="5">common/box.png</texturenofocus>
+                    <align>left</align>
+                    <include>Dialog_Standard_Right_Buttons</include>
+                    <visible>String.Contains(Window.Property(groupname),x110)</visible>
                 </control>
                 <control type="button" id="405" description="Set Submenu">
                     <width>100%</width>
