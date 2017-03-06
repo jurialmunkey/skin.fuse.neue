@@ -1,3 +1,8 @@
+[B]0.9.9[/B]
+Added videolyrics v2 - massive thanks to manfeed
+See here for more details:
+http://forum.kodi.tv/showthread.php?tid=308626
+
 [B]0.9.8[/B]
 Season posters at episode level
 Replace outdated IsEmpty, Substring and StringCompare with String.IsEmpty String.Contains and String.IsEqual

@@ -38,7 +38,7 @@
                         <left>40</left>
                         <bottom>10</bottom>
                         <right>0</right>
-                        <animation effect="slide" start="0" end="0,-400" time="200" condition="Window.IsVisible(script-cu-lrclyrics-main.xml)">Conditional</animation>
+                        <!-- <animation effect="slide" start="0" end="0,-400" time="200" condition="Window.IsVisible(script-cu-lrclyrics-main.xml)">Conditional</animation> -->
                         <control type="label">
                             <aligny>top</aligny>
                             <height>110</height>

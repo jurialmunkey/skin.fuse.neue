@@ -12,7 +12,7 @@
     <include file="Includes_Furniture.xml" />
     <include file="Includes_Dialog.xml" />
     <include file="Includes_View.xml" />
-
+    <include file="Includes_VideoLyrics.xml" />
     <include file="script-skinshortcuts-includes.xml"/>
 
     <expression name="Expression_ReplaceWindowHome">[!Window.IsVisible(home) + !Window.IsVisible(SettingsCategory.xml) + !Window.IsVisible(FileManager.xml) + !Window.IsVisible(AddonBrowser.xml) + !Window.IsVisible(SkinSettings.xml) + !Window.IsVisible(SettingsProfile.xml) + !Window.IsVisible(SettingsSystemInfo.xml) + Skin.HasSetting(ReturnHomeOnFocus)]</expression>

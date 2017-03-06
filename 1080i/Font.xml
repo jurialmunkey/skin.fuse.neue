@@ -239,251 +239,257 @@
             <size>130</size>
         </font>
 
-    </fontset>
-
-    <fontset id="Fallback Arial" unicode="true">
-
+        <!-- Video Lyrics -->
         <font>
-            <name>LargeBold</name>
+            <name>lyr1</name>
+            <filename>lyrics/Theboldfont.ttf</filename>
+            <linespacing>0.9</linespacing>
+            <size>120</size>
+        </font>
+        <font>
+            <name>lyr1b</name>
+            <filename>lyrics/PollerOne.ttf</filename>
+            <aspect>0.9</aspect>
+            <size>60</size>
+        </font>
+        <font>
+            <name>lyr2</name>
+            <filename>lyrics/SF Distant Galaxy.ttf</filename>
+            <style>lowercase</style>
+            <linespacing>0.9</linespacing>
+            <size>120</size>
+        </font>
+        <font>
+            <name>lyr2b</name>
+            <filename>lyrics/Fredoka One.ttf</filename>
+            <linespacing>0.9</linespacing>
+            <size>58</size>
+        </font>
+        <font>
+            <name>lyr3</name>
+            <filename>lyrics/Luckiest Guy.ttf</filename>
             <style>uppercase</style>
-            <filename>arial.ttf</filename>
-            <size>48</size>
+            <linespacing>0.9</linespacing>
+            <size>125</size>
         </font>
         <font>
-            <name>Large</name>
-            <filename>arial.ttf</filename>
-            <size>48</size>
+            <name>lyr3b</name>
+            <filename>lyrics/Exo2-BlackItalic.ttf</filename>
+            <linespacing>0.85</linespacing>
+            <size>62</size>
         </font>
         <font>
-            <name>Lyrics</name>
-            <filename>arial.ttf</filename>
-            <size>48</size>
+            <name>lyr4</name>
+            <filename>lyrics/Geomancy - Extra Bold.ttf</filename>
+            <linespacing>0.9</linespacing>
+            <size>120</size>
         </font>
         <font>
-            <name>EpisodeNumber</name>
-            <filename>arial.ttf</filename>
-            <size>100</size>
+            <name>lyr4b</name>
+            <filename>lyrics/Ranchers-Regular.ttf</filename>
+            <aspect>1.4</aspect>
+            <linespacing>0.9</linespacing>
+            <size>54</size>
         </font>
         <font>
-            <name>Medium</name>
-            <filename>arial.ttf</filename>
-            <size>38</size>
+            <name>lyr5</name>
+            <filename>lyrics/BOXING.ttf</filename>
+            <aspect>1.3</aspect>
+            <style>lowercase</style>
+            <linespacing>0.9</linespacing>
+            <size>104</size>
         </font>
         <font>
-            <name>MediumBold</name>
-            <filename>arial.ttf</filename>
-            <size>38</size>
-        </font>
-
-        <font>
-            <name>Small</name>
-            <filename>arial.ttf</filename>
-            <size>30</size>
+            <name>lyr5b</name>
+            <filename>lyrics/nasalization-rg.ttf</filename>
+            <style>bold</style>
+            <size>54</size>
         </font>
         <font>
-            <name>SmallBold</name>
-            <filename>arial.ttf</filename>
-            <size>32</size>
-        </font>
-
-
-        <font>
-            <name>Tiny</name>
-            <filename>arial.ttf</filename>
-            <size>26</size>
+            <name>lyr6</name>
+            <filename>lyrics/Theboldfont.ttf</filename>
+            <linespacing>0.9</linespacing>
+            <size>120</size>
         </font>
         <font>
-            <name>TinyBold</name>
-            <filename>arial.ttf</filename>
-            <size>26</size>
+            <name>lyr6b</name>
+            <filename>lyrics/PollerOne.ttf</filename>
+            <aspect>0.9</aspect>
+            <size>60</size>
         </font>
         <font>
-            <name>Mini</name>
-            <filename>arial.ttf</filename>
-            <size>24</size>
-        </font>
-        <font>
-            <name>Button</name>
+            <name>lyr7</name>
             <style>uppercase</style>
-            <filename>arial.ttf</filename>
-            <size>24</size>
+            <filename>lyrics/Luckiest Guy.ttf</filename>
+            <size>110</size>
         </font>
-
         <font>
-            <name>Flag</name>
+            <name>lyr7a</name>
             <style>uppercase</style>
-            <filename>arial.ttf</filename>
-            <size>22</size>
+            <filename>lyrics/Luckiest Guy.ttf</filename>
+            <size>155</size>
         </font>
         <font>
-            <name>EPGTimeline</name>
-            <filename>arial.ttf</filename>
-            <size>20</size>
+            <name>lyr7b</name>
             <style>uppercase</style>
+            <filename>lyrics/Luckiest Guy.ttf</filename>
+            <size>205</size>
         </font>
         <font>
-            <name>Home</name>
-            <style>uppercase</style>
-            <filename>arial.ttf</filename>
-            <size>32</size>
+            <name>lyr7c</name>
+            <filename>lyrics/Exo2-BlackItalic.ttf</filename>
+            <linespacing>0.85</linespacing>
+            <size>60</size>
         </font>
         <font>
-            <name>HomeFO</name>
-            <style>uppercase</style>
-            <filename>arial.ttf</filename>
-            <size>48</size>
+            <name>lyr8</name>
+            <filename>lyrics/SF Distant Galaxy.ttf</filename>
+            <style>lowercase</style>
+            <linespacing>0.9</linespacing>
+            <size>120</size>
         </font>
         <font>
-            <name>HomeIcon</name>
-            <style>uppercase</style>
-            <filename>arial.ttf</filename>
-            <size>26</size>
-        </font>
-
-        <font>
-            <name>WidgetSelector</name>
-            <style>uppercase</style>
-            <filename>arial.ttf</filename>
-            <size>22</size>
-        </font>
-
-
-
-        <!-- Required for system -->
-        <font>
-            <name>font13</name>
-            <filename>arial.ttf</filename>
-            <size>30</size>
+            <name>lyr8b</name>
+            <filename>lyrics/nasalization-rg.ttf</filename>
+            <style>bold</style>
+            <size>54</size>
         </font>
         <font>
-            <name>Clock</name>
-            <filename>arial.ttf</filename>
+            <name>lyr9</name>
+            <filename>lyrics/Geomancy - Extra Bold.ttf</filename>
+            <linespacing>0.9</linespacing>
             <size>130</size>
         </font>
-
-    </fontset>
-
-    <fontset id="Large" unicode="true">
-
         <font>
-            <name>LargeBold</name>
-            <style>uppercase</style>
-            <filename>RobotoCondensed-Bold.ttf</filename>
-            <size>48</size>
+            <name>lyr9b</name>
+            <filename>lyrics/Fredoka One.ttf</filename>
+            <linespacing>0.9</linespacing>
+            <size>58</size>
         </font>
         <font>
-            <name>Lyrics</name>
-            <filename>RobotoCondensed-Light.ttf</filename>
-            <size>48</size>
+            <name>lyr10</name>
+            <filename>lyrics/SF Distant Galaxy.ttf</filename>
+            <style>lowercase</style>
+            <linespacing>0.9</linespacing>
+            <size>120</size>
         </font>
         <font>
-            <name>Large</name>
-            <filename>RobotoCondensed-Regular.ttf</filename>
-            <size>48</size>
-        </font>
-        <font>
-            <name>EpisodeNumber</name>
-            <filename>RobotoCondensed-Bold.ttf</filename>
-            <size>100</size>
-        </font>
-        <font>
-            <name>Medium</name>
-            <filename>RobotoCondensed-Regular.ttf</filename>
-            <size>38</size>
-        </font>
-        <font>
-            <name>MediumBold</name>
-            <filename>RobotoCondensed-Bold.ttf</filename>
-            <size>38</size>
-        </font>
-
-        <font>
-            <name>Small</name>
-            <filename>RobotoCondensed-Regular.ttf</filename>
-            <size>34</size>
-        </font>
-        <font>
-            <name>SmallBold</name>
-            <filename>RobotoCondensed-Bold.ttf</filename>
-            <size>34</size>
-        </font>
-
-
-        <font>
-            <name>Tiny</name>
-            <filename>RobotoCondensed-Regular.ttf</filename>
-            <size>30</size>
-            <linespacing>0.85</linespacing>
-        </font>
-        <font>
-            <name>TinyBold</name>
-            <filename>RobotoCondensed-Bold.ttf</filename>
-            <size>30</size>
-        </font>
-        <font>
-            <name>Mini</name>
-            <filename>RobotoCondensed-Regular.ttf</filename>
-            <size>24</size>
-        </font>
-        <font>
-            <name>Button</name>
-            <style>uppercase</style>
-            <filename>RobotoCondensed-Regular.ttf</filename>
-            <size>28</size>
-        </font>
-
-        <font>
-            <name>Flag</name>
-            <style>uppercase</style>
-            <filename>RobotoCondensed-Bold.ttf</filename>
-            <size>26</size>
-        </font>
-        <font>
-            <name>EPGTimeline</name>
-            <filename>RobotoCondensed-Bold.ttf</filename>
-            <size>20</size>
-            <style>uppercase</style>
-        </font>
-        <font>
-            <name>Home</name>
-            <style>uppercase</style>
-            <filename>RobotoCondensed-Bold.ttf</filename>
-            <size>34</size>
-        </font>
-        <font>
-            <name>HomeFO</name>
-            <style>uppercase</style>
-            <filename>RobotoCondensed-Bold.ttf</filename>
+            <name>lyr10b</name>
+            <filename>lyrics/Ranchers-Regular.ttf</filename>
+            <aspect>1.4</aspect>
+            <linespacing>0.9</linespacing>
             <size>52</size>
         </font>
         <font>
-            <name>HomeIcon</name>
+            <name>lyr11</name>
+            <filename>lyrics/Theboldfont.ttf</filename>
+            <linespacing>0.9</linespacing>
+            <size>120</size>
+        </font>
+        <font>
+            <name>lyr11b</name>
+            <filename>lyrics/PollerOne.ttf</filename>
+            <aspect>0.9</aspect>
+            <size>60</size>
+        </font>
+        <font>
+            <name>lyr12</name>
+            <filename>lyrics/BOXING.ttf</filename>
+            <style>lowercase</style>
+            <linespacing>0.9</linespacing>
+            <size>275</size>
+        </font>
+        <font>
+            <name>lyr12b</name>
+            <filename>lyrics/BOXING.ttf</filename>
+            <style>lowercase</style>
+            <linespacing>0.9</linespacing>
+            <size>165</size>
+        </font>
+        <font>
+            <name>lyr12c</name>
+            <filename>lyrics/BOXING.ttf</filename>
+            <style>lowercase</style>
+            <linespacing>0.9</linespacing>
+            <size>220</size>
+        </font>
+        <font>
+            <name>lyr12d</name>
+            <filename>lyrics/Fredoka One.ttf</filename>
+            <linespacing>0.9</linespacing>
+            <size>58</size>
+        </font>
+        <font>
+            <name>lyr13</name>
+            <filename>lyrics/SF Distant Galaxy.ttf</filename>
+            <style>lowercase</style>
+            <linespacing>0.9</linespacing>
+            <size>120</size>
+        </font>
+        <font>
+            <name>lyr13b</name>
+            <filename>lyrics/Exo2-BlackItalic.ttf</filename>
+            <linespacing>0.85</linespacing>
+            <size>62</size>
+        </font> 
+        <font>
+            <name>lyr14</name>
             <style>uppercase</style>
-            <filename>RobotoCondensed-Bold.ttf</filename>
-            <size>26</size>
-        </font>
-
-        <font>
-            <name>WidgetSelector</name>
-            <style>uppercase</style>
-            <filename>RobotoCondensed-Bold.ttf</filename>
-            <size>22</size>
-        </font>
-
-        <!-- Required for system -->
-        <font>
-            <name>font13</name>
-            <filename>RobotoCondensed-Regular.ttf</filename>
-            <size>30</size>
+            <filename>lyrics/Luckiest Guy.ttf</filename>
+            <size>140</size>
         </font>
         <font>
-            <name>Clock</name>
-            <filename>RobotoCondensed-Bold.ttf</filename>
+            <name>lyr14b</name>
+            <filename>lyrics/Ranchers-Regular.ttf</filename>
+            <aspect>1.4</aspect>
+            <linespacing>0.9</linespacing>
+            <size>54</size>
+        </font>
+        <font>
+            <name>lyr15</name>
+            <filename>lyrics/Geomancy - Extra Bold.ttf</filename>
+            <linespacing>0.9</linespacing>
             <size>130</size>
+        </font>
+        <font>
+            <name>lyr15b</name>
+            <filename>lyrics/nasalization-rg.ttf</filename>
+            <style>bold</style>
+            <size>56</size>
+        </font>
+        <font>
+            <name>lyrsh16</name>
+            <filename>lyrics/PollerOne.ttf</filename>
+            <aspect>0.9</aspect>
+            <size>76</size>
+        </font>
+        <font>
+            <name>lyrsh38</name>
+            <filename>lyrics/Exo2-BlackItalic.ttf</filename>
+            <linespacing>0.85</linespacing>
+            <size>86</size>
+        </font>
+        <font>
+            <name>lyrsh50</name>
+            <filename>lyrics/nasalization-rg.ttf</filename>
+            <style>bold</style>
+            <size>74</size>
+        </font>
+        <font>
+            <name>lyrsh72</name>
+            <filename>lyrics/Fredoka One.ttf</filename>
+            <linespacing>0.9</linespacing>
+            <size>88</size>
+        </font>
+        <font>
+            <name>lyrsh94</name>
+            <filename>lyrics/Ranchers-Regular.ttf</filename>
+            <aspect>1.4</aspect>
+            <linespacing>0.9</linespacing>
+            <size>78</size>
         </font>
 
     </fontset>
-
 
 
 </fonts>
