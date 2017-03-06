@@ -15,7 +15,7 @@
     </include>
 
     <include name="Defs_SetStartWindow">
-        <onload condition="!Window.Previous(MusicVisualisation.xml) + !Window.Previous(VideoFullScreen.xml) + !Window.Previous(1111)">SetProperty(Container_FolderPath,$INFO[Container.FolderPath],Home)</onload>
+        <!-- <onload condition="!Window.Previous(MusicVisualisation.xml) + !Window.Previous(VideoFullScreen.xml) + !Window.Previous(1111)">SetProperty(Container_FolderPath,$INFO[Container.FolderPath],Home)</onload> -->
         <onload>ClearProperty(ViewType,Home)</onload>
     </include>
 

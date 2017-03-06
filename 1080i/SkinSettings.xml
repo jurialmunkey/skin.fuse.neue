@@ -123,7 +123,7 @@
                         <onclick>Skin.ToggleSetting(ShowFurniture_TopBar)</onclick>
                     </control>
 
-                    <control type="radiobutton" id="9215" description="Never hide top bar">
+                    <control type="radiobutton" id="9215" description="Allow Back">
                         <visible>ControlGroup(9100).HasFocus(9101)</visible>
                         <onback>300</onback>
                         <include>Defs_Settings_Button</include>
