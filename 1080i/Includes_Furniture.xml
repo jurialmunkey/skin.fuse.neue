@@ -1208,6 +1208,11 @@
             <visible>!Control.IsVisible(54)</visible>
             <include>Furniture_Scrollbar</include>
         </control>
+        <control type="group">
+            <visible>!Control.IsVisible(8000)</visible>
+            <visible>Control.IsVisible(54)</visible>
+            <include>Furniture_Scrollbar_Vert</include>
+        </control>
     </include>
 
     <include name="Furniture_Scrollbar">
@@ -1243,6 +1248,40 @@
             <include>Animation_FadeIn</include>
             <include>Animation_FadeOut</include>
             <visible>!String.IsEqual(Window(Home).Property(ViewType),List)</visible>
+        </control>
+    </include>
+
+    <include name="Furniture_Scrollbar_Vert">
+        <control type="button" id="61">
+            <left>614</left>
+            <width>1226</width>
+            <bottom>94</bottom>
+            <height>8</height>
+            <visible allowhiddenfocus="true">false</visible>
+            <onfocus>SetProperty(ShowFurniture_TopBar,0,Home)</onfocus>
+            <onleft>60</onleft>
+            <onright>60</onright>
+            <ondown>60</ondown>
+            <onup>60</onup>
+            <onfocus>SetFocus(60)</onfocus>
+        </control>
+        <control type="scrollbar" id="60">
+            <onback>50</onback>
+            <right>0</right>
+            <width>8</width>
+            <top>678</top>
+            <bottom>80</bottom>
+            <orientation>vertical</orientation>
+            <onleft condition="Window.IsVisible(home)">301</onleft>
+            <onleft condition="!Window.IsVisible(home) + !Window.IsVisible(script-script.extendedinfo-VideoList.xml)">50</onleft>
+            <onleft condition="Window.IsVisible(script-script.extendedinfo-VideoList.xml)">500</onleft>
+            <texturesliderbackground colordiffuse="main_fg_12">osd/progress-end.png</texturesliderbackground>
+            <texturesliderbar colordiffuse="main_fg_30">osd/progress-end.png</texturesliderbar>
+            <texturesliderbarfocus colordiffuse="$VAR[ColorHighlight]">osd/progress-end.png</texturesliderbarfocus>
+            <animation effect="fade" start="100" end="33" time="400" condition="!Control.HasFocus(60) + !Container.Scrolling">Conditional</animation>
+            <visible>!Window.IsVisible(home) | [Window.IsVisible(home) + !Container(301).IsUpdating]</visible>
+            <include>Animation_FadeIn</include>
+            <include>Animation_FadeOut</include>
         </control>
     </include>
     

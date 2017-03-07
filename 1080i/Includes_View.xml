@@ -778,9 +778,7 @@
             <top>17</top>
             <height>325.25</height>
             <onleft>9100</onleft>
-            <onright condition="$EXP[Expression_ReplaceWindowHome]">ReplaceWindow(Home)</onright>
-            <onright condition="!$EXP[Expression_ReplaceWindowHome] + String.IsEqual(Container(302).NumItems,0)">300</onright>
-            <onright condition="!$EXP[Expression_ReplaceWindowHome] + !String.IsEqual(Container(302).NumItems,0)">302</onright>
+            <onright>61</onright>
             <include>View_StandardMovement_OnBack</include>
             <preloaditems>2</preloaditems>
             <orientation>vertical</orientation>
