@@ -907,6 +907,7 @@
             <visible>!Window.IsVisible(home) | [Window.IsVisible(home) + !Container(301).IsUpdating]</visible>
             <include>Animation_FadeIn</include>
             <include>Animation_FadeOut</include>
+            <visible>!String.IsEqual(Window(Home).Property(ViewType),List)</visible>
         </control>
     </include>
     
