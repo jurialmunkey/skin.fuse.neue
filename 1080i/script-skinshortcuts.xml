@@ -193,10 +193,10 @@
                     <height>66</height>
                     <label>31266</label>
                     <label2>$VAR[LabelWidgetShortcutsName]</label2>
-                    <visible>String.IsEqual(Window.Property(groupname),mainmenu)</visible>
                     <texturenofocus colordiffuse="dialog_fg_12" border="5">common/box.png</texturenofocus>
                     <align>left</align>
                     <include>Dialog_Standard_Right_Buttons</include>
+                    <visible>!String.Contains(Window.Property(groupname),x110)</visible>
                     <visible>String.IsEqual(Window.Property(groupname),mainmenu)</visible>
                 </control>
                 <!-- <control type="button" id="9401" description="Widget Aspect">

@@ -19,9 +19,15 @@
 
     <include name="View_Home_Widget">
         <control type="group">
+            <visible>!Control.IsVisible(303)</visible>
             <animation effect="fade" start="100" end="0" time="0" condition="Container(301).IsUpdating" reversible="false">Conditional</animation>
             <animation effect="fade" start="0" end="100" time="350" tween="cubic" easing="inout" condition="!Container(301).IsUpdating" reversible="false">Conditional</animation>
             <include>skinshortcuts-template-home-widget</include>
+        </control>
+        <control type="group">
+            <animation effect="fade" start="100" end="0" time="0" condition="Container(303).IsUpdating" reversible="false">Conditional</animation>
+            <animation effect="fade" start="0" end="100" time="350" tween="cubic" easing="inout" condition="!Container(303).IsUpdating" reversible="false">Conditional</animation>
+            <include>skinshortcuts-template-home-submenu-widget</include>
         </control>
     </include>
 
