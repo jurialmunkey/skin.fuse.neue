@@ -176,17 +176,17 @@
                 <top>672</top>
                 <right>30</right>
                 <include>Dialog_Info_Details_Grouplist</include>
-                <!-- Box Office -->
+                <!-- Revenue -->
                 <control type="group">
                     <height>32</height>
-                    <visible>!String.IsEmpty(Window(Home).Property(SkinHelper.ListItem.BoxOffice))</visible>
+                    <visible>!String.IsEmpty(Window(Home).Property(SkinHelper.ListItem.Revenue.formatted))</visible>
                     <control type="label">
                         <left>0</left>
                         <width>160</width>
                         <align>right</align>
                         <textcolor>main_fg_30</textcolor>
                         <font>Tiny</font>
-                        <label>31139</label>
+                        <label>$LOCALIZE[31001]</label>
                         <aligny>top</aligny>
                     </control>
                     <control type="label">
@@ -194,7 +194,7 @@
                         <textcolor>main_fg_70</textcolor>
                         <font>Tiny</font>
                         <aligny>top</aligny>
-                        <label fallback="19055">$INFO[Window(Home).Property(SkinHelper.ListItem.BoxOffice)]</label>
+                        <label fallback="19055">$INFO[Window(Home).Property(SkinHelper.ListItem.Revenue.formatted),$,]</label>
                     </control>
                 </control>
                 <!-- Consensus -->

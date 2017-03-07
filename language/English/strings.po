@@ -21,6 +21,11 @@ msgctxt "#31000"
 msgid "Enable skin helper backgrounds for hub windows"
 msgstr ""
 
+#: /1080i/DialogVideoInfo.xml
+msgctxt "#31001"
+msgid "Revenue"
+msgstr ""
+
 msgctxt "#31101"
 msgid "items"
 msgstr ""
