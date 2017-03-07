@@ -1,5 +1,81 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <template>
+    <!-- <submenuOther include="home-submenu-widget" container="302" level="0">
+        <condition tag="property" attribute="name|widgetType">movies</condition>
+        <condition tag="property" attribute="name|widgetType">sets</condition>
+        <condition tag="property" attribute="name|widgetType">seasons</condition>
+        <match>any</match>
+        <property name="content" tag="property" attribute="name|widgetPath" />
+        <property name="target" tag="property" attribute="name|widgetTarget" />
+        <controls>
+            <control type="fixedlist" id="301">
+                <skinshortcuts>visibility</skinshortcuts>
+                <autoscroll time="10000">!Control.HasFocus(301)</autoscroll>
+                <include content="View_Posters_Layout">
+                    <param name="id" value="301" />
+                </include>
+                <content target="$SKINSHORTCUTS[target]">$SKINSHORTCUTS[content]</content>
+            </control>
+        </controls>
+    </submenuOther>
+    <submenuOther include="home-submenu-widget" container="302" level="0">
+        <condition tag="property" attribute="name|widgetType">tvshows</condition>
+        <condition tag="property" attribute="name|widgetType">episodes</condition>
+        <condition tag="property" attribute="name|widgetType">videos</condition>
+        <condition tag="property" attribute="name|widgetType">musicvideos</condition>
+        <match>any</match>
+        <property name="content" tag="property" attribute="name|widgetPath" />
+        <property name="target" tag="property" attribute="name|widgetTarget" />
+        <controls>
+            <control type="fixedlist" id="301">
+                <skinshortcuts>visibility</skinshortcuts>
+                <autoscroll time="10000">!Control.HasFocus(301)</autoscroll>
+                <include content="View_Landscape_Layout">
+                    <param name="id" value="301" />
+                </include>
+                <content target="$SKINSHORTCUTS[target]">$SKINSHORTCUTS[content]</content>
+            </control>
+        </controls>
+    </submenuOther>
+    <submenuOther include="home-submenu-widget" container="302" level="0">
+        <condition tag="property" attribute="name|widgetType">artists</condition>
+        <condition tag="property" attribute="name|widgetType">albums</condition>
+        <condition tag="property" attribute="name|widgetType">addons</condition>
+        <condition tag="property" attribute="name|widgetType">program</condition>
+        <condition tag="property" attribute="name|widgetType">pictures</condition>
+        <condition tag="property" attribute="name|widgetType">video</condition>
+        <match>any</match>
+        <property name="content" tag="property" attribute="name|widgetPath" />
+        <property name="target" tag="property" attribute="name|widgetTarget" />
+        <controls>
+            <control type="fixedlist" id="301">
+                <skinshortcuts>visibility</skinshortcuts>
+                <autoscroll time="10000">!Control.HasFocus(301)</autoscroll>
+                <include content="View_Square_Layout">
+                    <param name="id" value="301" />
+                </include>
+                <content target="$SKINSHORTCUTS[target]">$SKINSHORTCUTS[content]</content>
+            </control>
+        </controls>
+    </submenuOther>
+    <submenuOther include="home-submenu-widget" container="302" level="0">
+        <condition tag="property" attribute="name|widgetType">songs</condition>
+        <condition tag="property" attribute="name|widgetType">files</condition>
+        <match>any</match>
+        <property name="content" tag="property" attribute="name|widgetPath" />
+        <property name="target" tag="property" attribute="name|widgetTarget" />
+        <controls>
+            <control type="fixedlist" id="301">
+                <skinshortcuts>visibility</skinshortcuts>
+                <autoscroll time="10000">!Control.HasFocus(301)</autoscroll>
+                <include content="View_List_Layout">
+                    <param name="id" value="301" />
+                </include>
+                <content target="$SKINSHORTCUTS[target]">$SKINSHORTCUTS[content]</content>
+            </control>
+        </controls>
+    </submenuOther> -->
+
     <other include="home-widget">
         <condition tag="property" attribute="name|widgetType">movies</condition>
         <condition tag="property" attribute="name|widgetType">sets</condition>
