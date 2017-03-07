@@ -9,6 +9,7 @@
         <property name="target" tag="property" attribute="name|widgetTarget" />
         <controls>
             <control type="fixedlist" id="301">
+                <visible>[!Control.HasFocus(300) + !String.IsEmpty(Container(302).ListItem.Property(widgetType))]</visible>
                 <skinshortcuts>visibility</skinshortcuts>
                 <autoscroll time="10000">!Control.HasFocus(301)</autoscroll>
                 <include content="View_Posters_Layout">
@@ -28,6 +29,7 @@
         <property name="target" tag="property" attribute="name|widgetTarget" />
         <controls>
             <control type="fixedlist" id="301">
+                <visible>[!Control.HasFocus(300) + !String.IsEmpty(Container(302).ListItem.Property(widgetType))]</visible>
                 <skinshortcuts>visibility</skinshortcuts>
                 <autoscroll time="10000">!Control.HasFocus(301)</autoscroll>
                 <include content="View_Landscape_Layout">
@@ -49,6 +51,7 @@
         <property name="target" tag="property" attribute="name|widgetTarget" />
         <controls>
             <control type="fixedlist" id="301">
+                <visible>[!Control.HasFocus(300) + !String.IsEmpty(Container(302).ListItem.Property(widgetType))]</visible>
                 <skinshortcuts>visibility</skinshortcuts>
                 <autoscroll time="10000">!Control.HasFocus(301)</autoscroll>
                 <include content="View_Square_Layout">
@@ -66,6 +69,7 @@
         <property name="target" tag="property" attribute="name|widgetTarget" />
         <controls>
             <control type="fixedlist" id="301">
+                <visible>[!Control.HasFocus(300) + !String.IsEmpty(Container(302).ListItem.Property(widgetType))]</visible>
                 <skinshortcuts>visibility</skinshortcuts>
                 <autoscroll time="10000">!Control.HasFocus(301)</autoscroll>
                 <include content="View_List_Layout">
@@ -85,6 +89,7 @@
         <property name="target" tag="property" attribute="name|widgetTarget" />
         <controls>
             <control type="fixedlist" id="301">
+                <visible>Control.HasFocus(300) | String.IsEmpty(Container(302).ListItem.Property(widgetType))</visible>
                 <skinshortcuts>visibility</skinshortcuts>
                 <autoscroll time="10000">!Control.HasFocus(301)</autoscroll>
                 <include content="View_Posters_Layout">
@@ -104,6 +109,7 @@
         <property name="target" tag="property" attribute="name|widgetTarget" />
         <controls>
             <control type="fixedlist" id="301">
+                <visible>Control.HasFocus(300) | String.IsEmpty(Container(302).ListItem.Property(widgetType))</visible>
                 <skinshortcuts>visibility</skinshortcuts>
                 <autoscroll time="10000">!Control.HasFocus(301)</autoscroll>
                 <include content="View_Landscape_Layout">
@@ -125,6 +131,7 @@
         <property name="target" tag="property" attribute="name|widgetTarget" />
         <controls>
             <control type="fixedlist" id="301">
+                <visible>Control.HasFocus(300) | String.IsEmpty(Container(302).ListItem.Property(widgetType))</visible>
                 <skinshortcuts>visibility</skinshortcuts>
                 <autoscroll time="10000">!Control.HasFocus(301)</autoscroll>
                 <include content="View_Square_Layout">
@@ -142,6 +149,7 @@
         <property name="target" tag="property" attribute="name|widgetTarget" />
         <controls>
             <control type="fixedlist" id="301">
+                <visible>Control.HasFocus(300) | String.IsEmpty(Container(302).ListItem.Property(widgetType))</visible>
                 <skinshortcuts>visibility</skinshortcuts>
                 <autoscroll time="10000">!Control.HasFocus(301)</autoscroll>
                 <include content="View_List_Layout">
@@ -157,6 +165,7 @@
         <property name="target" tag="property" attribute="name|widgetTarget" />
         <controls>
             <control type="fixedlist" id="301">
+                <visible>Control.HasFocus(300) | String.IsEmpty(Container(302).ListItem.Property(widgetType))</visible>
                 <skinshortcuts>visibility</skinshortcuts>
                 <autoscroll time="10000">!Control.HasFocus(301)</autoscroll>
                 <include content="View_Posters_Layout">
