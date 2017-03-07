@@ -199,22 +199,6 @@
                     <visible>!String.Contains(Window.Property(groupname),x110)</visible>
                     <visible>String.IsEqual(Window.Property(groupname),mainmenu)</visible>
                 </control>
-                <!-- <control type="button" id="9401" description="Widget Aspect">
-                    <width>100%</width>
-                    <height>66</height>
-                    <label>$LOCALIZE[31261]</label>
-                    <label2>$VAR[LabelWidgetType]</label2>
-                    <visible>String.IsEqual(Window.Property(groupname),mainmenu)</visible>
-                    <texturenofocus colordiffuse="dialog_fg_12" border="5">common/box.png</texturenofocus>
-                    <align>left</align>
-                    <include>Dialog_Standard_Right_Buttons</include>
-                    <onclick>SetProperty(customProperty,widgetaspect)</onclick>
-                    <onclick condition="String.IsEmpty(Container(211).ListItem.Property(widgetaspect)) | String.IsEqual(Container(211).ListItem.Property(widgetaspect),Poster)">SetProperty(customValue,Square)</onclick>
-                    <onclick condition="String.IsEqual(Container(211).ListItem.Property(widgetaspect),Square)">SetProperty(customValue,Fanart)</onclick>
-                    <onclick condition="String.IsEqual(Container(211).ListItem.Property(widgetaspect),Fanart)">SetProperty(customValue,Thumbnail)</onclick>
-                    <onclick condition="String.IsEqual(Container(211).ListItem.Property(widgetaspect),Thumbnail)">SetProperty(customValue,Poster)</onclick>
-                    <onclick>SendClick(404)</onclick>
-                </control> -->
                 <control type="button" id="310" description="Background">
                     <width>100%</width>
                     <height>66</height>

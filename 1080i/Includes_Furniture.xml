@@ -486,7 +486,7 @@
             <orientation>horizontal</orientation>
             <control type="label">
                 <include>Furniture_MenuBar_Items</include>
-                <label>$INFO[VideoPlayer.TvShowTitle,[COLOR=main_fg_30],  •  [/COLOR]]$INFO[MusicPlayer.Artist,[COLOR=main_fg_30],  •  [/COLOR]]$INFO[Player.Title]</label>
+                <label>$INFO[VideoPlayer.TvShowTitle,[COLOR=main_fg_30],  •  [/COLOR]]$INFO[MusicPlayer.Artist,[COLOR=main_fg_30],  •  [/COLOR]]$INFO[VideoPlayer.Season,,x]$INFO[VideoPlayer.Episode,,. ]$INFO[Player.Title]</label>
             </control>
             <control type="label">
                 <textcolor>main_fg_30</textcolor>
