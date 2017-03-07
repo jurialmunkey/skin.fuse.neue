@@ -151,6 +151,7 @@
                 <control type="group">
                     <height>32</height>
                     <visible>!String.IsEmpty(Window(Home).Property(SkinHelper.ListItem.Budget.formatted))</visible>
+                    <visible>!Integer.IsEqual(Window(Home).Property(SkinHelper.ListItem.Budget.formatted),0)</visible>
                     <control type="label">
                         <left>0</left>
                         <width>160</width>
@@ -180,6 +181,7 @@
                 <control type="group">
                     <height>32</height>
                     <visible>!String.IsEmpty(Window(Home).Property(SkinHelper.ListItem.Revenue.formatted))</visible>
+                    <visible>!Integer.IsEqual(Window(Home).Property(SkinHelper.ListItem.Revenue.formatted),0)</visible>
                     <control type="label">
                         <left>0</left>
                         <width>160</width>
