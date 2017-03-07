@@ -1,3 +1,10 @@
+[B]0.9.10[/B]
+Add submenu widgets (not post on forum about bug with submenu label localize condition)
+(solution for non-showing widget bug in skinshortcuts is to rename the submenu label)
+Fix a bunch of aspect and vis bugs on home that were introduced
+Add fallback weather widget
+Add ratings fallback to 0.0
+
 [B]0.9.9[/B]
 Added videolyrics v2 - massive thanks to manfeed
 See here for more details:
