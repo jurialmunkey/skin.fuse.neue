@@ -778,7 +778,9 @@
             <top>17</top>
             <height>325.25</height>
             <onleft>9100</onleft>
-            <onright>300</onright>
+            <onright condition="$EXP[Expression_ReplaceWindowHome]">ReplaceWindow(Home)</onright>
+            <onright condition="!$EXP[Expression_ReplaceWindowHome] + String.IsEqual(Container(302).NumItems,0)">300</onright>
+            <onright condition="!$EXP[Expression_ReplaceWindowHome] + !String.IsEqual(Container(302).NumItems,0)">302</onright>
             <include>View_StandardMovement_OnBack</include>
             <preloaditems>2</preloaditems>
             <orientation>vertical</orientation>
@@ -935,8 +937,8 @@
 
     <include name="View_StandardMovement">
         <onup condition="$EXP[Expression_ReplaceWindowHome]">ReplaceWindow(Home)</onup>
-        <onup condition="!Window.IsVisible(AddonBrowser.xml) + !$EXP[Expression_ReplaceWindowHome]">300</onup>
-        <onup condition="Window.IsVisible(AddonBrowser.xml) + !$EXP[Expression_ReplaceWindowHome]">302</onup>
+        <onup condition="!$EXP[Expression_ReplaceWindowHome] + String.IsEqual(Container(302).NumItems,0)">300</onup>
+        <onup condition="!$EXP[Expression_ReplaceWindowHome] + !String.IsEqual(Container(302).NumItems,0)">302</onup>
         <ondown condition="Control.IsVisible(8000)">8000</ondown>
         <ondown condition="Control.IsVisible(60)">61</ondown>
         <ondown condition="!Control.IsVisible(60) + !Control.IsVisible(8000) + Control.IsVisible(9100)">9100</ondown>
