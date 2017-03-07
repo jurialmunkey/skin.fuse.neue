@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <template>
-    <!-- <submenuOther include="home-submenu-widget" container="302" level="0">
+    <submenuOther include="home-submenu-widget" container="302">
         <condition tag="property" attribute="name|widgetType">movies</condition>
         <condition tag="property" attribute="name|widgetType">sets</condition>
         <condition tag="property" attribute="name|widgetType">seasons</condition>
@@ -18,7 +18,7 @@
             </control>
         </controls>
     </submenuOther>
-    <submenuOther include="home-submenu-widget" container="302" level="0">
+    <submenuOther include="home-submenu-widget" container="302">
         <condition tag="property" attribute="name|widgetType">tvshows</condition>
         <condition tag="property" attribute="name|widgetType">episodes</condition>
         <condition tag="property" attribute="name|widgetType">videos</condition>
@@ -37,7 +37,7 @@
             </control>
         </controls>
     </submenuOther>
-    <submenuOther include="home-submenu-widget" container="302" level="0">
+    <submenuOther include="home-submenu-widget" container="302">
         <condition tag="property" attribute="name|widgetType">artists</condition>
         <condition tag="property" attribute="name|widgetType">albums</condition>
         <condition tag="property" attribute="name|widgetType">addons</condition>
@@ -58,7 +58,7 @@
             </control>
         </controls>
     </submenuOther>
-    <submenuOther include="home-submenu-widget" container="302" level="0">
+    <submenuOther include="home-submenu-widget" container="302">
         <condition tag="property" attribute="name|widgetType">songs</condition>
         <condition tag="property" attribute="name|widgetType">files</condition>
         <match>any</match>
@@ -74,7 +74,7 @@
                 <content target="$SKINSHORTCUTS[target]">$SKINSHORTCUTS[content]</content>
             </control>
         </controls>
-    </submenuOther> -->
+    </submenuOther>
 
     <other include="home-widget">
         <condition tag="property" attribute="name|widgetType">movies</condition>

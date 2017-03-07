@@ -197,7 +197,7 @@
                     <align>left</align>
                     <include>Dialog_Standard_Right_Buttons</include>
                     <visible>!String.Contains(Window.Property(groupname),x110)</visible>
-                    <visible>String.IsEqual(Window.Property(groupname),mainmenu)</visible>
+                    <!-- <visible>String.IsEqual(Window.Property(groupname),mainmenu)</visible> -->
                 </control>
                 <control type="button" id="310" description="Background">
                     <width>100%</width>
