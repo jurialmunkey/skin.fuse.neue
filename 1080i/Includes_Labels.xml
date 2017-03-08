@@ -79,8 +79,8 @@
         <value condition="!String.IsEqual(Container(301).ListItem.Title,Container(301).ListItem.TvShowTitle) + !String.IsEmpty(Container(301).ListItem.TvShowTitle)">$INFO[Container(301).ListItem.TvShowTitle,,  •  ]$INFO[Container(301).ListItem.Premiered,,  •  ]$INFO[Container(301).ListItem.Duration,, $LOCALIZE[31102]  •  ]$VAR[Label_Rating]</value>
         <value condition="!String.IsEqual(Container(301).ListItem.Title,Container(301).ListItem.TvShowTitle) + String.IsEmpty(Container(301).ListItem.TvShowTitle) + [!String.IsEmpty(Container(301).ListItem.Year) | !String.IsEmpty(Container(301).ListItem.Duration) | !String.IsEmpty(Container(301).ListItem.Rating)]">$INFO[Container(301).ListItem.Year,,  •  ]$INFO[Container(301).ListItem.Duration,, $LOCALIZE[31102]  •  ]$VAR[Label_Rating]</value>
         <value condition="String.IsEqual(Container(301).ListItem.Title,Container(301).ListItem.TvShowTitle) + [!String.IsEmpty(Container(301).ListItem.Episode) | !String.IsEmpty(Container(301).ListItem.Duration) | !String.IsEmpty(Container(301).ListItem.Rating)]">$INFO[Container(301).ListItem.Episode,, $LOCALIZE[20360]  •  ]$INFO[Container(301).ListItem.Property(UnWatchedEpisodes),, $LOCALIZE[16101]  •  ]$INFO[Container(301).ListItem.Duration,, $LOCALIZE[31102]  •  ]$VAR[Label_Rating]</value>
-        <value condition="!String.IsEmpty(Container(302).ListItem.Property(widgetName))">$INFO[Container(302).ListItem.Property(widgetName)]</value>
-        <value condition="!String.IsEmpty(Container(300).ListItem.Property(widgetName))">$INFO[Container(300).ListItem.Property(widgetName)]</value>
+        <value condition="!Container(301).IsUpdating + !Integer.IsEqual(Container(301).NumItems) + !String.IsEmpty(Container(302).ListItem.Property(widgetName))">$INFO[Container(302).ListItem.Property(widgetName)]</value>
+        <value condition="!Container(301).IsUpdating + !Integer.IsEqual(Container(301).NumItems) + !String.IsEmpty(Container(300).ListItem.Property(widgetName))">$INFO[Container(300).ListItem.Property(widgetName)]</value>
     </variable>
 
     <variable name="Label_Title">
