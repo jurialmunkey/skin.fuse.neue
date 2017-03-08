@@ -74,6 +74,7 @@
     </variable>
 
     <variable name="WidgetSubLabel">
+        <value>$INFO[Container(300).ListItem.Property(widgetType)]</value>
         <value condition="!String.IsEmpty(Container(301).ListItem.AddonVersion)">$INFO[Container(301).ListItem.AddonVersion]$INFO[Container(301).ListItem.AddonSummary,  •  ,]</value>
         <value  condition="!String.IsEmpty(Container(301).ListItem.Artist)">$INFO[Container(301).ListItem.Artist]$INFO[Container(301).ListItem.Year,  •  ,]</value>
         <value condition="!String.IsEqual(Container(301).ListItem.Title,Container(301).ListItem.TvShowTitle) + !String.IsEmpty(Container(301).ListItem.TvShowTitle)">$INFO[Container(301).ListItem.TvShowTitle,,  •  ]$INFO[Container(301).ListItem.Premiered,,  •  ]$INFO[Container(301).ListItem.Duration,, $LOCALIZE[31102]  •  ]$VAR[Label_Rating]</value>

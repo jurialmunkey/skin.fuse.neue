@@ -8,6 +8,7 @@
         <condition tag="property" attribute="name|widgetType">pictures</condition>
         <condition tag="property" attribute="name|widgetType">picture</condition>
         <condition tag="property" attribute="name|widgetType">video</condition>
+        <condition tag="property" attribute="name|widgetType">audio</condition>
         <condition tag="property" attribute="name|widgetName">Favourites</condition>
         <match>any</match>
         <property name="content" tag="property" attribute="name|widgetPath" />
@@ -90,6 +91,7 @@
         <condition tag="property" attribute="name|widgetType">pictures</condition>
         <condition tag="property" attribute="name|widgetType">picture</condition>
         <condition tag="property" attribute="name|widgetType">video</condition>
+        <condition tag="property" attribute="name|widgetType">audio</condition>
         <condition tag="property" attribute="name|widgetName">Favourites</condition>
         <match>any</match>
         <property name="content" tag="property" attribute="name|widgetPath" />
