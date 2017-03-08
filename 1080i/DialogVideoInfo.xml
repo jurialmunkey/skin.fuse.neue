@@ -425,15 +425,7 @@
 
                 <control type="button" id ="10">
                     <description>Artwork (Get Thumb)</description>
-                    <label>31203</label>
-                    <include>Dialog_Info_Buttons</include>
-                    <visible>!Skin.HasSetting(global.kioskmode)</visible>
-                    <visible>!Control.IsVisible(9001)</visible>
-                </control>
-
-                <control type="button" id ="6">
-                    <description>Refresh</description>
-                    <label>184</label>
+                    <label>$LOCALIZE[13405]</label>
                     <include>Dialog_Info_Buttons</include>
                     <visible>!Skin.HasSetting(global.kioskmode)</visible>
                 </control>
@@ -448,6 +440,15 @@
                     <visible>!Skin.HasSetting(global.kioskmode)</visible>
                     <visible>[Container.Content(tvshows) | Container.Content(movies) | Container.Content(musicvideos)] + system.hasaddon(script.artwork.downloader)</visible>
                 </control>
+
+                <control type="button" id ="6">
+                    <description>Refresh</description>
+                    <label>184</label>
+                    <include>Dialog_Info_Buttons</include>
+                    <visible>!Skin.HasSetting(global.kioskmode)</visible>
+                </control>
+
+                
             </control>
         </control>
 
