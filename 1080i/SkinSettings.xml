@@ -266,6 +266,14 @@
                         <include>Defs_Settings_Button</include>
                     </control>
 
+                    <!-- <control type="button" id="9275" description="Reset">
+                        <visible>ControlGroup(9100).HasFocus(9107)</visible>
+                        <onback>300</onback>
+                        <include>Defs_Settings_Button</include>
+                        <label>Reset to defaults</label>
+                        <onclick>Skin.ResetSettings</onclick>
+                    </control> -->
+
                     <!-- Dependencies -->
                     <control type="radiobutton" id="9281">
                         <visible>ControlGroup(9100).HasFocus(9108)</visible>
