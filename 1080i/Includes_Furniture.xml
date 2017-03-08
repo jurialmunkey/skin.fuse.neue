@@ -1435,10 +1435,11 @@
             <onclick condition="Window.IsVisible(settings)">$INFO[ListItem.Property(altpath)]</onclick>
             <onclick condition="!Window.IsVisible(home) + !Window.IsVisible(SettingsCategory.xml) + !Window.IsVisible(FileManager.xml) + !Window.IsVisible(AddonBrowser.xml) + !Window.IsVisible(SkinSettings.xml) + !Window.IsVisible(SettingsProfile.xml) + !Window.IsVisible(SettingsSystemInfo.xml)">SetFocus(50)</onclick>
             <ondown condition="Window.IsVisible(home) + !Container(301).IsUpdating">301</ondown>
-            <ondown condition="!Window.IsVisible(home) + !Window.IsVisible(SettingsCategory.xml) + !Window.IsVisible(FileManager.xml) + !Window.IsVisible(script-script.extendedinfo-VideoList.xml)">50</ondown>
+            <ondown condition="!Window.IsVisible(home) + !Window.IsVisible(SettingsCategory.xml) + !Window.IsVisible(SkinSettings.xml) + !Window.IsVisible(FileManager.xml) + !Window.IsVisible(script-script.extendedinfo-VideoList.xml)">50</ondown>
             <ondown condition="Window.IsVisible(script-script.extendedinfo-VideoList.xml)">500</ondown>
             <ondown condition="Window.IsVisible(SettingsCategory.xml)">3</ondown>
             <ondown condition="Window.IsVisible(FileManager.xml)">20</ondown>
+            <ondown condition="Window.IsVisible(SkinSettings.xml)">9100</ondown>
             <onfocus>SetProperty(ShowFurniture_TopBar,1,Home)</onfocus>
             <!-- <onfocus>ClearProperty(ViewType,Home)</onfocus> -->
             <onfocus>ClearProperty(ContextModifier,Home)</onfocus>

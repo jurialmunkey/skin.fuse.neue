@@ -2,42 +2,42 @@
 <shortcuts>
     <shortcut>
         <label>20342</label>
-        <label2>Common Shortcut</label2>
+        <label2/>
         <defaultID>movies</defaultID>
         <icon />
         <action>ActivateWindow(Videos,MovieTitles,return)</action>
     </shortcut>
     <shortcut>
         <label>20343</label>
-        <label2>Common Shortcut</label2>
+        <label2/>
         <defaultID>tvshows</defaultID>
         <icon />
         <action>ActivateWindow(Videos,TVShowTitles,return)</action>
     </shortcut>
     <shortcut>
         <label>2</label>
-        <label2>Common Shortcut</label2>
+        <label2/>
         <defaultID>music</defaultID>
         <icon />
         <action>ActivateWindow(Music)</action>
     </shortcut>
     <shortcut>
         <label>19023</label>
-        <label2>Common Shortcut</label2>
+        <label2/>
         <defaultID>livetv</defaultID>
         <icon />
         <action>ActivateWindow(TVChannels)</action>
     </shortcut>
     <shortcut>
-        <label>Addons</label>
-        <label2>Common Shortcut</label2>
+        <label>24001</label>
+        <label2/>
         <defaultID>addons</defaultID>
         <icon />
         <action>ActivateWindow(1111)</action>
     </shortcut>
     <shortcut>
         <label>10004</label>
-        <label2>Common Shortcut</label2>
+        <label2/>
         <defaultID>settings</defaultID>
         <icon />
         <action>ActivateWindow(Settings)</action>
