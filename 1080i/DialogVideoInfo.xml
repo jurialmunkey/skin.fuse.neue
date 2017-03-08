@@ -428,6 +428,7 @@
                     <label>31203</label>
                     <include>Dialog_Info_Buttons</include>
                     <visible>!Skin.HasSetting(global.kioskmode)</visible>
+                    <visible>!Control.IsVisible(9001)</visible>
                 </control>
 
                 <control type="button" id ="6">
@@ -437,7 +438,7 @@
                     <visible>!Skin.HasSetting(global.kioskmode)</visible>
                 </control>
 
-                <!-- <control type="button" id="9001">
+                <control type="button" id="9001">
                     <label>$LOCALIZE[31203]</label>
                     <onclick condition="Container.Content(tvshows)">XBMC.RunScript(script.artwork.downloader, mode=gui, mediatype=tvshow, dbid=$INFO[ListItem.DBID])</onclick>
                     <onclick condition="Container.Content(movies)">XBMC.RunScript(script.artwork.downloader, mode=gui, mediatype=movie, dbid=$INFO[ListItem.DBID])</onclick>
@@ -446,7 +447,7 @@
                     <include>Dialog_Info_Buttons</include>
                     <visible>!Skin.HasSetting(global.kioskmode)</visible>
                     <visible>[Container.Content(tvshows) | Container.Content(movies) | Container.Content(musicvideos)] + system.hasaddon(script.artwork.downloader)</visible>
-                </control> -->
+                </control>
             </control>
         </control>
 
