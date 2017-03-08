@@ -1136,6 +1136,11 @@
                         <control type="image">
                             <fadetime>0</fadetime>
                             <include>Defs_Shadow_Opaque</include>
+                            <aspectratio>scale</aspectratio>
+                            <texture colordiffuse="PosterBack">common/white.png</texture>
+                        </control>
+                        <control type="image">
+                            <fadetime>0</fadetime>
                             <aspectratio aligny="center">keep</aspectratio>
                             <texture colordiffuse="main_fg_100" fallback="DefaultAddonImages.png">$INFO[ListItem.FileNameAndPath]</texture>
                         </control>
