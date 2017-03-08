@@ -8,6 +8,7 @@
     <onload>SetProperty(ShowFurniture_TopBar_Highlight,1,Home)</onload>
     <onunload>ClearProperty(ShowFurniture_TopBar_Highlight,Home)</onunload>
     <onunload condition="!Skin.HasSetting(startup.init)">Skin.SetBool(startup.init)</onunload>
+    <onload>ClearProperty(ViewType,Home)</onload>
     <controls>
 
         <include>GlobalSettingsBackground</include>

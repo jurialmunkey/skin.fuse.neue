@@ -18,7 +18,7 @@
             <width>466</width>
             <height>592</height>
 
-            <animation effect="slide" end="-266,-120" condition="String.IsEmpty(Window(Home).Property(ViewType))">Conditional</animation>
+            <animation effect="slide" end="-980,330" condition="String.IsEmpty(Window(Home).Property(ViewType))">Conditional</animation>
 
             <!-- Poster View Move -->
             <animation effect="slide" end="-178" condition="String.IsEqual(Window(Home).Property(ViewType),Posters) + Integer.IsLess(Window(Home).Property(ContextPosition),1)">Conditional</animation>
@@ -106,7 +106,7 @@
                 <width>48</width>
                 <height>24</height>
                 <texture  colordiffuse="dialog_bg_100">common/contextboxarrow.png</texture>
-                <visible>!String.IsEmpty(Window(Home).Property(ViewType))</visible>
+                <animation effect="slide" end="-150" condition="String.IsEmpty(Window(Home).Property(ViewType))">Conditional</animation>
             </control>
             
         </control>

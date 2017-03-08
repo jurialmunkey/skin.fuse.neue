@@ -2,7 +2,7 @@
 <!-- Foundation -->
 <window id="34">
     <defaultcontrol always="true">4</defaultcontrol>
-
+    <onload>ClearProperty(ViewType,Home)</onload>
 
     <controls>
         <include>GlobalBackground</include>

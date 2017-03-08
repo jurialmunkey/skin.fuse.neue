@@ -9,6 +9,7 @@
     <onload condition="!Window.Previous(SettingsCategory.xml)">SetProperty(FromSettings,1,Home)</onload>
     <onload condition="Window.Previous(SettingsCategory.xml)">SetProperty(FromSettings,0,Home)</onload>
     <onload condition="!Window.Previous(SettingsCategory.xml)">ActivateWindow(InterfaceSettings)</onload>
+    <onload>ClearProperty(ViewType,Home)</onload>
     <controls>
         <include>GlobalSettingsBackground</include>
         <include>Furniture_TopBar</include>

@@ -3,6 +3,7 @@
 <window id="2006">
     <defaultcontrol always="true">-</defaultcontrol>
     <onload>SetProperty(ShowFurniture_TopBar,0,Home)</onload>
+    <onload>ClearProperty(ViewType,Home)</onload>
     <controls>
         <control type="visualisation" id="2">
             <visible>Skin.HasSetting(OSDVisualisation.ShowFanart) | [!Skin.HasSetting(musicvis.fanartfallback) + [!System.HasAddon(script.artistslideshow) | Skin.HasSetting(ArtistSlideShow.Disabled)]]</visible>

@@ -6,6 +6,7 @@
     <onload>SetProperty(LowerFurniture_BottomBar,1,Home)</onload>
     <onload>SetProperty(ShowFurniture_TopBar_Highlight,1,Home)</onload>
     <onunload>ClearProperty(ShowFurniture_TopBar_Highlight,Home)</onunload>
+    <onload>ClearProperty(ViewType,Home)</onload>
     <controls>
 
         <include>GlobalSettingsBackground</include>
