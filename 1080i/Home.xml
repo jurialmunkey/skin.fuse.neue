@@ -11,8 +11,28 @@
     <onload>ClearProperty(ViewType,Home)</onload>
     <controls>
         <include>GlobalBackground</include>
+        <control type="group">
+            <visible>String.IsEmpty(Container(300).ListItem.Property(widgetType)) + [Control.HasFocus(300) | [!Control.HasFocus(300) + String.IsEmpty(Container(302).ListItem.Property(widgetType))]] + String.IsEqual(Skin.String(home.slideshowpath),$LOCALIZE[8]) + !Container(301).IsUpdating</visible>
+            <animation type="Visible" reversible="false">
+                <effect type="slide" start="0,160" end="0" time="400" tween="quadratic" easing="out" />
+                <effect type="fade" start="0" end="100" time="200" />
+            </animation>
+            <animation type="Hidden" reversible="false">
+                <effect type="slide" end="0,160" start="0" time="400" tween="quadratic" easing="out" />
+                <effect type="fade" end="0" start="100" time="200" />
+            </animation>
+            <animation type="WindowOpen" reversible="false">
+                <effect type="slide" start="0,700" end="0" time="400" tween="quadratic" easing="out" />
+                <effect type="fade" start="0" end="100" time="200" />
+            </animation>
+            <animation type="WindowClose" reversible="false">
+                <effect type="fade" end="0" start="100" time="200" delay="200"/>
+            </animation>
+            <include>Furniture_Weather</include>
+        </control>
         <include>Furniture_TopBar</include>
         <include>Furniture_BottomBar</include>
+        
         <control type="group">
             <visible>[[[!Control.HasFocus(300) + !String.IsEmpty(Container(302).ListItem.Property(widgetType))] + [String.IsEqual(Container(302).ListItem.Property(widgetType),movies) | String.IsEqual(Container(302).ListItem.Property(widgetType),sets) | String.IsEqual(Container(302).ListItem.Property(widgetType),seasons) | String.IsEqual(Container(302).ListItem.Property(widgetType),tvshows) | String.IsEqual(Container(302).ListItem.Property(widgetType),episodes) | String.IsEqual(Container(302).ListItem.Property(widgetType),videos) | String.IsEqual(Container(302).ListItem.Property(widgetType),musicvideos)]] | [[Control.HasFocus(300) | String.IsEmpty(Container(302).ListItem.Property(widgetType))] + [String.IsEqual(Container(300).ListItem.Property(widgetType),movies) | String.IsEqual(Container(300).ListItem.Property(widgetType),sets) | String.IsEqual(Container(300).ListItem.Property(widgetType),seasons) | String.IsEqual(Container(300).ListItem.Property(widgetType),tvshows) | String.IsEqual(Container(300).ListItem.Property(widgetType),episodes) | String.IsEqual(Container(300).ListItem.Property(widgetType),videos) | String.IsEqual(Container(300).ListItem.Property(widgetType),musicvideos)]] | [[[String.IsEmpty(Container(300).ListItem.Property(widgetType)) + String.IsEmpty(Container(302).ListItem.Property(widgetType)) + !Control.HasFocus(300)] | [String.IsEmpty(Container(300).ListItem.Property(widgetType)) + Control.HasFocus(300)]] + [String.IsEqual(Skin.String(home.fallbackwidget.type),movies) | String.IsEqual(Skin.String(home.fallbackwidget.type),sets) | String.IsEqual(Skin.String(home.fallbackwidget.type),seasons) | String.IsEqual(Skin.String(home.fallbackwidget.type),tvshows) | String.IsEqual(Skin.String(home.fallbackwidget.type),episodes) | String.IsEqual(Skin.String(home.fallbackwidget.type),videos) | String.IsEqual(Skin.String(home.fallbackwidget.type),musicvideos)]]]</visible>
             <include content="Furniture_BigPoster">
@@ -31,25 +51,7 @@
             </include>
         </control>
 
-        <control type="group">
-            <visible>String.IsEmpty(Container(300).ListItem.Property(widgetType)) + [Control.HasFocus(300) | [!Control.HasFocus(300) + String.IsEmpty(Container(302).ListItem.Property(widgetType))]] + String.IsEqual(Skin.String(home.slideshowpath),$LOCALIZE[8])</visible>
-            <animation type="Visible" reversible="false">
-                <effect type="slide" start="0,160" end="0" time="400" tween="quadratic" easing="out" />
-                <effect type="fade" start="0" end="100" time="200" />
-            </animation>
-            <animation type="Hidden" reversible="false">
-                <effect type="slide" end="0,160" start="0" time="400" tween="quadratic" easing="out" />
-                <effect type="fade" end="0" start="100" time="200" />
-            </animation>
-            <animation type="WindowOpen" reversible="false">
-                <effect type="slide" start="0,700" end="0" time="400" tween="quadratic" easing="out" />
-                <effect type="fade" start="0" end="100" time="200" />
-            </animation>
-            <animation type="WindowClose" reversible="false">
-                <effect type="fade" end="0" start="100" time="200" delay="200"/>
-            </animation>
-            <include>Furniture_Weather</include>
-        </control>
+        
         <include>Furniture_Clock</include>
         
     </controls>
