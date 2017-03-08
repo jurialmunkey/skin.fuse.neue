@@ -45,6 +45,7 @@
         <condition tag="property" attribute="name|widgetType">addons</condition>
         <condition tag="property" attribute="name|widgetType">program</condition>
         <condition tag="property" attribute="name|widgetType">pictures</condition>
+        <condition tag="property" attribute="name|widgetType">picture</condition>
         <condition tag="property" attribute="name|widgetType">video</condition>
         <match>any</match>
         <property name="content" tag="property" attribute="name|widgetPath" />
@@ -125,6 +126,7 @@
         <condition tag="property" attribute="name|widgetType">addons</condition>
         <condition tag="property" attribute="name|widgetType">program</condition>
         <condition tag="property" attribute="name|widgetType">pictures</condition>
+        <condition tag="property" attribute="name|widgetType">picture</condition>
         <condition tag="property" attribute="name|widgetType">video</condition>
         <match>any</match>
         <property name="content" tag="property" attribute="name|widgetPath" />
