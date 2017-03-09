@@ -130,6 +130,7 @@
                     <include>Dialog_Standard_Right_Buttons</include>
                 </control>
                 <control type="button" id="7">
+                    <visible>!Control.IsVisible(3)</visible>
                     <label>222</label>
                     <include>Dialog_Standard_Right_Buttons</include>
                 </control>
