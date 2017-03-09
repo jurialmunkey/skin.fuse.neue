@@ -2,6 +2,8 @@
 Fix fadeinout on changing views to specific conditions
 Fix info not showing on home screen for movies / tvshows
 Fix bug with music osd zorder
+Fix overlapping button in dialogselect list3
+New indicator style for better readability.
 
 [B]0.9.11[/B]
 Fix a bug with default widget poster aspect
