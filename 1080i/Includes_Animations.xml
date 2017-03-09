@@ -1,5 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <includes>
+    <include name="Animation_FadeInOut_Conditional">
+        <animation effect="fade" end="0" start="100" time="400" condition="[Window.Next(SettingsCategory.xml) | Window.Next(Settings.xml) | Window.Next(AddonBrowser.xml) | Window.Next(SkinSettings.xml) | Window.Next(MyWeather.xml) | Window.Next(SettingsSystemInfo.xml) | Window.Next(SettingsProfile.xml) | Window.Next(SettingsScreenCalibration.xml) | Window.Next(FileManager.xml) | Window.Neext(VideoFullScreen.xml) | Window.Neext(Startup.xml) | Window.Neext(MusicVisualisation.xml)]">WindowClose</animation>
+        <animation effect="fade" start="0" end="100" time="400" condition="[Window.Previous(SettingsCategory.xml) | Window.Previous(Settings.xml) | Window.Previous(AddonBrowser.xml) | Window.Previous(SkinSettings.xml) | Window.Previous(MyWeather.xml) | Window.Previous(SettingsSystemInfo.xml) | Window.Previous(SettingsProfile.xml) | Window.Previous(SettingsScreenCalibration.xml) | Window.Previous(FileManager.xml) | Window.Previous(VideoFullScreen.xml) | Window.Previous(Startup.xml) | Window.Previous(MusicVisualisation.xml)]">WindowOpen</animation>
+    </include>
     <include name="Animation_Notification_Follow">
         <animation effect="slide" end="0,-120" start="0" tween="quadratic" easing="out" time="400" reversible="false" condition="!Integer.IsEqual(Window(Home).Property(ShowFurniture_TopBar),1) + !Skin.HasSetting(ShowFurniture_TopBar)">Conditional</animation>
         <animation effect="slide" start="0,-120" end="0" tween="quadratic" easing="out" time="400" reversible="false" condition="Integer.IsEqual(Window(Home).Property(ShowFurniture_TopBar),1) | Skin.HasSetting(ShowFurniture_TopBar)">Conditional</animation>

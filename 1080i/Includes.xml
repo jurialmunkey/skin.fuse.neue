@@ -23,7 +23,9 @@
 
     <expression name="Expression_LowerBottomBar">[String.IsEqual(Window(Home).Property(LowerFurniture_BottomBar),1) | [Window.IsVisible(Home) + Integer.IsEqual(Container(301).NumItems,0) + !Container(301).IsUpdating]]</expression>
 
-    <expression name="Expression_InfoSlide_Home">[[[Control.HasFocus(301) | Control.HasFocus(60) | Control.HasFocus(61) | ControlGroup(9100).HasFocus()] + !Integer.IsEqual(Container(301).NumItems,0)] + [[[!Control.HasFocus(300) + !String.IsEmpty(Container(302).ListItem.Property(widgetType)) + !String.IsEqual(Container(302).ListItem.Property(widgetName),Favourites)] + [String.IsEqual(Container(302).ListItem.Property(widgetType),movies) | String.IsEqual(Container(302).ListItem.Property(widgetType),sets) | String.IsEqual(Container(302).ListItem.Property(widgetType),seasons) | String.IsEqual(Container(302).ListItem.Property(widgetType),tvshows) | String.IsEqual(Container(302).ListItem.Property(widgetType),episodes) | String.IsEqual(Container(302).ListItem.Property(widgetType),videos) | String.IsEqual(Container(302).ListItem.Property(widgetType),musicvideos)]] | [[Control.HasFocus(300) | String.IsEmpty(Container(302).ListItem.Property(widgetType))] + !String.IsEqual(Container(300).ListItem.Property(widgetName),Favourites) + [String.IsEqual(Container(300).ListItem.Property(widgetType),movies) | String.IsEqual(Container(300).ListItem.Property(widgetType),sets) | String.IsEqual(Container(300).ListItem.Property(widgetType),seasons) | String.IsEqual(Container(300).ListItem.Property(widgetType),tvshows) | String.IsEqual(Container(300).ListItem.Property(widgetType),episodes) | String.IsEqual(Container(300).ListItem.Property(widgetType),videos) | String.IsEqual(Container(300).ListItem.Property(widgetType),musicvideos)]] | [[[String.IsEmpty(Container(300).ListItem.Property(widgetType)) + String.IsEmpty(Container(302).ListItem.Property(widgetType)) + !Control.HasFocus(300)] | [String.IsEmpty(Container(300).ListItem.Property(widgetType)) + Control.HasFocus(300)]] + [String.IsEqual(Skin.String(home.fallbackwidget.type),movies) | String.IsEqual(Skin.String(home.fallbackwidget.type),sets) | String.IsEqual(Skin.String(home.fallbackwidget.type),seasons) | String.IsEqual(Skin.String(home.fallbackwidget.type),tvshows) | String.IsEqual(Skin.String(home.fallbackwidget.type),episodes) | String.IsEqual(Skin.String(home.fallbackwidget.type),videos) | String.IsEqual(Skin.String(home.fallbackwidget.type),musicvideos)]]]</expression>
+    <expression name="Expression_InfoSlide_Home">[[Control.HasFocus(301) | Control.HasFocus(60) | Control.HasFocus(61) | ControlGroup(9100).HasFocus()] + !Integer.IsEqual(Container(301).NumItems,0) + Control.IsVisible(301) + !Container(301).IsUpdating]</expression>
+
+    <expression name="Expression_ShowBigPosterHome">[[[[!Control.HasFocus(300) + !String.IsEmpty(Container(302).ListItem.Property(widgetType)) + !String.IsEqual(Container(302).ListItem.Property(widgetName),Favourites)] + [String.IsEqual(Container(302).ListItem.Property(widgetType),movies) | String.IsEqual(Container(302).ListItem.Property(widgetType),sets) | String.IsEqual(Container(302).ListItem.Property(widgetType),seasons) | String.IsEqual(Container(302).ListItem.Property(widgetType),tvshows) | String.IsEqual(Container(302).ListItem.Property(widgetType),episodes) | String.IsEqual(Container(302).ListItem.Property(widgetType),videos) | String.IsEqual(Container(302).ListItem.Property(widgetType),musicvideos)]] | [[Control.HasFocus(300) | String.IsEmpty(Container(302).ListItem.Property(widgetType))] + !String.IsEqual(Container(300).ListItem.Property(widgetName),Favourites) + [String.IsEqual(Container(300).ListItem.Property(widgetType),movies) | String.IsEqual(Container(300).ListItem.Property(widgetType),sets) | String.IsEqual(Container(300).ListItem.Property(widgetType),seasons) | String.IsEqual(Container(300).ListItem.Property(widgetType),tvshows) | String.IsEqual(Container(300).ListItem.Property(widgetType),episodes) | String.IsEqual(Container(300).ListItem.Property(widgetType),videos) | String.IsEqual(Container(300).ListItem.Property(widgetType),musicvideos)]] | [[[String.IsEmpty(Container(300).ListItem.Property(widgetType)) + String.IsEmpty(Container(302).ListItem.Property(widgetType)) + !Control.HasFocus(300)] | [String.IsEmpty(Container(300).ListItem.Property(widgetType)) + Control.HasFocus(300)]] + [String.IsEqual(Skin.String(home.fallbackwidget.type),movies) | String.IsEqual(Skin.String(home.fallbackwidget.type),sets) | String.IsEqual(Skin.String(home.fallbackwidget.type),seasons) | String.IsEqual(Skin.String(home.fallbackwidget.type),tvshows) | String.IsEqual(Skin.String(home.fallbackwidget.type),episodes) | String.IsEqual(Skin.String(home.fallbackwidget.type),videos) | String.IsEqual(Skin.String(home.fallbackwidget.type),musicvideos) | String.IsEmpty(Skin.String(home.fallbackwidget.type))]]]]</expression>
 
     <variable name="ColorHighlight">
         <value condition="!String.IsEmpty(Skin.String(focuscolor.name))">$INFO[Skin.String(focuscolor.name)]</value>
@@ -102,8 +104,6 @@
     <include name="GlobalVisualisation">
         <control type="group">
             <visible>Player.HasAudio + Skin.HasSetting(global.showvisualisation)</visible>
-            <animation effect="fade" end="0" start="100" time="400" condition="!Window.IsVisible(SettingsCategory.xml) | [Window.IsVisible(SettingsCategory.xml) + !Window.Next(SettingsCategory.xml)]">WindowClose</animation>
-            <animation effect="fade" start="0" end="100" time="400" condition="!Window.IsVisible(SettingsCategory.xml) | [Window.IsVisible(SettingsCategory.xml) + !Window.Previous(SettingsCategory.xml)]">WindowOpen</animation>
             <control type="visualisation">
                 <visible>Skin.HasSetting(ArtistSlideShow.Disabled) | !System.HasAddon(script.artistslideshow)</visible>
                 <description>visualisation</description>
@@ -129,6 +129,7 @@
         <control type="group">
             <animation effect="slide" start="0" easing="out" end="0,-33" time="400" tween="quadratic" reversible="true" condition="[String.IsEqual(Window(Home).Property(ShowFurniture_TopBar),1) + !Control.HasFocus(60) + !Window.IsVisible(MyWeather.xml)] + $EXP[Expression_DontLowerBottomBar]">Conditional</animation>
             <animation effect="slide" end="0" easing="out" start="0,-33" time="400" delay="0" tween="quadratic" reversible="true" condition="![String.IsEqual(Window(Home).Property(ShowFurniture_TopBar),1) + !Control.HasFocus(60) + !Window.IsVisible(MyWeather.xml)] + $EXP[Expression_DontLowerBottomBar]">Conditional</animation>
+            <include>Animation_FadeInOut_Conditional</include>
             <control type="multiimage" description="Fanart">
                 <visible>!Player.HasMedia | [!Skin.HasSetting(global.showvideo) + Player.HasVideo] | [!Skin.HasSetting(global.showvisualisation) + Player.HasAudio]</visible>
                 <visible>!Skin.HasSetting(global.hidefanart) | Window.IsVisible(home)</visible>
@@ -138,8 +139,6 @@
                 <randomize>true</randomize>
                 <aspectratio>scale</aspectratio>
                 <imagepath background="true">$VAR[GlobalFanart]</imagepath>
-                <animation effect="fade" end="0" start="100" time="400" condition="!Window.IsVisible(SettingsCategory.xml) | [Window.IsVisible(SettingsCategory.xml) + !Window.Next(SettingsCategory.xml)]">WindowClose</animation>
-                <animation effect="fade" start="0" end="100" time="400" condition="!Window.IsVisible(SettingsCategory.xml) | [Window.IsVisible(SettingsCategory.xml) + !Window.Previous(SettingsCategory.xml)]">WindowOpen</animation>
             </control>
             <control type="image" description="Fanart Fallback always">
                 <visible>!Player.HasMedia | [!Skin.HasSetting(global.showvideo) + Player.HasVideo] | [!Skin.HasSetting(global.showvisualisation) + Player.HasAudio]</visible>
@@ -147,8 +146,6 @@
                 <visible>!Window.IsVisible(home) + Skin.HasSetting(global.hidefanart) + !String.IsEmpty(Skin.String(fanart.fallback))</visible>
                 <aspectratio>scale</aspectratio>
                 <texture background="true">$INFO[Skin.String(fanart.fallback)]</texture>
-                <animation effect="fade" end="0" start="100" time="400" condition="!Window.IsVisible(SettingsCategory.xml) | [Window.IsVisible(SettingsCategory.xml) + !Window.Next(SettingsCategory.xml)]">WindowClose</animation>
-                <animation effect="fade" start="0" end="100" time="400" condition="!Window.IsVisible(SettingsCategory.xml) | [Window.IsVisible(SettingsCategory.xml) + !Window.Previous(SettingsCategory.xml)]">WindowOpen</animation>
             </control>
         </control>
     </include>
@@ -158,6 +155,8 @@
         <include>GlobalVideoWindow</include>
         <include>GlobalVisualisation</include>
         <control type="group">
+            <animation effect="fade" end="0" start="100" time="400" condition="![Window.Next(SettingsCategory.xml) | Window.Next(Settings.xml) | Window.Next(AddonBrowser.xml) | Window.Next(SkinSettings.xml) | Window.Next(MyWeather.xml) | Window.Next(SettingsSystemInfo.xml) | Window.Next(SettingsProfile.xml) | Window.Next(SettingsScreenCalibration.xml) | Window.Next(FileManager.xml)]">WindowClose</animation>
+            <animation effect="fade" start="0" end="100" time="400" condition="![Window.Previous(SettingsCategory.xml) | Window.Previous(Settings.xml) | Window.Previous(AddonBrowser.xml) | Window.Previous(SkinSettings.xml) | Window.Previous(MyWeather.xml) | Window.Previous(SettingsSystemInfo.xml) | Window.Previous(SettingsProfile.xml) | Window.Previous(SettingsScreenCalibration.xml) | Window.Previous(FileManager.xml)]">WindowOpen</animation>
             <control type="multiimage" description="Fanart">
                 <visible>!Player.HasMedia | [!Skin.HasSetting(global.showvideo) + Player.HasVideo] | [!Skin.HasSetting(global.showvisualisation) + Player.HasAudio]</visible>
                 <visible>!Skin.HasSetting(global.hidefanart) | Window.IsVisible(home)</visible>
@@ -167,8 +166,6 @@
                 <randomize>true</randomize>
                 <aspectratio>scale</aspectratio>
                 <imagepath background="true">$VAR[GlobalFanart]</imagepath>
-                <animation effect="fade" end="0" start="100" time="400" condition="!Window.Next(SettingsCategory.xml) + !Window.Next(Settings.xml) + !Window.Next(AddonBrowser.xml) + !Window.Next(SkinSettings.xml)">WindowClose</animation>
-                <animation effect="fade" start="0" end="100" time="400" condition="!Window.Previous(SettingsCategory.xml) + !Window.Previous(Settings.xml) + !Window.Previous(AddonBrowser.xml) + !Window.Previous(SkinSettings.xml)">WindowOpen</animation>
             </control>
             <control type="image" description="Fanart Fallback always">
                 <visible>!Player.HasMedia | [!Skin.HasSetting(global.showvideo) + Player.HasVideo] | [!Skin.HasSetting(global.showvisualisation) + Player.HasAudio]</visible>
@@ -176,8 +173,6 @@
                 <visible>!Window.IsVisible(home) + Skin.HasSetting(global.hidefanart) + !String.IsEmpty(Skin.String(fanart.fallback))</visible>
                 <aspectratio>scale</aspectratio>
                 <texture background="true">$INFO[Skin.String(fanart.fallback)]</texture>
-                <animation effect="fade" end="0" start="100" time="400" condition="!Window.Next(SettingsCategory.xml) + !Window.Next(Settings.xml) + !Window.Next(AddonBrowser.xml) + !Window.Next(SkinSettings.xml)">WindowClose</animation>
-                <animation effect="fade" start="0" end="100" time="400" condition="!Window.Previous(SettingsCategory.xml) + !Window.Previous(Settings.xml) + !Window.Previous(AddonBrowser.xml) + !Window.Previous(SkinSettings.xml)">WindowOpen</animation>
             </control>
         </control>
     </include>
