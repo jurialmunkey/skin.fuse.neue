@@ -1039,7 +1039,7 @@
                 <bottom>78</bottom>
                 <width>504</width>
                 <height>$PARAM[height]</height>
-                <animation type="WindowOpen" reversible="false" condition="Window.Previous(MusicVisualisation.xml) | Window.Previous(VideoFullScreen.xml) | Window.Previous(Startup.xml)">
+                <animation type="WindowOpen" reversible="false" condition="[Window.Previous(MusicVisualisation.xml) | Window.Previous(VideoFullScreen.xml) | Window.Previous(Startup.xml)] + !Window.IsVisible(home)">
                     <effect type="slide" start="-534" end="0" time="400" delay="200" tween="quadratic" easing="out" />
                     <effect type="fade" start="0" end="100" time="200" delay="200" />
                 </animation>
