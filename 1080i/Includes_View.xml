@@ -845,7 +845,7 @@
                     <right>10</right>
                     <height>100</height>
                     <bottom>10</bottom>
-                    <texture colordiffuse="bf000000">common/gradient.png</texture>
+                    <texture colordiffuse="bf000000">common/gradient-actor.png</texture>
                 </control>
                 <control type="label">
                     <left>20</left>
@@ -901,7 +901,7 @@
                     <right>10</right>
                     <height>100</height>
                     <bottom>10</bottom>
-                    <texture colordiffuse="bf000000">common/gradient.png</texture>
+                    <texture colordiffuse="bf000000">common/gradient-actor.png</texture>
                 </control>
                 <control type="label">
                     <left>20</left>
