@@ -8,6 +8,7 @@
     <onload>SetProperty(LowerFurniture_BottomBar,0,Home)</onload>
     <onload condition="!Skin.HasSetting(SkinHelper.EnablePVRThumbs)">Skin.SetBool(SkinHelper.EnablePVRThumbs)</onload>
     <onload condition="!Skin.HasSetting(SkinHelper.EnableMusicArt)">Skin.SetBool(SkinHelper.EnableMusicArt)</onload>
+    <onload>AlarmClock(Set300,SetFocus(300),00:00,silent)</onload>
     <onload>ClearProperty(ViewType,Home)</onload>
     <controls>
         <include>GlobalBackground</include>
