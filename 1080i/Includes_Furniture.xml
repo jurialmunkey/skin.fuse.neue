@@ -335,13 +335,13 @@
             <animation effect="slide" reversible="false" condition="$EXP[Expression_DontLowerBottomBar]" end="0" start="0,160" time="400" delay="0" tween="quadratic" easing="out">Conditional</animation>
             <animation effect="slide" reversible="false" condition="$EXP[Expression_LowerBottomBar]" start="0" end="0,160" time="400" delay="0" tween="quadratic" easing="out">Conditional</animation>
 
-            <animation effect="slide" start="0" end="0,-160" time="400" delay="0" tween="quadratic" easing="out" reversible="false" condition="$EXP[Expression_InfoSlide_Home] + $EXP[Expression_ShowBigPosterHome] + Window.IsVisible(Home) + !Window.IsVisible(script-script.extendedinfo-DialogVideoInfo.xml) + !Window.IsVisible(script-script.extendedinfo-DialogInfo.xml)">Conditional</animation>
-            <animation effect="slide" end="0" start="0,-160" time="400" delay="0" tween="quadratic" easing="out" reversible="false" condition="![$EXP[Expression_InfoSlide_Home] + $EXP[Expression_ShowBigPosterHome]] + Window.IsVisible(Home) + !Window.IsVisible(script-script.extendedinfo-DialogVideoInfo.xml) + !Window.IsVisible(script-script.extendedinfo-DialogInfo.xml)">Conditional</animation>
+            <animation effect="slide" start="0" end="0,-160" time="400" delay="0" tween="quadratic" easing="out" reversible="false" condition="$EXP[Expression_InfoSlide_Home] + $EXP[Expression_ShowBigPosterHome] + Window.IsVisible(Home)">Conditional</animation>
+            <animation effect="slide" end="0" start="0,-160" time="400" delay="0" tween="quadratic" easing="out" reversible="false" condition="![$EXP[Expression_InfoSlide_Home] + $EXP[Expression_ShowBigPosterHome]] + Window.IsVisible(Home)">Conditional</animation>
 
-            <animation effect="slide" start="0" end="0,-160" time="400" delay="0" tween="quadratic" easing="out" reversible="false" condition="$EXP[Expression_InfoSlide] + [!Window.IsVisible(Home) | Window.IsVisible(script-script.extendedinfo-DialogVideoInfo.xml) | Window.IsVisible(script-script.extendedinfo-DialogInfo.xml)]">Conditional</animation>
-            <animation effect="slide" end="0" start="0,-160" time="400" delay="0" tween="quadratic" easing="out" reversible="false" condition="!$EXP[Expression_InfoSlide] + [!Window.IsVisible(Home) | Window.IsVisible(script-script.extendedinfo-DialogVideoInfo.xml) | Window.IsVisible(script-script.extendedinfo-DialogInfo.xml)]">Conditional</animation>
+            <animation effect="slide" start="0" end="0,-160" time="400" delay="0" tween="quadratic" easing="out" reversible="false" condition="$EXP[Expression_InfoSlide] + !Window.IsVisible(Home)">Conditional</animation>
+            <animation effect="slide" end="0" start="0,-160" time="400" delay="0" tween="quadratic" easing="out" reversible="false" condition="!$EXP[Expression_InfoSlide] + !Window.IsVisible(Home)">Conditional</animation>
             
-            <animation effect="slide" end="0,160" start="0" time="400" delay="0" tween="quadratic" easing="out" reversible="false" condition="$EXP[Expression_InfoSlide] + [!Window.IsVisible(Home) | Window.IsVisible(script-script.extendedinfo-DialogVideoInfo.xml) | Window.IsVisible(script-script.extendedinfo-DialogInfo.xml)]">WindowClose</animation>
+            <animation effect="slide" end="0,160" start="0" time="400" delay="0" tween="quadratic" easing="out" reversible="false" condition="$EXP[Expression_InfoSlide] + !Window.IsVisible(Home)">WindowClose</animation>
             <control type="image">
                 <top>-12</top>
                 <height>12</height>
@@ -374,8 +374,8 @@
                 </animation>
                 <include>Animation_FadeIn</include>
                 <include>Animation_FadeOut</include>
-                <include condition="[!Window.IsVisible(MyPVRGuide.xml) + !Window.IsVisible(Home)] |  !Window.IsVisible(script-script.extendedinfo-DialogVideoInfo.xml) | Window.IsVisible(script-script.extendedinfo-DialogInfo.xml)">Furniture_BottomBar_StandardInfo</include>
-                <include condition="Window.IsVisible(Home) + !Window.IsVisible(script-script.extendedinfo-DialogVideoInfo.xml) + !Window.IsVisible(script-script.extendedinfo-DialogInfo.xml)">Furniture_BottomBar_HomeInfo</include>
+                <include condition="!Window.IsVisible(MyPVRGuide.xml) + !Window.IsVisible(Home)">Furniture_BottomBar_StandardInfo</include>
+                <include condition="Window.IsVisible(Home)">Furniture_BottomBar_HomeInfo</include>
                 <include condition="Window.IsVisible(MyPVRGuide.xml)">Furniture_BottomBar_PVRGuideInfo</include>
             </control>
         </control>
@@ -582,16 +582,14 @@
 
     <include name="Furniture_BottomBar_HomeInfo">
         <control type="group">
-            <visible>Control.IsVisible(301)</visible>
-            <visible>!Container(301).IsUpdating</visible>
-            <visible>!Integer.IsEqual(Container(301).NumItems,0)</visible>
+            <visible>[Control.IsVisible(301) + !Container(301).IsUpdating + !Integer.IsEqual(Container(301).NumItems,0)] | Window.IsVisible(script-script.extendedinfo-DialogInfo.xml) | Window.IsVisible(script-script.extendedinfo-DialogVideoInfo.xml)</visible>
             <control type="group">
                 <left>614</left>
                 <right>614</right>
                 <height>100</height>
                 <top>0</top>
                 <visible>!String.IsEmpty(ListItem.VideoCodec) | !String.IsEmpty(ListItem.VideoAspect) | !String.IsEmpty(ListItem.AudioCodec) | !String.IsEmpty(ListItem.AudioChannels) | !String.IsEmpty(Container(301).ListItem.VideoCodec) | !String.IsEmpty(Container(301).ListItem.VideoAspect) | !String.IsEmpty(Container(301).ListItem.AudioCodec) | !String.IsEmpty(Container(301).ListItem.AudioChannels)</visible>
-                <visible>!Window.IsVisible(DialogVideoInfo.xml) | String.IsEmpty(Window(Home).Property(FocusedList))</visible>
+                <visible>Window.IsVisible(script-script.extendedinfo-DialogInfo.xml) | Window.IsVisible(script-script.extendedinfo-DialogVideoInfo.xml) | !Window.IsVisible(DialogVideoInfo.xml) | String.IsEmpty(Window(Home).Property(FocusedList))</visible>
                 <control type="label">
                     <left>0</left>
                     <right>0</right>
@@ -619,7 +617,7 @@
                 <height>100</height>
                 <top>0</top>
                 <visible>String.IsEmpty(ListItem.VideoCodec) + String.IsEmpty(ListItem.VideoAspect) + String.IsEmpty(ListItem.AudioCodec) + String.IsEmpty(ListItem.AudioChannels) + String.IsEmpty(Container(301).ListItem.VideoCodec) + String.IsEmpty(Container(301).ListItem.VideoAspect) + String.IsEmpty(Container(301).ListItem.AudioCodec) + String.IsEmpty(Container(301).ListItem.AudioChannels)</visible>
-                <visible>!Window.IsVisible(DialogVideoInfo.xml) | String.IsEmpty(Window(Home).Property(FocusedList))</visible>
+                <visible>Window.IsVisible(script-script.extendedinfo-DialogInfo.xml) | Window.IsVisible(script-script.extendedinfo-DialogVideoInfo.xml) | !Window.IsVisible(DialogVideoInfo.xml) | String.IsEmpty(Window(Home).Property(FocusedList))</visible>
                 <control type="label">
                     <left>0</left>
                     <right>0</right>
