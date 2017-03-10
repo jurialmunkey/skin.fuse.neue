@@ -307,66 +307,83 @@
         </control>
     </include>
 
-    <include name="Furniture_BottomBar">
+    <include name="Furniture_BottomBar_OnlyInfo">
         <control type="group">
-            <animation type="WindowOpen" reversible="false" condition="Window.Previous(MusicVisualisation.xml) | Window.Previous(VideoFullScreen.xml) | Window.Previous(Startup.xml)">
-                <effect type="fade" start="0" end="100" time="200" delay="0" />
-            </animation>
-            <animation effect="slide" start="0" end="0,400" time="400" delay="0" tween="quadratic" easing="out" reversible="false" condition="$EXP[Expression_LowerBottomBar]">Conditional</animation>
-            <animation effect="slide" end="0" start="0,400" time="400" delay="0" tween="quadratic" easing="out" reversible="false" condition="$EXP[Expression_DontLowerBottomBar]">Conditional</animation>
+            <include>Furniture_BottomBar_InfoBar</include>
             <control type="group">
                 <bottom>0</bottom>
                 <left>0</left>
                 <right>0</right>
-                <height>520</height>
-                <!-- Hide the Infobar when Furniture_BottomBar is lowered -->
-                <animation effect="slide" reversible="false" condition="$EXP[Expression_DontLowerBottomBar]" end="0" start="0,160" time="400" delay="0" tween="quadratic" easing="out">Conditional</animation>
-                <animation effect="slide" reversible="false" condition="$EXP[Expression_LowerBottomBar]" start="0" end="0,160" time="400" delay="0" tween="quadratic" easing="out">Conditional</animation>
-
-                <animation effect="slide" start="0" end="0,-160" time="400" delay="0" tween="quadratic" easing="out" reversible="false" condition="$EXP[Expression_InfoSlide_Home] + $EXP[Expression_ShowBigPosterHome] + Window.IsVisible(Home)">Conditional</animation>
-                <animation effect="slide" end="0" start="0,-160" time="400" delay="0" tween="quadratic" easing="out" reversible="false" condition="![$EXP[Expression_InfoSlide_Home] + $EXP[Expression_ShowBigPosterHome]] + Window.IsVisible(Home)">Conditional</animation>
-
-                <animation effect="slide" start="0" end="0,-160" time="400" delay="0" tween="quadratic" easing="out" reversible="false" condition="$EXP[Expression_InfoSlide] + !Window.IsVisible(Home)">Conditional</animation>
-                <animation effect="slide" end="0" start="0,-160" time="400" delay="0" tween="quadratic" easing="out" reversible="false" condition="!$EXP[Expression_InfoSlide] + !Window.IsVisible(Home)">Conditional</animation>
-                
-                <animation effect="slide" end="0,160" start="0" time="400" delay="0" tween="quadratic" easing="out" reversible="false" condition="$EXP[Expression_InfoSlide] + !Window.IsVisible(Home)">WindowClose</animation>
-                <control type="image">
-                    <top>-12</top>
-                    <height>12</height>
-                    <width>100%</width>
-                    <texture flipy="true">common/shadow-line-24px.png</texture>
-                </control>
-                <control type="image">
-                    <bottom>0</bottom>
-                    <top>0</top>
-                    <texture colordiffuse="panel_bg">common/white.png</texture>
-                </control>
-                <control type="group">
-                    <height>100</height>
-                    <top>0</top>
-                    <animation type="WindowOpen" reversible="false" condition="Window.Previous(MusicVisualisation.xml) | Window.Previous(VideoFullScreen.xml) | Window.Previous(Startup.xml)">
-                        <effect type="fade" start="0" end="100" time="200" delay="400" />
-                    </animation>
-                    <include>Animation_FadeIn</include>
-                    <include>Animation_FadeOut</include>
-                    <include content="Furniture_Flags" condition="Window.IsVisible(Home)">
-                        <param name="container" value="Container(301)." />
-                    </include>
-                    <include content="Furniture_Flags" condition="!Window.IsVisible(Home)">
-                        <param name="container" value="" />
-                    </include>
-                </control>
-                <control type="group">
-                    <animation type="WindowOpen" reversible="false" condition="Window.Previous(MusicVisualisation.xml) | Window.Previous(VideoFullScreen.xml) | Window.Previous(Startup.xml)">
-                        <effect type="fade" start="0" end="100" time="200" delay="400" />
-                    </animation>
-                    <include>Animation_FadeIn</include>
-                    <include>Animation_FadeOut</include>
-                    <include condition="!Window.IsVisible(MyPVRGuide.xml) + !Window.IsVisible(Home)">Furniture_BottomBar_StandardInfo</include>
-                    <include condition="Window.IsVisible(Home)">Furniture_BottomBar_HomeInfo</include>
-                    <include condition="Window.IsVisible(MyPVRGuide.xml)">Furniture_BottomBar_PVRGuideInfo</include>
-                </control>
+                <height>420</height>
+                <include>Furniture_BottomBar_Texture</include>
             </control>
+        </control>
+    </include>
+
+    <include name="Furniture_BottomBar_InfoBar">
+        <animation type="WindowOpen" reversible="false" condition="Window.Previous(MusicVisualisation.xml) | Window.Previous(VideoFullScreen.xml) | Window.Previous(Startup.xml)">
+            <effect type="fade" start="0" end="100" time="200" delay="0" />
+        </animation>
+        <animation effect="slide" start="0" end="0,400" time="400" delay="0" tween="quadratic" easing="out" reversible="false" condition="$EXP[Expression_LowerBottomBar]">Conditional</animation>
+        <animation effect="slide" end="0" start="0,400" time="400" delay="0" tween="quadratic" easing="out" reversible="false" condition="$EXP[Expression_DontLowerBottomBar]">Conditional</animation>
+        <control type="group">
+            <bottom>0</bottom>
+            <left>0</left>
+            <right>0</right>
+            <height>520</height>
+            <!-- Hide the Infobar when Furniture_BottomBar is lowered -->
+            <animation effect="slide" reversible="false" condition="$EXP[Expression_DontLowerBottomBar]" end="0" start="0,160" time="400" delay="0" tween="quadratic" easing="out">Conditional</animation>
+            <animation effect="slide" reversible="false" condition="$EXP[Expression_LowerBottomBar]" start="0" end="0,160" time="400" delay="0" tween="quadratic" easing="out">Conditional</animation>
+
+            <animation effect="slide" start="0" end="0,-160" time="400" delay="0" tween="quadratic" easing="out" reversible="false" condition="$EXP[Expression_InfoSlide_Home] + $EXP[Expression_ShowBigPosterHome] + Window.IsVisible(Home)">Conditional</animation>
+            <animation effect="slide" end="0" start="0,-160" time="400" delay="0" tween="quadratic" easing="out" reversible="false" condition="![$EXP[Expression_InfoSlide_Home] + $EXP[Expression_ShowBigPosterHome]] + Window.IsVisible(Home)">Conditional</animation>
+
+            <animation effect="slide" start="0" end="0,-160" time="400" delay="0" tween="quadratic" easing="out" reversible="false" condition="$EXP[Expression_InfoSlide] + !Window.IsVisible(Home)">Conditional</animation>
+            <animation effect="slide" end="0" start="0,-160" time="400" delay="0" tween="quadratic" easing="out" reversible="false" condition="!$EXP[Expression_InfoSlide] + !Window.IsVisible(Home)">Conditional</animation>
+            
+            <animation effect="slide" end="0,160" start="0" time="400" delay="0" tween="quadratic" easing="out" reversible="false" condition="$EXP[Expression_InfoSlide] + !Window.IsVisible(Home)">WindowClose</animation>
+            <control type="image">
+                <top>-12</top>
+                <height>12</height>
+                <width>100%</width>
+                <texture flipy="true">common/shadow-line-24px.png</texture>
+            </control>
+            <control type="image">
+                <bottom>0</bottom>
+                <top>0</top>
+                <texture colordiffuse="panel_bg">common/white.png</texture>
+            </control>
+            <control type="group">
+                <height>100</height>
+                <top>0</top>
+                <animation type="WindowOpen" reversible="false" condition="Window.Previous(MusicVisualisation.xml) | Window.Previous(VideoFullScreen.xml) | Window.Previous(Startup.xml)">
+                    <effect type="fade" start="0" end="100" time="200" delay="400" />
+                </animation>
+                <include>Animation_FadeIn</include>
+                <include>Animation_FadeOut</include>
+                <include content="Furniture_Flags" condition="Window.IsVisible(Home)">
+                    <param name="container" value="Container(301)." />
+                </include>
+                <include content="Furniture_Flags" condition="!Window.IsVisible(Home)">
+                    <param name="container" value="" />
+                </include>
+            </control>
+            <control type="group">
+                <animation type="WindowOpen" reversible="false" condition="Window.Previous(MusicVisualisation.xml) | Window.Previous(VideoFullScreen.xml) | Window.Previous(Startup.xml)">
+                    <effect type="fade" start="0" end="100" time="200" delay="400" />
+                </animation>
+                <include>Animation_FadeIn</include>
+                <include>Animation_FadeOut</include>
+                <include condition="!Window.IsVisible(MyPVRGuide.xml) + !Window.IsVisible(Home)">Furniture_BottomBar_StandardInfo</include>
+                <include condition="Window.IsVisible(Home)">Furniture_BottomBar_HomeInfo</include>
+                <include condition="Window.IsVisible(MyPVRGuide.xml)">Furniture_BottomBar_PVRGuideInfo</include>
+            </control>
+        </control>
+    </include>
+
+    <include name="Furniture_BottomBar">
+        <control type="group">
+            <include>Furniture_BottomBar_InfoBar</include>
             <control type="group">
                 <bottom>0</bottom>
                 <left>0</left>
@@ -375,14 +392,14 @@
                 <include>Furniture_BottomBar_Texture</include>
                 <control type="group">
                     <left>534</left>
-                    <visible>!Window.IsVisible(DialogVideoInfo.xml) + !Window.IsVisible(DialogMusicInfo.xml) + !Window.IsVisible(DialogAddonInfo.xml) + !Window.IsVisible(script-script.extendedinfo-DialogVideoInfo.xml) + !Window.IsVisible(script-script.extendedinfo-DialogInfo.xml) + !Window.IsVisible(DialogPVRInfo.xml)</visible>
+                    <visible>[!Window.IsVisible(DialogVideoInfo.xml) + !Window.IsVisible(DialogMusicInfo.xml) + !Window.IsVisible(DialogAddonInfo.xml) + !Window.IsVisible(DialogPVRInfo.xml)] | Window.IsVisible(script-script.extendedinfo-VideoList.xml)</visible>
                     <animation type="WindowOpen" reversible="false" condition="Window.Previous(MusicVisualisation.xml) | Window.Previous(VideoFullScreen.xml) | Window.Previous(Startup.xml)">
                         <effect type="slide" start="350" end="0" time="400" delay="200" tween="quadratic" easing="out" />
                         <effect type="fade" start="0" end="100" time="200" delay="200" />
                     </animation>
                     <include>Animation_FadeInOut_Conditional</include>
                     <include condition="Window.IsVisible(Home)">View_Home_Widget</include>
-                    <include condition="!Window.IsVisible(Home) + !Window.IsVisible(script-script.extendedinfo-VideoList.xml) + !Window.IsVisible(1111) + !Window.IsVisible(EventLog.xml) + !Window.IsVisible(MyPVRChannels.xml) + !Window.IsVisible(MyPVRTimers.xml) + !Window.IsVisible(MyPVRRecordings.xml) + !Window.IsVisible(MyPVRSearch.xml) + !Window.IsVisible(1101) + !Window.IsVisible(1102) + !Window.IsVisible(1103) + !Window.IsVisible(1104) + !Window.IsVisible(1105) + !Window.IsVisible(1106) + !Window.IsVisible(1107) + !Window.IsVisible(1108) + !Window.IsVisible(1109)">View_Library</include>
+                    <include condition="!Window.IsVisible(Home) + !Window.IsVisible(script-script.extendedinfo-VideoList.xml) + !Window.IsVisible(script-script.extendedinfo-DialogVideoInfo.xml) + !Window.IsVisible(script-script.extendedinfo-DialogInfo.xml) + !Window.IsVisible(1111) + !Window.IsVisible(EventLog.xml) + !Window.IsVisible(MyPVRChannels.xml) + !Window.IsVisible(MyPVRTimers.xml) + !Window.IsVisible(MyPVRRecordings.xml) + !Window.IsVisible(MyPVRSearch.xml) + !Window.IsVisible(1101) + !Window.IsVisible(1102) + !Window.IsVisible(1103) + !Window.IsVisible(1104) + !Window.IsVisible(1105) + !Window.IsVisible(1106) + !Window.IsVisible(1107) + !Window.IsVisible(1108) + !Window.IsVisible(1109)">View_Library</include>
                     <include condition="Window.IsVisible(script-script.extendedinfo-VideoList.xml)">View_ExtendedInfo</include>
                     <include condition="Window.IsVisible(1111)">View_AddonsPage</include>
                     <include condition="Window.IsVisible(EventLog.xml)">View_EventLog</include>
@@ -494,7 +511,7 @@
             <height>100</height>
             <top>0</top>
             <visible>!String.IsEmpty(ListItem.VideoCodec) | !String.IsEmpty(ListItem.VideoAspect) | !String.IsEmpty(ListItem.AudioCodec) | !String.IsEmpty(ListItem.AudioChannels) | !String.IsEmpty(Container(301).ListItem.VideoCodec) | !String.IsEmpty(Container(301).ListItem.VideoAspect) | !String.IsEmpty(Container(301).ListItem.AudioCodec) | !String.IsEmpty(Container(301).ListItem.AudioChannels)</visible>
-            <visible>!Window.IsVisible(DialogVideoInfo.xml) | String.IsEmpty(Window(Home).Property(FocusedList))</visible>
+            <visible>Window.IsVisible(script-script.extendedinfo-DialogInfo.xml) | Window.IsVisible(script-script.extendedinfo-DialogVideoInfo.xml) | !Window.IsVisible(DialogVideoInfo.xml) | String.IsEmpty(Window(Home).Property(FocusedList))</visible>
             <include>Animation_FadeOut</include>
             <control type="label">
                 <left>0</left>
@@ -525,7 +542,7 @@
             <height>100</height>
             <top>0</top>
             <visible>String.IsEmpty(ListItem.VideoCodec) + String.IsEmpty(ListItem.VideoAspect) + String.IsEmpty(ListItem.AudioCodec) + String.IsEmpty(ListItem.AudioChannels) + String.IsEmpty(Container(301).ListItem.VideoCodec) + String.IsEmpty(Container(301).ListItem.VideoAspect) + String.IsEmpty(Container(301).ListItem.AudioCodec) + String.IsEmpty(Container(301).ListItem.AudioChannels)</visible>
-            <visible>!Window.IsVisible(DialogVideoInfo.xml) | String.IsEmpty(Window(Home).Property(FocusedList))</visible>
+            <visible>Window.IsVisible(script-script.extendedinfo-DialogInfo.xml) | Window.IsVisible(script-script.extendedinfo-DialogVideoInfo.xml) | !Window.IsVisible(DialogVideoInfo.xml) | String.IsEmpty(Window(Home).Property(FocusedList))</visible>
             <include>Animation_FadeOut</include>
             <control type="label">
                 <left>0</left>

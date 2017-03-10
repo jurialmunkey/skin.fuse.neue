@@ -968,7 +968,7 @@
             <height>325.25</height>
             <onleft>9100</onleft>
             <onright>61</onright>
-            <include>View_StandardMovement_OnBack</include>
+            <include condition="!Window.IsVisible(DialogVideoInfo.xml)">View_StandardMovement_OnBack</include>
             <preloaditems>2</preloaditems>
             <orientation>vertical</orientation>
             <pagecontrol>60</pagecontrol>
@@ -1140,10 +1140,8 @@
     </include>
     <include name="View_Info_Movement">
         <onup>ClearProperty(FocusedList)</onup>
-        <onback>ClearProperty(FocusedList)</onback>
         <ondown>60</ondown>
         <onup>9000</onup>
-        <onback>9000</onback>
     </include>
 
     <include name="View_StandardMovement_OnBack_Home"><onback>300</onback></include>

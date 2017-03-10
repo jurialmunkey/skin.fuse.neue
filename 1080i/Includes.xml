@@ -52,6 +52,10 @@
 
     <variable name="GlobalFanart">
 
+        <value condition="Window.IsVisible(script-script.extendedinfo-VideoList.xml)">$INFO[Container(500).ListItem.Property(Fanart_small)]</value>
+        <value condition="Window.IsVisible(script-script.extendedinfo-DialogVideoInfo.xml) + !String.IsEmpty(Window.Property(fanart_original))">$INFO[Window.Property(fanart_original)]</value>
+        <value condition="Window.IsVisible(script-script.extendedinfo-DialogVideoInfo.xml) | Window.IsVisible(script-script.extendedinfo-DialogInfo.xml)">special://skin/extras/backgrounds/default.jpg</value>
+
         <!-- Misc -->
         <value condition="Window.IsVisible(weather) + !String.IsEmpty(Skin.String(weather.fanart.path))">$INFO[Skin.String(weather.fanart.path)]$INFO[Window(Weather).Property(Current.FanartCode)]/</value>        
 

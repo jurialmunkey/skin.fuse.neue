@@ -1,3 +1,6 @@
+[B]0.9.14[/B]
+Extended info same as videoinfo
+
 [B]0.9.13[/B]
 Put director movies and cast list **inside** dialogvideoinfo window.
 
