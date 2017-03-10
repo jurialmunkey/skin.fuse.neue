@@ -335,13 +335,13 @@
             <animation effect="slide" reversible="false" condition="$EXP[Expression_DontLowerBottomBar]" end="0" start="0,160" time="400" delay="0" tween="quadratic" easing="out">Conditional</animation>
             <animation effect="slide" reversible="false" condition="$EXP[Expression_LowerBottomBar]" start="0" end="0,160" time="400" delay="0" tween="quadratic" easing="out">Conditional</animation>
 
-            <animation effect="slide" start="0" end="0,-160" time="400" delay="0" tween="quadratic" easing="out" reversible="false" condition="$EXP[Expression_InfoSlide_Home] + $EXP[Expression_ShowBigPosterHome] + Window.IsVisible(Home)">Conditional</animation>
-            <animation effect="slide" end="0" start="0,-160" time="400" delay="0" tween="quadratic" easing="out" reversible="false" condition="![$EXP[Expression_InfoSlide_Home] + $EXP[Expression_ShowBigPosterHome]] + Window.IsVisible(Home)">Conditional</animation>
+            <animation effect="slide" start="0" end="0,-160" time="400" delay="0" tween="quadratic" easing="out" reversible="false" condition="$EXP[Expression_InfoSlide_Home] + $EXP[Expression_ShowBigPosterHome] + Window.IsVisible(Home) + !Window.IsVisible(script-script.extendedinfo-DialogVideoInfo.xml) + !Window.IsVisible(script-script.extendedinfo-DialogInfo.xml)">Conditional</animation>
+            <animation effect="slide" end="0" start="0,-160" time="400" delay="0" tween="quadratic" easing="out" reversible="false" condition="![$EXP[Expression_InfoSlide_Home] + $EXP[Expression_ShowBigPosterHome]] + Window.IsVisible(Home) + !Window.IsVisible(script-script.extendedinfo-DialogVideoInfo.xml) + !Window.IsVisible(script-script.extendedinfo-DialogInfo.xml)">Conditional</animation>
 
-            <animation effect="slide" start="0" end="0,-160" time="400" delay="0" tween="quadratic" easing="out" reversible="false" condition="$EXP[Expression_InfoSlide] + !Window.IsVisible(Home)">Conditional</animation>
-            <animation effect="slide" end="0" start="0,-160" time="400" delay="0" tween="quadratic" easing="out" reversible="false" condition="!$EXP[Expression_InfoSlide] + !Window.IsVisible(Home)">Conditional</animation>
+            <animation effect="slide" start="0" end="0,-160" time="400" delay="0" tween="quadratic" easing="out" reversible="false" condition="$EXP[Expression_InfoSlide] + [!Window.IsVisible(Home) | Window.IsVisible(script-script.extendedinfo-DialogVideoInfo.xml) | Window.IsVisible(script-script.extendedinfo-DialogInfo.xml)]">Conditional</animation>
+            <animation effect="slide" end="0" start="0,-160" time="400" delay="0" tween="quadratic" easing="out" reversible="false" condition="!$EXP[Expression_InfoSlide] + [!Window.IsVisible(Home) | Window.IsVisible(script-script.extendedinfo-DialogVideoInfo.xml) | Window.IsVisible(script-script.extendedinfo-DialogInfo.xml)]">Conditional</animation>
             
-            <animation effect="slide" end="0,160" start="0" time="400" delay="0" tween="quadratic" easing="out" reversible="false" condition="$EXP[Expression_InfoSlide] + !Window.IsVisible(Home)">WindowClose</animation>
+            <animation effect="slide" end="0,160" start="0" time="400" delay="0" tween="quadratic" easing="out" reversible="false" condition="$EXP[Expression_InfoSlide] + [!Window.IsVisible(Home) | Window.IsVisible(script-script.extendedinfo-DialogVideoInfo.xml) | Window.IsVisible(script-script.extendedinfo-DialogInfo.xml)]">WindowClose</animation>
             <control type="image">
                 <top>-12</top>
                 <height>12</height>
@@ -374,8 +374,8 @@
                 </animation>
                 <include>Animation_FadeIn</include>
                 <include>Animation_FadeOut</include>
-                <include condition="!Window.IsVisible(MyPVRGuide.xml) + !Window.IsVisible(Home)">Furniture_BottomBar_StandardInfo</include>
-                <include condition="Window.IsVisible(Home)">Furniture_BottomBar_HomeInfo</include>
+                <include condition="[!Window.IsVisible(MyPVRGuide.xml) + !Window.IsVisible(Home)] |  !Window.IsVisible(script-script.extendedinfo-DialogVideoInfo.xml) | Window.IsVisible(script-script.extendedinfo-DialogInfo.xml)">Furniture_BottomBar_StandardInfo</include>
+                <include condition="Window.IsVisible(Home) + !Window.IsVisible(script-script.extendedinfo-DialogVideoInfo.xml) + !Window.IsVisible(script-script.extendedinfo-DialogInfo.xml)">Furniture_BottomBar_HomeInfo</include>
                 <include condition="Window.IsVisible(MyPVRGuide.xml)">Furniture_BottomBar_PVRGuideInfo</include>
             </control>
         </control>
