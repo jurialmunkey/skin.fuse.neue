@@ -2,9 +2,50 @@
 <!-- Foundation -->
 <window id="2003">
     <defaultcontrol always="true">8</defaultcontrol>
+    <onload>ClearProperty(FocusedList,Home)</onload>
+    <onunload>ClearProperty(FocusedList,Home)</onunload>
     <controls>
 
+
+        <include content="Furniture_BigPoster">
+            <param name="variable" value="$VAR[VideoInfoPosterImage]"/>
+        </include>
         <control type="group">
+            <bottom>0</bottom>
+            <height>520</height>
+            <control type="group">
+                <left>614</left>
+                <right>30</right>
+                <height>100</height>
+                <top>0</top>
+                <animation effect="fade" start="0" end="100" time="200" delay="400" reversible="false">Visible</animation>
+                <visible>!String.IsEmpty(Window(Home).Property(FocusedList))</visible>
+                <control type="label">
+                    <left>0</left>
+                    <right>0</right>
+                    <scroll>true</scroll>
+                    <scrollsuffix>. </scrollsuffix>
+                    <font>font_infobar_mainlabel</font>
+                    <textcolor>panel_fg_100</textcolor>
+                    <label>$VAR[Label_VideoInfo_Title]</label>
+                    <aligny>center</aligny>
+                    <top>0</top>
+                    <bottom>33%</bottom>
+                </control>
+                <control type="label">
+                    <left>0</left>
+                    <right>0</right>
+                    <font>font_infobar_sublabel</font>
+                    <textcolor>panel_fg_100</textcolor>
+                    <label>$VAR[Label_VideoInfo_InfoLine]</label>
+                    <aligny>center</aligny>
+                    <bottom>0</bottom>
+                    <top>33%</top>
+                </control>
+            </control>
+        </control>
+        <control type="group">
+            <visible allowhiddenfocus="true">String.IsEmpty(Window(Home).Property(FocusedList))</visible>
             <include>Animation_FadeIn</include>
             <include>Animation_FadeOut</include>
             <!-- Information Left Side-->
@@ -387,22 +428,17 @@
 
                 <control type="button" id="9003">
                     <label>206</label>
-                    <onclick condition="Container.Content(movies)">SetProperty(CustomInfoList.Content,plugin://script.skin.helper.service/?action=getcast&amp;movie=$INFO[ListItem.Title]&amp;castaction=extendedinfo,Home)</onclick>
-                    <onclick condition="Container.Content(tvshows)">SetProperty(CustomInfoList.Content,plugin://script.skin.helper.service/?action=getcast&amp;tvshow=$INFO[ListItem.Title]&amp;castaction=extendedinfo,Home)</onclick>
-                    <onclick condition="Container.Content(episodes)">SetProperty(CustomInfoList.Content,plugin://script.skin.helper.service/?action=getcast&amp;episode=$INFO[ListItem.Title]&amp;castaction=extendedinfo,Home)</onclick>
-                    <onclick>SetProperty(CustomInfoList.Target,,Home)</onclick>
-                    <onclick>SetProperty(CustomInfoList.Title,$INFO[ListItem.Title,$LOCALIZE[206]  (,)],Home)</onclick>
-                    <onclick>ActivateWindow(1112)</onclick>
+                    <onclick>SetProperty(FocusedList,9501,Home)</onclick>
+                    <onclick>SetFocus(9501)</onclick>
                     <include>Dialog_Info_Buttons</include>
                     <visible>!String.IsEmpty(ListItem.Cast)</visible>
                 </control>
 
                 <control type="button" id="9002">
                     <label>20339</label>
-                    <onclick>SetProperty(CustomInfoList.Content,plugin://script.extendedinfo?info=personmovies&amp;&amp;person=$INFO[ListItem.Director],Home)</onclick>
-                    <onclick>SetProperty(CustomInfoList.Target,,Home)</onclick>
-                    <onclick>SetProperty(CustomInfoList.Title,$INFO[ListItem.Director,,  ($LOCALIZE[20339])],Home)</onclick>
-                    <onclick>ActivateWindow(1112)</onclick>
+                    <onclick>SetProperty(VideoInfo_InfoLine,$INFO[ListItem.Director],Home)</onclick>
+                    <onclick>SetProperty(FocusedList,9502,Home)</onclick>
+                    <onclick>SetFocus(9502)</onclick>
                     <visible>Container.Content(movies)</visible>
                     <visible>!String.IsEmpty(ListItem.Director)</visible>
                     <include>Dialog_Info_Buttons</include>
@@ -414,14 +450,6 @@
                     <include>Dialog_Info_Buttons</include>
                     <visible>!String.IsEmpty(ListItem.Trailer)</visible>
                 </control>
-
-                <!-- <control type="button" id="105">
-                    <description>Extras</description>
-                    <include>Dialog_Info_Buttons</include>
-                    <label>31171</label>
-                    <onclick>RunScript(script.videoextras,display,"$INFO[ListItem.FilenameAndPath]")</onclick>
-                    <visible>System.HasAddon(script.videoextras) + [Container.Content(movies) | Container.Content(episodes) | Container.Content(TVShows) | Container.Content(musicvideos)] + String.IsEmpty(Window(movieinformation).Property("HideVideoExtrasButton"))</visible>
-                </control> -->
 
                 <control type="button" id ="10">
                     <description>Artwork (Get Thumb)</description>
@@ -447,9 +475,62 @@
                     <include>Dialog_Info_Buttons</include>
                     <visible>!Skin.HasSetting(global.kioskmode)</visible>
                 </control>
-
-                
             </control>
+        </control>
+
+        <control type="group" id="9500">
+            <bottom>0</bottom>
+            <left>534</left>
+            <right>0</right>
+            <height>420</height>
+            <control type="fixedlist" id="9501">
+                <visible allowhiddenfocus="true">String.IsEqual(Window(Home).Property(FocusedList),9501)</visible>
+                <include>Animation_FadeIn</include>
+                <include>Animation_FadeOut</include>
+                <include>View_Info_Movement</include>
+                <animation effect="fade" start="100" end="0" time="0" condition="Container(9501).IsUpdating">Conditional</animation>
+                <include content="View_Actor_Layout">
+                    <param name="id" value="9501" />
+                </include>
+                <include condition="Container.Content(movies)">Defs_Info_MovieCast</include>
+                <include condition="Container.Content(tvshows)">Defs_Info_TVShowCast</include>
+                <include condition="Container.Content(episodes)">Defs_Info_EpisodeCast</include>
+            </control>
+            <include content="Dialog_VideoInfo_BusyIndicator">
+                <param name="id" value="9501" />
+            </include>
+            <control type="fixedlist" id="9502">
+                <visible allowhiddenfocus="true">String.IsEqual(Window(Home).Property(FocusedList),9502)</visible>
+                <include>Animation_FadeIn</include>
+                <include>Animation_FadeOut</include>
+                <include>View_Info_Movement</include>
+                <animation effect="fade" start="100" end="0" time="0" condition="Container(9502).IsUpdating">Conditional</animation>
+                <include content="View_Posters_Layout">
+                    <param name="id" value="9502" />
+                </include>
+                <content>plugin://script.extendedinfo?info=personmovies&amp;&amp;person=$INFO[ListItem.Director]</content>
+            </control>
+            <include content="Dialog_VideoInfo_BusyIndicator">
+                <param name="id" value="9502" />
+            </include>
+        </control>
+        <control type="scrollbar" id="60">
+            <onback>9500</onback>
+            <onup>9500</onup>
+            <ondown>9000</ondown>
+            <left>614</left>
+            <width>1226</width>
+            <bottom>94</bottom>
+            <orientation>horizontal</orientation>
+            <height>8</height>
+            <texturesliderbackground colordiffuse="main_fg_12">osd/progress-end.png</texturesliderbackground>
+            <texturesliderbar colordiffuse="main_fg_30">osd/progress-end.png</texturesliderbar>
+            <texturesliderbarfocus colordiffuse="$VAR[ColorHighlight]">osd/progress-end.png</texturesliderbarfocus>
+            <animation effect="fade" start="100" end="33" time="400" condition="!Control.HasFocus(60) + !Container.Scrolling">Conditional</animation>
+            <include>Animation_FadeIn</include>
+            <include>Animation_FadeOut</include>
+            <visible>!String.IsEmpty(Window(Home).Property(FocusedList))</visible>
+            <visible>[Control.IsVisible(9501) + !Container(9501).IsUpdating] | [Control.IsVisible(9502) + !Container(9502).IsUpdating]</visible>
         </control>
 
         <include>Furniture_InfoClock</include>

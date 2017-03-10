@@ -1,5 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <includes>
+    <include name="Defs_Info_MovieCast"><content>plugin://script.skin.helper.service/?action=getcast&amp;movie=$INFO[ListItem.Title]&amp;castaction=extendedinfo</content></include>
+    <include name="Defs_Info_TVShowCast"><content>plugin://script.skin.helper.service/?action=getcast&amp;tvshow=$INFO[ListItem.Title]&amp;castaction=extendedinfo</content></include>
+    <include name="Defs_Info_EpisodeCast"><content>plugin://script.skin.helper.service/?action=getcast&amp;episode=$INFO[ListItem.Title]&amp;castaction=extendedinfo</content></include>
 
     <include name="Defs_PVRGuide_Lines">
         <control type="image" id="2">

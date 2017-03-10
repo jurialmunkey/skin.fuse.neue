@@ -57,6 +57,7 @@
         <value>$INFO[Container(301).ListItem.Label]</value>
     </variable>
     <variable name="WidgetPlot">
+        <value condition="Window.IsVisible(DialogVideoInfo.xml) + !String.IsEmpty(Window(Home).Property(FocusedList))"></value>
         <value condition="String.IsEqual(Container(300).ListItem.Property(widget),NextAired)">$INFO[Container(301).ListItem.Label2,,[CR]]$INFO[Container(301).ListItem.Property(Plot)]</value>
         <value condition="[String.StartsWith(Container(300).ListItem.Property(widgetType),music) | String.StartsWith(Container(300).ListItem.Property(widgetType),albums) | String.StartsWith(Container(300).ListItem.Property(widgetType),artists) | String.StartsWith(Container(300).ListItem.Property(widgetType),songs)] + !String.IsEmpty(Container(301).ListItem.Property(Album_Description))">$INFO[Container(301).ListItem.Property(Album_Description)]</value>
         <value condition="[String.StartsWith(Container(300).ListItem.Property(widgetType),music) | String.StartsWith(Container(300).ListItem.Property(widgetType),albums) | String.StartsWith(Container(300).ListItem.Property(widgetType),artists) | String.StartsWith(Container(300).ListItem.Property(widgetType),songs)] + !String.IsEmpty(Container(301).ListItem.Property(Artist_Description))">$INFO[Container(301).ListItem.Property(Artist_Description)]</value>
@@ -81,6 +82,15 @@
         <value condition="!Container(301).IsUpdating + !Integer.IsEqual(Container(301).NumItems) + !String.IsEmpty(Container(300).ListItem.Property(widgetName))">$INFO[Container(300).ListItem.Property(widgetName)]</value>
     </variable>
 
+    <variable name="Label_VideoInfo_Title">
+        <value condition="String.IsEqual(Window(Home).Property(FocusedList),9501) + !Container(9501).IsUpdating">$INFO[Container(9501).ListItem.Label]</value>
+        <value condition="String.IsEqual(Window(Home).Property(FocusedList),9502) + !Container(9502).IsUpdating">$INFO[Container(9502).ListItem.Label]</value>
+    </variable>
+    <variable name="Label_VideoInfo_InfoLine">
+        <value condition="String.IsEqual(Window(Home).Property(FocusedList),9501) + !Container(9501).IsUpdating">$INFO[Container(9501).ListItem.Label2,[COLOR=panel_fg_70]$LOCALIZE[20347][/COLOR] ,]</value>
+        <value condition="String.IsEqual(Window(Home).Property(FocusedList),9502) + !Container(9502).IsUpdating">$INFO[Window(Home).Property(VideoInfo_InfoLine)]$INFO[Container(9502).ListItem.Year,  •  ,]</value>
+    </variable>
+
     <variable name="Label_Title">
         <value condition="[Window.IsVisible(MyPVRChannels.xml) | Window.IsVisible(MyPVRSearch.xml) | Window.IsVisible(MyPVRRecordings.xml) | Window.IsVisible(MyPVRTimers.xml)] + !String.IsEmpty(ListItem.Title)">$INFO[ListItem.Title]</value>
         <value condition="Container.Content(songs)">$INFO[ListItem.TrackNumber,,. ]$INFO[ListItem.Title]</value>
@@ -102,6 +112,7 @@
         <value condition="!String.IsEmpty(Container.FolderName)">$INFO[Container.FolderName]</value>
     </variable>
     <variable name="Label_Plot">
+        <value condition="Window.IsVisible(DialogVideoInfo.xml) + !String.IsEmpty(Window(Home).Property(FocusedList))"></value>
         <value condition="Window.IsVisible(MyPVRGuide.xml) + Player.HasVideo"></value>
         <value condition="Window.IsVisible(Home) + !Window.IsVisible(DialogVideoInfo.xml) + !Window.IsVisible(DialogMusicInfo.xml)">$VAR[WidgetPlot]</value>
         <value condition="ListItem.IsCollection">$INFO[Window(Home).Property(SkinHelper.ListItem.Plot)]</value>

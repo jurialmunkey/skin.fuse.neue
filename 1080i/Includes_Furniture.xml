@@ -494,6 +494,8 @@
             <height>100</height>
             <top>0</top>
             <visible>!String.IsEmpty(ListItem.VideoCodec) | !String.IsEmpty(ListItem.VideoAspect) | !String.IsEmpty(ListItem.AudioCodec) | !String.IsEmpty(ListItem.AudioChannels) | !String.IsEmpty(Container(301).ListItem.VideoCodec) | !String.IsEmpty(Container(301).ListItem.VideoAspect) | !String.IsEmpty(Container(301).ListItem.AudioCodec) | !String.IsEmpty(Container(301).ListItem.AudioChannels)</visible>
+            <visible>!Window.IsVisible(DialogVideoInfo.xml) | String.IsEmpty(Window(Home).Property(FocusedList))</visible>
+            <include>Animation_FadeOut</include>
             <control type="label">
                 <left>0</left>
                 <right>0</right>
@@ -523,6 +525,8 @@
             <height>100</height>
             <top>0</top>
             <visible>String.IsEmpty(ListItem.VideoCodec) + String.IsEmpty(ListItem.VideoAspect) + String.IsEmpty(ListItem.AudioCodec) + String.IsEmpty(ListItem.AudioChannels) + String.IsEmpty(Container(301).ListItem.VideoCodec) + String.IsEmpty(Container(301).ListItem.VideoAspect) + String.IsEmpty(Container(301).ListItem.AudioCodec) + String.IsEmpty(Container(301).ListItem.AudioChannels)</visible>
+            <visible>!Window.IsVisible(DialogVideoInfo.xml) | String.IsEmpty(Window(Home).Property(FocusedList))</visible>
+            <include>Animation_FadeOut</include>
             <control type="label">
                 <left>0</left>
                 <right>0</right>
@@ -570,6 +574,7 @@
                 <height>100</height>
                 <top>0</top>
                 <visible>!String.IsEmpty(ListItem.VideoCodec) | !String.IsEmpty(ListItem.VideoAspect) | !String.IsEmpty(ListItem.AudioCodec) | !String.IsEmpty(ListItem.AudioChannels) | !String.IsEmpty(Container(301).ListItem.VideoCodec) | !String.IsEmpty(Container(301).ListItem.VideoAspect) | !String.IsEmpty(Container(301).ListItem.AudioCodec) | !String.IsEmpty(Container(301).ListItem.AudioChannels)</visible>
+                <visible>!Window.IsVisible(DialogVideoInfo.xml) | String.IsEmpty(Window(Home).Property(FocusedList))</visible>
                 <control type="label">
                     <left>0</left>
                     <right>0</right>
@@ -597,6 +602,7 @@
                 <height>100</height>
                 <top>0</top>
                 <visible>String.IsEmpty(ListItem.VideoCodec) + String.IsEmpty(ListItem.VideoAspect) + String.IsEmpty(ListItem.AudioCodec) + String.IsEmpty(ListItem.AudioChannels) + String.IsEmpty(Container(301).ListItem.VideoCodec) + String.IsEmpty(Container(301).ListItem.VideoAspect) + String.IsEmpty(Container(301).ListItem.AudioCodec) + String.IsEmpty(Container(301).ListItem.AudioChannels)</visible>
+                <visible>!Window.IsVisible(DialogVideoInfo.xml) | String.IsEmpty(Window(Home).Property(FocusedList))</visible>
                 <control type="label">
                     <left>0</left>
                     <right>0</right>
@@ -945,6 +951,7 @@
                 <visible>!Window.IsVisible(script-script.extendedinfo-DialogVideoInfo.xml)</visible>
                 <visible>!Window.IsVisible(script-script.extendedinfo-DialogInfo.xml)</visible>
                 <visible>!String.IsEqual($PARAM[container]ListItem.Label,..)</visible>
+                <visible>!Window.IsVisible(DialogVideoInfo.xml) | String.IsEmpty(Window(Home).Property(FocusedList))</visible>
                 <include>Animation_FadeIn</include>
                 <include>Animation_FadeOut</include>
                 <right>30</right>
@@ -1077,7 +1084,7 @@
                     <control type="group">
                         <visible>!$PARAM[container]ListItem.IsParentFolder + !String.StartsWith($PARAM[container]ListItem.Icon,Default)</visible>
                         <visible>Window.IsVisible(home)</visible>
-                        <visible>!String.IsEmpty(Container(301).ListItem.Art(tvshow.poster)) | !String.IsEmpty(Container(301).ListItem.Art(poster))</visible>
+                        <visible>!String.IsEmpty(Container(301).ListItem.Art(tvshow.poster)) | !String.IsEmpty(Container(301).ListItem.Art(poster)) | Window.IsVisible(DialogVideoInfo.xml)</visible>
                         <control type="image">
                             <fadetime>0</fadetime>
                             <include>Defs_Shadow_Opaque</include>
@@ -1087,7 +1094,7 @@
                     </control>
                     <control type="group">
                         <visible>!$PARAM[container]ListItem.IsParentFolder + !String.StartsWith($PARAM[container]ListItem.Icon,Default)</visible>
-                        <visible>Window.IsVisible(home)</visible>
+                        <visible>Window.IsVisible(home) + !Window.IsVisible(DialogVideoInfo.xml)</visible>
                         <visible>String.IsEmpty(Container(301).ListItem.Art(tvshow.poster)) + String.IsEmpty(Container(301).ListItem.Art(poster))</visible>
                         <control type="image">
                             <fadetime>0</fadetime>
