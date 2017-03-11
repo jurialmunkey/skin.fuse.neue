@@ -75,7 +75,7 @@
             <control type="group">
                 <height>100</height>
                 <top>0</top>
-                <include>Animation_FadeIn</include>
+                <include>Animation_FadeIn_Delay</include>
                 <include>Animation_FadeOut</include>
                 <include content="Furniture_Flags" condition="Window.IsVisible(Home)">
                     <param name="container" value="Container(301)." />
@@ -89,7 +89,7 @@
                     <effect type="slide" start="-534" end="0" time="400" delay="200" tween="quadratic" easing="out" />
                     <effect type="fade" start="0" end="100" time="200" delay="200" />
                 </animation>
-                <include>Animation_FadeIn</include>
+                <include>Animation_FadeIn_Delay</include>
                 <include>Animation_FadeOut</include>
                 <include condition="!Window.IsVisible(MyPVRGuide.xml) + !Window.IsVisible(Home)">Bottombar_StandardInfo</include>
                 <include condition="Window.IsVisible(Home)">Bottombar_HomeInfo</include>

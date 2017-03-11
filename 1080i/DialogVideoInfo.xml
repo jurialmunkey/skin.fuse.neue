@@ -433,6 +433,7 @@
                         <onclick>SetFocus(9501)</onclick>
                         <include>Dialog_Info_Buttons</include>
                         <visible>!String.IsEmpty(ListItem.Cast)</visible>
+                        <enable>Integer.IsGreater(Container(9501).NumItems,0)</enable>
                     </control>
 
                     <control type="button" id="9002">
@@ -443,6 +444,7 @@
                         <visible>Container.Content(movies)</visible>
                         <visible>!String.IsEmpty(ListItem.Director)</visible>
                         <include>Dialog_Info_Buttons</include>
+                        <enable>Integer.IsGreater(Container(9502).NumItems,0)</enable>
                     </control>
                     
                     <control type="button" id="11">
