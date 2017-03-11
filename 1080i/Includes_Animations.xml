@@ -18,6 +18,15 @@
         <animation effect="fade" end="0" start="100" time="200" tween="cubic" easing="inout" condition="Window.Next(MusicVisualisation.xml) | Window.Next(VideoFullScreen.xml) | Window.Next(Startup.xml)">WindowClose</animation>
     </include>
 
+    <include name="Animation_Bottombar_Left">
+        <animation type="WindowOpen" reversible="false" condition="[Window.Previous(MusicVisualisation.xml) | Window.Previous(VideoFullScreen.xml) | Window.Previous(Startup.xml)]">
+            <effect type="slide" start="-534" end="0" time="400" delay="200" tween="quadratic" easing="out" />
+            <effect type="fade" start="0" end="100" time="200" delay="200" />
+        </animation>
+        <animation effect="fade" start="0" end="100" time="350" tween="cubic" easing="inout">VisibleChange</animation>
+        <animation effect="fade" end="0" start="100" time="200" tween="cubic" easing="inout" condition="Window.Next(MusicVisualisation.xml) | Window.Next(VideoFullScreen.xml) | Window.Next(Startup.xml)">WindowClose</animation>
+    </include>
+
     <include name="Animation_FadeIn">
         <animation effect="fade" start="0" end="100" time="350" tween="cubic" easing="inout">Visible</animation>
         <animation effect="fade" start="0" end="100" time="350" tween="cubic" easing="inout">WindowOpen</animation>

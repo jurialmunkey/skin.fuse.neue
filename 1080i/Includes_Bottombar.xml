@@ -81,7 +81,7 @@
                 </include>
             </control>
             <control type="group">
-                <include>Animation_Bottombar_Right</include>
+                <include>Animation_Bottombar_Left</include>
                 <include condition="!Window.IsVisible(MyPVRGuide.xml) + !Window.IsVisible(Home)">Bottombar_StandardInfo</include>
                 <include condition="Window.IsVisible(Home)">Bottombar_HomeInfo</include>
                 <include condition="Window.IsVisible(MyPVRGuide.xml)">Bottombar_PVRGuideInfo</include>
