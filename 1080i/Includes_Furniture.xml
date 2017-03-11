@@ -620,8 +620,6 @@
                 <visible>!Window.IsVisible(script-script.extendedinfo-DialogInfo.xml)</visible>
                 <visible>!String.IsEqual($PARAM[container]ListItem.Label,..)</visible>
                 <visible>!Window.IsVisible(DialogVideoInfo.xml) | String.IsEmpty(Window(Home).Property(FocusedList))</visible>
-                <include>Animation_FadeIn</include>
-                <include>Animation_FadeOut</include>
                 <right>30</right>
                 <width>1400</width>
                 <height>120</height>

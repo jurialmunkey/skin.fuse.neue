@@ -27,6 +27,12 @@
         <animation effect="fade" end="0" start="100" time="200" tween="cubic" easing="inout" condition="Window.Next(MusicVisualisation.xml) | Window.Next(VideoFullScreen.xml) | Window.Next(Startup.xml)">WindowClose</animation>
     </include>
 
+    <include name="Animation_Bottombar_Text">
+        <animation effect="fade" start="0" end="100" time="400" delay="400" tween="cubic" easing="inout" condition="Window.Previous(MusicVisualisation.xml) | Window.Previous(VideoFullScreen.xml) | Window.Previous(Startup.xml)">WindowOpen</animation>
+        <animation effect="fade" end="0" start="100" time="200" tween="cubic" easing="inout" condition="Window.Next(MusicVisualisation.xml) | Window.Next(VideoFullScreen.xml) | Window.Next(Startup.xml)">WindowClose</animation>
+    </include>
+
+
     <include name="Animation_FadeIn">
         <animation effect="fade" start="0" end="100" time="350" tween="cubic" easing="inout">Visible</animation>
         <animation effect="fade" start="0" end="100" time="350" tween="cubic" easing="inout">WindowOpen</animation>
