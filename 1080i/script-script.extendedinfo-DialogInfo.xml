@@ -12,7 +12,7 @@
     <controls>
 
         <include>GlobalBackground</include>
-        <include>Furniture_BottomBar_OnlyInfo</include>
+        <include>Bottombar_Plain</include>
         <control type="group">
             
             <control type="group">

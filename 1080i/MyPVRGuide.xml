@@ -7,8 +7,8 @@
     <include>Defs_SetStartWindow</include>
     <controls>
         <include>GlobalBackground</include>
-        <include>Furniture_TopBar</include>
-        <include>Furniture_BottomBar</include>
+        <include>Topbar</include>
+        <include>Bottombar</include>
         
         <control type="group" id="50">
             <control type="group">
@@ -21,8 +21,7 @@
                     <onleft>28</onleft>
                     <viewtype label="19069">list</viewtype>
                     <onleft>9100</onleft>
-                    <onback condition="Window.IsVisible(Home) | [String.IsEqual(Container.FolderPath,Window(Home).Property(Container_FolderPath)) + !Skin.HasSetting(DisableNeverHome) + !$EXP[Expression_ReplaceWindowHome]]">300</onback>
-                    <onback condition="[String.IsEqual(Container.FolderPath,Window(Home).Property(Container_FolderPath)) + !Skin.HasSetting(DisableNeverHome) + $EXP[Expression_ReplaceWindowHome]]">ReplaceWindow(Home)</onback>
+                    <include>View_Movement_OnBack</include>
                     <progresstexture border="5" colordiffuse="bf777777">pvr/progressline.png</progresstexture>
                     <scrolltime tween="quadratic">300</scrolltime>
                     <timeblocks>40</timeblocks>

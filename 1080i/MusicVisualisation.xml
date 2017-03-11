@@ -2,7 +2,7 @@
 <!-- Foundation -->
 <window id="2006">
     <defaultcontrol always="true">-</defaultcontrol>
-    <onload>SetProperty(ShowFurniture_TopBar,0,Home)</onload>
+    <onload>SetProperty(ShowTopbar,0,Home)</onload>
     <onload>ClearProperty(ViewType,Home)</onload>
     <controls>
         <control type="visualisation" id="2">

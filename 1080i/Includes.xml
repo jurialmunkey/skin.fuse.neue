@@ -4,28 +4,21 @@
 
     <include file="Defaults.xml" />
 
-    <include file="Includes_Labels.xml" />
-    <include file="Includes_Images.xml" />
+    
+    
     <include file="Includes_Animations.xml" />
+    <include file="Includes_Bottombar.xml" />
     <include file="Includes_Defs.xml" />
-    <include file="Includes_OSD.xml" />    
-    <include file="Includes_Furniture.xml" />
     <include file="Includes_Dialog.xml" />
+    <include file="Includes_Expression.xml" />
+    <include file="Includes_Furniture.xml" />
+    <include file="Includes_Images.xml" />
+    <include file="Includes_Labels.xml" />
+    <include file="Includes_OSD.xml" />
+    <include file="Includes_Topbar.xml" />
     <include file="Includes_View.xml" />
     <include file="Includes_VideoLyrics.xml" />
     <include file="script-skinshortcuts-includes.xml"/>
-
-    <expression name="Expression_ReplaceWindowHome">[!Window.IsVisible(home) + !Window.IsVisible(SettingsCategory.xml) + !Window.IsVisible(FileManager.xml) + !Window.IsVisible(AddonBrowser.xml) + !Window.IsVisible(SkinSettings.xml) + !Window.IsVisible(SettingsProfile.xml) + !Window.IsVisible(SettingsSystemInfo.xml) + Skin.HasSetting(ReturnHomeOnFocus)]</expression>
-
-    <expression name="Expression_InfoSlide">[[!Control.HasFocus(300) + !Control.HasFocus(302) + [[Container.Content(movies) | Container.Content(tvshows) | Container.Content(sets) | Container.Content(episodes) | Container.Content(seasons) | Container.Content(videos)] | Window.IsVisible(MyPVRGuide.xml)] + [!String.IsEmpty(Control.GetLabel(9399)) | ListItem.IsCollection]]]</expression>
-
-    <expression name="Expression_DontLowerBottomBar">[[[!Window.IsVisible(home) | Window.IsVisible(script-script.extendedinfo-DialogVideoInfo.xml) | Window.IsVisible(script-script.extendedinfo-DialogInfo.xml)] + !String.IsEqual(Window(Home).Property(LowerFurniture_BottomBar),1)] | [Window.IsVisible(Home) + [!Integer.IsEqual(Container(301).NumItems,0) | Container(301).IsUpdating] + !Window.IsVisible(script-script.extendedinfo-DialogVideoInfo.xml) + !Window.IsVisible(script-script.extendedinfo-DialogInfo.xml)]]</expression>
-
-    <expression name="Expression_LowerBottomBar">[String.IsEqual(Window(Home).Property(LowerFurniture_BottomBar),1) | [Window.IsVisible(Home) + Integer.IsEqual(Container(301).NumItems,0) + !Container(301).IsUpdating + !Window.IsVisible(script-script.extendedinfo-DialogVideoInfo.xml) + !Window.IsVisible(script-script.extendedinfo-DialogInfo.xml)]]</expression>
-
-    <expression name="Expression_InfoSlide_Home">[!Control.HasFocus(300) + !Control.HasFocus(302) + !Integer.IsEqual(Container(301).NumItems,0) + Control.IsVisible(301) + !Container(301).IsUpdating + !String.IsEmpty(Control.GetLabel(9399))]</expression>
-
-    <expression name="Expression_ShowBigPosterHome">[[[[!Control.HasFocus(300) + !String.IsEmpty(Container(302).ListItem.Property(widgetType)) + !String.IsEqual(Container(302).ListItem.Property(widgetName),Favourites)] + [String.IsEqual(Container(302).ListItem.Property(widgetType),movies) | String.IsEqual(Container(302).ListItem.Property(widgetType),sets) | String.IsEqual(Container(302).ListItem.Property(widgetType),seasons) | String.IsEqual(Container(302).ListItem.Property(widgetType),tvshows) | String.IsEqual(Container(302).ListItem.Property(widgetType),episodes) | String.IsEqual(Container(302).ListItem.Property(widgetType),videos) | String.IsEqual(Container(302).ListItem.Property(widgetType),musicvideos)]] | [[Control.HasFocus(300) | String.IsEmpty(Container(302).ListItem.Property(widgetType))] + !String.IsEqual(Container(300).ListItem.Property(widgetName),Favourites) + [String.IsEqual(Container(300).ListItem.Property(widgetType),movies) | String.IsEqual(Container(300).ListItem.Property(widgetType),sets) | String.IsEqual(Container(300).ListItem.Property(widgetType),seasons) | String.IsEqual(Container(300).ListItem.Property(widgetType),tvshows) | String.IsEqual(Container(300).ListItem.Property(widgetType),episodes) | String.IsEqual(Container(300).ListItem.Property(widgetType),videos) | String.IsEqual(Container(300).ListItem.Property(widgetType),musicvideos)]] | [[[String.IsEmpty(Container(300).ListItem.Property(widgetType)) + String.IsEmpty(Container(302).ListItem.Property(widgetType)) + !Control.HasFocus(300)] | [String.IsEmpty(Container(300).ListItem.Property(widgetType)) + Control.HasFocus(300)]] + [String.IsEqual(Skin.String(home.fallbackwidget.type),movies) | String.IsEqual(Skin.String(home.fallbackwidget.type),sets) | String.IsEqual(Skin.String(home.fallbackwidget.type),seasons) | String.IsEqual(Skin.String(home.fallbackwidget.type),tvshows) | String.IsEqual(Skin.String(home.fallbackwidget.type),episodes) | String.IsEqual(Skin.String(home.fallbackwidget.type),videos) | String.IsEqual(Skin.String(home.fallbackwidget.type),musicvideos) | String.IsEmpty(Skin.String(home.fallbackwidget.type))]]]]</expression>
 
     <variable name="ColorHighlight">
         <value condition="!String.IsEmpty(Skin.String(focuscolor.name))">$INFO[Skin.String(focuscolor.name)]</value>
@@ -52,9 +45,9 @@
 
     <variable name="GlobalFanart">
 
-        <value condition="Window.IsVisible(script-script.extendedinfo-VideoList.xml)">$INFO[Container(500).ListItem.Property(Fanart_small)]</value>
         <value condition="Window.IsVisible(script-script.extendedinfo-DialogVideoInfo.xml) + !String.IsEmpty(Window.Property(fanart_original))">$INFO[Window.Property(fanart_original)]</value>
         <value condition="Window.IsVisible(script-script.extendedinfo-DialogVideoInfo.xml) | Window.IsVisible(script-script.extendedinfo-DialogInfo.xml)">special://skin/extras/backgrounds/default.jpg</value>
+        <value condition="Window.IsVisible(script-script.extendedinfo-VideoList.xml) + !String.IsEmpty(ListItem.Property(Fanart_Image))">$INFO[ListItem.Property(Fanart_Image)]</value>
 
         <!-- Misc -->
         <value condition="Window.IsVisible(weather) + !String.IsEmpty(Skin.String(weather.fanart.path))">$INFO[Skin.String(weather.fanart.path)]$INFO[Window(Weather).Property(Current.FanartCode)]/</value>        
@@ -131,9 +124,10 @@
         <include>GlobalVideoWindow</include>
         <include>GlobalVisualisation</include>
         <control type="group">
-            <animation effect="slide" start="0" easing="out" end="0,-33" time="400" tween="quadratic" reversible="true" condition="[String.IsEqual(Window(Home).Property(ShowFurniture_TopBar),1) + !Control.HasFocus(60) + !Window.IsVisible(MyWeather.xml)] + $EXP[Expression_DontLowerBottomBar]">Conditional</animation>
-            <animation effect="slide" end="0" easing="out" start="0,-33" time="400" delay="0" tween="quadratic" reversible="true" condition="![String.IsEqual(Window(Home).Property(ShowFurniture_TopBar),1) + !Control.HasFocus(60) + !Window.IsVisible(MyWeather.xml)] + $EXP[Expression_DontLowerBottomBar]">Conditional</animation>
+            <animation effect="slide" start="0" easing="out" end="0,-66" time="600" tween="quadratic" reversible="false" condition="$EXP[Expression_ShowTopbar] + $EXP[Expression_DontLowerBottomBar]">Conditional</animation>
+            <animation effect="slide" end="0" easing="out" start="0,-66" time="600" tween="quadratic" reversible="false" condition="![$EXP[Expression_ShowTopbar] + $EXP[Expression_DontLowerBottomBar]]">Conditional</animation>
             <include>Animation_FadeInOut_Conditional</include>
+            
             <control type="multiimage" description="Fanart">
                 <visible>!Player.HasMedia | [!Skin.HasSetting(global.showvideo) + Player.HasVideo] | [!Skin.HasSetting(global.showvisualisation) + Player.HasAudio]</visible>
                 <visible>!Skin.HasSetting(global.hidefanart) | Window.IsVisible(home)</visible>

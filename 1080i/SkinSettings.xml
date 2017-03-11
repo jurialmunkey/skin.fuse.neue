@@ -1,9 +1,6 @@
 <window>
     <defaultcontrol always="true">9101</defaultcontrol>
-    <onload>SetProperty(ShowFurniture_TopBar,1,Home)</onload>
-    <onload>SetProperty(LowerFurniture_BottomBar,1,Home)</onload>
-    <onload>SetProperty(ShowFurniture_TopBar_Highlight,1,Home)</onload>
-    <onunload>ClearProperty(ShowFurniture_TopBar_Highlight,Home)</onunload>
+    <include>Defs_SettingsOnload</include>
     <controls>
         <include>GlobalSettingsBackground</include>
         <control type="group">
@@ -119,8 +116,8 @@
                         <onback>300</onback>
                         <include>Defs_Settings_Button</include>
                         <label>31283</label>
-                        <selected>Skin.HasSetting(ShowFurniture_TopBar)</selected>
-                        <onclick>Skin.ToggleSetting(ShowFurniture_TopBar)</onclick>
+                        <selected>Skin.HasSetting(ShowTopbar)</selected>
+                        <onclick>Skin.ToggleSetting(ShowTopbar)</onclick>
                     </control>
 
                     <control type="radiobutton" id="9215" description="Allow Back">
@@ -128,8 +125,8 @@
                         <onback>300</onback>
                         <include>Defs_Settings_Button</include>
                         <label>31285</label>
-                        <selected>!Skin.HasSetting(DisableNeverHome)</selected>
-                        <onclick>Skin.ToggleSetting(DisableNeverHome)</onclick>
+                        <selected>Skin.HasSetting(EnableNeverHome)</selected>
+                        <onclick>Skin.ToggleSetting(EnableNeverHome)</onclick>
                     </control>
 
                     <control type="radiobutton" id="9216" description="Show home widgets when top menu is focused">
@@ -434,8 +431,8 @@
             </control>
         </control>
         <!-- Standard Furniture -->
-        <include>Furniture_TopBar</include>
-        <include>Furniture_BottomBar</include>
+        <include>Topbar</include>
+        <include>Bottombar</include>
         <include>Furniture_Clock</include>
     </controls>
 </window>

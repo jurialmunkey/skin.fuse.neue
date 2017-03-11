@@ -48,6 +48,7 @@
 
     <include name="View_ExtendedInfo">
         <control type="fixedlist" id="500">
+            <ondown>9400</ondown>
             <include content="View_Posters_Layout">
                 <param name="id" value="500" />
             </include>
@@ -110,6 +111,7 @@
 
     <include name="View_Hub_1101">
         <control type="panel" id="50">
+            <include>View_Hub_Onclick</include>
             <include content="View_Tiles_Layout">
                 <param name="id" value="50" />
             </include>
@@ -118,6 +120,7 @@
     </include>
     <include name="View_Hub_1102">
         <control type="panel" id="50">
+            <include>View_Hub_Onclick</include>
             <include content="View_Tiles_Layout">
                 <param name="id" value="50" />
             </include>
@@ -126,6 +129,7 @@
     </include>
     <include name="View_Hub_1103">
         <control type="panel" id="50">
+            <include>View_Hub_Onclick</include>
             <include content="View_Tiles_Layout">
                 <param name="id" value="50" />
             </include>
@@ -134,6 +138,7 @@
     </include>
     <include name="View_Hub_1104">
         <control type="panel" id="50">
+            <include>View_Hub_Onclick</include>
             <include content="View_Tiles_Layout">
                 <param name="id" value="50" />
             </include>
@@ -142,6 +147,7 @@
     </include>
     <include name="View_Hub_1105">
         <control type="panel" id="50">
+            <include>View_Hub_Onclick</include>
             <include content="View_Tiles_Layout">
                 <param name="id" value="50" />
             </include>
@@ -150,6 +156,7 @@
     </include>
     <include name="View_Hub_1106">
         <control type="panel" id="50">
+            <include>View_Hub_Onclick</include>
             <include content="View_Tiles_Layout">
                 <param name="id" value="50" />
             </include>
@@ -158,6 +165,7 @@
     </include>
     <include name="View_Hub_1107">
         <control type="panel" id="50">
+            <include>View_Hub_Onclick</include>
             <include content="View_Tiles_Layout">
                 <param name="id" value="50" />
             </include>
@@ -166,6 +174,7 @@
     </include>
     <include name="View_Hub_1108">
         <control type="panel" id="50">
+            <include>View_Hub_Onclick</include>
             <include content="View_Tiles_Layout">
                 <param name="id" value="50" />
             </include>
@@ -174,11 +183,17 @@
     </include>
     <include name="View_Hub_1109">
         <control type="panel" id="50">
+            <include>View_Hub_Onclick</include>
             <include content="View_Tiles_Layout">
                 <param name="id" value="50" />
             </include>
             <content><include>skinshortcuts-group-x1109</include></content>
         </control>
+    </include>
+    <include name="View_Hub_Onclick">
+        <onclick condition="[String.Contains(ListItem.Property(path),ActivateWindow) | String.Contains(ListItem.Property(path),ReplaceWindow)]">SetProperty(ContainerFolderPath,$INFO[ListItem.Property(list)],home)</onclick>
+        <onclick>$INFO[ListItem.Property(path)]</onclick>
+        <onclick>SetFocus(50)</onclick>
     </include>
 
     <include name="View_Library">
@@ -215,7 +230,7 @@
             <onright condition="!Window.IsVisible(script-script.extendedinfo-VideoList.xml)">$PARAM[id]</onright>
             <onleft condition="Window.IsVisible(script-script.extendedinfo-VideoList.xml)">700</onleft>
             <onright condition="Window.IsVisible(script-script.extendedinfo-VideoList.xml)">600</onright>
-            <include condition="!Window.IsVisible(DialogVideoInfo.xml)">View_StandardMovement</include>
+            <include condition="!Window.IsVisible(DialogVideoInfo.xml)">View_Movement_Vertical</include>
             <preloaditems>2</preloaditems>
             <orientation>horizontal</orientation>
             <pagecontrol>60</pagecontrol>
@@ -325,7 +340,7 @@
             <bottom>20</bottom>
             <onleft>$PARAM[id]</onleft>
             <onright>$PARAM[id]</onright>
-            <include condition="!Window.IsVisible(DialogVideoInfo.xml)">View_StandardMovement</include>
+            <include condition="!Window.IsVisible(DialogVideoInfo.xml)">View_Movement_Vertical</include>
             <preloaditems>2</preloaditems>
             <orientation>horizontal</orientation>
             <pagecontrol>60</pagecontrol>
@@ -507,7 +522,7 @@
             <left>70</left>
             <top>30</top>
             <height>257</height>
-            <include condition="!Window.IsVisible(DialogVideoInfo.xml)">View_StandardMovement</include>
+            <include condition="!Window.IsVisible(DialogVideoInfo.xml)">View_Movement_Vertical</include>
             <preloaditems>2</preloaditems>
             <orientation>horizontal</orientation>
             <pagecontrol>60</pagecontrol>
@@ -569,7 +584,7 @@
             <bottom>20</bottom>
             <onleft>$PARAM[id]</onleft>
             <onright>$PARAM[id]</onright>
-            <include condition="!Window.IsVisible(DialogVideoInfo.xml)">View_StandardMovement</include>
+            <include condition="!Window.IsVisible(DialogVideoInfo.xml)">View_Movement_Vertical</include>
             <preloaditems>2</preloaditems>
             <orientation>horizontal</orientation>
             <pagecontrol>60</pagecontrol>
@@ -816,7 +831,7 @@
             <bottom>20</bottom>
             <onleft>$PARAM[id]</onleft>
             <onright>$PARAM[id]</onright>
-            <include condition="!Window.IsVisible(DialogVideoInfo.xml)">View_StandardMovement</include>
+            <include condition="!Window.IsVisible(DialogVideoInfo.xml)">View_Movement_Vertical</include>
             <preloaditems>2</preloaditems>
             <orientation>horizontal</orientation>
             <pagecontrol>60</pagecontrol>
@@ -968,7 +983,7 @@
             <height>325.25</height>
             <onleft>9100</onleft>
             <onright>61</onright>
-            <include condition="!Window.IsVisible(DialogVideoInfo.xml)">View_StandardMovement_OnBack</include>
+            <include condition="!Window.IsVisible(DialogVideoInfo.xml)">View_Movement_Horizontal</include>
             <preloaditems>2</preloaditems>
             <orientation>vertical</orientation>
             <pagecontrol>60</pagecontrol>
@@ -1122,48 +1137,44 @@
         </definition>
     </include>
 
-    <include name="View_StandardMovement">
-        <onup condition="$EXP[Expression_ReplaceWindowHome]">ReplaceWindow(Home)</onup>
-        <onup condition="!$EXP[Expression_ReplaceWindowHome] + String.IsEqual(Container(302).NumItems,0)">300</onup>
-        <onup condition="!$EXP[Expression_ReplaceWindowHome] + !String.IsEqual(Container(302).NumItems,0)">302</onup>
+    <include name="View_Movement_Vertical">
+        <onup condition="String.IsEqual(Container(302).NumItems,0)">300</onup>
+        <onup condition="!String.IsEqual(Container(302).NumItems,0)">302</onup>
         <ondown condition="Control.IsVisible(8000)">8000</ondown>
         <ondown condition="Control.IsVisible(60)">61</ondown>
-        <ondown condition="!Control.IsVisible(60) + !Control.IsVisible(8000) + Control.IsVisible(9100)">9100</ondown>
-        <include>View_StandardMovement_OnBack</include>
+        <ondown condition="!Control.IsVisible(60) + !Control.IsVisible(8000) + Control.IsVisible(9400)">9400</ondown>
+        <include>View_Movement_OnBack</include>
+        <include>View_Movement_OnFocus</include>
     </include>
-    <include name="View_StandardMovement_OnBack">
-        <include condition="!Window.IsVisible(Home)">View_StandardMovement_OnBack_Library</include>
-        <include condition="Window.IsVisible(Home)">View_StandardMovement_OnBack_Home</include>
 
-        <onunfocus>SetProperty(ShowFurniture_TopBar,1,Home)</onunfocus>
-        <onfocus>SetProperty(ShowFurniture_TopBar,0,Home)</onfocus>
+    <include name="View_Movement_Horizontal">
+        <onright condition="Control.IsVisible(60)">61</onright>
+        <onleft condition="Control.IsVisible(9400)">9400</onleft>
+        <include>View_Movement_OnBack</include>
+        <include>View_Movement_OnFocus</include>
     </include>
+
+    <include name="View_Movement_OnBack">
+        <onback condition="!Window.IsVisible(Home) + !Window.IsVisible(1101) + !Window.IsVisible(1102) + !Window.IsVisible(1103) + !Window.IsVisible(1104) + !Window.IsVisible(1105) + !Window.IsVisible(1106) + !Window.IsVisible(1107) + !Window.IsVisible(1108) + !Window.IsVisible(1109) + !Window.IsVisible(1110) + !Window.IsVisible(1111) + !String.IsEmpty(Window(Home).Property(ReturnWindow)) + String.IsEqual(Container.FolderPath,Window(Home).Property(ContainerFolderPath)) + !Skin.HasSetting(EnableNeverHome)">AlarmClock(ReturnHub,$INFO[Window(Home).Property(ReturnWindow)],00:00,silent)</onback>
+        <onback condition="String.IsEqual(Container.FolderPath,Window(Home).Property(ContainerFolderPath)) + Skin.HasSetting(EnableNeverHome)">300</onback>
+        <onback condition="Window.IsVisible(Home)">300</onback>
+    </include>
+
+    <include name="View_Movement_OnFocus">
+        <onfocus>SetProperty(ShowInfobar,1,Home)</onfocus>
+        <onfocus>SetProperty(ShowTopbar,0,Home)</onfocus>
+    </include>
+
     <include name="View_Info_Movement">
         <onup>ClearProperty(FocusedList)</onup>
         <ondown>60</ondown>
         <onup>9000</onup>
     </include>
 
-    <include name="View_StandardMovement_OnBack_Home"><onback>300</onback></include>
-
-    <include name="View_StandardMovement_OnBack_Library">
-        <!-- On Back Opens Top Bar -->
-        <onback condition="Window.IsVisible(Home) | [!String.IsEqual(Window(Home).Property(OpenHub),1) + String.IsEqual(Container.FolderPath,Window(Home).Property(Container_FolderPath)) + !Skin.HasSetting(DisableNeverHome) + !$EXP[Expression_ReplaceWindowHome]]">300</onback>
-
-        <!-- Return Back to Hub on back -->
-        <onback condition="[String.IsEqual(Window(Home).Property(OpenHub),1) + String.IsEqual(Container.FolderPath,Window(Home).Property(Container_FolderPath)) + !Skin.HasSetting(DisableNeverHome)] + ![Window.IsVisible(1101) | Window.IsVisible(1102) | Window.IsVisible(1103) | Window.IsVisible(1104) | Window.IsVisible(1105) | Window.IsVisible(1106) | Window.IsVisible(1107) | Window.IsVisible(1108) | Window.IsVisible(1109)]">AlarmClock(ReturnHub,$INFO[Window(Home).Property(ReturnHub)],00:00,silent)</onback>
-
-        <!-- Open Hub Open Top Bar -->
-        <onback condition="[String.IsEqual(Window(Home).Property(OpenHub),1) + [Window.IsVisible(1101) | Window.IsVisible(1102) | Window.IsVisible(1103) | Window.IsVisible(1104) | Window.IsVisible(1105) | Window.IsVisible(1106) | Window.IsVisible(1107) | Window.IsVisible(1108) | Window.IsVisible(1109)] + !Skin.HasSetting(DisableNeverHome) + !$EXP[Expression_ReplaceWindowHome]]">300</onback>
-        
-        <!-- Return From Plugin -->
-        <onback condition="String.IsEqual(Window(Home).Property(OpenHub),1) + ![Window.IsVisible(1101) | Window.IsVisible(1102) | Window.IsVisible(1103) | Window.IsVisible(1104) | Window.IsVisible(1105) | Window.IsVisible(1106) | Window.IsVisible(1107) | Window.IsVisible(1108) | Window.IsVisible(1109)] + String.IsEqual(Container.FolderPath,Window(home).Property(WindowBaseReturn))">AlarmClock(ReturnHub,$INFO[Window(Home).Property(ReturnHub)],00:00,silent)</onback>
-        <onback condition="!String.IsEqual(Window(Home).Property(OpenHub),1) + String.IsEqual(Container.FolderPath,Window(home).Property(WindowBaseReturn)) + Skin.HasSetting(DisableNeverHome)">AlarmClock(ReturnHub,ReplaceWindow(Home),00:00,silent)</onback>
-        <onback condition="!String.IsEqual(Window(Home).Property(OpenHub),1) + String.IsEqual(Container.FolderPath,Window(home).Property(WindowBaseReturn)) + Skin.HasSetting(DisableNeverHome)">AlarmClock(ReturnHub,SetFocus(300),00:00,silent)</onback>
-        <onback condition="!String.IsEqual(Window(Home).Property(OpenHub),1) + String.IsEqual(Container.FolderPath,Window(home).Property(WindowBaseReturn)) + !Skin.HasSetting(DisableNeverHome)">300</onback>
-
-        <!-- Replace Window Home Go Back -->
-        <onback condition="[!String.IsEqual(Window(Home).Property(OpenHub),1) + String.IsEqual(Container.FolderPath,Window(Home).Property(Container_FolderPath)) + !Skin.HasSetting(DisableNeverHome) + $EXP[Expression_ReplaceWindowHome]]">ReplaceWindow(home)</onback>
+    <include name="View_Info_Movement_Horizontal">
+        <onleft>ClearProperty(FocusedList)</onleft>
+        <onright>60</onright>
+        <onleft>9000</onleft>
     </include>
 
     <include name="View_List_ItemLayout">

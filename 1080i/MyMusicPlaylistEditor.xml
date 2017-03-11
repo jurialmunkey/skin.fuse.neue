@@ -7,7 +7,7 @@
     <controls>
 
         <include>GlobalBackground</include>
-        <include>Furniture_TopBar</include>
+        <include>Topbar</include>
 
         <control type="label" id="12">
             <visible>false</visible>

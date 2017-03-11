@@ -5,8 +5,8 @@
     <onload condition="Player.PauseEnabled + String.IsEmpty(Window(Home).Property(OSDViewMode))">SetFocus(14)</onload>
     <onload condition="!String.IsEmpty(Window(Home).Property(OSDViewMode))">SetFocus(9003)</onload>
     <onload condition="!String.IsEmpty(Window(Home).Property(OSDViewMode))">ClearProperty(OSDViewMode,Home)</onload>
-    <onload>SetProperty(ShowFurniture_TopBar,1,Home)</onload>
-    <onunload>SetProperty(ShowFurniture_TopBar,0,Home)</onunload>
+    <onload>SetProperty(ShowTopbar,1,Home)</onload>
+    <onunload>SetProperty(ShowTopbar,0,Home)</onunload>
     <zorder>1</zorder>
     <controls>
 

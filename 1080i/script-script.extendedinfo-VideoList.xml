@@ -3,21 +3,21 @@
     <defaultcontrol always="true">500</defaultcontrol>
     <views>500</views>
     <onload>SetFocus(500)</onload>
-    <onload>SetProperty(LowerFurniture_BottomBar,0,Home)</onload>
+    <include>Defs_SetStartWindow</include>
     <controls>
 
         <include>GlobalBackground</include>
-        <include>Furniture_BottomBar</include>
+        <include>Bottombar</include>
         <include>Furniture_BigPoster</include>
         <control type="group">
             <bottom>0</bottom>
             <left>0</left>
             <right>0</right>
             <height>48</height>
-            <include>Furniture_BottomBar_Texture</include>
+            <include>Bottombar_Texture</include>
             <include>Furniture_DateTime</include>
             <include>Furniture_ItemCount</include>
-            <control type="button" id="9100">
+            <control type="button" id="9400">
                 <left>12</left>
                 <label>33063</label>
                 <onup>60</onup>
@@ -45,8 +45,8 @@
                     <width>450</width>
                     <top>16</top>
                     <itemgap>0</itemgap>
-                    <onleft>9100</onleft>
-                    <onright>9100</onright>
+                    <onleft>500</onleft>
+                    <onright>500</onright>
                     <include>Defs_Options_Grouplist</include>
                     <control type="button" id="6000">
                         <align>left</align>

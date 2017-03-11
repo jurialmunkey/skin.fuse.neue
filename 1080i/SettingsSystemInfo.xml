@@ -2,11 +2,7 @@
 <!-- Foundation -->
 <window id="7">
     <defaultcontrol always="true">95</defaultcontrol>
-    <onload>SetProperty(ShowFurniture_TopBar,1,Home)</onload>
-    <onload>SetProperty(LowerFurniture_BottomBar,1,Home)</onload>
-    <onload>SetProperty(ShowFurniture_TopBar_Highlight,1,Home)</onload>
-    <onunload>ClearProperty(ShowFurniture_TopBar_Highlight,Home)</onunload>
-    <onload>ClearProperty(ViewType,Home)</onload>
+    <include>Defs_SettingsOnload</include>
     <controls>
 
         <include>GlobalSettingsBackground</include>
@@ -258,8 +254,8 @@
         </control>
 
         <!-- Standard Furniture -->
-        <include>Furniture_TopBar</include>
-        <include>Furniture_BottomBar</include>
+        <include>Topbar</include>
+        <include>Bottombar</include>
         <include>Furniture_Clock</include>
     </controls>
 

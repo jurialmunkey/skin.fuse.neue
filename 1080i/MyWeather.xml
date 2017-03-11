@@ -3,15 +3,15 @@
 <window id="2600">
     <defaultcontrol always="true">9100</defaultcontrol>
     <menucontrol>9000</menucontrol>
-    <onload>SetProperty(LowerFurniture_BottomBar,1,Home)</onload>
+    <onload>SetProperty(LowerBottombar,1,Home)</onload>
     <controls>
 
         <include>GlobalBackground</include>
         <include>Furniture_Weather</include>
         
         <!-- Standard Furniture -->
-        <include>Furniture_TopBar</include>
-        <include>Furniture_BottomBar</include>
+        <include>Topbar</include>
+        <include>Bottombar</include>
         <include>Furniture_Clock</include>
 
         <!-- Options -->

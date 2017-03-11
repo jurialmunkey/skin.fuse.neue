@@ -15,7 +15,7 @@
     <controls>
 
         <include>GlobalBackground</include>
-        <include>Furniture_BottomBar_OnlyInfo</include>
+        <include>Bottombar_Plain</include>
         <control type="group">
             
             <control type="group">
@@ -354,7 +354,7 @@
                 <visible allowhiddenfocus="true">String.IsEqual(Window(Home).Property(FocusedList),850) | Control.HasFocus(850)</visible>
                 <include>Animation_FadeIn</include>
                 <include>Animation_FadeOut</include>
-                <include>View_Info_Movement</include>
+                <include>View_Info_Movement_Horizontal</include>
                 <animation effect="fade" start="100" end="0" time="0" condition="Container(850).IsUpdating">Conditional</animation>
                 <include content="View_List_Layout">
                     <param name="id" value="850" />
@@ -368,7 +368,7 @@
                 <visible allowhiddenfocus="true">String.IsEqual(Window(Home).Property(FocusedList),950) | Control.HasFocus(950)</visible>
                 <include>Animation_FadeIn</include>
                 <include>Animation_FadeOut</include>
-                <include>View_Info_Movement</include>
+                <include>View_Info_Movement_Horizontal</include>
                 <animation effect="fade" start="100" end="0" time="0" condition="Container(950).IsUpdating">Conditional</animation>
                 <include content="View_List_Layout">
                     <param name="id" value="950" />
@@ -421,7 +421,7 @@
             <include>Animation_FadeIn</include>
             <include>Animation_FadeOut</include>
             <visible>!String.IsEmpty(Window(Home).Property(FocusedList))</visible>
-            <visible>[Control.IsVisible(150) + !Container(150).IsUpdating] | [Control.IsVisible(250) + !Container(250).IsUpdating] | [Control.IsVisible(350) + !Container(350).IsUpdating] | [Control.IsVisible(750) + !Container(750).IsUpdating] | [Control.IsVisible(850) + !Container(850).IsUpdating] | [Control.IsVisible(950) + !Container(950).IsUpdating] | [Control.IsVisible(1000) + !Container(1000).IsUpdating]</visible>
+            <visible>[Control.IsVisible(150) + !Container(150).IsUpdating] | [Control.IsVisible(250) + !Container(250).IsUpdating] | [Control.IsVisible(350) + !Container(350).IsUpdating] | [Control.IsVisible(750) + !Container(750).IsUpdating] | [Control.IsVisible(1000) + !Container(1000).IsUpdating]</visible>
         </control>
         <include>Furniture_InfoClock</include>
 

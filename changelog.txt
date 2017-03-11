@@ -1,3 +1,8 @@
+[B]0.9.15[/B]
+Rewrite some code
+Add ExtendedInfo button in dialog
+Add indicator for library items in extended info views
+
 [B]0.9.14[/B]
 Extended info same as videoinfo
 

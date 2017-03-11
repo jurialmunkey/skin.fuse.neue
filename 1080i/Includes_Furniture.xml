@@ -307,378 +307,13 @@
         </control>
     </include>
 
-    <include name="Furniture_BottomBar_OnlyInfo">
-        <control type="group">
-            <include>Furniture_BottomBar_InfoBar</include>
-            <control type="group">
-                <bottom>0</bottom>
-                <left>0</left>
-                <right>0</right>
-                <height>420</height>
-                <include>Furniture_BottomBar_Texture</include>
-            </control>
-        </control>
-    </include>
-
-    <include name="Furniture_BottomBar_InfoBar">
-        <animation type="WindowOpen" reversible="false" condition="Window.Previous(MusicVisualisation.xml) | Window.Previous(VideoFullScreen.xml) | Window.Previous(Startup.xml)">
-            <effect type="fade" start="0" end="100" time="200" delay="0" />
-        </animation>
-        <animation effect="slide" start="0" end="0,400" time="400" delay="0" tween="quadratic" easing="out" reversible="false" condition="$EXP[Expression_LowerBottomBar]">Conditional</animation>
-        <animation effect="slide" end="0" start="0,400" time="400" delay="0" tween="quadratic" easing="out" reversible="false" condition="$EXP[Expression_DontLowerBottomBar]">Conditional</animation>
-        <control type="group">
-            <bottom>0</bottom>
-            <left>0</left>
-            <right>0</right>
-            <height>520</height>
-            <!-- Hide the Infobar when Furniture_BottomBar is lowered -->
-            <animation effect="slide" reversible="false" condition="$EXP[Expression_DontLowerBottomBar]" end="0" start="0,160" time="400" delay="0" tween="quadratic" easing="out">Conditional</animation>
-            <animation effect="slide" reversible="false" condition="$EXP[Expression_LowerBottomBar]" start="0" end="0,160" time="400" delay="0" tween="quadratic" easing="out">Conditional</animation>
-
-            <animation effect="slide" start="0" end="0,-160" time="400" delay="0" tween="quadratic" easing="out" reversible="false" condition="$EXP[Expression_InfoSlide_Home] + $EXP[Expression_ShowBigPosterHome] + Window.IsVisible(Home)">Conditional</animation>
-            <animation effect="slide" end="0" start="0,-160" time="400" delay="0" tween="quadratic" easing="out" reversible="false" condition="![$EXP[Expression_InfoSlide_Home] + $EXP[Expression_ShowBigPosterHome]] + Window.IsVisible(Home)">Conditional</animation>
-
-            <animation effect="slide" start="0" end="0,-160" time="400" delay="0" tween="quadratic" easing="out" reversible="false" condition="$EXP[Expression_InfoSlide] + !Window.IsVisible(Home)">Conditional</animation>
-            <animation effect="slide" end="0" start="0,-160" time="400" delay="0" tween="quadratic" easing="out" reversible="false" condition="!$EXP[Expression_InfoSlide] + !Window.IsVisible(Home)">Conditional</animation>
-            
-            <animation effect="slide" end="0,160" start="0" time="400" delay="0" tween="quadratic" easing="out" reversible="false" condition="$EXP[Expression_InfoSlide] + !Window.IsVisible(Home)">WindowClose</animation>
-            <control type="image">
-                <top>-12</top>
-                <height>12</height>
-                <width>100%</width>
-                <texture flipy="true">common/shadow-line-24px.png</texture>
-            </control>
-            <control type="image">
-                <bottom>0</bottom>
-                <top>0</top>
-                <texture colordiffuse="panel_bg">common/white.png</texture>
-            </control>
-            <control type="group">
-                <height>100</height>
-                <top>0</top>
-                <animation type="WindowOpen" reversible="false" condition="Window.Previous(MusicVisualisation.xml) | Window.Previous(VideoFullScreen.xml) | Window.Previous(Startup.xml)">
-                    <effect type="fade" start="0" end="100" time="200" delay="400" />
-                </animation>
-                <include>Animation_FadeIn</include>
-                <include>Animation_FadeOut</include>
-                <include content="Furniture_Flags" condition="Window.IsVisible(Home)">
-                    <param name="container" value="Container(301)." />
-                </include>
-                <include content="Furniture_Flags" condition="!Window.IsVisible(Home)">
-                    <param name="container" value="" />
-                </include>
-            </control>
-            <control type="group">
-                <animation type="WindowOpen" reversible="false" condition="Window.Previous(MusicVisualisation.xml) | Window.Previous(VideoFullScreen.xml) | Window.Previous(Startup.xml)">
-                    <effect type="fade" start="0" end="100" time="200" delay="400" />
-                </animation>
-                <include>Animation_FadeIn</include>
-                <include>Animation_FadeOut</include>
-                <include condition="!Window.IsVisible(MyPVRGuide.xml) + !Window.IsVisible(Home)">Furniture_BottomBar_StandardInfo</include>
-                <include condition="Window.IsVisible(Home)">Furniture_BottomBar_HomeInfo</include>
-                <include condition="Window.IsVisible(MyPVRGuide.xml)">Furniture_BottomBar_PVRGuideInfo</include>
-            </control>
-        </control>
-    </include>
-
-    <include name="Furniture_BottomBar">
-        <control type="group">
-            <include>Furniture_BottomBar_InfoBar</include>
-            <control type="group">
-                <bottom>0</bottom>
-                <left>0</left>
-                <right>0</right>
-                <height>420</height>
-                <include>Furniture_BottomBar_Texture</include>
-                <control type="group">
-                    <left>534</left>
-                    <visible>[!Window.IsVisible(DialogVideoInfo.xml) + !Window.IsVisible(DialogMusicInfo.xml) + !Window.IsVisible(DialogAddonInfo.xml) + !Window.IsVisible(DialogPVRInfo.xml)] | Window.IsVisible(script-script.extendedinfo-VideoList.xml)</visible>
-                    <animation type="WindowOpen" reversible="false" condition="Window.Previous(MusicVisualisation.xml) | Window.Previous(VideoFullScreen.xml) | Window.Previous(Startup.xml)">
-                        <effect type="slide" start="350" end="0" time="400" delay="200" tween="quadratic" easing="out" />
-                        <effect type="fade" start="0" end="100" time="200" delay="200" />
-                    </animation>
-                    <include>Animation_FadeInOut_Conditional</include>
-                    <include condition="Window.IsVisible(Home)">View_Home_Widget</include>
-                    <include condition="!Window.IsVisible(Home) + !Window.IsVisible(script-script.extendedinfo-VideoList.xml) + !Window.IsVisible(script-script.extendedinfo-DialogVideoInfo.xml) + !Window.IsVisible(script-script.extendedinfo-DialogInfo.xml) + !Window.IsVisible(1111) + !Window.IsVisible(EventLog.xml) + !Window.IsVisible(MyPVRChannels.xml) + !Window.IsVisible(MyPVRTimers.xml) + !Window.IsVisible(MyPVRRecordings.xml) + !Window.IsVisible(MyPVRSearch.xml) + !Window.IsVisible(1101) + !Window.IsVisible(1102) + !Window.IsVisible(1103) + !Window.IsVisible(1104) + !Window.IsVisible(1105) + !Window.IsVisible(1106) + !Window.IsVisible(1107) + !Window.IsVisible(1108) + !Window.IsVisible(1109)">View_Library</include>
-                    <include condition="Window.IsVisible(script-script.extendedinfo-VideoList.xml)">View_ExtendedInfo</include>
-                    <include condition="Window.IsVisible(1111)">View_AddonsPage</include>
-                    <include condition="Window.IsVisible(EventLog.xml)">View_EventLog</include>
-                    <include condition="[Window.IsVisible(MyPVRChannels.xml) | Window.IsVisible(MyPVRTimers.xml) | Window.IsVisible(MyPVRRecordings.xml) | Window.IsVisible(MyPVRSearch.xml)]">View_PVR</include>
-                    <include condition="Window.IsVisible(1101)">View_Hub_1101</include>
-                    <include condition="Window.IsVisible(1102)">View_Hub_1102</include>
-                    <include condition="Window.IsVisible(1103)">View_Hub_1103</include>
-                    <include condition="Window.IsVisible(1104)">View_Hub_1104</include>
-                    <include condition="Window.IsVisible(1105)">View_Hub_1105</include>
-                    <include condition="Window.IsVisible(1106)">View_Hub_1106</include>
-                    <include condition="Window.IsVisible(1107)">View_Hub_1107</include>
-                    <include condition="Window.IsVisible(1108)">View_Hub_1108</include>
-                    <include condition="Window.IsVisible(1109)">View_Hub_1109</include>
-                </control>
-            </control>
-            <control type="group">
-                <visible>!Window.IsVisible(DialogVideoInfo.xml) + !Window.IsVisible(DialogMusicInfo.xml) + !Window.IsVisible(DialogAddonInfo.xml) + !Window.IsVisible(script-script.extendedinfo-DialogVideoInfo.xml) + !Window.IsVisible(script-script.extendedinfo-DialogInfo.xml)</visible>
-                <visible>[Window.IsVisible(home) + [!Integer.IsEqual(Container(301).NumItems,0) | Container(301).IsUpdating]] | !Window.IsVisible(home)</visible>
-                <include>Furniture_AlphabetStrip</include>
-                <!-- Busy Spinner -->
-                <control type="group">
-                    <left>0</left>
-                    <right>0</right>
-                    <bottom>0</bottom>
-                    <height>420</height>
-                    <visible>Window.IsVisible(home)</visible>
-                    <animation effect="fade" start="100" end="0" time="0" condition="!Container(301).IsUpdating" reversible="false">Conditional</animation>
-                    <animation effect="fade" start="0" end="100" time="350" tween="cubic" easing="inout" condition="Container(301).IsUpdating" reversible="false">Conditional</animation>
-                    <include content="Defs_BusySpinner">
-                        <param name="label" value="$LOCALIZE[31138]..."/>
-                    </include>
-                </control>
-            </control>
-        </control>
-    </include>
-
-    <include name="Furniture_BottomBar_PVRGuideInfo">
-        <control type="group">
-            <left>30</left>
-            <right>30</right>
-            <height>100</height>
-            <top>0</top>
-            <control type="grouplist">
-                <orientation>horizontal</orientation>
-                <itemgap>20</itemgap>
-                <top>0</top>
-                <bottom>33%</bottom>
-                <usecontrolcoords>true</usecontrolcoords>
-                <control type="label">
-                    <width>auto</width>
-                    <scroll>true</scroll>
-                    <font>font_infobar_mainlabel</font>
-                    <textcolor>panel_fg_100</textcolor>
-                    <label>$INFO[ListItem.Title]</label>
-                    <aligny>center</aligny>
-                </control>
-                <control type="label">
-                    <top>7</top>
-                    <width>auto</width>
-                    <font>font_infobar_sublabel</font>
-                    <textcolor>panel_fg_100</textcolor>
-                    <label>[COLOR=panel_fg_70]$INFO[ListItem.ChannelNumber,,. ]$INFO[ListItem.ChannelName,,  •  ][/COLOR]$INFO[ListItem.StartTime]$INFO[ListItem.EndTime, - ,  [COLOR=panel_fg_70]•[/COLOR]  ][COLOR=$VAR[ColorHighlight]]$INFO[ListItem.Genre][/COLOR]</label>
-                    <aligny>center</aligny>
-                    <visible>Player.HasVideo</visible>
-                </control>
-            </control>
-            <control type="label">
-                <left>0</left>
-                <right>0</right>
-                <font>font_infobar_sublabel</font>
-                <textcolor>panel_fg_100</textcolor>
-                <label>[COLOR=panel_fg_70]$INFO[ListItem.ChannelNumber,,. ]$INFO[ListItem.ChannelName,,  •  ][/COLOR]$INFO[ListItem.StartTime]$INFO[ListItem.EndTime, - ,  [COLOR=panel_fg_70]•[/COLOR]  ][COLOR=$VAR[ColorHighlight]]$INFO[ListItem.Genre][/COLOR]</label>
-                <aligny>center</aligny>
-                <bottom>0</bottom>
-                <top>33%</top>
-                <visible>!Player.HasVideo</visible>
-            </control>
-            <control type="label">
-                <left>0</left>
-                <right>0</right>
-                <font>font_infobar_sublabel</font>
-                <textcolor>panel_fg_100</textcolor>
-                <label>$INFO[ListItem.Plot]</label>
-                <aligny>center</aligny>
-                <bottom>0</bottom>
-                <top>33%</top>
-                <visible>Player.HasVideo</visible>
-            </control>
-        </control>
-        <control type="group">
-            <control type="group">
-                <top>108</top>
-                <height>130</height>
-                <left>30</left>
-                <right>30</right>
-                <control type="textbox" id="9399">
-                    <label>$VAR[Label_Plot]</label>
-                    <font>font_plotbox</font>
-                    <textcolor>panel_fg_100</textcolor>
-                </control>
-            </control>
-        </control>
-    </include>
-
-    <include name="Furniture_BottomBar_StandardInfo">
-        <control type="group">
-            <left>614</left>
-            <right>614</right>
-            <height>100</height>
-            <top>0</top>
-            <visible>!String.IsEmpty(ListItem.VideoCodec) | !String.IsEmpty(ListItem.VideoAspect) | !String.IsEmpty(ListItem.AudioCodec) | !String.IsEmpty(ListItem.AudioChannels) | !String.IsEmpty(Container(301).ListItem.VideoCodec) | !String.IsEmpty(Container(301).ListItem.VideoAspect) | !String.IsEmpty(Container(301).ListItem.AudioCodec) | !String.IsEmpty(Container(301).ListItem.AudioChannels)</visible>
-            <visible>Window.IsVisible(script-script.extendedinfo-DialogInfo.xml) | Window.IsVisible(script-script.extendedinfo-DialogVideoInfo.xml) | !Window.IsVisible(DialogVideoInfo.xml) | String.IsEmpty(Window(Home).Property(FocusedList))</visible>
-            <include>Animation_FadeOut</include>
-            <control type="label">
-                <left>0</left>
-                <right>0</right>
-                <scroll>true</scroll>
-                <scrollsuffix>. </scrollsuffix>
-                <font>font_infobar_mainlabel</font>
-                <textcolor>panel_fg_100</textcolor>
-                <label>$VAR[Label_Title]</label>
-                <aligny>center</aligny>
-                <top>0</top>
-                <bottom>33%</bottom>
-            </control>
-            <control type="label">
-                <left>0</left>
-                <right>0</right>
-                <font>font_infobar_sublabel</font>
-                <textcolor>panel_fg_100</textcolor>
-                <label>$VAR[Label_InfoLine]</label>
-                <aligny>center</aligny>
-                <bottom>0</bottom>
-                <top>33%</top>
-            </control>
-        </control>
-        <control type="group">
-            <left>614</left>
-            <right>30</right>
-            <height>100</height>
-            <top>0</top>
-            <visible>String.IsEmpty(ListItem.VideoCodec) + String.IsEmpty(ListItem.VideoAspect) + String.IsEmpty(ListItem.AudioCodec) + String.IsEmpty(ListItem.AudioChannels) + String.IsEmpty(Container(301).ListItem.VideoCodec) + String.IsEmpty(Container(301).ListItem.VideoAspect) + String.IsEmpty(Container(301).ListItem.AudioCodec) + String.IsEmpty(Container(301).ListItem.AudioChannels)</visible>
-            <visible>Window.IsVisible(script-script.extendedinfo-DialogInfo.xml) | Window.IsVisible(script-script.extendedinfo-DialogVideoInfo.xml) | !Window.IsVisible(DialogVideoInfo.xml) | String.IsEmpty(Window(Home).Property(FocusedList))</visible>
-            <include>Animation_FadeOut</include>
-            <control type="label">
-                <left>0</left>
-                <right>0</right>
-                <scroll>true</scroll>
-                <scrollsuffix>. </scrollsuffix>
-                <font>font_infobar_mainlabel</font>
-                <textcolor>panel_fg_100</textcolor>
-                <label>$VAR[Label_Title]</label>
-                <aligny>center</aligny>
-                <top>0</top>
-                <bottom>33%</bottom>
-            </control>
-            <control type="label">
-                <left>0</left>
-                <right>0</right>
-                <font>font_infobar_sublabel</font>
-                <textcolor>panel_fg_100</textcolor>
-                <label>$VAR[Label_InfoLine]</label>
-                <aligny>center</aligny>
-                <bottom>0</bottom>
-                <top>33%</top>
-            </control>
-        </control>
-        <control type="group">
-            <top>108</top>
-            <height>130</height>
-            <left>614</left>
-            <right>30</right>
-            <control type="textbox" id="9399">
-                <label>$VAR[Label_Plot]</label>
-                <font>font_plotbox</font>
-                <textcolor>panel_fg_100</textcolor>
-            </control>
-        </control>
-    </include>
-
-    <include name="Furniture_BottomBar_HomeInfo">
-        <control type="group">
-            <visible>[Control.IsVisible(301) + !Container(301).IsUpdating + !Integer.IsEqual(Container(301).NumItems,0)] | Window.IsVisible(script-script.extendedinfo-DialogInfo.xml) | Window.IsVisible(script-script.extendedinfo-DialogVideoInfo.xml)</visible>
-            <control type="group">
-                <left>614</left>
-                <right>614</right>
-                <height>100</height>
-                <top>0</top>
-                <visible>!String.IsEmpty(ListItem.VideoCodec) | !String.IsEmpty(ListItem.VideoAspect) | !String.IsEmpty(ListItem.AudioCodec) | !String.IsEmpty(ListItem.AudioChannels) | !String.IsEmpty(Container(301).ListItem.VideoCodec) | !String.IsEmpty(Container(301).ListItem.VideoAspect) | !String.IsEmpty(Container(301).ListItem.AudioCodec) | !String.IsEmpty(Container(301).ListItem.AudioChannels)</visible>
-                <visible>Window.IsVisible(script-script.extendedinfo-DialogInfo.xml) | Window.IsVisible(script-script.extendedinfo-DialogVideoInfo.xml) | !Window.IsVisible(DialogVideoInfo.xml) | String.IsEmpty(Window(Home).Property(FocusedList))</visible>
-                <control type="label">
-                    <left>0</left>
-                    <right>0</right>
-                    <font>font_infobar_mainlabel</font>
-                    <textcolor>panel_fg_100</textcolor>
-                    <label>$VAR[WidgetTitle]</label>
-                    <aligny>center</aligny>
-                    <top>0</top>
-                    <bottom>33%</bottom>
-                </control>
-                <control type="label">
-                    <left>0</left>
-                    <right>0</right>
-                    <font>font_infobar_sublabel</font>
-                    <textcolor>panel_fg_100</textcolor>
-                    <label>$VAR[WidgetSubLabel]</label>
-                    <aligny>center</aligny>
-                    <top>33%</top>
-                    <bottom>0</bottom>
-                </control>
-            </control>
-            <control type="group">
-                <left>614</left>
-                <right>30</right>
-                <height>100</height>
-                <top>0</top>
-                <visible>String.IsEmpty(ListItem.VideoCodec) + String.IsEmpty(ListItem.VideoAspect) + String.IsEmpty(ListItem.AudioCodec) + String.IsEmpty(ListItem.AudioChannels) + String.IsEmpty(Container(301).ListItem.VideoCodec) + String.IsEmpty(Container(301).ListItem.VideoAspect) + String.IsEmpty(Container(301).ListItem.AudioCodec) + String.IsEmpty(Container(301).ListItem.AudioChannels)</visible>
-                <visible>Window.IsVisible(script-script.extendedinfo-DialogInfo.xml) | Window.IsVisible(script-script.extendedinfo-DialogVideoInfo.xml) | !Window.IsVisible(DialogVideoInfo.xml) | String.IsEmpty(Window(Home).Property(FocusedList))</visible>
-                <control type="label">
-                    <left>0</left>
-                    <right>0</right>
-                    <font>font_infobar_mainlabel</font>
-                    <textcolor>panel_fg_100</textcolor>
-                    <label>$VAR[WidgetTitle]</label>
-                    <aligny>center</aligny>
-                    <top>0</top>
-                    <bottom>33%</bottom>
-                </control>
-                <control type="label">
-                    <left>0</left>
-                    <right>0</right>
-                    <font>font_infobar_sublabel</font>
-                    <textcolor>panel_fg_100</textcolor>
-                    <label>$VAR[WidgetSubLabel]</label>
-                    <aligny>center</aligny>
-                    <top>33%</top>
-                    <bottom>0</bottom>
-                </control>
-            </control>
-            <control type="group">
-                <top>108</top>
-                <height>130</height>
-                <left>614</left>
-                <right>30</right>
-                <control type="textbox" id="9399">
-                    <label>$VAR[WidgetPlot]</label>
-                    <font>font_plotbox</font>
-                    <textcolor>panel_fg_100</textcolor>
-                </control>
-            </control>
-        </control>
-    </include>
-
-    <include name="Furniture_BottomBar_Texture">
-        <control type="image">
-            <top>-24</top>
-            <height>24</height>
-            <width>100%</width>
-            <texture flipy="true">common/shadow-line-24px.png</texture>
-        </control>
-        <control type="image">
-            <bottom>0</bottom>
-            <top>0</top>
-            <texture>common/gradient-solid.png</texture>
-        </control>
-        <control type="image">
-            <top>0</top>
-            <height>1</height>
-            <texture colordiffuse="highlight_bottombar">common/white.png</texture>
-        </control>
-    </include>
-
     <include name="Furniture_Clock">
         <control type="group">
             <bottom>0</bottom>
             <left>0</left>
             <right>0</right>
             <height>48</height>
-            <include>Furniture_BottomBar_Texture</include>
+            <include>Furniture_Statusbar_Texture</include>
             <include>Furniture_PlayerProgress</include>
             <include>Furniture_DateTime</include>
             <include>Furniture_MenuBar</include>
@@ -720,13 +355,32 @@
         </control>
     </include>
 
+    <include name="Furniture_Statusbar_Texture">
+        <control type="image">
+            <top>-24</top>
+            <height>24</height>
+            <width>100%</width>
+            <texture flipy="true">common/shadow-line-24px.png</texture>
+        </control>
+        <control type="image">
+            <bottom>0</bottom>
+            <top>0</top>
+            <texture>common/gradient-solid.png</texture>
+        </control>
+        <control type="image">
+            <top>0</top>
+            <height>1</height>
+            <texture colordiffuse="highlight_bottombar">common/white.png</texture>
+        </control>
+    </include>
+
     <include name="Furniture_InfoClock">
         <control type="group">
             <bottom>0</bottom>
             <left>0</left>
             <right>0</right>
             <height>48</height>
-            <include>Furniture_BottomBar_Texture</include>
+            <include>Furniture_Statusbar_Texture</include>
             <include>Furniture_PlayerProgress</include>
             <include>Furniture_DateTime</include>
             <control type="group">
@@ -871,7 +525,7 @@
     </include>
 
     <include name="Furniture_MenuBar">
-        <control type="grouplist" id="9100">
+        <control type="grouplist" id="9400">
             <orientation>horizontal</orientation>
             <left>8</left>
             <height>48</height>
@@ -946,8 +600,7 @@
         <width>auto</width>
         <height>100%</height>
         <textoffsetx>56</textoffsetx>
-        <onunfocus>SetProperty(ShowFurniture_TopBar,1,Home)</onunfocus>
-        <onfocus>SetProperty(ShowFurniture_TopBar,0,Home)</onfocus>
+        <include>View_Movement_OnFocus</include>
     </include>
 
     <include name="Furniture_MenuBar_Items">
@@ -1183,6 +836,34 @@
         </definition>
     </include>
 
+    <include name="Furniture_SettingsPanel">
+        <animation type="Visible" reversible="false">
+            <effect type="slide" start="0,160" end="0" time="400" tween="quadratic" easing="out" />
+            <effect type="fade" start="0" end="100" time="200" />
+        </animation>
+        <animation type="Hidden" reversible="false">
+            <effect type="slide" end="0,160" start="0" time="400" tween="quadratic" easing="out" />
+            <effect type="fade" end="0" start="100" time="200" />
+        </animation>
+        <animation type="WindowOpen" reversible="false">
+            <effect type="slide" start="0,700" end="0" time="400" tween="quadratic" easing="out" />
+            <effect type="fade" start="0" end="100" time="200" />
+        </animation>
+        <animation type="WindowClose" reversible="false">
+            <effect type="fade" end="0" start="100" time="200" delay="200"/>
+        </animation>
+        <left>-16</left>
+        <right>-16</right>
+        <top>182</top>
+        <height>866</height>
+
+        <control type="image">
+            <width>100%</width>
+            <height>150%</height>
+            <texture border="16" colordiffuse="panel_bg">common/rounded-shadow8.png</texture>
+        </control>
+    </include>
+
     <include name="Furniture_AlphabetStrip">
         <control type="panel" id="8000">
             <orientation>horizontal</orientation>
@@ -1190,8 +871,7 @@
             <height>48</height>
             <bottom>75</bottom>
             <onup>50</onup>
-            <ondown>9100</ondown>
-            <onfocus>SetProperty(ShowFurniture_TopBar,0,Home)</onfocus>
+            <ondown>9400</ondown>
             <width>1246</width>
             <visible>String.IsEqual(Container.SortMethod,$LOCALIZE[556]) | String.IsEqual(Container.SortMethod,$LOCALIZE[557]) | String.IsEqual(Container.SortMethod,$LOCALIZE[558])</visible>
             <visible>!Container.Content(seasons)</visible>
@@ -1260,12 +940,12 @@
             <bottom>94</bottom>
             <height>8</height>
             <visible allowhiddenfocus="true">false</visible>
-            <onfocus>SetProperty(ShowFurniture_TopBar,0,Home)</onfocus>
             <onleft>60</onleft>
             <onright>60</onright>
             <ondown>60</ondown>
             <onup>60</onup>
             <onfocus>SetFocus(60)</onfocus>
+            <include>View_Movement_OnFocus</include>
         </control>
         <control type="scrollbar" id="60">
             <onback>50</onback>
@@ -1277,7 +957,7 @@
             <onup condition="Window.IsVisible(home)">301</onup>
             <onup condition="!Window.IsVisible(home) + !Window.IsVisible(script-script.extendedinfo-VideoList.xml)">50</onup>
             <onup condition="Window.IsVisible(script-script.extendedinfo-VideoList.xml)">500</onup>
-            <ondown>9100</ondown>
+            <ondown>9400</ondown>
             <texturesliderbackground colordiffuse="main_fg_12">osd/progress-end.png</texturesliderbackground>
             <texturesliderbar colordiffuse="main_fg_30">osd/progress-end.png</texturesliderbar>
             <texturesliderbarfocus colordiffuse="$VAR[ColorHighlight]">osd/progress-end.png</texturesliderbarfocus>
@@ -1291,17 +971,17 @@
 
     <include name="Furniture_Scrollbar_Vert">
         <control type="button" id="61">
-            <left>614</left>
-            <width>1226</width>
-            <bottom>94</bottom>
-            <height>8</height>
+            <right>0</right>
+            <width>8</width>
+            <top>678</top>
+            <bottom>80</bottom>
             <visible allowhiddenfocus="true">false</visible>
-            <onfocus>SetProperty(ShowFurniture_TopBar,0,Home)</onfocus>
             <onleft>60</onleft>
             <onright>60</onright>
             <ondown>60</ondown>
             <onup>60</onup>
             <onfocus>SetFocus(60)</onfocus>
+            <include>View_Movement_OnFocus</include>
         </control>
         <control type="scrollbar" id="60">
             <onback>50</onback>
@@ -1320,384 +1000,6 @@
             <visible>!Window.IsVisible(home) | [Window.IsVisible(home) + !Container(301).IsUpdating]</visible>
             <include>Animation_FadeIn</include>
             <include>Animation_FadeOut</include>
-        </control>
-    </include>
-    
-    <include name="Furniture_TopBar_MainMenu_Home">
-        <control type="list" id="300">
-            <height>80</height>
-            <left>0</left>
-            <right>0</right>
-            <orientation>horizontal</orientation>
-            <onback>ReplaceWindow(home)</onback>
-            
-            <!-- Go to Submenu -->
-            <ondown condition="!Integer.IsEqual(Container(302).NumItems,0) + Container(300).Position(0)">SetFocus(302,0)</ondown>
-            <ondown condition="!Integer.IsEqual(Container(302).NumItems,0) + Container(300).Position(1)">SetFocus(302,1)</ondown>
-            <ondown condition="!Integer.IsEqual(Container(302).NumItems,0) + Container(300).Position(2)">SetFocus(302,2)</ondown>
-            <ondown condition="!Integer.IsEqual(Container(302).NumItems,0) + Container(300).Position(3)">SetFocus(302,3)</ondown>
-            <ondown condition="!Integer.IsEqual(Container(302).NumItems,0) + Container(300).Position(4)">SetFocus(302,4)</ondown>
-            <ondown condition="!Integer.IsEqual(Container(302).NumItems,0) + Container(300).Position(5)">SetFocus(302,5)</ondown>
-            
-            <!-- If no sub menu go to items -->
-            <ondown condition="Integer.IsEqual(Container(302).NumItems,0) + Window.IsVisible(home) + !Container(301).IsUpdating">301</ondown>
-            <ondown condition="Integer.IsEqual(Container(302).NumItems,0) + !Window.IsVisible(home) + !Window.IsVisible(SettingsCategory.xml) + !Window.IsVisible(FileManager.xml) + !Window.IsVisible(script-script.extendedinfo-VideoList.xml)">50</ondown>
-            <ondown condition="Integer.IsEqual(Container(302).NumItems,0) + Window.IsVisible(script-script.extendedinfo-VideoList.xml)">500</ondown>
-            <ondown condition="Integer.IsEqual(Container(302).NumItems,0) + Window.IsVisible(SettingsCategory.xml)">3</ondown>
-            <ondown condition="Integer.IsEqual(Container(302).NumItems,0) + Window.IsVisible(FileManager.xml)">20</ondown>
-
-            <onclick condition="String.IsEqual(ListItem.Property(path),ActivateWindow(1101)) | String.IsEqual(ListItem.Property(path),ActivateWindow(1102)) | String.IsEqual(ListItem.Property(path),ActivateWindow(1103)) | String.IsEqual(ListItem.Property(path),ActivateWindow(1104)) | String.IsEqual(ListItem.Property(path),ActivateWindow(1105)) | String.IsEqual(ListItem.Property(path),ActivateWindow(1106)) | String.IsEqual(ListItem.Property(path),ActivateWindow(1107)) | String.IsEqual(ListItem.Property(path),ActivateWindow(1108)) | String.IsEqual(ListItem.Property(path),ActivateWindow(1109))">SetProperty(OpenHub,1,Home)</onclick>
-
-            <onclick condition="String.IsEqual(ListItem.Property(path),ActivateWindow(1101))">SetProperty(ReturnHub,ReplaceWindow(1101),Home)</onclick>
-            <onclick condition="String.IsEqual(ListItem.Property(path),ActivateWindow(1102))">SetProperty(ReturnHub,ReplaceWindow(1102),Home)</onclick>
-            <onclick condition="String.IsEqual(ListItem.Property(path),ActivateWindow(1103))">SetProperty(ReturnHub,ReplaceWindow(1103),Home)</onclick>
-            <onclick condition="String.IsEqual(ListItem.Property(path),ActivateWindow(1104))">SetProperty(ReturnHub,ReplaceWindow(1104),Home)</onclick>
-            <onclick condition="String.IsEqual(ListItem.Property(path),ActivateWindow(1105))">SetProperty(ReturnHub,ReplaceWindow(1105),Home)</onclick>
-            <onclick condition="String.IsEqual(ListItem.Property(path),ActivateWindow(1106))">SetProperty(ReturnHub,ReplaceWindow(1106),Home)</onclick>
-            <onclick condition="String.IsEqual(ListItem.Property(path),ActivateWindow(1107))">SetProperty(ReturnHub,ReplaceWindow(1107),Home)</onclick>
-            <onclick condition="String.IsEqual(ListItem.Property(path),ActivateWindow(1108))">SetProperty(ReturnHub,ReplaceWindow(1108),Home)</onclick>
-            <onclick condition="String.IsEqual(ListItem.Property(path),ActivateWindow(1109))">SetProperty(ReturnHub,ReplaceWindow(1109),Home)</onclick>
-
-            <onclick condition="![String.IsEqual(ListItem.Property(path),ActivateWindow(1101)) | String.IsEqual(ListItem.Property(path),ActivateWindow(1102)) | String.IsEqual(ListItem.Property(path),ActivateWindow(1103)) | String.IsEqual(ListItem.Property(path),ActivateWindow(1104)) | String.IsEqual(ListItem.Property(path),ActivateWindow(1105)) | String.IsEqual(ListItem.Property(path),ActivateWindow(1106)) | String.IsEqual(ListItem.Property(path),ActivateWindow(1107)) | String.IsEqual(ListItem.Property(path),ActivateWindow(1108)) | String.IsEqual(ListItem.Property(path),ActivateWindow(1109))]">SetProperty(OpenHub,0,Home)</onclick>
-
-            <onclick condition="String.Contains(ListItem.Property(path),ActivateWindow) + !String.Contains(ListItem.Property(path),DialogFavourites) + !String.Contains(ListItem.Property(path),DialogButtonMenu) + !String.Contains(ListItem.Property(path),shutdownmenu) + !String.Contains(ListItem.Property(path),favourites)">SetProperty(WindowBaseReturn,$INFO[ListItem.Property(list)],home)</onclick>
-            <onclick condition="!Window.IsVisible(settings)">$INFO[ListItem.Property(path)]</onclick>
-            <onclick condition="Window.IsVisible(settings)">$INFO[ListItem.Property(altpath)]</onclick>
-            <onclick condition="!Window.IsVisible(home) + !Window.IsVisible(SettingsCategory.xml) + !Window.IsVisible(FileManager.xml) + !Window.IsVisible(AddonBrowser.xml) + !Window.IsVisible(SkinSettings.xml) + !Window.IsVisible(SettingsProfile.xml) + !Window.IsVisible(SettingsSystemInfo.xml)">SetFocus(50)</onclick>
-            <onfocus>SetProperty(ShowFurniture_TopBar,1,Home)</onfocus>
-            <!-- <onfocus>ClearProperty(ViewType,Home)</onfocus> -->
-            <onfocus>ClearProperty(ContextModifier,Home)</onfocus>
-            <onfocus>ClearProperty(ContextPosition,Home)</onfocus>
-            <onfocus condition="$EXP[Expression_ReplaceWindowHome]">ReplaceWindow(Home)</onfocus>
-            <itemlayout height="80" width="320">
-                <control type="label">
-                    <left>20</left>
-                    <right>20</right>
-                    <height>80</height>
-                    <label>$INFO[ListItem.Label]</label>
-                    <aligny>center</aligny>
-                    <align>center</align>
-                    <font>font_mainmenu</font>
-                    <textcolor>main_fg_70</textcolor>
-                    <shadowcolor>main_bg_30</shadowcolor>
-                </control>
-            </itemlayout>
-            <focusedlayout height="80" width="320">
-                <control type="group">
-                    <visible>!Control.HasFocus(300) + [!Control.HasFocus(302) | String.IsEqual(Window(Home).Property(ShowFurniture_TopBar_Highlight),1)]</visible>
-                    <control type="label">
-                        <left>20</left>
-                        <right>20</right>
-                        <height>80</height>
-                        <label>$INFO[ListItem.Label]</label>
-                        <aligny>center</aligny>
-                        <align>center</align>
-                        <font>font_mainmenu</font>
-                        <textcolor>main_fg_70</textcolor>
-                        <shadowcolor>main_bg_30</shadowcolor>
-                    </control>
-                </control>
-
-                <control type="group">
-                    <visible>!Control.HasFocus(300) + Control.HasFocus(302) + !String.IsEqual(Window(Home).Property(ShowFurniture_TopBar_Highlight),1)</visible>
-                    <control type="label">
-                        <left>20</left>
-                        <right>20</right>
-                        <height>80</height>
-                        <label>$INFO[ListItem.Label]</label>
-                        <aligny>center</aligny>
-                        <align>center</align>
-                        <font>font_mainmenu</font>
-                        <textcolor>$VAR[ColorHighlight]</textcolor>
-                        <shadowcolor>main_bg_30</shadowcolor>
-                    </control>
-                </control>
-                
-                <control type="group">
-                    <visible>Control.HasFocus(300)</visible>
-                    <control type="group">
-                        <control type="image">
-                            <texture colordiffuse="$VAR[ColorHighlight]">common/gradient-diffuse.png</texture>
-                        </control>
-                    </control>
-                    <control type="label">
-                        <left>20</left>
-                        <right>20</right>
-                        <height>80</height>
-                        <label>$INFO[ListItem.Label]</label>
-                        <aligny>center</aligny>
-                        <align>center</align>
-                        <font>font_mainmenu</font>
-                        <textcolor>Selected</textcolor>
-                    </control>
-                </control>
-            </focusedlayout>
-            <include condition="![Window.IsVisible(settings) | Window.IsVisible(SettingsCategory.xml) | Window.IsVisible(FileManager.xml) | Window.IsVisible(AddonBrowser.xml) | Window.IsVisible(SkinSettings.xml) | Window.IsVisible(SettingsSystemInfo.xml) | Window.IsVisible(SettingsProfile.xml) | Window.IsVisible(EventLog.xml)]">Furniture_TopBar_MainMenu_HomeItems</include>
-            <include condition="[Window.IsVisible(settings) | Window.IsVisible(SettingsCategory.xml) | Window.IsVisible(FileManager.xml) | Window.IsVisible(AddonBrowser.xml) | Window.IsVisible(SkinSettings.xml) | Window.IsVisible(SettingsSystemInfo.xml) | Window.IsVisible(SettingsProfile.xml) | Window.IsVisible(EventLog.xml)]">Furniture_TopBar_MainMenu_SettingsItems</include>
-        </control>
-    </include>
-    <include name="Furniture_TopBar_SubMenu_Home">
-        <control type="panel" id="302">
-            <height>40</height>
-            <left>0</left>
-            <right>0</right>
-
-            <onback condition="Window.IsVisible(SettingsCategory.xml) | Window.IsVisible(AddonBrowser.xml) | Window.IsVisible(FileManager.xml)">ReplaceWindow(home)</onback>
-            
-            <onclick condition="String.IsEqual(ListItem.Property(path),ActivateWindow(1101)) | String.IsEqual(ListItem.Property(path),ActivateWindow(1102)) | String.IsEqual(ListItem.Property(path),ActivateWindow(1103)) | String.IsEqual(ListItem.Property(path),ActivateWindow(1104)) | String.IsEqual(ListItem.Property(path),ActivateWindow(1105)) | String.IsEqual(ListItem.Property(path),ActivateWindow(1106)) | String.IsEqual(ListItem.Property(path),ActivateWindow(1107)) | String.IsEqual(ListItem.Property(path),ActivateWindow(1108)) | String.IsEqual(ListItem.Property(path),ActivateWindow(1109))">SetProperty(OpenHub,1,Home)</onclick>
-
-            <onclick condition="String.IsEqual(ListItem.Property(path),ActivateWindow(1101))">SetProperty(ReturnHub,ReplaceWindow(1101),Home)</onclick>
-            <onclick condition="String.IsEqual(ListItem.Property(path),ActivateWindow(1102))">SetProperty(ReturnHub,ReplaceWindow(1102),Home)</onclick>
-            <onclick condition="String.IsEqual(ListItem.Property(path),ActivateWindow(1103))">SetProperty(ReturnHub,ReplaceWindow(1103),Home)</onclick>
-            <onclick condition="String.IsEqual(ListItem.Property(path),ActivateWindow(1104))">SetProperty(ReturnHub,ReplaceWindow(1104),Home)</onclick>
-            <onclick condition="String.IsEqual(ListItem.Property(path),ActivateWindow(1105))">SetProperty(ReturnHub,ReplaceWindow(1105),Home)</onclick>
-            <onclick condition="String.IsEqual(ListItem.Property(path),ActivateWindow(1106))">SetProperty(ReturnHub,ReplaceWindow(1106),Home)</onclick>
-            <onclick condition="String.IsEqual(ListItem.Property(path),ActivateWindow(1107))">SetProperty(ReturnHub,ReplaceWindow(1107),Home)</onclick>
-            <onclick condition="String.IsEqual(ListItem.Property(path),ActivateWindow(1108))">SetProperty(ReturnHub,ReplaceWindow(1108),Home)</onclick>
-            <onclick condition="String.IsEqual(ListItem.Property(path),ActivateWindow(1109))">SetProperty(ReturnHub,ReplaceWindow(1109),Home)</onclick>
-
-            <onclick condition="![String.IsEqual(ListItem.Property(path),ActivateWindow(1101)) | String.IsEqual(ListItem.Property(path),ActivateWindow(1102)) | String.IsEqual(ListItem.Property(path),ActivateWindow(1103)) | String.IsEqual(ListItem.Property(path),ActivateWindow(1104)) | String.IsEqual(ListItem.Property(path),ActivateWindow(1105)) | String.IsEqual(ListItem.Property(path),ActivateWindow(1106)) | String.IsEqual(ListItem.Property(path),ActivateWindow(1107)) | String.IsEqual(ListItem.Property(path),ActivateWindow(1108)) | String.IsEqual(ListItem.Property(path),ActivateWindow(1109))]">SetProperty(OpenHub,0,Home)</onclick>
-
-            <onclick condition="String.Contains(ListItem.Property(path),ActivateWindow) + !String.Contains(ListItem.Property(path),DialogFavourites) + !String.Contains(ListItem.Property(path),DialogButtonMenu) + !String.Contains(ListItem.Property(path),shutdownmenu) + !String.Contains(ListItem.Property(path),favourites)">SetProperty(WindowBaseReturn,$INFO[ListItem.Property(list)],home)</onclick>
-            <onclick condition="!Window.IsVisible(settings)">$INFO[ListItem.Property(path)]</onclick>
-            <onclick condition="Window.IsVisible(settings)">$INFO[ListItem.Property(altpath)]</onclick>
-            <onclick condition="!Window.IsVisible(home) + !Window.IsVisible(SettingsCategory.xml) + !Window.IsVisible(FileManager.xml) + !Window.IsVisible(AddonBrowser.xml) + !Window.IsVisible(SkinSettings.xml) + !Window.IsVisible(SettingsProfile.xml) + !Window.IsVisible(SettingsSystemInfo.xml)">SetFocus(50)</onclick>
-            <ondown condition="Window.IsVisible(home) + !Container(301).IsUpdating">301</ondown>
-            <ondown condition="!Window.IsVisible(home) + !Window.IsVisible(SettingsCategory.xml) + !Window.IsVisible(SkinSettings.xml) + !Window.IsVisible(FileManager.xml) + !Window.IsVisible(script-script.extendedinfo-VideoList.xml)">50</ondown>
-            <ondown condition="Window.IsVisible(script-script.extendedinfo-VideoList.xml)">500</ondown>
-            <ondown condition="Window.IsVisible(SettingsCategory.xml)">3</ondown>
-            <ondown condition="Window.IsVisible(FileManager.xml)">20</ondown>
-            <ondown condition="Window.IsVisible(SkinSettings.xml)">9100</ondown>
-            <onfocus>SetProperty(ShowFurniture_TopBar,1,Home)</onfocus>
-            <!-- <onfocus>ClearProperty(ViewType,Home)</onfocus> -->
-            <onfocus>ClearProperty(ContextModifier,Home)</onfocus>
-            <onfocus>ClearProperty(ContextPosition,Home)</onfocus>
-            <onup condition="[Window.IsVisible(settings) | Window.IsVisible(SettingsCategory.xml) | Window.IsVisible(FileManager.xml) | Window.IsVisible(AddonBrowser.xml) | Window.IsVisible(SkinSettings.xml) | Window.IsVisible(SettingsSystemInfo.xml) | Window.IsVisible(SettingsProfile.xml) | Window.IsVisible(EventLog.xml)] + Container(302).Position(0)">SetFocus(300,0)</onup>
-            <onup condition="[Window.IsVisible(settings) | Window.IsVisible(SettingsCategory.xml) | Window.IsVisible(FileManager.xml) | Window.IsVisible(AddonBrowser.xml) | Window.IsVisible(SkinSettings.xml) | Window.IsVisible(SettingsSystemInfo.xml) | Window.IsVisible(SettingsProfile.xml) | Window.IsVisible(EventLog.xml)] + Container(302).Position(1)">SetFocus(300,1)</onup>
-            <onup condition="[Window.IsVisible(settings) | Window.IsVisible(SettingsCategory.xml) | Window.IsVisible(FileManager.xml) | Window.IsVisible(AddonBrowser.xml) | Window.IsVisible(SkinSettings.xml) | Window.IsVisible(SettingsSystemInfo.xml) | Window.IsVisible(SettingsProfile.xml) | Window.IsVisible(EventLog.xml)] + Container(302).Position(2)">SetFocus(300,2)</onup>
-            <onup condition="[Window.IsVisible(settings) | Window.IsVisible(SettingsCategory.xml) | Window.IsVisible(FileManager.xml) | Window.IsVisible(AddonBrowser.xml) | Window.IsVisible(SkinSettings.xml) | Window.IsVisible(SettingsSystemInfo.xml) | Window.IsVisible(SettingsProfile.xml) | Window.IsVisible(EventLog.xml)] + Container(302).Position(3)">SetFocus(300,3)</onup>
-            <onup condition="[Window.IsVisible(settings) | Window.IsVisible(SettingsCategory.xml) | Window.IsVisible(FileManager.xml) | Window.IsVisible(AddonBrowser.xml) | Window.IsVisible(SkinSettings.xml) | Window.IsVisible(SettingsSystemInfo.xml) | Window.IsVisible(SettingsProfile.xml) | Window.IsVisible(EventLog.xml)] + Container(302).Position(4)">SetFocus(300,4)</onup>
-            <onup condition="[Window.IsVisible(settings) | Window.IsVisible(SettingsCategory.xml) | Window.IsVisible(FileManager.xml) | Window.IsVisible(AddonBrowser.xml) | Window.IsVisible(SkinSettings.xml) | Window.IsVisible(SettingsSystemInfo.xml) | Window.IsVisible(SettingsProfile.xml) | Window.IsVisible(EventLog.xml)] + Container(302).Position(5)">SetFocus(300,5)</onup>
-            <onup condition="![Window.IsVisible(settings) | Window.IsVisible(SettingsCategory.xml) | Window.IsVisible(FileManager.xml) | Window.IsVisible(AddonBrowser.xml) | Window.IsVisible(SkinSettings.xml) | Window.IsVisible(SettingsSystemInfo.xml) | Window.IsVisible(SettingsProfile.xml) | Window.IsVisible(EventLog.xml)]">300</onup>
-            <orientation>horizontal</orientation>
-            <itemlayout height="40" width="320">
-                <control type="label">
-                    <left>20</left>
-                    <right>20</right>
-                    <height>40</height>
-                    <label>$INFO[ListItem.Label]</label>
-                    <aligny>center</aligny>
-                    <align>center</align>
-                    <font>font_submenu</font>
-                    <textcolor>panel_fg_70</textcolor>
-                </control>
-            </itemlayout>
-            <focusedlayout height="40" width="320">
-                <control type="image">
-                    <texture colordiffuse="$VAR[ColorHighlight]">common/white.png</texture>
-                </control>
-                <control type="label">
-                    <left>20</left>
-                    <right>20</right>
-                    <height>40</height>
-                    <label>$INFO[ListItem.Label]</label>
-                    <aligny>center</aligny>
-                    <align>center</align>
-                    <font>font_submenu</font>
-                    <textcolor>Selected</textcolor>
-                </control>
-            </focusedlayout>
-            <include condition="![Window.IsVisible(settings) | Window.IsVisible(SettingsCategory.xml) | Window.IsVisible(FileManager.xml) | Window.IsVisible(AddonBrowser.xml) | Window.IsVisible(SkinSettings.xml) | Window.IsVisible(SettingsSystemInfo.xml) | Window.IsVisible(SettingsProfile.xml) | Window.IsVisible(EventLog.xml)]">Furniture_TopBar_SubMenu_HomeItems</include>
-            <include condition="[Window.IsVisible(settings) | Window.IsVisible(SettingsCategory.xml) | Window.IsVisible(FileManager.xml) | Window.IsVisible(AddonBrowser.xml) | Window.IsVisible(SkinSettings.xml) | Window.IsVisible(SettingsSystemInfo.xml) | Window.IsVisible(SettingsProfile.xml) | Window.IsVisible(EventLog.xml)]">Furniture_TopBar_SubMenu_SettingsItems</include>
-        </control>
-    </include>
-    <include name="Furniture_TopBar_MainMenu">
-        <control type="group">
-            <top>0</top>
-            <left>0</left>
-            <right>0</right>
-            <height>80</height>
-            <control type="image">
-                <bottom>-24</bottom>
-                <height>24</height>
-                <width>100%</width>
-                <texture flipy="false">common/shadow-line-24px.png</texture>
-            </control>
-            <control type="image">
-                <texture>common/gradient-solid.png</texture>
-            </control>
-            <include>Furniture_TopBar_MainMenu_Home</include>
-            <control type="image">
-                <top>0</top>
-                <height>1</height>
-                <texture colordiffuse="highlight_bottombar">common/white.png</texture>
-            </control>
-            <control type="image">
-                <bottom>0</bottom>
-                <height>1</height>
-                <texture colordiffuse="darkline_topbar">common/white.png</texture>
-            </control>
-        </control>
-    </include>
-    <include name="Furniture_TopBar_SubMenu">
-        <control type="group">
-            <visible allowhiddenfocus="true">Control.HasFocus(300) | Control.HasFocus(302) | Window.IsVisible(settings) | Window.IsVisible(SettingsCategory.xml) | Window.IsVisible(FileManager.xml) | Window.IsVisible(AddonBrowser.xml) | Window.IsVisible(SkinSettings.xml) | Window.IsVisible(SettingsSystemInfo.xml) | Window.IsVisible(SettingsProfile.xml) | Window.IsVisible(EventLog.xml)</visible>
-            <animation effect="slide" start="0,-64" end="0" time="400" delay="0" tween="quadratic" easing="out" reversible="true">Visible</animation>
-            <animation effect="slide" end="0,-64" start="0" time="400" tween="quadratic" easing="out" reversible="true">Hidden</animation>
-            <top>80</top>
-            <left>0</left>
-            <right>0</right>
-            <height>40</height>
-            <control type="image">
-                <bottom>-24</bottom>
-                <height>24</height>
-                <width>100%</width>
-                <texture flipy="false">common/shadow-line-24px.png</texture>
-            </control>
-            <control type="image">
-                <texture colordiffuse="panel_bg">common/white.png</texture>
-            </control>
-            <include>Furniture_TopBar_SubMenu_Home</include>
-        </control>
-    </include>
-    
-    <include name="Furniture_TopBar_MainMenu_HomeItems">
-        <content><include>skinshortcuts-mainmenu</include></content>
-    </include>
-    <include name="Furniture_TopBar_SubMenu_HomeItems">
-        <content><include>skinshortcuts-submenu</include></content>
-    </include>
-
-    <include name="Furniture_TopBar_MainMenu_SettingsItems">
-        <content>
-            <item id="1">
-                <label>14206</label>
-                <icon>special://skin/extras/icons/swissarmy.png</icon>
-                <onclick>ReplaceWindow(InterfaceSettings)</onclick>
-                <property name="path">ReplaceWindow(InterfaceSettings)</property>
-                <property name="altpath">ActivateWindow(InterfaceSettings)</property>
-            </item>
-            <item id="2">
-                <label>14202</label>
-                <icon>special://skin/extras/icons/tags.png</icon>
-                <onclick>ReplaceWindow(MediaSettings)</onclick>
-                <property name="path">ReplaceWindow(MediaSettings)</property>
-                <property name="altpath">ActivateWindow(MediaSettings)</property>
-            </item>
-            <item id="3">
-                <label>14200</label>
-                <icon>special://skin/extras/icons/equalizer.png</icon>
-                <onclick>ReplaceWindow(PlayerSettings)</onclick>
-                <property name="path">ReplaceWindow(PlayerSettings)</property>
-                <property name="altpath">ActivateWindow(PlayerSettings)</property>
-            </item>
-            <item id="5">
-                <label>13000</label>
-                <icon>special://skin/extras/icons/configure.png</icon>
-                <onclick>ReplaceWindow(SystemSettings)</onclick>
-                <property name="path">ReplaceWindow(SystemSettings)</property>
-                <property name="altpath">ActivateWindow(SystemSettings)</property>
-            </item>
-            <item id="6">
-                <label>14036</label>
-                <icon>special://skin/extras/icons/network.png</icon>
-                <onclick>ReplaceWindow(servicesettings)</onclick>
-                <property name="path">ReplaceWindow(servicesettings)</property>
-                <property name="altpath">ActivateWindow(servicesettings)</property>
-            </item>
-            <item id="4">
-                <label>20077</label>
-                <icon>special://skin/extras/icons/year.png</icon>
-                <onclick>ReplaceWindow(SkinSettings)</onclick>
-                <property name="path">ReplaceWindow(SkinSettings)</property>
-                <property name="altpath">ActivateWindow(SkinSettings)</property>
-            </item>
-        </content>
-    </include>
-    <include name="Furniture_TopBar_SubMenu_SettingsItems">
-        <content>
-            <item id="7">
-                <label>13200</label>
-                <icon>special://skin/extras/icons/actor.png</icon>
-                <onclick>ReplaceWindow(Profiles)</onclick>
-                <property name="path">ReplaceWindow(Profiles)</property>
-                <property name="altpath">ActivateWindow(Profiles)</property>
-            </item>
-            <item id="8">
-                <label>24001</label>
-                <icon>special://skin/extras/icons/addons.png</icon>
-                <onclick>ReplaceWindow(AddonBrowser)</onclick>
-                <property name="path">ReplaceWindow(AddonBrowser)</property>
-                <property name="altpath">ActivateWindow(AddonBrowser)</property>
-            </item>
-            <item id="9">
-                <label>130</label>
-                <icon>special://skin/extras/icons/sysinfo.png</icon>
-                <onclick>ReplaceWindow(7)</onclick>
-                <property name="path">ReplaceWindow(7)</property>
-                <property name="altpath">ActivateWindow(7)</property>
-            </item>
-            <item id="10">
-                <label>19191</label>
-                <icon>special://skin/extras/icons/livetv.png</icon>
-                <onclick>ReplaceWindow(pvrsettings)</onclick>
-                <property name="path">ReplaceWindow(pvrsettings)</property>
-                <property name="altpath">ActivateWindow(pvrsettings)</property>
-            </item>
-            <item id="11">
-                <label>7</label>
-                <icon />
-                <onclick>ReplaceWindow(filemanager)</onclick>
-                <property name="path">ReplaceWindow(filemanager)</property>
-                <property name="altpath">ActivateWindow(filemanager)</property>
-            </item>
-            <item id="12">
-                <label>14114</label>
-                <icon />
-                <onclick>ReplaceWindow(eventlog)</onclick>
-                <property name="path">ReplaceWindow(eventlog)</property>
-                <property name="altpath">ActivateWindow(eventlog)</property>
-            </item>
-        </content>
-    </include>
-
-    <include name="Furniture_TopBar">
-        <control type="group">
-            <animation effect="slide" start="0,-120" end="0" time="400" delay="0" tween="quadratic" easing="out" reversible="true">Visible</animation>
-            <animation effect="slide" end="0,-120" start="0" time="400" tween="quadratic" easing="out" reversible="true">Hidden</animation>
-            <animation effect="slide" end="0,-120" start="0" time="400" tween="quadratic" easing="out" reversible="false" condition="Window.Next(MusicVisualisation.xml) | Window.Next(VideoFullScreen.xml)">WindowClose</animation>
-            <animation effect="slide" start="0,-120" end="0" time="400" delay="0" tween="quadratic" easing="out" reversible="false" condition="Window.Previous(MusicVisualisation.xml) | Window.Previous(VideoFullScreen.xml)">WindowOpen</animation>
-            <visible allowhiddenfocus="true">[String.IsEqual(Window(Home).Property(ShowFurniture_TopBar),1) + !Control.HasFocus(60) + ![Window.IsVisible(MyPVRGuide.xml) + Control.HasFocus(10)]] | Skin.HasSetting(ShowFurniture_TopBar)</visible>
-            <include>Furniture_TopBar_SubMenu</include>
-            <include>Furniture_TopBar_MainMenu</include>
-        </control>
-    </include>
-
-    <include name="Furniture_SettingsPanel">
-        <animation type="Visible" reversible="false">
-            <effect type="slide" start="0,160" end="0" time="400" tween="quadratic" easing="out" />
-            <effect type="fade" start="0" end="100" time="200" />
-        </animation>
-        <animation type="Hidden" reversible="false">
-            <effect type="slide" end="0,160" start="0" time="400" tween="quadratic" easing="out" />
-            <effect type="fade" end="0" start="100" time="200" />
-        </animation>
-        <animation type="WindowOpen" reversible="false">
-            <effect type="slide" start="0,700" end="0" time="400" tween="quadratic" easing="out" />
-            <effect type="fade" start="0" end="100" time="200" />
-        </animation>
-        <animation type="WindowClose" reversible="false">
-            <effect type="fade" end="0" start="100" time="200" delay="200"/>
-        </animation>
-        <left>-16</left>
-        <right>-16</right>
-        <top>182</top>
-        <height>796</height>
-
-        <control type="image">
-            <width>100%</width>
-            <height>150%</height>
-            <texture border="16" colordiffuse="panel_bg">common/rounded-shadow8.png</texture>
         </control>
     </include>
 

@@ -17,7 +17,18 @@
         </control>
     </include>
 
+    <include name="Defs_SettingsOnload">
+        <onload>SetProperty(ShowTopbar,1,Home)</onload>
+        <onload>SetProperty(LowerBottombar,1,Home)</onload>
+        <onload>SetProperty(ShowTopbar_Highlight,1,Home)</onload>
+        <onunload>ClearProperty(ShowTopbar_Highlight,Home)</onunload>
+        <onload>ClearProperty(ViewType,Home)</onload>
+        <onload>SetProperty(FromSettings,1,Home)</onload>
+    </include>
+
     <include name="Defs_SetStartWindow">
+        <onload>SetProperty(LowerBottombar,0,Home)</onload>
+        <onload>SetProperty(FromSettings,0,Home)</onload>
         <onload>ClearProperty(ViewType,Home)</onload>
     </include>
 
@@ -100,8 +111,8 @@
         <focusedcolor>Selected</focusedcolor>
         <alttexturefocus colordiffuse="$VAR[ColorHighlight]" border="16">common/white.png</alttexturefocus>
         <texturefocus colordiffuse="$VAR[ColorHighlight]" border="16">common/white.png</texturefocus>
-        <onunfocus>SetProperty(ShowFurniture_TopBar,1,Home)</onunfocus>
-        <onfocus>SetProperty(ShowFurniture_TopBar,0,Home)</onfocus>
+        
+        
     </include>
 
     <!-- Settings Buttons -->

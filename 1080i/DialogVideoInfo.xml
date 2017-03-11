@@ -452,6 +452,13 @@
                         <visible>!String.IsEmpty(ListItem.Trailer)</visible>
                     </control>
 
+                    <control type="button" id="9005">
+                        <label>$LOCALIZE[29915]</label>
+                        <include>Dialog_Info_Buttons</include>
+                        <onclick condition="String.IsEqual(ListItem.DbType,movie)">RunScript(script.extendedinfo,info=extendedinfo,name=$INFO[ListItem.Title],imdb_id=$INFO[ListItem.IMDBNumber])</onclick>
+                        <visible>System.hasAddon(script.extendedinfo) + String.IsEqual(ListItem.DbType,movie)</visible>
+                    </control>
+
                     <control type="button" id ="10">
                         <description>Artwork (Get Thumb)</description>
                         <label>$LOCALIZE[13405]</label>

@@ -3,8 +3,8 @@
 <window id="120">
     <onload condition="!Player.PauseEnabled">SetFocus(15)</onload>
     <onload condition="Player.PauseEnabled">SetFocus(14)</onload>
-    <onload>SetProperty(ShowFurniture_TopBar,1,Home)</onload>
-    <onunload>SetProperty(ShowFurniture_TopBar,0,Home)</onunload>
+    <onload>SetProperty(ShowTopbar,1,Home)</onload>
+    <onunload>SetProperty(ShowTopbar,0,Home)</onunload>
     <zorder>2</zorder>
     <controls>
         <control type="group">

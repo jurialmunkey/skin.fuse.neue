@@ -2,14 +2,12 @@
 <!-- Foundation -->
 <window id="3">
     <defaultcontrol always="true">20</defaultcontrol>
-    <onload>SetProperty(ShowFurniture_TopBar_Highlight,1,Home)</onload>
-    <onunload>ClearProperty(ShowFurniture_TopBar_Highlight,Home)</onunload>
-    <onload>SetProperty(LowerFurniture_BottomBar,1,Home)</onload>
+    <include>Defs_SettingsOnload</include>
     <controls>
 
         <include>GlobalBackground</include>
-        <include>Furniture_TopBar</include>
-        <include>Furniture_BottomBar</include>
+        <include>Topbar</include>
+        <include>Bottombar</include>
 
         <control type="group">
             <include>Furniture_SettingsPanel</include>
@@ -39,7 +37,7 @@
                     <onright>21</onright>
                     <onup>300</onup>
                     <ondown>20</ondown>
-                    <onfocus>SetProperty(ShowFurniture_TopBar,1,Home)</onfocus>
+                    
                     <itemlayout height="69" width="840">
 
 
@@ -130,7 +128,7 @@
                     <onright>SetFocus(300,5)</onright>
                     <onup>300</onup>
                     <ondown>21</ondown>
-                    <onfocus>SetProperty(ShowFurniture_TopBar,1,Home)</onfocus>
+                    
                     <itemlayout height="69" width="840">
                         <control type="label">
                             <left>30</left>
