@@ -71,15 +71,16 @@
         <width>450</width>
         <top>16</top>
         <itemgap>0</itemgap>
-        <onback condition="!Window.IsVisible(DialogButtonMenu.xml)">50</onback>
-        <onleft condition="!Window.IsVisible(DialogButtonMenu.xml)">9100</onleft>
-        <onright condition="!Window.IsVisible(DialogButtonMenu.xml)">9100</onright>
+        <onback condition="!Window.IsVisible(DialogButtonMenu.xml)">9400</onback>
+        <onleft condition="!Window.IsVisible(DialogButtonMenu.xml)">9400</onleft>
+        <onright condition="!Window.IsVisible(DialogButtonMenu.xml)">9400</onright>
     </include>
 
     <!-- Widget Content -->
     <variable name="Defs_Widget_Content">
+        <value condition="[String.IsEqual(Container(300).ListItem.Property(widget),weather) + [Control.HasFocus(300) | String.IsEmpty(Container(302).ListItem.Property(widget))] | [String.IsEqual(Container(302).ListItem.Property(widget),weather) + !Control.HasFocus(300)]]">noop</value>
         <value condition="!String.IsEmpty(Container(300).ListItem.Property(widgetPath))">$INFO[Container(300).ListItem.Property(widgetPath)]</value>
-        <value condition="String.StartsWith(Container(300).ListItem.Property(widget),Weather) + !String.IsEmpty(Skin.String(weather.fanart))">noop</value>
+        
         <value condition="!String.IsEmpty(Container(300).ListItem.Property(Background))">noop</value>
         <value condition="!String.IsEmpty(Skin.String(home.slideshowpath)) + String.IsEmpty(Container(300).ListItem.Property(widget))">noop</value>
         <value condition="!String.IsEmpty(Skin.String(home.fallbackwidget))">$INFO[Skin.String(home.fallbackwidget)]</value>
@@ -111,8 +112,6 @@
         <focusedcolor>Selected</focusedcolor>
         <alttexturefocus colordiffuse="$VAR[ColorHighlight]" border="16">common/white.png</alttexturefocus>
         <texturefocus colordiffuse="$VAR[ColorHighlight]" border="16">common/white.png</texturefocus>
-        
-        
     </include>
 
     <!-- Settings Buttons -->

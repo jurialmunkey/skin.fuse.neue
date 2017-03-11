@@ -130,6 +130,12 @@
         </font>
 
         <font>
+            <name>font_weather_condition</name>
+            <filename>RobotoCondensed-Regular.ttf</filename>
+            <size>24</size>
+        </font>
+
+        <font>
             <name>LargeBold</name>
             <filename>RobotoCondensed-Bold.ttf</filename>
             <size>48</size>

@@ -124,8 +124,7 @@
         <include>GlobalVideoWindow</include>
         <include>GlobalVisualisation</include>
         <control type="group">
-            <animation effect="slide" start="0" easing="out" end="0,-66" time="600" tween="quadratic" reversible="false" condition="$EXP[Expression_ShowTopbar] + $EXP[Expression_DontLowerBottomBar]">Conditional</animation>
-            <animation effect="slide" end="0" easing="out" start="0,-66" time="600" tween="quadratic" reversible="false" condition="![$EXP[Expression_ShowTopbar] + $EXP[Expression_DontLowerBottomBar]]">Conditional</animation>
+            <animation effect="slide" start="0" end="0,-66" time="600" tween="sine" easing="inout" reversible="true" condition="$EXP[Expression_ShowTopbar] + !$EXP[Expression_LowerBottomBar]">Conditional</animation>
             <include>Animation_FadeInOut_Conditional</include>
             
             <control type="multiimage" description="Fanart">

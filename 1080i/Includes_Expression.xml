@@ -7,9 +7,8 @@
 
     <expression name="Expression_InfoSlide_Home">[!Integer.IsEqual(Container(301).NumItems,0) + Control.IsVisible(301) + !Container(301).IsUpdating + !String.IsEmpty(Control.GetLabel(9399)) + String.IsEqual(Window(Home).Property(ShowInfobar),1)]</expression>
 
-    <expression name="Expression_DontLowerBottomBar">[[[!Window.IsVisible(home) | Window.IsVisible(script-script.extendedinfo-DialogVideoInfo.xml) | Window.IsVisible(script-script.extendedinfo-DialogInfo.xml)] + !String.IsEqual(Window(Home).Property(LowerBottombar),1)] | [Window.IsVisible(Home) + [!Integer.IsEqual(Container(301).NumItems,0) | Container(301).IsUpdating] + !Window.IsVisible(script-script.extendedinfo-DialogVideoInfo.xml) + !Window.IsVisible(script-script.extendedinfo-DialogInfo.xml) + !Window.IsVisible(script-script.extendedinfo-VideoList.xml)]]</expression>
 
-    <expression name="Expression_LowerBottomBar">[String.IsEqual(Window(Home).Property(LowerBottombar),1) | [Window.IsVisible(Home) + Integer.IsEqual(Container(301).NumItems,0) + !Container(301).IsUpdating + !Window.IsVisible(script-script.extendedinfo-DialogVideoInfo.xml) + !Window.IsVisible(script-script.extendedinfo-DialogInfo.xml) + !Window.IsVisible(script-script.extendedinfo-VideoList.xml)]]</expression>
+    <expression name="Expression_LowerBottomBar">[String.IsEqual(Window(Home).Property(LowerBottombar),1) | [Window.IsVisible(Home) + Integer.IsEqual(Container(301).NumItems,0) + !Container(301).IsUpdating + !Window.IsVisible(script-script.extendedinfo-DialogVideoInfo.xml) + !Window.IsVisible(script-script.extendedinfo-DialogInfo.xml) + !Window.IsVisible(script-script.extendedinfo-VideoList.xml) + ![String.IsEqual(Container(300).ListItem.Property(widget),weather) + [Control.HasFocus(300) | String.IsEmpty(Container(302).ListItem.Property(widget))] | [String.IsEqual(Container(302).ListItem.Property(widget),weather) + !Control.HasFocus(300)]]]]</expression>
 
     
 

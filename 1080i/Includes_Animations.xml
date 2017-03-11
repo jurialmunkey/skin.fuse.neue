@@ -28,8 +28,8 @@
     </include>
 
     <include name="Animation_Bottombar_Text">
-        <animation effect="fade" start="0" end="100" time="350" delay="350" tween="cubic" easing="inout" condition="Window.Previous(MusicVisualisation.xml) | Window.Previous(VideoFullScreen.xml) | Window.Previous(Startup.xml)">WindowOpen</animation>
-        <animation effect="fade" end="0" start="100" time="200" tween="cubic" easing="inout" condition="Window.Next(MusicVisualisation.xml) | Window.Next(VideoFullScreen.xml) | Window.Next(Startup.xml)">WindowClose</animation>
+        <animation effect="fade" start="0" end="100" time="350" delay="350" tween="cubic" easing="inout" condition="Window.Previous(MusicVisualisation.xml) | Window.Previous(VideoFullScreen.xml) | Window.Previous(Startup.xml) | Window.Previous(MyWeather.xml)">WindowOpen</animation>
+        <animation effect="fade" end="0" start="100" time="200" tween="cubic" easing="inout" condition="Window.Next(MusicVisualisation.xml) | Window.Next(VideoFullScreen.xml) | Window.Next(Startup.xml) | Window.Next(MyWeather.xml)">WindowClose</animation>
     </include>
 
 
@@ -83,8 +83,7 @@
     </include>
 
     <include name="Animation_Bottombar">
-        <animation effect="slide" start="0" end="0,600" time="600" delay="0" tween="quadratic" easing="out" reversible="false" condition="$EXP[Expression_LowerBottomBar]">Conditional</animation>
-        <animation effect="slide" end="0" start="0,600" time="600" delay="0" tween="quadratic" easing="out" reversible="false" condition="$EXP[Expression_DontLowerBottomBar]">Conditional</animation>
+        <animation effect="slide" start="0" end="0,600" time="600" delay="0" tween="sine" easing="inout" reversible="true" condition="$EXP[Expression_LowerBottomBar]">Conditional</animation>
     </include>
 
 </includes>

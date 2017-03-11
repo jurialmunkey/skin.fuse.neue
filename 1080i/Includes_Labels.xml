@@ -29,13 +29,6 @@
         <value condition="String.IsEmpty(Window(Home).Property(NextAired.NextDate)) + !String.IsEmpty(Window(Home).Property(NextAired.LatestTitle))">[COLOR=main_fg_70]$INFO[Window(Home).Property(NextAired.LatestTitle),,  ][/COLOR]$INFO[Window(Home).Property(NextAired.Status),, • ]$INFO[Window(Home).Property(NextAired.LatestDate)]</value>
     </variable>
 
-    <variable name="LabelWidgetType">
-        <value condition="String.IsEmpty(Container(211).ListItem.Property(widgetaspect)) | String.IsEqual(Container(211).ListItem.Property(widgetaspect),Poster)">$LOCALIZE[31262]</value>
-        <value condition="String.IsEqual(Container(211).ListItem.Property(widgetaspect),Square)">$LOCALIZE[31263]</value>
-        <value condition="String.IsEqual(Container(211).ListItem.Property(widgetaspect),Fanart)">$LOCALIZE[31265]</value>
-        <value condition="String.IsEqual(Container(211).ListItem.Property(widgetaspect),Thumbnail)">$LOCALIZE[31264]</value>
-    </variable>
-
     <variable name="Label_SettingsHeader">
         <value condition="Window.IsActive(systeminfo)">$LOCALIZE[130]</value>
         <value condition="Window.IsActive(systemsettings)">$LOCALIZE[13000]</value>
@@ -51,6 +44,7 @@
     </variable>
 
     <variable name="WidgetTitle">
+        <value condition="Window.IsVisible(MyWeather.xml)"></value>
         <value condition="Window.IsVisible(script-script.extendedinfo-VideoList.xml)">$INFO[Container(500).ListItem.Label]</value>
         <value condition="Window.IsVisible(script-script.extendedinfo-DialogInfo.xml) + Control.IsVisible(150)">$INFO[Container(150).ListItem.Label]</value>
         <value condition="Window.IsVisible(script-script.extendedinfo-DialogInfo.xml) + Control.IsVisible(250)">$INFO[Container(250).ListItem.Label]</value>
@@ -79,6 +73,7 @@
         <value>$INFO[Container(301).ListItem.Label]</value>
     </variable>
     <variable name="WidgetPlot">
+        <value condition="Window.IsVisible(MyWeather.xml)"></value>
         <value condition="Window.IsVisible(script-script.extendedinfo-VideoList.xml) + !String.IsEmpty(Container(500).ListItem.Plot)">$INFO[Container(500).ListItem.Plot]</value>
         <value condition="Window.IsVisible(script-script.extendedinfo-DialogVideoInfo.xml) + !String.IsEmpty(Window.Property(plot)) + String.IsEmpty(Window(Home).Property(FocusedList)) + !Control.IsVisible(1000) + !Control.IsVisible(150) + !Control.IsVisible(350) + !Control.IsVisible(750) + !Control.IsVisible(850) + !Control.IsVisible(950)">$INFO[Window.Property(plot)]</value>
         <value condition="Window.IsVisible(script-script.extendedinfo-DialogInfo.xml) + !String.IsEmpty(Window.Property(Biography)) + String.IsEmpty(Window(Home).Property(FocusedList)) + !Control.IsVisible(150) + !Control.IsVisible(250) + !Control.IsVisible(350) + !Control.IsVisible(750)">$INFO[Window.Property(Biography)]</value>
@@ -99,6 +94,7 @@
     </variable>
 
     <variable name="WidgetSubLabel">
+        <value condition="Window.IsVisible(MyWeather.xml)"></value>
         <value condition="Window.IsVisible(script-script.extendedinfo-VideoList.xml)">$INFO[Container(500).ListItem.Year,,  •  ]$INFO[Container(500).ListItem.Rating]</value>
         <value condition="Window.IsVisible(script-script.extendedinfo-DialogInfo.xml) + String.IsEmpty(Window(Home).Property(FocusedList)) + !Control.IsVisible(150) + !Control.IsVisible(250) + !Control.IsVisible(350) + !Control.IsVisible(550)">$INFO[Window.Property(AlsoKnownAs)]</value>
         <value condition="Window.IsVisible(script-script.extendedinfo-DialogVideoInfo.xml) + String.IsEmpty(Window(Home).Property(FocusedList)) + !Control.IsVisible(1000) + !Control.IsVisible(150) + !Control.IsVisible(350) + !Control.IsVisible(750) + !Control.IsVisible(850) + !Control.IsVisible(950)">$INFO[Window.Property(year)]$INFO[Window.Property(duration),  •  , $LOCALIZE[31102]]$INFO[Window.Property(rating),  •  ,]</value>
@@ -127,6 +123,7 @@
     </variable>
 
     <variable name="Label_Title">
+        <value condition="Window.IsVisible(MyWeather.xml)"></value>
         <value condition="Window.IsVisible(script-script.extendedinfo-DialogInfo.xml) + Control.IsVisible(150)">$INFO[Container(150).ListItem.Label]</value>
         <value condition="Window.IsVisible(script-script.extendedinfo-DialogInfo.xml) + Control.IsVisible(250)">$INFO[Container(250).ListItem.Label]</value>
         <value condition="Window.IsVisible(script-script.extendedinfo-DialogInfo.xml) + Control.IsVisible(350)">$INFO[Container(350).ListItem.Label]</value>
@@ -153,6 +150,7 @@
         <value condition="!String.IsEqual(ListItem.Label,..)">$INFO[ListItem.Label]</value>
     </variable>
     <variable name="Label_InfoLine">
+        <value condition="Window.IsVisible(MyWeather.xml)"></value>
         <value condition="Window.IsVisible(script-script.extendedinfo-DialogInfo.xml) + String.IsEmpty(Window(Home).Property(FocusedList)) + !Control.IsVisible(150) + !Control.IsVisible(250) + !Control.IsVisible(350) + !Control.IsVisible(550)">$INFO[Window.Property(AlsoKnownAs)]</value>
         <value condition="Window.IsVisible(script-script.extendedinfo-DialogVideoInfo.xml) + String.IsEmpty(Window(Home).Property(FocusedList)) + !Control.IsVisible(1000) + !Control.IsVisible(150) + !Control.IsVisible(350) + !Control.IsVisible(750) + !Control.IsVisible(850) + !Control.IsVisible(950)">$INFO[Window.Property(year)]$INFO[Window.Property(duration),  •  , $LOCALIZE[31102]]$INFO[Window.Property(rating),  •  ,]</value>
         <value condition="Window.IsVisible(script-script.extendedinfo-DialogVideoInfo.xml) + Control.IsVisible(1000)">$INFO[Container(1000).ListItem.Property(character),[COLOR=panel_fg_70]$LOCALIZE[20347][/COLOR] ,]</value>
@@ -176,6 +174,7 @@
         <value condition="!String.IsEmpty(Container.FolderName)">$INFO[Container.FolderName]</value>
     </variable>
     <variable name="Label_Plot">
+        <value condition="Window.IsVisible(MyWeather.xml)"></value>
         <value condition="Window.IsVisible(script-script.extendedinfo-DialogVideoInfo.xml) + !String.IsEmpty(Window.Property(plot)) + String.IsEmpty(Window(Home).Property(FocusedList)) + !Control.IsVisible(1000) + !Control.IsVisible(150) + !Control.IsVisible(350) + !Control.IsVisible(750) + !Control.IsVisible(850) + !Control.IsVisible(950)">$INFO[Window.Property(plot)]</value>
         <value condition="Window.IsVisible(script-script.extendedinfo-DialogInfo.xml) + !String.IsEmpty(Window.Property(Biography)) + String.IsEmpty(Window(Home).Property(FocusedList)) + !Control.IsVisible(150) + !Control.IsVisible(250) + !Control.IsVisible(350) + !Control.IsVisible(750)">$INFO[Window.Property(Biography)]</value>
         <value condition="Window.IsVisible(script-script.extendedinfo-DialogVideoInfo.xml) | Window.IsVisible(script-script.extendedinfo-DialogInfo.xml)"></value>

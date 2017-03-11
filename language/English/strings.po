@@ -26,6 +26,36 @@ msgctxt "#31001"
 msgid "Revenue"
 msgstr ""
 
+#: /1080i/Includes_Furniture.xml
+msgctxt "#31002"
+msgid "Current Conditions"
+msgstr ""
+
+#: /1080i/Includes_Furniture.xml
+msgctxt "#31003"
+msgid "Current conditions"
+msgstr ""
+
+#: /1080i/Includes_Furniture.xml
+msgctxt "#31004"
+msgid "Sunset at"
+msgstr ""
+
+#: /1080i/Includes_Furniture.xml
+msgctxt "#31005"
+msgid "Sunrise at"
+msgstr ""
+
+#: /1080i/Includes_Furniture.xml
+msgctxt "#31006"
+msgid "Weather provided by"
+msgstr ""
+
+#: /1080i/Includes_Furniture.xml
+msgctxt "#31007"
+msgid "Weather forecast for"
+msgstr ""
+
 msgctxt "#31101"
 msgid "items"
 msgstr ""

@@ -11,26 +11,6 @@
     <include>Defs_SetStartWindow</include>
     <controls>
         <include>GlobalBackground</include>
-        <control type="group">
-            <visible>String.IsEmpty(Container(300).ListItem.Property(widgetType)) + [Control.HasFocus(300) | [!Control.HasFocus(300) + String.IsEmpty(Container(302).ListItem.Property(widgetType))]] + String.IsEqual(Skin.String(home.slideshowpath),$LOCALIZE[8]) + !Container(301).IsUpdating</visible>
-            <animation type="Visible" reversible="false">
-                <effect type="slide" start="0,160" end="0" time="400" tween="quadratic" easing="out" />
-                <effect type="fade" start="0" end="100" time="200" />
-            </animation>
-            <animation type="Hidden" reversible="false">
-                <effect type="slide" end="0,160" start="0" time="400" tween="quadratic" easing="out" />
-                <effect type="fade" end="0" start="100" time="200" />
-            </animation>
-            <animation type="WindowOpen" reversible="false">
-                <effect type="slide" start="0,700" end="0" time="400" tween="quadratic" easing="out" />
-                <effect type="fade" start="0" end="100" time="200" />
-            </animation>
-            <animation type="WindowClose" reversible="false">
-                <effect type="fade" end="0" start="100" time="200" delay="200"/>
-            </animation>
-            <include>Furniture_Weather</include>
-        </control>
-        
         <include>Bottombar</include>
         <include>Topbar</include>
         

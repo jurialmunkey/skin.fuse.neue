@@ -15,7 +15,13 @@
                 <include>Bottombar_Texture</include>
                 <include>Bottombar_Content</include>
             </control>
-        </control>
+            <control type="group">
+                <visible>[String.IsEqual(Container(300).ListItem.Property(widget),weather) + [Control.HasFocus(300) | String.IsEmpty(Container(302).ListItem.Property(widget))] | [String.IsEqual(Container(302).ListItem.Property(widget),weather) + !Control.HasFocus(300)]]</visible>
+
+                <visible>Window.IsVisible(home)</visible>
+                <include condition="Window.IsVisible(home)">Furniture_Weather</include>
+            </control>
+        </control> 
     </include>
 
     <include name="Bottombar_BusySpinner">
@@ -36,6 +42,15 @@
             <visible>[!Window.IsVisible(DialogVideoInfo.xml) + !Window.IsVisible(DialogMusicInfo.xml) + !Window.IsVisible(DialogAddonInfo.xml) + !Window.IsVisible(DialogPVRInfo.xml)] | Window.IsVisible(script-script.extendedinfo-VideoList.xml)</visible>
             <include>Bottombar_Views</include>
             <include condition="!Window.IsVisible(script-script.extendedinfo-VideoList.xml)">Furniture_AlphabetStrip</include>
+        </control>
+        <control type="group">
+            <visible>Window.IsVisible(MyWeather.xml)</visible>
+            <include>Furniture_Weather</include>
+        </control>
+        <control type="group">
+            <include>Animation_Bottombar_Right</include>
+            <include>Animation_FadeInOut_Conditional</include>
+            <visible>[!Window.IsVisible(DialogVideoInfo.xml) + !Window.IsVisible(DialogMusicInfo.xml) + !Window.IsVisible(DialogAddonInfo.xml) + !Window.IsVisible(DialogPVRInfo.xml)] | Window.IsVisible(script-script.extendedinfo-VideoList.xml)</visible>
             <include condition="!Window.IsVisible(script-script.extendedinfo-VideoList.xml)">Bottombar_BusySpinner</include>
         </control>
     </include>

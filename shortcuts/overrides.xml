@@ -2,11 +2,12 @@
 <overrides>
 
     <!-- Playlist -->
+    <widget label="8">Weather</widget>
     <widgetPlaylists>True</widgetPlaylists>
 
     <!-- Browse for Backgrounds -->
     <backgroundBrowse>True</backgroundBrowse>
-    <background label="::PLAYLIST::">playlistBackground</background>
+    <!-- <background label="::PLAYLIST::">playlistBackground</background> -->
     <widgetRename>False</widgetRename>
 
     <!-- Warning to Remove Settings -->
