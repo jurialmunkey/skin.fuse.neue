@@ -55,8 +55,6 @@
     </include>
 
     <include name="Animation_Bottombar">
-        <animation effect="slide" end="0" start="0,600" time="600" delay="0" tween="quadratic" easing="out" reversible="false" condition="Window.Previous(MusicVisualisation.xml) | Window.Previous(VideoFullScreen.xml) | Window.Previous(Startup.xml)">WindowOpen</animation>
-        <animation effect="slide" start="0" end="0,600" time="600" delay="0" tween="quadratic" easing="out" reversible="false" condition="Window.Next(MusicVisualisation.xml) | Window.Next(VideoFullScreen.xml) | Window.Next(Startup.xml)">WindowClose</animation>
         <animation effect="slide" start="0" end="0,600" time="600" delay="0" tween="quadratic" easing="out" reversible="false" condition="$EXP[Expression_LowerBottomBar]">Conditional</animation>
         <animation effect="slide" end="0" start="0,600" time="600" delay="0" tween="quadratic" easing="out" reversible="false" condition="$EXP[Expression_DontLowerBottomBar]">Conditional</animation>
     </include>
