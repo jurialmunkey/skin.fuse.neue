@@ -38,6 +38,7 @@
                     <height>200</height>
                     <timeperimage>50</timeperimage>
                     <aspectratio align="center" aligny="center">keep</aspectratio>
+<fadetime>10</fadetime>
                     <imagepath>$INFO[Skin.String(weather.icons.path),,/]$INFO[Window(weather).Property(Current.FanartCode)]</imagepath>
                     <visible>!String.IsEmpty(Skin.String(weather.icons.path)) + String.Contains(Skin.String(weather.icons.path),animated)</visible>
                 </control>
@@ -266,6 +267,7 @@
                 <width>128</width>
                 <timeperimage>50</timeperimage>
                 <aspectratio align="center" aligny="center">keep</aspectratio>
+                <fadetime>10</fadetime>
                 <imagepath>$INFO[Skin.String(weather.icons.path),,/]$INFO[Window(weather).Property($PARAM[day].FanartCode)]</imagepath>
                 <visible>!String.IsEmpty(Skin.String(weather.icons.path)) + String.Contains(Skin.String(weather.icons.path),animated)</visible>
             </control>
