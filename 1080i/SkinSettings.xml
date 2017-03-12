@@ -152,13 +152,16 @@
                         <onclick>RunScript(script.toolbox,info=selectdialog,header=$LOCALIZE[31150])</onclick>
                     </control>
 
-                    <control type="button" id="9222" description="Set Weather Fanart">
+                    <control type="togglebutton" id="9222" description="Install Weather Fanart">
                         <visible>ControlGroup(9100).HasFocus(9102)</visible>
                         <onback>300</onback>
                         <include>Defs_Settings_Button</include>
-                        <label>31143</label>
-                        <label2>$INFO[Skin.String(weather.fanart.name)]</label2>
-                        <onclick>RunScript(script.image.resource.select,property=weather.fanart&amp;type=resource.images.weatherfanart)</onclick>
+                        <label>$LOCALIZE[31008]</label>
+                        <altlabel>$LOCALIZE[31010]</altlabel>
+                        <usealttexture>System.HasAddon(resource.images.weatherfanart.multi) + String.IsEqual(Skin.String(weather.fanart.path),resource://resource.images.weatherfanart.multi/)</usealttexture>
+                        <enable>!System.HasAddon(resource.images.weatherfanart.multi) | !String.IsEqual(Skin.String(weather.fanart.path),resource://resource.images.weatherfanart.multi/)</enable>
+                        <onclick condition="!System.HasAddon(resource.images.weatherfanart.multi)">InstallAddon(resource.images.weatherfanart.multi)</onclick>
+                        <onclick>Skin.SetString(weather.fanart.path,resource://resource.images.weatherfanart.multi/)</onclick>
                     </control>
 
                     <control type="radiobutton" id="9223" description="Show video in background">
@@ -370,6 +373,16 @@
                         <onclick condition="!System.HasAddon(resource.images.moviegenreicons.transparent)">InstallAddon(resource.images.moviegenreicons.transparent)</onclick>
                         <onclick condition="System.HasAddon(resource.images.moviegenreicons.transparent)">Addon.OpenSettings(resource.images.moviegenreicons.transparent)</onclick>
                         <selected>System.HasAddon(resource.images.moviegenreicons.transparent)</selected>
+                        <include>Defs_Settings_Button</include>
+                    </control>
+                    <control type="radiobutton" id="9291">
+                        <visible>ControlGroup(9100).HasFocus(9108)</visible>
+                        <onback>300</onback>
+                        <label>resource.images.weatherfanart.multi</label>
+                        <label2>$INFO[System.AddonVersion(resource.images.weatherfanart.multi)]        </label2>
+                        <onclick condition="!System.HasAddon(resource.images.weatherfanart.multi)">InstallAddon(resource.images.weatherfanart.multi)</onclick>
+                        <onclick condition="System.HasAddon(resource.images.weatherfanart.multi)">Addon.OpenSettings(resource.images.weatherfanart.multi)</onclick>
+                        <selected>System.HasAddon(resource.images.weatherfanart.multi)</selected>
                         <include>Defs_Settings_Button</include>
                     </control>
                 </control>

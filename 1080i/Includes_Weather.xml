@@ -20,6 +20,26 @@
                     <height>200</height>
                     <aspectratio align="center" aligny="center">keep</aspectratio>
                     <texture>$INFO[Window(weather).Property(Current.ConditionIcon)]</texture>
+                    <visible>String.IsEmpty(Skin.String(weather.icons.path))</visible>
+                </control>
+                <control type="image">
+                    <top>0</top>
+                    <left>0</left>
+                    <width>200</width>
+                    <height>200</height>
+                    <aspectratio align="center" aligny="center">keep</aspectratio>
+                    <texture>$INFO[Skin.String(weather.icons.path),,/]$INFO[Window(weather).Property(Current.FanartCode),,.png]</texture>
+                    <visible>!String.IsEmpty(Skin.String(weather.icons.path)) + !String.Contains(Skin.String(weather.icons.path),animated)</visible>
+                </control>
+                <control type="multiimage">
+                    <top>0</top>
+                    <left>0</left>
+                    <width>200</width>
+                    <height>200</height>
+                    <timeperimage>50</timeperimage>
+                    <aspectratio align="center" aligny="center">keep</aspectratio>
+                    <imagepath>$INFO[Skin.String(weather.icons.path),,/]$INFO[Window(weather).Property(Current.FanartCode)]</imagepath>
+                    <visible>!String.IsEmpty(Skin.String(weather.icons.path)) + String.Contains(Skin.String(weather.icons.path),animated)</visible>
                 </control>
                 <control type="label">
                     <bottom>0</bottom>
@@ -211,7 +231,7 @@
                     <top>10</top>
                     <right>10</right>
                     <aspectratio align="right">keep</aspectratio>
-                    <bottom>16</bottom>
+                    <bottom>10</bottom>
                     <texture>$INFO[Window(Weather).Property(WeatherProviderLogo)]</texture>
                 </control>
             </control>
@@ -228,6 +248,26 @@
                 <width>128</width>
                 <aspectratio align="center" aligny="center">keep</aspectratio>
                 <texture>$INFO[Window(weather).Property($PARAM[day].OutlookIcon)]</texture>
+                <visible>String.IsEmpty(Skin.String(weather.icons.path))</visible>
+            </control>
+            <control type="image">
+                <centerleft>50%</centerleft>
+                <top>10</top>
+                <height>128</height>
+                <width>128</width>
+                <aspectratio align="center" aligny="center">keep</aspectratio>
+                <texture>$INFO[Skin.String(weather.icons.path),,/]$INFO[Window(weather).Property($PARAM[day].FanartCode),,.png]</texture>
+                <visible>!String.IsEmpty(Skin.String(weather.icons.path)) + !String.Contains(Skin.String(weather.icons.path),animated)</visible>
+            </control>
+            <control type="multiimage">
+                <centerleft>50%</centerleft>
+                <top>10</top>
+                <height>128</height>
+                <width>128</width>
+                <timeperimage>50</timeperimage>
+                <aspectratio align="center" aligny="center">keep</aspectratio>
+                <imagepath>$INFO[Skin.String(weather.icons.path),,/]$INFO[Window(weather).Property($PARAM[day].FanartCode)]</imagepath>
+                <visible>!String.IsEmpty(Skin.String(weather.icons.path)) + String.Contains(Skin.String(weather.icons.path),animated)</visible>
             </control>
             <control type="label">
                 <top>151</top>

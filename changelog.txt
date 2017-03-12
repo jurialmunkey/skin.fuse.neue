@@ -1,6 +1,8 @@
 [B]0.9.16[/B]
 Rewrite some more code
 Add onup from main menu to widget
+Add ability to change weather icons
+Add support for animated weather icons
 
 [B]0.9.15[/B]
 Rewrite some code
