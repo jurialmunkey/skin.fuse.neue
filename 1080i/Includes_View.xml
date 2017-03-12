@@ -981,7 +981,7 @@
             <left>30</left>
             <top>17</top>
             <height>325.25</height>
-            <onleft>9100</onleft>
+            <onleft>9400</onleft>
             <onright>61</onright>
             <include condition="!Window.IsVisible(DialogVideoInfo.xml)">View_Movement_Horizontal</include>
             <preloaditems>2</preloaditems>

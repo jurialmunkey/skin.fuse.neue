@@ -20,7 +20,7 @@
                     <height>420</height>
                     <onleft>28</onleft>
                     <viewtype label="19069">list</viewtype>
-                    <onleft>9100</onleft>
+                    <onleft>9400</onleft>
                     <include>View_Movement_OnBack</include>
                     <progresstexture border="5" colordiffuse="bf777777">pvr/progressline.png</progresstexture>
                     <scrolltime tween="quadratic">300</scrolltime>
