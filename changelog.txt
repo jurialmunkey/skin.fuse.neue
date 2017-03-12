@@ -1,3 +1,7 @@
+[B]0.9.17[/B]
+Add global search
+Add next aired script skin
+
 [B]0.9.16[/B]
 Rewrite some more code
 Add onup from main menu to widget
