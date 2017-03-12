@@ -81,6 +81,16 @@ msgctxt "#31012"
 msgid "Weather fanart installed"
 msgstr ""
 
+#: /1080i/SkinSettings.xml
+msgctxt "#31013"
+msgid "Set weather icons"
+msgstr ""
+
+#: /1080i/MyVideoNav.xml
+msgctxt "#31014"
+msgid "Show extra fanart"
+msgstr ""
+
 msgctxt "#31101"
 msgid "items"
 msgstr ""

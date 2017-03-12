@@ -30,6 +30,7 @@
             <include>Animation_FadeIn</include>
             <visible allowhiddenfocus="true">ControlGroup(6000).HasFocus()</visible>
             <control type="group">
+                <height>452</height>
                 <include>Defs_Options_Menu</include>
                 <control type="grouplist" id="6000">
                     <include>Defs_Options_Grouplist</include>
@@ -62,6 +63,14 @@
                     <control type="button" id="20">
                         <description>Library</description>
                         <label>653</label>
+                        <include>Defs_Context_Button</include>
+                    </control>
+                    <control type="togglebutton" id="6005">
+                        <description>Extra fanart</description>
+                        <label>$LOCALIZE[31014]: $LOCALIZE[16039]</label>
+                        <altlabel>$LOCALIZE[31014]: $LOCALIZE[16041]</altlabel>
+                        <onclick>Skin.ToggleSetting(SkinHelper.EnableExtraFanart)</onclick>
+                        <usealttexture>Skin.HasSetting(SkinHelper.EnableExtraFanart)</usealttexture>
                         <include>Defs_Context_Button</include>
                     </control>
                 </control>

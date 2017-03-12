@@ -152,18 +152,6 @@
                         <onclick>RunScript(script.toolbox,info=selectdialog,header=$LOCALIZE[31150])</onclick>
                     </control>
 
-                    <control type="togglebutton" id="9222" description="Install Weather Fanart">
-                        <visible>ControlGroup(9100).HasFocus(9102)</visible>
-                        <onback>300</onback>
-                        <include>Defs_Settings_Button</include>
-                        <label>$LOCALIZE[31008]</label>
-                        <altlabel>$LOCALIZE[31010]</altlabel>
-                        <usealttexture>System.HasAddon(resource.images.weatherfanart.multi) + String.IsEqual(Skin.String(weather.fanart.path),resource://resource.images.weatherfanart.multi/)</usealttexture>
-                        <enable>!System.HasAddon(resource.images.weatherfanart.multi) | !String.IsEqual(Skin.String(weather.fanart.path),resource://resource.images.weatherfanart.multi/)</enable>
-                        <onclick condition="!System.HasAddon(resource.images.weatherfanart.multi)">InstallAddon(resource.images.weatherfanart.multi)</onclick>
-                        <onclick>Skin.SetString(weather.fanart.path,resource://resource.images.weatherfanart.multi/)</onclick>
-                    </control>
-
                     <control type="radiobutton" id="9223" description="Show video in background">
                         <visible>ControlGroup(9100).HasFocus(9102)</visible>
                         <onback>300</onback>
@@ -180,6 +168,18 @@
                         <label>31172</label>
                         <selected>Skin.HasSetting(global.showvisualisation)</selected>
                         <onclick>Skin.ToggleSetting(global.showvisualisation)</onclick>
+                    </control>
+
+                    <control type="togglebutton" id="9222" description="Install Weather Fanart">
+                        <visible>ControlGroup(9100).HasFocus(9102)</visible>
+                        <onback>300</onback>
+                        <include>Defs_Settings_Button</include>
+                        <label>$LOCALIZE[31008]</label>
+                        <altlabel>$LOCALIZE[31010]</altlabel>
+                        <usealttexture>System.HasAddon(resource.images.weatherfanart.multi) + String.IsEqual(Skin.String(weather.fanart.path),resource://resource.images.weatherfanart.multi/)</usealttexture>
+                        <enable>!System.HasAddon(resource.images.weatherfanart.multi) | !String.IsEqual(Skin.String(weather.fanart.path),resource://resource.images.weatherfanart.multi/)</enable>
+                        <onclick condition="!System.HasAddon(resource.images.weatherfanart.multi)">InstallAddon(resource.images.weatherfanart.multi)</onclick>
+                        <onclick>Skin.SetString(weather.fanart.path,resource://resource.images.weatherfanart.multi/)</onclick>
                     </control>
 
                     <!-- OSD -->
@@ -273,6 +273,16 @@
                         <label>Reset to defaults</label>
                         <onclick>Skin.ResetSettings</onclick>
                     </control> -->
+
+                    <!-- Weather Icons -->
+                    <control type="button" id="9276">
+                        <visible>ControlGroup(9100).HasFocus(9107)</visible>
+                        <onback>300</onback>
+                        <label>$LOCALIZE[31013]</label>
+                        <label2>$INFO[Skin.String(weather.icons.name)]</label2>
+                        <include>Defs_Settings_Button</include>
+                        <onclick>RunScript(script.image.resource.select,property=weather.icons&amp;type=resource.images.weathericons)</onclick>
+                    </control>
 
                     <!-- Dependencies -->
                     <control type="radiobutton" id="9281">
