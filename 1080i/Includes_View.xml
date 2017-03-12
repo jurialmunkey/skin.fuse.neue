@@ -206,7 +206,7 @@
 
     <include name="View_Posters">
         <control type="fixedlist" id="50">
-            <visible>Container.Content(movies) | Container.Content(sets) | Container.Content(seasons)</visible>
+            <visible>Container.Content(movies) | Container.Content(sets) | Container.Content(seasons) | [Container.Content(musicvideos) + Window.IsVisible(MyVideoNav.xml) + Skin.HasSetting(MusicVideoConcerts)]</visible>
             <include>View_Posters_Layout</include>
         </control>
     </include>    
@@ -563,7 +563,7 @@
 
     <include name="View_Square">
         <control type="fixedlist" id="53">
-            <visible>![Container.Content(episodes) | Container.Content(movies) | Container.Content(sets) | Container.Content(seasons) | Container.Content(tvshows) | Container.Content(songs) | Container.Content(files) | Container.Content() | Container.Content(playlists) | Container.Content(tags)]</visible>
+            <visible>![Container.Content(episodes) | Container.Content(movies) | Container.Content(sets) | Container.Content(seasons) | Container.Content(tvshows) | Container.Content(songs) | Container.Content(files) | Container.Content() | Container.Content(playlists) | Container.Content(tags) | [Container.Content(musicvideos) + Window.IsVisible(MyVideoNav.xml) + Skin.HasSetting(MusicVideoConcerts)]]</visible>
             <include>View_Square_Layout</include>
         </control>
     </include>

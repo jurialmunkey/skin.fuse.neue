@@ -96,6 +96,11 @@ msgctxt "#31015"
 msgid "Use colour media flags"
 msgstr ""
 
+#: /1080i/SkinSettings.xml
+msgctxt "#31016"
+msgid "Music videos use poster aspectratio"
+msgstr ""
+
 msgctxt "#31101"
 msgid "items"
 msgstr ""

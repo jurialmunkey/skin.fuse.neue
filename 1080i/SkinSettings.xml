@@ -290,6 +290,14 @@
                         <include>Defs_Settings_Button</include>
                         <onclick>Skin.ToggleSetting(UseColorFlags)</onclick>
                     </control>
+                    <control type="radiobutton" id="9278">
+                        <visible>ControlGroup(9100).HasFocus(9107)</visible>
+                        <onback>300</onback>
+                        <label>$LOCALIZE[31016]</label>
+                        <selected>Skin.HasSetting(MusicVideoConcerts)</selected>
+                        <include>Defs_Settings_Button</include>
+                        <onclick>Skin.ToggleSetting(MusicVideoConcerts)</onclick>
+                    </control>
 
                     <!-- Dependencies -->
                     <control type="radiobutton" id="9281">
