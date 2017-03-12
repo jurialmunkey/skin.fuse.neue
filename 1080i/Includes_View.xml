@@ -1161,6 +1161,7 @@
     </include>
 
     <include name="View_Movement_OnFocus">
+        <onfocus condition="Window.IsVisible(home)">SetProperty(HomeFocus,1,Home)</onfocus>
         <onfocus>SetProperty(ShowInfobar,1,Home)</onfocus>
         <onfocus>SetProperty(ShowTopbar,0,Home)</onfocus>
     </include>
