@@ -286,128 +286,17 @@
                 </control>
 
                 <!-- Ratings -->
-                <control type="grouplist">
-                    <top>896</top>
-                    <width>900</width>
-                    <right>30</right>
-                    <height>32</height>
-                    <orientation>horizontal</orientation>
-                    <align>right</align>
-                    <itemgap>12</itemgap>
-                    <usecontrolcoords>true</usecontrolcoords>
-                    
-                    <control type="image">
-                        <top>0</top>
-                        <width>32</width>
-                        <height>32</height>
-                        <texture colordiffuse="main_fg_100">indicator/metacritic.png</texture>
-                        <visible>!String.IsEmpty(Window(Home).Property(SkinHelper.ListItem.MetaCritic.Rating))</visible>
-                    </control>
-                    <control type="label">
-                        <textcolor>main_fg_70</textcolor>
-                        <top>2</top>
-                        <width>auto</width>
-                        <height>28</height>
-                        <align>right</align>
-                        <font>Tiny</font>
-                        <label>$INFO[Window(Home).Property(SkinHelper.ListItem.MetaCritic.Rating), ,%   ]</label>
-                        <visible>!String.IsEmpty(Window(Home).Property(SkinHelper.ListItem.MetaCritic.Rating))</visible>
-                    </control>
-                    <control type="image">
-                        <top>0</top>
-                        <width>32</width>
-                        <height>32</height>
-                        <texture colordiffuse="main_fg_100">indicator/tmdb.png</texture>
-                        <visible>!String.IsEmpty(Window(Home).Property(SkinHelper.ListItem.Rating.TMDB))</visible>
-                    </control>
-                    <control type="label">
-                        <textcolor>main_fg_70</textcolor>
-                        <top>2</top>
-                        <width>auto</width>
-                        <height>28</height>
-                        <align>right</align>
-                        <font>Tiny</font>
-                        <label>$INFO[Window(Home).Property(SkinHelper.ListItem.Rating.TMDB), ,   ]</label>
-                        <visible>!String.IsEmpty(Window(Home).Property(SkinHelper.ListItem.Rating.TMDB))</visible>
-                    </control>
-                    <control type="image">
-                        <top>0</top>
-                        <width>32</width>
-                        <height>32</height>
-                        <texture colordiffuse="main_fg_100">indicator/popcorn.png</texture>
-                        <visible>!String.IsEmpty(Window(Home).Property(SkinHelper.ListItem.RottenTomatoes.UserMeter))</visible>
-                    </control>
-                    <control type="label">
-                        <textcolor>main_fg_70</textcolor>
-                        <top>2</top>
-                        <width>auto</width>
-                        <height>28</height>
-                        <align>right</align>
-                        <font>Tiny</font>
-                        <label>$INFO[Window(Home).Property(SkinHelper.ListItem.RottenTomatoes.UserMeter), ,%   ]</label>
-                        <visible>!String.IsEmpty(Window(Home).Property(SkinHelper.ListItem.RottenTomatoes.UserMeter))</visible>
-                    </control>
-                    <control type="image">
-                        <width>32</width>
-                        <height>32</height>
-                        <texture colordiffuse="main_fg_100">indicator/rtrotten.png</texture>
-                        <visible>!String.IsEmpty(Window(Home).Property(SkinHelper.ListItem.RottenTomatoes.Meter))</visible>
-                        <visible>!Integer.IsGreater(Window(home).Property(SkinHelper.ListItem.RottenTomatoes.Meter),59)</visible>
-                    </control>
-                    <control type="image">
-                        <width>32</width>
-                        <height>32</height>
-                        <texture colordiffuse="main_fg_100">indicator/rtfresh.png</texture>
-                        <visible>!String.IsEmpty(Window(Home).Property(SkinHelper.ListItem.RottenTomatoes.Meter))</visible>
-                        <visible>Integer.IsGreater(Window(home).Property(SkinHelper.ListItem.RottenTomatoes.Meter),59)</visible>
-                    </control>
-                    <control type="label">
-                        <textcolor>main_fg_70</textcolor>
-                        <top>2</top>
-                        <width>auto</width>
-                        <height>28</height>
-                        <align>right</align>
-                        <font>Tiny</font>
-                        <label>$INFO[Window(Home).Property(SkinHelper.ListItem.RottenTomatoes.Meter), ,%   ]</label>
-                        <visible>!String.IsEmpty(Window(Home).Property(SkinHelper.ListItem.RottenTomatoes.Meter))</visible>
-                    </control>
-                    <control type="image">
-                        <top>1</top>
-                        <width>40</width>
-                        <height>32</height>
-                        <texture colordiffuse="main_fg_100">indicator/imdbicon.png</texture>
-                        <visible>!String.IsEmpty(ListItem.RatingAndVotes) | !String.IsEmpty(Window(home).Property(SkinHelper.ListItem.Rating.IMDB))</visible>
-                    </control>
-                    <control type="label">
-                        <textcolor>main_fg_70</textcolor>
-                        <top>2</top>
-                        <width>auto</width>
-                        <height>28</height>
-                        <align>right</align>
-                        <font>Tiny</font>
-                        <label>$INFO[Window(home).Property(SkinHelper.ListItem.Rating.IMDB), ,]$INFO[Window(home).Property(SkinHelper.ListItem.Votes.IMDB), (, $LOCALIZE[205])]</label>
-                        <visible>!String.IsEmpty(Window(home).Property(SkinHelper.ListItem.Rating.IMDB))</visible>
-                    </control>
-                    <control type="label">
-                        <textcolor>main_fg_70</textcolor>
-                        <top>2</top>
-                        <width>auto</width>
-                        <height>28</height>
-                        <align>right</align>
-                        <font>Tiny</font>
-                        <label>$INFO[ListItem.RatingAndVotes, ,]</label>
-                        <visible>String.IsEmpty(Window(home).Property(SkinHelper.ListItem.Rating.IMDB)) + !String.IsEmpty(ListItem.RatingAndVotes)</visible>
-                    </control>
-                    <control type="label">
-                        <textcolor>main_fg_70</textcolor>
-                        <top>2</top>
-                        <width>auto</width>
-                        <height>28</height>
-                        <align>right</align>
-                        <font>Tiny</font>
-                        <label>$INFO[Window(Home).Property(SkinHelper.ListItem.IMDB.Top250), #,]</label>
-                        <visible>!String.IsEmpty(Window(home).Property(SkinHelper.ListItem.IMDB.Top250))</visible>
-                    </control>
+                <control type="group">
+                    <visible>!Skin.HasSetting(UseColorFlags)</visible>
+                    <include content="Object_Ratings">
+                        <param name="directory" value="monochrome" />
+                    </include>
+                </control>
+                <control type="group">
+                    <visible>Skin.HasSetting(UseColorFlags)</visible>
+                    <include content="Object_Ratings">
+                        <param name="directory" value="color" />
+                    </include>
                 </control>
 
                 <!-- Buttons -->

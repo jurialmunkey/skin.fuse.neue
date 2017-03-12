@@ -136,6 +136,7 @@
 
     <include name="Object_Flags">
         <param name="container" default="" />
+        <param name="directory" default="monochrome" />
         <definition>
             <control type="grouplist">
                 <visible>!Skin.HasSetting(furniture.flags)</visible>
@@ -183,7 +184,7 @@
                     <width>88</width>
                     <height>48</height>
                     <centertop>50%</centertop>
-                    <texture colordiffuse="panel_fg_100" fallback="flags/fallback.png">$INFO[$PARAM[container]ListItem.VideoResolution,flags/resolution/,.png]</texture>
+                    <texture colordiffuse="panel_fg_100" fallback="flags/fallback.png">$INFO[$PARAM[container]ListItem.VideoResolution,flags/$PARAM[directory]/resolution/,.png]</texture>
                     <aspectratio align="right">keep</aspectratio>
                     <visible>!String.IsEmpty($PARAM[container]ListItem.VideoResolution) + !String.StartsWith($PARAM[container]ListItem.Path,videodb://movies/sets)</visible>
                 </control>
@@ -191,7 +192,7 @@
                     <width>88</width>
                     <height>48</height>
                     <centertop>50%</centertop>
-                    <texture colordiffuse="panel_fg_100" fallback="flags/fallback.png">$INFO[$PARAM[container]ListItem.VideoCodec,flags/source/,.png]</texture>
+                    <texture colordiffuse="panel_fg_100" fallback="flags/fallback.png">$INFO[$PARAM[container]ListItem.VideoCodec,flags/$PARAM[directory]/source/,.png]</texture>
                     <aspectratio align="right">keep</aspectratio>
                     <visible>!String.IsEmpty($PARAM[container]ListItem.VideoCodec)</visible>
                 </control>
@@ -199,7 +200,7 @@
                     <width>88</width>
                     <height>48</height>
                     <centertop>50%</centertop>
-                    <texture colordiffuse="panel_fg_100" fallback="flags/fallback.png">$INFO[$PARAM[container]ListItem.VideoAspect,flags/aspectratio/,.png]</texture>
+                    <texture colordiffuse="panel_fg_100" fallback="flags/fallback.png">$INFO[$PARAM[container]ListItem.VideoAspect,flags/$PARAM[directory]/aspectratio/,.png]</texture>
                     <aspectratio align="right">keep</aspectratio>
                     <visible>!String.IsEmpty($PARAM[container]ListItem.VideoAspect)</visible>
                 </control>
@@ -207,7 +208,7 @@
                     <width>88</width>
                     <height>48</height>
                     <centertop>50%</centertop>
-                    <texture colordiffuse="panel_fg_100" fallback="flags/fallback.png">$INFO[$PARAM[container]ListItem.AudioCodec,flags/audio/,.png]</texture>
+                    <texture colordiffuse="panel_fg_100" fallback="flags/fallback.png">$INFO[$PARAM[container]ListItem.AudioCodec,flags/$PARAM[directory]/audio/,.png]</texture>
                     <aspectratio align="right">keep</aspectratio>
                     <visible>!String.IsEmpty($PARAM[container]ListItem.AudioCodec)</visible>
                 </control>
@@ -215,9 +216,138 @@
                     <width>88</width>
                     <height>48</height>
                     <centertop>50%</centertop>
-                    <texture colordiffuse="panel_fg_100" fallback="flags/fallback.png">$INFO[$PARAM[container]ListItem.AudioChannels,flags/channels/,.png]</texture>
+                    <texture colordiffuse="panel_fg_100" fallback="flags/fallback.png">$INFO[$PARAM[container]ListItem.AudioChannels,flags/$PARAM[directory]/channels/,.png]</texture>
                     <aspectratio align="right">keep</aspectratio>
                     <visible>!String.IsEmpty($PARAM[container]ListItem.AudioChannels)</visible>
+                </control>
+            </control>
+        </definition>
+    </include>
+
+    <include name="Object_Ratings">
+        <param name="directory" default="monochrome" />
+        <definition>
+            <control type="grouplist">
+                <top>896</top>
+                <width>900</width>
+                <right>30</right>
+                <height>32</height>
+                <orientation>horizontal</orientation>
+                <align>right</align>
+                <itemgap>12</itemgap>
+                <usecontrolcoords>true</usecontrolcoords>
+                
+                <control type="image">
+                    <top>0</top>
+                    <width>32</width>
+                    <height>32</height>
+                    <texture colordiffuse="main_fg_100">flags/$PARAM[directory]/ratings/metacritic.png</texture>
+                    <visible>!String.IsEmpty(Window(Home).Property(SkinHelper.ListItem.MetaCritic.Rating))</visible>
+                </control>
+                <control type="label">
+                    <textcolor>main_fg_70</textcolor>
+                    <top>2</top>
+                    <width>auto</width>
+                    <height>28</height>
+                    <align>right</align>
+                    <font>Tiny</font>
+                    <label>$INFO[Window(Home).Property(SkinHelper.ListItem.MetaCritic.Rating), ,%   ]</label>
+                    <visible>!String.IsEmpty(Window(Home).Property(SkinHelper.ListItem.MetaCritic.Rating))</visible>
+                </control>
+                <control type="image">
+                    <top>0</top>
+                    <width>32</width>
+                    <height>32</height>
+                    <texture colordiffuse="main_fg_100">flags/$PARAM[directory]/ratings/tmdb.png</texture>
+                    <visible>!String.IsEmpty(Window(Home).Property(SkinHelper.ListItem.Rating.TMDB))</visible>
+                </control>
+                <control type="label">
+                    <textcolor>main_fg_70</textcolor>
+                    <top>2</top>
+                    <width>auto</width>
+                    <height>28</height>
+                    <align>right</align>
+                    <font>Tiny</font>
+                    <label>$INFO[Window(Home).Property(SkinHelper.ListItem.Rating.TMDB), ,   ]</label>
+                    <visible>!String.IsEmpty(Window(Home).Property(SkinHelper.ListItem.Rating.TMDB))</visible>
+                </control>
+                <control type="image">
+                    <top>0</top>
+                    <width>32</width>
+                    <height>32</height>
+                    <texture colordiffuse="main_fg_100">flags/$PARAM[directory]/ratings/popcorn.png</texture>
+                    <visible>!String.IsEmpty(Window(Home).Property(SkinHelper.ListItem.RottenTomatoes.UserMeter))</visible>
+                </control>
+                <control type="label">
+                    <textcolor>main_fg_70</textcolor>
+                    <top>2</top>
+                    <width>auto</width>
+                    <height>28</height>
+                    <align>right</align>
+                    <font>Tiny</font>
+                    <label>$INFO[Window(Home).Property(SkinHelper.ListItem.RottenTomatoes.UserMeter), ,%   ]</label>
+                    <visible>!String.IsEmpty(Window(Home).Property(SkinHelper.ListItem.RottenTomatoes.UserMeter))</visible>
+                </control>
+                <control type="image">
+                    <width>32</width>
+                    <height>32</height>
+                    <texture colordiffuse="main_fg_100">flags/$PARAM[directory]/ratings/rtrotten.png</texture>
+                    <visible>!String.IsEmpty(Window(Home).Property(SkinHelper.ListItem.RottenTomatoes.Meter))</visible>
+                    <visible>!Integer.IsGreater(Window(home).Property(SkinHelper.ListItem.RottenTomatoes.Meter),59)</visible>
+                </control>
+                <control type="image">
+                    <width>32</width>
+                    <height>32</height>
+                    <texture colordiffuse="main_fg_100">flags/$PARAM[directory]/ratings/rtfresh.png</texture>
+                    <visible>!String.IsEmpty(Window(Home).Property(SkinHelper.ListItem.RottenTomatoes.Meter))</visible>
+                    <visible>Integer.IsGreater(Window(home).Property(SkinHelper.ListItem.RottenTomatoes.Meter),59)</visible>
+                </control>
+                <control type="label">
+                    <textcolor>main_fg_70</textcolor>
+                    <top>2</top>
+                    <width>auto</width>
+                    <height>28</height>
+                    <align>right</align>
+                    <font>Tiny</font>
+                    <label>$INFO[Window(Home).Property(SkinHelper.ListItem.RottenTomatoes.Meter), ,%   ]</label>
+                    <visible>!String.IsEmpty(Window(Home).Property(SkinHelper.ListItem.RottenTomatoes.Meter))</visible>
+                </control>
+                <control type="image">
+                    <top>1</top>
+                    <width>40</width>
+                    <height>32</height>
+                    <texture colordiffuse="main_fg_100">flags/$PARAM[directory]/ratings/imdbicon.png</texture>
+                    <visible>!String.IsEmpty(ListItem.RatingAndVotes) | !String.IsEmpty(Window(home).Property(SkinHelper.ListItem.Rating.IMDB))</visible>
+                </control>
+                <control type="label">
+                    <textcolor>main_fg_70</textcolor>
+                    <top>2</top>
+                    <width>auto</width>
+                    <height>28</height>
+                    <align>right</align>
+                    <font>Tiny</font>
+                    <label>$INFO[Window(home).Property(SkinHelper.ListItem.Rating.IMDB), ,]$INFO[Window(home).Property(SkinHelper.ListItem.Votes.IMDB), (, $LOCALIZE[205])]</label>
+                    <visible>!String.IsEmpty(Window(home).Property(SkinHelper.ListItem.Rating.IMDB))</visible>
+                </control>
+                <control type="label">
+                    <textcolor>main_fg_70</textcolor>
+                    <top>2</top>
+                    <width>auto</width>
+                    <height>28</height>
+                    <align>right</align>
+                    <font>Tiny</font>
+                    <label>$INFO[ListItem.RatingAndVotes, ,]</label>
+                    <visible>String.IsEmpty(Window(home).Property(SkinHelper.ListItem.Rating.IMDB)) + !String.IsEmpty(ListItem.RatingAndVotes)</visible>
+                </control>
+                <control type="label">
+                    <textcolor>main_fg_70</textcolor>
+                    <top>2</top>
+                    <width>auto</width>
+                    <height>28</height>
+                    <align>right</align>
+                    <font>Tiny</font>
+                    <label>$INFO[Window(Home).Property(SkinHelper.ListItem.IMDB.Top250), #,]</label>
+                    <visible>!String.IsEmpty(Window(home).Property(SkinHelper.ListItem.IMDB.Top250))</visible>
                 </control>
             </control>
         </definition>

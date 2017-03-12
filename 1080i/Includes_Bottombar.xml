@@ -88,12 +88,28 @@
                 <height>100</height>
                 <top>0</top>
                 <include>Animation_Bottombar_Text</include>
-                <include content="Object_Flags" condition="Window.IsVisible(Home)">
-                    <param name="container" value="Container(301)." />
-                </include>
-                <include content="Object_Flags" condition="!Window.IsVisible(Home)">
-                    <param name="container" value="" />
-                </include>
+                <control type="group">
+                    <visible>!Skin.HasSetting(UseColorFlags)</visible>
+                    <include content="Object_Flags" condition="Window.IsVisible(Home)">
+                        <param name="container" value="Container(301)." />
+                        <param name="directory" value="monochrome" />
+                    </include>
+                    <include content="Object_Flags" condition="!Window.IsVisible(Home)">
+                        <param name="container" value="" />
+                        <param name="directory" value="monochrome" />
+                    </include>
+                </control>
+                <control type="group">
+                    <visible>Skin.HasSetting(UseColorFlags)</visible>
+                    <include content="Object_Flags" condition="Window.IsVisible(Home)">
+                        <param name="container" value="Container(301)." />
+                        <param name="directory" value="color" />
+                    </include>
+                    <include content="Object_Flags" condition="!Window.IsVisible(Home)">
+                        <param name="container" value="" />
+                        <param name="directory" value="color" />
+                    </include>
+                </control>
             </control>
             <control type="group">
                 <include>Animation_Bottombar_Text</include>

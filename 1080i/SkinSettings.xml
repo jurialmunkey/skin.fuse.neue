@@ -274,7 +274,6 @@
                         <onclick>Skin.ResetSettings</onclick>
                     </control> -->
 
-                    <!-- Weather Icons -->
                     <control type="button" id="9276">
                         <visible>ControlGroup(9100).HasFocus(9107)</visible>
                         <onback>300</onback>
@@ -282,6 +281,14 @@
                         <label2>$INFO[Skin.String(weather.icons.name)]</label2>
                         <include>Defs_Settings_Button</include>
                         <onclick>RunScript(script.image.resource.select,property=weather.icons&amp;type=resource.images.weathericons)</onclick>
+                    </control>
+                    <control type="radiobutton" id="9277">
+                        <visible>ControlGroup(9100).HasFocus(9107)</visible>
+                        <onback>300</onback>
+                        <label>$LOCALIZE[31015]</label>
+                        <selected>Skin.HasSetting(UseColorFlags)</selected>
+                        <include>Defs_Settings_Button</include>
+                        <onclick>Skin.ToggleSetting(UseColorFlags)</onclick>
                     </control>
 
                     <!-- Dependencies -->

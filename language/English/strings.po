@@ -91,6 +91,11 @@ msgctxt "#31014"
 msgid "Show extra fanart"
 msgstr ""
 
+#: /1080i/SkinSettings.xml
+msgctxt "#31015"
+msgid "Use colour media flags"
+msgstr ""
+
 msgctxt "#31101"
 msgid "items"
 msgstr ""
