@@ -165,8 +165,6 @@
     </include>
 
     <include name="Topbar_MainMenu_Movement">
-        <!-- <onback>ReplaceWindow(home)</onback> -->
-
         <ondown condition="!Integer.IsEqual(Container(302).NumItems,0) + Container(300).Position(0)">SetFocus(302,0)</ondown>
         <ondown condition="!Integer.IsEqual(Container(302).NumItems,0) + Container(300).Position(1)">SetFocus(302,1)</ondown>
         <ondown condition="!Integer.IsEqual(Container(302).NumItems,0) + Container(300).Position(2)">SetFocus(302,2)</ondown>
@@ -181,6 +179,9 @@
         <ondown condition="Integer.IsEqual(Container(302).NumItems,0) + Window.IsVisible(SkinSettings.xml)">9100</ondown>
         <ondown condition="Integer.IsEqual(Container(302).NumItems,0) + Window.IsVisible(script-script.extendedinfo-VideoList.xml)">500</ondown>
         <ondown condition="Integer.IsEqual(Container(302).NumItems,0) + !Window.IsVisible(home) + !Window.IsVisible(SettingsCategory.xml) + !Window.IsVisible(SkinSettings.xml) + !Window.IsVisible(FileManager.xml) + !Window.IsVisible(script-script.extendedinfo-VideoList.xml)">50</ondown>
+
+        <onup condition="Window.IsVisible(home) + !Container(301).IsUpdating + Control.IsVisible(301)">301</onup>
+        <onup condition="!Window.IsVisible(home) + !Window.IsVisible(SettingsCategory.xml) + !Window.IsVisible(SkinSettings.xml) + !Window.IsVisible(FileManager.xml) + !Window.IsVisible(script-script.extendedinfo-VideoList.xml)">50</onup>
     </include>
 
     <include name="Topbar_MainMenu_HomeItems">
@@ -315,7 +316,6 @@
 
         <ondown condition="Window.IsVisible(home) + !Container(301).IsUpdating + Control.IsVisible(301)">301</ondown>
         <ondown condition="Window.IsVisible(home) + [Container(301).IsUpdating | !Control.IsVisible(301)]">9400</ondown>
-
         <ondown condition="Window.IsVisible(SettingsCategory.xml)">3</ondown>
         <ondown condition="Window.IsVisible(FileManager.xml)">20</ondown>
         <ondown condition="Window.IsVisible(SkinSettings.xml)">9100</ondown>

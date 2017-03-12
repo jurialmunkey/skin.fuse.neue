@@ -105,7 +105,7 @@
             </control>
         </control>
 
-        <include>Furniture_InfoClock</include>
+        <include>Statusbar_Info_Clock</include>
 
     </controls>
 

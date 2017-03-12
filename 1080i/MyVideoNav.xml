@@ -9,24 +9,24 @@
     <include>Defs_SetStartWindow</include>
     <controls>
 
-        <include>GlobalBackground</include>
+        <include>Global_Background</include>
         <include>Topbar</include>
         <include>Bottombar</include>
         <control type="group">
             <visible>Container.Content(episodes) | Container.Content(seasons) | Container.Content(tvshows) | Container.Content(actors) | Container.Content(movies) | Container.Content(sets) | Container.Content(videos) | Container.Content(files)</visible>
-            <include>Furniture_BigPoster</include>
+            <include>Object_BigPoster</include>
             <visible>!Window.IsVisible(DialogVideoInfo.xml)</visible>
         </control>
         <control type="group">
             <visible>![Container.Content(episodes) | Container.Content(seasons) | Container.Content(tvshows) | Container.Content(actors) | Container.Content(movies) | Container.Content(sets) | Container.Content(videos) | Container.Content(files)]</visible>
-            <include content="Furniture_BigPoster">
+            <include content="Object_BigPoster">
                 <param name="height" value="504" />
             </include>
             <visible>!Window.IsVisible(DialogVideoInfo.xml)</visible>
         </control>
 
         <control type="group">
-            <include>GlobalOverlay</include>
+            <include>Global_Overlay</include>
             <include>Animation_FadeIn</include>
             <visible allowhiddenfocus="true">ControlGroup(6000).HasFocus()</visible>
             <control type="group">
@@ -68,7 +68,7 @@
             </control>
         </control>
         
-        <include>Furniture_Clock</include>
+        <include>Statusbar</include>
 
 
 

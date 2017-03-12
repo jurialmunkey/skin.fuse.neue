@@ -7,7 +7,7 @@
     <onunload condition="!Skin.HasSetting(startup.init)">Skin.SetBool(startup.init)</onunload>
     <controls>
 
-        <include>GlobalOverlay</include>
+        <include>Global_Overlay</include>
 
         <control type="group">
             <include>Dialog_Confirm</include>

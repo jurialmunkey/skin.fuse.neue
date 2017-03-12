@@ -4,11 +4,11 @@
     <defaultcontrol always="true">4</defaultcontrol>
     <include>Defs_SettingsOnload</include>
     <controls>
-        <include>GlobalBackground</include>
+        <include>Global_Background</include>
         <include>Topbar</include>
         <include>Bottombar</include>
-        <include>Furniture_Clock</include>
-        <include>GlobalOverlay</include>
+        <include>Statusbar</include>
+        <include>Global_Overlay</include>
 
         <control type="group">
             <include content="Dialog_Standard_Group">

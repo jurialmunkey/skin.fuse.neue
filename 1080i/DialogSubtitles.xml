@@ -1,7 +1,7 @@
 <window type="dialog">
     <defaultcontrol always="true">120</defaultcontrol>
     <controls>
-        <include>GlobalOverlay</include>
+        <include>Global_Overlay</include>
 
         <control type="group">
             <width>1700</width>

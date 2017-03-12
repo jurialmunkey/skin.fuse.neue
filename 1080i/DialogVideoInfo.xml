@@ -8,8 +8,8 @@
 
         <control type="group">
             <visible>!Window.IsVisible(script-script.extendedinfo-DialogVideoInfo.xml) + !Window.IsVisible(script-script.extendedinfo-DialogInfo.xml)</visible>
-            <include content="Furniture_BigPoster">
-                <param name="variable" value="$VAR[VideoInfoPosterImage]"/>
+            <include content="Object_BigPoster">
+                <param name="variable" value="$VAR[Image_Poster_Info]"/>
             </include>
             <control type="group">
                 <bottom>0</bottom>
@@ -547,7 +547,7 @@
                 <visible>[Control.IsVisible(9501) + !Container(9501).IsUpdating] | [Control.IsVisible(9502) + !Container(9502).IsUpdating]</visible>
             </control>
 
-            <include>Furniture_InfoClock</include>
+            <include>Statusbar_Info_Clock</include>
         </control>
     </controls>
 

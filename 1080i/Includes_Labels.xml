@@ -13,23 +13,24 @@
         <value condition="!String.IsEqual(Container(50).NumPages,0) + !String.IsEmpty(Container(50).NumPages) + !Container(50).IsUpdating">[COLOR=$VAR[ColorHighlight]]$INFO[Container(50).CurrentPage,,[/COLOR] $LOCALIZE[20163] ][COLOR=$VAR[ColorHighlight]]$INFO[Container(50).NumPages,,[/COLOR] $LOCALIZE[31243]]</value>
     </variable>
 
-    <variable name="LabelWidgetShortcutsName">
+    <variable name="Label_Statusbar_NextAired">
+        <value condition="!String.IsEmpty(Window(Home).Property(NextAired.NextDate))">[COLOR=main_fg_70]$INFO[Window(Home).Property(NextAired.NextTitle),,  ][/COLOR]$INFO[Window(Home).Property(NextAired.AirTime),, • ]$INFO[Window(Home).Property(NextAired.NextDate)]</value>
+        <value condition="String.IsEmpty(Window(Home).Property(NextAired.NextDate)) + !String.IsEmpty(Window(Home).Property(NextAired.LatestTitle))">[COLOR=main_fg_70]$INFO[Window(Home).Property(NextAired.LatestTitle),,  ][/COLOR]$INFO[Window(Home).Property(NextAired.Status),, • ]$INFO[Window(Home).Property(NextAired.LatestDate)]</value>
+    </variable>
+
+    <variable name="Label_SkinShortcuts_WidgetName">
         <value condition="!String.IsEmpty(Container(211).ListItem.Property(widgetName))">$INFO[Container(211).ListItem.Property(widgetName)]</value>
         <value condition="!String.IsEmpty(Container(211).ListItem.Property(background))">$LOCALIZE[31110]</value>
         <value>$LOCALIZE[31269]</value>
     </variable>
-    <variable name="LabelFallbackWidgetName">
+
+    <variable name="Label_SkinShortcuts_WidgetName_Fallback">
         <value condition="String.IsEqual(Skin.String(home.slideshowpath),special://skin/extras/backgrounds/default.jpg)">$LOCALIZE[16018]</value>
         <value condition="!String.IsEmpty(Skin.String(home.slideshowpath))">$INFO[Skin.String(home.slideshowpath)]</value>
         <value>$LOCALIZE[31105]</value>
     </variable>
 
-    <variable name="LabelNextAiredDetails">
-        <value condition="!String.IsEmpty(Window(Home).Property(NextAired.NextDate))">[COLOR=main_fg_70]$INFO[Window(Home).Property(NextAired.NextTitle),,  ][/COLOR]$INFO[Window(Home).Property(NextAired.AirTime),, • ]$INFO[Window(Home).Property(NextAired.NextDate)]</value>
-        <value condition="String.IsEmpty(Window(Home).Property(NextAired.NextDate)) + !String.IsEmpty(Window(Home).Property(NextAired.LatestTitle))">[COLOR=main_fg_70]$INFO[Window(Home).Property(NextAired.LatestTitle),,  ][/COLOR]$INFO[Window(Home).Property(NextAired.Status),, • ]$INFO[Window(Home).Property(NextAired.LatestDate)]</value>
-    </variable>
-
-    <variable name="Label_SettingsHeader">
+    <variable name="Label_Settings_Header">
         <value condition="Window.IsActive(systeminfo)">$LOCALIZE[130]</value>
         <value condition="Window.IsActive(systemsettings)">$LOCALIZE[13000]</value>
         <value condition="Window.IsActive(pvrsettings)">$LOCALIZE[19020]</value>
@@ -43,7 +44,7 @@
         <value>$LOCALIZE[480]</value>
     </variable>
 
-    <variable name="WidgetTitle">
+    <variable name="Label_Widget_Title">
         <value condition="Window.IsVisible(MyWeather.xml)"></value>
         <value condition="Window.IsVisible(script-script.extendedinfo-VideoList.xml)">$INFO[Container(500).ListItem.Label]</value>
         <value condition="Window.IsVisible(script-script.extendedinfo-DialogInfo.xml) + Control.IsVisible(150)">$INFO[Container(150).ListItem.Label]</value>
@@ -72,7 +73,8 @@
         <value condition="String.IsEqual(Container(301).ListItem.Title,Container(301).ListItem.TvShowTitle) +!String.IsEmpty(Container(301).ListItem.Title)">$INFO[Container(301).ListItem.Title]</value>
         <value>$INFO[Container(301).ListItem.Label]</value>
     </variable>
-    <variable name="WidgetPlot">
+
+    <variable name="Label_Widget_Plot">
         <value condition="Window.IsVisible(MyWeather.xml)"></value>
         <value condition="Window.IsVisible(script-script.extendedinfo-VideoList.xml) + !String.IsEmpty(Container(500).ListItem.Plot)">$INFO[Container(500).ListItem.Plot]</value>
         <value condition="Window.IsVisible(script-script.extendedinfo-DialogVideoInfo.xml) + !String.IsEmpty(Window.Property(plot)) + String.IsEmpty(Window(Home).Property(FocusedList)) + !Control.IsVisible(1000) + !Control.IsVisible(150) + !Control.IsVisible(350) + !Control.IsVisible(750) + !Control.IsVisible(850) + !Control.IsVisible(950)">$INFO[Window.Property(plot)]</value>
@@ -87,13 +89,7 @@
         <value>$LOCALIZE[19055]</value>
     </variable>
 
-    <variable name="Label_Rating">
-        <value condition="Window.IsVisible(Home) + !String.IsEmpty(Container(301).ListItem.Rating)">$INFO[Container(301).ListItem.Rating]</value>
-        <value condition="!String.IsEmpty(ListItem.Rating)">$INFO[ListItem.Rating]</value>
-        <value>0.0</value>
-    </variable>
-
-    <variable name="WidgetSubLabel">
+    <variable name="Label_Widget_InfoLine">
         <value condition="Window.IsVisible(MyWeather.xml)"></value>
         <value condition="Window.IsVisible(script-script.extendedinfo-VideoList.xml)">$INFO[Container(500).ListItem.Year,,  •  ]$INFO[Container(500).ListItem.Rating]</value>
         <value condition="Window.IsVisible(script-script.extendedinfo-DialogInfo.xml) + String.IsEmpty(Window(Home).Property(FocusedList)) + !Control.IsVisible(150) + !Control.IsVisible(250) + !Control.IsVisible(350) + !Control.IsVisible(550)">$INFO[Window.Property(AlsoKnownAs)]</value>
@@ -117,6 +113,7 @@
         <value condition="String.IsEqual(Window(Home).Property(FocusedList),9501) + !Container(9501).IsUpdating">$INFO[Container(9501).ListItem.Label]</value>
         <value condition="String.IsEqual(Window(Home).Property(FocusedList),9502) + !Container(9502).IsUpdating">$INFO[Container(9502).ListItem.Label]</value>
     </variable>
+
     <variable name="Label_VideoInfo_InfoLine">
         <value condition="String.IsEqual(Window(Home).Property(FocusedList),9501) + !Container(9501).IsUpdating">$INFO[Container(9501).ListItem.Label2,[COLOR=panel_fg_70]$LOCALIZE[20347][/COLOR] ,]</value>
         <value condition="String.IsEqual(Window(Home).Property(FocusedList),9502) + !Container(9502).IsUpdating">$INFO[Window(Home).Property(VideoInfo_InfoLine)]$INFO[Container(9502).ListItem.Year,  •  ,]</value>
@@ -149,6 +146,7 @@
         <value condition="Container.Content(songs)">$INFO[ListItem.TrackNumber,,. ]$INFO[ListItem.Title]</value>
         <value condition="!String.IsEqual(ListItem.Label,..)">$INFO[ListItem.Label]</value>
     </variable>
+
     <variable name="Label_InfoLine">
         <value condition="Window.IsVisible(MyWeather.xml)"></value>
         <value condition="Window.IsVisible(script-script.extendedinfo-DialogInfo.xml) + String.IsEmpty(Window(Home).Property(FocusedList)) + !Control.IsVisible(150) + !Control.IsVisible(250) + !Control.IsVisible(350) + !Control.IsVisible(550)">$INFO[Window.Property(AlsoKnownAs)]</value>
@@ -173,6 +171,7 @@
         <value condition="!String.IsEmpty(System.CurrentWindow) + !Window.IsVisible(SettingsCategory.xml) + !Window.IsVisible(Settings.xml)">$INFO[System.CurrentWindow]$INFO[Container.FolderName,  •  ,]</value>
         <value condition="!String.IsEmpty(Container.FolderName)">$INFO[Container.FolderName]</value>
     </variable>
+
     <variable name="Label_Plot">
         <value condition="Window.IsVisible(MyWeather.xml)"></value>
         <value condition="Window.IsVisible(script-script.extendedinfo-DialogVideoInfo.xml) + !String.IsEmpty(Window.Property(plot)) + String.IsEmpty(Window(Home).Property(FocusedList)) + !Control.IsVisible(1000) + !Control.IsVisible(150) + !Control.IsVisible(350) + !Control.IsVisible(750) + !Control.IsVisible(850) + !Control.IsVisible(950)">$INFO[Window.Property(plot)]</value>
@@ -180,12 +179,18 @@
         <value condition="Window.IsVisible(script-script.extendedinfo-DialogVideoInfo.xml) | Window.IsVisible(script-script.extendedinfo-DialogInfo.xml)"></value>
         <value condition="Window.IsVisible(DialogVideoInfo.xml) + !String.IsEmpty(Window(Home).Property(FocusedList))"></value>
         <value condition="Window.IsVisible(MyPVRGuide.xml) + Player.HasVideo"></value>
-        <value condition="Window.IsVisible(Home) + !Window.IsVisible(DialogVideoInfo.xml) + !Window.IsVisible(DialogMusicInfo.xml)">$VAR[WidgetPlot]</value>
+        <value condition="Window.IsVisible(Home) + !Window.IsVisible(DialogVideoInfo.xml) + !Window.IsVisible(DialogMusicInfo.xml)">$VAR[Label_Widget_Plot]</value>
         <value condition="ListItem.IsCollection">$INFO[Window(Home).Property(SkinHelper.ListItem.Plot)] </value>
         <value>$INFO[ListItem.Plot]</value>
     </variable>
 
-    <variable name="PlayerStatus">
+    <variable name="Label_Rating">
+        <value condition="Window.IsVisible(Home) + !String.IsEmpty(Container(301).ListItem.Rating)">$INFO[Container(301).ListItem.Rating]</value>
+        <value condition="!String.IsEmpty(ListItem.Rating)">$INFO[ListItem.Rating]</value>
+        <value>0.0</value>
+    </variable>
+
+    <variable name="Label_PlayerStatus">
         <value condition="Player.Caching">$LOCALIZE[439] $INFO[Player.CacheLevel,,%]</value>
         <value condition="Player.Forwarding32x">FF 32x</value>
         <value condition="Player.Forwarding16x">FF 16x</value>
@@ -206,9 +211,8 @@
         <value>$INFO[Player.FinishTime,$LOCALIZE[31106] ,]</value>
     </variable>
 
-
-    <variable name="VideoHWDecoder">
-        <value condition="Player.Process(videohwdecoder)">HW</value>
+    <variable name="Label_VideoHWDecoder">
+        <value condition="Player.Process(Label_VideoHWDecoder)">HW</value>
         <value>SW</value>
     </variable>
 </includes>

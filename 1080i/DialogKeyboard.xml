@@ -4,7 +4,7 @@
     <defaultcontrol always="true">300</defaultcontrol>
 
     <controls>
-        <include>GlobalOverlay</include>
+        <include>Global_Overlay</include>
         <control type="group">
             <visible>!Window.IsVisible(numericinput)</visible>
             <include>Animation_ZoomIn</include>

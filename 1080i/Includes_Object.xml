@@ -1,0 +1,367 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<includes>
+    <include name="Object_BigPoster">
+        <param name="container" default="" />
+        <param name="visible" default="!Container.IsUpdating" />
+        <param name="variable" default="$VAR[Image_Poster]" />
+        <param name="height" default="756" />
+        <definition>
+
+            <control type="group">
+                <left>SidePad</left>
+                <bottom>78</bottom>
+                <width>504</width>
+                <height>$PARAM[height]</height>
+                <animation type="WindowOpen" reversible="false" condition="[Window.Previous(MusicVisualisation.xml) | Window.Previous(VideoFullScreen.xml) | Window.Previous(Startup.xml)] + !Window.IsVisible(home)">
+                    <effect type="slide" start="-534" end="0" time="400" delay="200" tween="quadratic" easing="out" />
+                    <effect type="fade" start="0" end="100" time="200" delay="200" />
+                </animation>
+                <include>Animation_FadeInOut_Conditional</include>
+                <visible>$PARAM[visible]</visible>
+                <control type="image">
+                    <centerbottom>0</centerbottom>
+                    <width>100%</width>
+                    <height>48</height>
+                    <aspectratio>stretch</aspectratio>
+                    <texture border="24,12,24,12">diffuse/shadowspot.png</texture>
+                </control>
+                <control type="group">
+                    <visible>!Window.IsVisible(MyPics.xml)</visible>        
+                    <control type="image">
+                        <include>Defs_Shadow_Opaque</include>
+                        <fadetime>0</fadetime>
+                        <aspectratio aligny="center">scale</aspectratio>
+                        <texture fallback="DefaultAddonImages.png">$PARAM[variable]</texture>
+                        <visible>[!$PARAM[container]ListItem.IsParentFolder + !String.StartsWith($PARAM[container]ListItem.Icon,Default) + [!String.IsEmpty($PARAM[container]ListItem.Art(tvshow.poster)) | !String.IsEmpty($PARAM[container]ListItem.Art(poster)) | Container.Content(albums) | Container.Content(songs) | Container.Content(actors) | Container.Content(addons) | Container.Content(artists) | Window.IsVisible(1101) | Window.IsVisible(1102) | Window.IsVisible(1103) | Window.IsVisible(1104) | Window.IsVisible(1105) | Window.IsVisible(1106) | Window.IsVisible(1107) | Window.IsVisible(1108) | Window.IsVisible(1109) | [Window.IsVisible(MyPVRChannels.xml) | Window.IsVisible(MyPVRTimers.xml) | Window.IsVisible(MyPVRRecordings.xml)]]]</visible>
+                        <visible>!Window.IsVisible(home)</visible>
+                    </control>
+                    
+                    <control type="group">
+                        <visible>[[!$PARAM[container]ListItem.IsParentFolder + !String.StartsWith($PARAM[container]ListItem.Icon,Default)] + ![!String.IsEmpty($PARAM[container]ListItem.Art(tvshow.poster)) | !String.IsEmpty($PARAM[container]ListItem.Art(poster)) | Container.Content(albums) | Container.Content(songs) | Container.Content(actors) | Container.Content(addons) | Container.Content(artists) | Window.IsVisible(1101) | Window.IsVisible(1102) | Window.IsVisible(1103) | Window.IsVisible(1104) | Window.IsVisible(1105) | Window.IsVisible(1106) | Window.IsVisible(1107) | Window.IsVisible(1108) | Window.IsVisible(1109) | [Window.IsVisible(MyPVRChannels.xml) | Window.IsVisible(MyPVRTimers.xml) | Window.IsVisible(MyPVRRecordings.xml)]]]</visible>
+                        <visible>!Window.IsVisible(home)</visible>
+                        <control type="image">
+                            <fadetime>0</fadetime>
+                            <include>Defs_Shadow_Opaque</include>
+                            <aspectratio aligny="center">scale</aspectratio>
+                            <texture colordiffuse="main_fg_100">DefaultAddonImages.png</texture>
+                        </control>
+                    </control>
+
+                    <control type="group">
+                        <visible>!$PARAM[container]ListItem.IsParentFolder + !String.StartsWith($PARAM[container]ListItem.Icon,Default)</visible>
+                        <visible>Window.IsVisible(home)</visible>
+                        <visible>!String.IsEmpty(Container(301).ListItem.Art(tvshow.poster)) | !String.IsEmpty(Container(301).ListItem.Art(poster)) | Window.IsVisible(DialogVideoInfo.xml)</visible>
+                        <control type="image">
+                            <fadetime>0</fadetime>
+                            <include>Defs_Shadow_Opaque</include>
+                            <aspectratio aligny="bottom">scale</aspectratio>
+                            <texture fallback="DefaultAddonImages.png">$PARAM[variable]</texture>
+                        </control>
+                    </control>
+                    <control type="group">
+                        <visible>!$PARAM[container]ListItem.IsParentFolder + !String.StartsWith($PARAM[container]ListItem.Icon,Default)</visible>
+                        <visible>Window.IsVisible(home) + !Window.IsVisible(DialogVideoInfo.xml)</visible>
+                        <visible>String.IsEmpty(Container(301).ListItem.Art(tvshow.poster)) + String.IsEmpty(Container(301).ListItem.Art(poster))</visible>
+                        <control type="image">
+                            <fadetime>0</fadetime>
+                            <include>Defs_Shadow_Opaque</include>
+                            <aspectratio>scale</aspectratio>
+                            <texture colordiffuse="PosterBack">common/white.png</texture>
+                        </control>
+                        <control type="image">
+                            <fadetime>0</fadetime>
+                            <aspectratio aligny="center">keep</aspectratio>
+                            <texture fallback="DefaultAddonImages.png">$PARAM[variable]</texture>
+                        </control>
+                    </control>
+
+                    <control type="group">
+                        <visible>$PARAM[container]ListItem.IsParentFolder | String.StartsWith($PARAM[container]ListItem.Icon,Default)</visible>
+                        <control type="image">
+                            <fadetime>0</fadetime>
+                            <include>Defs_Shadow_Opaque</include>
+                            <aspectratio aligny="center">scale</aspectratio>
+                            <texture colordiffuse="main_fg_100" fallback="DefaultAddonNone.png">$INFO[$PARAM[container]ListItem.Icon]</texture>
+                            <visible>[!Container.Content(genres) + !Container.Content(studios)] | ListItem.IsParentFolder</visible>
+                        </control>
+                        <control type="image">
+                            <fadetime>0</fadetime>
+                            <include>Defs_Shadow_Opaque</include>
+                            <aspectratio aligny="center">scale</aspectratio>
+                            <texture colordiffuse="PosterBack" background="true">common/white.png</texture>
+                            <visible>Container.Content(genres) + !ListItem.IsParentFolder</visible>
+                        </control>
+                        <control type="image">
+                            <fadetime>0</fadetime>
+                            <bordersize>80</bordersize>
+                            <aspectratio aligny="center">keep</aspectratio>
+                            <texture colordiffuse="main_fg_100" background="true" fallback="DefaultFolder.png">$INFO[ListItem.Label,resource://resource.images.moviegenreicons.transparent/,.png]</texture>
+                            <visible>Container.Content(genres) + !ListItem.IsParentFolder</visible>
+                        </control>
+                        <control type="image">
+                            <fadetime>0</fadetime>
+                            <include>Defs_Shadow_Opaque</include>
+                            <aspectratio aligny="center">scale</aspectratio>
+                            <texture colordiffuse="PosterBack" background="true">common/white.png</texture>
+                            <visible>Container.Content(studios) + !ListItem.IsParentFolder</visible>
+                        </control>
+                        <control type="image">
+                            <fadetime>0</fadetime>
+                            <bordersize>80</bordersize>
+                            <aspectratio aligny="center">keep</aspectratio>
+                            <texture colordiffuse="main_fg_100" background="true" fallback="DefaultFolder.png">$INFO[ListItem.Label,resource://resource.images.studios.white/,.png]</texture>
+                            <visible>Container.Content(studios) + !ListItem.IsParentFolder</visible>
+                        </control>
+                    </control>
+                </control>
+                <control type="group">
+                    <visible>Window.IsVisible(MyPics.xml)</visible>
+                    <control type="group">
+                        <control type="image">
+                            <fadetime>0</fadetime>
+                            <include>Defs_Shadow_Opaque</include>
+                            <aspectratio>scale</aspectratio>
+                            <texture colordiffuse="PosterBack">common/white.png</texture>
+                        </control>
+                        <control type="image">
+                            <fadetime>0</fadetime>
+                            <aspectratio aligny="center">keep</aspectratio>
+                            <texture colordiffuse="main_fg_100" fallback="DefaultAddonImages.png">$INFO[ListItem.FileNameAndPath]</texture>
+                        </control>
+                    </control>
+                </control>
+            </control>
+        </definition>
+    </include>
+
+    <include name="Object_Flags">
+        <param name="container" default="" />
+        <definition>
+            <control type="grouplist">
+                <visible>!Skin.HasSetting(furniture.flags)</visible>
+                <visible>!Window.IsVisible(script-script.extendedinfo-DialogVideoInfo.xml)</visible>
+                <visible>!Window.IsVisible(script-script.extendedinfo-DialogInfo.xml)</visible>
+                <visible>!String.IsEqual($PARAM[container]ListItem.Label,..)</visible>
+                <visible>!Window.IsVisible(DialogVideoInfo.xml) | String.IsEmpty(Window(Home).Property(FocusedList))</visible>
+                <right>30</right>
+                <width>1400</width>
+                <height>120</height>
+                <orientation>horizontal</orientation>
+                <align>right</align>
+                <itemgap>8</itemgap>
+                <centertop>50%</centertop>
+                <usecontrolcoords>true</usecontrolcoords>
+                <control type="image">
+                    <width>64</width>
+                    <centertop>50%</centertop>
+                    <height>64</height>
+                    <texture colordiffuse="panel_fg_100">flags/3D.png</texture>
+                    <visible>$PARAM[container]ListItem.IsStereoscopic</visible>
+                </control>
+                <control type="image">
+                    <width>64</width>
+                    <centertop>50%</centertop>
+                    <height>64</height>
+                    <texture colordiffuse="panel_fg_100">flags/bluray.png</texture>
+                    <visible>[String.StartsWith($PARAM[container]ListItem.FilenameAndPath,bluray) | String.StartsWith($PARAM[container]ListItem.FilenameAndPath,bdrip) | String.StartsWith($PARAM[container]ListItem.FilenameAndPath,bd25) | String.StartsWith($PARAM[container]ListItem.FilenameAndPath,bd50)]</visible>
+                </control>
+                <control type="image">
+                    <width>95</width>
+                    <centertop>50%</centertop>
+                    <height>64</height>
+                    <texture colordiffuse="panel_fg_100">flags/hddvd.png</texture>
+                    <visible>String.StartsWith($PARAM[container]ListItem.FilenameAndPath,hddvd)</visible>
+                </control>
+                <control type="image">
+                    <width>64</width>
+                    <centertop>50%</centertop>
+                    <height>64</height>
+                    <texture colordiffuse="panel_fg_100">flags/dvd.png</texture>
+                    <visible>String.StartsWith($PARAM[container]ListItem.FilenameAndPath,dvd) + !String.StartsWith($PARAM[container]ListItem.FilenameAndPath,hddvd)</visible>
+                </control>
+                <control type="image">
+                    <width>88</width>
+                    <height>48</height>
+                    <centertop>50%</centertop>
+                    <texture colordiffuse="panel_fg_100" fallback="flags/fallback.png">$INFO[$PARAM[container]ListItem.VideoResolution,flags/resolution/,.png]</texture>
+                    <aspectratio align="right">keep</aspectratio>
+                    <visible>!String.IsEmpty($PARAM[container]ListItem.VideoResolution) + !String.StartsWith($PARAM[container]ListItem.Path,videodb://movies/sets)</visible>
+                </control>
+                <control type="image">
+                    <width>88</width>
+                    <height>48</height>
+                    <centertop>50%</centertop>
+                    <texture colordiffuse="panel_fg_100" fallback="flags/fallback.png">$INFO[$PARAM[container]ListItem.VideoCodec,flags/source/,.png]</texture>
+                    <aspectratio align="right">keep</aspectratio>
+                    <visible>!String.IsEmpty($PARAM[container]ListItem.VideoCodec)</visible>
+                </control>
+                <control type="image">
+                    <width>88</width>
+                    <height>48</height>
+                    <centertop>50%</centertop>
+                    <texture colordiffuse="panel_fg_100" fallback="flags/fallback.png">$INFO[$PARAM[container]ListItem.VideoAspect,flags/aspectratio/,.png]</texture>
+                    <aspectratio align="right">keep</aspectratio>
+                    <visible>!String.IsEmpty($PARAM[container]ListItem.VideoAspect)</visible>
+                </control>
+                <control type="image">
+                    <width>88</width>
+                    <height>48</height>
+                    <centertop>50%</centertop>
+                    <texture colordiffuse="panel_fg_100" fallback="flags/fallback.png">$INFO[$PARAM[container]ListItem.AudioCodec,flags/audio/,.png]</texture>
+                    <aspectratio align="right">keep</aspectratio>
+                    <visible>!String.IsEmpty($PARAM[container]ListItem.AudioCodec)</visible>
+                </control>
+                <control type="image">
+                    <width>88</width>
+                    <height>48</height>
+                    <centertop>50%</centertop>
+                    <texture colordiffuse="panel_fg_100" fallback="flags/fallback.png">$INFO[$PARAM[container]ListItem.AudioChannels,flags/channels/,.png]</texture>
+                    <aspectratio align="right">keep</aspectratio>
+                    <visible>!String.IsEmpty($PARAM[container]ListItem.AudioChannels)</visible>
+                </control>
+            </control>
+        </definition>
+    </include>
+
+    <include name="Object_AlphabetStrip">
+        <control type="group">
+            <visible>[Window.IsVisible(Home) + ![String.IsEqual(Container(300).ListItem.Property(widget),weather) + [Control.HasFocus(300) | String.IsEmpty(Container(302).ListItem.Property(widget))] | [String.IsEqual(Container(302).ListItem.Property(widget),weather) + !Control.HasFocus(300)]]] | !Window.IsVisible(Home)</visible>
+            <control type="panel" id="8000">
+                <orientation>horizontal</orientation>
+                <left>606</left>
+                <height>48</height>
+                <bottom>75</bottom>
+                <onup>50</onup>
+                <ondown>9400</ondown>
+                <width>1246</width>
+                <visible>String.IsEqual(Container.SortMethod,$LOCALIZE[556]) | String.IsEqual(Container.SortMethod,$LOCALIZE[557]) | String.IsEqual(Container.SortMethod,$LOCALIZE[558])</visible>
+                <visible>!Container.Content(seasons)</visible>
+                <itemlayout height="48" width="46">
+                    <control type="label">
+                        <aligny>center</aligny>
+                        <align>center</align>
+                        <height>48</height>
+                        <label>$INFO[ListItem.Label]</label>
+                        <textcolor>main_fg_12</textcolor>
+                        <animation effect="fade" start="100" end="10" time="0" condition="!String.IsEmpty(ListItem.Property(NotAvailable))">Conditional</animation>
+                    </control>
+                    <control type="label">
+                        <aligny>center</aligny>
+                        <align>center</align>
+                        <height>48</height>
+                        <label>$INFO[ListItem.Label]</label>
+                        <textcolor>main_fg_30</textcolor>
+                        <visible>String.IsEqual(ListItem.Label,Container.ListItem.SortLetter)</visible>
+                    </control>
+                </itemlayout>
+                <focusedlayout height="48" width="46">
+                    <control type="image">
+                        <height>4</height>
+                        <bottom>0</bottom>
+                        <texture colordiffuse="$VAR[ColorHighlight]">common/white.png</texture>
+                    </control>
+                    <control type="label">
+                        <aligny>center</aligny>
+                        <align>center</align>
+                        <height>48</height>
+                        <label>$INFO[ListItem.Label]</label>
+                        <textcolor>Selected</textcolor>
+                        <animation effect="fade" start="100" end="10" time="0" condition="!String.IsEmpty(ListItem.Property(NotAvailable))">Conditional</animation>
+                    </control>
+                </focusedlayout>
+                <content>plugin://script.skin.helper.service/?action=alphabet&amp;reload=$INFO[Container.NumItems]</content>
+            </control>
+            <control type="image">
+                <height>16</height>
+                <width>16</width>
+                <aspectratio aligny="center">keep</aspectratio>
+                <bottom>90</bottom>
+                <right>30</right>
+                <texture colordiffuse="main_fg_30">common/arrow-small-right.png</texture>
+                <visible>Container.HasNext | Container(301).HasNext</visible>
+                <visible>!Control.IsVisible(54)</visible>
+                <visible>[Control.IsVisible(8000) + !Container(8000).IsUpdating] | Control.IsVisible(60)</visible>
+            </control>
+            <control type="group">
+                <visible>!Control.IsVisible(8000)</visible>
+                <visible>!Control.IsVisible(54)</visible>
+                <include>Object_Scrollbar</include>
+            </control>
+            <control type="group">
+                <visible>!Control.IsVisible(8000)</visible>
+                <visible>Control.IsVisible(54)</visible>
+                <include>Object_Scrollbar_Vert</include>
+            </control>
+        </control>
+    </include>
+
+    <include name="Object_Scrollbar">
+        <control type="button" id="61">
+            <left>614</left>
+            <width>1226</width>
+            <bottom>94</bottom>
+            <height>8</height>
+            <visible allowhiddenfocus="true">false</visible>
+            <onleft>60</onleft>
+            <onright>60</onright>
+            <ondown>60</ondown>
+            <onup>60</onup>
+            <onfocus>SetFocus(60)</onfocus>
+            <include>View_Movement_OnFocus</include>
+        </control>
+        <control type="scrollbar" id="60">
+            <onback>50</onback>
+            <left>614</left>
+            <width>1226</width>
+            <bottom>94</bottom>
+            <orientation>horizontal</orientation>
+            <height>8</height>
+            <onup condition="Window.IsVisible(home)">301</onup>
+            <onup condition="!Window.IsVisible(home) + !Window.IsVisible(script-script.extendedinfo-VideoList.xml)">50</onup>
+            <onup condition="Window.IsVisible(script-script.extendedinfo-VideoList.xml)">500</onup>
+            <ondown>9400</ondown>
+            <texturesliderbackground colordiffuse="main_fg_12">osd/progress-end.png</texturesliderbackground>
+            <texturesliderbar colordiffuse="main_fg_30">osd/progress-end.png</texturesliderbar>
+            <texturesliderbarfocus colordiffuse="$VAR[ColorHighlight]">osd/progress-end.png</texturesliderbarfocus>
+            <animation effect="fade" start="100" end="33" time="400" condition="!Control.HasFocus(60) + !Container.Scrolling">Conditional</animation>
+            <visible>!Window.IsVisible(home) | [Window.IsVisible(home) + !Container(301).IsUpdating]</visible>
+            <include>Animation_FadeIn</include>
+            <include>Animation_FadeOut</include>
+            <visible>!String.IsEqual(Window(Home).Property(ViewType),List)</visible>
+        </control>
+    </include>
+
+    <include name="Object_Scrollbar_Vert">
+        <control type="button" id="61">
+            <right>0</right>
+            <width>8</width>
+            <top>678</top>
+            <bottom>80</bottom>
+            <visible allowhiddenfocus="true">false</visible>
+            <onleft>60</onleft>
+            <onright>60</onright>
+            <ondown>60</ondown>
+            <onup>60</onup>
+            <onfocus>SetFocus(60)</onfocus>
+            <include>View_Movement_OnFocus</include>
+        </control>
+        <control type="scrollbar" id="60">
+            <onback>50</onback>
+            <right>0</right>
+            <width>8</width>
+            <top>678</top>
+            <bottom>80</bottom>
+            <orientation>vertical</orientation>
+            <onleft condition="Window.IsVisible(home)">301</onleft>
+            <onleft condition="!Window.IsVisible(home) + !Window.IsVisible(script-script.extendedinfo-VideoList.xml)">50</onleft>
+            <onleft condition="Window.IsVisible(script-script.extendedinfo-VideoList.xml)">500</onleft>
+            <texturesliderbackground colordiffuse="main_fg_12">osd/progress-end.png</texturesliderbackground>
+            <texturesliderbar colordiffuse="main_fg_30">osd/progress-end.png</texturesliderbar>
+            <texturesliderbarfocus colordiffuse="$VAR[ColorHighlight]">osd/progress-end.png</texturesliderbarfocus>
+            <animation effect="fade" start="100" end="33" time="400" condition="!Control.HasFocus(60) + !Container.Scrolling">Conditional</animation>
+            <visible>!Window.IsVisible(home) | [Window.IsVisible(home) + !Container(301).IsUpdating]</visible>
+            <include>Animation_FadeIn</include>
+            <include>Animation_FadeOut</include>
+        </control>
+    </include>
+</includes>

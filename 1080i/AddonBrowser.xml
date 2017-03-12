@@ -9,14 +9,14 @@
     <onunload>ClearProperty(ShowTopbar_Highlight,Home)</onunload>
     <include>Defs_SetStartWindow</include>
     <controls>
-        <include>GlobalBackground</include>
+        <include>Global_Background</include>
         <include>Topbar</include>
         <include>Bottombar</include>
-        <include content="Furniture_BigPoster">
+        <include content="Object_BigPoster">
             <param name="height" value="504" />
         </include>
         <control type="group">
-            <include>GlobalOverlay</include>
+            <include>Global_Overlay</include>
             <include>Animation_FadeIn</include>
             <visible allowhiddenfocus="true">ControlGroup(6000).HasFocus()</visible>
             <control type="group">
@@ -49,7 +49,7 @@
             </control>
         </control>
         
-        <include>Furniture_Clock</include>
+        <include>Statusbar</include>
     </controls>
 
 </window>

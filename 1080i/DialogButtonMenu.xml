@@ -4,7 +4,7 @@
     <defaultcontrol always="true">3110</defaultcontrol>
     <controls>
         <control type="group">
-            <include>GlobalOverlay</include>
+            <include>Global_Overlay</include>
             <include>Animation_FadeIn</include>
             <visible allowhiddenfocus="true">ControlGroup(3110).HasFocus()</visible>
             <control type="group">

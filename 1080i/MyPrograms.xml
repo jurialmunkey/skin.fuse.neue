@@ -8,14 +8,14 @@
     
     <include>Defs_SetStartWindow</include>
     <controls>
-        <include>GlobalBackground</include>
+        <include>Global_Background</include>
         <include>Topbar</include>
         <include>Bottombar</include>
-        <include content="Furniture_BigPoster">
+        <include content="Object_BigPoster">
             <param name="height" value="504" />
         </include>
         
-        <include>Furniture_Clock</include>
+        <include>Statusbar</include>
     </controls>
 
 </window>

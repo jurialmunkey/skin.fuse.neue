@@ -1,3 +1,7 @@
+[B]0.9.16[/B]
+Rewrite some more code
+Add onup from main menu to widget
+
 [B]0.9.15[/B]
 Rewrite some code
 Add ExtendedInfo button in dialog

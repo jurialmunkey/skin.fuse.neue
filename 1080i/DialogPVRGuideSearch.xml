@@ -2,7 +2,7 @@
 <window id="605">
     <defaultcontrol always="true">20</defaultcontrol>
     <controls>
-        <include>GlobalOverlay</include>
+        <include>Global_Overlay</include>
         <control type="group">
             <include content="Dialog_Standard_Group">
                 <param name="width" value="1400" />

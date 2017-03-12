@@ -16,10 +16,9 @@
                 <include>Bottombar_Content</include>
             </control>
             <control type="group">
-                <visible>[String.IsEqual(Container(300).ListItem.Property(widget),weather) + [Control.HasFocus(300) | String.IsEmpty(Container(302).ListItem.Property(widget))] | [String.IsEqual(Container(302).ListItem.Property(widget),weather) + !Control.HasFocus(300)]]</visible>
-
+                <visible>$EXP[Expression_ShowWeatherWidget]</visible>
                 <visible>Window.IsVisible(home)</visible>
-                <include condition="Window.IsVisible(home)">Furniture_Weather</include>
+                <include condition="Window.IsVisible(home)">Weather</include>
             </control>
         </control> 
     </include>
@@ -41,16 +40,17 @@
             <include>Animation_FadeInOut_Conditional</include>
             <visible>[!Window.IsVisible(DialogVideoInfo.xml) + !Window.IsVisible(DialogMusicInfo.xml) + !Window.IsVisible(DialogAddonInfo.xml) + !Window.IsVisible(DialogPVRInfo.xml)] | Window.IsVisible(script-script.extendedinfo-VideoList.xml)</visible>
             <include>Bottombar_Views</include>
-            <include condition="!Window.IsVisible(script-script.extendedinfo-VideoList.xml)">Furniture_AlphabetStrip</include>
+            <include condition="!Window.IsVisible(script-script.extendedinfo-VideoList.xml)">Object_AlphabetStrip</include>
         </control>
         <control type="group">
+            <include>Animation_FadeInOut_Conditional</include>
             <visible>Window.IsVisible(MyWeather.xml)</visible>
-            <include>Furniture_Weather</include>
+            <include>Weather</include>
         </control>
         <control type="group">
-            <include>Animation_Bottombar_Right</include>
             <include>Animation_FadeInOut_Conditional</include>
             <visible>[!Window.IsVisible(DialogVideoInfo.xml) + !Window.IsVisible(DialogMusicInfo.xml) + !Window.IsVisible(DialogAddonInfo.xml) + !Window.IsVisible(DialogPVRInfo.xml)] | Window.IsVisible(script-script.extendedinfo-VideoList.xml)</visible>
+            <visible>!$EXP[Expression_ShowWeatherWidget]</visible>
             <include condition="!Window.IsVisible(script-script.extendedinfo-VideoList.xml)">Bottombar_BusySpinner</include>
         </control>
     </include>
@@ -88,10 +88,10 @@
                 <height>100</height>
                 <top>0</top>
                 <include>Animation_Bottombar_Text</include>
-                <include content="Furniture_Flags" condition="Window.IsVisible(Home)">
+                <include content="Object_Flags" condition="Window.IsVisible(Home)">
                     <param name="container" value="Container(301)." />
                 </include>
-                <include content="Furniture_Flags" condition="!Window.IsVisible(Home)">
+                <include content="Object_Flags" condition="!Window.IsVisible(Home)">
                     <param name="container" value="" />
                 </include>
             </control>
@@ -282,7 +282,7 @@
                     <right>0</right>
                     <font>font_infobar_mainlabel</font>
                     <textcolor>panel_fg_100</textcolor>
-                    <label>$VAR[WidgetTitle]</label>
+                    <label>$VAR[Label_Widget_Title]</label>
                     <aligny>center</aligny>
                     <top>0</top>
                     <bottom>33%</bottom>
@@ -292,7 +292,7 @@
                     <right>0</right>
                     <font>font_infobar_sublabel</font>
                     <textcolor>panel_fg_100</textcolor>
-                    <label>$VAR[WidgetSubLabel]</label>
+                    <label>$VAR[Label_Widget_InfoLine]</label>
                     <aligny>center</aligny>
                     <top>33%</top>
                     <bottom>0</bottom>
@@ -310,7 +310,7 @@
                     <right>0</right>
                     <font>font_infobar_mainlabel</font>
                     <textcolor>panel_fg_100</textcolor>
-                    <label>$VAR[WidgetTitle]</label>
+                    <label>$VAR[Label_Widget_Title]</label>
                     <aligny>center</aligny>
                     <top>0</top>
                     <bottom>33%</bottom>
@@ -320,7 +320,7 @@
                     <right>0</right>
                     <font>font_infobar_sublabel</font>
                     <textcolor>panel_fg_100</textcolor>
-                    <label>$VAR[WidgetSubLabel]</label>
+                    <label>$VAR[Label_Widget_InfoLine]</label>
                     <aligny>center</aligny>
                     <top>33%</top>
                     <bottom>0</bottom>
@@ -332,7 +332,7 @@
                 <left>614</left>
                 <right>30</right>
                 <control type="textbox" id="9399">
-                    <label>$VAR[WidgetPlot]</label>
+                    <label>$VAR[Label_Widget_Plot]</label>
                     <font>font_plotbox</font>
                     <textcolor>panel_fg_100</textcolor>
                 </control>

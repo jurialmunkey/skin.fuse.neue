@@ -6,7 +6,7 @@
 
     <controls>
 
-        <include>GlobalOverlay</include>
+        <include>Global_Overlay</include>
 
         <control type="group">
             <include>Animation_ZoomIn</include>

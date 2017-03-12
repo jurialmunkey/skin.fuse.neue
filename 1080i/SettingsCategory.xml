@@ -6,11 +6,11 @@
     <onunload condition="!Skin.HasSetting(startup.init)">Skin.SetBool(startup.init)</onunload>
     <controls>
 
-        <include>GlobalSettingsBackground</include>
+        <include>Global_Background_Settings</include>
 
         <!-- GroupList -->
         <control type="group">
-            <include>Furniture_SettingsPanel</include>
+            <include>Dialog_Settings_Panel</include>
 
             <control type="group">
                 <left>16</left>
@@ -93,7 +93,7 @@
                     <top>15</top>
                     <height>70</height>
                     <font>MediumBold</font>
-                    <label>$VAR[Label_SettingsHeader]</label>
+                    <label>$VAR[Label_Settings_Header]</label>
                     <textcolor>panel_fg_100</textcolor>
                 </control>
                 <control type="label" id="6">
@@ -143,7 +143,7 @@
         <!-- Standard Furniture -->
         <include>Topbar</include>
         <include>Bottombar</include>
-        <include>Furniture_Clock</include>
+        <include>Statusbar</include>
 
     </controls>
 

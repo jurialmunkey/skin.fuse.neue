@@ -6,14 +6,14 @@
             <right>10</right>
             <width>48</width>
             <height>48</height>
-            <texture colordiffuse="ff000000">$VAR[PercentWatchedBacking]</texture>
+            <texture colordiffuse="ff000000">$VAR[Image_Overlay_Corner]</texture>
         </control>
         <control type="image">
             <top>11</top>
             <right>11</right>
             <width>24</width>
             <height>24</height>
-            <texture>$VAR[PercentWatched]</texture>
+            <texture>$VAR[Image_Overlay]</texture>
         </control>
     </include>
     <include name="View_WatchedOverlay_Focus">
@@ -22,14 +22,14 @@
             <right>10</right>
             <width>48</width>
             <height>48</height>
-            <texture colordiffuse="$VAR[ColorHighlight]">$VAR[PercentWatchedBacking]</texture>
+            <texture colordiffuse="$VAR[ColorHighlight]">$VAR[Image_Overlay_Corner]</texture>
         </control>
         <control type="image">
             <top>11</top>
             <right>11</right>
             <width>24</width>
             <height>24</height>
-            <texture colordiffuse="ff000000">$VAR[PercentWatched]</texture>
+            <texture colordiffuse="ff000000">$VAR[Image_Overlay]</texture>
         </control>
     </include>
 
@@ -256,7 +256,7 @@
                     <bordersize>10</bordersize>
                     <bordertexture border="10">common/nofocus-shadow10.png</bordertexture>
                     <aspectratio scalediffuse="false">scale</aspectratio>
-                    <texture fallback="DefaultAddonNone.png" background="true">$VAR[PosterImage]</texture>
+                    <texture fallback="DefaultAddonNone.png" background="true">$VAR[Image_Poster]</texture>
                     <visible>!ListItem.IsParentFolder</visible>
                     <visible>!String.StartsWith(ListItem.Icon,Default)</visible>
                 </control>
@@ -289,7 +289,7 @@
                     <bordersize>10</bordersize>
                     <bordertexture border="10">common/nofocus-shadow10.png</bordertexture>
                     <aspectratio scalediffuse="false">scale</aspectratio>
-                    <texture fallback="DefaultAddonNone.png" background="true">$VAR[PosterImage]</texture>
+                    <texture fallback="DefaultAddonNone.png" background="true">$VAR[Image_Poster]</texture>
                     <visible>!ListItem.IsParentFolder</visible>
                     <visible>!String.StartsWith(ListItem.Icon,Default)</visible>
                 </control>
@@ -370,7 +370,7 @@
                     <bordersize>10</bordersize>
                     <bordertexture border="10">common/nofocus-shadow10.png</bordertexture>
                     <aspectratio scalediffuse="false">scale</aspectratio>
-                    <texture fallback="DefaultAddonNone.png" background="true">$VAR[ThumbImage]</texture>
+                    <texture fallback="DefaultAddonNone.png" background="true">$VAR[Image_Thumb]</texture>
                     <visible>!ListItem.IsParentFolder</visible>
                     <visible>!String.StartsWith(ListItem.Icon,Default)</visible>
                 </control>
@@ -439,7 +439,7 @@
                     <bordersize>10</bordersize>
                     <bordertexture border="10">common/nofocus-shadow10.png</bordertexture>
                     <aspectratio scalediffuse="false">scale</aspectratio>
-                    <texture fallback="DefaultAddonNone.png" background="true">$VAR[ThumbImage]</texture>
+                    <texture fallback="DefaultAddonNone.png" background="true">$VAR[Image_Thumb]</texture>
                     <visible>!ListItem.IsParentFolder</visible>
                     <visible>!String.StartsWith(ListItem.Icon,Default)</visible>
                 </control>
@@ -662,7 +662,7 @@
                     <top>10</top>
                     <height>187.66</height>
                     <aspectratio scalediffuse="false">scale</aspectratio>
-                    <texture fallback="DefaultAddonNone.png" background="true">$VAR[PosterImage]</texture>
+                    <texture fallback="DefaultAddonNone.png" background="true">$VAR[Image_Poster]</texture>
                     <visible>!ListItem.IsParentFolder</visible>
                     <visible>!String.StartsWith(ListItem.Icon,Default)</visible>
                 </control>
@@ -766,7 +766,7 @@
                     <top>10</top>
                     <height>187.66</height>
                     <aspectratio scalediffuse="false">scale</aspectratio>
-                    <texture fallback="DefaultAddonNone.png" background="true">$VAR[PosterImage]</texture>
+                    <texture fallback="DefaultAddonNone.png" background="true">$VAR[Image_Poster]</texture>
                     <visible>!ListItem.IsParentFolder</visible>
                     <visible>!String.StartsWith(ListItem.Icon,Default)</visible>
                 </control>
@@ -853,7 +853,7 @@
                     <top>10</top>
                     <bottom>10</bottom>
                     <aspectratio scalediffuse="false">scale</aspectratio>
-                    <texture fallback="DefaultArtist.png" background="true">$VAR[PosterImage]</texture>
+                    <texture fallback="DefaultArtist.png" background="true">$VAR[Image_Poster]</texture>
                 </control>
                 <control type="image">
                     <left>10</left>
@@ -909,7 +909,7 @@
                     <top>10</top>
                     <bottom>10</bottom>
                     <aspectratio scalediffuse="false">scale</aspectratio>
-                    <texture fallback="DefaultArtist.png" background="true">$VAR[PosterImage]</texture>
+                    <texture fallback="DefaultArtist.png" background="true">$VAR[Image_Poster]</texture>
                 </control>
                 <control type="image">
                     <left>10</left>

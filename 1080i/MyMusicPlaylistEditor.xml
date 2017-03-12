@@ -6,7 +6,7 @@
 
     <controls>
 
-        <include>GlobalBackground</include>
+        <include>Global_Background</include>
         <include>Topbar</include>
 
         <control type="label" id="12">
@@ -17,7 +17,7 @@
             <visible>false</visible>
         </control>
         <control type="group">
-            <include>Furniture_SettingsPanel</include>
+            <include>Dialog_Settings_Panel</include>
             <control type="group">
                 <description>Left panel</description>
                 <left>SidePad</left>
@@ -189,7 +189,7 @@
             <include>Animation_FadeIn</include>
             <include>Animation_FadeOut</include>
             <visible>ControlGroup(9000).HasFocus()</visible>
-            <include>GlobalOverlay</include>
+            <include>Global_Overlay</include>
         </control>
         <control type="group">
             <include>Defs_9000_Background</include>
@@ -215,7 +215,7 @@
 
             </control>
         </control>
-        <include>Furniture_Clock</include>
+        <include>Statusbar</include>
         
 
 

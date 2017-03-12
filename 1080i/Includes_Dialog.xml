@@ -283,7 +283,7 @@
         <param name="label2" default="ListItem.Label2" />
         <definition>
             <control type="group">
-            <include>GlobalOverlay</include>
+            <include>Global_Overlay</include>
             <visible>$PARAM[visible]</visible>
                 <control type="group">
                     <include>Dialog_Standard_Group</include>
@@ -385,7 +385,7 @@
                     <visible>!Window.IsVisible(DialogBusy.xml)</visible>
                     <include>Animation_FadeIn</include>
                     <include>Animation_FadeOut</include>
-                    <include>GlobalOverlay</include>
+                    <include>Global_Overlay</include>
                     <control type="image">
                         <description>Busy animation</description>
                         <centerleft>50%</centerleft>
@@ -461,6 +461,37 @@
     </include>
 
     <include name="Dialog_Custom_Content"><content target="$INFO[Window(Home).Property(CustomInfoList.Target)]">$INFO[Window(Home).Property(CustomInfoList.Content)]</content></include>
+
+    <!-- ============== -->
+    <!-- Settings Panel -->
+    <!-- ============== -->
+    <include name="Dialog_Settings_Panel">
+        <animation type="Visible" reversible="false">
+            <effect type="slide" start="0,160" end="0" time="400" tween="quadratic" easing="out" />
+            <effect type="fade" start="0" end="100" time="200" />
+        </animation>
+        <animation type="Hidden" reversible="false">
+            <effect type="slide" end="0,160" start="0" time="400" tween="quadratic" easing="out" />
+            <effect type="fade" end="0" start="100" time="200" />
+        </animation>
+        <animation type="WindowOpen" reversible="false">
+            <effect type="slide" start="0,700" end="0" time="400" tween="quadratic" easing="out" />
+            <effect type="fade" start="0" end="100" time="200" />
+        </animation>
+        <animation type="WindowClose" reversible="false">
+            <effect type="fade" end="0" start="100" time="200" delay="200"/>
+        </animation>
+        <left>-16</left>
+        <right>-16</right>
+        <top>182</top>
+        <height>866</height>
+
+        <control type="image">
+            <width>100%</width>
+            <height>150%</height>
+            <texture border="16" colordiffuse="panel_bg">common/rounded-shadow8.png</texture>
+        </control>
+    </include>
 
     <!-- =============== -->
     <!-- PVR Info Dialog -->
@@ -610,7 +641,7 @@
     </include>
 
     <include name="Dialog_PVRInfo_Guide">
-        <include>GlobalOverlay</include>
+        <include>Global_Overlay</include>
         <control type="group">
             <include content="Dialog_Standard_Group">
                 <param name="width" value="1200" />

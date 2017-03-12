@@ -10,7 +10,7 @@
     <onload>AlarmClock(Set300,SetFocus(300),00:00,silent)</onload>
     <include>Defs_SetStartWindow</include>
     <controls>
-        <include>GlobalBackground</include>
+        <include>Global_Background</include>
         <include>Bottombar</include>
         <include>Topbar</include>
         
@@ -24,26 +24,26 @@
             <control type="group">
                 <visible>!Window.IsVisible(DialogVideoInfo.xml)</visible>
                 <visible>$EXP[Expression_ShowBigPosterHome]</visible>
-                <include content="Furniture_BigPoster">
+                <include content="Object_BigPoster">
                     <param name="container" value="Container(301)." />
                     <param name="visible" value="true" />
-                    <param name="variable" value="$VAR[HomePosterImage]" />
+                    <param name="variable" value="$VAR[Image_Poster_Home]" />
                 </include>
             </control>
             <control type="group">
                 <visible>!Window.IsVisible(DialogVideoInfo.xml)</visible>
                 <visible>!$EXP[Expression_ShowBigPosterHome]</visible>
-                <include content="Furniture_BigPoster">
+                <include content="Object_BigPoster">
                     <param name="container" value="Container(301)." />
                     <param name="visible" value="true" />
-                    <param name="variable" value="$VAR[HomePosterImage]" />
+                    <param name="variable" value="$VAR[Image_Poster_Home]" />
                     <param name="height" value="504" />
                 </include>
             </control>
         </control>
 
         
-        <include>Furniture_Clock</include>
+        <include>Statusbar</include>
         
     </controls>
 </window>

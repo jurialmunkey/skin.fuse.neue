@@ -4,7 +4,7 @@
     <defaultcontrol always="true">22</defaultcontrol>
     <controls>
 
-        <include>GlobalOverlay</include>
+        <include>Global_Overlay</include>
 
         <control type="group">
             <include content="Dialog_Standard_Group">

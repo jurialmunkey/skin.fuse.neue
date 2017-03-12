@@ -2,7 +2,7 @@
 <window>
     <defaultcontrol always="true">401</defaultcontrol>
     <controls>
-        <include>GlobalOverlay</include>
+        <include>Global_Overlay</include>
 
         <control type="group">
             <include>Animation_FadeIn_Slide</include>
@@ -192,7 +192,7 @@
                     <width>100%</width>
                     <height>66</height>
                     <label>31266</label>
-                    <label2>$VAR[LabelWidgetShortcutsName]</label2>
+                    <label2>$VAR[Label_SkinShortcuts_WidgetName]</label2>
                     <texturenofocus colordiffuse="dialog_fg_12" border="5">common/box.png</texturenofocus>
                     <align>left</align>
                     <include>Dialog_Standard_Right_Buttons</include>

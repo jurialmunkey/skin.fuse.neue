@@ -147,7 +147,7 @@
                     <width>1600</width>
                     <height>50</height>
                     <aligny>bottom</aligny>
-                    <label>$INFO[Player.Process(videodecoder),[COLOR Selected]$LOCALIZE[31279]:[/COLOR] ]$VAR[VideoHWDecoder, (,)]</label>
+                    <label>$INFO[Player.Process(videodecoder),[COLOR Selected]$LOCALIZE[31279]:[/COLOR] ]$VAR[Label_VideoHWDecoder, (,)]</label>
                     <font>Small</font>
                     <textcolor>panel_fg_70</textcolor>
 

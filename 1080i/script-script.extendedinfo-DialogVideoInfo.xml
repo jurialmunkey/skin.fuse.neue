@@ -14,7 +14,7 @@
     <onunload>ClearProperty(FocusedList,Home)</onunload>
     <controls>
 
-        <include>GlobalBackground</include>
+        <include>Global_Background</include>
         <include>Bottombar_Plain</include>
         <control type="group">
             
@@ -401,7 +401,7 @@
                 <fadetime>0</fadetime>
                 <include>Defs_Shadow_Opaque</include>
                 <aspectratio aligny="bottom">scale</aspectratio>
-                <texture fallback="DefaultAddonImages.png">$VAR[ExtendedInfoPosterImage]</texture>
+                <texture fallback="DefaultAddonImages.png">$VAR[Image_Poster_ExtendedInfo]</texture>
             </control>
         </control> 
 
@@ -423,7 +423,7 @@
             <visible>!String.IsEmpty(Window(Home).Property(FocusedList))</visible>
             <visible>[Control.IsVisible(150) + !Container(150).IsUpdating] | [Control.IsVisible(250) + !Container(250).IsUpdating] | [Control.IsVisible(350) + !Container(350).IsUpdating] | [Control.IsVisible(750) + !Container(750).IsUpdating] | [Control.IsVisible(1000) + !Container(1000).IsUpdating]</visible>
         </control>
-        <include>Furniture_InfoClock</include>
+        <include>Statusbar_Info_Clock</include>
 
         <!-- Dummy Lists -->
         <control type="list" id="250"><visible>false</visible></control>

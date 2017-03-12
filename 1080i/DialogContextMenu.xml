@@ -9,7 +9,7 @@
     </coordinates>
 
     <controls>
-        <include>GlobalOverlay</include>
+        <include>Global_Overlay</include>
         <control type="group">
             <centerleft>1226</centerleft>
             <centertop>392</centertop>

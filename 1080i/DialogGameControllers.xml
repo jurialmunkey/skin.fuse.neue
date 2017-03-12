@@ -3,7 +3,7 @@
     <defaultcontrol always="true">10</defaultcontrol>
     <controls>
 
-        <include>GlobalOverlay</include>
+        <include>Global_Overlay</include>
 
         <control type="group">
             <centerleft>50%</centerleft>

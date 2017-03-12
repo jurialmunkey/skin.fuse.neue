@@ -5,9 +5,9 @@
     <include>Defs_SettingsOnload</include>
     <controls>
 
-        <include>GlobalSettingsBackground</include>
+        <include>Global_Background_Settings</include>
         <control type="group">
-            <include>Furniture_SettingsPanel</include>
+            <include>Dialog_Settings_Panel</include>
 
             <control type="group">
                 <left>16</left>
@@ -256,7 +256,7 @@
         <!-- Standard Furniture -->
         <include>Topbar</include>
         <include>Bottombar</include>
-        <include>Furniture_Clock</include>
+        <include>Statusbar</include>
     </controls>
 
 </window>

@@ -5,7 +5,7 @@
 
     <controls>
 
-        <include>GlobalOverlay</include>
+        <include>Global_Overlay</include>
 
         <control type="group">
             <height>500</height>
