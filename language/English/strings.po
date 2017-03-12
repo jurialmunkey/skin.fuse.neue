@@ -111,6 +111,16 @@ msgctxt "#31018"
 msgid "Common Shortcut"
 msgstr ""
 
+#: /1080i/script-globalsearch-main.xml
+msgctxt "#31019"
+msgid "Close"
+msgstr ""
+
+#: /1080i/script-globalsearch-main.xml
+msgctxt "#31020"
+msgid "mins"
+msgstr ""
+
 msgctxt "#31101"
 msgid "items"
 msgstr ""

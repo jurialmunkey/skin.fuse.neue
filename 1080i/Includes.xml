@@ -11,6 +11,7 @@
     <include file="Includes_Expression.xml" />
     <include file="Includes_Furniture.xml" />
     <include file="Includes_Global.xml" />
+    <include file="Includes_GlobalSearch.xml" />
     <include file="Includes_Images.xml" />
     <include file="Includes_Labels.xml" />
     <include file="Includes_Object.xml" />
