@@ -338,7 +338,8 @@
                 <shortcut label="$LOCALIZE[31293]" type="Hub 1111" icon="special://skin/extras/icons/addon.png">ActivateWindow(1111)</shortcut>
             </node>
             <content>common</content>
-            <shortcut label="$ADDON[script.skin.helper.service 32062]" type="32010" condition="System.HasAddon(script.skin.helper.service)">||BROWSE||script.skin.helper.service/?action=smartshortcuts</shortcut>
+            <shortcut label="$LOCALIZE[33060]" type="$LOCALIZE[31018]" icon="special://skin/extras/icons/power.png">ActivateWindow(shutdownmenu)</shortcut>
+            <shortcut label="$LOCALIZE[31017]" type="32010">||BROWSE||script.skin.helper.service/?action=smartshortcuts</shortcut>
         </node>
         <node label="32030">
             <content>video</content>

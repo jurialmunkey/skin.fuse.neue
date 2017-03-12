@@ -101,6 +101,16 @@ msgctxt "#31016"
 msgid "Music videos use poster aspectratio"
 msgstr ""
 
+#: /shortcuts/overrides.xml
+msgctxt "#31017"
+msgid "Smart Shortcuts"
+msgstr ""
+
+#: /shortcuts/overrides.xml
+msgctxt "#31018"
+msgid "Common Shortcut"
+msgstr ""
+
 msgctxt "#31101"
 msgid "items"
 msgstr ""
