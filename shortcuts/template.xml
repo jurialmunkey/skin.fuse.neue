@@ -9,6 +9,7 @@
         <condition tag="property" attribute="name|widgetType">picture</condition>
         <condition tag="property" attribute="name|widgetType">video</condition>
         <condition tag="property" attribute="name|widgetType">audio</condition>
+        <condition tag="property" attribute="name|widgetType">musicvideos</condition>
         <condition tag="property" attribute="name|widgetName">Favourites</condition>
         <match>any</match>
         <property name="content" tag="property" attribute="name|widgetPath" />
@@ -48,7 +49,6 @@
         <condition tag="property" attribute="name|widgetType">tvshows</condition>
         <condition tag="property" attribute="name|widgetType">episodes</condition>
         <condition tag="property" attribute="name|widgetType">videos</condition>
-        <condition tag="property" attribute="name|widgetType">musicvideos</condition>
         <match>any</match>
         <property name="content" tag="property" attribute="name|widgetPath" />
         <property name="target" tag="property" attribute="name|widgetTarget" />
@@ -92,6 +92,7 @@
         <condition tag="property" attribute="name|widgetType">picture</condition>
         <condition tag="property" attribute="name|widgetType">video</condition>
         <condition tag="property" attribute="name|widgetType">audio</condition>
+        <condition tag="property" attribute="name|widgetType">musicvideos</condition>
         <condition tag="property" attribute="name|widgetName">Favourites</condition>
         <match>any</match>
         <property name="content" tag="property" attribute="name|widgetPath" />
@@ -131,7 +132,6 @@
         <condition tag="property" attribute="name|widgetType">tvshows</condition>
         <condition tag="property" attribute="name|widgetType">episodes</condition>
         <condition tag="property" attribute="name|widgetType">videos</condition>
-        <condition tag="property" attribute="name|widgetType">musicvideos</condition>
         <match>any</match>
         <property name="content" tag="property" attribute="name|widgetPath" />
         <property name="target" tag="property" attribute="name|widgetTarget" />
