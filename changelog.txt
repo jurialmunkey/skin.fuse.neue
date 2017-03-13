@@ -3,6 +3,7 @@ Add global search
 Add next aired script skin
 Fix extendedinfo show fanart
 Add no fanart option
+Add support for animated art with skin helper
 
 [B]0.9.16[/B]
 Rewrite some more code

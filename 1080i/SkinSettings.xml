@@ -50,6 +50,24 @@
                         <label>31270</label>
                     </control>
 
+                    <control type="togglebutton" id="9104" description="Artwork">
+                        <usealttexture>!Control.HasFocus(300) + !Control.HasFocus(302) + ControlGroup(9100).HasFocus(9104)</usealttexture>
+                        <alttexturenofocus colordiffuse="$VAR[ColorHighlight]">common/white.png</alttexturenofocus>
+                        <width>450</width>
+                        <onback>300</onback>
+                        <include>Defs_Settings_Button</include>
+                        <label>$LOCALIZE[31203]</label>
+                    </control>
+
+                    <control type="togglebutton" id="9105" description="Colors">
+                        <usealttexture>!Control.HasFocus(300) + !Control.HasFocus(302) + ControlGroup(9100).HasFocus(9105)</usealttexture>
+                        <alttexturenofocus colordiffuse="$VAR[ColorHighlight]">common/white.png</alttexturenofocus>
+                        <width>450</width>
+                        <onback>300</onback>
+                        <include>Defs_Settings_Button</include>
+                        <label>$LOCALIZE[31021]</label>
+                    </control>
+
                     <control type="togglebutton" id="9107" description="Extras">
                         <usealttexture>!Control.HasFocus(300) + !Control.HasFocus(302) + ControlGroup(9100).HasFocus(9107)</usealttexture>
                         <alttexturenofocus colordiffuse="$VAR[ColorHighlight]">common/white.png</alttexturenofocus>
@@ -84,7 +102,9 @@
                     <onup>302</onup>
                     <ondown>noop</ondown>
                     <orientation>vertical</orientation>
+                    <!-- ==== -->
                     <!-- Home -->
+                    <!-- ==== -->
                     <control type="button" id="9211" description="Customise Home">
                         <visible>ControlGroup(9100).HasFocus(9101)</visible>
                         <onback>300</onback>
@@ -138,7 +158,9 @@
                         <onclick>Skin.ToggleSetting(ReturnHomeOnFocus)</onclick>
                     </control>
 
-                    <!-- Fanart -->
+                    <!-- ========== -->
+                    <!-- Background -->
+                    <!-- ========== -->
                     <control type="radiobutton" id="9226" description="No fanart">
                         <visible>ControlGroup(9100).HasFocus(9102)</visible>
                         <onback>300</onback>
@@ -191,7 +213,9 @@
                         <onclick>Skin.SetString(weather.fanart.path,resource://resource.images.weatherfanart.multi/)</onclick>
                     </control>
 
-                    <!-- OSD -->
+                    <!-- ================= -->
+                    <!-- Video / Music OSD -->
+                    <!-- ================= -->
                     <control type="radiobutton" id="9231" description="Show Fanart">
                         <visible>ControlGroup(9100).HasFocus(9103)</visible>
                         <onback>300</onback>
@@ -237,7 +261,68 @@
                         <onclick>Skin.ToggleSetting(osd.showinfoonpause)</onclick>
                     </control> -->
 
+                    <!-- ======= -->
+                    <!-- Artwork -->
+                    <!-- ======= -->
+                    <control type="button" id="9242">
+                        <visible>ControlGroup(9100).HasFocus(9104)</visible>
+                        <onback>300</onback>
+                        <label>$LOCALIZE[31013]</label>
+                        <label2>$INFO[Skin.String(weather.icons.name)]</label2>
+                        <include>Defs_Settings_Button</include>
+                        <onclick>RunScript(script.image.resource.select,property=weather.icons&amp;type=resource.images.weathericons)</onclick>
+                    </control>
+                    
+                    <control type="radiobutton" id="9243">
+                        <visible>ControlGroup(9100).HasFocus(9104)</visible>
+                        <onback>300</onback>
+                        <label>$LOCALIZE[31016]</label>
+                        <selected>Skin.HasSetting(MusicVideoConcerts)</selected>
+                        <include>Defs_Settings_Button</include>
+                        <onclick>Skin.ToggleSetting(MusicVideoConcerts)</onclick>
+                    </control>
+
+                    <control type="radiobutton" id="9244">
+                        <visible>ControlGroup(9100).HasFocus(9104)</visible>
+                        <onback>300</onback>
+                        <label>$LOCALIZE[31000]</label>
+                        <onclick>Skin.ToggleSetting(SkinHelper.EnableWallBackgrounds)</onclick>
+                        <selected>Skin.HasSetting(SkinHelper.EnableWallBackgrounds)</selected>
+                        <include>Defs_Settings_Button</include>
+                    </control>
+
+                    <control type="radiobutton" id="9245">
+                        <visible>ControlGroup(9100).HasFocus(9104)</visible>
+                        <onback>300</onback>
+                        <label>$LOCALIZE[31022]</label>
+                        <include>Defs_Settings_Button</include>
+                        <selected>Skin.HasSetting(SkinHelper.EnableAnimatedPosters)</selected>
+                        <onclick>Skin.ToggleSetting(SkinHelper.EnableAnimatedPosters)</onclick>
+                    </control>
+
+                    <!-- ====== -->
+                    <!-- Colors -->
+                    <!-- ====== -->
+                    <control type="button" id="9251" description="Color Highlight">
+                        <visible>ControlGroup(9100).HasFocus(9105)</visible>
+                        <onback>300</onback>
+                        <include>Defs_Settings_Button</include>
+                        <label>31286</label>
+                        <label2>$INFO[Skin.String(focuscolor.name)]</label2>
+                        <onclick>RunScript(script.skin.helper.colorpicker,skinstring=focuscolor.name)</onclick>
+                    </control>
+                    <control type="radiobutton" id="9252">
+                        <visible>ControlGroup(9100).HasFocus(9105)</visible>
+                        <onback>300</onback>
+                        <label>$LOCALIZE[31015]</label>
+                        <selected>Skin.HasSetting(UseColorFlags)</selected>
+                        <include>Defs_Settings_Button</include>
+                        <onclick>Skin.ToggleSetting(UseColorFlags)</onclick>
+                    </control>
+
+                    <!-- ====== -->
                     <!-- Extras -->
+                    <!-- ====== -->
                     <control type="button" id="9271" description="Startup Video">
                         <visible>ControlGroup(9100).HasFocus(9107)</visible>
                         <onback>300</onback>
@@ -257,24 +342,6 @@
                         <onclick>Skin.ToggleSetting(global.kioskmode)</onclick>
                     </control> -->
 
-                    <control type="button" id="9273" description="Color Highlight">
-                        <visible>ControlGroup(9100).HasFocus(9107)</visible>
-                        <onback>300</onback>
-                        <include>Defs_Settings_Button</include>
-                        <label>31286</label>
-                        <label2>$INFO[Skin.String(focuscolor.name)]</label2>
-                        <onclick>RunScript(script.skin.helper.colorpicker,skinstring=focuscolor.name)</onclick>
-                    </control>
-
-                    <control type="radiobutton" id="9274">
-                        <visible>ControlGroup(9100).HasFocus(9107)</visible>
-                        <onback>300</onback>
-                        <label>$LOCALIZE[31000]</label>
-                        <onclick>Skin.ToggleSetting(SkinHelper.EnableWallBackgrounds)</onclick>
-                        <selected>Skin.HasSetting(SkinHelper.EnableWallBackgrounds)</selected>
-                        <include>Defs_Settings_Button</include>
-                    </control>
-
                     <!-- <control type="button" id="9275" description="Reset">
                         <visible>ControlGroup(9100).HasFocus(9107)</visible>
                         <onback>300</onback>
@@ -283,32 +350,9 @@
                         <onclick>Skin.ResetSettings</onclick>
                     </control> -->
 
-                    <control type="button" id="9276">
-                        <visible>ControlGroup(9100).HasFocus(9107)</visible>
-                        <onback>300</onback>
-                        <label>$LOCALIZE[31013]</label>
-                        <label2>$INFO[Skin.String(weather.icons.name)]</label2>
-                        <include>Defs_Settings_Button</include>
-                        <onclick>RunScript(script.image.resource.select,property=weather.icons&amp;type=resource.images.weathericons)</onclick>
-                    </control>
-                    <control type="radiobutton" id="9277">
-                        <visible>ControlGroup(9100).HasFocus(9107)</visible>
-                        <onback>300</onback>
-                        <label>$LOCALIZE[31015]</label>
-                        <selected>Skin.HasSetting(UseColorFlags)</selected>
-                        <include>Defs_Settings_Button</include>
-                        <onclick>Skin.ToggleSetting(UseColorFlags)</onclick>
-                    </control>
-                    <control type="radiobutton" id="9278">
-                        <visible>ControlGroup(9100).HasFocus(9107)</visible>
-                        <onback>300</onback>
-                        <label>$LOCALIZE[31016]</label>
-                        <selected>Skin.HasSetting(MusicVideoConcerts)</selected>
-                        <include>Defs_Settings_Button</include>
-                        <onclick>Skin.ToggleSetting(MusicVideoConcerts)</onclick>
-                    </control>
-
+                    <!-- ============ -->
                     <!-- Dependencies -->
+                    <!-- ============ -->
                     <control type="radiobutton" id="9281">
                         <visible>ControlGroup(9100).HasFocus(9108)</visible>
                         <onback>300</onback>

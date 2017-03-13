@@ -35,6 +35,8 @@
     </variable>
 
     <variable name="Image_Poster">
+        <value condition="Skin.HasSetting(SkinHelper.EnableAnimatedPosters) + !String.IsEmpty(ListItem.Art(animatedposter))">$INFO[ListItem.Art(animatedposter)]</value>
+        <value condition="Skin.HasSetting(SkinHelper.EnableAnimatedPosters) + !String.IsEmpty(Window(Home).Property(SkinHelper.ListItem.Art.AnimatedPoster))">$INFO[Window(Home).Property(SkinHelper.ListItem.Art.AnimatedPoster)]</value>
         <value condition="[Container.Content(seasons) | Container.Content(episodes)] + !String.IsEmpty(ListItem.Art(season.poster))">$INFO[ListItem.Art(season.poster)]</value>
         <value condition="Container.Content(seasons) + !String.IsEmpty(ListItem.Icon)">$INFO[ListItem.Icon]</value>
         <value condition="!String.IsEmpty(ListItem.Art(tvshow.poster))">$INFO[ListItem.Art(tvshow.poster)]</value>
@@ -44,6 +46,8 @@
 
     <variable name="Image_Poster_Home">
         <value condition="Container.Content(seasons)">$INFO[Container(301).ListItem.Icon]</value>
+        <value condition="Skin.HasSetting(SkinHelper.EnableAnimatedPosters) + !String.IsEmpty(Container(301).ListItem.Art(animatedposter))">$INFO[Container(301).ListItem.Art(animatedposter)]</value>
+        <value condition="Skin.HasSetting(SkinHelper.EnableAnimatedPosters) + !String.IsEmpty(Window(Home).Property(SkinHelper.ListItem.Art.AnimatedPoster))">$INFO[Window(Home).Property(SkinHelper.ListItem.Art.AnimatedPoster)]</value>
         <value condition="!String.IsEmpty(Container(301).ListItem.Art(tvshow.poster))">$INFO[Container(301).ListItem.Art(tvshow.poster)]</value>
         <value condition="!String.IsEmpty(Container(301).ListItem.Art(poster))">$INFO[Container(301).ListItem.Art(poster)]</value>
         <value>$INFO[Container(301).ListItem.Icon]</value>
@@ -56,6 +60,8 @@
     </variable>
 
     <variable name="Image_Fanart">
+        <value condition="Skin.HasSetting(SkinHelper.EnableAnimatedPosters) + !String.IsEmpty(ListItem.Art(animatedfanart)) + !Container.Content(episodes) + !Window.IsVisible(home)">$INFO[ListItem.Art(animatedfanart)]</value>
+        <value condition="Skin.HasSetting(SkinHelper.EnableAnimatedPosters) + !String.IsEmpty(Window(Home).Property(SkinHelper.ListItem.Art.AnimatedFanart)) + !Container.Content(episodes) + !Window.IsVisible(home)">$INFO[Window(Home).Property(SkinHelper.ListItem.Art.AnimatedFanart)]</value>
         <value condition="!String.IsEmpty(ListItem.Art(landscape)) + !Container.Content(episodes) + !Window.IsVisible(home)">$INFO[ListItem.Art(landscape)]</value>
         <value condition="!String.IsEmpty(ListItem.Art(landscape)) + Window.IsVisible(home) + [String.IsEqual(ListItem.Label,ListItem.TvShowTitle) | String.IsEmpty(ListItem.TvShowTitle)]">$INFO[ListItem.Art(landscape)]</value>
         <value condition="!String.IsEmpty(ListItem.Art(fanart)) + !Container.Content(episodes) + !Window.IsVisible(home)">$INFO[ListItem.Art(fanart)]</value>

@@ -121,6 +121,16 @@ msgctxt "#31020"
 msgid "mins"
 msgstr ""
 
+#: /1080i/SkinSettings.xml
+msgctxt "#31021"
+msgid "Colors"
+msgstr ""
+
+#: /1080i/SkinSettings.xml
+msgctxt "#31022"
+msgid "Use animated artwork where available (download from context menu)"
+msgstr ""
+
 msgctxt "#31101"
 msgid "items"
 msgstr ""

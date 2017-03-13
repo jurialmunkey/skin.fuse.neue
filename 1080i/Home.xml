@@ -2,6 +2,7 @@
 <!-- Foundation -->
 <window id="0">
     <defaultcontrol>300</defaultcontrol>
+    <onload>Skin.SetBool(SkinHelper.EnableAnimatedPosters)</onload>
     <onload>SetProperty(SkinHelper.WidgetContainer,301)</onload>
     <onload>Skin.SetString(SkinHelper.RandomFanartDelay,10)</onload>
     <onload>RunScript(script.skinshortcuts,type=buildxml&amp;mainmenuID=300&amp;group=mainmenu|x1101|x1102|x1103|x1104|x1105|x1106|x1107|x1108|x1109)</onload>
