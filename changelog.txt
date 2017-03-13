@@ -1,6 +1,7 @@
 [B]0.9.17[/B]
 Add global search
 Add next aired script skin
+Fix extendedinfo show fanart
 
 [B]0.9.16[/B]
 Rewrite some more code
