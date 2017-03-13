@@ -139,6 +139,15 @@
                     </control>
 
                     <!-- Fanart -->
+                    <control type="radiobutton" id="9226" description="No fanart">
+                        <visible>ControlGroup(9100).HasFocus(9102)</visible>
+                        <onback>300</onback>
+                        <include>Defs_Settings_Button</include>
+                        <label>$LOCALIZE[31121]</label>
+                        <selected>!Skin.HasSetting(NoFanart)</selected>
+                        <onclick>Skin.ToggleSetting(NoFanart)</onclick>
+                    </control>
+
                     <control type="button" id="9221" description="Set Fallback Image">
                         <visible>ControlGroup(9100).HasFocus(9102)</visible>
                         <onback>300</onback>
