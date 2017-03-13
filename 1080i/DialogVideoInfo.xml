@@ -4,6 +4,8 @@
     <defaultcontrol always="true">8</defaultcontrol>
     <onload>ClearProperty(FocusedList,Home)</onload>
     <onunload>ClearProperty(FocusedList,Home)</onunload>
+    <onload>ClearProperty(ListFanartContent,Home)</onload>
+    <onunload>ClearProperty(ListFanartContent,Home)</onunload>
     <controls>
 
         <control type="group">
@@ -387,6 +389,7 @@
                     <include>Animation_FadeIn</include>
                     <include>Animation_FadeOut</include>
                     <include>View_Info_Movement</include>
+                    <onfocus>SetProperty(FocusedList,9501,Home)</onfocus>
                     <onback>ClearProperty(FocusedList)</onback>
                     <onback>9000</onback>
                     <animation effect="fade" start="100" end="0" time="0" condition="Container(9501).IsUpdating">Conditional</animation>
@@ -405,10 +408,12 @@
                     <include>Animation_FadeIn</include>
                     <include>Animation_FadeOut</include>
                     <include>View_Info_Movement</include>
+                    <onfocus>SetProperty(FocusedList,9502,Home)</onfocus>
                     <onback>ClearProperty(FocusedList)</onback>
                     <onback>9000</onback>
                     <animation effect="fade" start="100" end="0" time="0" condition="Container(9502).IsUpdating">Conditional</animation>
                     <include content="View_Posters_Layout">
+                        <param name="setfanart" value="true" />
                         <param name="id" value="9502" />
                     </include>
                     <content>plugin://script.extendedinfo?info=personmovies&amp;&amp;person=$INFO[ListItem.Director]</content>

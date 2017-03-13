@@ -102,9 +102,18 @@
     </include>
 
     <variable name="Global_Background_Image">
+        <!-- Extended Info -->
+        <value condition="Window.IsVisible(script-script.extendedinfo-DialogVideoInfo.xml) + [String.IsEqual(Window(Home).Property(FocusedList),150) | Control.HasFocus(150)] + !String.IsEmpty(Container(150).ListItem.Art(fanart))">$INFO[Container(150).ListItem.Art(fanart)]</value>
+        <value condition="Window.IsVisible(script-script.extendedinfo-DialogInfo.xml) + [String.IsEqual(Window(Home).Property(FocusedList),150) | Control.HasFocus(150)] + !String.IsEmpty(Container(150).ListItem.Art(fanart))">$INFO[Container(150).ListItem.Art(fanart)]</value>
+        <value condition="Window.IsVisible(script-script.extendedinfo-DialogInfo.xml) + [String.IsEqual(Window(Home).Property(FocusedList),250) | Control.HasFocus(250)] + !String.IsEmpty(Container(250).ListItem.Art(fanart))">$INFO[Container(250).ListItem.Art(fanart)]</value>
+        <value condition="Window.IsVisible(script-script.extendedinfo-DialogInfo.xml) + [String.IsEqual(Window(Home).Property(FocusedList),550) | Control.HasFocus(550)] + !String.IsEmpty(Container(550).ListItem.Art(fanart))">$INFO[Container(550).ListItem.Art(fanart)]</value>
         <value condition="Window.IsVisible(script-script.extendedinfo-DialogVideoInfo.xml) + !String.IsEmpty(Window.Property(fanart_original))">$INFO[Window.Property(fanart_original)]</value>
         <value condition="Window.IsVisible(script-script.extendedinfo-DialogVideoInfo.xml) | Window.IsVisible(script-script.extendedinfo-DialogInfo.xml)">special://skin/extras/backgrounds/default.jpg</value>
         <value condition="Window.IsVisible(script-script.extendedinfo-VideoList.xml) + !String.IsEmpty(ListItem.Property(Fanart_Image))">$INFO[ListItem.Property(Fanart_Image)]</value>
+
+        <!-- DialogVideoInfo Director -->
+        <value condition="Window.IsVisible(DialogVideoInfo.xml) + [String.IsEqual(Window(Home).Property(FocusedList),9502) | Control.HasFocus(9502)] + !String.IsEmpty(Window(Home).Property(ListFanartContent))">$INFO[Window(Home).Property(ListFanartContent)]</value>
+        <value condition="Window.IsVisible(DialogVideoInfo.xml) + [String.IsEqual(Window(Home).Property(FocusedList),9502) | Control.HasFocus(9502)] + String.IsEmpty(Window(Home).Property(ListFanartContent))">special://skin/extras/backgrounds/default.jpg</value>
 
         <!-- Misc -->
         <value condition="Window.IsVisible(weather) + !String.IsEmpty(Skin.String(weather.fanart.path))">$INFO[Skin.String(weather.fanart.path)]$INFO[Window(Weather).Property(Current.FanartCode)]/</value>        

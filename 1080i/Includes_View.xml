@@ -213,6 +213,7 @@
 
     <include name="View_Posters_Layout">
         <param name="id" default="50" />
+        <param name="setfanart" default="false" />
         <definition>
             <animation effect="slide" end="-178" condition="Integer.IsLess(Container($PARAM[id]).NumItems,7) + !Container.HasParent">Conditional</animation>
             <animation effect="slide" end="-178" condition="Integer.IsLess(Container($PARAM[id]).NumItems,5) + !Container.HasParent">Conditional</animation>
@@ -270,6 +271,7 @@
                     <onfocus condition="Integer.IsLess(Container($PARAM[id]).NumItems,7)">SetProperty(ContextModifier,1,Home)</onfocus>
                     <onfocus condition="Integer.IsLess(Container($PARAM[id]).NumItems,5)">SetProperty(ContextModifier,2,Home)</onfocus>
                     <onfocus condition="Integer.IsLess(Container($PARAM[id]).NumItems,3)">SetProperty(ContextModifier,3,Home)</onfocus>
+                    <onfocus condition="$PARAM[setfanart]">SetProperty(ListFanartContent,$INFO[Container(9502).ListItem.Art(fanart)],Home)</onfocus>
                 </control>
                 <control type="group" description="ParentFolder and DefaultIcon">
                     <visible>ListItem.IsParentFolder | String.StartsWith(ListItem.Icon,Default)</visible>

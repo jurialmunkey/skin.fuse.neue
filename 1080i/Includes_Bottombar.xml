@@ -207,7 +207,7 @@
         </control>
     </include>
 
-    <include name="Bottombar_StandardInfo">
+    <include name="Bottombar_StandardInfo_Title">
         <control type="group">
             <left>614</left>
             <right>614</right>
@@ -270,6 +270,10 @@
                 <top>33%</top>
             </control>
         </control>
+    </include>
+
+    <include name="Bottombar_StandardInfo">
+        <include>Bottombar_StandardInfo_Title</include>
         <control type="group">
             <top>108</top>
             <height>130</height>
