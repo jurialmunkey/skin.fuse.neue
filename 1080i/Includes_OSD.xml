@@ -116,6 +116,11 @@
                 <control type="image">
                     <bottom>0</bottom>
                     <top>0</top>
+                    <texture colordiffuse="3f000000">common/white.png</texture>
+                </control>
+                <control type="image">
+                    <bottom>0</bottom>
+                    <top>0</top>
                     <texture colordiffuse="ff000000">common/gradient.png</texture>
                 </control>
 
