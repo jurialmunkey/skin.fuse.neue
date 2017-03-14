@@ -49,7 +49,7 @@
     <include name="Defs_Options_Menu">
         <left>8</left>
         <bottom>56</bottom>
-        <include>Animation_ZoomIn</include>
+        <include>Animation_FadeIn_SlideUp</include>
         <include>Animation_FadeOut</include>
         <width>466</width>
         <height>382</height>

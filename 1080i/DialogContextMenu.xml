@@ -13,7 +13,7 @@
         <control type="group">
             <centerleft>1226</centerleft>
             <centertop>392</centertop>
-            <include>Animation_ZoomIn</include>
+            <include>Animation_FadeIn_SlideUp</include>
             <include>Animation_FadeOut</include>
             <width>466</width>
             <height>592</height>

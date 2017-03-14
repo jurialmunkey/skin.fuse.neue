@@ -19,33 +19,33 @@
             <include>Global_Overlay</include>
             <include>Animation_FadeIn</include>
             <visible allowhiddenfocus="true">ControlGroup(6000).HasFocus()</visible>
-            <control type="group">
-                <include>Defs_Options_Menu</include>
-                <control type="grouplist" id="6000">
-                    <include>Defs_Options_Grouplist</include>
-                    <control type="togglebutton" id="4">
-                        <label>$LOCALIZE[580]: $LOCALIZE[584]</label>
-                        <altlabel>$LOCALIZE[580]: $LOCALIZE[585]</altlabel>
-                        <usealttexture>Container.SortDirection(Descending)</usealttexture>
-                        <include>Defs_Context_Button</include>
-                    </control>
-                    <control type="button" id="5">
-                        <description>Settings</description>
-                        <label>5</label>
-                        <include>Defs_Context_Button</include>
-                    </control>
-                    <control type="button" id="9">
-                        <description>Check for updates</description>
-                        <label>24034</label>
-                        <include>Defs_Context_Button</include>
-                    </control>
-                    <control type="radiobutton" id="6">
-                        <description>Notifications</description>
-                        <label>25000</label>
-                        <include>Defs_Context_Button</include>
-                    </control>
+        </control>
+        <control type="group">
+            <visible allowhiddenfocus="true">ControlGroup(6000).HasFocus()</visible>
+            <include>Defs_Options_Menu</include>
+            <control type="grouplist" id="6000">
+                <include>Defs_Options_Grouplist</include>
+                <control type="togglebutton" id="4">
+                    <label>$LOCALIZE[580]: $LOCALIZE[584]</label>
+                    <altlabel>$LOCALIZE[580]: $LOCALIZE[585]</altlabel>
+                    <usealttexture>Container.SortDirection(Descending)</usealttexture>
+                    <include>Defs_Context_Button</include>
                 </control>
-                
+                <control type="button" id="5">
+                    <description>Settings</description>
+                    <label>5</label>
+                    <include>Defs_Context_Button</include>
+                </control>
+                <control type="button" id="9">
+                    <description>Check for updates</description>
+                    <label>24034</label>
+                    <include>Defs_Context_Button</include>
+                </control>
+                <control type="radiobutton" id="6">
+                    <description>Notifications</description>
+                    <label>25000</label>
+                    <include>Defs_Context_Button</include>
+                </control>
             </control>
         </control>
         

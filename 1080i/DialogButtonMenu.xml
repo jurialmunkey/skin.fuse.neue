@@ -5,7 +5,7 @@
     <controls>
         <control type="group">
             <include>Global_Overlay</include>
-            <include>Animation_FadeIn</include>
+            <include>Animation_FadeIn_SlideUp</include>
             <visible allowhiddenfocus="true">ControlGroup(3110).HasFocus()</visible>
             <control type="group">
                 <height>592</height>

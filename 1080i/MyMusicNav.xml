@@ -22,41 +22,41 @@
             <include>Global_Overlay</include>
             <include>Animation_FadeIn</include>
             <visible allowhiddenfocus="true">ControlGroup(6000).HasFocus()</visible>
-            <control type="group">
-                <include>Defs_Options_Menu</include>
-                <control type="grouplist" id="6000">
-                    <include>Defs_Options_Grouplist</include>
-                    <control type="button" id="6003">
-                        <description>Sort By</description>
-                        <label>$INFO[Control.GetLabel(3)]</label>
-                        <onclick>SendClick(3)</onclick>
-                        <visible>Control.IsVisible(3)</visible>
-                        <visible>Control.IsEnabled(3)</visible>
-                        <include>Defs_Context_Button</include>
-                    </control>
-                    <control type="togglebutton" id="4">
-                        <label>$LOCALIZE[580]: $LOCALIZE[584]</label>
-                        <altlabel>$LOCALIZE[580]: $LOCALIZE[585]</altlabel>
-                        <usealttexture>Container.SortDirection(Descending)</usealttexture>
-                        <include>Defs_Context_Button</include>
-                    </control>
-                    <control type="button" id="8">
-                        <description>Search</description>
-                        <label>137</label>
-                        <include>Defs_Context_Button</include>
-                    </control>
-                    <control type="button" id="16">
-                        <description>Party Mode</description>
-                        <label>589</label>
-                        <include>Defs_Context_Button</include>
-                    </control>
-                    <control type="button" id="20">
-                        <description>Library</description>
-                        <label>653</label>
-                        <include>Defs_Context_Button</include>
-                    </control>
+        </control>
+        <control type="group">
+            <visible allowhiddenfocus="true">ControlGroup(6000).HasFocus()</visible>
+            <include>Defs_Options_Menu</include>
+            <control type="grouplist" id="6000">
+                <include>Defs_Options_Grouplist</include>
+                <control type="button" id="6003">
+                    <description>Sort By</description>
+                    <label>$INFO[Control.GetLabel(3)]</label>
+                    <onclick>SendClick(3)</onclick>
+                    <visible>Control.IsVisible(3)</visible>
+                    <visible>Control.IsEnabled(3)</visible>
+                    <include>Defs_Context_Button</include>
                 </control>
-                
+                <control type="togglebutton" id="4">
+                    <label>$LOCALIZE[580]: $LOCALIZE[584]</label>
+                    <altlabel>$LOCALIZE[580]: $LOCALIZE[585]</altlabel>
+                    <usealttexture>Container.SortDirection(Descending)</usealttexture>
+                    <include>Defs_Context_Button</include>
+                </control>
+                <control type="button" id="8">
+                    <description>Search</description>
+                    <label>137</label>
+                    <include>Defs_Context_Button</include>
+                </control>
+                <control type="button" id="16">
+                    <description>Party Mode</description>
+                    <label>589</label>
+                    <include>Defs_Context_Button</include>
+                </control>
+                <control type="button" id="20">
+                    <description>Library</description>
+                    <label>653</label>
+                    <include>Defs_Context_Button</include>
+                </control>
             </control>
         </control>
 
