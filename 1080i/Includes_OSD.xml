@@ -7,8 +7,10 @@
             <include>Animation_FadeOut</include>
             <!-- Overlay -->
             <control type="image">
-                <texture colordiffuse="9f000000">common/white.png</texture>
-            </control>
+                    <bottom>0</bottom>
+                    <top>0</top>
+                    <texture>common/dim-gradient.png</texture>
+                </control>
 
             <control type="group">
                 <control type="group">
@@ -113,15 +115,11 @@
                 <include>Animation_FadeIn</include>
                 <include>Animation_FadeOut</include>
                 <!-- Overlay -->
+       
                 <control type="image">
                     <bottom>0</bottom>
                     <top>0</top>
-                    <texture colordiffuse="3f000000">common/white.png</texture>
-                </control>
-                <control type="image">
-                    <bottom>0</bottom>
-                    <top>0</top>
-                    <texture colordiffuse="ff000000">common/gradient.png</texture>
+                    <texture>common/dim-gradient.png</texture>
                 </control>
 
                 <control type="group">
@@ -139,12 +137,12 @@
                             <visible>!String.IsEmpty(Player.Art(tvshow.poster)) | !String.IsEmpty(Player.Art(thumb))</visible>
                         </control>
                         <control type="image">
-                            <include>Defs_Shadow</include>
+                            <include>Defs_Shadow_Opaque</include>
                             <aspectratio aligny="bottom">keep</aspectratio>
                             <texture>$INFO[Player.Art(thumb)]</texture>
                         </control>
                         <control type="image">
-                            <include>Defs_Shadow</include>
+                            <include>Defs_Shadow_Opaque</include>
                             <texture>$INFO[Player.Art(tvshow.poster)]</texture>
                             <visible>!String.IsEmpty(Player.Art(tvshow.poster))</visible>
                         </control>
