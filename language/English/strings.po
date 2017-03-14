@@ -131,6 +131,11 @@ msgctxt "#31022"
 msgid "Use animated artwork where available (download from context menu)"
 msgstr ""
 
+#: /1080i/Includes_Statusbar.xml
+msgctxt "#31023"
+msgid "Fullscreen"
+msgstr ""
+
 msgctxt "#31101"
 msgid "items"
 msgstr ""
