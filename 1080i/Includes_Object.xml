@@ -366,6 +366,7 @@
                 <width>1246</width>
                 <visible>String.IsEqual(Container.SortMethod,$LOCALIZE[556]) | String.IsEqual(Container.SortMethod,$LOCALIZE[557]) | String.IsEqual(Container.SortMethod,$LOCALIZE[558])</visible>
                 <visible>!Container.Content(seasons)</visible>
+                <visible>!Skin.HasSetting(DisableAlphabetStrip)</visible>
                 <itemlayout height="48" width="46">
                     <control type="label">
                         <aligny>center</aligny>

@@ -23,10 +23,10 @@
                     <left>450</left>
                     <right>0</right>
                     <top>140</top>
-                    <bottom>10</bottom>
+                    <bottom>80</bottom>
                     <itemgap>0</itemgap>
                     <onleft>3</onleft>
-                    <onup>302</onup>
+                    <onup>noop</onup>
                     <ondown>noop</ondown>
                     <onback>300</onback>
                     <onright>SetFocus(300,5)</onright>
@@ -56,6 +56,24 @@
                     <bottom>10</bottom>
                     <colordiffuse>dialog_fg_12</colordiffuse>
                     <texture>common/white.png</texture>
+                </control>
+
+                <!-- Arrows -->
+                <control type="image">
+                    <visible>Container(5).HasPrevious</visible>
+                    <centerright>735</centerright>
+                    <centertop>45</centertop>
+                    <width>16</width>
+                    <height>16</height>
+                    <texture flipy="true" colordiffuse="panel_fg_70">common/arrow-small.png</texture>
+                </control>
+                <control type="image">
+                    <visible>Container(5).HasNext</visible>
+                    <centerright>735</centerright>
+                    <centerbottom>45</centerbottom>
+                    <width>16</width>
+                    <height>16</height>
+                    <texture colordiffuse="panel_fg_70">common/arrow-small.png</texture>
                 </control>
 
 

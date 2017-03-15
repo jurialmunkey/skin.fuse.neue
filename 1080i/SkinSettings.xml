@@ -74,7 +74,7 @@
                         <width>450</width>
                         <onback>300</onback>
                         <include>Defs_Settings_Button</include>
-                        <label>31169</label>
+                        <label>$LOCALIZE[31024]</label>
                     </control>
 
                     <control type="togglebutton" id="9108" description="Dependencies">
@@ -94,12 +94,12 @@
                     <left>450</left>
                     <right>0</right>
                     <top>140</top>
-                    <bottom>10</bottom>
+                    <bottom>80</bottom>
                     <itemgap>0</itemgap>
                     <onright>SetFocus(300,5)</onright>
                     <onback>300</onback>
                     <onleft>9100</onleft>
-                    <onup>302</onup>
+                    <onup>noop</onup>
                     <ondown>noop</ondown>
                     <orientation>vertical</orientation>
                     <!-- ==== -->
@@ -332,15 +332,24 @@
                         <onclick condition="String.IsEmpty(Skin.String(StartupPlaylist))">Skin.SetFile(StartupPlaylist,.mp4|.avi|.mkv|.xvid|.wmv|.mov|.xsp|.mp3|.wma|.flac|.m3u)</onclick>
                         <onclick condition="!String.IsEmpty(Skin.String(StartupPlaylist))">Skin.Reset(StartupPlaylist)</onclick>
                     </control>
+
+                    <control type="radiobutton" id="9273" description="Disable Alphabet Strip">
+                        <visible>ControlGroup(9100).HasFocus(9107)</visible>
+                        <onback>300</onback>
+                        <include>Defs_Settings_Button</include>
+                        <label>$LOCALIZE[31025]</label>
+                        <selected>Skin.HasSetting(DisableAlphabetStrip)</selected>
+                        <onclick>Skin.ToggleSetting(DisableAlphabetStrip)</onclick>
+                    </control>
                     
-                    <!-- <control type="radiobutton" id="9272" description="Kiosk Mode">
+                    <control type="radiobutton" id="9272" description="Kiosk Mode">
                         <visible>ControlGroup(9100).HasFocus(9107)</visible>
                         <onback>300</onback>
                         <include>Defs_Settings_Button</include>
                         <label>31199</label>
                         <selected>Skin.HasSetting(global.kioskmode)</selected>
                         <onclick>Skin.ToggleSetting(global.kioskmode)</onclick>
-                    </control> -->
+                    </control>
 
                     <!-- <control type="button" id="9275" description="Reset">
                         <visible>ControlGroup(9100).HasFocus(9107)</visible>
@@ -413,14 +422,34 @@
                         <selected>System.HasAddon(script.skinshortcuts)</selected>
                         <include>Defs_Settings_Button</include>
                     </control>
-                    <control type="radiobutton" id="9287">
+                    <control type="radiobutton" id="9292">
                         <visible>ControlGroup(9100).HasFocus(9108)</visible>
                         <onback>300</onback>
-                        <label>script.extendedinfo</label>
-                        <label2>$INFO[System.AddonVersion(script.extendedinfo)]        </label2>
-                        <onclick condition="!System.HasAddon(script.extendedinfo)">InstallAddon(script.extendedinfo)</onclick>
-                        <onclick condition="System.HasAddon(script.extendedinfo)">Addon.OpenSettings(script.extendedinfo)</onclick>
-                        <selected>System.HasAddon(script.extendedinfo)</selected>
+                        <label>script.globalsearch</label>
+                        <label2>$INFO[System.AddonVersion(script.globalsearch)]        </label2>
+                        <onclick condition="!System.HasAddon(script.globalsearch)">InstallAddon(script.globalsearch)</onclick>
+                        <onclick condition="System.HasAddon(script.globalsearch)">Addon.OpenSettings(script.globalsearch)</onclick>
+                        <selected>System.HasAddon(script.globalsearch)</selected>
+                        <include>Defs_Settings_Button</include>
+                    </control>
+                    <control type="radiobutton" id="9293">
+                        <visible>ControlGroup(9100).HasFocus(9108)</visible>
+                        <onback>300</onback>
+                        <label>script.artwork.downloader</label>
+                        <label2>$INFO[System.AddonVersion(script.artwork.downloader)]        </label2>
+                        <onclick condition="!System.HasAddon(script.artwork.downloader)">InstallAddon(script.artwork.downloader)</onclick>
+                        <onclick condition="System.HasAddon(script.artwork.downloader)">Addon.OpenSettings(script.artwork.downloader)</onclick>
+                        <selected>System.HasAddon(script.artwork.downloader)</selected>
+                        <include>Defs_Settings_Button</include>
+                    </control>
+                    <control type="radiobutton" id="9294">
+                        <visible>ControlGroup(9100).HasFocus(9108)</visible>
+                        <onback>300</onback>
+                        <label>script.cu.lrclyrics</label>
+                        <label2>$INFO[System.AddonVersion(script.cu.lrclyrics)]        </label2>
+                        <onclick condition="!System.HasAddon(script.cu.lrclyrics)">InstallAddon(script.cu.lrclyrics)</onclick>
+                        <onclick condition="System.HasAddon(script.cu.lrclyrics)">Addon.OpenSettings(script.cu.lrclyrics)</onclick>
+                        <selected>System.HasAddon(script.cu.lrclyrics)</selected>
                         <include>Defs_Settings_Button</include>
                     </control>
                     <control type="radiobutton" id="9288">
@@ -463,6 +492,7 @@
                         <selected>System.HasAddon(resource.images.weatherfanart.multi)</selected>
                         <include>Defs_Settings_Button</include>
                     </control>
+                    
                 </control>
 
 
@@ -477,6 +507,22 @@
                     <texture>common/white.png</texture>
                 </control>
 
+                <control type="image">
+                    <visible>Container(9200).HasPrevious</visible>
+                    <centerright>735</centerright>
+                    <centertop>45</centertop>
+                    <width>16</width>
+                    <height>16</height>
+                    <texture flipy="true" colordiffuse="panel_fg_70">common/arrow-small.png</texture>
+                </control>
+                <control type="image">
+                    <visible>Container(9200).HasNext</visible>
+                    <centerright>735</centerright>
+                    <centerbottom>45</centerbottom>
+                    <width>16</width>
+                    <height>16</height>
+                    <texture colordiffuse="panel_fg_70">common/arrow-small.png</texture>
+                </control>
 
                 <!-- Header -->
                 <control type="label">

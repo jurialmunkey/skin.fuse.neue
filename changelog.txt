@@ -1,3 +1,7 @@
+[B]0.9.18[/B]
+Add option to use scrollbars instead of alphabet jump
+Add kiosk mode
+
 [B]0.9.17[/B]
 Add global search
 Add next aired script skin

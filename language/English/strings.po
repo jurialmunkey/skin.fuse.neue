@@ -136,6 +136,16 @@ msgctxt "#31023"
 msgid "Fullscreen"
 msgstr ""
 
+#: /1080i/SkinSettings.xml
+msgctxt "#31024"
+msgid "Miscellaneous"
+msgstr ""
+
+#: /1080i/SkinSettings.xml
+msgctxt "#31025"
+msgid "Always show scrollbars instead of alphabet jump"
+msgstr ""
+
 msgctxt "#31101"
 msgid "items"
 msgstr ""
