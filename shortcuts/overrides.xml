@@ -25,6 +25,9 @@
     <groupoverride group="x1108" condition="String.StartsWith(Container(50).ListItem.Property(path),ActivateWindow) + !String.Contains(Container(50).ListItem.Property(path),DialogFavourites) + !String.Contains(Container(50).ListItem.Property(path),DialogButtonMenu) + !String.Contains(Container(50).ListItem.Property(path),shutdownmenu) + !String.Contains(Container(50).ListItem.Property(path),favourites)">SetProperty(WindowBaseReturn,$INFO[Container(50).ListItem.Property(list)],home)</groupoverride>
     <groupoverride group="x1109" condition="String.StartsWith(Container(50).ListItem.Property(path),ActivateWindow) + !String.Contains(Container(50).ListItem.Property(path),DialogFavourites) + !String.Contains(Container(50).ListItem.Property(path),DialogButtonMenu) + !String.Contains(Container(50).ListItem.Property(path),shutdownmenu) + !String.Contains(Container(50).ListItem.Property(path),favourites)">SetProperty(WindowBaseReturn,$INFO[Container(50).ListItem.Property(list)],home)</groupoverride>
 
+    <!-- For Power Menu -->
+    <groupoverride group="powermenu" condition="Window.IsActive(DialogButtonMenu.xml)">Close</groupoverride>
+
     <!-- Icon Overrides -->
     <icon labelID="tvhub">special://skin/extras/icons/tv.png</icon>
     <icon labelID="moviehub">special://skin/extras/icons/film.png</icon>

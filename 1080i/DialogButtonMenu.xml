@@ -5,7 +5,6 @@
         <include>Global_Overlay</include>
         <control type="group">
             <include>Animation_FadeIn_SlideUp</include>
-            <include>Animation_FadeOut</include>
             <control type="group">
                 <visible>Integer.IsGreater(Container(3110).NumItems,7)</visible>
                 <height>592</height>

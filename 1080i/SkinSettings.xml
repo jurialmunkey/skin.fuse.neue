@@ -348,6 +348,7 @@
                         <label>$LOCALIZE[31025]</label>
                         <selected>Skin.HasSetting(DisableAlphabetStrip)</selected>
                         <onclick>Skin.ToggleSetting(DisableAlphabetStrip)</onclick>
+                        <onclick>ReloadSkin()</onclick>
                     </control>
                     
                     <control type="radiobutton" id="9273" description="Kiosk Mode">
