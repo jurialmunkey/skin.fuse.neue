@@ -290,6 +290,7 @@
     <include name="Bottombar_HomeInfo">
         <control type="group">
             <visible>[Control.IsVisible(301) + !Container(301).IsUpdating + !Integer.IsEqual(Container(301).NumItems,0)] | Window.IsVisible(script-script.extendedinfo-DialogInfo.xml) | Window.IsVisible(script-script.extendedinfo-DialogVideoInfo.xml) | Window.IsVisible(script-script.extendedinfo-VideoList.xml)</visible>
+            <visible>!$EXP[Expression_ShowWeatherWidget]</visible>
             <control type="group">
                 <left>614</left>
                 <right>614</right>

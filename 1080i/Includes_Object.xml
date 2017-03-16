@@ -356,6 +356,7 @@
     <include name="Object_AlphabetStrip">
         <control type="group">
             <visible>[Window.IsVisible(Home) + ![String.IsEqual(Container(300).ListItem.Property(widget),weather) + [Control.HasFocus(300) | String.IsEmpty(Container(302).ListItem.Property(widget))] | [String.IsEqual(Container(302).ListItem.Property(widget),weather) + !Control.HasFocus(300)]]] | !Window.IsVisible(Home)</visible>
+            <visible>!$EXP[Expression_ShowWeatherWidget]</visible>
             <control type="panel" id="8000">
                 <orientation>horizontal</orientation>
                 <left>606</left>

@@ -27,7 +27,7 @@
     <variable name="Label_SkinShortcuts_WidgetName_Fallback">
         <value condition="String.IsEqual(Skin.String(home.slideshowpath),special://skin/extras/backgrounds/default.jpg)">$LOCALIZE[16018]</value>
         <value condition="!String.IsEmpty(Skin.String(home.slideshowpath))">$INFO[Skin.String(home.slideshowpath)]</value>
-        <value>$LOCALIZE[31105]</value>
+        <value>$LOCALIZE[31266]$INFO[Skin.String(home.fallbackwidget.name), (,)]</value>
     </variable>
 
     <variable name="Label_Settings_Header">

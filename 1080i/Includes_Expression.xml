@@ -13,5 +13,5 @@
 
     <expression name="Expression_ShowTopbar">[String.IsEqual(Window(Home).Property(ShowTopbar),1)]</expression>
 
-    <expression name="Expression_ShowWeatherWidget">[[String.IsEqual(Container(300).ListItem.Property(widget),weather) + [Control.HasFocus(300) | String.IsEmpty(Container(302).ListItem.Property(widget))] | [String.IsEqual(Container(302).ListItem.Property(widget),weather) + !Control.HasFocus(300)]]]</expression>
+    <expression name="Expression_ShowWeatherWidget">[[String.IsEqual(Container(300).ListItem.Property(widget),weather) + [Control.HasFocus(300) | String.IsEmpty(Container(302).ListItem.Property(widget))]] | [String.IsEqual(Container(302).ListItem.Property(widget),weather) + !Control.HasFocus(300)] | [String.IsEmpty(Container(300).ListItem.Property(widget)) + String.IsEmpty(Container(302).ListItem.Property(widget)) + String.IsEqual(Skin.String(home.fallbackwidget.name),weather)]]</expression>
 </includes>
