@@ -299,6 +299,14 @@
                         <selected>Skin.HasSetting(SkinHelper.EnableAnimatedPosters)</selected>
                         <onclick>Skin.ToggleSetting(SkinHelper.EnableAnimatedPosters)</onclick>
                     </control>
+                    <control type="radiobutton" id="9246">
+                        <visible>ControlGroup(9100).HasFocus(9104)</visible>
+                        <onback>300</onback>
+                        <label>$LOCALIZE[31026]</label>
+                        <include>Defs_Settings_Button</include>
+                        <selected>Skin.HasSetting(PreferFanartHome)</selected>
+                        <onclick>Skin.ToggleSetting(PreferFanartHome)</onclick>
+                    </control>
 
                     <!-- ====== -->
                     <!-- Colors -->

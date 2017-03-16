@@ -146,6 +146,11 @@ msgctxt "#31025"
 msgid "Always show scrollbars instead of alphabet jump"
 msgstr ""
 
+#: /1080i/SkinSettings.xml
+msgctxt "#31026"
+msgid "Prefer fanart instead of episode thumbs for home widgets"
+msgstr ""
+
 msgctxt "#31101"
 msgid "items"
 msgstr ""
