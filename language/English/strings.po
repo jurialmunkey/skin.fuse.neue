@@ -148,7 +148,7 @@ msgstr ""
 
 #: /1080i/SkinSettings.xml
 msgctxt "#31026"
-msgid "Prefer fanart instead of episode thumbs for home widgets"
+msgid "Use fanart instead of episode thumbs for home widgets"
 msgstr ""
 
 #: /1080i/SkinSettings.xml
@@ -159,6 +159,11 @@ msgstr ""
 #: /1080i/SkinSettings.xml
 msgctxt "#31028"
 msgid "Reset skin settings to defaults (WARNING: This will reset your home menu to skin defaults)"
+msgstr ""
+
+#: /1080i/SkinSettings.xml
+msgctxt "#31029"
+msgid "Use posters instead of landscape art for tvshows"
 msgstr ""
 
 msgctxt "#31101"
