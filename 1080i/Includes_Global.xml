@@ -64,6 +64,8 @@
                 <randomize>true</randomize>
                 <aspectratio>scale</aspectratio>
                 <imagepath background="true">$VAR[Global_Background_Image]</imagepath>
+                <animation effect="zoom" start="110" end="130" center="auto" time="10000" tween="sine" easing="inout" pulse="true" condition="Skin.HasSetting(AnimatedFanart)">Conditional</animation>
+                <animation effect="slide" start="-30,-30" end="30,30" time="6000" tween="sine" easing="inout" pulse="true" condition="Skin.HasSetting(AnimatedFanart)">Conditional</animation>
             </control>
             <control type="image" description="Fanart Fallback always">
                 <visible>!Player.HasMedia | [!Skin.HasSetting(global.showvideo) + Player.HasVideo] | [!Skin.HasSetting(global.showvisualisation) + Player.HasAudio]</visible>
@@ -71,6 +73,8 @@
                 <visible>!Window.IsVisible(home) + Skin.HasSetting(global.hidefanart) + !String.IsEmpty(Skin.String(fanart.fallback))</visible>
                 <aspectratio>scale</aspectratio>
                 <texture background="true">$INFO[Skin.String(fanart.fallback)]</texture>
+                <animation effect="zoom" start="110" end="130" center="auto" time="10000" tween="sine" easing="inout" pulse="true" condition="Skin.HasSetting(AnimatedFanart)">Conditional</animation>
+                <animation effect="slide" start="-30,-30" end="30,30" time="6000" tween="sine" easing="inout" pulse="true" condition="Skin.HasSetting(AnimatedFanart)">Conditional</animation>
             </control>
         </control>
     </include>
@@ -90,6 +94,8 @@
                 <randomize>true</randomize>
                 <aspectratio>scale</aspectratio>
                 <imagepath background="true">$VAR[Global_Background_Image]</imagepath>
+                <animation effect="zoom" start="110" end="130" center="auto" time="10000" tween="sine" easing="inout" pulse="true" condition="Skin.HasSetting(AnimatedFanart)">Conditional</animation>
+                <animation effect="slide" start="-30,-30" end="30,30" time="6000" tween="sine" easing="inout" pulse="true" condition="Skin.HasSetting(AnimatedFanart)">Conditional</animation>
             </control>
             <control type="image" description="Fanart Fallback always">
                 <visible>!Player.HasMedia | [!Skin.HasSetting(global.showvideo) + Player.HasVideo] | [!Skin.HasSetting(global.showvisualisation) + Player.HasAudio]</visible>
@@ -97,6 +103,8 @@
                 <visible>!Window.IsVisible(home) + Skin.HasSetting(global.hidefanart) + !String.IsEmpty(Skin.String(fanart.fallback))</visible>
                 <aspectratio>scale</aspectratio>
                 <texture background="true">$INFO[Skin.String(fanart.fallback)]</texture>
+                <animation effect="zoom" start="110" end="130" center="auto" time="10000" tween="sine" easing="inout" pulse="true" condition="Skin.HasSetting(AnimatedFanart)">Conditional</animation>
+                <animation effect="slide" start="-30,-30" end="30,30" time="6000" tween="sine" easing="inout" pulse="true" condition="Skin.HasSetting(AnimatedFanart)">Conditional</animation>
             </control>
         </control>
     </include>

@@ -166,6 +166,31 @@ msgctxt "#31029"
 msgid "Use posters instead of landscape art for tvshows"
 msgstr ""
 
+#: /1080i/SkinSettings.xml
+msgctxt "#31030"
+msgid "Backup / Restore"
+msgstr ""
+
+#: /1080i/SkinSettings.xml
+msgctxt "#31031"
+msgid "Backup skin settings"
+msgstr ""
+
+#: /1080i/SkinSettings.xml
+msgctxt "#31032"
+msgid "Restore skin settings"
+msgstr ""
+
+#: /1080i/SkinSettings.xml
+msgctxt "#31033"
+msgid "Backup and restore settings"
+msgstr ""
+
+#: /1080i/SkinSettings.xml
+msgctxt "#31034"
+msgid "Change backup and restore path"
+msgstr ""
+
 msgctxt "#31101"
 msgid "items"
 msgstr ""

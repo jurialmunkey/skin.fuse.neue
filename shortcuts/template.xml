@@ -166,11 +166,13 @@
         </controls>
     </other>
     <other include="home-widget">
+        <property name="content" tag="property" attribute="name|widgetPath" />
+        <property name="target" tag="property" attribute="name|widgetTarget" />
         <property name="content">$VAR[Defs_Widget_Content]</property>
         <property name="target">$VAR[Defs_Widget_Target]</property>
         <controls>
             <control type="fixedlist" id="301">
-                <visible>String.IsEqual(Skin.String(home.fallbackwidget.type),movies) | String.IsEqual(Skin.String(home.fallbackwidget.type),sets) | String.IsEqual(Skin.String(home.fallbackwidget.type),seasons)</visible>
+                <visible>String.IsEqual(Skin.String(home.fallbackwidget.type),movies) | String.IsEqual(Skin.String(home.fallbackwidget.type),sets) | String.IsEqual(Skin.String(home.fallbackwidget.type),seasons) | String.IsEmpty(Skin.String(home.fallbakcwidget.type)</visible>
                 <visible>!String.IsEqual(Skin.String(home.fallbackwidget.name),Favourites)</visible>
                 <visible>Control.HasFocus(300) | String.IsEmpty(Container(302).ListItem.Property(widgetType))</visible>
                 <skinshortcuts>visibility</skinshortcuts>

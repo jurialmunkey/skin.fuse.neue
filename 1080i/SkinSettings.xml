@@ -85,6 +85,15 @@
                         <include>Defs_Settings_Button</include>
                         <label>$LOCALIZE[24996]</label>
                     </control>
+
+                    <control type="togglebutton" id="9106" description="Reset Backup">
+                        <usealttexture>!Control.HasFocus(300) + !Control.HasFocus(302) + ControlGroup(9100).HasFocus(9106)</usealttexture>
+                        <alttexturenofocus colordiffuse="$VAR[ColorHighlight]">common/white.png</alttexturenofocus>
+                        <width>450</width>
+                        <onback>300</onback>
+                        <include>Defs_Settings_Button</include>
+                        <label>$LOCALIZE[31030]</label>
+                    </control>
                 </control>
 
 
@@ -368,15 +377,6 @@
                         <onclick>RunScript(script.skinshortcuts,type=manage&amp;group=powermenu)</onclick>
                     </control>
 
-                    <control type="button" id="9275" description="Reset">
-                        <visible>ControlGroup(9100).HasFocus(9107)</visible>
-                        <onback>300</onback>
-                        <include>Defs_Settings_Button</include>
-                        <label>$LOCALIZE[31028]</label>
-                        <onclick>Skin.ResetSettings</onclick>
-                        <onclick>RunScript(script.skinshortcuts,type=resetall)</onclick>
-                    </control>
-
                     <!-- ============ -->
                     <!-- Dependencies -->
                     <!-- ============ -->
@@ -418,6 +418,16 @@
                         <onclick condition="!System.HasAddon(script.skin.helper.backgrounds)">InstallAddon(script.skin.helper.backgrounds)</onclick>
                         <onclick condition="System.HasAddon(script.skin.helper.backgrounds)">Addon.OpenSettings(script.skin.helper.backgrounds)</onclick>
                         <selected>System.HasAddon(script.skin.helper.backgrounds)</selected>
+                        <include>Defs_Settings_Button</include>
+                    </control>
+                    <control type="radiobutton" id="9297">
+                        <visible>ControlGroup(9100).HasFocus(9108)</visible>
+                        <onback>300</onback>
+                        <label>script.skin.helper.skinbackup</label>
+                        <label2>$INFO[System.AddonVersion(script.skin.helper.skinbackup)]        </label2>
+                        <onclick condition="!System.HasAddon(script.skin.helper.skinbackup)">InstallAddon(script.skin.helper.skinbackup)</onclick>
+                        <onclick condition="System.HasAddon(script.skin.helper.skinbackup)">Addon.OpenSettings(script.skin.helper.skinbackup)</onclick>
+                        <selected>System.HasAddon(script.skin.helper.skinbackup)</selected>
                         <include>Defs_Settings_Button</include>
                     </control>
                     <control type="radiobutton" id="9285">
@@ -530,7 +540,40 @@
                         <selected>System.HasAddon(resource.images.weatherfanart.multi)</selected>
                         <include>Defs_Settings_Button</include>
                     </control>
-                    
+
+                    <!-- ================ -->
+                    <!-- Backup / Restore -->
+                    <!-- ================ -->
+                    <control type="button" id="9261" description="Backup">
+                        <visible>ControlGroup(9100).HasFocus(9106)</visible>
+                        <onback>300</onback>
+                        <include>Defs_Settings_Button</include>
+                        <label>$LOCALIZE[31031]</label>
+                        <onclick>RunScript(script.skin.helper.service,action=backup)</onclick>
+                    </control>
+                    <control type="button" id="9262" description="Restore">
+                        <visible>ControlGroup(9100).HasFocus(9106)</visible>
+                        <onback>300</onback>
+                        <include>Defs_Settings_Button</include>
+                        <label>$LOCALIZE[31032]</label>
+                        <onclick>RunScript(script.skin.helper.service,action=restore)</onclick>
+                    </control>
+                    <control type="button" id="9263" description="Backup Restore Settings">
+                        <visible>ControlGroup(9100).HasFocus(9106)</visible>
+                        <onback>300</onback>
+                        <include>Defs_Settings_Button</include>
+                        <label>$LOCALIZE[31034]</label>
+                        <onclick condition="!System.HasAddon(script.skin.helper.skinbackup)">InstallAddon(script.skin.helper.skinbackup)</onclick>
+                        <onclick condition="System.HasAddon(script.skin.helper.skinbackup)">Addon.OpenSettings(script.skin.helper.skinbackup)</onclick>
+                    </control>
+                    <control type="button" id="9264" description="Reset">
+                        <visible>ControlGroup(9100).HasFocus(9106)</visible>
+                        <onback>300</onback>
+                        <include>Defs_Settings_Button</include>
+                        <label>$LOCALIZE[31028]</label>
+                        <onclick>Skin.ResetSettings</onclick>
+                        <onclick>RunScript(script.skinshortcuts,type=resetall)</onclick>
+                    </control>
                 </control>
 
 
