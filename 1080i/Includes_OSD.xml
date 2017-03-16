@@ -106,7 +106,7 @@
 
     <include name="OSD_Video">
         <control type="group">
-            <visible>Player.Seeking | Player.DisplayAfterSeek | Player.Paused | Player.Forwarding | Player.Rewinding | Player.ShowInfo | Window.IsActive(musicosd) | Window.IsActive(videoosd) | Window.IsVisible(script-cu-lrclyrics-main.xml) | Window.IsActive(DialogFullScreenInfo.xml)</visible>
+            <visible>Player.Caching | Player.Seeking | Player.DisplayAfterSeek | Player.Paused | Player.Forwarding | Player.Rewinding | Player.ShowInfo | Window.IsActive(musicosd) | Window.IsActive(videoosd) | Window.IsVisible(script-cu-lrclyrics-main.xml) | Window.IsActive(DialogFullScreenInfo.xml)</visible>
             <include>Animation_FadeIn</include>
             <include>Animation_FadeOut</include>
 
