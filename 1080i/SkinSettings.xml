@@ -328,9 +328,9 @@
                         <onclick>Skin.ToggleSetting(UseColorFlags)</onclick>
                     </control>
 
-                    <!-- ====== -->
-                    <!-- Extras -->
-                    <!-- ====== -->
+                    <!-- ============= -->
+                    <!-- Miscellaneous -->
+                    <!-- ============= -->
                     <control type="button" id="9271" description="Startup Video">
                         <visible>ControlGroup(9100).HasFocus(9107)</visible>
                         <onback>300</onback>
@@ -341,7 +341,7 @@
                         <onclick condition="!String.IsEmpty(Skin.String(StartupPlaylist))">Skin.Reset(StartupPlaylist)</onclick>
                     </control>
 
-                    <control type="radiobutton" id="9273" description="Disable Alphabet Strip">
+                    <control type="radiobutton" id="9272" description="Disable Alphabet Strip">
                         <visible>ControlGroup(9100).HasFocus(9107)</visible>
                         <onback>300</onback>
                         <include>Defs_Settings_Button</include>
@@ -350,7 +350,7 @@
                         <onclick>Skin.ToggleSetting(DisableAlphabetStrip)</onclick>
                     </control>
                     
-                    <control type="radiobutton" id="9272" description="Kiosk Mode">
+                    <control type="radiobutton" id="9273" description="Kiosk Mode">
                         <visible>ControlGroup(9100).HasFocus(9107)</visible>
                         <onback>300</onback>
                         <include>Defs_Settings_Button</include>
@@ -359,13 +359,22 @@
                         <onclick>Skin.ToggleSetting(global.kioskmode)</onclick>
                     </control>
 
-                    <!-- <control type="button" id="9275" description="Reset">
+                    <control type="button" id="9274" description="Customise Shutdown Menu">
                         <visible>ControlGroup(9100).HasFocus(9107)</visible>
                         <onback>300</onback>
                         <include>Defs_Settings_Button</include>
-                        <label>Reset to defaults</label>
+                        <label>$LOCALIZE[31027]</label>
+                        <onclick>RunScript(script.skinshortcuts,type=manage&amp;group=powermenu)</onclick>
+                    </control>
+
+                    <control type="button" id="9275" description="Reset">
+                        <visible>ControlGroup(9100).HasFocus(9107)</visible>
+                        <onback>300</onback>
+                        <include>Defs_Settings_Button</include>
+                        <label>$LOCALIZE[31028]</label>
                         <onclick>Skin.ResetSettings</onclick>
-                    </control> -->
+                        <onclick>RunScript(script.skinshortcuts,type=resetall)</onclick>
+                    </control>
 
                     <!-- ============ -->
                     <!-- Dependencies -->

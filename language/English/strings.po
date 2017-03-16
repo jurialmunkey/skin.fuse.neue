@@ -151,6 +151,16 @@ msgctxt "#31026"
 msgid "Prefer fanart instead of episode thumbs for home widgets"
 msgstr ""
 
+#: /1080i/SkinSettings.xml
+msgctxt "#31027"
+msgid "Customise power menu"
+msgstr ""
+
+#: /1080i/SkinSettings.xml
+msgctxt "#31028"
+msgid "Reset skin settings to defaults (WARNING: This will reset your home menu to skin defaults)"
+msgstr ""
+
 msgctxt "#31101"
 msgid "items"
 msgstr ""
