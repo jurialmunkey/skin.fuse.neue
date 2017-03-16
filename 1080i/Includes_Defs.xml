@@ -235,10 +235,54 @@
                     <top>0</top>
                     <width>100</width>
                     <height>100</height>
-                    <animation effect="rotate" condition="true" start="0" end="360" loop="true" time="1000" center="auto">Conditional</animation>
+                    <animation effect="rotate" condition="true" start="0" end="360" pulse="true" loop="true" time="1000" center="auto">Conditional</animation>
                     <texture colordiffuse="$VAR[ColorHighlight]">dialog/loading-spinner.png</texture>
                     <aspectratio>keep</aspectratio>
                 </control>
+                <!-- <control type="multiimage">
+                    <description>Top busy</description>
+                    <centerleft>50%</centerleft>
+                    <top>0</top>
+                    <width>96</width>
+                    <height>96</height>
+                    <imagepath colordiffuse="bfffffff">busy/left/</imagepath>
+                    <timeperimage>75</timeperimage>
+                    <fadetime>25</fadetime>
+                    <aspectratio>keep</aspectratio>
+                </control>
+                <control type="multiimage">
+                    <description>Top busy</description>
+                    <centerleft>50%</centerleft>
+                    <top>0</top>
+                    <width>96</width>
+                    <height>96</height>
+                    <imagepath colordiffuse="bfffffff">busy/top/</imagepath>
+                    <timeperimage>75</timeperimage>
+                    <fadetime>25</fadetime>
+                    <aspectratio>keep</aspectratio>
+                </control>
+                <control type="multiimage">
+                    <description>Top busy</description>
+                    <centerleft>50%</centerleft>
+                    <top>0</top>
+                    <width>96</width>
+                    <height>96</height>
+                    <imagepath colordiffuse="bfffffff">busy/right/</imagepath>
+                    <timeperimage>75</timeperimage>
+                    <fadetime>25</fadetime>
+                    <aspectratio>keep</aspectratio>
+                </control>
+                <control type="multiimage">
+                    <description>Top busy</description>
+                    <centerleft>50%</centerleft>
+                    <top>0</top>
+                    <width>96</width>
+                    <height>96</height>
+                    <imagepath colordiffuse="bfffffff">busy/bottom/</imagepath>
+                    <timeperimage>75</timeperimage>
+                    <fadetime>25</fadetime>
+                    <aspectratio>keep</aspectratio>
+                </control> -->
                 <control type="label">
                     <description>Busy label</description>
                     <centerleft>50%</centerleft>
