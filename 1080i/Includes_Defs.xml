@@ -53,6 +53,9 @@
         <include>Animation_FadeOut</include>
         <width>466</width>
         <height>382</height>
+        <include>Defs_Options_Texture</include>
+    </include>
+    <include name="Defs_Options_Texture">
         <control type="image">
             <description>background image</description>
             <texture border="16" colordiffuse="dialog_bg_100">common/rounded-shadow8.png</texture>
@@ -74,6 +77,13 @@
         <onback condition="!Window.IsVisible(DialogButtonMenu.xml)">9400</onback>
         <onleft condition="!Window.IsVisible(DialogButtonMenu.xml)">9400</onleft>
         <onright condition="!Window.IsVisible(DialogButtonMenu.xml)">9400</onright>
+    </include>
+
+    <include name="Defs_Powermenu_Group">
+        <height>592</height>
+        <left>8</left>
+        <bottom>56</bottom>
+        <width>466</width>
     </include>
 
     <!-- Widget Content -->

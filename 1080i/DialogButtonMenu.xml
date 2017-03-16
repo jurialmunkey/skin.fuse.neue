@@ -2,12 +2,67 @@
 <window type="buttonMenu" id="111">
     <defaultcontrol always="true">3110</defaultcontrol>
     <controls>
+        <include>Global_Overlay</include>
         <control type="group">
-            <include>Global_Overlay</include>
             <include>Animation_FadeIn_SlideUp</include>
+            <include>Animation_FadeOut</include>
             <control type="group">
+                <visible>Integer.IsGreater(Container(3110).NumItems,7)</visible>
                 <height>592</height>
-                <include>Defs_Options_Menu</include>
+                <include>Defs_Powermenu_Group</include>
+                <include>Defs_Options_Texture</include>
+            </control>
+            <control type="group">
+                <visible>Integer.IsEqual(Container(3110).NumItems,7)</visible>
+                <height>522</height>
+                <include>Defs_Powermenu_Group</include>
+                <include>Defs_Options_Texture</include>
+            </control>
+            <control type="group">
+                <visible>Integer.IsEqual(Container(3110).NumItems,6)</visible>
+                <height>452</height>
+                <include>Defs_Powermenu_Group</include>
+                <include>Defs_Options_Texture</include>
+            </control>
+            <control type="group">
+                <visible>Integer.IsEqual(Container(3110).NumItems,5)</visible>
+                <height>382</height>
+                <include>Defs_Powermenu_Group</include>
+                <include>Defs_Options_Texture</include>
+            </control>
+            <control type="group">
+                <visible>Integer.IsEqual(Container(3110).NumItems,4)</visible>
+                <height>312</height>
+                <include>Defs_Powermenu_Group</include>
+                <include>Defs_Options_Texture</include>
+            </control>
+            <control type="group">
+                <visible>Integer.IsEqual(Container(3110).NumItems,3)</visible>
+                <height>242</height>
+                <include>Defs_Powermenu_Group</include>
+                <include>Defs_Options_Texture</include>
+            </control>
+            <control type="group">
+                <visible>Integer.IsEqual(Container(3110).NumItems,2)</visible>
+                <height>172</height>
+                <include>Defs_Powermenu_Group</include>
+                <include>Defs_Options_Texture</include>
+            </control>
+            <control type="group">
+                <visible>Integer.IsEqual(Container(3110).NumItems,1)</visible>
+                <height>102</height>
+                <include>Defs_Powermenu_Group</include>
+                <include>Defs_Options_Texture</include>
+            </control>
+            <control type="group">
+                <animation effect="slide" end="0,70" condition="Integer.IsLess(Container(3110).NumItems,8)">Conditional</animation>
+                <animation effect="slide" end="0,70" condition="Integer.IsLess(Container(3110).NumItems,7)">Conditional</animation>
+                <animation effect="slide" end="0,70" condition="Integer.IsLess(Container(3110).NumItems,6)">Conditional</animation>
+                <animation effect="slide" end="0,70" condition="Integer.IsLess(Container(3110).NumItems,5)">Conditional</animation>
+                <animation effect="slide" end="0,70" condition="Integer.IsLess(Container(3110).NumItems,4)">Conditional</animation>
+                <animation effect="slide" end="0,70" condition="Integer.IsLess(Container(3110).NumItems,3)">Conditional</animation>
+                <animation effect="slide" end="0,70" condition="Integer.IsLess(Container(3110).NumItems,2)">Conditional</animation>
+                <include>Defs_Powermenu_Group</include>
                 <control type="list" id="3110">
                     <onleft>Back</onleft>
                     <onright>Back</onright>
