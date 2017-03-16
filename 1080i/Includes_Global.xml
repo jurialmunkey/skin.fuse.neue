@@ -127,13 +127,13 @@
         <value condition="Window.IsVisible(weather) + !String.IsEmpty(Skin.String(weather.fanart.path))">$INFO[Skin.String(weather.fanart.path)]$INFO[Window(Weather).Property(Current.FanartCode)]/</value>        
 
         <!-- Home Window -->
-        <value condition="Window.IsVisible(home) + !String.IsEmpty(Skin.String(weather.fanart.path)) + String.StartsWith(Container(300).ListItem.Property(widget),Weather) + !Skin.HasSetting(home.dontshowfanart)">$INFO[Skin.String(weather.fanart.path)]$INFO[Window(Weather).Property(Current.FanartCode)]/</value>
+        <value condition="Window.IsVisible(home) + !String.IsEmpty(Skin.String(weather.fanart.path)) + [[String.IsEqual(Container(300).ListItem.Property(widget),weather) + [Control.HasFocus(300) | String.IsEmpty(Container(302).ListItem.Property(widget))]] | [String.IsEqual(Container(302).ListItem.Property(widget),weather) + !Control.HasFocus(300)] | [String.IsEmpty(Container(300).ListItem.Property(widget)) + String.IsEmpty(Container(302).ListItem.Property(widget)) + String.IsEqual(Skin.String(home.fallbackwidget.name),weather)]]">$INFO[Skin.String(weather.fanart.path)]$INFO[Window(Weather).Property(Current.FanartCode)]/</value>
         <value condition="Window.IsVisible(home) + !String.IsEmpty(Container(301).ListItem.Art(fanart)) + [!Skin.HasSetting(home.dontshowfanart) | Control.HasFocus(301)] + Control.IsVisible(301)">$INFO[Container(301).ListItem.Art(fanart)]</value>
         <value condition="Window.IsVisible(home) + !String.IsEmpty(Container(301).ListItem.Property(fanart)) + [!Skin.HasSetting(home.dontshowfanart) | Control.HasFocus(301)] + Control.IsVisible(301)">$INFO[Container(301).ListItem.Property(fanart)]</value>
         <value condition="Window.IsVisible(home) + String.IsEqual(Container(300).ListItem.Property(background),playlistBackground)">$INFO[Container(9988).ListItem.Art(fanart)]</value>
         <value condition="Window.IsVisible(home) + !String.IsEmpty(Container(300).ListItem.Property(Background))">$INFO[Container(300).ListItem.Property(Background)]</value>
         <value condition="Window.IsVisible(home) + !String.IsEmpty(Skin.String(home.slideshowpath)) + !String.IsEqual(Skin.String(home.slideshowpath),$LOCALIZE[8]) + [String.IsEmpty(Container(300).ListItem.Property(widget)) | Container(301).IsUpdating |  Skin.HasSetting(home.dontshowfanart)]">$INFO[Skin.String(home.slideshowpath)]</value>
-        <value condition="Window.IsVisible(home) + !String.IsEmpty(Skin.String(weather.fanart.path)) + String.IsEmpty(Container(300).ListItem.Property(widgetType)) + [Control.HasFocus(300) | [!Control.HasFocus(300) + String.IsEmpty(Container(302).ListItem.Property(widgetType))]] + String.IsEqual(Skin.String(home.slideshowpath),$LOCALIZE[8])">$INFO[Skin.String(weather.fanart.path)]$INFO[Window(Weather).Property(Current.FanartCode)]/</value>
+
         <value condition="Window.IsVisible(home) + !Container(301).IsUpdating + !String.IsEmpty(Skin.String(fanart.fallback))">$INFO[Skin.String(fanart.fallback)]</value>
         <value condition="Window.IsVisible(home) + !Container(301).IsUpdating">special://skin/extras/backgrounds/default.jpg</value>
 
