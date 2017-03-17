@@ -191,6 +191,16 @@ msgctxt "#31034"
 msgid "Change backup and restore path"
 msgstr ""
 
+#: /1080i/Includes_Labels.xml
+msgctxt "#31035"
+msgid "hrs"
+msgstr ""
+
+#: /1080i/Includes_Labels.xml
+msgctxt "#31036"
+msgid "hr"
+msgstr ""
+
 msgctxt "#31101"
 msgid "items"
 msgstr ""
