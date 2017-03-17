@@ -5,6 +5,7 @@
         <param name="visible" default="!Container.IsUpdating" />
         <param name="variable" default="$VAR[Image_Poster]" />
         <param name="height" default="756" />
+        <param name="discart" default="false" />
         <definition>
 
             <control type="group">
@@ -12,6 +13,18 @@
                 <bottom>78</bottom>
                 <width>504</width>
                 <height>$PARAM[height]</height>
+                <control type="image">
+                    <width>484</width>
+                    <height>484</height>
+                    <top>-222</top>
+                    <aspectratio>keep</aspectratio>
+                    <centerleft>50%</centerleft>
+                    <texture background="true">$INFO[ListItem.Art(discart)]</texture>
+                    <animation effect="slide" start="0,222" end="0" time="300">VisibleChange</animation>
+                    <visible>$PARAM[discart]</visible>
+                    <visible>!String.IsEmpty(ListItem.Art(discart))</visible>
+                    <visible>!Control.HasFocus(300) + !Control.HasFocus(302)</visible>
+                </control>
                 <animation type="WindowOpen" reversible="false" condition="[Window.Previous(MusicVisualisation.xml) | Window.Previous(VideoFullScreen.xml) | Window.Previous(Startup.xml)] + !Window.IsVisible(home)">
                     <effect type="slide" start="-534" end="0" time="400" delay="200" tween="quadratic" easing="out" />
                     <effect type="fade" start="0" end="100" time="200" delay="200" />
