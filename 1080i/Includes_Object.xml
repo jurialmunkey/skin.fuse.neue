@@ -169,29 +169,43 @@
                     <width>64</width>
                     <centertop>50%</centertop>
                     <height>64</height>
-                    <texture colordiffuse="panel_fg_100">flags/3D.png</texture>
+                    <texture colordiffuse="panel_fg_100">flags/other/3D.png</texture>
                     <visible>$PARAM[container]ListItem.IsStereoscopic</visible>
                 </control>
                 <control type="image">
                     <width>64</width>
                     <centertop>50%</centertop>
                     <height>64</height>
-                    <texture colordiffuse="panel_fg_100">flags/bluray.png</texture>
+                    <texture colordiffuse="panel_fg_100">flags/other/bluray.png</texture>
                     <visible>[String.StartsWith($PARAM[container]ListItem.FilenameAndPath,bluray) | String.StartsWith($PARAM[container]ListItem.FilenameAndPath,bdrip) | String.StartsWith($PARAM[container]ListItem.FilenameAndPath,bd25) | String.StartsWith($PARAM[container]ListItem.FilenameAndPath,bd50)]</visible>
                 </control>
                 <control type="image">
                     <width>95</width>
                     <centertop>50%</centertop>
                     <height>64</height>
-                    <texture colordiffuse="panel_fg_100">flags/hddvd.png</texture>
+                    <texture colordiffuse="panel_fg_100">flags/other/hddvd.png</texture>
                     <visible>String.StartsWith($PARAM[container]ListItem.FilenameAndPath,hddvd)</visible>
                 </control>
                 <control type="image">
                     <width>64</width>
                     <centertop>50%</centertop>
                     <height>64</height>
-                    <texture colordiffuse="panel_fg_100">flags/dvd.png</texture>
+                    <texture colordiffuse="panel_fg_100">flags/other/dvd.png</texture>
                     <visible>String.StartsWith($PARAM[container]ListItem.FilenameAndPath,dvd) + !String.StartsWith($PARAM[container]ListItem.FilenameAndPath,hddvd)</visible>
+                </control>
+                <control type="image">
+                    <width>64</width>
+                    <centertop>50%</centertop>
+                    <height>64</height>
+                    <texture colordiffuse="panel_fg_100">flags/other/tv.png</texture>
+                    <visible>String.Contains($PARAM[container]ListItem.FilenameAndPath,hdtv) | String.Contains($PARAM[container]ListItem.FilenameAndPath,dsr) | String.Contains($PARAM[container]ListItem.FilenameAndPath,pdtv) | String.Contains($PARAM[container]ListItem.FilenameAndPath,satrip) | String.Contains($PARAM[container]ListItem.FilenameAndPath,dthrip) | String.Contains($PARAM[container]ListItem.FilenameAndPath,dvbrip) | String.Contains($PARAM[container]ListItem.FilenameAndPath,tvrip)</visible>
+                </control>
+                <control type="image">
+                    <width>64</width>
+                    <centertop>50%</centertop>
+                    <height>64</height>
+                    <texture colordiffuse="panel_fg_100">flags/other/web-dl.png</texture>
+                    <visible>String.Contains($PARAM[container]ListItem.FilenameAndPath,web-dl) | String.Contains($PARAM[container]ListItem.FilenameAndPath,webdl) | String.Contains($PARAM[container]ListItem.FilenameAndPath,web-rip) | String.Contains($PARAM[container]ListItem.FilenameAndPath,webrip) | String.Contains($PARAM[container]ListItem.FilenameAndPath,web dl) | String.Contains($PARAM[container]ListItem.FilenameAndPath,web rip)</visible>
                 </control>
                 <control type="image">
                     <width>88</width>
