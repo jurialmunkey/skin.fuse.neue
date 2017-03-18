@@ -324,6 +324,22 @@
     <thumbnail label="years.png">special://skin/extras/icons/years.png</thumbnail>
     <thumbnail label="youtube.png">special://skin/extras/icons/youtube.png</thumbnail>
 
+    <!-- DEFAULT WIDGETS -->
+    <!-- Movies -->
+    <widgetdefaultnode labelID="20342" group="mainmenu" label="Recently Added Movies" type="movies" path="special://skin/extras/playlists/NewMovies.xsp" target="videos">NewMovies</widgetdefaultnode>
+
+    <!-- TV Shows -->
+    <widgetdefaultnode labelID="tvshows" group="mainmenu" label="Recently Watched Shows" type="tvshows" path="special://skin/extras/playlists/RecentShows.xsp" target="videos">RecentShows</widgetdefaultnode>
+
+    <!-- Music -->
+    <widgetdefaultnode labelID="2" group="mainmenu" label="Top 100 Albums" type="albums" path="musicdb://top100/albums/" target="music">Top100Albums</widgetdefaultnode>
+
+    <!-- Addons -->
+    <widgetdefaultnode labelID="24001" group="mainmenu" label="All Addons" type="addons" path="addons://sources/video" target="videos">VideoAddons</widgetdefaultnode>
+
+    <!-- Settings -->
+    <widgetdefault labelID="settings" group="mainmenu">Weather</widgetdefault>
+
     <!-- GROUPINGS -->
     <!-- Main Grouping -->
     <groupings>
