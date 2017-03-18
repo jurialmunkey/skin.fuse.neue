@@ -156,6 +156,7 @@
                 <visible>!Window.IsVisible(script-script.extendedinfo-DialogVideoInfo.xml)</visible>
                 <visible>!Window.IsVisible(script-script.extendedinfo-DialogInfo.xml)</visible>
                 <visible>!String.IsEqual($PARAM[container]ListItem.Label,..)</visible>
+                <visible>!$EXP[Expression_ShowWeatherWidget] | !Window.IsVisible(Home)</visible>
                 <visible>!Window.IsVisible(DialogVideoInfo.xml) | String.IsEmpty(Window(Home).Property(FocusedList))</visible>
                 <right>30</right>
                 <width>1400</width>
