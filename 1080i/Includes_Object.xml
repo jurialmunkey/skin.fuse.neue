@@ -158,6 +158,7 @@
                 <visible>!String.IsEqual($PARAM[container]ListItem.Label,..)</visible>
                 <visible>!$EXP[Expression_ShowWeatherWidget] | !Window.IsVisible(Home)</visible>
                 <visible>!Window.IsVisible(DialogVideoInfo.xml) | String.IsEmpty(Window(Home).Property(FocusedList))</visible>
+                <animation effect="fade" start="0" end="100" delay="30" time="1" reversible="false">Visible</animation>
                 <right>30</right>
                 <width>1400</width>
                 <height>120</height>
