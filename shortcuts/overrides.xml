@@ -335,7 +335,7 @@
     <widgetdefaultnode labelID="2" group="mainmenu" label="Top 100 Albums" type="albums" path="musicdb://top100/albums/" target="music">Top100Albums</widgetdefaultnode>
 
     <!-- Addons -->
-    <widgetdefaultnode labelID="24001" group="mainmenu" label="All Addons" type="addons" path="addons://sources/video" target="videos">VideoAddons</widgetdefaultnode>
+    <widgetdefaultnode labelID="24001" group="mainmenu" label="Video Addons" type="addons" path="addons://sources/video" target="videos">VideoAddons</widgetdefaultnode>
 
     <!-- Settings -->
     <widgetdefault labelID="settings" group="mainmenu">Weather</widgetdefault>
