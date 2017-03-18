@@ -77,7 +77,7 @@
 
             <control type="grouplist" id="9000">
                 <onleft>10</onleft>
-                <onright>10</onright>
+                <onright>18</onright>
                 <include>Dialog_Standard_Right_Grouplist</include>
                 <control type="button" id="11">
                     <description>Browse</description>
