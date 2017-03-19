@@ -120,7 +120,6 @@
     </variable>
 
     <variable name="Label_Title">
-        <value condition="Window.IsVisible(1101) | Window.IsVisible(1102) | Window.IsVisible(1103) | Window.IsVisible(1104) | Window.IsVisible(1105) | Window.IsVisible(1106) | Window.IsVisible(1107) | Window.IsVisible(1108) | Window.IsVisible(1109) | Window.IsVisible(1110) | Window.IsVisible(1111)">$INFO[Container(50).ListItem.Label]</value>
         <value condition="Window.IsVisible(MyWeather.xml)"></value>
         <value condition="Window.IsVisible(script-script.extendedinfo-DialogInfo.xml) + Control.IsVisible(150)">$INFO[Container(150).ListItem.Label]</value>
         <value condition="Window.IsVisible(script-script.extendedinfo-DialogInfo.xml) + Control.IsVisible(250)">$INFO[Container(250).ListItem.Label]</value>
@@ -149,7 +148,6 @@
     </variable>
 
     <variable name="Label_InfoLine">
-        <value condition="Window.IsVisible(1101) | Window.IsVisible(1102) | Window.IsVisible(1103) | Window.IsVisible(1104) | Window.IsVisible(1105) | Window.IsVisible(1106) | Window.IsVisible(1107) | Window.IsVisible(1108) | Window.IsVisible(1109) | Window.IsVisible(1110) | Window.IsVisible(1111)">$INFO[Window(Home).Property(HubWindowLabel)]</value>
         <value condition="Window.IsVisible(MyWeather.xml)"></value>
         <value condition="Window.IsVisible(script-script.extendedinfo-DialogInfo.xml) + String.IsEmpty(Window(Home).Property(FocusedList)) + !Control.IsVisible(150) + !Control.IsVisible(250) + !Control.IsVisible(350) + !Control.IsVisible(550)">$INFO[Window.Property(AlsoKnownAs)]</value>
         <value condition="Window.IsVisible(script-script.extendedinfo-DialogVideoInfo.xml) + String.IsEmpty(Window(Home).Property(FocusedList)) + !Control.IsVisible(1000) + !Control.IsVisible(150) + !Control.IsVisible(350) + !Control.IsVisible(750) + !Control.IsVisible(850) + !Control.IsVisible(950)">$INFO[Window.Property(year)]$INFO[Window.Property(duration),  •  , $LOCALIZE[31102]]$INFO[Window.Property(rating),  •  ,]</value>
