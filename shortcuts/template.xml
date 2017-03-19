@@ -27,6 +27,101 @@
         </controls>
     </submenuOther>
     <submenuOther include="home-submenu-widget" container="302">
+        <condition tag="property" attribute="name|widgetPath">library://video/movies/genres.xml/</condition>
+        <condition tag="property" attribute="name|widgetPath">library://video/tvshows/genres.xml/</condition>
+        <match>any</match>
+        <property name="content" tag="property" attribute="name|widgetPath" />
+        <property name="target" tag="property" attribute="name|widgetTarget" />
+        <controls>
+            <control type="fixedlist" id="301">
+                <visible>[!Control.HasFocus(300) + !String.IsEmpty(Container(302).ListItem.Property(widgetType))]</visible>
+                <skinshortcuts>visibility</skinshortcuts>
+                <autoscroll time="10000">!Control.HasFocus(301)</autoscroll>
+                <include content="View_Square_Layout">
+                    <param name="id" value="301" />
+                    <param name="genres" value="true" />
+                </include>
+                <content target="$SKINSHORTCUTS[target]">$SKINSHORTCUTS[content]</content>
+            </control>
+        </controls>
+    </submenuOther>
+    <submenuOther include="home-submenu-widget" container="302">
+        <condition tag="property" attribute="name|widgetPath">library://video/movies/years.xml/</condition>
+        <condition tag="property" attribute="name|widgetPath">library://video/tvshows/years.xml/</condition>
+        <match>any</match>
+        <property name="content" tag="property" attribute="name|widgetPath" />
+        <property name="target" tag="property" attribute="name|widgetTarget" />
+        <controls>
+            <control type="fixedlist" id="301">
+                <visible>[!Control.HasFocus(300) + !String.IsEmpty(Container(302).ListItem.Property(widgetType))]</visible>
+                <skinshortcuts>visibility</skinshortcuts>
+                <autoscroll time="10000">!Control.HasFocus(301)</autoscroll>
+                <include content="View_Square_Layout">
+                    <param name="id" value="301" />
+                    <param name="years" value="true" />
+                </include>
+                <content target="$SKINSHORTCUTS[target]">$SKINSHORTCUTS[content]</content>
+            </control>
+        </controls>
+    </submenuOther>
+    <submenuOther include="home-submenu-widget" container="302">
+        <condition tag="property" attribute="name|widgetPath">library://video/movies/countries.xml/</condition>
+        <condition tag="property" attribute="name|widgetPath">library://video/tvshows/countries.xml/</condition>
+        <match>any</match>
+        <property name="content" tag="property" attribute="name|widgetPath" />
+        <property name="target" tag="property" attribute="name|widgetTarget" />
+        <controls>
+            <control type="fixedlist" id="301">
+                <visible>[!Control.HasFocus(300) + !String.IsEmpty(Container(302).ListItem.Property(widgetType))]</visible>
+                <skinshortcuts>visibility</skinshortcuts>
+                <autoscroll time="10000">!Control.HasFocus(301)</autoscroll>
+                <include content="View_Square_Layout">
+                    <param name="id" value="301" />
+                    <param name="countries" value="true" />
+                </include>
+                <content target="$SKINSHORTCUTS[target]">$SKINSHORTCUTS[content]</content>
+            </control>
+        </controls>
+    </submenuOther>
+    <submenuOther include="home-submenu-widget" container="302">
+        <condition tag="property" attribute="name|widgetPath">library://video/movies/directors.xml/</condition>
+        <condition tag="property" attribute="name|widgetPath">library://video/tvshows/directors.xml/</condition>
+        <match>any</match>
+        <property name="content" tag="property" attribute="name|widgetPath" />
+        <property name="target" tag="property" attribute="name|widgetTarget" />
+        <controls>
+            <control type="fixedlist" id="301">
+                <visible>[!Control.HasFocus(300) + !String.IsEmpty(Container(302).ListItem.Property(widgetType))]</visible>
+                <skinshortcuts>visibility</skinshortcuts>
+                <autoscroll time="10000">!Control.HasFocus(301)</autoscroll>
+                <include content="View_Square_Layout">
+                    <param name="id" value="301" />
+                    <param name="directors" value="true" />
+                </include>
+                <content target="$SKINSHORTCUTS[target]">$SKINSHORTCUTS[content]</content>
+            </control>
+        </controls>
+    </submenuOther>
+    <submenuOther include="home-submenu-widget" container="302">
+        <condition tag="property" attribute="name|widgetPath">library://video/movies/studios.xml/</condition>
+        <condition tag="property" attribute="name|widgetPath">library://video/tvshows/studios.xml/</condition>
+        <match>any</match>
+        <property name="content" tag="property" attribute="name|widgetPath" />
+        <property name="target" tag="property" attribute="name|widgetTarget" />
+        <controls>
+            <control type="fixedlist" id="301">
+                <visible>[!Control.HasFocus(300) + !String.IsEmpty(Container(302).ListItem.Property(widgetType))]</visible>
+                <skinshortcuts>visibility</skinshortcuts>
+                <autoscroll time="10000">!Control.HasFocus(301)</autoscroll>
+                <include content="View_Square_Layout">
+                    <param name="id" value="301" />
+                    <param name="studios" value="true" />
+                </include>
+                <content target="$SKINSHORTCUTS[target]">$SKINSHORTCUTS[content]</content>
+            </control>
+        </controls>
+    </submenuOther>
+    <submenuOther include="home-submenu-widget" container="302">
         <condition tag="property" attribute="name|widgetType">movies</condition>
         <condition tag="property" attribute="name|widgetType">sets</condition>
         <condition tag="property" attribute="name|widgetType">seasons</condition>
@@ -110,6 +205,96 @@
         </controls>
     </other>
     <other include="home-widget">
+        <condition tag="property" attribute="name|widgetPath">library://video/movies/genres.xml/</condition>
+        <match>any</match>
+        <property name="content" tag="property" attribute="name|widgetPath" />
+        <property name="target" tag="property" attribute="name|widgetTarget" />
+        <controls>
+            <control type="fixedlist" id="301">
+                <visible>Control.HasFocus(300) | String.IsEmpty(Container(302).ListItem.Property(widgetType))</visible>
+                <skinshortcuts>visibility</skinshortcuts>
+                <autoscroll time="10000">!Control.HasFocus(301)</autoscroll>
+                <include content="View_Square_Layout">
+                    <param name="id" value="301" />
+                    <param name="genres" value="true" />
+                </include>
+                <content target="$SKINSHORTCUTS[target]">$SKINSHORTCUTS[content]</content>
+            </control>
+        </controls>
+    </other>
+    <other include="home-widget">
+        <condition tag="property" attribute="name|widgetPath">library://video/movies/years.xml/</condition>
+        <match>any</match>
+        <property name="content" tag="property" attribute="name|widgetPath" />
+        <property name="target" tag="property" attribute="name|widgetTarget" />
+        <controls>
+            <control type="fixedlist" id="301">
+                <visible>Control.HasFocus(300) | String.IsEmpty(Container(302).ListItem.Property(widgetType))</visible>
+                <skinshortcuts>visibility</skinshortcuts>
+                <autoscroll time="10000">!Control.HasFocus(301)</autoscroll>
+                <include content="View_Square_Layout">
+                    <param name="id" value="301" />
+                    <param name="years" value="true" />
+                </include>
+                <content target="$SKINSHORTCUTS[target]">$SKINSHORTCUTS[content]</content>
+            </control>
+        </controls>
+    </other>
+    <other include="home-widget">
+        <condition tag="property" attribute="name|widgetPath">library://video/movies/directors.xml/</condition>
+        <match>any</match>
+        <property name="content" tag="property" attribute="name|widgetPath" />
+        <property name="target" tag="property" attribute="name|widgetTarget" />
+        <controls>
+            <control type="fixedlist" id="301">
+                <visible>Control.HasFocus(300) | String.IsEmpty(Container(302).ListItem.Property(widgetType))</visible>
+                <skinshortcuts>visibility</skinshortcuts>
+                <autoscroll time="10000">!Control.HasFocus(301)</autoscroll>
+                <include content="View_Square_Layout">
+                    <param name="id" value="301" />
+                    <param name="directors" value="true" />
+                </include>
+                <content target="$SKINSHORTCUTS[target]">$SKINSHORTCUTS[content]</content>
+            </control>
+        </controls>
+    </other>
+    <other include="home-widget">
+        <condition tag="property" attribute="name|widgetPath">library://video/movies/countries.xml/</condition>
+        <match>any</match>
+        <property name="content" tag="property" attribute="name|widgetPath" />
+        <property name="target" tag="property" attribute="name|widgetTarget" />
+        <controls>
+            <control type="fixedlist" id="301">
+                <visible>Control.HasFocus(300) | String.IsEmpty(Container(302).ListItem.Property(widgetType))</visible>
+                <skinshortcuts>visibility</skinshortcuts>
+                <autoscroll time="10000">!Control.HasFocus(301)</autoscroll>
+                <include content="View_Square_Layout">
+                    <param name="id" value="301" />
+                    <param name="countries" value="true" />
+                </include>
+                <content target="$SKINSHORTCUTS[target]">$SKINSHORTCUTS[content]</content>
+            </control>
+        </controls>
+    </other>
+    <other include="home-widget">
+        <condition tag="property" attribute="name|widgetPath">library://video/movies/studios.xml/</condition>
+        <match>any</match>
+        <property name="content" tag="property" attribute="name|widgetPath" />
+        <property name="target" tag="property" attribute="name|widgetTarget" />
+        <controls>
+            <control type="fixedlist" id="301">
+                <visible>Control.HasFocus(300) | String.IsEmpty(Container(302).ListItem.Property(widgetType))</visible>
+                <skinshortcuts>visibility</skinshortcuts>
+                <autoscroll time="10000">!Control.HasFocus(301)</autoscroll>
+                <include content="View_Square_Layout">
+                    <param name="id" value="301" />
+                    <param name="studios" value="true" />
+                </include>
+                <content target="$SKINSHORTCUTS[target]">$SKINSHORTCUTS[content]</content>
+            </control>
+        </controls>
+    </other>
+    <other include="home-widget">
         <condition tag="property" attribute="name|widgetType">movies</condition>
         <condition tag="property" attribute="name|widgetType">sets</condition>
         <condition tag="property" attribute="name|widgetType">seasons</condition>
@@ -172,7 +357,7 @@
         <property name="target">$VAR[Defs_Widget_Target]</property>
         <controls>
             <control type="fixedlist" id="301">
-                <visible>String.IsEqual(Skin.String(home.fallbackwidget.type),movies) | String.IsEqual(Skin.String(home.fallbackwidget.type),sets) | String.IsEqual(Skin.String(home.fallbackwidget.type),seasons) | String.IsEmpty(Skin.String(home.fallbakcwidget.type)</visible>
+                <visible>String.IsEqual(Skin.String(home.fallbackwidget.type),movies) | String.IsEqual(Skin.String(home.fallbackwidget.type),sets) | String.IsEqual(Skin.String(home.fallbackwidget.type),seasons) | String.IsEmpty(Skin.String(home.fallbakcwidget.type))</visible>
                 <visible>!String.IsEqual(Skin.String(home.fallbackwidget.name),Favourites)</visible>
                 <visible>Control.HasFocus(300) | String.IsEmpty(Container(302).ListItem.Property(widgetType))</visible>
                 <skinshortcuts>visibility</skinshortcuts>

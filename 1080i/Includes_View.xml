@@ -575,6 +575,11 @@
 
     <include name="View_Square_Layout">
         <param name="id" default="53" />
+        <param name="genres" default="false" />
+        <param name="years" default="false" />
+        <param name="studios" default="false" />
+        <param name="directors" default="false" />
+        <param name="countries" default="false" />
         <definition>
             <animation effect="slide" end="-207.66" condition="Integer.IsLess(Container($PARAM[id]).NumItems,5) + !Container.HasParent">Conditional</animation>
             <animation effect="slide" end="-207.66" condition="Integer.IsLess(Container($PARAM[id]).NumItems,3) + !Container.HasParent">Conditional</animation>
@@ -606,7 +611,7 @@
 
                 <!-- Parent Folder -->
                 <control type="group">
-                    <visible>ListItem.IsParentFolder | String.StartsWith(ListItem.Icon,Default)</visible>
+                    <visible>ListItem.IsParentFolder | String.StartsWith(ListItem.Icon,Default) | $PARAM[genres] | $PARAM[years] | $PARAM[countries] | $PARAM[directors] | $PARAM[studios]</visible>
                     <control type="image">
                         <bordersize>10</bordersize>
                         <top>0</top>
@@ -614,7 +619,7 @@
                         <aspectratio scalediffuse="false">scale</aspectratio>
                         <aspectratio aligny="center">scale</aspectratio>
                         <texture colordiffuse="main_fg_100" background="true">$INFO[ListItem.Icon]</texture>
-                        <visible>[!Container.Content(genres) + !Container.Content(years) + !Container.Content(studios) + !Container.Content(directors) + !Container.Content(countries)] | ListItem.IsParentFolder</visible>
+                        <visible>[!Container.Content(genres) + !Container.Content(years) + !Container.Content(studios) + !Container.Content(directors) + !Container.Content(countries) + !$PARAM[genres] + !$PARAM[years] + !$PARAM[countries] + !$PARAM[directors] + !$PARAM[studios]] | ListItem.IsParentFolder</visible>
                     </control>
                     <control type="image">
                         <bordersize>50</bordersize>
@@ -623,7 +628,7 @@
                         <aspectratio scalediffuse="false">scale</aspectratio>
                         <aspectratio aligny="center">scale</aspectratio>
                         <texture colordiffuse="main_fg_100" background="true" fallback="DefaultFolder.png">$INFO[ListItem.Label,resource://resource.images.moviegenreicons.transparent/,.png]</texture>
-                        <visible>Container.Content(genres) + !ListItem.IsParentFolder</visible>
+                        <visible>[Container.Content(genres) | $PARAM[genres]] + !ListItem.IsParentFolder</visible>
                     </control>
                     <control type="image">
                         <bordersize>20</bordersize>
@@ -632,7 +637,7 @@
                         <aspectratio scalediffuse="false">keep</aspectratio>
                         <aspectratio aligny="center">scale</aspectratio>
                         <texture colordiffuse="main_fg_100" background="true" fallback="DefaultFolder.png">$INFO[ListItem.Label,resource://resource.images.studios.white/,.png]</texture>
-                        <visible>Container.Content(studios) + !ListItem.IsParentFolder</visible>
+                        <visible>[Container.Content(studios) | $PARAM[studios]] + !ListItem.IsParentFolder</visible>
                     </control>
                     <control type="textbox">
                         <left>20</left>
@@ -644,7 +649,7 @@
                         <label>$INFO[ListItem.Label]</label>
                         <font>Large</font>
                         <textcolor>main_fg_70</textcolor>
-                        <visible>[Container.Content(years)] + !ListItem.IsParentFolder</visible>
+                        <visible>[Container.Content(years) | $PARAM[years]] + !ListItem.IsParentFolder</visible>
                     </control>
                     <control type="textbox">
                         <left>10</left>
@@ -656,7 +661,7 @@
                         <label>$INFO[ListItem.Label]</label>
                         <font>Medium</font>
                         <textcolor>main_fg_70</textcolor>
-                        <visible>[Container.Content(directors) | Container.Content(countries)] + !ListItem.IsParentFolder</visible>
+                        <visible>[Container.Content(directors) | Container.Content(countries) | $PARAM[directors] | $PARAM[countries]] + !ListItem.IsParentFolder</visible>
                     </control>
                 </control>
                 
@@ -670,6 +675,7 @@
                     <texture fallback="DefaultAddonNone.png" background="true">$VAR[Image_Poster]</texture>
                     <visible>!ListItem.IsParentFolder</visible>
                     <visible>!String.StartsWith(ListItem.Icon,Default)</visible>
+                    <visible>!$PARAM[genres] + !$PARAM[years] + !$PARAM[studios] + !$PARAM[countries] + !$PARAM[directors]</visible>
                 </control>
                 <control type="image">
                     <left>10</left>
@@ -710,7 +716,7 @@
 
                 <!-- Parent Folder -->
                 <control type="group">
-                    <visible>ListItem.IsParentFolder | String.StartsWith(ListItem.Icon,Default)</visible>
+                    <visible>ListItem.IsParentFolder | String.StartsWith(ListItem.Icon,Default) | $PARAM[genres] | $PARAM[years] | $PARAM[countries] | $PARAM[directors] | $PARAM[studios]</visible>
                     <control type="image">
                         <bordersize>10</bordersize>
                         <top>0</top>
@@ -718,7 +724,7 @@
                         <aspectratio scalediffuse="false">scale</aspectratio>
                         <aspectratio aligny="center">scale</aspectratio>
                         <texture colordiffuse="main_fg_100" background="true">$INFO[ListItem.Icon]</texture>
-                        <visible>[!Container.Content(genres) + !Container.Content(years) + !Container.Content(studios) + !Container.Content(directors) + !Container.Content(countries)] | ListItem.IsParentFolder</visible>
+                        <visible>[!Container.Content(genres) + !Container.Content(years) + !Container.Content(studios) + !Container.Content(directors) + !Container.Content(countries) + !$PARAM[genres] + !$PARAM[years] + !$PARAM[countries] + !$PARAM[directors] + !$PARAM[studios]] | ListItem.IsParentFolder</visible>
                     </control>
                     <control type="image">
                         <bordersize>50</bordersize>
@@ -727,7 +733,7 @@
                         <aspectratio scalediffuse="false">keep</aspectratio>
                         <aspectratio aligny="center">scale</aspectratio>
                         <texture colordiffuse="main_fg_100" background="true" fallback="DefaultFolder.png">$INFO[ListItem.Label,resource://resource.images.moviegenreicons.transparent/,.png]</texture>
-                        <visible>Container.Content(genres) + !ListItem.IsParentFolder</visible>
+                        <visible>[Container.Content(genres) | $PARAM[genres]] + !ListItem.IsParentFolder</visible>
                     </control>
                     <control type="image">
                         <bordersize>20</bordersize>
@@ -736,7 +742,7 @@
                         <aspectratio scalediffuse="false">keep</aspectratio>
                         <aspectratio aligny="center">scale</aspectratio>
                         <texture colordiffuse="main_fg_100" background="true" fallback="DefaultFolder.png">$INFO[ListItem.Label,resource://resource.images.studios.white/,.png]</texture>
-                        <visible>Container.Content(studios) + !ListItem.IsParentFolder</visible>
+                        <visible>[Container.Content(studios) | $PARAM[studios]] + !ListItem.IsParentFolder</visible>
                     </control>
                     <control type="textbox">
                         <left>20</left>
@@ -748,7 +754,7 @@
                         <label>$INFO[ListItem.Label]</label>
                         <font>Large</font>
                         <textcolor>Selected</textcolor>
-                        <visible>[Container.Content(years)] + !ListItem.IsParentFolder</visible>
+                        <visible>[Container.Content(years) | $PARAM[years]] + !ListItem.IsParentFolder</visible>
                     </control>
                     <control type="textbox">
                         <left>10</left>
@@ -760,7 +766,7 @@
                         <label>$INFO[ListItem.Label]</label>
                         <font>Medium</font>
                         <textcolor>Selected</textcolor>
-                        <visible>[Container.Content(directors) | Container.Content(countries)] + !ListItem.IsParentFolder</visible>
+                        <visible>[Container.Content(directors) | Container.Content(countries) | $PARAM[directors] | $PARAM[countries]] + !ListItem.IsParentFolder</visible>
                     </control>
                 </control>
                 
@@ -774,6 +780,7 @@
                     <texture fallback="DefaultAddonNone.png" background="true">$VAR[Image_Poster]</texture>
                     <visible>!ListItem.IsParentFolder</visible>
                     <visible>!String.StartsWith(ListItem.Icon,Default)</visible>
+                    <visible>!$PARAM[genres] + !$PARAM[years] + !$PARAM[studios] + !$PARAM[countries] + !$PARAM[directors]</visible>
                 </control>
                 <control type="image">
                     <left>10</left>
