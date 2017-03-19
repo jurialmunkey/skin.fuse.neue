@@ -68,18 +68,9 @@
         </control>
     </include>
 
-    <include name="View_EventLog">
-        <control type="list" id="50">
-            <orientation>vertical</orientation>
-            <include content="View_Tiles_Layout">
-                <param name="id" value="50" />
-            </include>
-        </control>
-    </include>
-
     <include name="View_AddonsPage">
-        <control type="panel" id="50">
-            <include content="View_Tiles_Layout">
+        <control type="fixedlist" id="50">
+            <include content="View_Square_Layout">
                 <param name="id" value="50" />
             </include>
             <content>
@@ -113,81 +104,81 @@
     </include>
 
     <include name="View_Hub_1101">
-        <control type="panel" id="50">
+        <control type="fixedlist" id="50">
             <include>View_Hub_Onclick</include>
-            <include content="View_Tiles_Layout">
+            <include content="View_Square_Layout">
                 <param name="id" value="50" />
             </include>
             <content><include>skinshortcuts-group-x1101</include></content>
         </control>
     </include>
     <include name="View_Hub_1102">
-        <control type="panel" id="50">
+        <control type="fixedlist" id="50">
             <include>View_Hub_Onclick</include>
-            <include content="View_Tiles_Layout">
+            <include content="View_Square_Layout">
                 <param name="id" value="50" />
             </include>
             <content><include>skinshortcuts-group-x1102</include></content>
         </control>
     </include>
     <include name="View_Hub_1103">
-        <control type="panel" id="50">
+        <control type="fixedlist" id="50">
             <include>View_Hub_Onclick</include>
-            <include content="View_Tiles_Layout">
+            <include content="View_Square_Layout">
                 <param name="id" value="50" />
             </include>
             <content><include>skinshortcuts-group-x1103</include></content>
         </control>
     </include>
     <include name="View_Hub_1104">
-        <control type="panel" id="50">
+        <control type="fixedlist" id="50">
             <include>View_Hub_Onclick</include>
-            <include content="View_Tiles_Layout">
+            <include content="View_Square_Layout">
                 <param name="id" value="50" />
             </include>
             <content><include>skinshortcuts-group-x1104</include></content>
         </control>
     </include>
     <include name="View_Hub_1105">
-        <control type="panel" id="50">
+        <control type="fixedlist" id="50">
             <include>View_Hub_Onclick</include>
-            <include content="View_Tiles_Layout">
+            <include content="View_Square_Layout">
                 <param name="id" value="50" />
             </include>
             <content><include>skinshortcuts-group-x1105</include></content>
         </control>
     </include>
     <include name="View_Hub_1106">
-        <control type="panel" id="50">
+        <control type="fixedlist" id="50">
             <include>View_Hub_Onclick</include>
-            <include content="View_Tiles_Layout">
+            <include content="View_Square_Layout">
                 <param name="id" value="50" />
             </include>
             <content><include>skinshortcuts-group-x1106</include></content>
         </control>
     </include>
     <include name="View_Hub_1107">
-        <control type="panel" id="50">
+        <control type="fixedlist" id="50">
             <include>View_Hub_Onclick</include>
-            <include content="View_Tiles_Layout">
+            <include content="View_Square_Layout">
                 <param name="id" value="50" />
             </include>
             <content><include>skinshortcuts-group-x1107</include></content>
         </control>
     </include>
     <include name="View_Hub_1108">
-        <control type="panel" id="50">
+        <control type="fixedlist" id="50">
             <include>View_Hub_Onclick</include>
-            <include content="View_Tiles_Layout">
+            <include content="View_Square_Layout">
                 <param name="id" value="50" />
             </include>
             <content><include>skinshortcuts-group-x1108</include></content>
         </control>
     </include>
     <include name="View_Hub_1109">
-        <control type="panel" id="50">
+        <control type="fixedlist" id="50">
             <include>View_Hub_Onclick</include>
-            <include content="View_Tiles_Layout">
+            <include content="View_Square_Layout">
                 <param name="id" value="50" />
             </include>
             <content><include>skinshortcuts-group-x1109</include></content>
@@ -202,7 +193,7 @@
     <include name="View_Library">
         <include>View_Posters</include>
         <include>View_Landscape</include>
-        <include>View_Tiles</include>
+        <!-- <include>View_Tiles</include> -->
         <include>View_Square</include>
         <include>View_List</include>
     </include>
@@ -511,10 +502,10 @@
     </include>
 
     <include name="View_Tiles">
-        <control type="panel" id="52">
+        <!-- <control type="panel" id="52">
             <visible>Container.Content() | Container.Content(playlists) | Container.Content(tags)</visible>
             <include>View_Tiles_Layout</include>
-        </control>
+        </control> -->
     </include>
 
     <include name="View_Tiles_Layout">
@@ -568,7 +559,7 @@
 
     <include name="View_Square">
         <control type="fixedlist" id="53">
-            <visible>![Container.Content(episodes) | Container.Content(movies) | Container.Content(sets) | Container.Content(seasons) | Container.Content(tvshows) | Container.Content(songs) | Container.Content(files) | Container.Content() | Container.Content(playlists) | Container.Content(tags) | [Container.Content(musicvideos) + Window.IsVisible(MyVideoNav.xml) + Skin.HasSetting(MusicVideoConcerts)]]</visible>
+            <visible>![Container.Content(episodes) | Container.Content(movies) | Container.Content(sets) | Container.Content(seasons) | Container.Content(tvshows) | Container.Content(songs) | Container.Content(files) | Container.Content(playlists) | Container.Content(tags) | [Container.Content(musicvideos) + Window.IsVisible(MyVideoNav.xml) + Skin.HasSetting(MusicVideoConcerts)]]</visible>
             <include>View_Square_Layout</include>
         </control>
     </include>
@@ -978,7 +969,7 @@
 
     <include name="View_List">
         <control type="fixedlist" id="54">
-            <visible>Container.Content(songs) | Container.Content(files) | Window.IsVisible(MyPlaylist.xml) | Container.Content(directors) | Container.Content(countries) | Container.Content(years)</visible>
+            <visible>Container.Content(songs) | Container.Content(files) | Window.IsVisible(MyPlaylist.xml) | Container.Content(directors) | Container.Content(countries) | Container.Content(years) | Container.Content(playlists) | Container.Content(tags)</visible>
             <include>View_List_Layout</include>
         </control>
     </include>

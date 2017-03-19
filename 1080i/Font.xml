@@ -100,7 +100,8 @@
         <font>
             <name>font_albumlistlabel</name>
             <filename>RobotoCondensed-Regular.ttf</filename>
-            <size>20</size>
+            <size>26</size>
+            <aspect>0.8</aspect>
         </font>
         <font>
             <name>font_musicvis_title</name>

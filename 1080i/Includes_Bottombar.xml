@@ -60,7 +60,6 @@
             <left>534</left>
             <include condition="Window.IsVisible(Home) + !Window.IsVisible(script-script.extendedinfo-VideoList.xml)">View_Home_Widget</include>
             <include condition="Window.IsVisible(script-script.extendedinfo-VideoList.xml)">View_ExtendedInfo</include>
-            <include condition="Window.IsVisible(EventLog.xml)">View_EventLog</include>
             <include condition="Window.IsVisible(1101)">View_Hub_1101</include>
             <include condition="Window.IsVisible(1102)">View_Hub_1102</include>
             <include condition="Window.IsVisible(1103)">View_Hub_1103</include>

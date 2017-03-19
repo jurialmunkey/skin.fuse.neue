@@ -1,3 +1,8 @@
+[B]0.9.21[/B]
+Replace all tiles views with square view
+Increase font size on square view (reduced aspect)
+Fix poster not showing for certain content
+
 [B]0.9.20[/B]
 A bunch of stuff
 Keep focus on widget if entering library and returning home and nothing playing
