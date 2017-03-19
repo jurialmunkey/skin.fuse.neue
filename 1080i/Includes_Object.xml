@@ -377,6 +377,7 @@
                     <font>Tiny</font>
                     <label>$INFO[Window(Home).Property(SkinHelper.ListItem.IMDB.Top250), #,]</label>
                     <visible>!String.IsEmpty(Window(home).Property(SkinHelper.ListItem.IMDB.Top250))</visible>
+                    <visible>Integer.IsGreater(Window(home).Property(SkinHelper.ListItem.IMDB.Top250),0)</visible>
                 </control>
             </control>
         </definition>
