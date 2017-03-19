@@ -343,6 +343,7 @@
             <onclick condition="[VideoPlayer.Content(movies)] + !Player.Paused">Pause</onclick>
             <onclick condition="VideoPlayer.Content(movies)">RunScript(script.extendedinfo,info=extendedinfo,name=$INFO[VideoPlayer.Title],imdb_id=$INFO[VideoPlayer.IMDBNumber])</onclick>
             <include>OSD_TextButton</include>
+            <enable>VideoPlayer.Content(movies)</enable>
         </control>
         <control type="button" id="5">
             <description>3d Mode</description>
