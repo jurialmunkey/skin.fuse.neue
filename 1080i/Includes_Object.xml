@@ -387,7 +387,40 @@
         <control type="group">
             <visible>[Window.IsVisible(Home) + ![String.IsEqual(Container(300).ListItem.Property(widget),weather) + [Control.HasFocus(300) | String.IsEmpty(Container(302).ListItem.Property(widget))] | [String.IsEqual(Container(302).ListItem.Property(widget),weather) + !Control.HasFocus(300)]]] | !Window.IsVisible(Home)</visible>
             <visible>!$EXP[Expression_ShowWeatherWidget] | !Window.IsVisible(Home)</visible>
-            <control type="panel" id="8000">
+            <control type="button" id="8000">
+                <left>-100</left>
+                <width>10</width>
+                <height>1</height>
+                <visible>Control.IsVisible(8001)</visible>
+                <onfocus condition="!String.IsEqual(ListItem.SortLetter,A) + !String.IsEqual(ListItem.SortLetter,B) + !String.IsEqual(ListItem.SortLetter,C) + !String.IsEqual(ListItem.SortLetter,D) + !String.IsEqual(ListItem.SortLetter,E) + !String.IsEqual(ListItem.SortLetter,F) + !String.IsEqual(ListItem.SortLetter,G) + !String.IsEqual(ListItem.SortLetter,H) + !String.IsEqual(ListItem.SortLetter,I) + !String.IsEqual(ListItem.SortLetter,J) + !String.IsEqual(ListItem.SortLetter,K) + !String.IsEqual(ListItem.SortLetter,L) + !String.IsEqual(ListItem.SortLetter,M) + !String.IsEqual(ListItem.SortLetter,N) + !String.IsEqual(ListItem.SortLetter,O) + !String.IsEqual(ListItem.SortLetter,P) + !String.IsEqual(ListItem.SortLetter,Q) + !String.IsEqual(ListItem.SortLetter,R) + !String.IsEqual(ListItem.SortLetter,S) + !String.IsEqual(ListItem.SortLetter,T) + !String.IsEqual(ListItem.SortLetter,U) + !String.IsEqual(ListItem.SortLetter,V) + !String.IsEqual(ListItem.SortLetter,W) + !String.IsEqual(ListItem.SortLetter,X) + !String.IsEqual(ListItem.SortLetter,Y) + !String.IsEqual(ListItem.SortLetter,Z)">SetFocus(8001,0)</onfocus>
+                <onfocus condition="String.IsEqual(ListItem.SortLetter,A)">SetFocus(8001,1)</onfocus>
+                <onfocus condition="String.IsEqual(ListItem.SortLetter,B)">SetFocus(8001,2)</onfocus>
+                <onfocus condition="String.IsEqual(ListItem.SortLetter,C)">SetFocus(8001,3)</onfocus>
+                <onfocus condition="String.IsEqual(ListItem.SortLetter,D)">SetFocus(8001,4)</onfocus>
+                <onfocus condition="String.IsEqual(ListItem.SortLetter,E)">SetFocus(8001,5)</onfocus>
+                <onfocus condition="String.IsEqual(ListItem.SortLetter,F)">SetFocus(8001,6)</onfocus>
+                <onfocus condition="String.IsEqual(ListItem.SortLetter,G)">SetFocus(8001,7)</onfocus>
+                <onfocus condition="String.IsEqual(ListItem.SortLetter,H)">SetFocus(8001,8)</onfocus>
+                <onfocus condition="String.IsEqual(ListItem.SortLetter,I)">SetFocus(8001,9)</onfocus>
+                <onfocus condition="String.IsEqual(ListItem.SortLetter,J)">SetFocus(8001,10)</onfocus>
+                <onfocus condition="String.IsEqual(ListItem.SortLetter,K)">SetFocus(8001,11)</onfocus>
+                <onfocus condition="String.IsEqual(ListItem.SortLetter,L)">SetFocus(8001,12)</onfocus>
+                <onfocus condition="String.IsEqual(ListItem.SortLetter,M)">SetFocus(8001,13)</onfocus>
+                <onfocus condition="String.IsEqual(ListItem.SortLetter,N)">SetFocus(8001,14)</onfocus>
+                <onfocus condition="String.IsEqual(ListItem.SortLetter,O)">SetFocus(8001,15)</onfocus>
+                <onfocus condition="String.IsEqual(ListItem.SortLetter,P)">SetFocus(8001,16)</onfocus>
+                <onfocus condition="String.IsEqual(ListItem.SortLetter,Q)">SetFocus(8001,17)</onfocus>
+                <onfocus condition="String.IsEqual(ListItem.SortLetter,R)">SetFocus(8001,18)</onfocus>
+                <onfocus condition="String.IsEqual(ListItem.SortLetter,S)">SetFocus(8001,19)</onfocus>
+                <onfocus condition="String.IsEqual(ListItem.SortLetter,T)">SetFocus(8001,20)</onfocus>
+                <onfocus condition="String.IsEqual(ListItem.SortLetter,U)">SetFocus(8001,21)</onfocus>
+                <onfocus condition="String.IsEqual(ListItem.SortLetter,V)">SetFocus(8001,22)</onfocus>
+                <onfocus condition="String.IsEqual(ListItem.SortLetter,W)">SetFocus(8001,23)</onfocus>
+                <onfocus condition="String.IsEqual(ListItem.SortLetter,X)">SetFocus(8001,24)</onfocus>
+                <onfocus condition="String.IsEqual(ListItem.SortLetter,Y)">SetFocus(8001,25)</onfocus>
+                <onfocus condition="String.IsEqual(ListItem.SortLetter,Z)">SetFocus(8001,26)</onfocus>
+            </control>
+            <control type="panel" id="8001">
                 <orientation>horizontal</orientation>
                 <left>606</left>
                 <height>48</height>
