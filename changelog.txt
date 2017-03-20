@@ -1,3 +1,8 @@
+[B]0.9.21[/B]
+Add options button to next aired
+Fix some home focus stuff
+Make transition with show home widgets on topbar focus smoother
+
 [B]0.9.20[/B]
 A bunch of stuff
 Keep focus on widget if entering library and returning home and nothing playing

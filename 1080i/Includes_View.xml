@@ -1150,8 +1150,8 @@
     </include>
 
     <include name="View_Movement_Vertical">
-        <onup condition="String.IsEqual(Container(302).NumItems,0)">300</onup>
-        <onup condition="!String.IsEqual(Container(302).NumItems,0)">302</onup>
+        <onup condition="$EXP[Expression_ReplaceWindowHome]">ReplaceWindow(Home)</onup>
+        <onup condition="!$EXP[Expression_ReplaceWindowHome]">300</onup>
         <ondown condition="Control.IsVisible(8000)">8000</ondown>
         <ondown condition="Control.IsVisible(60)">61</ondown>
         <ondown condition="!Control.IsVisible(60) + !Control.IsVisible(8000) + Control.IsVisible(9400)">9400</ondown>
@@ -1173,7 +1173,6 @@
     </include>
 
     <include name="View_Movement_OnFocus">
-        <onfocus condition="Window.IsVisible(home)">SetProperty(HomeFocus,1,Home)</onfocus>
         <onfocus>SetProperty(ShowInfobar,1,Home)</onfocus>
         <onfocus>SetProperty(ShowTopbar,0,Home)</onfocus>
     </include>

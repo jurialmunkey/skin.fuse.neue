@@ -549,6 +549,8 @@
             <top>18</top>
             <bottom>80</bottom>
             <orientation>vertical</orientation>
+            <onright condition="$EXP[Expression_ReplaceWindowHome]">ReplaceWindow(Home)</onright>
+            <onright condition="!$EXP[Expression_ReplaceWindowHome]">300</onright>
             <onleft condition="Window.IsVisible(home)">301</onleft>
             <onleft condition="!Window.IsVisible(home) + !Window.IsVisible(script-script.extendedinfo-VideoList.xml)">50</onleft>
             <onleft condition="Window.IsVisible(script-script.extendedinfo-VideoList.xml)">500</onleft>

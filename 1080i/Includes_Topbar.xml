@@ -20,7 +20,6 @@
     </include>
 
     <include name="Topbar_OnClick">
-        <onclick>ClearProperty(HomeFocus,Home)</onclick>
         <!-- Set ReturnWindow -->
         <onclick condition="String.IsEqual(ListItem.Property(path),ActivateWindow(1101))">SetProperty(ReturnWindow,ReplaceWindow(1101),Home)</onclick>
         <onclick condition="String.IsEqual(ListItem.Property(path),ActivateWindow(1102))">SetProperty(ReturnWindow,ReplaceWindow(1102),Home)</onclick>
