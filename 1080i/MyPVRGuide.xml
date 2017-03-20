@@ -4,6 +4,8 @@
     <background>0</background>
     <defaultcontrol always="true">10</defaultcontrol>
     <views>10</views>
+    <onload>SetProperty(ShowInfobar,1,Home)</onload>
+    <onload>SetProperty(ShowTopbar,0,Home)</onload>
     <include>Defs_SetStartWindow</include>
     <controls>
         <include>Global_Background</include>
