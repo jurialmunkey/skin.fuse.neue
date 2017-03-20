@@ -36,6 +36,10 @@
             <include>Defs_Options_Menu</include>
             <control type="grouplist" id="6000">
                 <include>Defs_Options_Grouplist</include>
+                <!-- <control type="button" id="2">
+                    <description>Viewmode</description>
+                    <include>Defs_Context_Button</include>
+                </control> -->
                 <control type="button" id="6003">
                     <description>Sort By</description>
                     <label>$INFO[Control.GetLabel(3)]</label>

@@ -46,42 +46,12 @@
                         <aspectratio aligny="center">scale</aspectratio>
                         <texture fallback="DefaultAddonImages.png">$PARAM[variable]</texture>
                         <visible>[!$PARAM[container]ListItem.IsParentFolder + !String.StartsWith($PARAM[container]ListItem.Icon,Default) + [!String.IsEmpty($PARAM[container]ListItem.Art(tvshow.poster)) | !String.IsEmpty($PARAM[container]ListItem.Art(poster)) | Container.Content(albums) | Container.Content(songs) | Container.Content(actors) | Container.Content(addons) | Container.Content(artists) | Window.IsVisible(1101) | Window.IsVisible(1102) | Window.IsVisible(1103) | Window.IsVisible(1104) | Window.IsVisible(1105) | Window.IsVisible(1106) | Window.IsVisible(1107) | Window.IsVisible(1108) | Window.IsVisible(1109) | [Window.IsVisible(MyPVRChannels.xml) | Window.IsVisible(MyPVRTimers.xml) | Window.IsVisible(MyPVRRecordings.xml)]]]</visible>
-                        <visible>!Window.IsVisible(home)</visible>
                     </control>
                     
                     <control type="group">
                         <visible>[[!$PARAM[container]ListItem.IsParentFolder + !String.StartsWith($PARAM[container]ListItem.Icon,Default)] + ![!String.IsEmpty($PARAM[container]ListItem.Art(tvshow.poster)) | !String.IsEmpty($PARAM[container]ListItem.Art(poster)) | Container.Content(albums) | Container.Content(songs) | Container.Content(actors) | Container.Content(addons) | Container.Content(artists) | Window.IsVisible(1101) | Window.IsVisible(1102) | Window.IsVisible(1103) | Window.IsVisible(1104) | Window.IsVisible(1105) | Window.IsVisible(1106) | Window.IsVisible(1107) | Window.IsVisible(1108) | Window.IsVisible(1109) | [Window.IsVisible(MyPVRChannels.xml) | Window.IsVisible(MyPVRTimers.xml) | Window.IsVisible(MyPVRRecordings.xml)]]]</visible>
-                        <visible>!Window.IsVisible(home)</visible>
                         <control type="image">
                             <include>Defs_Shadow_Opaque</include>
-                            <texture colordiffuse="PosterBack">common/white.png</texture>
-                        </control>
-                        <control type="image">
-                            <fadetime>0</fadetime>
-                            <aspectratio aligny="center">keep</aspectratio>
-                            <texture fallback="DefaultAddonImages.png">$PARAM[variable]</texture>
-                        </control>
-                    </control>
-
-                    <control type="group">
-                        <visible>!$PARAM[container]ListItem.IsParentFolder + !String.StartsWith($PARAM[container]ListItem.Icon,Default)</visible>
-                        <visible>Window.IsVisible(home)</visible>
-                        <visible>!String.IsEmpty(Container(301).ListItem.Art(tvshow.poster)) | !String.IsEmpty(Container(301).ListItem.Art(poster)) | Window.IsVisible(DialogVideoInfo.xml)</visible>
-                        <control type="image">
-                            <fadetime>0</fadetime>
-                            <include>Defs_Shadow_Opaque</include>
-                            <aspectratio aligny="bottom">scale</aspectratio>
-                            <texture fallback="DefaultAddonImages.png">$PARAM[variable]</texture>
-                        </control>
-                    </control>
-                    <control type="group">
-                        <visible>!$PARAM[container]ListItem.IsParentFolder + !String.StartsWith($PARAM[container]ListItem.Icon,Default)</visible>
-                        <visible>Window.IsVisible(home) + !Window.IsVisible(DialogVideoInfo.xml)</visible>
-                        <visible>String.IsEmpty(Container(301).ListItem.Art(tvshow.poster)) + String.IsEmpty(Container(301).ListItem.Art(poster))</visible>
-                        <control type="image">
-                            <fadetime>0</fadetime>
-                            <include>Defs_Shadow_Opaque</include>
-                            <aspectratio>scale</aspectratio>
                             <texture colordiffuse="PosterBack">common/white.png</texture>
                         </control>
                         <control type="image">
@@ -111,7 +81,7 @@
                             <fadetime>0</fadetime>
                             <bordersize>80</bordersize>
                             <aspectratio aligny="center">keep</aspectratio>
-                            <texture colordiffuse="main_fg_100" background="true" fallback="DefaultFolder.png">$INFO[ListItem.Label,resource://resource.images.moviegenreicons.transparent/,.png]</texture>
+                            <texture colordiffuse="main_fg_100" background="true" fallback="DefaultFolder.png">$INFO[$PARAM[container]ListItem.Label,resource://resource.images.moviegenreicons.transparent/,.png]</texture>
                             <visible>Container.Content(genres) + !ListItem.IsParentFolder</visible>
                         </control>
                         <control type="image">
@@ -125,7 +95,7 @@
                             <fadetime>0</fadetime>
                             <bordersize>80</bordersize>
                             <aspectratio aligny="center">keep</aspectratio>
-                            <texture colordiffuse="main_fg_100" background="true" fallback="DefaultFolder.png">$INFO[ListItem.Label,resource://resource.images.studios.white/,.png]</texture>
+                            <texture colordiffuse="main_fg_100" background="true" fallback="DefaultFolder.png">$INFO[$PARAM[container]ListItem.Label,resource://resource.images.studios.white/,.png]</texture>
                             <visible>Container.Content(studios) + !ListItem.IsParentFolder</visible>
                         </control>
                     </control>
@@ -198,7 +168,7 @@
                     <texture colordiffuse="panel_fg_100">flags/other/dvd.png</texture>
                     <visible>String.StartsWith($PARAM[container]ListItem.FilenameAndPath,dvd) + !String.StartsWith($PARAM[container]ListItem.FilenameAndPath,hddvd)</visible>
                 </control>
-                <control type="image">
+                <!-- <control type="image">
                     <width>64</width>
                     <centertop>50%</centertop>
                     <height>64</height>
@@ -211,7 +181,7 @@
                     <height>64</height>
                     <texture colordiffuse="panel_fg_100">flags/other/web-dl.png</texture>
                     <visible>String.Contains($PARAM[container]ListItem.FilenameAndPath,web-dl) | String.Contains($PARAM[container]ListItem.FilenameAndPath,webdl) | String.Contains($PARAM[container]ListItem.FilenameAndPath,web-rip) | String.Contains($PARAM[container]ListItem.FilenameAndPath,webrip) | String.Contains($PARAM[container]ListItem.FilenameAndPath,web dl) | String.Contains($PARAM[container]ListItem.FilenameAndPath,web rip)</visible>
-                </control>
+                </control> -->
                 <control type="image">
                     <width>88</width>
                     <height>48</height>
