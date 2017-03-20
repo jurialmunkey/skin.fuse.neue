@@ -9,9 +9,7 @@
     <onload condition="!Skin.HasSetting(SkinHelper.EnablePVRThumbs)">Skin.SetBool(SkinHelper.EnablePVRThumbs)</onload>
     <onload condition="!Skin.HasSetting(SkinHelper.EnableMusicArt)">Skin.SetBool(SkinHelper.EnableMusicArt)</onload>
 
-    <onload condition="String.IsEmpty(Window(Home).Property(HomeFocus)) | Skin.HasSetting(ReturnHomeOnFocus) | Window.Previous(VideoFullScreen.xml) | Window.Previous(MusicVisualisation.xml) | Player.HasMedia">AlarmClock(Set300,SetFocus(300),00:00,silent)</onload>
-    <!-- <onload condition="!String.IsEmpty(Window(Home).Property(HomeFocus)) + !Skin.HasSetting(ReturnHomeOnFocus) + !Window.Previous(VideoFullScreen.xml) + !Window.Previous(MusicVisualisation.xml)">AlarmClock(Set300,SetFocus(301),00:00,silent)</onload> -->
-    <!-- <onload>AlarmClock(Set300,SetFocus(300),00:00,silent)</onload> -->
+    <onload condition="String.IsEmpty(Window(Home).Property(HomeFocus)) | Skin.HasSetting(ReturnHomeOnFocus) | Window.Previous(VideoFullScreen.xml) | Window.Previous(MusicVisualisation.xml)">AlarmClock(Set300,SetFocus(300),00:00,silent)</onload>
     <onload>ClearProperty(HomeFocus,Home)</onload>
     <include>Defs_SetStartWindow</include>
     <controls>
