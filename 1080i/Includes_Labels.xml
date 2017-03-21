@@ -45,6 +45,7 @@
     </variable>
 
     <variable name="Label_Widget_Title">
+        
         <value condition="Window.IsVisible(MyWeather.xml)"></value>
         <value condition="Window.IsVisible(script-script.extendedinfo-VideoList.xml)">$INFO[Container(500).ListItem.Label]</value>
         <value condition="Window.IsVisible(script-script.extendedinfo-DialogInfo.xml) + Control.IsVisible(150)">$INFO[Container(150).ListItem.Label]</value>
