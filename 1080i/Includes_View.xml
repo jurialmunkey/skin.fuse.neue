@@ -702,7 +702,7 @@
                     <aligny>center</aligny>
                     <font>font_albumlistlabel</font>
                     <textcolor>main_fg_70</textcolor>
-                    <label>$INFO[ListItem.Label]</label>
+                    <label>$VAR[Label_SquareTitle]</label>
                 </control>
                 <include>View_WatchedOverlay</include>
             </itemlayout>
@@ -807,7 +807,7 @@
                     <aligny>center</aligny>
                     <font>font_albumlistlabel</font>
                     <textcolor>main_fg_70</textcolor>
-                    <label>$INFO[ListItem.Label]</label>
+                    <label>$VAR[Label_SquareTitle]</label>
                 </control>
 
                 <include>View_WatchedOverlay</include>

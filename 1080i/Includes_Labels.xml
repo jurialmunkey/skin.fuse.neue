@@ -120,6 +120,11 @@
         <value condition="[Control.HasFocus(9502) | String.IsEqual(Window(Home).Property(FocusedList),9502)] + !Container(9502).IsUpdating">$INFO[Window(Home).Property(VideoInfo_InfoLine)]$INFO[Container(9502).ListItem.Year,  •  ,]</value>
     </variable>
 
+    <variable name="Label_SquareTitle">
+        <value condition="!String.IsEmpty(ListItem.Title)">$INFO[ListItem.Title]</value>
+        <value>$INFO[ListItem.Label]</value>
+    </variable>
+
     <variable name="Label_Title">
         <value condition="Window.IsVisible(MyWeather.xml)"></value>
         <value condition="Window.IsVisible(script-script.extendedinfo-DialogInfo.xml) + Control.IsVisible(150)">$INFO[Container(150).ListItem.Label]</value>
