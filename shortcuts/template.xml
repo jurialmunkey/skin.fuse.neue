@@ -141,7 +141,6 @@
         </controls>
     </submenuOther>
     <submenuOther include="home-submenu-widget" container="302">
-        <condition tag="property" attribute="name|widgetType">tvshows</condition>
         <condition tag="property" attribute="name|widgetType">episodes</condition>
         <condition tag="property" attribute="name|widgetType">videos</condition>
         <match>any</match>
@@ -149,6 +148,42 @@
         <property name="target" tag="property" attribute="name|widgetTarget" />
         <controls>
             <control type="fixedlist" id="301">
+                <visible>[!Control.HasFocus(300) + !String.IsEmpty(Container(302).ListItem.Property(widgetType))]</visible>
+                <skinshortcuts>visibility</skinshortcuts>
+                <autoscroll time="10000">!Control.HasFocus(301)</autoscroll>
+                <include content="View_Landscape_Layout">
+                    <param name="id" value="301" />
+                </include>
+                <content target="$SKINSHORTCUTS[target]">$SKINSHORTCUTS[content]</content>
+            </control>
+        </controls>
+    </submenuOther>
+    <submenuOther include="home-submenu-widget" container="302">
+        <condition tag="property" attribute="name|widgetType">tvshows</condition>
+        <match>any</match>
+        <property name="content" tag="property" attribute="name|widgetPath" />
+        <property name="target" tag="property" attribute="name|widgetTarget" />
+        <controls>
+            <control type="fixedlist" id="301">
+                <visible>Skin.HasSetting(TvShowPosters)</visible>
+                <visible>[!Control.HasFocus(300) + !String.IsEmpty(Container(302).ListItem.Property(widgetType))]</visible>
+                <skinshortcuts>visibility</skinshortcuts>
+                <autoscroll time="10000">!Control.HasFocus(301)</autoscroll>
+                <include content="View_Posters_Layout">
+                    <param name="id" value="301" />
+                </include>
+                <content target="$SKINSHORTCUTS[target]">$SKINSHORTCUTS[content]</content>
+            </control>
+        </controls>
+    </submenuOther>
+    <submenuOther include="home-submenu-widget" container="302">
+        <condition tag="property" attribute="name|widgetType">tvshows</condition>
+        <match>any</match>
+        <property name="content" tag="property" attribute="name|widgetPath" />
+        <property name="target" tag="property" attribute="name|widgetTarget" />
+        <controls>
+            <control type="fixedlist" id="301">
+                <visible>!Skin.HasSetting(TvShowPosters)</visible>
                 <visible>[!Control.HasFocus(300) + !String.IsEmpty(Container(302).ListItem.Property(widgetType))]</visible>
                 <skinshortcuts>visibility</skinshortcuts>
                 <autoscroll time="10000">!Control.HasFocus(301)</autoscroll>
@@ -314,7 +349,6 @@
         </controls>
     </other>
     <other include="home-widget">
-        <condition tag="property" attribute="name|widgetType">tvshows</condition>
         <condition tag="property" attribute="name|widgetType">episodes</condition>
         <condition tag="property" attribute="name|widgetType">videos</condition>
         <match>any</match>
@@ -322,6 +356,42 @@
         <property name="target" tag="property" attribute="name|widgetTarget" />
         <controls>
             <control type="fixedlist" id="301">
+                <visible>Control.HasFocus(300) | String.IsEmpty(Container(302).ListItem.Property(widgetType))</visible>
+                <skinshortcuts>visibility</skinshortcuts>
+                <autoscroll time="10000">!Control.HasFocus(301)</autoscroll>
+                <include content="View_Landscape_Layout">
+                    <param name="id" value="301" />
+                </include>
+                <content target="$SKINSHORTCUTS[target]">$SKINSHORTCUTS[content]</content>
+            </control>
+        </controls>
+    </other>
+    <other include="home-widget">
+        <condition tag="property" attribute="name|widgetType">tvshows</condition>
+        <match>any</match>
+        <property name="content" tag="property" attribute="name|widgetPath" />
+        <property name="target" tag="property" attribute="name|widgetTarget" />
+        <controls>
+            <control type="fixedlist" id="301">
+                <visible>Skin.HasSetting(TvShowPosters)</visible>
+                <visible>Control.HasFocus(300) | String.IsEmpty(Container(302).ListItem.Property(widgetType))</visible>
+                <skinshortcuts>visibility</skinshortcuts>
+                <autoscroll time="10000">!Control.HasFocus(301)</autoscroll>
+                <include content="View_Posters_Layout">
+                    <param name="id" value="301" />
+                </include>
+                <content target="$SKINSHORTCUTS[target]">$SKINSHORTCUTS[content]</content>
+            </control>
+        </controls>
+    </other>
+    <other include="home-widget">
+        <condition tag="property" attribute="name|widgetType">tvshows</condition>
+        <match>any</match>
+        <property name="content" tag="property" attribute="name|widgetPath" />
+        <property name="target" tag="property" attribute="name|widgetTarget" />
+        <controls>
+            <control type="fixedlist" id="301">
+                <visible>!Skin.HasSetting(TvShowPosters)</visible>
                 <visible>Control.HasFocus(300) | String.IsEmpty(Container(302).ListItem.Property(widgetType))</visible>
                 <skinshortcuts>visibility</skinshortcuts>
                 <autoscroll time="10000">!Control.HasFocus(301)</autoscroll>

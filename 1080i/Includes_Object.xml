@@ -168,20 +168,7 @@
                     <texture colordiffuse="panel_fg_100">flags/other/dvd.png</texture>
                     <visible>String.StartsWith($PARAM[container]ListItem.FilenameAndPath,dvd) + !String.StartsWith($PARAM[container]ListItem.FilenameAndPath,hddvd)</visible>
                 </control>
-                <!-- <control type="image">
-                    <width>64</width>
-                    <centertop>50%</centertop>
-                    <height>64</height>
-                    <texture colordiffuse="panel_fg_100">flags/other/tv.png</texture>
-                    <visible>String.Contains($PARAM[container]ListItem.FilenameAndPath,hdtv) | String.Contains($PARAM[container]ListItem.FilenameAndPath,dsr) | String.Contains($PARAM[container]ListItem.FilenameAndPath,pdtv) | String.Contains($PARAM[container]ListItem.FilenameAndPath,satrip) | String.Contains($PARAM[container]ListItem.FilenameAndPath,dthrip) | String.Contains($PARAM[container]ListItem.FilenameAndPath,dvbrip) | String.Contains($PARAM[container]ListItem.FilenameAndPath,tvrip)</visible>
-                </control>
-                <control type="image">
-                    <width>64</width>
-                    <centertop>50%</centertop>
-                    <height>64</height>
-                    <texture colordiffuse="panel_fg_100">flags/other/web-dl.png</texture>
-                    <visible>String.Contains($PARAM[container]ListItem.FilenameAndPath,web-dl) | String.Contains($PARAM[container]ListItem.FilenameAndPath,webdl) | String.Contains($PARAM[container]ListItem.FilenameAndPath,web-rip) | String.Contains($PARAM[container]ListItem.FilenameAndPath,webrip) | String.Contains($PARAM[container]ListItem.FilenameAndPath,web dl) | String.Contains($PARAM[container]ListItem.FilenameAndPath,web rip)</visible>
-                </control> -->
+     
                 <control type="image">
                     <width>88</width>
                     <height>48</height>

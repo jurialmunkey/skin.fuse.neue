@@ -93,12 +93,12 @@ msgstr ""
 
 #: /1080i/SkinSettings.xml
 msgctxt "#31015"
-msgid "Use colour media flags"
+msgid "Prefer colour media flags"
 msgstr ""
 
 #: /1080i/SkinSettings.xml
 msgctxt "#31016"
-msgid "Music videos use poster aspectratio"
+msgid "Prefer posters for music videos"
 msgstr ""
 
 #: /shortcuts/overrides.xml
@@ -128,7 +128,7 @@ msgstr ""
 
 #: /1080i/SkinSettings.xml
 msgctxt "#31022"
-msgid "Use animated artwork where available (download from context menu)"
+msgid "Prefer animated artwork where available (download from context menu)"
 msgstr ""
 
 #: /1080i/Includes_Statusbar.xml
@@ -143,12 +143,12 @@ msgstr ""
 
 #: /1080i/SkinSettings.xml
 msgctxt "#31025"
-msgid "Always show scrollbars instead of alphabet jump"
+msgid "Prefer scrollbars (disables alphabet strip)"
 msgstr ""
 
 #: /1080i/SkinSettings.xml
 msgctxt "#31026"
-msgid "Use fanart instead of episode thumbs for home widgets"
+msgid "Prefer fanart for episodes on home screen"
 msgstr ""
 
 #: /1080i/SkinSettings.xml
@@ -199,6 +199,161 @@ msgstr ""
 #: /1080i/Includes_Labels.xml
 msgctxt "#31036"
 msgid "hr"
+msgstr ""
+
+#: /1080i/Includes_View.xml
+msgctxt "#31037"
+msgid "Posters"
+msgstr ""
+
+#: /1080i/Includes_View.xml
+msgctxt "#31038"
+msgid "Landscape"
+msgstr ""
+
+#: /1080i/Includes_View.xml
+msgctxt "#31039"
+msgid "Tiles"
+msgstr ""
+
+#: /1080i/SkinSettings.xml
+msgctxt "#31040"
+msgid "Prefer posters for tvshows"
+msgstr ""
+
+#: /1080i/Includes_Labels.xml
+msgctxt "#31041"
+msgid "Customise your home menu items, widgets, and backgrounds."
+msgstr ""
+
+#: /1080i/Includes_Labels.xml
+msgctxt "#31042"
+msgid "Set a default widget or background that will be used if no widget is set for that home menu item."
+msgstr ""
+
+#: /1080i/Includes_Labels.xml
+msgctxt "#31043"
+msgid "Show your custom set background (or default skin background) instead of widget fanart."
+msgstr ""
+
+#: /1080i/Includes_Labels.xml
+msgctxt "#31044"
+msgid "Always display the top menubar even when it doesn't have focus."
+msgstr ""
+
+#: /1080i/Includes_Labels.xml
+msgctxt "#31045"
+msgid "Pressing back in the library will open the top bar directly rather than going home first."
+msgstr ""
+
+#: /1080i/Includes_Labels.xml
+msgctxt "#31046"
+msgid "Whenever the top menubar is opened from the library the skin will return to the home screen to display your widgets."
+msgstr ""
+
+#: /1080i/Includes_Labels.xml
+msgctxt "#31047"
+msgid "This disables fanart in the library and shows the fallback image instead."
+msgstr ""
+
+#: /1080i/Includes_Labels.xml
+msgctxt "#31048"
+msgid "Set a fallback image for when no fanart is available."
+msgstr ""
+
+#: /1080i/Includes_Labels.xml
+msgctxt "#31049"
+msgid "Show artist fanart stored from the library database on the music visualisation screen."
+msgstr ""
+
+#: /1080i/Includes_Labels.xml
+msgctxt "#31050"
+msgid "Use artist slideshow addon to display artist fanart on the music visualisation screen."
+msgstr ""
+
+#: /1080i/Includes_Labels.xml
+msgctxt "#31051"
+msgid "Make the artist fanart slightly transparent so that the music visualisation shows through."
+msgstr ""
+
+#: /1080i/Includes_Labels.xml
+msgctxt "#31052"
+msgid "Use a pan and zoom effect on the artist fanart in the music visualisation."
+msgstr ""
+
+#: /1080i/Includes_Labels.xml
+msgctxt "#31053"
+msgid "Use poster aspect for musicvideos. Useful if your music videos are dvd concerts."
+msgstr ""
+
+#: /1080i/Includes_Labels.xml
+msgctxt "#31054"
+msgid "Use poster aspect for tvshows instead of landscape fanart."
+msgstr ""
+
+#: /1080i/Includes_Labels.xml
+msgctxt "#31055"
+msgid "Use skinhelper to provide animated posters and fanart. These can be downloaded from the context menu."
+msgstr ""
+
+#: /1080i/Includes_Labels.xml
+msgctxt "#31056"
+msgid "Show fanart instead of episode thumbs on home widgets. Useful to prevent spoilers."
+msgstr ""
+
+#: /1080i/Includes_Labels.xml
+msgctxt "#31057"
+msgid "Use skinhelper to provide random fanart background walls for hub windows."
+msgstr ""
+
+#: /1080i/Includes_Labels.xml
+msgctxt "#31058"
+msgid "Change the highlight focus colour used throughout the skin."
+msgstr ""
+
+#: /1080i/Includes_Labels.xml
+msgctxt "#31059"
+msgid "Use colour instead of white for resolution, aspectratio, and codec media flags."
+msgstr ""
+
+#: /1080i/Includes_Labels.xml
+msgctxt "#31060"
+msgid "Set a music or video playlist that will run when kodi starts."
+msgstr ""
+
+#: /1080i/Includes_Labels.xml
+msgctxt "#31061"
+msgid "Disable the alphabet strip and always use scrollbars instead."
+msgstr ""
+
+#: /1080i/Includes_Labels.xml
+msgctxt "#31062"
+msgid "Disable changing view settings and some settings buttons in information dialogs."
+msgstr ""
+
+#: /1080i/Includes_Labels.xml
+msgctxt "#31063"
+msgid "Change the items displayed in the power menu."
+msgstr ""
+
+#: /1080i/Includes_Labels.xml
+msgctxt "#31064"
+msgid "Backup your skin settings and home menu shortcuts to a zipfile. Useful to migrate settings to a new setup."
+msgstr ""
+
+#: /1080i/Includes_Labels.xml
+msgctxt "#31065"
+msgid "Restore your skin settings, shortcuts, and widgets from a backup file."
+msgstr ""
+
+#: /1080i/Includes_Labels.xml
+msgctxt "#31066"
+msgid "Change the location where skin backup files are saved."
+msgstr ""
+
+#: /1080i/Includes_Labels.xml
+msgctxt "#31067"
+msgid "Reset all your skin settings, shortcuts, and widgets to default skin settings. This will not change any kodi system settings."
 msgstr ""
 
 msgctxt "#31101"
@@ -446,7 +601,7 @@ msgid "Reload Skin"
 msgstr ""
 
 msgctxt "#31199"
-msgid "Kiosk mode"
+msgid "Kiosk mode (locks view and addon settings)"
 msgstr ""
 
 msgctxt "#31203"
@@ -630,7 +785,7 @@ msgid "on"
 msgstr ""
 
 msgctxt "#31283"
-msgid "Never hide the top menu bar"
+msgid "Always show the home menubar"
 msgstr ""
 
 #: MPAA Rating
@@ -639,7 +794,7 @@ msgid "Classification"
 msgstr ""
 
 msgctxt "#31285"
-msgid "Allow pressing back to open the top bar"
+msgid "Pressing back opens home menubar"
 msgstr ""
 
 msgctxt "#31286"
@@ -651,7 +806,7 @@ msgid "Reset to default"
 msgstr ""
 
 msgctxt "#31288"
-msgid "Show home widgets when top menu is focused"
+msgid "Always show widgets (return home on focusing menubar)"
 msgstr ""
 
 msgctxt "#31289"

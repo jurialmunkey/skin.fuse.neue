@@ -182,6 +182,7 @@
         <value condition="Window.IsVisible(MyPVRGuide.xml) + Player.HasVideo + Skin.HasSetting(global.showvideo)"></value>
         <value condition="Window.IsVisible(MyPVRChannels.xml) | Window.IsVisible(MyPVRRecordings.xml) | Window.IsVisible(MyPVRTimers.xml) | Window.IsVisible(MyPVRSearch.xml)"></value>
         <value condition="Window.IsVisible(Home) + !Window.IsVisible(DialogVideoInfo.xml) + !Window.IsVisible(DialogMusicInfo.xml)">$VAR[Label_Widget_Plot]</value>
+        <value condition="Control.IsVisible(52) | Control.IsVisible(53) | Control.IsVisible(54)"></value>
         <value condition="ListItem.IsCollection">$INFO[Window(Home).Property(SkinHelper.ListItem.0.Label)]$INFO[Window(Home).Property(SkinHelper.ListItem.1.Label), / ,]$INFO[Window(Home).Property(SkinHelper.ListItem.2.Label), / ,]$INFO[Window(Home).Property(SkinHelper.ListItem.3.Label), / ,]$INFO[Window(Home).Property(SkinHelper.ListItem.4.Label), / ,]$INFO[Window(Home).Property(SkinHelper.ListItem.5.Label), / ,]$INFO[Window(Home).Property(SkinHelper.ListItem.6.Label), / ,]$INFO[Window(Home).Property(SkinHelper.ListItem.7.Label), / ,]$INFO[Window(Home).Property(SkinHelper.ListItem.8.Label), / ,]$INFO[Window(Home).Property(SkinHelper.ListItem.9.Label), / ,]$INFO[Window(Home).Property(SkinHelper.ListItem.10.Label), / ,]$INFO[Window(Home).Property(SkinHelper.ListItem.11.Label), / ,]$INFO[Window(Home).Property(SkinHelper.ListItem.12.Label), / ,]$INFO[Window(Home).Property(SkinHelper.ListItem.13.Label), / ,]$INFO[Window(Home).Property(SkinHelper.ListItem.14.Label), / ,]$INFO[Window(Home).Property(SkinHelper.ListItem.15.Label), / ,]$INFO[Window(Home).Property(SkinHelper.ListItem.16.Label), / ,]$INFO[Window(Home).Property(SkinHelper.ListItem.17.Label), / ,]$INFO[Window(Home).Property(SkinHelper.ListItem.18.Label), / ,]$INFO[Window(Home).Property(SkinHelper.ListItem.19.Label), / ,]$INFO[Window(Home).Property(SkinHelper.ListItem.20.Label), / ,]$INFO[Window(Home).Property(SkinHelper.ListItem.21.Label), / ,]$INFO[Window(Home).Property(SkinHelper.ListItem.Plot),[CR],]</value>
         <value>$INFO[ListItem.Plot]</value>
     </variable>
@@ -216,5 +217,35 @@
     <variable name="Label_VideoHWDecoder">
         <value condition="Player.Process(Label_VideoHWDecoder)">HW</value>
         <value>SW</value>
+    </variable>
+
+    <variable name="Label_SkinSettings_Info">
+        <value condition="Control.HasFocus(9211)">$LOCALIZE[31041]</value>
+        <value condition="Control.HasFocus(9212)">$LOCALIZE[31042]</value>
+        <value condition="Control.HasFocus(9213)">$LOCALIZE[31043]</value>
+        <value condition="Control.HasFocus(9214)">$LOCALIZE[31044]</value>
+        <value condition="Control.HasFocus(9215)">$LOCALIZE[31045]</value>
+        <value condition="Control.HasFocus(9216)">$LOCALIZE[31046]</value>
+        <value condition="Control.HasFocus(9221)">$LOCALIZE[31047]</value>
+        <value condition="Control.HasFocus(9222)">$LOCALIZE[31048]</value>
+        <value condition="Control.HasFocus(9231)">$LOCALIZE[31049]</value>
+        <value condition="Control.HasFocus(9232)">$LOCALIZE[31050]</value>
+        <value condition="Control.HasFocus(9233)">$LOCALIZE[31051]</value>
+        <value condition="Control.HasFocus(9234)">$LOCALIZE[31052]</value>
+        <value condition="Control.HasFocus(9242)">$LOCALIZE[31053]</value>
+        <value condition="Control.HasFocus(9243)">$LOCALIZE[31054]</value>
+        <value condition="Control.HasFocus(9244)">$LOCALIZE[31055]</value>
+        <value condition="Control.HasFocus(9245)">$LOCALIZE[31056]</value>
+        <value condition="Control.HasFocus(9246)">$LOCALIZE[31057]</value>
+        <value condition="Control.HasFocus(9251)">$LOCALIZE[31058]</value>
+        <value condition="Control.HasFocus(9252)">$LOCALIZE[31059]</value>
+        <value condition="Control.HasFocus(9271)">$LOCALIZE[31060]</value>
+        <value condition="Control.HasFocus(9272)">$LOCALIZE[31061]</value>
+        <value condition="Control.HasFocus(9273)">$LOCALIZE[31062]</value>
+        <value condition="Control.HasFocus(9274)">$LOCALIZE[31063]</value>
+        <value condition="Control.HasFocus(9261)">$LOCALIZE[31064]</value>
+        <value condition="Control.HasFocus(9262)">$LOCALIZE[31065]</value>
+        <value condition="Control.HasFocus(9263)">$LOCALIZE[31066]</value>
+        <value condition="Control.HasFocus(9264)">$LOCALIZE[31067]</value>
     </variable>
 </includes>

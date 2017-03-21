@@ -129,17 +129,21 @@
 
                 <control type="button" id ="6">
                     <include>Dialog_Info_Buttons</include>
+                    <enable>!Skin.HasSetting(global.kioskmode)</enable>
                 </control>
                 <control type="button" id ="7">
                     <include>Dialog_Info_Buttons</include>
+                    <enable>!Skin.HasSetting(global.kioskmode)</enable>
                 </control>
                 <control type="button" id ="8">
                     <label>24069</label>
                     <include>Dialog_Info_Buttons</include>
+                    <enable>!Skin.HasSetting(global.kioskmode)</enable>
                 </control>
                 <control type="button" id ="9">
                     <label>5</label>
                     <include>Dialog_Info_Buttons</include>
+                    <enable>!Skin.HasSetting(global.kioskmode)</enable>
                 </control>
                 <control type="button" id ="12">
                     <include>Dialog_Info_Buttons</include>

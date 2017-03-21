@@ -207,17 +207,44 @@
         <include>View_List</include>
     </include>
 
+
+
     <include name="View_Posters">
         <control type="fixedlist" id="50">
-            <visible>Container.Content(movies) | Container.Content(sets) | Container.Content(seasons) | [Container.Content(musicvideos) + Window.IsVisible(MyVideoNav.xml) + Skin.HasSetting(MusicVideoConcerts)]</visible>
+            <visible>Container.Content(movies) | Container.Content(sets) | Container.Content(seasons) | [Container.Content(musicvideos) + Window.IsVisible(MyVideoNav.xml) + Skin.HasSetting(MusicVideoConcerts)] | [Container.Content(tvshows) + Skin.HasSetting(TvShowPosters)]</visible>
             <include>View_Posters_Layout</include>
         </control>
-    </include>    
+    </include>
+    <include name="View_Landscape">
+        <control type="fixedlist" id="51">
+            <visible>Container.Content(episodes) | Container.Content(videos) | [Container.Content(tvshows) + !Skin.HasSetting(TvShowPosters)]</visible>
+            <include>View_Landscape_Layout</include>
+        </control>
+    </include>
+    <include name="View_Tiles">
+        <control type="panel" id="52">
+            <visible>Container.Content() | Container.Content(playlists) | Container.Content(tags)</visible>
+            <include>View_Tiles_Layout</include>
+        </control>
+    </include>
+    <include name="View_Square">
+        <control type="fixedlist" id="53">
+            <visible>![Container.Content(episodes) | Container.Content(movies) | Container.Content(sets) | Container.Content(seasons) | Container.Content(tvshows) | Container.Content(songs) | Container.Content(files) | Container.Content() | Container.Content(playlists) | Container.Content(tags) | [Container.Content(musicvideos) + Window.IsVisible(MyVideoNav.xml) + Skin.HasSetting(MusicVideoConcerts)]]</visible>
+            <include>View_Square_Layout</include>
+        </control>
+    </include>
+    <include name="View_List">
+        <control type="fixedlist" id="54">
+            <visible>Container.Content(songs) | Container.Content(files) | Window.IsVisible(MyPlaylist.xml) | Container.Content(directors) | Container.Content(countries) | Container.Content(years)</visible>
+            <include>View_List_Layout</include>
+        </control>
+    </include>
 
     <include name="View_Posters_Layout">
         <param name="id" default="50" />
         <param name="setfanart" default="false" />
         <definition>
+            <viewtype label="$LOCALIZE[31037]">icon</viewtype>
             <animation effect="slide" end="-178" condition="Integer.IsLess(Container($PARAM[id]).NumItems,7) + !Container.HasParent">Conditional</animation>
             <animation effect="slide" end="-178" condition="Integer.IsLess(Container($PARAM[id]).NumItems,5) + !Container.HasParent">Conditional</animation>
             <animation effect="slide" end="-178" condition="Integer.IsLess(Container($PARAM[id]).NumItems,3) + !Container.HasParent">Conditional</animation>
@@ -324,16 +351,10 @@
         </definition>
     </include>
 
-    <include name="View_Landscape">
-        <control type="fixedlist" id="51">
-            <visible>Container.Content(episodes) | Container.Content(videos) | Container.Content(tvshows)</visible>
-            <include>View_Landscape_Layout</include>
-        </control>
-    </include>
-
     <include name="View_Landscape_Layout">
         <param name="id" default="51" />
         <definition>
+            <viewtype label="$LOCALIZE[31038]">wide</viewtype>
             <animation effect="slide" end="-415.33" condition="Integer.IsLess(Container($PARAM[id]).NumItems,3) + !Container.HasParent">Conditional</animation>
             <animation effect="slide" end="-415.33" condition="Integer.IsLess(Container($PARAM[id]).NumItems,2) + Container.HasParent">Conditional</animation>
             <focusposition>1</focusposition>
@@ -510,16 +531,10 @@
         </definition>
     </include>
 
-    <include name="View_Tiles">
-        <control type="panel" id="52">
-            <visible>Container.Content() | Container.Content(playlists) | Container.Content(tags)</visible>
-            <include>View_Tiles_Layout</include>
-        </control>
-    </include>
-
     <include name="View_Tiles_Layout">
         <param name="id" default="52" />
         <definition>
+            <viewtype label="$LOCALIZE[31039]">list</viewtype>
             <focusposition>2</focusposition>
             <movement>2</movement>
             <description>Plugin Content Widget</description>
@@ -566,13 +581,6 @@
         </definition>
     </include>
 
-    <include name="View_Square">
-        <control type="fixedlist" id="53">
-            <visible>![Container.Content(episodes) | Container.Content(movies) | Container.Content(sets) | Container.Content(seasons) | Container.Content(tvshows) | Container.Content(songs) | Container.Content(files) | Container.Content() | Container.Content(playlists) | Container.Content(tags) | [Container.Content(musicvideos) + Window.IsVisible(MyVideoNav.xml) + Skin.HasSetting(MusicVideoConcerts)]]</visible>
-            <include>View_Square_Layout</include>
-        </control>
-    </include>
-
     <include name="View_Square_Layout">
         <param name="id" default="53" />
         <param name="genres" default="false" />
@@ -581,6 +589,7 @@
         <param name="directors" default="false" />
         <param name="countries" default="false" />
         <definition>
+            <viewtype label="$LOCALIZE[31263]">icon</viewtype>
             <animation effect="slide" end="-207.66" condition="Integer.IsLess(Container($PARAM[id]).NumItems,5) + !Container.HasParent">Conditional</animation>
             <animation effect="slide" end="-207.66" condition="Integer.IsLess(Container($PARAM[id]).NumItems,3) + !Container.HasParent">Conditional</animation>
             <animation effect="slide" end="-207.66" condition="Integer.IsLess(Container($PARAM[id]).NumItems,4) + Container.HasParent">Conditional</animation>
@@ -824,168 +833,12 @@
                 </control>
             </focusedlayout>
         </definition>
-    </include>
-
-    <include name="View_Actor_Layout">
-        <param name="id" default="53" />
-        <param name="label2" default="$INFO[ListItem.Label2]"/>
-        <definition>
-            <animation effect="slide" end="-207.66" condition="Integer.IsLess(Container($PARAM[id]).NumItems,5) + !Container.HasParent">Conditional</animation>
-            <animation effect="slide" end="-207.66" condition="Integer.IsLess(Container($PARAM[id]).NumItems,3) + !Container.HasParent">Conditional</animation>
-            <animation effect="slide" end="-207.66" condition="Integer.IsLess(Container($PARAM[id]).NumItems,4) + Container.HasParent">Conditional</animation>
-            <animation effect="slide" end="-207.66" condition="Integer.IsLess(Container($PARAM[id]).NumItems,2) + Container.HasParent">Conditional</animation>
-            <focusposition>2</focusposition>
-            <movement>3</movement>
-            <description>Plugin Content Widget</description>
-            <width>1424</width>
-            <left>70</left>
-            <top>30</top>
-            <bottom>20</bottom>
-            <onleft>$PARAM[id]</onleft>
-            <onright>$PARAM[id]</onright>
-            <include condition="!Window.IsVisible(DialogVideoInfo.xml)">View_Movement_Vertical</include>
-            <preloaditems>2</preloaditems>
-            <orientation>horizontal</orientation>
-            <pagecontrol>60</pagecontrol>
-            <onfocus>SetProperty(ViewType,Square,Home)</onfocus>
-            <scrolltime tween="quadratic">400</scrolltime>
-            <itemlayout width="207.66" height="257">
-
-                <control type="image">
-                    <bordersize>10</bordersize>
-                    <bordertexture border="10">common/nofocus-shadow10.png</bordertexture>
-                    <aspectratio scalediffuse="false">scale</aspectratio>
-                    <texture colordiffuse="main_fg_12">common/white.png</texture>
-                </control>
-
-                <!-- Poster -->
-                <control type="image">
-                    <left>10</left>
-                    <right>10</right>
-                    <top>10</top>
-                    <bottom>10</bottom>
-                    <aspectratio scalediffuse="false">scale</aspectratio>
-                    <texture fallback="DefaultArtist.png" background="true">$VAR[Image_Poster]</texture>
-                </control>
-                <control type="image">
-                    <left>10</left>
-                    <right>10</right>
-                    <height>100</height>
-                    <bottom>10</bottom>
-                    <texture colordiffuse="bf000000">common/gradient-actor.png</texture>
-                </control>
-                <control type="label">
-                    <left>20</left>
-                    <right>20</right>
-                    <height>30</height>
-                    <bottom>42</bottom>
-                    <align>left</align>
-                    <aligny>center</aligny>
-                    <font>font_albumlistlabel</font>
-                    <textcolor>main_fg_100</textcolor>
-                    <label>$INFO[ListItem.Label]</label>
-                </control>
-                <control type="label">
-                    <left>20</left>
-                    <right>20</right>
-                    <height>30</height>
-                    <bottom>18</bottom>
-                    <align>left</align>
-                    <aligny>center</aligny>
-                    <font>font_albumlistlabel</font>
-                    <textcolor>main_fg_70</textcolor>
-                    <label>$PARAM[label2]</label>
-                </control>
-            </itemlayout>
-            <focusedlayout width="207.66" height="257">
-
-                <control type="button">
-                    <visible allowhiddenfocus="true">false</visible>
-                    <onfocus>SetProperty(ContextPosition,$INFO[Container($PARAM[id]).Position],Home)</onfocus>
-                    <onfocus condition="!Integer.IsLess(Container($PARAM[id]).NumItems,5)">SetProperty(ContextModifier,0,Home)</onfocus>
-                    <onfocus condition="Integer.IsLess(Container($PARAM[id]).NumItems,5)">SetProperty(ContextModifier,1,Home)</onfocus>
-                    <onfocus condition="Integer.IsLess(Container($PARAM[id]).NumItems,3)">SetProperty(ContextModifier,2,Home)</onfocus>
-                </control>
-
-                <control type="image">
-                    <bordersize>10</bordersize>
-                    <bordertexture border="10">common/nofocus-shadow10.png</bordertexture>
-                    <aspectratio scalediffuse="false">scale</aspectratio>
-                    <texture colordiffuse="main_fg_12">common/white.png</texture>
-                </control>
-
-                <!-- Poster -->
-                <control type="image">
-                    <left>10</left>
-                    <right>10</right>
-                    <top>10</top>
-                    <bottom>10</bottom>
-                    <aspectratio scalediffuse="false">scale</aspectratio>
-                    <texture fallback="DefaultArtist.png" background="true">$VAR[Image_Poster]</texture>
-                </control>
-                <control type="image">
-                    <left>10</left>
-                    <right>10</right>
-                    <height>100</height>
-                    <bottom>10</bottom>
-                    <texture colordiffuse="bf000000">common/gradient-actor.png</texture>
-                </control>
-                <control type="label">
-                    <left>20</left>
-                    <right>20</right>
-                    <height>30</height>
-                    <bottom>42</bottom>
-                    <align>left</align>
-                    <aligny>center</aligny>
-                    <font>font_albumlistlabel</font>
-                    <textcolor>main_fg_100</textcolor>
-                    <label>$INFO[ListItem.Label]</label>
-                </control>
-                <control type="label">
-                    <left>20</left>
-                    <right>20</right>
-                    <height>30</height>
-                    <bottom>18</bottom>
-                    <align>left</align>
-                    <aligny>center</aligny>
-                    <font>font_albumlistlabel</font>
-                    <textcolor>main_fg_70</textcolor>
-                    <label>$PARAM[label2]</label>
-                </control>
-                <!-- Highlight -->
-                <control type="group">
-                    <visible>Control.HasFocus($PARAM[id])</visible>
-                    <animation type="Focus">
-                        <effect type="zoom" start="90" end="100" time="150" tween="sine" easing="inout" center="auto" />
-                        <effect type="fade" start="0" end="100" time="150" tween="sine" easing="in" />
-                    </animation>
-                    <animation type="Unfocus">
-                        <effect type="zoom" start="100" end="90" time="150" tween="sine" easing="inout" center="auto" />
-                        <effect type="fade" start="100" end="0" time="150" tween="sine" easing="out" />
-                    </animation>
-                    <include>View_WatchedOverlay_Focus</include>
-                    <control type="image">
-                        <left>3</left>
-                        <top>3</top>
-                        <right>3</right>
-                        <bottom>3</bottom>
-                        <texture colordiffuse="$VAR[ColorHighlight]" border="20">common/selectbox.png</texture>
-                    </control>
-                </control>
-            </focusedlayout>
-        </definition>
-    </include>
-
-    <include name="View_List">
-        <control type="fixedlist" id="54">
-            <visible>Container.Content(songs) | Container.Content(files) | Window.IsVisible(MyPlaylist.xml) | Container.Content(directors) | Container.Content(countries) | Container.Content(years)</visible>
-            <include>View_List_Layout</include>
-        </control>
     </include>
 
     <include name="View_List_Layout">
         <param name="id" default="54" />
         <definition>
+            <viewtype label="$LOCALIZE[535]">list</viewtype>
             <description>Plugin Content Widget</description>
             <focusposition>2</focusposition>
             <movement>2</movement>
@@ -1144,6 +997,156 @@
                     <scroll>false</scroll>
                     <label>$INFO[ListItem.StartTime,   (,]$INFO[ListItem.EndTime, | ,)]</label>
                     <visible>Window.IsVisible(MyPVRChannels.xml)</visible>
+                </control>
+            </focusedlayout>
+        </definition>
+    </include>
+
+    <include name="View_Actor_Layout">
+        <param name="id" default="53" />
+        <param name="label2" default="$INFO[ListItem.Label2]"/>
+        <definition>
+            <animation effect="slide" end="-207.66" condition="Integer.IsLess(Container($PARAM[id]).NumItems,5) + !Container.HasParent">Conditional</animation>
+            <animation effect="slide" end="-207.66" condition="Integer.IsLess(Container($PARAM[id]).NumItems,3) + !Container.HasParent">Conditional</animation>
+            <animation effect="slide" end="-207.66" condition="Integer.IsLess(Container($PARAM[id]).NumItems,4) + Container.HasParent">Conditional</animation>
+            <animation effect="slide" end="-207.66" condition="Integer.IsLess(Container($PARAM[id]).NumItems,2) + Container.HasParent">Conditional</animation>
+            <focusposition>2</focusposition>
+            <movement>3</movement>
+            <description>Plugin Content Widget</description>
+            <width>1424</width>
+            <left>70</left>
+            <top>30</top>
+            <bottom>20</bottom>
+            <onleft>$PARAM[id]</onleft>
+            <onright>$PARAM[id]</onright>
+            <include condition="!Window.IsVisible(DialogVideoInfo.xml)">View_Movement_Vertical</include>
+            <preloaditems>2</preloaditems>
+            <orientation>horizontal</orientation>
+            <pagecontrol>60</pagecontrol>
+            <onfocus>SetProperty(ViewType,Square,Home)</onfocus>
+            <scrolltime tween="quadratic">400</scrolltime>
+            <itemlayout width="207.66" height="257">
+
+                <control type="image">
+                    <bordersize>10</bordersize>
+                    <bordertexture border="10">common/nofocus-shadow10.png</bordertexture>
+                    <aspectratio scalediffuse="false">scale</aspectratio>
+                    <texture colordiffuse="main_fg_12">common/white.png</texture>
+                </control>
+
+                <!-- Poster -->
+                <control type="image">
+                    <left>10</left>
+                    <right>10</right>
+                    <top>10</top>
+                    <bottom>10</bottom>
+                    <aspectratio scalediffuse="false">scale</aspectratio>
+                    <texture fallback="DefaultArtist.png" background="true">$VAR[Image_Poster]</texture>
+                </control>
+                <control type="image">
+                    <left>10</left>
+                    <right>10</right>
+                    <height>100</height>
+                    <bottom>10</bottom>
+                    <texture colordiffuse="bf000000">common/gradient-actor.png</texture>
+                </control>
+                <control type="label">
+                    <left>20</left>
+                    <right>20</right>
+                    <height>30</height>
+                    <bottom>42</bottom>
+                    <align>left</align>
+                    <aligny>center</aligny>
+                    <font>font_albumlistlabel</font>
+                    <textcolor>main_fg_100</textcolor>
+                    <label>$INFO[ListItem.Label]</label>
+                </control>
+                <control type="label">
+                    <left>20</left>
+                    <right>20</right>
+                    <height>30</height>
+                    <bottom>18</bottom>
+                    <align>left</align>
+                    <aligny>center</aligny>
+                    <font>font_albumlistlabel</font>
+                    <textcolor>main_fg_70</textcolor>
+                    <label>$PARAM[label2]</label>
+                </control>
+            </itemlayout>
+            <focusedlayout width="207.66" height="257">
+
+                <control type="button">
+                    <visible allowhiddenfocus="true">false</visible>
+                    <onfocus>SetProperty(ContextPosition,$INFO[Container($PARAM[id]).Position],Home)</onfocus>
+                    <onfocus condition="!Integer.IsLess(Container($PARAM[id]).NumItems,5)">SetProperty(ContextModifier,0,Home)</onfocus>
+                    <onfocus condition="Integer.IsLess(Container($PARAM[id]).NumItems,5)">SetProperty(ContextModifier,1,Home)</onfocus>
+                    <onfocus condition="Integer.IsLess(Container($PARAM[id]).NumItems,3)">SetProperty(ContextModifier,2,Home)</onfocus>
+                </control>
+
+                <control type="image">
+                    <bordersize>10</bordersize>
+                    <bordertexture border="10">common/nofocus-shadow10.png</bordertexture>
+                    <aspectratio scalediffuse="false">scale</aspectratio>
+                    <texture colordiffuse="main_fg_12">common/white.png</texture>
+                </control>
+
+                <!-- Poster -->
+                <control type="image">
+                    <left>10</left>
+                    <right>10</right>
+                    <top>10</top>
+                    <bottom>10</bottom>
+                    <aspectratio scalediffuse="false">scale</aspectratio>
+                    <texture fallback="DefaultArtist.png" background="true">$VAR[Image_Poster]</texture>
+                </control>
+                <control type="image">
+                    <left>10</left>
+                    <right>10</right>
+                    <height>100</height>
+                    <bottom>10</bottom>
+                    <texture colordiffuse="bf000000">common/gradient-actor.png</texture>
+                </control>
+                <control type="label">
+                    <left>20</left>
+                    <right>20</right>
+                    <height>30</height>
+                    <bottom>42</bottom>
+                    <align>left</align>
+                    <aligny>center</aligny>
+                    <font>font_albumlistlabel</font>
+                    <textcolor>main_fg_100</textcolor>
+                    <label>$INFO[ListItem.Label]</label>
+                </control>
+                <control type="label">
+                    <left>20</left>
+                    <right>20</right>
+                    <height>30</height>
+                    <bottom>18</bottom>
+                    <align>left</align>
+                    <aligny>center</aligny>
+                    <font>font_albumlistlabel</font>
+                    <textcolor>main_fg_70</textcolor>
+                    <label>$PARAM[label2]</label>
+                </control>
+                <!-- Highlight -->
+                <control type="group">
+                    <visible>Control.HasFocus($PARAM[id])</visible>
+                    <animation type="Focus">
+                        <effect type="zoom" start="90" end="100" time="150" tween="sine" easing="inout" center="auto" />
+                        <effect type="fade" start="0" end="100" time="150" tween="sine" easing="in" />
+                    </animation>
+                    <animation type="Unfocus">
+                        <effect type="zoom" start="100" end="90" time="150" tween="sine" easing="inout" center="auto" />
+                        <effect type="fade" start="100" end="0" time="150" tween="sine" easing="out" />
+                    </animation>
+                    <include>View_WatchedOverlay_Focus</include>
+                    <control type="image">
+                        <left>3</left>
+                        <top>3</top>
+                        <right>3</right>
+                        <bottom>3</bottom>
+                        <texture colordiffuse="$VAR[ColorHighlight]" border="20">common/selectbox.png</texture>
+                    </control>
                 </control>
             </focusedlayout>
         </definition>

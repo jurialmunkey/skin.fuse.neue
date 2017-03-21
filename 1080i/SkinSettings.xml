@@ -170,7 +170,7 @@
                     <!-- ========== -->
                     <!-- Background -->
                     <!-- ========== -->
-                    <control type="radiobutton" id="9226" description="No fanart">
+                    <control type="radiobutton" id="9221" description="No fanart">
                         <visible>ControlGroup(9100).HasFocus(9102)</visible>
                         <onback>300</onback>
                         <include>Defs_Settings_Button</include>
@@ -179,7 +179,7 @@
                         <onclick>Skin.ToggleSetting(NoFanart)</onclick>
                     </control>
 
-                    <control type="button" id="9221" description="Set Fallback Image">
+                    <control type="button" id="9222" description="Set Fallback Image">
                         <visible>ControlGroup(9100).HasFocus(9102)</visible>
                         <onback>300</onback>
                         <include>Defs_Settings_Button</include>
@@ -210,7 +210,7 @@
                         <onclick>Skin.ToggleSetting(global.showvisualisation)</onclick>
                     </control>
 
-                    <control type="togglebutton" id="9222" description="Install Weather Fanart">
+                    <control type="togglebutton" id="9225" description="Install Weather Fanart">
                         <visible>ControlGroup(9100).HasFocus(9102)</visible>
                         <onback>300</onback>
                         <include>Defs_Settings_Button</include>
@@ -273,7 +273,7 @@
                     <!-- ======= -->
                     <!-- Artwork -->
                     <!-- ======= -->
-                    <control type="button" id="9242">
+                    <control type="button" id="9241">
                         <visible>ControlGroup(9100).HasFocus(9104)</visible>
                         <onback>300</onback>
                         <label>$LOCALIZE[31013]</label>
@@ -282,7 +282,7 @@
                         <onclick>RunScript(script.image.resource.select,property=weather.icons&amp;type=resource.images.weathericons)</onclick>
                     </control>
                     
-                    <control type="radiobutton" id="9243">
+                    <control type="radiobutton" id="9242">
                         <visible>ControlGroup(9100).HasFocus(9104)</visible>
                         <onback>300</onback>
                         <label>$LOCALIZE[31016]</label>
@@ -291,16 +291,16 @@
                         <onclick>Skin.ToggleSetting(MusicVideoConcerts)</onclick>
                     </control>
 
-                    <control type="radiobutton" id="9244">
+                    <control type="radiobutton" id="9243">
                         <visible>ControlGroup(9100).HasFocus(9104)</visible>
                         <onback>300</onback>
-                        <label>$LOCALIZE[31000]</label>
-                        <onclick>Skin.ToggleSetting(SkinHelper.EnableWallBackgrounds)</onclick>
-                        <selected>Skin.HasSetting(SkinHelper.EnableWallBackgrounds)</selected>
+                        <label>$LOCALIZE[31040]</label>
+                        <selected>Skin.HasSetting(TvShowPosters)</selected>
                         <include>Defs_Settings_Button</include>
+                        <onclick>Skin.ToggleSetting(TvShowPosters)</onclick>
                     </control>
 
-                    <control type="radiobutton" id="9245">
+                    <control type="radiobutton" id="9244">
                         <visible>ControlGroup(9100).HasFocus(9104)</visible>
                         <onback>300</onback>
                         <label>$LOCALIZE[31022]</label>
@@ -308,13 +308,21 @@
                         <selected>Skin.HasSetting(SkinHelper.EnableAnimatedPosters)</selected>
                         <onclick>Skin.ToggleSetting(SkinHelper.EnableAnimatedPosters)</onclick>
                     </control>
-                    <control type="radiobutton" id="9246">
+                    <control type="radiobutton" id="9245">
                         <visible>ControlGroup(9100).HasFocus(9104)</visible>
                         <onback>300</onback>
                         <label>$LOCALIZE[31026]</label>
                         <include>Defs_Settings_Button</include>
                         <selected>Skin.HasSetting(PreferFanartHome)</selected>
                         <onclick>Skin.ToggleSetting(PreferFanartHome)</onclick>
+                    </control>
+                    <control type="radiobutton" id="9246">
+                        <visible>ControlGroup(9100).HasFocus(9104)</visible>
+                        <onback>300</onback>
+                        <label>$LOCALIZE[31000]</label>
+                        <onclick>Skin.ToggleSetting(SkinHelper.EnableWallBackgrounds)</onclick>
+                        <selected>Skin.HasSetting(SkinHelper.EnableWallBackgrounds)</selected>
+                        <include>Defs_Settings_Button</include>
                     </control>
 
                     <!-- ====== -->
@@ -644,7 +652,7 @@
                     <font>Tiny</font>
                     <textcolor>panel_fg_70</textcolor>
                     <scroll>true</scroll>
-                    <label>19055</label>
+                    <label fallback="19055">$VAR[Label_SkinSettings_Info]</label>
                 </control>
             </control>
         </control>

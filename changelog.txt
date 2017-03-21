@@ -1,3 +1,9 @@
+[B]0.9.22[/B]
+Add skin settings descriptions
+Add option to use posters instead of landscape for tvshows
+Disable buttons rather than hide for kioskmode
+
+
 [B]0.9.21[/B]
 Add options button to next aired
 Fix some home focus stuff
