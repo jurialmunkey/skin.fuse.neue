@@ -148,6 +148,12 @@
                 <control type="button" id ="12">
                     <include>Dialog_Info_Buttons</include>
                 </control>
+                <control type="radiobutton" id ="13">
+                    <radioposx>200</radioposx>
+                    <align>left</align>
+                    <width>250</width>
+                    <include>Dialog_Info_Buttons</include>
+                </control>
             </control>
         </control>
 
