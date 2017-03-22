@@ -1,5 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <includes>
+    <variable name="Label_Top250">
+        <value condition="Integer.IsGreater(Window(home).Property(SkinHelper.ListItem.IMDB.Top250),0)">$INFO[Window(Home).Property(SkinHelper.ListItem.IMDB.Top250),  •  $LOCALIZE[368] #,]</value>
+    </variable>
+
     <variable name="Label_Duration">
         <value>$INFO[Window(Home).Property(SkinHelper.ListItem.Duration.Hours),, $LOCALIZE[31036] ]$INFO[Window(Home).Property(SkinHelper.ListItem.Duration.Minutes),, $LOCALIZE[31020] ]</value>
     </variable>
@@ -198,9 +202,9 @@
     </variable>
 
     <variable name="Label_Rating">
-        <value condition="Window.IsVisible(Home) + !String.IsEmpty(Container(301).ListItem.Rating)">$INFO[Container(301).ListItem.Rating]</value>
-        <value condition="!String.IsEmpty(ListItem.Rating)">$INFO[ListItem.Rating]</value>
-        <value>0.0</value>
+        <value condition="Window.IsVisible(Home) + !String.IsEmpty(Container(301).ListItem.Rating)">$INFO[Container(301).ListItem.Rating]$VAR[Label_Top250]</value>
+        <value condition="!String.IsEmpty(ListItem.Rating)">$INFO[ListItem.Rating]$VAR[Label_Top250, ,]</value>
+        <value>0.0$VAR[Label_Top250]</value>
     </variable>
 
     <variable name="Label_PlayerStatus">

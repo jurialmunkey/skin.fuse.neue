@@ -328,17 +328,6 @@
                     <label>$INFO[ListItem.RatingAndVotes, ,]</label>
                     <visible>String.IsEmpty(Window(home).Property(SkinHelper.ListItem.Rating.IMDB)) + !String.IsEmpty(ListItem.RatingAndVotes)</visible>
                 </control>
-                <control type="label">
-                    <textcolor>main_fg_70</textcolor>
-                    <top>2</top>
-                    <width>auto</width>
-                    <height>28</height>
-                    <align>right</align>
-                    <font>Tiny</font>
-                    <label>$INFO[Window(Home).Property(SkinHelper.ListItem.IMDB.Top250), #,]</label>
-                    <visible>!String.IsEmpty(Window(home).Property(SkinHelper.ListItem.IMDB.Top250))</visible>
-                    <visible>Integer.IsGreater(Window(home).Property(SkinHelper.ListItem.IMDB.Top250),0)</visible>
-                </control>
             </control>
         </definition>
     </include>

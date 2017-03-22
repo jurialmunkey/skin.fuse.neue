@@ -371,6 +371,11 @@ msgctxt "#31070"
 msgid "Cloud Cover"
 msgstr ""
 
+#: /1080i/Includes_Labels.xml
+msgctxt "#31071"
+msgid "IMDB Top250"
+msgstr ""
+
 msgctxt "#31101"
 msgid "items"
 msgstr ""
