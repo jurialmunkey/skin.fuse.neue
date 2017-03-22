@@ -161,16 +161,14 @@
                         <width>auto</width>
                         <texturenofocus border="8" colordiffuse="main_fg_30">common/underline.png</texturenofocus>
                         <textcolor>main_fg_70</textcolor>
-                        <label>$LOCALIZE[403]</label>
-                        <visible>!String.IsEmpty(Window(Weather).Property(Current.UVIndex))</visible>
+                        <label>$VAR[Weather_UVIndex_Label]</label>
                     </control>
                     <control type="label">
                         <height>56</height>
                         <aligny>top</aligny>
                         <font>font_weather_condition</font>
                         <textcolor>main_fg_100</textcolor>
-                        <label>$INFO[Window(Weather).Property(Current.UVIndex)]</label>
-                        <visible>!String.IsEmpty(Window(Weather).Property(Current.UVIndex))</visible>
+                        <label>$VAR[Weather_UVIndex_Info]</label>
                     </control>
                 </control>
                
@@ -321,5 +319,15 @@
     <variable name="Weather_HighTemp">
         <value condition="!String.IsEmpty(Window(Weather).Property(Current.HighTemp))">$INFO[Window(Weather).Property(Current.HighTemp),,°]</value>
         <value condition="!String.IsEmpty(Window(Weather).Property(Day0.HighTemp))">$INFO[Window(Weather).Property(Day0.HighTemp),,°]</value>
+    </variable>
+
+    <variable name="Weather_UVIndex_Label">
+        <value condition="!String.IsEmpty(Window(Weather).Property(Current.UVIndex))">$LOCALIZE[403]</value>
+        <value condition="!String.IsEmpty(Window(Weather).Property(Current.Precipitation))">$INFO[Window(Weather).Property(Current.Precipitation),$LOCALIZE[1448] ,]</value>
+    </variable>
+
+    <variable name="Weather_UVIndex_Info">
+        <value condition="!String.IsEmpty(Window(Weather).Property(Current.UVIndex))">$INFO[Window(Weather).Property(Current.UVIndex)]</value>
+        <value condition="!String.IsEmpty(Window(Weather).Property(Current.Cloudiness))">$INFO[Window(Weather).Property(Current.Cloudiness),$LOCALIZE[31068] ,]</value>
     </variable>
 </includes>
