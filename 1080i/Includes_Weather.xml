@@ -38,7 +38,7 @@
                     <height>200</height>
                     <timeperimage>50</timeperimage>
                     <aspectratio align="center" aligny="center">keep</aspectratio>
-<fadetime>10</fadetime>
+                    <fadetime>10</fadetime>
                     <imagepath>$INFO[Skin.String(weather.icons.path),,/]$INFO[Window(weather).Property(Current.FanartCode)]</imagepath>
                     <visible>!String.IsEmpty(Skin.String(weather.icons.path)) + String.Contains(Skin.String(weather.icons.path),animated)</visible>
                 </control>
@@ -127,14 +127,14 @@
                         <width>auto</width>
                         <texturenofocus border="8" colordiffuse="main_fg_30">common/underline.png</texturenofocus>
                         <textcolor>main_fg_70</textcolor>
-                        <label>$LOCALIZE[31005] $INFO[Window(Weather).Property(Current.Sunrise)]</label>
+                        <label>$VAR[Weather_Sunrise]</label>
                     </control>
                     <control type="label">
                         <height>56</height>
                         <aligny>top</aligny>
                         <font>font_weather_condition</font>
                         <textcolor>main_fg_100</textcolor>
-                        <label>$LOCALIZE[405] $INFO[Window(Weather).Property(Current.DewPoint),,°]</label>
+                        <label>$INFO[Window(Weather).Property(Current.DewPoint),$LOCALIZE[405] ,°]</label>
                     </control>
                     <control type="button">
                         <height>48</height>
@@ -144,14 +144,14 @@
                         <width>auto</width>
                         <texturenofocus border="8" colordiffuse="main_fg_30">common/underline.png</texturenofocus>
                         <textcolor>main_fg_70</textcolor>
-                        <label>$LOCALIZE[31004] $INFO[Window(Weather).Property(Current.Sunset)]</label>
+                        <label>$VAR[Weather_Sunset]</label>
                     </control>
                     <control type="label">
                         <height>56</height>
                         <aligny>top</aligny>
                         <font>font_weather_condition</font>
                         <textcolor>main_fg_100</textcolor>
-                        <label>$INFO[Window(Weather).Property(Current.LowTemp),$LOCALIZE[391] ,°]  -  $INFO[Window(Weather).Property(Current.HighTemp),$LOCALIZE[393] ,°]</label>
+                        <label>$VAR[Weather_LowTemp,$LOCALIZE[391] ,]$VAR[Weather_HighTemp,  -  $LOCALIZE[393] ,]</label>
                     </control>
                     <control type="button">
                         <height>48</height>
@@ -175,6 +175,7 @@
                 </control>
                
             </control>
+
             <include content="Weather_DailyForecast">
                 <param name="day" value="Day0" />
                 <param name="label" value="$LOCALIZE[33006]" />
@@ -302,4 +303,23 @@
             </control>
         </control>
     </include>
+
+    <variable name="Weather_Sunrise">
+        <value condition="!String.IsEmpty(Window(Weather).Property(Current.Sunrise))">$INFO[Window(Weather).Property(Current.Sunrise),$LOCALIZE[31005] ,]</value>
+        <value condition="!String.IsEmpty(Window(Weather).Property(Today.Sunrise))">$INFO[Window(Weather).Property(Today.Sunrise),$LOCALIZE[31005] ,]</value>
+    </variable>
+
+    <variable name="Weather_Sunset">
+        <value condition="!String.IsEmpty(Window(Weather).Property(Current.Sunset))">$INFO[Window(Weather).Property(Current.Sunset),$LOCALIZE[31004] ,]</value>
+        <value condition="!String.IsEmpty(Window(Weather).Property(Today.Sunset))">$INFO[Window(Weather).Property(Today.Sunset),$LOCALIZE[31004] ,]</value>
+    </variable>
+
+    <variable name="Weather_LowTemp">
+        <value condition="!String.IsEmpty(Window(Weather).Property(Current.LowTemp))">$INFO[Window(Weather).Property(Current.LowTemp),,°]</value>
+        <value condition="!String.IsEmpty(Window(Weather).Property(Day0.LowTemp))">$INFO[Window(Weather).Property(Day0.LowTemp),,°]</value>
+    </variable>
+    <variable name="Weather_HighTemp">
+        <value condition="!String.IsEmpty(Window(Weather).Property(Current.HighTemp))">$INFO[Window(Weather).Property(Current.HighTemp),,°]</value>
+        <value condition="!String.IsEmpty(Window(Weather).Property(Day0.HighTemp))">$INFO[Window(Weather).Property(Day0.HighTemp),,°]</value>
+    </variable>
 </includes>
