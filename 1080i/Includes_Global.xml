@@ -76,6 +76,17 @@
                 <animation effect="zoom" start="110" end="130" center="auto" time="10000" tween="sine" easing="inout" pulse="true" condition="Skin.HasSetting(AnimatedFanart)">Conditional</animation>
                 <animation effect="slide" start="-30,-30" end="30,30" time="6000" tween="sine" easing="inout" pulse="true" condition="Skin.HasSetting(AnimatedFanart)">Conditional</animation>
             </control>
+
+            <control type="image">
+                <width>400</width>
+                <aspectratio align="right" aligny="top">keep</aspectratio>
+                <top>30</top>
+                <right>30</right>
+                <height>155</height>
+                <fadetime>300</fadetime>
+                <texture background="true">$VAR[Image_ClearLogo]</texture>
+                <visible>Skin.HasSetting(ShowClearLogo)</visible>
+            </control>
         </control>
     </include>
 
@@ -133,7 +144,7 @@
         <value condition="Window.IsVisible(DialogVideoInfo.xml) + [String.IsEqual(Window(Home).Property(FocusedList),9502) | Control.HasFocus(9502)] + String.IsEmpty(Window(Home).Property(ListFanartContent)) + !String.IsEmpty(Skin.String(fanart.fallback))">$INFO[Skin.String(fanart.fallback)]</value>
         <value condition="Window.IsVisible(DialogVideoInfo.xml) + [String.IsEqual(Window(Home).Property(FocusedList),9502) | Control.HasFocus(9502)] + String.IsEmpty(Window(Home).Property(ListFanartContent))">special://skin/extras/backgrounds/default.jpg</value>
 
-        <!-- Misc -->
+        <!-- Weather -->
         <value condition="Window.IsVisible(weather) + !String.IsEmpty(Skin.String(weather.fanart.path))">$INFO[Skin.String(weather.fanart.path)]$INFO[Window(Weather).Property(Current.FanartCode)]/</value>        
 
         <!-- Home Window -->
@@ -160,6 +171,9 @@
         <value condition="Window.IsVisible(1102) + !String.IsEmpty(Window(Home).Property(SkinHelper.AllTvShowsBackground.Wall))">$INFO[Window(Home).Property(SkinHelper.AllTvShowsBackground.Wall)]</value>
         <value condition="Window.IsVisible(1103) + !String.IsEmpty(Window(Home).Property(SkinHelper.AllMusicBackground.Wall))">$INFO[Window(Home).Property(SkinHelper.AllMusicBackground.Wall)]</value>
         <value condition="[Window.IsVisible(1101) | Window.IsVisible(1102) | Window.IsVisible(1103) | Window.IsVisible(1104) | Window.IsVisible(1105) | Window.IsVisible(1106) | Window.IsVisible(1107) | Window.IsVisible(1108) | Window.IsVisible(1109) | Window.IsVisible(1110) | Window.IsVisible(1111)] + !String.IsEmpty(Window(Home).Property(SkinHelper.AllMoviesBackground.Wall))">$INFO[Window(Home).Property(SkinHelper.AllMoviesBackground.Wall)]</value>
+
+        <!-- Pictures -->
+        <value condition="Window.IsVisible(MyPics.xml) + !String.IsEmpty(ListItem.FileNameAndPath)">$INFO[ListItem.FileNameAndPath]</value>
 
         <!-- Fallback -->
         <value condition="!String.IsEmpty(Skin.String(fanart.fallback))">$INFO[Skin.String(fanart.fallback)]</value>

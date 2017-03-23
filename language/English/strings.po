@@ -376,6 +376,11 @@ msgctxt "#31071"
 msgid "IMDB Top250"
 msgstr ""
 
+#: /1080i/SkinSettings.xml
+msgctxt "#31072"
+msgid "Show clearlogo in upper right corner of fanart"
+msgstr ""
+
 msgctxt "#31101"
 msgid "items"
 msgstr ""

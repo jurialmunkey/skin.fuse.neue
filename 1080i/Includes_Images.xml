@@ -1,5 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <includes>
+    <variable name="Image_ClearLogo">
+        <value condition="!String.IsEmpty(ListItem.Art(clearlogo))">$INFO[ListItem.Art(clearlogo)]</value>
+        <value condition="!String.IsEmpty(Window(Home).Property(SkinHelper.ListItem.Art.Clearlogo))">$INFO[Window(Home).Property(SkinHelper.ListItem.Art.Clearlogo)]</value>
+    </variable>
+
     <variable name="Image_Overlay">
         <value condition="ListItem.IsPlaying">indicator/play.png</value>
         <value condition="ListItem.IsResumable">indicator/inprogress.png</value>
