@@ -2,6 +2,8 @@
 Fix weather sunrise / sunset labels
 Fix duration dot bug for shows one hour long
 Modify parallax scroll to be exactly statusbar height for future transparency options
+Fix item count showing for weather
+Add options menu for pvr windows
 
 [B]0.9.22[/B]
 Add skin settings descriptions

@@ -12,6 +12,8 @@
         <include content="Object_BigPoster">
             <param name="height" value="504" />
         </include>
+
+        <include>Object_PVRMenu</include>
         
         <include>Statusbar</include>
     </controls>

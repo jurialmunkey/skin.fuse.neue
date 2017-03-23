@@ -222,6 +222,8 @@
             </control>
 
         </control>
+
+        <include>Object_PVRMenu</include>
         <include>Statusbar</include>
     </controls>
 </window>
