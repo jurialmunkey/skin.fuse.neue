@@ -86,6 +86,8 @@
                 <fadetime>300</fadetime>
                 <texture background="true">$VAR[Image_ClearLogo]</texture>
                 <visible>Skin.HasSetting(ShowClearLogo)</visible>
+                <animation effect="slide" start="0" end="0,80" condition="Skin.HasSetting(ShowTopbar)">Conditional</animation>
+                <animation effect="zoom" start="100" end="75" center="auto" condition="Skin.HasSetting(ShowTopbar)">Conditional</animation>
             </control>
         </control>
     </include>
