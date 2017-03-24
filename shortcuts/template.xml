@@ -16,7 +16,7 @@
         <property name="target" tag="property" attribute="name|widgetTarget" />
         <controls>
             <control type="fixedlist" id="301">
-                <visible>[!Control.HasFocus(300) + !String.IsEmpty(Container(302).ListItem.Property(widgetType))]</visible>
+                <visible>[Integer.IsEqual(Window(Home).Property(MenuBarFocus),302) + !String.IsEmpty(Container(302).ListItem.Property(widgetType))]</visible>
                 <skinshortcuts>visibility</skinshortcuts>
                 <autoscroll time="10000">!Control.HasFocus(301)</autoscroll>
                 <include content="View_Square_Layout">
@@ -34,7 +34,7 @@
         <property name="target" tag="property" attribute="name|widgetTarget" />
         <controls>
             <control type="fixedlist" id="301">
-                <visible>[!Control.HasFocus(300) + !String.IsEmpty(Container(302).ListItem.Property(widgetType))]</visible>
+                <visible>[Integer.IsEqual(Window(Home).Property(MenuBarFocus),302) + !String.IsEmpty(Container(302).ListItem.Property(widgetType))]</visible>
                 <skinshortcuts>visibility</skinshortcuts>
                 <autoscroll time="10000">!Control.HasFocus(301)</autoscroll>
                 <include content="View_Square_Layout">
@@ -53,7 +53,7 @@
         <property name="target" tag="property" attribute="name|widgetTarget" />
         <controls>
             <control type="fixedlist" id="301">
-                <visible>[!Control.HasFocus(300) + !String.IsEmpty(Container(302).ListItem.Property(widgetType))]</visible>
+                <visible>[Integer.IsEqual(Window(Home).Property(MenuBarFocus),302) + !String.IsEmpty(Container(302).ListItem.Property(widgetType))]</visible>
                 <skinshortcuts>visibility</skinshortcuts>
                 <autoscroll time="10000">!Control.HasFocus(301)</autoscroll>
                 <include content="View_Square_Layout">
@@ -72,7 +72,7 @@
         <property name="target" tag="property" attribute="name|widgetTarget" />
         <controls>
             <control type="fixedlist" id="301">
-                <visible>[!Control.HasFocus(300) + !String.IsEmpty(Container(302).ListItem.Property(widgetType))]</visible>
+                <visible>[Integer.IsEqual(Window(Home).Property(MenuBarFocus),302) + !String.IsEmpty(Container(302).ListItem.Property(widgetType))]</visible>
                 <skinshortcuts>visibility</skinshortcuts>
                 <autoscroll time="10000">!Control.HasFocus(301)</autoscroll>
                 <include content="View_Square_Layout">
@@ -91,7 +91,7 @@
         <property name="target" tag="property" attribute="name|widgetTarget" />
         <controls>
             <control type="fixedlist" id="301">
-                <visible>[!Control.HasFocus(300) + !String.IsEmpty(Container(302).ListItem.Property(widgetType))]</visible>
+                <visible>[Integer.IsEqual(Window(Home).Property(MenuBarFocus),302) + !String.IsEmpty(Container(302).ListItem.Property(widgetType))]</visible>
                 <skinshortcuts>visibility</skinshortcuts>
                 <autoscroll time="10000">!Control.HasFocus(301)</autoscroll>
                 <include content="View_Square_Layout">
@@ -110,7 +110,7 @@
         <property name="target" tag="property" attribute="name|widgetTarget" />
         <controls>
             <control type="fixedlist" id="301">
-                <visible>[!Control.HasFocus(300) + !String.IsEmpty(Container(302).ListItem.Property(widgetType))]</visible>
+                <visible>[Integer.IsEqual(Window(Home).Property(MenuBarFocus),302) + !String.IsEmpty(Container(302).ListItem.Property(widgetType))]</visible>
                 <skinshortcuts>visibility</skinshortcuts>
                 <autoscroll time="10000">!Control.HasFocus(301)</autoscroll>
                 <include content="View_Square_Layout">
@@ -130,7 +130,7 @@
         <property name="target" tag="property" attribute="name|widgetTarget" />
         <controls>
             <control type="fixedlist" id="301">
-                <visible>[!Control.HasFocus(300) + !String.IsEmpty(Container(302).ListItem.Property(widgetType))]</visible>
+                <visible>[Integer.IsEqual(Window(Home).Property(MenuBarFocus),302) + !String.IsEmpty(Container(302).ListItem.Property(widgetType))]</visible>
                 <skinshortcuts>visibility</skinshortcuts>
                 <autoscroll time="10000">!Control.HasFocus(301)</autoscroll>
                 <include content="View_Posters_Layout">
@@ -148,7 +148,7 @@
         <property name="target" tag="property" attribute="name|widgetTarget" />
         <controls>
             <control type="fixedlist" id="301">
-                <visible>[!Control.HasFocus(300) + !String.IsEmpty(Container(302).ListItem.Property(widgetType))]</visible>
+                <visible>[Integer.IsEqual(Window(Home).Property(MenuBarFocus),302) + !String.IsEmpty(Container(302).ListItem.Property(widgetType))]</visible>
                 <skinshortcuts>visibility</skinshortcuts>
                 <autoscroll time="10000">!Control.HasFocus(301)</autoscroll>
                 <include content="View_Landscape_Layout">
@@ -166,7 +166,7 @@
         <controls>
             <control type="fixedlist" id="301">
                 <visible>Skin.HasSetting(TvShowPosters) + !String.Contains(Container(302).ListItem.Property(widgetPath),episodes)</visible>
-                <visible>!Control.HasFocus(300) + !String.IsEmpty(Container(302).ListItem.Property(widgetType))</visible>
+                <visible>Integer.IsEqual(Window(Home).Property(MenuBarFocus),302) + !String.IsEmpty(Container(302).ListItem.Property(widgetType))</visible>
                 <skinshortcuts>visibility</skinshortcuts>
                 <autoscroll time="10000">!Control.HasFocus(301)</autoscroll>
                 <include content="View_Posters_Layout">
@@ -176,7 +176,7 @@
             </control>
             <control type="fixedlist" id="301">
                 <visible>!Skin.HasSetting(TvShowPosters) | String.Contains(Container(302).ListItem.Property(widgetPath),episodes)</visible>
-                <visible>!Control.HasFocus(300) + !String.IsEmpty(Container(302).ListItem.Property(widgetType))</visible>
+                <visible>Integer.IsEqual(Window(Home).Property(MenuBarFocus),302) + !String.IsEmpty(Container(302).ListItem.Property(widgetType))</visible>
                 <skinshortcuts>visibility</skinshortcuts>
                 <autoscroll time="10000">!Control.HasFocus(301)</autoscroll>
                 <include content="View_Landscape_Layout">
@@ -194,7 +194,7 @@
         <property name="target" tag="property" attribute="name|widgetTarget" />
         <controls>
             <control type="fixedlist" id="301">
-                <visible>[!Control.HasFocus(300) + !String.IsEmpty(Container(302).ListItem.Property(widgetType))]</visible>
+                <visible>[Integer.IsEqual(Window(Home).Property(MenuBarFocus),302) + !String.IsEmpty(Container(302).ListItem.Property(widgetType))]</visible>
                 <skinshortcuts>visibility</skinshortcuts>
                 <autoscroll time="10000">!Control.HasFocus(301)</autoscroll>
                 <include content="View_List_Layout">
@@ -221,7 +221,7 @@
         <property name="target" tag="property" attribute="name|widgetTarget" />
         <controls>
             <control type="fixedlist" id="301">
-                <visible>Control.HasFocus(300) | String.IsEmpty(Container(302).ListItem.Property(widgetType))</visible>
+                <visible>!Integer.IsEqual(Window(Home).Property(MenuBarFocus),302) | String.IsEmpty(Container(302).ListItem.Property(widgetType))</visible>
                 <skinshortcuts>visibility</skinshortcuts>
                 <autoscroll time="10000">!Control.HasFocus(301)</autoscroll>
                 <include content="View_Square_Layout">
@@ -238,7 +238,7 @@
         <property name="target" tag="property" attribute="name|widgetTarget" />
         <controls>
             <control type="fixedlist" id="301">
-                <visible>Control.HasFocus(300) | String.IsEmpty(Container(302).ListItem.Property(widgetType))</visible>
+                <visible>!Integer.IsEqual(Window(Home).Property(MenuBarFocus),302) | String.IsEmpty(Container(302).ListItem.Property(widgetType))</visible>
                 <skinshortcuts>visibility</skinshortcuts>
                 <autoscroll time="10000">!Control.HasFocus(301)</autoscroll>
                 <include content="View_Square_Layout">
@@ -256,7 +256,7 @@
         <property name="target" tag="property" attribute="name|widgetTarget" />
         <controls>
             <control type="fixedlist" id="301">
-                <visible>Control.HasFocus(300) | String.IsEmpty(Container(302).ListItem.Property(widgetType))</visible>
+                <visible>!Integer.IsEqual(Window(Home).Property(MenuBarFocus),302) | String.IsEmpty(Container(302).ListItem.Property(widgetType))</visible>
                 <skinshortcuts>visibility</skinshortcuts>
                 <autoscroll time="10000">!Control.HasFocus(301)</autoscroll>
                 <include content="View_Square_Layout">
@@ -274,7 +274,7 @@
         <property name="target" tag="property" attribute="name|widgetTarget" />
         <controls>
             <control type="fixedlist" id="301">
-                <visible>Control.HasFocus(300) | String.IsEmpty(Container(302).ListItem.Property(widgetType))</visible>
+                <visible>!Integer.IsEqual(Window(Home).Property(MenuBarFocus),302) | String.IsEmpty(Container(302).ListItem.Property(widgetType))</visible>
                 <skinshortcuts>visibility</skinshortcuts>
                 <autoscroll time="10000">!Control.HasFocus(301)</autoscroll>
                 <include content="View_Square_Layout">
@@ -292,7 +292,7 @@
         <property name="target" tag="property" attribute="name|widgetTarget" />
         <controls>
             <control type="fixedlist" id="301">
-                <visible>Control.HasFocus(300) | String.IsEmpty(Container(302).ListItem.Property(widgetType))</visible>
+                <visible>!Integer.IsEqual(Window(Home).Property(MenuBarFocus),302) | String.IsEmpty(Container(302).ListItem.Property(widgetType))</visible>
                 <skinshortcuts>visibility</skinshortcuts>
                 <autoscroll time="10000">!Control.HasFocus(301)</autoscroll>
                 <include content="View_Square_Layout">
@@ -310,7 +310,7 @@
         <property name="target" tag="property" attribute="name|widgetTarget" />
         <controls>
             <control type="fixedlist" id="301">
-                <visible>Control.HasFocus(300) | String.IsEmpty(Container(302).ListItem.Property(widgetType))</visible>
+                <visible>!Integer.IsEqual(Window(Home).Property(MenuBarFocus),302) | String.IsEmpty(Container(302).ListItem.Property(widgetType))</visible>
                 <skinshortcuts>visibility</skinshortcuts>
                 <autoscroll time="10000">!Control.HasFocus(301)</autoscroll>
                 <include content="View_Square_Layout">
@@ -330,7 +330,7 @@
         <property name="target" tag="property" attribute="name|widgetTarget" />
         <controls>
             <control type="fixedlist" id="301">
-                <visible>Control.HasFocus(300) | String.IsEmpty(Container(302).ListItem.Property(widgetType))</visible>
+                <visible>!Integer.IsEqual(Window(Home).Property(MenuBarFocus),302) | String.IsEmpty(Container(302).ListItem.Property(widgetType))</visible>
                 <skinshortcuts>visibility</skinshortcuts>
                 <autoscroll time="10000">!Control.HasFocus(301)</autoscroll>
                 <include content="View_Posters_Layout">
@@ -348,7 +348,7 @@
         <property name="target" tag="property" attribute="name|widgetTarget" />
         <controls>
             <control type="fixedlist" id="301">
-                <visible>Control.HasFocus(300) | String.IsEmpty(Container(302).ListItem.Property(widgetType))</visible>
+                <visible>!Integer.IsEqual(Window(Home).Property(MenuBarFocus),302) | String.IsEmpty(Container(302).ListItem.Property(widgetType))</visible>
                 <skinshortcuts>visibility</skinshortcuts>
                 <autoscroll time="10000">!Control.HasFocus(301)</autoscroll>
                 <include content="View_Landscape_Layout">
@@ -366,7 +366,7 @@
         <controls>
             <control type="fixedlist" id="301">
                 <visible>Skin.HasSetting(TvShowPosters) + !String.Contains(Container(300).ListItem.Property(widgetPath),episodes)</visible>
-                <visible>Control.HasFocus(300) | String.IsEmpty(Container(302).ListItem.Property(widgetType))</visible>
+                <visible>!Integer.IsEqual(Window(Home).Property(MenuBarFocus),302) | String.IsEmpty(Container(302).ListItem.Property(widgetType))</visible>
                 <skinshortcuts>visibility</skinshortcuts>
                 <autoscroll time="10000">!Control.HasFocus(301)</autoscroll>
                 <include content="View_Posters_Layout">
@@ -376,7 +376,7 @@
             </control>
             <control type="fixedlist" id="301">
                 <visible>!Skin.HasSetting(TvShowPosters) | String.Contains(Container(300).ListItem.Property(widgetPath),episodes)</visible>
-                <visible>Control.HasFocus(300) | String.IsEmpty(Container(302).ListItem.Property(widgetType))</visible>
+                <visible>!Integer.IsEqual(Window(Home).Property(MenuBarFocus),302) | String.IsEmpty(Container(302).ListItem.Property(widgetType))</visible>
                 <skinshortcuts>visibility</skinshortcuts>
                 <autoscroll time="10000">!Control.HasFocus(301)</autoscroll>
                 <include content="View_Landscape_Layout">
@@ -394,7 +394,7 @@
         <property name="target" tag="property" attribute="name|widgetTarget" />
         <controls>
             <control type="fixedlist" id="301">
-                <visible>Control.HasFocus(300) | String.IsEmpty(Container(302).ListItem.Property(widgetType))</visible>
+                <visible>!Integer.IsEqual(Window(Home).Property(MenuBarFocus),302) | String.IsEmpty(Container(302).ListItem.Property(widgetType))</visible>
                 <skinshortcuts>visibility</skinshortcuts>
                 <autoscroll time="10000">!Control.HasFocus(301)</autoscroll>
                 <include content="View_List_Layout">
@@ -413,7 +413,7 @@
             <control type="fixedlist" id="301">
                 <visible>String.IsEqual(Skin.String(home.fallbackwidget.type),movies) | String.IsEqual(Skin.String(home.fallbackwidget.type),sets) | String.IsEqual(Skin.String(home.fallbackwidget.type),seasons) | String.IsEmpty(Skin.String(home.fallbakcwidget.type))</visible>
                 <visible>!String.IsEqual(Skin.String(home.fallbackwidget.name),Favourites)</visible>
-                <visible>Control.HasFocus(300) | String.IsEmpty(Container(302).ListItem.Property(widgetType))</visible>
+                <visible>!Integer.IsEqual(Window(Home).Property(MenuBarFocus),302) | String.IsEmpty(Container(302).ListItem.Property(widgetType))</visible>
                 <skinshortcuts>visibility</skinshortcuts>
                 <autoscroll time="10000">!Control.HasFocus(301)</autoscroll>
                 <include content="View_Posters_Layout">
@@ -423,7 +423,7 @@
             </control>
             <control type="fixedlist" id="301">
                 <visible>String.IsEqual(Skin.String(home.fallbackwidget.type),tvshows) | String.IsEqual(Skin.String(home.fallbackwidget.type),episodes) | String.IsEqual(Skin.String(home.fallbackwidget.type),videos)</visible>
-                <visible>Control.HasFocus(300) | String.IsEmpty(Container(302).ListItem.Property(widgetType))</visible>
+                <visible>!Integer.IsEqual(Window(Home).Property(MenuBarFocus),302) | String.IsEmpty(Container(302).ListItem.Property(widgetType))</visible>
                 <skinshortcuts>visibility</skinshortcuts>
                 <autoscroll time="10000">!Control.HasFocus(301)</autoscroll>
                 <include content="View_Landscape_Layout">
@@ -433,7 +433,7 @@
             </control>
             <control type="fixedlist" id="301">
                 <visible>String.IsEqual(Skin.String(home.fallbackwidget.type),artists) | String.IsEqual(Skin.String(home.fallbackwidget.type),albums) | String.IsEqual(Skin.String(home.fallbackwidget.type),addons) | String.IsEqual(Skin.String(home.fallbackwidget.type),program) | String.IsEqual(Skin.String(home.fallbackwidget.type),pictures) | String.IsEqual(Skin.String(home.fallbackwidget.type),picture) | String.IsEqual(Skin.String(home.fallbackwidget.type),video) | String.IsEqual(Skin.String(home.fallbackwidget.type),audio) | String.IsEqual(Skin.String(home.fallbackwidget.type),musicvideos)  | String.IsEqual(Skin.String(home.fallbackwidget.name),Favourites)</visible>
-                <visible>Control.HasFocus(300) | String.IsEmpty(Container(302).ListItem.Property(widgetType))</visible>
+                <visible>!Integer.IsEqual(Window(Home).Property(MenuBarFocus),302) | String.IsEmpty(Container(302).ListItem.Property(widgetType))</visible>
                 <skinshortcuts>visibility</skinshortcuts>
                 <autoscroll time="10000">!Control.HasFocus(301)</autoscroll>
                 <include content="View_Square_Layout">
@@ -443,7 +443,7 @@
             </control>
             <control type="fixedlist" id="301">
                 <visible>String.IsEqual(Skin.String(home.fallbackwidget.type),songs) | String.IsEqual(Skin.String(home.fallbackwidget.type),files)</visible>
-                <visible>Control.HasFocus(300) | String.IsEmpty(Container(302).ListItem.Property(widgetType))</visible>
+                <visible>!Integer.IsEqual(Window(Home).Property(MenuBarFocus),302) | String.IsEmpty(Container(302).ListItem.Property(widgetType))</visible>
                 <skinshortcuts>visibility</skinshortcuts>
                 <autoscroll time="10000">!Control.HasFocus(301)</autoscroll>
                 <include content="View_List_Layout">

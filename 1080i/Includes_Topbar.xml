@@ -96,6 +96,7 @@
 
     <include name="Topbar_MainMenu_Home">
         <control type="list" id="300">
+            <onfocus>SetProperty(MenuBarFocus,300,Home)</onfocus>
             <include>Topbar_OnClick</include>
             <include>Topbar_OnFocus</include>
             <include>Topbar_MainMenu_Movement</include>
@@ -275,6 +276,7 @@
 
     <include name="Topbar_SubMenu_Home">
         <control type="panel" id="302">
+            <onfocus>SetProperty(MenuBarFocus,302,Home)</onfocus>
             <include>Topbar_OnClick</include>
             <include>Topbar_OnFocus</include>
             <include>Topbar_SubMenu_Movement</include>

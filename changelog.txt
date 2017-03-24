@@ -1,3 +1,6 @@
+[B]0.9.24[/B]
+Fix for onup widgets. Widget focus based on properties not menufocus.
+
 [B]0.9.23[/B]
 Fix weather sunrise / sunset labels
 Fix duration dot bug for shows one hour long
