@@ -36,7 +36,7 @@
             <visible>!Player.Seeking</visible>
             <visible>Player.HasMedia</visible>
         </control>
-        <control type="progress" id="401">
+        <control type="progress">
             <width>100%</width>
             <top>0</top>
             <bottom>0</bottom>
@@ -46,6 +46,18 @@
             <midtexture colordiffuse="main_fg_12">osd/progress-end.png</midtexture>
             <righttexture colordiffuse="main_fg_12">osd/progress-end.png</righttexture>
             <visible>Player.HasMedia</visible>
+            <visible>!Window.IsVisible(VideoFullScreen.xml) + !Window.IsVisible(MusicVisualisation.xml)</visible>
+        </control>
+        <control type="progress" id="401">
+            <width>100%</width>
+            <top>0</top>
+            <bottom>0</bottom>
+            <texturebg colordiffuse="00ffffff">osd/progress-bg.png</texturebg>
+            <lefttexture colordiffuse="main_fg_12">osd/progress-end.png</lefttexture>
+            <midtexture colordiffuse="main_fg_12">osd/progress-end.png</midtexture>
+            <righttexture colordiffuse="main_fg_12">osd/progress-end.png</righttexture>
+            <visible>Player.HasMedia</visible>
+            <visible>Window.IsVisible(VideoFullScreen.xml) | Window.IsVisible(MusicVisualisation.xml)</visible>
         </control>
     </include>
 
