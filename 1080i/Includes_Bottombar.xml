@@ -78,10 +78,10 @@
 
     <include name="Bottombar_Infobar">
         <control type="group">
-            <bottom>0</bottom>
+            <bottom>-500</bottom>
             <left>0</left>
             <right>0</right>
-            <height>520</height>
+            <height>1020</height>
             <include>Bottombar_Infobar_Texture</include>
             <include>Animation_Bottombar_Infobar</include>
             <control type="group">
@@ -200,6 +200,7 @@
                 <right>30</right>
                 <control type="textbox" id="9399">
                     <label>$VAR[Label_Plot]</label>
+                    <include condition="Skin.HasSetting(EnableTransparency)">Animation_Bottombar_Infobar_Plot</include>
                     <font>font_plotbox</font>
                     <textcolor>panel_fg_100</textcolor>
                 </control>
@@ -281,6 +282,7 @@
             <right>30</right>
             <control type="textbox" id="9399">
                 <label>$VAR[Label_Plot]</label>
+                <include condition="Skin.HasSetting(EnableTransparency)">Animation_Bottombar_Infobar_Plot</include>
                 <font>font_plotbox</font>
                 <textcolor>panel_fg_100</textcolor>
             </control>
@@ -354,6 +356,7 @@
                 <right>30</right>
                 <control type="textbox" id="9399">
                     <label>$VAR[Label_Widget_Plot]</label>
+                    <include condition="Skin.HasSetting(EnableTransparency)">Animation_Bottombar_Infobar_Plot</include>
                     <font>font_plotbox</font>
                     <textcolor>panel_fg_100</textcolor>
                 </control>
@@ -375,6 +378,7 @@
             <bottom>0</bottom>
             <top>0</top>
             <texture>common/gradient-solid.png</texture>
+            <animation effect="fade" start="100" end="66" condition="Skin.HasSetting(EnableTransparency)">Conditional</animation>
         </control>
         <control type="image">
             <top>0</top>

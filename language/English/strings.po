@@ -386,6 +386,21 @@ msgctxt "#31073"
 msgid "Show discart"
 msgstr ""
 
+#: /1080i/SkinSettings.xml
+msgctxt "#31074"
+msgid "Make bottom bar transparent"
+msgstr ""
+
+#: /1080i/SkinSettings.xml
+msgctxt "#31075"
+msgid "Apply transparency to bottom bar"
+msgstr ""
+
+#: /1080i/SkinSettings.xml
+msgctxt "#31076"
+msgid "Enable transparency"
+msgstr ""
+
 msgctxt "#31101"
 msgid "items"
 msgstr ""

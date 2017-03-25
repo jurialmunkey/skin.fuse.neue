@@ -402,6 +402,15 @@
                         <onclick>RunScript(script.skinshortcuts,type=manage&amp;group=powermenu)</onclick>
                     </control>
 
+                    <control type="radiobutton" id="9275" description="Make bottombar transparent">
+                        <visible>ControlGroup(9100).HasFocus(9107)</visible>
+                        <onback>300</onback>
+                        <include>Defs_Settings_Button</include>
+                        <label>$LOCALIZE[31076]</label>
+                        <selected>Skin.HasSetting(EnableTransparency)</selected>
+                        <onclick>Skin.ToggleSetting(EnableTransparency)</onclick>
+                    </control>
+
                     <!-- ============ -->
                     <!-- Dependencies -->
                     <!-- ============ -->
