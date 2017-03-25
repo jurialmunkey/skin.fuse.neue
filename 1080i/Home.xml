@@ -36,6 +36,7 @@
                     <param name="container" value="Container(301)." />
                     <param name="visible" value="true" />
                     <param name="variable" value="$VAR[Image_Poster_Home]" />
+                    <param name="discart" value="true" />
                 </include>
             </control>
             <control type="group">
@@ -47,6 +48,7 @@
                     <param name="visible" value="true" />
                     <param name="variable" value="$VAR[Image_Poster_Home]" />
                     <param name="height" value="504" />
+                    <param name="discart" value="true" />
                 </include>
             </control>
         </control>

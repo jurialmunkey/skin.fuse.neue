@@ -5,6 +5,12 @@
         <value condition="!String.IsEmpty(Window(Home).Property(SkinHelper.ListItem.Art.Clearlogo))">$INFO[Window(Home).Property(SkinHelper.ListItem.Art.Clearlogo)]</value>
     </variable>
 
+    <variable name="Image_DiscArt">
+        <value condition="!String.IsEmpty(ListItem.Art(discart))">$INFO[ListItem.Art(discart)]</value>
+        <value condition="!String.IsEmpty(Container(301).ListItem.Art(discart))">$INFO[Container(301).ListItem.Art(discart)]</value>
+        <value condition="!String.IsEmpty(Window(Home).Property(SkinHelper.ListItem.Art.DiscArt))">$INFO[Window(Home).Property(SkinHelper.ListItem.Art.DiscArt)]</value>
+    </variable>
+
     <variable name="Image_Overlay">
         <value condition="ListItem.IsPlaying">indicator/play.png</value>
         <value condition="ListItem.IsResumable">indicator/inprogress.png</value>

@@ -381,6 +381,11 @@ msgctxt "#31072"
 msgid "Show clearlogo in upper right corner of fanart"
 msgstr ""
 
+#: /1080i/SkinSettings.xml
+msgctxt "#31073"
+msgid "Show discart"
+msgstr ""
+
 msgctxt "#31101"
 msgid "items"
 msgstr ""

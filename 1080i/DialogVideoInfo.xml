@@ -12,6 +12,7 @@
             <visible>!Window.IsVisible(script-script.extendedinfo-DialogVideoInfo.xml) + !Window.IsVisible(script-script.extendedinfo-DialogInfo.xml)</visible>
             <include content="Object_BigPoster">
                 <param name="variable" value="$VAR[Image_Poster_Info]"/>
+                <param name="discart" value="true" />
             </include>
             <control type="group">
                 <bottom>0</bottom>
