@@ -97,6 +97,7 @@
                             <orientation>horizontal</orientation>
                             <height>40</height>
                             <width>100%</width>
+                            <visible>!String.IsEmpty(MusicPlayer.offset(1).Title)</visible>
                             <control type="label">
                                 <aligny>top</aligny>
                                 <width>84</width>
