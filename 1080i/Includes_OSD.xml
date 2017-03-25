@@ -33,13 +33,14 @@
                 <control type="group" description="info">
                     <left>800</left>
                     <right>SidePad</right>
-                    <top>310</top>
+                    <top>100</top>
                     <bottom>SidePad</bottom>
                     <control type="grouplist">
                         <top>400</top>
                         <left>40</left>
                         <bottom>10</bottom>
                         <right>0</right>
+                        <align>bottom</align>
                         <!-- <animation effect="slide" start="0" end="0,-400" time="200" condition="Window.IsVisible(script-cu-lrclyrics-main.xml)">Conditional</animation> -->
                         <control type="label">
                             <aligny>top</aligny>
@@ -73,7 +74,7 @@
                         <control type="grouplist">
                             <itemgap>0</itemgap>
                             <orientation>horizontal</orientation>
-                            <height>70</height>
+                            <height>80</height>
                             <width>100%</width>
                             <control type="label">
                                 <aligny>top</aligny>
@@ -89,6 +90,28 @@
                                 <textcolor>main_fg_70</textcolor>
                                 <font>font_musicvis_album</font>
                                 <label>$INFO[MusicPlayer.Album]</label>
+                            </control>
+                        </control>
+                        <control type="grouplist">
+                            <itemgap>0</itemgap>
+                            <orientation>horizontal</orientation>
+                            <height>40</height>
+                            <width>100%</width>
+                            <control type="label">
+                                <aligny>top</aligny>
+                                <width>84</width>
+                                <label>$LOCALIZE[209]...</label>
+                                <textcolor>main_fg_70</textcolor>
+                                <font>font_plotbox</font>
+                                <animation effect="fade" start="100" end="50" condition="true">Conditional</animation>
+                            </control>
+                            <control type="label">
+                                <aligny>top</aligny>
+                                <width>auto</width>
+                                <textcolor>main_fg_70</textcolor>
+                                <font>font_plotbox</font>
+                                <animation effect="fade" start="100" end="75" condition="true">Conditional</animation>
+                                <label>$INFO[MusicPlayer.offset(1).Artist,,  -  ]$INFO[MusicPlayer.offset(1).Title]</label>
                             </control>
                         </control>
                     </control>
