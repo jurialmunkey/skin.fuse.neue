@@ -7,6 +7,8 @@
     <onload condition="!String.IsEmpty(Window(Home).Property(OSDViewMode))">ClearProperty(OSDViewMode,Home)</onload>
     <onload>SetProperty(ShowTopbar,1,Home)</onload>
     <onunload>SetProperty(ShowTopbar,0,Home)</onunload>
+    <onunload condition="!String.IsEmpty(Window(Home).Property(OSDExtendedInfo)) + Player.Paused">Play</onunload>
+    <onunload condition="!String.IsEmpty(Window(Home).Property(OSDExtendedInfo))">ClearProperty(OSDExtendedInfo,Home)</onunload>
     <zorder>1</zorder>
     <controls>
 
