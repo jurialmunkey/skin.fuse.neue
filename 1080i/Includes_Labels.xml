@@ -22,8 +22,11 @@
     </variable>
 
     <variable name="Label_Statusbar_NextAired">
-        <value condition="!String.IsEmpty(Window(Home).Property(NextAired.NextDate))">[COLOR=main_fg_70]$INFO[Window(Home).Property(NextAired.NextTitle),,  ][/COLOR]$INFO[Window(Home).Property(NextAired.AirTime),, • ]$INFO[Window(Home).Property(NextAired.NextDate)]</value>
-        <value condition="String.IsEmpty(Window(Home).Property(NextAired.NextDate)) + !String.IsEmpty(Window(Home).Property(NextAired.LatestTitle))">[COLOR=main_fg_70]$INFO[Window(Home).Property(NextAired.LatestTitle),,  ][/COLOR]$INFO[Window(Home).Property(NextAired.Status),, • ]$INFO[Window(Home).Property(NextAired.LatestDate)]</value>
+        <value condition="!String.IsEmpty(Window(Home).Property(NextAired.NextDate))">[COLOR=main_fg_70]$INFO[Window(Home).Property(NextAired.NextNumber),,. ]$INFO[Window(Home).Property(NextAired.NextTitle),,  ][/COLOR]$INFO[Window(Home).Property(NextAired.AirTime),, • ]$INFO[Window(Home).Property(NextAired.NextDate)]</value>
+        <value condition="String.IsEmpty(Window(Home).Property(NextAired.NextDate)) + !String.IsEmpty(Window(Home).Property(NextAired.LatestTitle))">[COLOR=main_fg_70]$INFO[Window(Home).Property(NextAired.LatestNumber),,. ]$INFO[Window(Home).Property(NextAired.LatestTitle),,  ][/COLOR]$INFO[Window(Home).Property(NextAired.Status),, • ]$INFO[Window(Home).Property(NextAired.LatestDate)]</value>
+
+        <value condition="!String.IsEmpty(Window(Home).Property(SkinHelper.ListItem.NextEpisode.Label))">[COLOR=main_fg_70]$INFO[Window(Home).Property(SkinHelper.ListItem.NextEpisode.Label),,  ][/COLOR]$INFO[Window(Home).Property(SkinHelper.ListItem.NextEpisode.AirDay),,: ]$INFO[Window(Home).Property(SkinHelper.ListItem.NextEpisode.AirTime),, • ]$INFO[Window(Home).Property(SkinHelper.ListItem.NextEpisode.Airdate)]</value>
+        <value condition="!String.IsEmpty(Window(Home).Property(SkinHelper.ListItem.LastEpisode.Label))">[COLOR=main_fg_70]$INFO[Window(Home).Property(SkinHelper.ListItem.LastEpisode.Label),,  ][/COLOR]$INFO[Window(Home).Property(SkinHelper.ListItem.Status)]$INFO[Window(Home).Property(SkinHelper.ListItem.LastEpisode.Airdate), • ,]</value>
     </variable>
 
     <variable name="Label_SkinShortcuts_WidgetName">
