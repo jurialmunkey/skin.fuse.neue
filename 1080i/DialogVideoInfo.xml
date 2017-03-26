@@ -350,7 +350,8 @@
                         <label>$LOCALIZE[29915]</label>
                         <include>Dialog_Info_Buttons</include>
                         <onclick condition="String.IsEqual(ListItem.DbType,movie)">RunScript(script.extendedinfo,info=extendedinfo,name=$INFO[ListItem.Title],imdb_id=$INFO[ListItem.IMDBNumber])</onclick>
-                        <visible>System.hasAddon(script.extendedinfo) + String.IsEqual(ListItem.DbType,movie)</visible>
+                        <onclick condition="String.IsEqual(ListItem.DbType,tvshow) | String.IsEqual(ListItem.DbType,episode)">RunScript(script.extendedinfo,info=extendedtvinfo,name=$INFO[ListItem.TvShowTitle])</onclick>
+                        <visible>System.hasAddon(script.extendedinfo) + [String.IsEqual(ListItem.DbType,movie) | String.IsEqual(ListItem.DbType,tvshow) | String.IsEqual(ListItem.DbType,episode)]</visible>
                     </control>
 
                     <control type="button" id ="10">
