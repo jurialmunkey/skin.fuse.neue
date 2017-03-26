@@ -71,7 +71,6 @@
         <control type="image">
             <bottom>0</bottom>
             <top>0</top>
-            <animation effect="fade" start="100" end="66" condition="Skin.HasSetting(EnableTransparency)">Conditional</animation>
             <texture>common/gradient-solid.png</texture>
         </control>
         <control type="image">

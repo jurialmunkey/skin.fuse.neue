@@ -42,26 +42,26 @@
                 <bottom>78</bottom>
                 <width>504</width>
                 <height>$PARAM[height]</height>
-                    
-                <control type="image">
-                    <width>484</width>
-                    <height>484</height>
-                    <top>-210</top>
-                    <aspectratio>keep</aspectratio>
-                    <fadetime>100</fadetime>
-                    <centerleft>50%</centerleft>
-                    <texture background="true">$VAR[Image_DiscArt]</texture>
-                    <animation effect="slide" start="0,210" end="0" time="400" tween="quadratic" easing="out">Visible</animation>
+                <control type="group">
+                    <animation effect="slide" start="0,210" end="0" time="400" delay="400" tween="quadratic" easing="out">Visible</animation>
                     <animation effect="slide" start="0" end="0,210" time="400" tween="quadratic" easing="out">Hidden</animation>
-                    <animation effect="slide" start="0" end="0,120" time="400" tween="quadratic" easing="out" reversible="false" condition="[Control.HasFocus(300) | Control.HasFocus(302)] + !Skin.HasSetting(ShowTopbar)">Conditional</animation>
-                    <animation effect="slide" end="0" start="0,120" time="400" tween="quadratic" easing="out" reversible="false" condition="!Control.HasFocus(300) + !Control.HasFocus(302) + !Skin.HasSetting(ShowTopbar)">Conditional</animation>
                     <animation effect="slide" start="0" end="0,80" time="0" condition="Skin.HasSetting(ShowTopbar)">Conditional</animation>
-                    <animation effect="slide" start="0" end="0,40" time="400" tween="quadratic" easing="out" reversible="false" condition="[Control.HasFocus(300) | Control.HasFocus(302)] + Skin.HasSetting(ShowTopbar)">Conditional</animation>
-                    <animation effect="slide" end="0" start="0,40" time="400" tween="quadratic" easing="out" reversible="false" condition="!Control.HasFocus(300) + !Control.HasFocus(302) + Skin.HasSetting(ShowTopbar)">Conditional</animation>
+                    <visible>!Control.HasFocus(300) + !Control.HasFocus(302)</visible>
                     <visible>$PARAM[discart]</visible>
                     <visible>!ListItem.IsCollection + !Container(301).ListItem.IsCollection</visible>
                     <visible>Skin.HasSetting(ShowDiscArt)</visible>
                     <visible>!String.IsEmpty(Window(Home).Property(SkinHelper.ListItem.Art.DiscArt)) | !String.IsEmpty(ListItem.Art(discart)) | !String.IsEmpty(Container(301).ListItem.Art(discart))</visible>
+                    <visible>String.IsEmpty(Window(Home).Property(FocusedList))</visible>
+                    <control type="image">
+                        <width>424</width>
+                        <height>424</height>
+                        <top>-212</top>
+                        <aspectratio>keep</aspectratio>
+                        <fadetime>100</fadetime>
+                        <centerleft>50%</centerleft>
+                        <texture background="true">$VAR[Image_DiscArt]</texture>
+                        <!-- <animation effect="rotate" start="0" end="360" loop="true" time="20000" center="auto" reversible="false" condition="true">Conditional</animation> -->
+                    </control>
                 </control>
                 <animation type="WindowOpen" reversible="false" condition="[Window.Previous(MusicVisualisation.xml) | Window.Previous(VideoFullScreen.xml) | Window.Previous(Startup.xml)] + !Window.IsVisible(home)">
                     <effect type="slide" start="-534" end="0" time="400" delay="200" tween="quadratic" easing="out" />
