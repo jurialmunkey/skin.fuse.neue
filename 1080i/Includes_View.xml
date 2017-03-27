@@ -224,6 +224,7 @@
     <include name="View_Tiles">
         <control type="panel" id="52">
             <visible>Container.Content() | Container.Content(playlists) | Container.Content(tags)</visible>
+            <visible>false</visible>
             <include>View_Tiles_Layout</include>
         </control>
     </include>
@@ -235,7 +236,7 @@
     </include>
     <include name="View_List">
         <control type="fixedlist" id="54">
-            <visible>Container.Content(songs) | Container.Content(files) | Window.IsVisible(MyPlaylist.xml) | Container.Content(directors) | Container.Content(countries) | Container.Content(years)</visible>
+            <visible>Container.Content(songs) | Container.Content(files) | Window.IsVisible(MyPlaylist.xml) | Container.Content(directors) | Container.Content(countries) | Container.Content(years) | Container.Content() | Container.Content(playlists) | Container.Content(tags)</visible>
             <include>View_List_Layout</include>
         </control>
     </include>

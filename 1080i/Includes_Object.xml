@@ -107,15 +107,13 @@
                             <fadetime>100</fadetime>
                             <include>Defs_Shadow_Opaque</include>
                             <aspectratio aligny="center">scale</aspectratio>
-                            <texture background="true"  colordiffuse="main_fg_100" fallback="DefaultAddonNone.png">$INFO[$PARAM[container]ListItem.Icon]</texture>
-                            <visible>[!Container.Content(genres) + !Container.Content(studios)] | ListItem.IsParentFolder</visible>
+                            <texture colordiffuse="PosterBack" background="true">common/white.png</texture>
                         </control>
                         <control type="image">
                             <fadetime>100</fadetime>
-                            <include>Defs_Shadow_Opaque</include>
                             <aspectratio aligny="center">scale</aspectratio>
-                            <texture colordiffuse="PosterBack" background="true">common/white.png</texture>
-                            <visible>Container.Content(genres) + !ListItem.IsParentFolder</visible>
+                            <texture background="true"  colordiffuse="main_fg_100" fallback="DefaultAddonNone.png">$INFO[$PARAM[container]ListItem.Icon]</texture>
+                            <visible>[!Container.Content(genres) + !Container.Content(studios)] | ListItem.IsParentFolder</visible>
                         </control>
                         <control type="image">
                             <fadetime>100</fadetime>
@@ -123,13 +121,6 @@
                             <aspectratio aligny="center">keep</aspectratio>
                             <texture background="true" colordiffuse="main_fg_100" fallback="DefaultFolder.png">$INFO[$PARAM[container]ListItem.Label,resource://resource.images.moviegenreicons.transparent/,.png]</texture>
                             <visible>Container.Content(genres) + !ListItem.IsParentFolder</visible>
-                        </control>
-                        <control type="image">
-                            <fadetime>100</fadetime>
-                            <include>Defs_Shadow_Opaque</include>
-                            <aspectratio aligny="center">scale</aspectratio>
-                            <texture colordiffuse="PosterBack" background="true">common/white.png</texture>
-                            <visible>Container.Content(studios) + !ListItem.IsParentFolder</visible>
                         </control>
                         <control type="image">
                             <fadetime>100</fadetime>

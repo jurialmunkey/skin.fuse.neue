@@ -1,3 +1,6 @@
+[B]0.9.26[/B]
+Switch tiles view to list
+
 [B]0.9.25[/B]
 Add transparency option. Skin Settings > Miscellaneous > Enable transparency.
 Add Next track info on music.
