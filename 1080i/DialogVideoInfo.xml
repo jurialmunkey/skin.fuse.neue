@@ -6,6 +6,8 @@
     <onunload>ClearProperty(FocusedList,Home)</onunload>
     <onload>ClearProperty(ListFanartContent,Home)</onload>
     <onunload>ClearProperty(ListFanartContent,Home)</onunload>
+    <onload>AlarmClock(RotateDisc,SetProperty(RotateDisc,1,Home),00:01,silent)</onload>
+    <onunload>ClearProperty(RotateDisc,Home)</onunload>
     <controls>
 
         <control type="group">

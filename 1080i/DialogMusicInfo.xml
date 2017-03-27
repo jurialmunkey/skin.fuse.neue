@@ -2,6 +2,8 @@
 <!-- Foundation -->
 <window id="2001">
     <defaultcontrol always="true">9000</defaultcontrol>
+    <onload>AlarmClock(RotateDisc,SetProperty(RotateDisc,1,Home),00:01,silent)</onload>
+    <onunload>ClearProperty(RotateDisc,Home)</onunload>
     <controls>
         <control type="group">
             <visible>!Window.IsVisible(script-script.extendedinfo-DialogVideoInfo.xml) + !Window.IsVisible(script-script.extendedinfo-DialogInfo.xml)</visible>
@@ -104,6 +106,11 @@
                 </control>
             </control>
         </control>
+
+        <include content="Object_BigPoster">
+            <param name="discart" value="true" />
+            <param name="height" value="504" />
+        </include>
 
         <include>Statusbar_Info_Clock</include>
 

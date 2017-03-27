@@ -30,17 +30,19 @@
             </animation>
             <control type="group">
                 <visible>!Window.IsVisible(DialogVideoInfo.xml)</visible>
+                <visible>!Window.IsVisible(DialogMusicInfo.xml)</visible>
                 <visible>$EXP[Expression_ShowBigPosterHome]</visible>
                 <visible>!$EXP[Expression_ShowWeatherWidget]</visible>
                 <include content="Object_BigPoster">
                     <param name="container" value="Container(301)." />
                     <param name="visible" value="true" />
                     <param name="variable" value="$VAR[Image_Poster_Home]" />
-                    <param name="discart" value="true" />
+                    <param name="discart" value="false" />
                 </include>
             </control>
             <control type="group">
                 <visible>!Window.IsVisible(DialogVideoInfo.xml)</visible>
+                <visible>!Window.IsVisible(DialogMusicInfo.xml)</visible>
                 <visible>!$EXP[Expression_ShowBigPosterHome]</visible>
                 <visible>!$EXP[Expression_ShowWeatherWidget]</visible>
                 <include content="Object_BigPoster">
@@ -48,7 +50,7 @@
                     <param name="visible" value="true" />
                     <param name="variable" value="$VAR[Image_Poster_Home]" />
                     <param name="height" value="504" />
-                    <param name="discart" value="true" />
+                    <param name="discart" value="false" />
                 </include>
             </control>
         </control>

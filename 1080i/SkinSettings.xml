@@ -329,16 +329,16 @@
                         <visible>ControlGroup(9100).HasFocus(9104)</visible>
                         <onback>300</onback>
                         <label>$LOCALIZE[31072]</label>
-                        <onclick>Skin.ToggleSetting(ShowClearLogo)</onclick>
-                        <selected>Skin.HasSetting(ShowClearLogo)</selected>
+                        <onclick>Skin.ToggleSetting(HideClearLogo)</onclick>
+                        <selected>!Skin.HasSetting(HideClearLogo)</selected>
                         <include>Defs_Settings_Button</include>
                     </control>
                     <control type="radiobutton" id="9247">
                         <visible>ControlGroup(9100).HasFocus(9104)</visible>
                         <onback>300</onback>
                         <label>$LOCALIZE[31073]</label>
-                        <onclick>Skin.ToggleSetting(ShowDiscArt)</onclick>
-                        <selected>Skin.HasSetting(ShowDiscArt)</selected>
+                        <onclick>Skin.ToggleSetting(HideDiscArt)</onclick>
+                        <selected>!Skin.HasSetting(HideDiscArt)</selected>
                         <include>Defs_Settings_Button</include>
                     </control>
                     <control type="radiobutton" id="9248">
