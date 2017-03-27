@@ -62,7 +62,7 @@
                         <fadetime>100</fadetime>
                         <centerleft>50%</centerleft>
                         <texture background="true">$VAR[Image_DiscArt]</texture>
-                        <animation effect="rotate" start="0" end="360" loop="true" time="30000" center="auto" reversible="false" condition="!String.IsEmpty(Window(Home).Property(RotateDisc))">Conditional</animation>
+                        <animation effect="rotate" start="0" end="360" loop="true" time="20000" center="auto" reversible="false" condition="!String.IsEmpty(Window(Home).Property(RotateDisc))">Conditional</animation>
                     </control>
                 </control>
                 <animation type="WindowOpen" reversible="false" condition="[Window.Previous(MusicVisualisation.xml) | Window.Previous(VideoFullScreen.xml) | Window.Previous(Startup.xml)] + !Window.IsVisible(home)">
