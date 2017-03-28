@@ -9,6 +9,7 @@
     <onload>SetProperty(550_onback,SetFocus(9000))</onload>
     <onload>ClearProperty(FocusedList,Home)</onload>
     <onunload>ClearProperty(FocusedList,Home)</onunload>
+    <onunload>SetFocus(9000)</onunload>
     <controls>
 
         <include>Global_Background</include>

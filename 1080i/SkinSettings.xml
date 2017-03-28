@@ -270,6 +270,14 @@
                         <onclick>Skin.ToggleSetting(ArtistSlideshow.Animate)</onclick>
                         <enable>Skin.HasSetting(musicvis.fanartfallback) | [!Skin.HasSetting(ArtistSlideShow.Disabled) + System.HasAddon(script.artistslideshow)]</enable>
                     </control>
+                    <control type="radiobutton" id="9235" description="Dont pause on information">
+                        <visible>ControlGroup(9100).HasFocus(9103)</visible>
+                        <onback>300</onback>
+                        <include>Defs_Settings_Button</include>
+                        <label>$LOCALIZE[31079]</label>
+                        <selected>!Skin.HasSetting(DontPauseOSD)</selected>
+                        <onclick>Skin.ToggleSetting(DontPauseOSD)</onclick>
+                    </control>
                     <!-- <control type="radiobutton" id="9235" description="Show detailed info on pause">
                         <visible>ControlGroup(9100).HasFocus(9103)</visible>
                         <onback>300</onback>
@@ -349,6 +357,14 @@
                         <selected>Skin.HasSetting(SkinHelper.EnableWallBackgrounds)</selected>
                         <include>Defs_Settings_Button</include>
                     </control>
+                    <control type="radiobutton" id="9249">
+                        <visible>ControlGroup(9100).HasFocus(9104)</visible>
+                        <onback>300</onback>
+                        <label>$LOCALIZE[31080]</label>
+                        <onclick>Skin.ToggleSetting(ArtworkDownloaderAll)</onclick>
+                        <selected>Skin.HasSetting(ArtworkDownloaderAll)</selected>
+                        <include>Defs_Settings_Button</include>
+                    </control>
                     
 
                     <!-- ====== -->
@@ -401,6 +417,15 @@
                         <label>31199</label>
                         <selected>Skin.HasSetting(global.kioskmode)</selected>
                         <onclick>Skin.ToggleSetting(global.kioskmode)</onclick>
+                    </control>
+
+                    <control type="radiobutton" id="9275" description="Hide plot">
+                        <visible>ControlGroup(9100).HasFocus(9107)</visible>
+                        <onback>300</onback>
+                        <include>Defs_Settings_Button</include>
+                        <label>$LOCALIZE[31081]</label>
+                        <selected>Skin.HasSetting(HidePlot)</selected>
+                        <onclick>Skin.ToggleSetting(HidePlot)</onclick>
                     </control>
 
                     <control type="button" id="9274" description="Customise Shutdown Menu">

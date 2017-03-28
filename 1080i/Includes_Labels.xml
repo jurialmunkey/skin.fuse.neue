@@ -87,6 +87,7 @@
     </variable>
 
     <variable name="Label_Widget_Plot">
+        <value condition="Skin.HasSetting(HidePlot) + !Window.IsActive(DialogVideoInfo.xml) + !Window.IsActive(script-script.extendedinfo-DialogVideoInfo.xml) + !Window.IsActive(script-script.extendedinfo-DialogInfo.xml)"></value>
         <value condition="Window.IsVisible(MyWeather.xml)"></value>
         <value condition="Window.IsVisible(script-script.extendedinfo-VideoList.xml) + !String.IsEmpty(Container(500).ListItem.Plot)">$INFO[Container(500).ListItem.Plot]</value>
         <value condition="Window.IsVisible(script-script.extendedinfo-DialogVideoInfo.xml) + !String.IsEmpty(Window.Property(plot)) + String.IsEmpty(Window(Home).Property(FocusedList)) + !Control.IsVisible(1000) + !Control.IsVisible(150) + !Control.IsVisible(350) + !Control.IsVisible(750) + !Control.IsVisible(850) + !Control.IsVisible(950)">$INFO[Window.Property(plot)]</value>
@@ -191,6 +192,7 @@
     </variable>
 
     <variable name="Label_Plot">
+        <value condition="Skin.HasSetting(HidePlot) + !Window.IsActive(DialogVideoInfo.xml) + !Window.IsActive(script-script.extendedinfo-DialogVideoInfo.xml) + !Window.IsActive(script-script.extendedinfo-DialogInfo.xml)"></value>
         <value condition="Window.IsVisible(MyWeather.xml)"></value>
         <value condition="Window.IsVisible(script-script.extendedinfo-DialogVideoInfo.xml) + !String.IsEmpty(Window.Property(plot)) + String.IsEmpty(Window(Home).Property(FocusedList)) + !Control.IsVisible(1000) + !Control.IsVisible(150) + !Control.IsVisible(350) + !Control.IsVisible(750) + !Control.IsVisible(850) + !Control.IsVisible(950)">$INFO[Window.Property(plot)]</value>
         <value condition="Window.IsVisible(script-script.extendedinfo-DialogInfo.xml) + !String.IsEmpty(Window.Property(Biography)) + String.IsEmpty(Window(Home).Property(FocusedList)) + !Control.IsVisible(150) + !Control.IsVisible(250) + !Control.IsVisible(350) + !Control.IsVisible(750)">$INFO[Window.Property(Biography)]</value>

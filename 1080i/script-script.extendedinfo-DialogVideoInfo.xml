@@ -12,6 +12,7 @@
     <onload>Dialog.Close(1112)</onload>
     <onload>ClearProperty(FocusedList,Home)</onload>
     <onunload>ClearProperty(FocusedList,Home)</onunload>
+    <onunload>SetFocus(9000)</onunload>
     <controls>
 
         <include>Global_Background</include>

@@ -411,6 +411,21 @@ msgctxt "#31078"
 msgid "Ended"
 msgstr ""
 
+#: /1080i/SkinSettings.xml
+msgctxt "#31079"
+msgid "Pause video when opening information from OSD"
+msgstr ""
+
+#: /1080i/SkinSettings.xml
+msgctxt "#31080"
+msgid "Artwork button downloads all available artwork (as specified in artwork downloader settings)"
+msgstr ""
+
+#: /1080i/SkinSettings.xml
+msgctxt "#31081"
+msgid "Hide plot (only show plot when pressing info)"
+msgstr ""
+
 msgctxt "#31101"
 msgid "items"
 msgstr ""

@@ -1,5 +1,10 @@
 [B]0.9.26[/B]
 Switch tiles view to list
+Add option to download all artwork with artwork downloader
+Add option to hide plot except for in info dialog
+Spin discart other direction
+Close osd when downloading subs
+Add option to not pause when opening info from video osd
 
 [B]0.9.25[/B]
 Add transparency option. Skin Settings > Miscellaneous > Enable transparency.
