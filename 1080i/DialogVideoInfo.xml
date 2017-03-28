@@ -321,6 +321,13 @@
                         <include>Dialog_Info_Buttons</include>
                     </control>
 
+                    <control type="button" id="11">
+                        <description>Trailer button</description>
+                        <label>20410</label>
+                        <include>Dialog_Info_Buttons</include>
+                        <visible>!String.IsEmpty(ListItem.Trailer)</visible>
+                    </control>
+
                     <control type="button" id="9003">
                         <label>206</label>
                         <onclick>SetProperty(FocusedList,9501,Home)</onclick>
@@ -339,13 +346,6 @@
                         <visible>!String.IsEmpty(ListItem.Director)</visible>
                         <include>Dialog_Info_Buttons</include>
                         <enable>Integer.IsGreater(Container(9502).NumItems,0)</enable>
-                    </control>
-                    
-                    <control type="button" id="11">
-                        <description>Trailer button</description>
-                        <label>20410</label>
-                        <include>Dialog_Info_Buttons</include>
-                        <visible>!String.IsEmpty(ListItem.Trailer)</visible>
                     </control>
 
                     <control type="button" id="9005">
