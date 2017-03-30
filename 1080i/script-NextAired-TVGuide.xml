@@ -26,7 +26,7 @@
                     <include>Topbar_MainMenu_Lines</include>
                 </control>
                 <control type="group">
-                    <include>Topbar_SubMenu_Group</include>
+                    <include>Topbar_SubMenu_Group_Content</include>
                 </control>
             </control>
 
@@ -37,63 +37,70 @@
                     <param name="groupid" value="8000" />
                     <param name="buttonid" value="8001" />
                     <param name="listid" value="200" />
+                    <param name="togglebuttonid" value="8200" />
                     <param name="label" value="$INFO[Window(Home).Property(NextAired.200.Weekday)]" />
-                    <param name="onleft" value="215" />
-                    <param name="onright" value="201" />
+                    <param name="onleft" value="8215" />
+                    <param name="onright" value="8201" />
                     <param name="visible" value="!StringCompare(Window(Home).Property(NextAired.200.Wday),)" />
                 </include>
                 <include content="NextAired_Group">
                     <param name="groupid" value="8000" />
                     <param name="buttonid" value="8001" />
                     <param name="listid" value="201" />
+                    <param name="togglebuttonid" value="8201" />
                     <param name="label" value="$INFO[Window(Home).Property(NextAired.201.Weekday)]" />
-                    <param name="onleft" value="200" />
-                    <param name="onright" value="202" />
+                    <param name="onleft" value="8200" />
+                    <param name="onright" value="8202" />
                     <param name="visible" value="!StringCompare(Window(Home).Property(NextAired.201.Wday),)" />
                 </include>
                 <include content="NextAired_Group">
                     <param name="groupid" value="8000" />
                     <param name="buttonid" value="8001" />
                     <param name="listid" value="202" />
+                    <param name="togglebuttonid" value="8202" />
                     <param name="label" value="$INFO[Window(Home).Property(NextAired.202.Weekday)]" />
-                    <param name="onleft" value="201" />
-                    <param name="onright" value="203" />
+                    <param name="onleft" value="8201" />
+                    <param name="onright" value="8203" />
                     <param name="visible" value="!StringCompare(Window(Home).Property(NextAired.202.Wday),)" />
                 </include>
                 <include content="NextAired_Group">
                     <param name="groupid" value="8000" />
                     <param name="buttonid" value="8001" />
                     <param name="listid" value="203" />
+                    <param name="togglebuttonid" value="8203" />
                     <param name="label" value="$INFO[Window(Home).Property(NextAired.203.Weekday)]" />
-                    <param name="onleft" value="202" />
-                    <param name="onright" value="204" />
+                    <param name="onleft" value="8202" />
+                    <param name="onright" value="8204" />
                     <param name="visible" value="!StringCompare(Window(Home).Property(NextAired.203.Wday),)" />
                 </include>
                 <include content="NextAired_Group">
                     <param name="groupid" value="8000" />
                     <param name="buttonid" value="8001" />
                     <param name="listid" value="204" />
+                    <param name="togglebuttonid" value="8204" />
                     <param name="label" value="$INFO[Window(Home).Property(NextAired.204.Weekday)]" />
-                    <param name="onleft" value="203" />
-                    <param name="onright" value="205" />
+                    <param name="onleft" value="8203" />
+                    <param name="onright" value="8205" />
                     <param name="visible" value="!StringCompare(Window(Home).Property(NextAired.204.Wday),)" />
                 </include>
                 <include content="NextAired_Group">
                     <param name="groupid" value="8000" />
                     <param name="buttonid" value="8001" />
                     <param name="listid" value="205" />
+                    <param name="togglebuttonid" value="8205" />
                     <param name="label" value="$INFO[Window(Home).Property(NextAired.205.Weekday)]" />
-                    <param name="onleft" value="204" />
-                    <param name="onright" value="206" />
+                    <param name="onleft" value="8204" />
+                    <param name="onright" value="8206" />
                     <param name="visible" value="!StringCompare(Window(Home).Property(NextAired.205.Wday),)" />
                 </include>
                 <include content="NextAired_Group">
                     <param name="groupid" value="8000" />
                     <param name="buttonid" value="8001" />
                     <param name="listid" value="206" />
+                    <param name="togglebuttonid" value="8206" />
                     <param name="label" value="$INFO[Window(Home).Property(NextAired.206.Weekday)]" />
-                    <param name="onleft" value="205" />
-                    <param name="onright" value="200" />
+                    <param name="onleft" value="8205" />
+                    <param name="onright" value="8200" />
                     <param name="visible" value="!StringCompare(Window(Home).Property(NextAired.206.Wday),)" />
                 </include>
             </control>

@@ -260,6 +260,10 @@
     <include name="Topbar_SubMenu_Group">
         <animation effect="slide" start="0,-40" end="0" time="400" tween="quadratic" easing="out" reversible="false" condition="$EXP[Expression_ShowTopbar]">Conditional</animation>
         <animation effect="slide" start="0" end="0,-40" time="400" tween="quadratic" easing="out" reversible="false" condition="!$EXP[Expression_ShowTopbar]">Conditional</animation>
+        <include>Topbar_SubMenu_Group_Content</include>
+    </include>
+
+    <include name="Topbar_SubMenu_Group_Content">
         <top>80</top>
         <left>0</left>
         <right>0</right>

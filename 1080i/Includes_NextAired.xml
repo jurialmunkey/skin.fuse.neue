@@ -14,7 +14,7 @@
                     <onleft>$PARAM[onleft]</onleft>
                     <onright>$PARAM[onright]</onright>
                     <ondown>9400</ondown>
-                    <onup>9400</onup>
+                    <onup>$PARAM[togglebuttonid]</onup>
                     <itemlayout width="320" height="425">
                         <control type="image">
                             <left>60</left>
@@ -99,7 +99,26 @@
                         </control>
                     </focusedlayout>
                 </control>
-                <control type="togglebutton">
+                <control type="group">
+                    <visible>Control.HasFocus($PARAM[listid]) | Control.HasFocus($PARAM[togglebuttonid])</visible>
+                    <control type="image">
+                        <centerleft>50%</centerleft>
+                        <top>148</top>
+                        <width>16</width>
+                        <height>16</height>
+                        <texture flipy="true" colordiffuse="panel_fg_70">common/arrow-small.png</texture>
+                        <visible>Container($PARAM[listid]).HasPrevious</visible>
+                    </control>
+                    <control type="image">
+                        <centerleft>50%</centerleft>
+                        <top>1010</top>
+                        <width>16</width>
+                        <height>16</height>
+                        <texture flipy="false" colordiffuse="panel_fg_70">common/arrow-small.png</texture>
+                        <visible>Container($PARAM[listid]).HasNext</visible>
+                    </control>
+                </control>
+                <control type="togglebutton" id="$PARAM[togglebuttonid]">
                     <left>0</left>
                     <right>0</right>
                     <height>80</height>
@@ -110,7 +129,7 @@
                     <font>font_mainmenu</font>
                     <textcolor>main_fg_70</textcolor>
                     <focusedcolor>Selected</focusedcolor>
-                    <texturefocus colordiffuse="00ffffff">noop</texturefocus>
+                    <texturefocus colordiffuse="$VAR[ColorHighlight]">common/gradient-diffuse.png</texturefocus>
                     <texturenofocus colordiffuse="00ffffff">noop</texturenofocus>
                     <alttexturefocus colordiffuse="00ffffff">noop</alttexturefocus>
                     <alttexturenofocus colordiffuse="00ffffff">noop</alttexturenofocus>
