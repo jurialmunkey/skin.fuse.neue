@@ -241,6 +241,17 @@
         </control>
     </include>
 
+    <include name="View_Posters_Button">
+        <control type="button">
+            <visible allowhiddenfocus="true">false</visible>
+            <onfocus>SetProperty(ContextPosition,$INFO[Container($PARAM[id]).Position],Home)</onfocus>
+            <onfocus condition="!Integer.IsLess(Container($PARAM[id]).NumItems,7)">SetProperty(ContextModifier,0,Home)</onfocus>
+            <onfocus condition="Integer.IsLess(Container($PARAM[id]).NumItems,7)">SetProperty(ContextModifier,1,Home)</onfocus>
+            <onfocus condition="Integer.IsLess(Container($PARAM[id]).NumItems,5)">SetProperty(ContextModifier,2,Home)</onfocus>
+            <onfocus condition="Integer.IsLess(Container($PARAM[id]).NumItems,3)">SetProperty(ContextModifier,3,Home)</onfocus>
+            <onfocus condition="$PARAM[setfanart]">SetProperty(ListFanartContent,$INFO[Container(9502).ListItem.Art(fanart)],Home)</onfocus>
+        </control>
+    </include>
     <include name="View_Posters_Layout">
         <param name="id" default="50" />
         <param name="setfanart" default="false" />
@@ -295,15 +306,10 @@
                 <include>View_WatchedOverlay</include>
             </itemlayout>
             <focusedlayout width="178" height="257">
-                <control type="button">
-                    <visible allowhiddenfocus="true">false</visible>
-                    <onfocus>SetProperty(ContextPosition,$INFO[Container($PARAM[id]).Position],Home)</onfocus>
-                    <onfocus condition="!Integer.IsLess(Container($PARAM[id]).NumItems,7)">SetProperty(ContextModifier,0,Home)</onfocus>
-                    <onfocus condition="Integer.IsLess(Container($PARAM[id]).NumItems,7)">SetProperty(ContextModifier,1,Home)</onfocus>
-                    <onfocus condition="Integer.IsLess(Container($PARAM[id]).NumItems,5)">SetProperty(ContextModifier,2,Home)</onfocus>
-                    <onfocus condition="Integer.IsLess(Container($PARAM[id]).NumItems,3)">SetProperty(ContextModifier,3,Home)</onfocus>
-                    <onfocus condition="$PARAM[setfanart]">SetProperty(ListFanartContent,$INFO[Container(9502).ListItem.Art(fanart)],Home)</onfocus>
-                </control>
+                <include condition="Skin.HasSetting(ContextPosition)" content="View_Posters_Button">
+                    <param name="id" value="$PARAM[id]" />
+                    <param name="setfanart" value="$PARAM[setfanart]" />
+                </include>
                 <control type="group" description="ParentFolder and DefaultIcon">
                     <visible>ListItem.IsParentFolder | String.StartsWith(ListItem.Icon,Default)</visible>
                     <control type="image">
@@ -352,6 +358,14 @@
         </definition>
     </include>
 
+    <include name="View_Landscape_Button">
+        <control type="button">
+            <visible allowhiddenfocus="true">false</visible>
+            <onfocus>SetProperty(ContextPosition,$INFO[Container($PARAM[id]).Position],Home)</onfocus>
+            <onfocus condition="!Integer.IsLess(Container($PARAM[id]).NumItems,3)">SetProperty(ContextModifier,0,Home)</onfocus>
+            <onfocus condition="Integer.IsLess(Container($PARAM[id]).NumItems,3)">SetProperty(ContextModifier,1,Home)</onfocus>
+        </control>
+    </include>
     <include name="View_Landscape_Layout">
         <param name="id" default="51" />
         <definition>
@@ -439,12 +453,9 @@
                 <include>View_WatchedOverlay</include>
             </itemlayout>
             <focusedlayout width="415.33" height="257">
-                <control type="button">
-                    <visible allowhiddenfocus="true">false</visible>
-                    <onfocus>SetProperty(ContextPosition,$INFO[Container($PARAM[id]).Position],Home)</onfocus>
-                    <onfocus condition="!Integer.IsLess(Container($PARAM[id]).NumItems,3)">SetProperty(ContextModifier,0,Home)</onfocus>
-                    <onfocus condition="Integer.IsLess(Container($PARAM[id]).NumItems,3)">SetProperty(ContextModifier,1,Home)</onfocus>
-                </control>
+                <include condition="Skin.HasSetting(ContextPosition)" content="View_Landscape_Button">
+                    <param name="id" value="$PARAM[id]" />
+                </include>
                 <!-- Parent Folder -->
                 <control type="group">
                     <visible>ListItem.IsParentFolder | String.StartsWith(ListItem.Icon,Default)</visible>
@@ -532,6 +543,13 @@
         </definition>
     </include>
 
+    <include name="View_Tiles_Button">
+        <control type="button">
+            <visible allowhiddenfocus="true">false</visible>
+            <onfocus>SetProperty(ContextPosition,$INFO[Container($PARAM[id]).Column],Home)</onfocus>
+            <onfocus>SetProperty(ContextRow,$INFO[Container($PARAM[id]).Row],Home)</onfocus>
+        </control>
+    </include>
     <include name="View_Tiles_Layout">
         <param name="id" default="52" />
         <definition>
@@ -549,32 +567,15 @@
             <pagecontrol>60</pagecontrol>
             <onfocus>SetProperty(ViewType,Tiles,Home)</onfocus>
             <scrolltime tween="quadratic">400</scrolltime>
-            <itemlayout width="415.33" height="128.5" condition="!Window.IsVisible(EventLog.xml)">
+            <itemlayout width="415.33" height="128.5">
                 <include content="View_List_ItemLayout">
                     <param name="id" value="$PARAM[id]"/>
                 </include>
             </itemlayout>
-            <focusedlayout width="415.33" height="128.5" condition="!Window.IsVisible(EventLog.xml)">
-                <control type="button">
-                    <visible allowhiddenfocus="true">false</visible>
-                    <onfocus>SetProperty(ContextPosition,$INFO[Container($PARAM[id]).Column],Home)</onfocus>
-                    <onfocus>SetProperty(ContextRow,$INFO[Container($PARAM[id]).Row],Home)</onfocus>
-                </control>
-                <include content="View_List_FocusedLayout">
-                    <param name="id" value="$PARAM[id]"/>
+            <focusedlayout width="415.33" height="128.5">
+                <include condition="Skin.HasSetting(ContextPosition)" content="View_Tiles_Button">
+                    <param name="id" value="$PARAM[id]" />
                 </include>
-            </focusedlayout>
-            <itemlayout width="1246" height="128.5" condition="Window.IsVisible(EventLog.xml)">
-                <include content="View_List_ItemLayout">
-                    <param name="id" value="$PARAM[id]"/>
-                </include>
-            </itemlayout>
-            <focusedlayout width="1246" height="128.5" condition="Window.IsVisible(EventLog.xml)">
-                <control type="button">
-                    <visible allowhiddenfocus="true">false</visible>
-                    <onfocus>SetProperty(ContextPosition,$INFO[Container($PARAM[id]).Column],Home)</onfocus>
-                    <onfocus>SetProperty(ContextRow,$INFO[Container($PARAM[id]).Row],Home)</onfocus>
-                </control>
                 <include content="View_List_FocusedLayout">
                     <param name="id" value="$PARAM[id]"/>
                 </include>
@@ -582,6 +583,15 @@
         </definition>
     </include>
 
+    <include name="View_Square_Button">
+        <control type="button">
+            <visible allowhiddenfocus="true">false</visible>
+            <onfocus>SetProperty(ContextPosition,$INFO[Container($PARAM[id]).Position],Home)</onfocus>
+            <onfocus condition="!Integer.IsLess(Container($PARAM[id]).NumItems,5)">SetProperty(ContextModifier,0,Home)</onfocus>
+            <onfocus condition="Integer.IsLess(Container($PARAM[id]).NumItems,5)">SetProperty(ContextModifier,1,Home)</onfocus>
+            <onfocus condition="Integer.IsLess(Container($PARAM[id]).NumItems,3)">SetProperty(ContextModifier,2,Home)</onfocus>
+        </control>
+    </include>
     <include name="View_Square_Layout">
         <param name="id" default="53" />
         <param name="genres" default="false" />
@@ -709,13 +719,9 @@
             </itemlayout>
             <focusedlayout width="207.66" height="257">
 
-                <control type="button">
-                    <visible allowhiddenfocus="true">false</visible>
-                    <onfocus>SetProperty(ContextPosition,$INFO[Container($PARAM[id]).Position],Home)</onfocus>
-                    <onfocus condition="!Integer.IsLess(Container($PARAM[id]).NumItems,5)">SetProperty(ContextModifier,0,Home)</onfocus>
-                    <onfocus condition="Integer.IsLess(Container($PARAM[id]).NumItems,5)">SetProperty(ContextModifier,1,Home)</onfocus>
-                    <onfocus condition="Integer.IsLess(Container($PARAM[id]).NumItems,3)">SetProperty(ContextModifier,2,Home)</onfocus>
-                </control>
+                <include condition="Skin.HasSetting(ContextPosition)" content="View_Square_Button">
+                    <param name="id" value="$PARAM[id]" />
+                </include>
 
                 <control type="image">
                     <bordersize>10</bordersize>
@@ -836,6 +842,12 @@
         </definition>
     </include>
 
+    <include name="View_List_Button">
+        <control type="button">
+            <visible allowhiddenfocus="true">false</visible>
+            <onfocus>SetProperty(ContextPosition,$INFO[Container($PARAM[id]).Position],Home)</onfocus>
+        </control>
+    </include>
     <include name="View_List_Layout">
         <param name="id" default="54" />
         <definition>
@@ -912,10 +924,9 @@
                 </control>
             </itemlayout>
             <focusedlayout width="1356" height="64.25">
-                <control type="button">
-                    <visible allowhiddenfocus="true">false</visible>
-                    <onfocus>SetProperty(ContextPosition,$INFO[Container($PARAM[id]).Position],Home)</onfocus>
-                </control>
+                <include condition="Skin.HasSetting(ContextPosition)" content="View_List_Button">
+                    <param name="id" value="$PARAM[id]" />
+                </include>
                 <control type="image">
                     <top>-10</top>
                     <bottom>-10</bottom>
@@ -1003,6 +1014,16 @@
         </definition>
     </include>
 
+
+    <include name="View_Actor_Button">
+        <control type="button">
+            <visible allowhiddenfocus="true">false</visible>
+            <onfocus>SetProperty(ContextPosition,$INFO[Container($PARAM[id]).Position],Home)</onfocus>
+            <onfocus condition="!Integer.IsLess(Container($PARAM[id]).NumItems,5)">SetProperty(ContextModifier,0,Home)</onfocus>
+            <onfocus condition="Integer.IsLess(Container($PARAM[id]).NumItems,5)">SetProperty(ContextModifier,1,Home)</onfocus>
+            <onfocus condition="Integer.IsLess(Container($PARAM[id]).NumItems,3)">SetProperty(ContextModifier,2,Home)</onfocus>
+        </control>
+    </include>
     <include name="View_Actor_Layout">
         <param name="id" default="53" />
         <param name="label2" default="$INFO[ListItem.Label2]"/>
@@ -1076,14 +1097,9 @@
             </itemlayout>
             <focusedlayout width="207.66" height="257">
 
-                <control type="button">
-                    <visible allowhiddenfocus="true">false</visible>
-                    <onfocus>SetProperty(ContextPosition,$INFO[Container($PARAM[id]).Position],Home)</onfocus>
-                    <onfocus condition="!Integer.IsLess(Container($PARAM[id]).NumItems,5)">SetProperty(ContextModifier,0,Home)</onfocus>
-                    <onfocus condition="Integer.IsLess(Container($PARAM[id]).NumItems,5)">SetProperty(ContextModifier,1,Home)</onfocus>
-                    <onfocus condition="Integer.IsLess(Container($PARAM[id]).NumItems,3)">SetProperty(ContextModifier,2,Home)</onfocus>
-                </control>
-
+                <include condition="Skin.HasSetting(ContextPosition)" content="View_Actor_Button">
+                    <param name="id" value="$PARAM[id]" />
+                </include>
                 <control type="image">
                     <bordersize>10</bordersize>
                     <bordertexture border="10">common/nofocus-shadow10.png</bordertexture>

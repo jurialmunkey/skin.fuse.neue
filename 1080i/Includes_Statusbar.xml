@@ -261,7 +261,13 @@
             <onright condition="!Window.IsVisible(Home)">50</onright>
             <onleft condition="Window.IsVisible(Home)">301</onleft>
             <onleft condition="!Window.IsVisible(Home)">50</onleft>
-            
+            <control type="button" id="9699">
+                <label>Context Menu</label>
+                <texturenofocus colordiffuse="main_fg_70" border="42,0,8,0">buttons/options.png</texturenofocus>
+                <texturefocus colordiffuse="$VAR[ColorHighlight]" border="42,0,8,0">buttons/options.png</texturefocus>
+                <include>Statusbar_Menubar_Button</include>
+                <visible>Window.IsVisible(DialogContextMenu.xml)</visible>
+            </control>
             <control type="button" id="9001">
                 <left>0</left>
                 <label>33060</label>
@@ -272,6 +278,7 @@
                 <visible>![Window.IsVisible(MyVideoNav.xml) | Window.IsVisible(MyMusicNav.xml) | Window.IsVisible(MyPics.xml) | Window.IsVisible(MyPrograms.xml) | Window.IsVisible(AddonBrowser.xml) | Window.IsVisible(MyPlaylist.xml) | Window.IsVisible(MyWeather.xml) | Window.IsVisible(MyPVRChannels.xml) | Window.IsVisible(MyPVRGuide.xml) | Window.IsVisible(MyPVRRecordings.xml) | Window.IsVisible(MyPVRTimers.xml) | Window.IsVisible(MyPVRSearch.xml)] | [!Control.IsVisible(3) + !Control.IsVisible(9600)]</visible>
                 <visible>![Window.IsVisible(script-NextAired-TVGuide.xml) | Window.IsVisible(script-NextAired-TVGuide2.xml)]</visible>
                 <visible>!Skin.HasSetting(global.kioskmode)</visible>
+                <visible>!Control.IsVisible(9699)</visible>
             </control>
             <include condition="Window.IsVisible(script-NextAired-TVGuide.xml) | Window.IsVisible(script-NextAired-TVGuide2.xml)">NextAired_OptionsButton</include>
              <control type="button" id="9009">
@@ -283,6 +290,7 @@
                 <include>Statusbar_Menubar_Button</include>
                 <visible>Skin.HasSetting(global.kioskmode) | [Window.IsVisible(home) + !Control.IsVisible(9603)] | [!Window.IsVisible(home) +  !Control.IsVisible(3) + !Control.IsVisible(9600)]</visible>
                 <visible>System.HasAddon(script.globalsearch)</visible>
+                <visible>!Control.IsVisible(9699)</visible>
             </control>
             <control type="button" id="9603">
                 <onclick>Weather.LocationNext</onclick>
@@ -291,6 +299,7 @@
                 <texturefocus colordiffuse="$VAR[ColorHighlight]" border="42,0,8,0">buttons/sort-method.png</texturefocus>
                 <include>Statusbar_Menubar_Button</include>
                 <visible>Window.IsVisible(Home) + [String.IsEqual(Container(300).ListItem.Property(widget),weather) + [Control.HasFocus(300) | String.IsEmpty(Container(302).ListItem.Property(widget))] | [String.IsEqual(Container(302).ListItem.Property(widget),weather) + !Control.HasFocus(300)]]</visible>
+                <visible>!Control.IsVisible(9699)</visible>
             </control>
             <include condition="[Window.IsVisible(MyVideoNav.xml) | Window.IsVisible(MyMusicNav.xml) | Window.IsVisible(MyPics.xml) | Window.IsVisible(MyPrograms.xml) | Window.IsVisible(AddonBrowser.xml) | Window.IsVisible(MyPlaylist.xml) | Window.IsVisible(MyWeather.xml) | Window.IsVisible(MyPVRChannels.xml) | Window.IsVisible(MyPVRGuide.xml) | Window.IsVisible(MyPVRRecordings.xml) | Window.IsVisible(MyPVRTimers.xml) | Window.IsVisible(MyPVRSearch.xml)]">Statusbar_SortButtons</include>
             <control type="button" id="9008">
@@ -315,6 +324,7 @@
             <onclick>SetFocus(6000)</onclick>
             <visible>!Window.IsVisible(MyPrograms.xml)</visible>
             <visible>!Skin.HasSetting(global.kioskmode)</visible>
+            <visible>!Control.IsVisible(9699)</visible>
         </control>
         <control type="button" id="9602">
             <onclick>Weather.LocationNext</onclick>
@@ -323,6 +333,7 @@
             <texturefocus colordiffuse="$VAR[ColorHighlight]" border="42,0,8,0">buttons/sort-method.png</texturefocus>
             <include>Statusbar_Menubar_Button</include>
             <visible>Window.IsVisible(MyWeather.xml)</visible>
+            <visible>!Control.IsVisible(9699)</visible>
         </control>
         <control type="togglebutton" id="3">
             <texturenofocus colordiffuse="main_fg_70" border="42,0,8,0">buttons/sort-up.png</texturenofocus>
@@ -334,6 +345,7 @@
             <visible>!Skin.HasSetting(global.kioskmode)</visible>
             <visible>Control.IsEnabled(3)</visible>
             <visible>!Window.IsVisible(MyWeather.xml)</visible>
+            <visible>!Control.IsVisible(9699)</visible>
         </control>
     </include>
 

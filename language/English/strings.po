@@ -461,6 +461,11 @@ msgctxt "#31088"
 msgid "Show scrolling text effect"
 msgstr ""
 
+#: /1080i/SkinSettings.xml
+msgctxt "#31089"
+msgid "Position context menu based on focused item"
+msgstr ""
+
 msgctxt "#31101"
 msgid "items"
 msgstr ""
