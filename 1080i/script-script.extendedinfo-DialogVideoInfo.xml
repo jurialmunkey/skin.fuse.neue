@@ -283,6 +283,13 @@
                         <onclick>SetFocus(950)</onclick>
                         <enable>Integer.IsGreater(Container(950).NumItems,0)</enable>
                     </control>
+
+                    <control type="button" id ="445">
+                        <description>Play</description>
+                        <onfocus>ClearProperty(FocusedList,Home)</onfocus>
+                        <include>Dialog_Info_Buttons</include>
+                        <label>$ADDON[script.extendedinfo 32133]</label>
+                    </control>
                 </control>
             </control>
         </control>
