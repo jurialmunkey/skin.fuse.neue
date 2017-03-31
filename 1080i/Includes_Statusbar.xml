@@ -227,6 +227,19 @@
                 <include>Statusbar_Menubar_Items</include>
                 <label>$INFO[Player.Duration]</label>
             </control>
+            <control type="label">
+                <textcolor>main_fg_30</textcolor>
+                <include>Statusbar_Menubar_Items</include>
+                <label>•</label>
+                <visible>!String.IsEmpty(Player.FinishTime)</visible>
+                <visible>Player.HasVideo</visible>
+            </control>
+            <control type="label">
+                <textcolor>main_fg_30</textcolor>
+                <include>Statusbar_Menubar_Items</include>
+                <label>$INFO[Player.FinishTime,$LOCALIZE[31106] ,]</label>
+                <visible>Player.HasVideo</visible>
+            </control>
         </control>
     </include>
 
