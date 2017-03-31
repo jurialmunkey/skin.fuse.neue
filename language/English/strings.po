@@ -482,7 +482,7 @@ msgid "Spotlight"
 msgstr ""
 
 msgctxt "#31106"
-msgid "Finishes at"
+msgid "Ends "
 msgstr ""
 
 msgctxt "#31107"

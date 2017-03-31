@@ -211,7 +211,7 @@
     <include name="Bottombar_StandardInfo_Title">
         <control type="group">
             <left>614</left>
-            <right>614</right>
+            <right>514</right>
             <height>100</height>
             <top>0</top>
             <visible>!String.IsEmpty(ListItem.VideoCodec) | !String.IsEmpty(ListItem.VideoAspect) | !String.IsEmpty(ListItem.AudioCodec) | !String.IsEmpty(ListItem.AudioChannels) | !String.IsEmpty(Container(301).ListItem.VideoCodec) | !String.IsEmpty(Container(301).ListItem.VideoAspect) | !String.IsEmpty(Container(301).ListItem.AudioCodec) | !String.IsEmpty(Container(301).ListItem.AudioChannels)</visible>
@@ -295,7 +295,7 @@
             <visible>!$EXP[Expression_ShowWeatherWidget]</visible>
             <control type="group">
                 <left>614</left>
-                <right>614</right>
+                <right>514</right>
                 <height>100</height>
                 <top>0</top>
                 <visible>!String.IsEmpty(ListItem.VideoCodec) | !String.IsEmpty(ListItem.VideoAspect) | !String.IsEmpty(ListItem.AudioCodec) | !String.IsEmpty(ListItem.AudioChannels) | !String.IsEmpty(Container(301).ListItem.VideoCodec) | !String.IsEmpty(Container(301).ListItem.VideoAspect) | !String.IsEmpty(Container(301).ListItem.AudioCodec) | !String.IsEmpty(Container(301).ListItem.AudioChannels)</visible>
