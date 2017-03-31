@@ -261,6 +261,22 @@
                         <onclick>Skin.ToggleSetting(OSDVisualisation.ShowFanart)</onclick>
                         <enable>Skin.HasSetting(musicvis.fanartfallback) | [!Skin.HasSetting(ArtistSlideShow.Disabled) + System.HasAddon(script.artistslideshow)]</enable>
                     </control>
+                    <control type="radiobutton" id="9236" description="Colour overlay">
+                        <visible>ControlGroup(9100).HasFocus(9103)</visible>
+                        <onback>300</onback>
+                        <include>Defs_Settings_Button</include>
+                        <label>$LOCALIZE[31087]</label>
+                        <selected>!Skin.HasSetting(HideOSDDiffuseColors)</selected>
+                        <onclick>Skin.ToggleSetting(HideOSDDiffuseColors)</onclick>
+                    </control>
+                    <control type="radiobutton" id="9237" description="Scrolling Text">
+                        <visible>ControlGroup(9100).HasFocus(9103)</visible>
+                        <onback>300</onback>
+                        <include>Defs_Settings_Button</include>
+                        <label>$LOCALIZE[31088]</label>
+                        <selected>!Skin.HasSetting(HideOSDScrollingText)</selected>
+                        <onclick>Skin.ToggleSetting(HideOSDScrollingText)</onclick>
+                    </control>
                     <control type="radiobutton" id="9234" description="Animate Artist slideshow">
                         <visible>ControlGroup(9100).HasFocus(9103)</visible>
                         <onback>300</onback>

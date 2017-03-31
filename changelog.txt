@@ -3,7 +3,8 @@ Tweak codec info
 Add codec info to video osd controls
 Add manage button to extended info
 Add finish time in library and statusbar
-
+Add colour overlay effect to musicvis
+Add scrolling text effect to musicvis
 
 [B]0.9.26[/B]
 Switch tiles view to list

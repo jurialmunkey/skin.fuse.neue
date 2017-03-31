@@ -451,6 +451,16 @@ msgctxt "#31086"
 msgid "Extended Info"
 msgstr ""
 
+#: /1080i/SkinSettings.xml
+msgctxt "#31087"
+msgid "Show colour overlay effect"
+msgstr ""
+
+#: /1080i/SkinSettings.xml
+msgctxt "#31088"
+msgid "Show scrolling text effect"
+msgstr ""
+
 msgctxt "#31101"
 msgid "items"
 msgstr ""
