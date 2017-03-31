@@ -3,7 +3,7 @@
 <window id="115">
     <defaultcontrol always="true">901</defaultcontrol>
     <zorder>0</zorder>
-    <visible>[VideoPlayer.IsFullscreen | Window.IsVisible(MusicVisualisation.xml)] + [Window.IsVisible(musicosd) | Window.IsVisible(videoosd) | Window.IsVisible(fullscreeninfo) | Player.Caching | Player.Seeking | Player.DisplayAfterSeek | Player.Paused | Player.Forwarding | Player.Rewinding | Player.ShowInfo | !String.IsEmpty(Window(home).Property(osdshowinfo)) | Window.IsVisible(script-cu-lrclyrics-main.xml) | Window.IsVisible(DialogFullScreenInfo.xml)]</visible>
+    <visible>[VideoPlayer.IsFullscreen | Window.IsVisible(MusicVisualisation.xml)] + [Window.IsVisible(musicosd) | Window.IsVisible(videoosd) | Window.IsVisible(fullscreeninfo) | Window.IsVisible(DialogPlayerProcessInfo.xml) | Player.Caching | Player.Seeking | Player.DisplayAfterSeek | Player.Paused | Player.Forwarding | Player.Rewinding | Player.ShowInfo | !String.IsEmpty(Window(home).Property(osdshowinfo)) | Window.IsVisible(script-cu-lrclyrics-main.xml) | Window.IsVisible(DialogFullScreenInfo.xml)]</visible>
     <controls>
 
         <include condition="Window.IsVisible(MusicVisualisation.xml)">OSD_Music</include>

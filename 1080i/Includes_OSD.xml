@@ -130,12 +130,13 @@
 
     <include name="OSD_Video">
         <control type="group">
-            <visible>Player.Caching | Player.Seeking | Player.DisplayAfterSeek | Player.Paused | Player.Forwarding | Player.Rewinding | Player.ShowInfo | Window.IsActive(musicosd) | Window.IsActive(videoosd) | Window.IsVisible(script-cu-lrclyrics-main.xml) | Window.IsActive(DialogFullScreenInfo.xml)</visible>
+            <visible>Player.Caching | Player.Seeking | Player.DisplayAfterSeek | Player.Paused | Player.Forwarding | Player.Rewinding | Player.ShowInfo | Window.IsActive(musicosd) | Window.IsActive(videoosd) | Window.IsVisible(script-cu-lrclyrics-main.xml) | Window.IsActive(DialogFullScreenInfo.xml) | Window.IsVisible(DialogPlayerProcessInfo.xml)</visible>
             <include>Animation_FadeIn</include>
             <include>Animation_FadeOut</include>
 
             <control type="group">
                 <visible>Player.ShowInfo | Window.IsActive(DialogFullScreenInfo.xml)</visible>
+                <visible>!Window.IsVisible(DialogPlayerProcessInfo.xml)</visible>
                 <include>Animation_FadeIn</include>
                 <include>Animation_FadeOut</include>
                 <!-- Overlay -->
@@ -377,7 +378,7 @@
     <include name="OSD_Controls_Video_Right">
         <control type="button" id="4">
             <description>Extra Info</description>
-            <label>19033</label>
+            <label>$LOCALIZE[31086]</label>
             <onclick condition="!Player.Paused + !Skin.HasSetting(DontPauseOSD)">SetProperty(OSDExtendedInfo,1,Home)</onclick>
             <onclick condition="!Player.Paused + !Skin.HasSetting(DontPauseOSD)">Pause</onclick>
             <onclick condition="VideoPlayer.Content(movies)">RunScript(script.extendedinfo,info=extendedinfo,name=$INFO[VideoPlayer.Title],imdb_id=$INFO[VideoPlayer.IMDBNumber])</onclick>
@@ -435,10 +436,16 @@
             <onclick>ActivateWindow(osdvideosettings)</onclick>
             <include>OSD_TextButton</include>
         </control>
-        <control type="button" id="3">
+        <!-- <control type="button" id="3">
             <description>Subs</description>
             <label>$LOCALIZE[287]</label>
             <onclick>Action(ShowSubtitles)</onclick>
+            <include>OSD_TextButton</include>
+        </control> -->
+        <control type="button" id="3">
+            <description>CodecInfo</description>
+            <label>$LOCALIZE[31085]</label>
+            <onclick>Action(CodecInfo)</onclick>
             <include>OSD_TextButton</include>
         </control>
     </include>

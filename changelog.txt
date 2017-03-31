@@ -1,3 +1,10 @@
+[B]0.9.27[/B]
+Tweak codec info
+Add codec info to video osd controls
+Add manage button to extended info
+Add finish time in library and statusbar
+
+
 [B]0.9.26[/B]
 Switch tiles view to list
 Add option to download all artwork with artwork downloader

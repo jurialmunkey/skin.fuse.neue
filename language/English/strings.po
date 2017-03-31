@@ -426,6 +426,31 @@ msgctxt "#31081"
 msgid "Hide plot (only show plot when pressing info)"
 msgstr ""
 
+#: /1080i/DialogPlayerProcessInfo.xml
+msgctxt "#31082"
+msgid "Video process information"
+msgstr ""
+
+#: /1080i/DialogPlayerProcessInfo.xml
+msgctxt "#31083"
+msgid "Framerate"
+msgstr ""
+
+#: /1080i/DialogPlayerProcessInfo.xml
+msgctxt "#31084"
+msgid "Aspect Ratio"
+msgstr ""
+
+#: /1080i/Includes_OSD.xml
+msgctxt "#31085"
+msgid "Codec Info"
+msgstr ""
+
+#: /1080i/Includes_OSD.xml
+msgctxt "#31086"
+msgid "Extended Info"
+msgstr ""
+
 msgctxt "#31101"
 msgid "items"
 msgstr ""
