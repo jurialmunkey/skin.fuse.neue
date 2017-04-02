@@ -325,17 +325,40 @@
     <thumbnail label="youtube.png">special://skin/extras/icons/youtube.png</thumbnail>
 
     <!-- DEFAULT WIDGETS -->
+    <!-- Videos -->
+    <widgetdefaultnode labelID="1037" group="3" label="Video Addons" type="addons" path="addons://sources/video" target="videos">VideoAddons</widgetdefaultnode>
+    <widgetdefaultnode labelID="musicvideos" group="3" label="Music Videos" type="movies" path="videodb://musicvideos/titles" target="videos">MusicVideos</widgetdefaultnode>
+
+
     <!-- Movies -->
     <widgetdefaultnode labelID="20342" group="mainmenu" label="Recently Added Movies" type="movies" path="special://skin/extras/playlists/NewMovies.xsp" target="videos">NewMovies</widgetdefaultnode>
+    <widgetdefaultnode labelID="20434" group="20342" label="Sets" type="movies" path="videodb://movies/sets/" target="videos">Sets</widgetdefaultnode>
+    <widgetdefaultnode labelID="369" group="20342" label="Titles" type="movies" path="videodb://movies/titles/" target="videos">MovieTitles</widgetdefaultnode>
+    <widgetdefaultnode labelID="135" group="20342" label="Genres" type="movies" path="library://video/movies/genres.xml/" target="videos">MovieGenres</widgetdefaultnode>
+    <widgetdefaultnode labelID="562" group="20342" label="Years" type="movies" path="library://video/movies/years.xml/" target="videos">MovieYears</widgetdefaultnode>
+    <widgetdefaultnode labelID="344" group="20342" label="Actors" type="movies" path="library://video/movies/actors.xml/" target="videos">MovieActors</widgetdefaultnode>
 
     <!-- TV Shows -->
-    <widgetdefaultnode labelID="tvshows" group="mainmenu" label="Recently Watched Shows" type="tvshows" path="special://skin/extras/playlists/RecentShows.xsp" target="videos">RecentShows</widgetdefaultnode>
+    <widgetdefaultnode labelID="tvshows" group="mainmenu" label="Recently Watched Shows" type="tvshows" path="special://skin/extras/playlists/NewEpisodes.xsp" target="videos">NewEpisodes</widgetdefaultnode>
+    <widgetdefaultnode labelID="20388" group="tvshows" label="Studios" type="tvshows" path="library://video/tvshows/studios.xml/" target="videos">TVStudios</widgetdefaultnode>
+    <widgetdefaultnode labelID="369" group="tvshows" label="Titles" type="tvshows" path="videodb://tvshows/titles/" target="videos">TVShowTitles</widgetdefaultnode>
+    <widgetdefaultnode labelID="135" group="tvshows" label="Genres" type="tvshows" path="library://video/tvshows/genres.xml/" target="videos">TVStudios</widgetdefaultnode>
+    <widgetdefaultnode labelID="562" group="tvshows" label="Years" type="tvshows" path="library://video/tvshows/years.xml/" target="videos">TVStudios</widgetdefaultnode>
+    <widgetdefaultnode labelID="344" group="tvshows" label="Actors" type="movies" path="library://video/tvshows/actors.xml/" target="videos">TVStudios</widgetdefaultnode>
 
     <!-- Music -->
     <widgetdefaultnode labelID="2" group="mainmenu" label="Top 100 Albums" type="albums" path="musicdb://top100/albums/" target="music">Top100Albums</widgetdefaultnode>
+    <widgetdefaultnode labelID="133" group="2" label="Artists" type="artists" path="musicdb://artists/" target="music">Artists</widgetdefaultnode>
+    <widgetdefaultnode labelID="132" group="2" label="Albums" type="albums" path="musicdb://albums/" target="music">Albums</widgetdefaultnode>
+    <widgetdefaultnode labelID="359" group="2" label="Recently Added" type="albums" path="musicdb://recentlyaddedalbums/" target="music">RecentAddedAlbums</widgetdefaultnode>
+    <widgetdefaultnode labelID="517" group="2" label="Recently Played" type="albums" path="musicdb://recentlyplayedalbums/" target="music">RecentPlayedAlbums</widgetdefaultnode>
 
     <!-- Addons -->
     <widgetdefaultnode labelID="24001" group="mainmenu" label="Video Addons" type="addons" path="addons://sources/video" target="videos">VideoAddons</widgetdefaultnode>
+    <widgetdefaultnode labelID="24032" group="24001" label="All Addons" type="addons" path="addons://user/all" target="addonbrowser">AllAddons</widgetdefaultnode>
+    <widgetdefaultnode labelID="1039" group="24001" label="Picture Addons" type="addons" path="addons://sources/image" target="pictures">PictureAddons</widgetdefaultnode>
+    <widgetdefaultnode labelID="1043" group="24001" label="Program Addons" type="addons" path="addons://sources/executable" target="programs">ProgramAddons</widgetdefaultnode>
+    <widgetdefaultnode labelID="1038" group="24001" label="Music Addons" type="addons" path="addons://sources/audio" target="music">MusicAddons</widgetdefaultnode>
 
     <!-- Settings -->
     <widgetdefault labelID="settings" group="mainmenu">Weather</widgetdefault>

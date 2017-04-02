@@ -1,5 +1,12 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <shortcuts>
+    <shortcut>
+        <label>744</label>
+        <label2>32019</label2>
+        <icon>DefaultFolder.png</icon>
+        <thumb />
+        <action>ActivateWindow(Music,sources://music/,Return)</action>
+    </shortcut>
 	<shortcut>
 		<label>133</label>
 		<label2>32019</label2>
@@ -15,20 +22,6 @@
 		<action>ActivateWindow(Music,musicdb://albums/,return)</action>
 	</shortcut>
 	<shortcut>
-		<label>134</label>
-		<label2>32019</label2>
-		<icon>DefaultMusicSongs.png</icon>
-		<thumb />
-		<action>ActivateWindow(Music,musicdb://songs/,return)</action>
-	</shortcut>
-	<shortcut>
-		<label>744</label>
-		<label2>32019</label2>
-		<icon>DefaultFolder.png</icon>
-		<thumb />
-		<action>ActivateWindow(Music,sources://music/,Return)</action>
-	</shortcut>
-	<shortcut>
 		<label>15100</label>
 		<label2>32019</label2>
 		<icon>DefaultFolder.png</icon>
@@ -36,10 +29,17 @@
 		<action>ActivateWindow(Music,musicdb://,return)</action>
 	</shortcut>
 	<shortcut>
-		<label>1038</label>
+		<label>359</label>
 		<label2>32019</label2>
 		<icon>DefaultAddonMusic.png</icon>
 		<thumb />
-		<action>ActivateWindow(Music,addons://sources/audio,return)</action>
+		<action>ActivateWindow(Music,musicdb://recentlyaddedalbums/,return)</action>
 	</shortcut>
+    <shortcut>
+        <label>517</label>
+        <label2>32019</label2>
+        <icon>DefaultAddonMusic.png</icon>
+        <thumb />
+        <action>ActivateWindow(Music,musicdb://recentlyplayedalbums/,return)</action>
+    </shortcut>
 </shortcuts>

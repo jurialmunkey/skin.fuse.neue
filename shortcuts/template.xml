@@ -233,6 +233,7 @@
     </other>
     <other include="home-widget">
         <condition tag="property" attribute="name|widgetPath">library://video/movies/genres.xml/</condition>
+        <condition tag="property" attribute="name|widgetPath">library://video/tvshows/genres.xml/</condition>
         <match>any</match>
         <property name="content" tag="property" attribute="name|widgetPath" />
         <property name="target" tag="property" attribute="name|widgetTarget" />
@@ -251,6 +252,7 @@
     </other>
     <other include="home-widget">
         <condition tag="property" attribute="name|widgetPath">library://video/movies/years.xml/</condition>
+        <condition tag="property" attribute="name|widgetPath">library://video/tvshows/years.xml/</condition>
         <match>any</match>
         <property name="content" tag="property" attribute="name|widgetPath" />
         <property name="target" tag="property" attribute="name|widgetTarget" />
@@ -269,6 +271,7 @@
     </other>
     <other include="home-widget">
         <condition tag="property" attribute="name|widgetPath">library://video/movies/directors.xml/</condition>
+        <condition tag="property" attribute="name|widgetPath">library://video/tvshows/directors.xml/</condition>
         <match>any</match>
         <property name="content" tag="property" attribute="name|widgetPath" />
         <property name="target" tag="property" attribute="name|widgetTarget" />
@@ -287,6 +290,7 @@
     </other>
     <other include="home-widget">
         <condition tag="property" attribute="name|widgetPath">library://video/movies/countries.xml/</condition>
+        <condition tag="property" attribute="name|widgetPath">library://video/tvshows/countries.xml/</condition>
         <match>any</match>
         <property name="content" tag="property" attribute="name|widgetPath" />
         <property name="target" tag="property" attribute="name|widgetTarget" />
@@ -305,6 +309,7 @@
     </other>
     <other include="home-widget">
         <condition tag="property" attribute="name|widgetPath">library://video/movies/studios.xml/</condition>
+        <condition tag="property" attribute="name|widgetPath">library://video/tvshows/studios.xml/</condition>
         <match>any</match>
         <property name="content" tag="property" attribute="name|widgetPath" />
         <property name="target" tag="property" attribute="name|widgetTarget" />

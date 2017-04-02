@@ -33,7 +33,7 @@
         <label2/>
         <defaultID>addons</defaultID>
         <icon />
-        <action>ActivateWindow(1111)</action>
+        <action>ActivateWindow(AddonBrowser)</action>
     </shortcut>
     <shortcut>
         <label>10004</label>
