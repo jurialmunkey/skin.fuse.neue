@@ -85,6 +85,7 @@
                 <fadetime>300</fadetime>
                 <texture background="true">$VAR[Image_ClearLogo]</texture>
                 <visible>!Skin.HasSetting(HideClearLogo)</visible>
+                <visible>!$EXP[Expression_ShowWeatherWidget] | !Window.IsVisible(Home)</visible>
                 <visible>!Integer.IsEqual(Window(Home).Property(FocusedList),9502)</visible>
                 <animation effect="fade" start="100" end="0" time="450" easing="out" tween="sine" reversible="true" condition="Control.HasFocus(300) | Control.HasFocus(302) | [!Control.HasFocus(301) + Window.IsVisible(Home) + Skin.HasSetting(home.dontshowfanart)]">Conditional</animation>
                 <animation effect="slide" start="0" end="0,80" condition="Skin.HasSetting(ShowTopbar)">Conditional</animation>
