@@ -466,6 +466,11 @@ msgctxt "#31089"
 msgid "Position context menu based on focused item"
 msgstr ""
 
+#: /1080i/SkinSettings.xml
+msgctxt "#31090"
+msgid "Use skinhelper to display duration format as X HRS XX MINS"
+msgstr ""
+
 msgctxt "#31101"
 msgid "items"
 msgstr ""

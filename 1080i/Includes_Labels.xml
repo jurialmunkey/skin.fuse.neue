@@ -5,7 +5,9 @@
     </variable>
 
     <variable name="Label_Duration">
-        <value>$INFO[Window(Home).Property(SkinHelper.ListItem.Duration.Hours),, $LOCALIZE[31036] ]$INFO[Window(Home).Property(SkinHelper.ListItem.Duration.Minutes),, $LOCALIZE[31020] ]</value>
+        <value condition="!Skin.HasSetting(UseHoursMinutes) + !String.IsEmpty(Container(301).ListItem.Duration)">$INFO[Container(301).ListItem.Duration,, $LOCALIZE[31020]]</value>
+        <value condition="!Skin.HasSetting(UseHoursMinutes) + !String.IsEmpty(ListItem.Duration)">$INFO[ListItem.Duration,, $LOCALIZE[31020]]</value>
+        <value condition="Skin.HasSetting(UseHoursMinutes)">$INFO[Window(Home).Property(SkinHelper.ListItem.Duration.Hours),, $LOCALIZE[31036] ]$INFO[Window(Home).Property(SkinHelper.ListItem.Duration.Minutes),, $LOCALIZE[31020] ]</value>
     </variable>
 
     <variable name="Label_NumItems">
