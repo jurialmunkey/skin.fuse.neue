@@ -1,3 +1,10 @@
+[B]0.9.28[/B]
+Add default submenu widgets
+Revert to use db values for duration (option to toggle skin helper in skin settings)
+Fix for weather show clearlogo from previous widget
+Fix for weather info blade
+Show music codec based upon filename extension
+
 [B]0.9.27[/B]
 Tweak codec info
 Add codec info to video osd controls
