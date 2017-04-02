@@ -55,6 +55,7 @@
         </control>
 
         <control type="group" id="3334">
+            <top>-70</top>
             <visible>!Skin.HasSetting(HideOSDScrollingText)</visible>
             <visible>!Window.IsVisible(script-cu-lrclyrics-main.xml)</visible>
             <animation effect="fade" time="600" delay="600">Visible</animation>
@@ -64,7 +65,7 @@
                 <left>0</left>
                 <top>0</top>
                 <width>2150</width>
-                <label>$INFO[MusicPlayer.Title,  ,]$INFO[MusicPlayer.Title,  ,]$INFO[MusicPlayer.Title,  ,]$INFO[MusicPlayer.Title,  ,]$INFO[MusicPlayer.Title,  ,]</label>
+                <label>$INFO[MusicPlayer.Title,  ,]$INFO[MusicPlayer.Title,  ,]$INFO[MusicPlayer.Title,  ,]$INFO[MusicPlayer.Title,  ,]$INFO[MusicPlayer.Title,  ,]$INFO[MusicPlayer.Title,  ,]$INFO[MusicPlayer.Title,  ,]$INFO[MusicPlayer.Title,  ,]$INFO[MusicPlayer.Title,  ,]$INFO[MusicPlayer.Title,  ,]$INFO[MusicPlayer.Title,  ,]$INFO[MusicPlayer.Title,  ,]$INFO[MusicPlayer.Title,  ,]$INFO[MusicPlayer.Title,  ,]$INFO[MusicPlayer.Title,  ,]$INFO[MusicPlayer.Title,  ,]$INFO[MusicPlayer.Title,  ,]$INFO[MusicPlayer.Title,  ,]$INFO[MusicPlayer.Title,  ,]$INFO[MusicPlayer.Title,  ,]$INFO[MusicPlayer.Title,  ,]$INFO[MusicPlayer.Title,  ,]$INFO[MusicPlayer.Title,  ,]$INFO[MusicPlayer.Title,  ,]$INFO[MusicPlayer.Title,  ,]</label>
                 <scroll>true</scroll>
                 <font>font_musicvis_biggest</font>
                 <pauseatend>0</pauseatend>
@@ -76,7 +77,7 @@
                 <left>0</left>
                 <top>100</top>
                 <width>2150</width>
-                <label>$INFO[MusicPlayer.Artist, ,]$INFO[MusicPlayer.Artist, ,]$INFO[MusicPlayer.Artist,,]$INFO[MusicPlayer.Artist,,]$INFO[MusicPlayer.Artist, ,]$INFO[MusicPlayer.Artist, ,]$INFO[MusicPlayer.Artist, ,]$INFO[MusicPlayer.Artist, ,]$INFO[MusicPlayer.Artist, ,]</label>
+                <label>$INFO[MusicPlayer.Artist, ,]$INFO[MusicPlayer.Artist, ,]$INFO[MusicPlayer.Artist,,]$INFO[MusicPlayer.Artist,,]$INFO[MusicPlayer.Artist, ,]$INFO[MusicPlayer.Artist, ,]$INFO[MusicPlayer.Artist, ,]$INFO[MusicPlayer.Artist, ,]$INFO[MusicPlayer.Artist, ,]$INFO[MusicPlayer.Artist, ,]$INFO[MusicPlayer.Artist, ,]$INFO[MusicPlayer.Artist,,]$INFO[MusicPlayer.Artist,,]$INFO[MusicPlayer.Artist, ,]$INFO[MusicPlayer.Artist, ,]$INFO[MusicPlayer.Artist, ,]$INFO[MusicPlayer.Artist, ,]$INFO[MusicPlayer.Artist, ,]</label>
                 <scroll>true</scroll>
                 <pauseatend>0</pauseatend>
                 <font>font_musicvis_bigger</font>
@@ -89,7 +90,7 @@
                 <left>0</left>
                 <top>200</top>
                 <width>2150</width>
-                <label>$INFO[MusicPlayer.Album, ,]$INFO[MusicPlayer.Album, ,]$INFO[MusicPlayer.Album, ,]$INFO[MusicPlayer.Album, ,]$INFO[MusicPlayer.Album, ,]$INFO[MusicPlayer.Album, ,]$INFO[MusicPlayer.Album, ,]$INFO[MusicPlayer.Album, ,]$INFO[MusicPlayer.Album, ,]$INFO[MusicPlayer.Album, ,]</label>
+                <label>$INFO[MusicPlayer.Album, ,]$INFO[MusicPlayer.Album, ,]$INFO[MusicPlayer.Album, ,]$INFO[MusicPlayer.Album, ,]$INFO[MusicPlayer.Album, ,]$INFO[MusicPlayer.Album, ,]$INFO[MusicPlayer.Album, ,]$INFO[MusicPlayer.Album, ,]$INFO[MusicPlayer.Album, ,]$INFO[MusicPlayer.Album, ,]$INFO[MusicPlayer.Album, ,]$INFO[MusicPlayer.Album, ,]$INFO[MusicPlayer.Album, ,]$INFO[MusicPlayer.Album, ,]$INFO[MusicPlayer.Album, ,]$INFO[MusicPlayer.Album, ,]$INFO[MusicPlayer.Album, ,]$INFO[MusicPlayer.Album, ,]$INFO[MusicPlayer.Album, ,]$INFO[MusicPlayer.Album, ,]</label>
                 <scroll>true</scroll>
                 <pauseatend>0</pauseatend>
                 <font>font_musicvis_big</font>

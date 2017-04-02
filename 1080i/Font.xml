@@ -51,10 +51,9 @@
             <size>22</size>
         </font>
         <font>
-            <name>font_widget_type</name>
-            <filename>RobotoCondensed-Bold.ttf</filename>
-            <size>20</size>
-            <style>uppercase</style>
+            <name>font_bitrate</name>
+            <filename>RobotoCondensed-Regular.ttf</filename>
+            <size>24</size>
         </font>
         <font>
             <name>font_castlist_label</name>
