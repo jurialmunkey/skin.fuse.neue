@@ -295,7 +295,7 @@
                     </control>
 
                     <control type="button" id ="445">
-                        <description>Play</description>
+                        <description>Manage</description>
                         <onfocus>ClearProperty(FocusedList,Home)</onfocus>
                         <include>Dialog_Info_Buttons</include>
                         <label>$ADDON[script.extendedinfo 32133]</label>
