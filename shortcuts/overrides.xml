@@ -367,7 +367,7 @@
     <!-- Main Grouping -->
     <groupings>
         <node label="32029">
-            <node label="31294">
+            <!-- <node label="31294">
                 <shortcut label="$LOCALIZE[31292]" type="Hub 1101" icon="special://skin/extras/icons/film.png">ActivateWindow(1101)</shortcut>
                 <shortcut label="$LOCALIZE[31292]" type="Hub 1102" icon="special://skin/extras/icons/tv.png">ActivateWindow(1102)</shortcut>
                 <shortcut label="$LOCALIZE[31292]" type="Hub 1103" icon="special://skin/extras/icons/addon.png">ActivateWindow(1103)</shortcut>
@@ -378,7 +378,7 @@
                 <shortcut label="$LOCALIZE[31292]" type="Hub 1108" icon="special://skin/extras/icons/addon.png">ActivateWindow(1108)</shortcut>
                 <shortcut label="$LOCALIZE[31292]" type="Hub 1109" icon="special://skin/extras/icons/addon.png">ActivateWindow(1109)</shortcut>
                 <shortcut label="$LOCALIZE[31293]" type="Hub 1111" icon="special://skin/extras/icons/addon.png">ActivateWindow(1111)</shortcut>
-            </node>
+            </node> -->
             <content>common</content>
             <shortcut label="$LOCALIZE[33060]" type="$LOCALIZE[31018]" icon="special://skin/extras/icons/power.png">ActivateWindow(shutdownmenu)</shortcut>
             <shortcut label="$LOCALIZE[31017]" type="32010">||BROWSE||script.skin.helper.service/?action=smartshortcuts</shortcut>

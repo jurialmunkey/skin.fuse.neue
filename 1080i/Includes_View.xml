@@ -211,7 +211,7 @@
 
     <include name="View_Posters">
         <control type="fixedlist" id="50">
-            <visible>Container.Content(movies) | Container.Content(sets) | Container.Content(seasons) | [Container.Content(musicvideos) + Window.IsVisible(MyVideoNav.xml) + Skin.HasSetting(MusicVideoConcerts)] | [Container.Content(tvshows) + Skin.HasSetting(TvShowPosters)]</visible>
+            <visible>Container.Content(movies) | Container.Content(sets) | [Container.Content(seasons) + !Skin.HasSetting(SeasonList)] | [Container.Content(musicvideos) + Window.IsVisible(MyVideoNav.xml) + Skin.HasSetting(MusicVideoConcerts)] | [Container.Content(tvshows) + Skin.HasSetting(TvShowPosters)]</visible>
             <include>View_Posters_Layout</include>
         </control>
     </include>
@@ -236,7 +236,7 @@
     </include>
     <include name="View_List">
         <control type="fixedlist" id="54">
-            <visible>Container.Content(songs) | Container.Content(files) | Window.IsVisible(MyPlaylist.xml) | Container.Content(directors) | Container.Content() | Container.Content(playlists) | Container.Content(tags)</visible>
+            <visible>Container.Content(songs) | Container.Content(files) | Window.IsVisible(MyPlaylist.xml) | Container.Content(directors) | Container.Content() | Container.Content(playlists) | Container.Content(tags) | [Container.Content(seasons) + Skin.HasSetting(SeasonList)]</visible>
             <include>View_List_Layout</include>
         </control>
     </include>
