@@ -224,6 +224,7 @@
                     <aspectratio align="right">keep</aspectratio>
                     <visible>!String.IsEmpty($PARAM[container]ListItem.AudioCodec)</visible>
                 </control>
+                
                 <control type="image">
                     <width>88</width>
                     <height>48</height>
@@ -231,6 +232,14 @@
                     <texture colordiffuse="panel_fg_100" fallback="flags/fallback.png">$INFO[$PARAM[container]ListItem.AudioChannels,flags/$PARAM[directory]/channels/,.png]</texture>
                     <aspectratio align="right">keep</aspectratio>
                     <visible>!String.IsEmpty($PARAM[container]ListItem.AudioChannels)</visible>
+                </control>
+                <control type="image">
+                    <width>88</width>
+                    <height>48</height>
+                    <centertop>50%</centertop>
+                    <texture colordiffuse="panel_fg_100">$INFO[$PARAM[container]ListItem.FileExtension,flags/$PARAM[directory]/audio/,.png]</texture>
+                    <aspectratio align="right">keep</aspectratio>
+                    <visible>Container.Content(songs)</visible>
                 </control>
             </control>
         </definition>
