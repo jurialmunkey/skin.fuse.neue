@@ -236,7 +236,7 @@
     </include>
     <include name="View_List">
         <control type="fixedlist" id="54">
-            <visible>Container.Content(songs) | Container.Content(files) | Window.IsVisible(MyPlaylist.xml) | Container.Content(directors) | Container.Content(countries) | Container.Content(years) | Container.Content() | Container.Content(playlists) | Container.Content(tags)</visible>
+            <visible>Container.Content(songs) | Container.Content(files) | Window.IsVisible(MyPlaylist.xml) | Container.Content(directors) | Container.Content() | Container.Content(playlists) | Container.Content(tags)</visible>
             <include>View_List_Layout</include>
         </control>
     </include>

@@ -78,28 +78,31 @@
                     <texture border="24,12,24,12">diffuse/shadowspot.png</texture>
                 </control>
                 <control type="group">
-                    <visible>!Window.IsVisible(MyPics.xml)</visible>        
-                    <control type="image">
-                        <include>Defs_Shadow_Opaque</include>
-                        <aspectratio aligny="center">scale</aspectratio>
-                        <texture background="true" fallback="DefaultAddonImages.png">$PARAM[variable]</texture>
-                        <visible>[!$PARAM[container]ListItem.IsParentFolder + !String.StartsWith($PARAM[container]ListItem.Icon,Default) + [!String.IsEmpty($PARAM[container]ListItem.Art(tvshow.poster)) | !String.IsEmpty($PARAM[container]ListItem.Art(poster)) | Container.Content(albums) | Container.Content(songs) | Container.Content(actors) | Container.Content(addons) | Container.Content(artists) | Window.IsVisible(1101) | Window.IsVisible(1102) | Window.IsVisible(1103) | Window.IsVisible(1104) | Window.IsVisible(1105) | Window.IsVisible(1106) | Window.IsVisible(1107) | Window.IsVisible(1108) | Window.IsVisible(1109) | [Window.IsVisible(MyPVRChannels.xml) | Window.IsVisible(MyPVRTimers.xml) | Window.IsVisible(MyPVRRecordings.xml)]]]</visible>
-                    </control>
-                    
+                    <visible>!Window.IsVisible(MyPics.xml)</visible>
                     <control type="group">
-                        <visible>[[!$PARAM[container]ListItem.IsParentFolder + !String.StartsWith($PARAM[container]ListItem.Icon,Default)] + ![!String.IsEmpty($PARAM[container]ListItem.Art(tvshow.poster)) | !String.IsEmpty($PARAM[container]ListItem.Art(poster)) | Container.Content(albums) | Container.Content(songs) | Container.Content(actors) | Container.Content(addons) | Container.Content(artists) | Window.IsVisible(1101) | Window.IsVisible(1102) | Window.IsVisible(1103) | Window.IsVisible(1104) | Window.IsVisible(1105) | Window.IsVisible(1106) | Window.IsVisible(1107) | Window.IsVisible(1108) | Window.IsVisible(1109) | [Window.IsVisible(MyPVRChannels.xml) | Window.IsVisible(MyPVRTimers.xml) | Window.IsVisible(MyPVRRecordings.xml)]]]</visible>
+                        <visible>!Window.IsVisible(Home) | [Window.IsVisible(Home) + [[[Integer.IsEqual(Window(Home).Property(MenuBarFocus),302) + !String.Contains(Container(302).ListItem.Property(widgetPath),genres.xml)] | [[!Integer.IsEqual(Window(Home).Property(MenuBarFocus),302) | String.IsEmpty(Container(302).ListItem.Property(widgetType))] + !String.Contains(Container(300).ListItem.Property(widgetPath),genres.xml)]] | [[Integer.IsEqual(Window(Home).Property(MenuBarFocus),302) + !String.Contains(Container(302).ListItem.Property(widgetPath),studios.xml)] | [[!Integer.IsEqual(Window(Home).Property(MenuBarFocus),302) | String.IsEmpty(Container(302).ListItem.Property(widgetType))] + !String.Contains(Container(300).ListItem.Property(widgetPath),studios.xml)]]]]</visible>
                         <control type="image">
                             <include>Defs_Shadow_Opaque</include>
-                            <texture colordiffuse="PosterBack">common/white.png</texture>
+                            <aspectratio aligny="center">scale</aspectratio>
+                            <texture background="true" fallback="DefaultAddonImages.png">$PARAM[variable]</texture>
+                            <visible>[!$PARAM[container]ListItem.IsParentFolder + !String.StartsWith($PARAM[container]ListItem.Icon,Default) + [!String.IsEmpty($PARAM[container]ListItem.Art(tvshow.poster)) | !String.IsEmpty($PARAM[container]ListItem.Art(poster)) | Container.Content(albums) | Container.Content(songs) | Container.Content(actors) | Container.Content(addons) | Container.Content(artists) | Window.IsVisible(1101) | Window.IsVisible(1102) | Window.IsVisible(1103) | Window.IsVisible(1104) | Window.IsVisible(1105) | Window.IsVisible(1106) | Window.IsVisible(1107) | Window.IsVisible(1108) | Window.IsVisible(1109) | [Window.IsVisible(MyPVRChannels.xml) | Window.IsVisible(MyPVRTimers.xml) | Window.IsVisible(MyPVRRecordings.xml)]]]</visible>
                         </control>
-                        <control type="image">
-                            <aspectratio aligny="center">keep</aspectratio>
-                            <texture background="true"  fallback="DefaultAddonImages.png">$PARAM[variable]</texture>
+                        
+                        <control type="group">
+                            <visible>[[!$PARAM[container]ListItem.IsParentFolder + !String.StartsWith($PARAM[container]ListItem.Icon,Default)] + ![!String.IsEmpty($PARAM[container]ListItem.Art(tvshow.poster)) | !String.IsEmpty($PARAM[container]ListItem.Art(poster)) | Container.Content(albums) | Container.Content(songs) | Container.Content(actors) | Container.Content(addons) | Container.Content(artists) | Window.IsVisible(1101) | Window.IsVisible(1102) | Window.IsVisible(1103) | Window.IsVisible(1104) | Window.IsVisible(1105) | Window.IsVisible(1106) | Window.IsVisible(1107) | Window.IsVisible(1108) | Window.IsVisible(1109) | [Window.IsVisible(MyPVRChannels.xml) | Window.IsVisible(MyPVRTimers.xml) | Window.IsVisible(MyPVRRecordings.xml)]]]</visible>
+                            <control type="image">
+                                <include>Defs_Shadow_Opaque</include>
+                                <texture colordiffuse="PosterBack">common/white.png</texture>
+                            </control>
+                            <control type="image">
+                                <aspectratio aligny="center">keep</aspectratio>
+                                <texture background="true"  fallback="DefaultAddonImages.png">$PARAM[variable]</texture>
+                            </control>
                         </control>
                     </control>
 
                     <control type="group">
-                        <visible>$PARAM[container]ListItem.IsParentFolder | String.StartsWith($PARAM[container]ListItem.Icon,Default)</visible>
+                        <visible>$PARAM[container]ListItem.IsParentFolder | String.StartsWith($PARAM[container]ListItem.Icon,Default) | [Window.IsVisible(Home) + [[[Integer.IsEqual(Window(Home).Property(MenuBarFocus),302) + String.Contains(Container(302).ListItem.Property(widgetPath),genres.xml)] | [[!Integer.IsEqual(Window(Home).Property(MenuBarFocus),302) | String.IsEmpty(Container(302).ListItem.Property(widgetType))] + String.Contains(Container(300).ListItem.Property(widgetPath),genres.xml)]] | [[Integer.IsEqual(Window(Home).Property(MenuBarFocus),302) + String.Contains(Container(302).ListItem.Property(widgetPath),studios.xml)] | [[!Integer.IsEqual(Window(Home).Property(MenuBarFocus),302) | String.IsEmpty(Container(302).ListItem.Property(widgetType))] + String.Contains(Container(300).ListItem.Property(widgetPath),studios.xml)]]]]</visible>
                         <control type="image">
                             <include>Defs_Shadow_Opaque</include>
                             <aspectratio aligny="center">scale</aspectratio>
@@ -108,19 +111,19 @@
                         <control type="image">
                             <aspectratio aligny="center">scale</aspectratio>
                             <texture background="true"  colordiffuse="main_fg_100" fallback="DefaultAddonNone.png">$INFO[$PARAM[container]ListItem.Icon]</texture>
-                            <visible>[!Container.Content(genres) + !Container.Content(studios)] | ListItem.IsParentFolder</visible>
+                            <visible>[!Container.Content(genres) + !Container.Content(studios) + !Window.IsVisible(Home)] | ListItem.IsParentFolder | [Window.IsVisible(Home) + [[[Integer.IsEqual(Window(Home).Property(MenuBarFocus),302) + !String.Contains(Container(302).ListItem.Property(widgetPath),genres.xml)] | [[!Integer.IsEqual(Window(Home).Property(MenuBarFocus),302) | String.IsEmpty(Container(302).ListItem.Property(widgetType))] + !String.Contains(Container(300).ListItem.Property(widgetPath),genres.xml)]] + [[Integer.IsEqual(Window(Home).Property(MenuBarFocus),302) + !String.Contains(Container(302).ListItem.Property(widgetPath),studios.xml)] | [[!Integer.IsEqual(Window(Home).Property(MenuBarFocus),302) | String.IsEmpty(Container(302).ListItem.Property(widgetType))] + !String.Contains(Container(300).ListItem.Property(widgetPath),studios.xml)]]]]</visible>
                         </control>
                         <control type="image">
                             <bordersize>80</bordersize>
                             <aspectratio aligny="center">keep</aspectratio>
                             <texture background="true" colordiffuse="main_fg_100" fallback="DefaultFolder.png">$INFO[$PARAM[container]ListItem.Label,resource://resource.images.moviegenreicons.transparent/,.png]</texture>
-                            <visible>Container.Content(genres) + !ListItem.IsParentFolder</visible>
+                            <visible>[Container.Content(genres) | [Window.IsVisible(Home) + [[Integer.IsEqual(Window(Home).Property(MenuBarFocus),302) + String.Contains(Container(302).ListItem.Property(widgetPath),genres.xml)] | [[!Integer.IsEqual(Window(Home).Property(MenuBarFocus),302) | String.IsEmpty(Container(302).ListItem.Property(widgetType))] + String.Contains(Container(300).ListItem.Property(widgetPath),genres.xml)]]]] + !ListItem.IsParentFolder</visible>
                         </control>
                         <control type="image">
                             <bordersize>80</bordersize>
                             <aspectratio aligny="center">keep</aspectratio>
                             <texture background="true" colordiffuse="main_fg_100" fallback="DefaultFolder.png">$INFO[$PARAM[container]ListItem.Label,resource://resource.images.studios.white/,.png]</texture>
-                            <visible>Container.Content(studios) + !ListItem.IsParentFolder</visible>
+                            <visible>[Container.Content(studios) | [Window.IsVisible(Home) + [[Integer.IsEqual(Window(Home).Property(MenuBarFocus),302) + String.Contains(Container(302).ListItem.Property(widgetPath),studios.xml)] | [[!Integer.IsEqual(Window(Home).Property(MenuBarFocus),302) | String.IsEmpty(Container(302).ListItem.Property(widgetType))] + String.Contains(Container(300).ListItem.Property(widgetPath),studios.xml)]]]] + !ListItem.IsParentFolder</visible>
                         </control>
                     </control>
                 </control>

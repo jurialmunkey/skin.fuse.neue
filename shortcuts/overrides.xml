@@ -336,7 +336,7 @@
     <widgetdefaultnode labelID="369" group="20342" label="Titles" type="movies" path="videodb://movies/titles/" target="videos">MovieTitles</widgetdefaultnode>
     <widgetdefaultnode labelID="135" group="20342" label="Genres" type="movies" path="library://video/movies/genres.xml/" target="videos">MovieGenres</widgetdefaultnode>
     <widgetdefaultnode labelID="562" group="20342" label="Years" type="movies" path="library://video/movies/years.xml/" target="videos">MovieYears</widgetdefaultnode>
-    <widgetdefaultnode labelID="344" group="20342" label="Actors" type="movies" path="library://video/movies/actors.xml/" target="videos">MovieActors</widgetdefaultnode>
+    <widgetdefaultnode labelID="344" group="20342" label="Actors" type="actors" path="library://video/movies/actors.xml/" target="videos">MovieActors</widgetdefaultnode>
 
     <!-- TV Shows -->
     <widgetdefaultnode labelID="tvshows" group="mainmenu" label="Recently Watched Shows" type="tvshows" path="special://skin/extras/playlists/NewEpisodes.xsp" target="videos">NewEpisodes</widgetdefaultnode>
@@ -344,7 +344,7 @@
     <widgetdefaultnode labelID="369" group="tvshows" label="Titles" type="tvshows" path="videodb://tvshows/titles/" target="videos">TVShowTitles</widgetdefaultnode>
     <widgetdefaultnode labelID="135" group="tvshows" label="Genres" type="tvshows" path="library://video/tvshows/genres.xml/" target="videos">TVStudios</widgetdefaultnode>
     <widgetdefaultnode labelID="562" group="tvshows" label="Years" type="tvshows" path="library://video/tvshows/years.xml/" target="videos">TVStudios</widgetdefaultnode>
-    <widgetdefaultnode labelID="344" group="tvshows" label="Actors" type="movies" path="library://video/tvshows/actors.xml/" target="videos">TVStudios</widgetdefaultnode>
+    <widgetdefaultnode labelID="344" group="tvshows" label="Actors" type="actors" path="library://video/tvshows/actors.xml/" target="videos">TVStudios</widgetdefaultnode>
 
     <!-- Music -->
     <widgetdefaultnode labelID="2" group="mainmenu" label="Top 100 Albums" type="albums" path="musicdb://top100/albums/" target="music">Top100Albums</widgetdefaultnode>

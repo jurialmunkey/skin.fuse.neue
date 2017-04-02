@@ -3,6 +3,7 @@
     <submenuOther include="home-submenu-widget" container="302">
         <condition tag="property" attribute="name|widgetType">artists</condition>
         <condition tag="property" attribute="name|widgetType">albums</condition>
+        <condition tag="property" attribute="name|widgetType">actors</condition>
         <condition tag="property" attribute="name|widgetType">addons</condition>
         <condition tag="property" attribute="name|widgetType">program</condition>
         <condition tag="property" attribute="name|widgetType">pictures</condition>
@@ -208,6 +209,7 @@
     <other include="home-widget">
         <condition tag="property" attribute="name|widgetType">artists</condition>
         <condition tag="property" attribute="name|widgetType">albums</condition>
+        <condition tag="property" attribute="name|widgetType">actors</condition>
         <condition tag="property" attribute="name|widgetType">addons</condition>
         <condition tag="property" attribute="name|widgetType">program</condition>
         <condition tag="property" attribute="name|widgetType">pictures</condition>
