@@ -5,7 +5,7 @@
         <label2/>
         <defaultID>videos</defaultID>
         <icon />
-        <action>ActivateWindow(Videos,videodb://,return)</action>
+        <action>ActivateWindow(Videos)</action>
     </shortcut>
     <shortcut>
         <label>20342</label>

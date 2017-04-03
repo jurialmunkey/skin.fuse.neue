@@ -202,7 +202,7 @@
     <include name="View_Library">
         <include>View_Posters</include>
         <include>View_Landscape</include>
-        <include>View_Tiles</include>
+        <include>View_Actors</include>
         <include>View_Square</include>
         <include>View_List</include>
     </include>
@@ -221,16 +221,18 @@
             <include>View_Landscape_Layout</include>
         </control>
     </include>
-    <include name="View_Tiles">
+    <include name="View_Actors">
         <control type="panel" id="52">
-            <visible>Container.Content() | Container.Content(playlists) | Container.Content(tags)</visible>
-            <visible>false</visible>
-            <include>View_Tiles_Layout</include>
+            <visible>Container.Content(actors)</visible>
+            <include content="View_Square_Layout">
+                <param name="actors" value="true" />
+                <param name="id" value="52" />
+            </include>
         </control>
     </include>
     <include name="View_Square">
         <control type="fixedlist" id="53">
-            <visible>![Container.Content(episodes) | Container.Content(movies) | Container.Content(sets) | Container.Content(seasons) | Container.Content(tvshows) | Container.Content(songs) | Container.Content(files) | Container.Content() | Container.Content(playlists) | Container.Content(tags) | [Container.Content(musicvideos) + Window.IsVisible(MyVideoNav.xml) + Skin.HasSetting(MusicVideoConcerts)]]</visible>
+            <visible>![Container.Content(episodes) | Container.Content(actors) | Container.Content(movies) | Container.Content(sets) | Container.Content(seasons) | Container.Content(tvshows) | Container.Content(songs) | Container.Content(files) | Container.Content() | Container.Content(playlists) | Container.Content(tags) | [Container.Content(musicvideos) + Window.IsVisible(MyVideoNav.xml) + Skin.HasSetting(MusicVideoConcerts)]]</visible>
             <include>View_Square_Layout</include>
         </control>
     </include>
@@ -599,6 +601,7 @@
         <param name="studios" default="false" />
         <param name="directors" default="false" />
         <param name="countries" default="false" />
+        <param name="actors" default="false" />
         <definition>
             <viewtype label="$LOCALIZE[31263]">icon</viewtype>
             <animation effect="slide" end="-207.66" condition="Integer.IsLess(Container($PARAM[id]).NumItems,5) + !Container.HasParent">Conditional</animation>
@@ -620,7 +623,7 @@
             <pagecontrol>60</pagecontrol>
             <onfocus>SetProperty(ViewType,Square,Home)</onfocus>
             <scrolltime tween="quadratic">400</scrolltime>
-            <itemlayout width="207.66" height="257">
+            <itemlayout width="207.66" height="257" condition="!$PARAM[actors]">
 
                 <control type="image">
                     <bordersize>10</bordersize>
@@ -717,7 +720,7 @@
                 </control>
                 <include>View_WatchedOverlay</include>
             </itemlayout>
-            <focusedlayout width="207.66" height="257">
+            <focusedlayout width="207.66" height="257" condition="!$PARAM[actors]">
 
                 <include condition="Skin.HasSetting(ContextPosition)" content="View_Square_Button">
                     <param name="id" value="$PARAM[id]" />
@@ -804,6 +807,137 @@
                     <height>49.34</height>
                     <bottom>10</bottom>
                     <texture colordiffuse="PosterBack">common/white.png</texture>
+                </control>
+                <control type="label">
+                    <left>20</left>
+                    <right>20</right>
+                    <height>49.34</height>
+                    <bottom>10</bottom>
+                    <align>left</align>
+                    <aligny>center</aligny>
+                    <font>font_albumlistlabel</font>
+                    <textcolor>main_fg_70</textcolor>
+                    <label>$VAR[Label_SquareTitle]</label>
+                </control>
+
+                <include>View_WatchedOverlay</include>
+                <!-- Highlight -->
+                <control type="group">
+                    <visible>Control.HasFocus($PARAM[id])</visible>
+                    <animation type="Focus">
+                        <effect type="zoom" start="90" end="100" time="150" tween="sine" easing="inout" center="auto" />
+                        <effect type="fade" start="0" end="100" time="150" tween="sine" easing="in" />
+                    </animation>
+                    <animation type="Unfocus">
+                        <effect type="zoom" start="100" end="90" time="150" tween="sine" easing="inout" center="auto" />
+                        <effect type="fade" start="100" end="0" time="150" tween="sine" easing="out" />
+                    </animation>
+                    <include>View_WatchedOverlay_Focus</include>
+                    <control type="image">
+                        <left>3</left>
+                        <top>3</top>
+                        <right>3</right>
+                        <bottom>3</bottom>
+                        <texture colordiffuse="$VAR[ColorHighlight]" border="20">common/selectbox.png</texture>
+                    </control>
+                </control>
+            </focusedlayout>
+            <itemlayout width="207.66" height="257" condition="$PARAM[actors]">
+
+                <control type="image">
+                    <bordersize>10</bordersize>
+                    <bordertexture border="10">common/nofocus-shadow10.png</bordertexture>
+                    <aspectratio scalediffuse="false">scale</aspectratio>
+                    <texture colordiffuse="main_fg_12">common/white.png</texture>
+                </control>
+
+                <!-- Parent Folder -->
+                <control type="group">
+                    <visible>ListItem.IsParentFolder | String.StartsWith(ListItem.Icon,Default)</visible>
+                    <control type="image">
+                        <bordersize>10</bordersize>
+                        <top>0</top>
+                        <height>207.66</height>
+                        <aspectratio scalediffuse="false">scale</aspectratio>
+                        <aspectratio aligny="center">scale</aspectratio>
+                        <texture colordiffuse="main_fg_100" background="true">$INFO[ListItem.Icon]</texture>
+                    </control>
+                </control>
+                
+                <!-- Poster -->
+                <control type="image">
+                    <left>10</left>
+                    <right>10</right>
+                    <top>10</top>
+                    <bottom>10</bottom>
+                    <aspectratio scalediffuse="false">scale</aspectratio>
+                    <texture fallback="DefaultAddonNone.png" background="true">$VAR[Image_Poster]</texture>
+                    <visible>!ListItem.IsParentFolder</visible>
+                    <visible>!String.StartsWith(ListItem.Icon,Default)</visible>
+                </control>
+                <control type="image">
+                    <left>10</left>
+                    <right>10</right>
+                    <height>49.34</height>
+                    <bottom>10</bottom>
+                    <texture colordiffuse="9f000000">common/white.png</texture>
+                </control>
+                <control type="label">
+                    <left>20</left>
+                    <right>20</right>
+                    <height>49.34</height>
+                    <bottom>10</bottom>
+                    <align>left</align>
+                    <aligny>center</aligny>
+                    <font>font_albumlistlabel</font>
+                    <textcolor>main_fg_70</textcolor>
+                    <label>$VAR[Label_SquareTitle]</label>
+                </control>
+                <include>View_WatchedOverlay</include>
+            </itemlayout>
+            <focusedlayout width="207.66" height="257" condition="$PARAM[actors]">
+
+                <include condition="Skin.HasSetting(ContextPosition)" content="View_Square_Button">
+                    <param name="id" value="$PARAM[id]" />
+                </include>
+
+                <control type="image">
+                    <bordersize>10</bordersize>
+                    <bordertexture border="10">common/nofocus-shadow10.png</bordertexture>
+                    <aspectratio scalediffuse="false">scale</aspectratio>
+                    <texture colordiffuse="main_fg_12">common/white.png</texture>
+                </control>
+
+                <!-- Parent Folder -->
+                <control type="group">
+                    <visible>ListItem.IsParentFolder | String.StartsWith(ListItem.Icon,Default)</visible>
+                    <control type="image">
+                        <bordersize>10</bordersize>
+                        <top>0</top>
+                        <height>207.66</height>
+                        <aspectratio scalediffuse="false">scale</aspectratio>
+                        <aspectratio aligny="center">scale</aspectratio>
+                        <texture colordiffuse="main_fg_100" background="true">$INFO[ListItem.Icon]</texture>
+                    </control>
+                </control>
+                
+                <!-- Poster -->
+                <control type="image">
+                    <left>10</left>
+                    <right>10</right>
+                    <top>10</top>
+                    <bottom>10</bottom>
+                    <aspectratio scalediffuse="false">scale</aspectratio>
+                    <texture fallback="DefaultAddonNone.png" background="true">$VAR[Image_Poster]</texture>
+                    <visible>!ListItem.IsParentFolder</visible>
+                    <visible>!String.StartsWith(ListItem.Icon,Default)</visible>
+                </control>
+                <control type="image">
+                    <left>10</left>
+                    <right>10</right>
+                    <height>49.34</height>
+                    <bottom>10</bottom>
+                    <texture colordiffuse="9f000000">common/white.png</texture>
                 </control>
                 <control type="label">
                     <left>20</left>
