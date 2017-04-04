@@ -19,6 +19,7 @@
         </controls>
     </submenuOther>
     <submenuOther include="home-submenu-widget" container="302">
+        <condition tag="property" attribute="name|widgetType">pvr</condition>
         <condition tag="property" attribute="name|widgetType">artists</condition>
         <condition tag="property" attribute="name|widgetType">albums</condition>
         <condition tag="property" attribute="name|widgetType">addons</condition>
@@ -242,6 +243,7 @@
         </controls>
     </other>
     <other include="home-widget">
+        <condition tag="property" attribute="name|widgetType">pvr</condition>
         <condition tag="property" attribute="name|widgetType">artists</condition>
         <condition tag="property" attribute="name|widgetType">albums</condition>
         <condition tag="property" attribute="name|widgetType">addons</condition>
