@@ -476,6 +476,51 @@ msgctxt "#31091"
 msgid "Prefer list view for seasons"
 msgstr ""
 
+#: /1080i/Includes_Object.xml
+msgctxt "#31092"
+msgid "System Name"
+msgstr ""
+
+#: /1080i/Includes_Object.xml
+msgctxt "#31093"
+msgid "Gateway Address"
+msgstr ""
+
+#: /1080i/Includes_Object.xml
+msgctxt "#31094"
+msgid "Network and Storage"
+msgstr ""
+
+#: /1080i/Includes_Object.xml
+msgctxt "#31095"
+msgid "Video Encoder"
+msgstr ""
+
+#: /1080i/Includes_Object.xml
+msgctxt "#31096"
+msgid "Memory"
+msgstr ""
+
+#: /1080i/Includes_Object.xml
+msgctxt "#31097"
+msgid "Fan Speed"
+msgstr ""
+
+#: /1080i/Includes_Object.xml
+msgctxt "#31098"
+msgid "CPU Info"
+msgstr ""
+
+#: /1080i/Includes_Object.xml
+msgctxt "#31099"
+msgid "CPU Usage"
+msgstr ""
+
+#: /1080i/Includes_Object.xml
+msgctxt "#31100"
+msgid "Processor, Memory and Video"
+msgstr ""
+
 msgctxt "#31101"
 msgid "items"
 msgstr ""

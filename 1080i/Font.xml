@@ -157,9 +157,14 @@
         </font>
 
         <font>
-            <name>font_systeminfo_kodiversion</name>
+            <name>font_systeminfo_skinversion</name>
             <filename>RobotoCondensed-Bold.ttf</filename>
-            <size>48</size>
+            <size>40</size>
+        </font>
+        <font>
+            <name>font_systeminfo_skinname</name>
+            <filename>RobotoCondensed-Bold.ttf</filename>
+            <size>32</size>
         </font>
 
         <font>

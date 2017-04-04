@@ -572,7 +572,7 @@
             <include>Animation_FadeOut</include>
             <control type="group">
                 <control type="image">
-                    <top>-64</top>
+                    <top>-84</top>
                     <left>-92</left>
                     <width>384</width>
                     <height>384</height>
@@ -580,15 +580,26 @@
                     <texture colordiffuse="main_fg_100">DefaultInfo.png</texture>
                 </control>
                 <control type="label">
-                    <bottom>0</bottom>
-                    <height>80</height>
+                    <bottom>40</bottom>
+                    <height>90</height>
                     <width>230</width>
-                    <left>0</left>
+                    <left>-10</left>
                     <align>center</align>
                     <aligny>center</aligny>
-                    <font>font_systeminfo_kodiversion</font>
-                    <textcolor>main_fg_100</textcolor>
-                    <label fallback="N/A">$INFO[System.AddonVersion(skin.fuse.neue),v ,   ]</label>
+                    <font>font_systeminfo_skinname</font>
+                    <textcolor>main_fg_30</textcolor>
+                    <label fallback="N/A">[COLOR=$VAR[ColorHighlight]](fuse) [/COLOR]neue </label>
+                </control>
+                <control type="label">
+                    <bottom>0</bottom>
+                    <height>72</height>
+                    <width>230</width>
+                    <left>-10</left>
+                    <align>center</align>
+                    <aligny>center</aligny>
+                    <font>font_systeminfo_skinversion</font>
+                    <textcolor>main_fg_70</textcolor>
+                    <label fallback="N/A">$INFO[System.AddonVersion(skin.fuse.neue)]</label>
                 </control>
                 <control type="grouplist">
                     <top>20</top>
@@ -606,7 +617,7 @@
                         <texturenofocus border="8" colordiffuse="main_fg_30">common/underline.png</texturenofocus>
                         <texturefocus border="8" colordiffuse="main_fg_30">common/underline.png</texturefocus>
                         <textcolor>Selected</textcolor>
-                        <label>Processor, Memory and Video</label>
+                        <label>$LOCALIZE[31100]</label>
                     </control>
                     <control type="label"><height>16</height></control>
                     <control type="grouplist">
@@ -619,7 +630,7 @@
                             <aligny>top</aligny>
                             <font>font_weather_condition</font>
                             <textcolor>main_fg_70</textcolor>
-                            <label>CPU Usage  </label>
+                            <label>$LOCALIZE[31099]  </label>
                         </control>
                         <control type="label">
                             <height>40</height>
@@ -639,14 +650,14 @@
                             <aligny>top</aligny>
                             <font>font_weather_condition</font>
                             <textcolor>main_fg_70</textcolor>
-                            <label>CPU Info  </label>
+                            <label>$LOCALIZE[31098]  </label>
                         </control>
                         <control type="label">
                             <height>40</height>
                             <aligny>top</aligny>
                             <font>font_weather_condition</font>
                             <textcolor>main_fg_100</textcolor>
-                            <label>$INFO[System.CPUFrequency]$INFO[System.CPUTemperature,[COLOR=main_fg_70]  •  [/COLOR],]$INFO[System.FanSpeed,[COLOR=main_fg_70]  •  Fan Speed[/COLOR]  ,]</label>
+                            <label>$INFO[System.CPUFrequency]$INFO[System.CPUTemperature,[COLOR=main_fg_70]  •  [/COLOR],]$INFO[System.FanSpeed,[COLOR=main_fg_70]  •  $LOCALIZE[31097][/COLOR]  ,]</label>
                         </control>
                     </control>
                     <control type="grouplist">
@@ -659,7 +670,7 @@
                             <aligny>top</aligny>
                             <font>font_weather_condition</font>
                             <textcolor>main_fg_70</textcolor>
-                            <label>Memory  </label>
+                            <label>$LOCALIZE[31096]  </label>
                         </control>
                         <control type="label">
                             <height>40</height>
@@ -679,7 +690,7 @@
                             <aligny>top</aligny>
                             <font>font_weather_condition</font>
                             <textcolor>main_fg_70</textcolor>
-                            <label>Resolution  </label>
+                            <label>$LOCALIZE[169]  </label>
                         </control>
                         <control type="label">
                             <height>40</height>
@@ -699,7 +710,7 @@
                             <aligny>top</aligny>
                             <font>font_weather_condition</font>
                             <textcolor>main_fg_70</textcolor>
-                            <label>Video Encoder  </label>
+                            <label>$LOCALIZE[31095]  </label>
                         </control>
                         <control type="label">
                             <height>40</height>
@@ -719,7 +730,7 @@
                             <aligny>top</aligny>
                             <font>font_weather_condition</font>
                             <textcolor>main_fg_70</textcolor>
-                            <label>System Uptime  </label>
+                            <label>[CAPITALIZE]$LOCALIZE[12390][/CAPITALIZE]  </label>
                         </control>
                         <control type="label">
                             <height>40</height>
@@ -746,7 +757,7 @@
                         <texturenofocus border="8" colordiffuse="main_fg_30">common/underline.png</texturenofocus>
                         <texturefocus border="8" colordiffuse="main_fg_30">common/underline.png</texturefocus>
                         <textcolor>Selected</textcolor>
-                        <label>Network and Storage</label>
+                        <label>$LOCALIZE[31094]</label>
                     </control>
                     <control type="label"><height>16</height></control>
                     <control type="grouplist">
@@ -759,7 +770,7 @@
                             <aligny>top</aligny>
                             <font>font_weather_condition</font>
                             <textcolor>main_fg_70</textcolor>
-                            <label>Internet  </label>
+                            <label>$LOCALIZE[443]  </label>
                         </control>
                         <control type="label">
                             <height>40</height>
@@ -779,14 +790,14 @@
                             <aligny>top</aligny>
                             <font>font_weather_condition</font>
                             <textcolor>main_fg_70</textcolor>
-                            <label>IP Address  </label>
+                            <label>[CAPITALIZE]$LOCALIZE[150][/CAPITALIZE]  </label>
                         </control>
                         <control type="label">
                             <height>40</height>
                             <aligny>top</aligny>
                             <font>font_weather_condition</font>
                             <textcolor>main_fg_100</textcolor>
-                            <label>$INFO[Network.IPAddress]$INFO[Network.MacAddress,[COLOR=main_fg_70]  •  Mac Address  [/COLOR],]</label>
+                            <label>$INFO[Network.IPAddress]$INFO[Network.MacAddress,[COLOR=main_fg_70]  •  [CAPITALIZE]$LOCALIZE[149][/CAPITALIZE]  [/COLOR],]</label>
                         </control>
                     </control>
                     <control type="grouplist">
@@ -799,14 +810,14 @@
                             <aligny>top</aligny>
                             <font>font_weather_condition</font>
                             <textcolor>main_fg_70</textcolor>
-                            <label>Gateway Address </label>
+                            <label>$LOCALIZE[31093]  </label>
                         </control>
                         <control type="label">
                             <height>40</height>
                             <aligny>top</aligny>
                             <font>font_weather_condition</font>
                             <textcolor>main_fg_100</textcolor>
-                            <label>$INFO[Network.GatewayAddress]$INFO[Network.SubNetMask,[COLOR=main_fg_70]  •  SubNet Mask  [/COLOR],]</label>
+                            <label>$INFO[Network.GatewayAddress]$INFO[Network.SubNetMask,[COLOR=main_fg_70]  •  [CAPITALIZE]$LOCALIZE[13159][/CAPITALIZE]  [/COLOR],]</label>
                         </control>
                     </control>
                     <control type="grouplist">
@@ -819,7 +830,7 @@
                             <aligny>top</aligny>
                             <font>font_weather_condition</font>
                             <textcolor>main_fg_70</textcolor>
-                            <label>System Name  </label>
+                            <label>$LOCALIZE[31092]  </label>
                         </control>
                         <control type="label">
                             <height>40</height>
@@ -839,14 +850,14 @@
                             <aligny>top</aligny>
                             <font>font_weather_condition</font>
                             <textcolor>main_fg_70</textcolor>
-                            <label>Profile Name  </label>
+                            <label>[CAPITALIZE]$LOCALIZE[20093][/CAPITALIZE]  </label>
                         </control>
                         <control type="label">
                             <height>40</height>
                             <aligny>top</aligny>
                             <font>font_weather_condition</font>
                             <textcolor>main_fg_100</textcolor>
-                            <label>$INFO[System.ProfileName]$INFO[System.Language,[COLOR=main_fg_70]  •  Language  [/COLOR],]</label>
+                            <label>$INFO[System.ProfileName]$INFO[System.Language,[COLOR=main_fg_70]  •  $LOCALIZE[248]  [/COLOR],]</label>
                         </control>
                     </control>
                     <control type="grouplist">
@@ -859,7 +870,7 @@
                             <aligny>top</aligny>
                             <font>font_weather_condition</font>
                             <textcolor>main_fg_70</textcolor>
-                            <label>Storage  </label>
+                            <label>$LOCALIZE[154]  </label>
                         </control>
                         <control type="label">
                             <height>40</height>
