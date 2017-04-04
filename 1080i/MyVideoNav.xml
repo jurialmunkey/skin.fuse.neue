@@ -13,14 +13,14 @@
         <include>Topbar</include>
         <include>Bottombar</include>
         <control type="group">
-            <visible>Control.IsVisible(50) | Control.IsVisible(51) | Control.IsVisible(52) | [Control.IsVisible(54) + ![Container.Content(playlists) | Container.Content(addons) | Container.Content() | Container.Content(tags)]]</visible>
+            <visible>Container.Content(files) | Container.Content(movies) | Container.Content(episodes) | Container.Content(seasons) | Container.Content(sets) | Container.Content(actors) | Container.Content(tvshows) | Container.Content(videos)</visible>
             <include content="Object_BigPoster">
                 <param name="discart" value="false" />
             </include>
             <visible>!Window.IsVisible(DialogVideoInfo.xml)</visible>
         </control>
         <control type="group">
-            <visible>Control.IsVisible(53) | [Control.IsVisible(54) + [Container.Content(playlists) | Container.Content(addons) | Container.Content() | Container.Content(tags)]]</visible>
+            <visible>![Container.Content(files) | Container.Content(movies) | Container.Content(episodes) | Container.Content(seasons) | Container.Content(sets) | Container.Content(actors) | Container.Content(tvshows) | Container.Content(videos)]</visible>
             <include content="Object_BigPoster">
                 <param name="height" value="504" />
                 <param name="discart" value="false" />
@@ -39,24 +39,7 @@
             <include>Defs_Options_Menu</include>
             <control type="grouplist" id="6000">
                 <include>Defs_Options_Grouplist</include>
-                <!-- <control type="button" id="2">
-                    <description>Viewmode</description>
-                    <include>Defs_Context_Button</include>
-                </control> -->
-                <control type="button" id="6003">
-                    <description>Sort By</description>
-                    <label>$INFO[Control.GetLabel(3)]</label>
-                    <onclick>SendClick(3)</onclick>
-                    <visible>Control.IsVisible(3)</visible>
-                    <visible>Control.IsEnabled(3)</visible>
-                    <include>Defs_Context_Button</include>
-                </control>
-                <control type="togglebutton" id="4">
-                    <label>$LOCALIZE[580]: $LOCALIZE[584]</label>
-                    <altlabel>$LOCALIZE[580]: $LOCALIZE[585]</altlabel>
-                    <usealttexture>Container.SortDirection(Descending)</usealttexture>
-                    <include>Defs_Context_Button</include>
-                </control>
+                <include>Defs_Options_StandardButtons</include>
                 <control type="button" id="8">
                     <description>Search</description>
                     <label>137</label>

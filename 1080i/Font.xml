@@ -135,6 +135,12 @@
         </font>
 
         <font>
+            <name>font_object_postertext</name>
+            <filename>RobotoCondensed-Regular.ttf</filename>
+            <size>90</size>
+        </font>
+
+        <font>
             <name>font_musicvis_biggest</name>
             <filename>RobotoCondensed-Light.ttf</filename>
             <size>230</size>

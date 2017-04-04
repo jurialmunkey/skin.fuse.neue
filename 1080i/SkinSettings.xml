@@ -333,14 +333,14 @@
                         <onclick>Skin.ToggleSetting(TvShowPosters)</onclick>
                     </control>
 
-                    <control type="radiobutton" id="9248">
+                    <!-- <control type="radiobutton" id="9248">
                         <visible>ControlGroup(9100).HasFocus(9104)</visible>
                         <onback>300</onback>
                         <label>$LOCALIZE[31091]</label>
                         <onclick>Skin.ToggleSetting(SeasonList)</onclick>
                         <selected>Skin.HasSetting(SeasonList)</selected>
                         <include>Defs_Settings_Button</include>
-                    </control>
+                    </control> -->
 
                     <control type="radiobutton" id="9244">
                         <visible>ControlGroup(9100).HasFocus(9104)</visible>

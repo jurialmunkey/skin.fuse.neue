@@ -25,20 +25,7 @@
                 <include>Defs_Options_Menu</include>
                 <control type="grouplist" id="6000">
                     <include>Defs_Options_Grouplist</include>
-                    <control type="button" id="6003">
-                        <description>Sort By</description>
-                        <label>$INFO[Control.GetLabel(3)]</label>
-                        <onclick>SendClick(3)</onclick>
-                        <visible>Control.IsVisible(3)</visible>
-                        <visible>Control.IsEnabled(3)</visible>
-                        <include>Defs_Context_Button</include>
-                    </control>
-                    <control type="togglebutton" id="4">
-                        <label>$LOCALIZE[580]: $LOCALIZE[584]</label>
-                        <altlabel>$LOCALIZE[580]: $LOCALIZE[585]</altlabel>
-                        <usealttexture>Container.SortDirection(Descending)</usealttexture>
-                        <include>Defs_Context_Button</include>
-                    </control>
+                    <include>Defs_Options_StandardButtons</include>
                     <control type="button" id="6">
                         <description>Slideshow</description>
                         <label>13317</label>

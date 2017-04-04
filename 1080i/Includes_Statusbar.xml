@@ -253,8 +253,9 @@
             <usecontrolcoords>true</usecontrolcoords>
             <onback condition="Window.IsVisible(Home)">301</onback>
             <onback condition="!Window.IsVisible(Home)">50</onback>
-            <onup condition="Control.IsVisible(8000)">8000</onup>
-            <onup condition="Control.IsVisible(60)">60</onup>
+            <onup condition="Control.IsVisible(8000) + !Control.IsVisible(54)">8000</onup>
+            <onup condition="Control.IsVisible(60) + !Control.IsVisible(54)">60</onup>
+            <onup condition="Control.IsVisible(54)">54</onup>
             <onup condition="!Control.IsVisible(8000) + !Control.IsVisible(60) + Window.IsVisible(Home)">301</onup>
             <onup condition="!Control.IsVisible(8000) + !Control.IsVisible(60) + !Window.IsVisible(Home)">50</onup>
             <onright condition="Window.IsVisible(Home)">301</onright>

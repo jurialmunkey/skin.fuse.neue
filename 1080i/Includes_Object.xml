@@ -80,7 +80,7 @@
                 <control type="group">
                     <visible>!Window.IsVisible(MyPics.xml)</visible>
                     <control type="group">
-                        <visible>!Window.IsVisible(Home) | [Window.IsVisible(Home) + [[[Integer.IsEqual(Window(Home).Property(MenuBarFocus),302) + !String.Contains(Container(302).ListItem.Property(widgetPath),genres.xml)] | [[!Integer.IsEqual(Window(Home).Property(MenuBarFocus),302) | String.IsEmpty(Container(302).ListItem.Property(widgetType))] + !String.Contains(Container(300).ListItem.Property(widgetPath),genres.xml)]] | [[Integer.IsEqual(Window(Home).Property(MenuBarFocus),302) + !String.Contains(Container(302).ListItem.Property(widgetPath),studios.xml)] | [[!Integer.IsEqual(Window(Home).Property(MenuBarFocus),302) | String.IsEmpty(Container(302).ListItem.Property(widgetType))] + !String.Contains(Container(300).ListItem.Property(widgetPath),studios.xml)]]]]</visible>
+                        <visible>!Window.IsVisible(Home) | [Window.IsVisible(Home) + [[[Integer.IsEqual(Window(Home).Property(MenuBarFocus),302) + !String.Contains(Container(302).ListItem.Property(widgetPath),years.xml)] | [[!Integer.IsEqual(Window(Home).Property(MenuBarFocus),302) | String.IsEmpty(Container(302).ListItem.Property(widgetType))] + !String.Contains(Container(300).ListItem.Property(widgetPath),years.xml)]] + [[Integer.IsEqual(Window(Home).Property(MenuBarFocus),302) + !String.Contains(Container(302).ListItem.Property(widgetPath),genres.xml)] | [[!Integer.IsEqual(Window(Home).Property(MenuBarFocus),302) | String.IsEmpty(Container(302).ListItem.Property(widgetType))] + !String.Contains(Container(300).ListItem.Property(widgetPath),genres.xml)]] + [[Integer.IsEqual(Window(Home).Property(MenuBarFocus),302) + !String.Contains(Container(302).ListItem.Property(widgetPath),studios.xml)] | [[!Integer.IsEqual(Window(Home).Property(MenuBarFocus),302) | String.IsEmpty(Container(302).ListItem.Property(widgetType))] + !String.Contains(Container(300).ListItem.Property(widgetPath),studios.xml)]]]]</visible>
                         <control type="image">
                             <include>Defs_Shadow_Opaque</include>
                             <aspectratio aligny="center">scale</aspectratio>
@@ -102,7 +102,7 @@
                     </control>
 
                     <control type="group">
-                        <visible>$PARAM[container]ListItem.IsParentFolder | String.StartsWith($PARAM[container]ListItem.Icon,Default) | [Window.IsVisible(Home) + [[[Integer.IsEqual(Window(Home).Property(MenuBarFocus),302) + String.Contains(Container(302).ListItem.Property(widgetPath),genres.xml)] | [[!Integer.IsEqual(Window(Home).Property(MenuBarFocus),302) | String.IsEmpty(Container(302).ListItem.Property(widgetType))] + String.Contains(Container(300).ListItem.Property(widgetPath),genres.xml)]] | [[Integer.IsEqual(Window(Home).Property(MenuBarFocus),302) + String.Contains(Container(302).ListItem.Property(widgetPath),studios.xml)] | [[!Integer.IsEqual(Window(Home).Property(MenuBarFocus),302) | String.IsEmpty(Container(302).ListItem.Property(widgetType))] + String.Contains(Container(300).ListItem.Property(widgetPath),studios.xml)]]]]</visible>
+                        <visible>$PARAM[container]ListItem.IsParentFolder | String.StartsWith($PARAM[container]ListItem.Icon,Default) | [Window.IsVisible(Home) + [[[Integer.IsEqual(Window(Home).Property(MenuBarFocus),302) + String.Contains(Container(302).ListItem.Property(widgetPath),genres.xml)] | [[!Integer.IsEqual(Window(Home).Property(MenuBarFocus),302) | String.IsEmpty(Container(302).ListItem.Property(widgetType))] + String.Contains(Container(300).ListItem.Property(widgetPath),genres.xml)]] | [[Integer.IsEqual(Window(Home).Property(MenuBarFocus),302) + String.Contains(Container(302).ListItem.Property(widgetPath),studios.xml)] | [[!Integer.IsEqual(Window(Home).Property(MenuBarFocus),302) | String.IsEmpty(Container(302).ListItem.Property(widgetType))] + String.Contains(Container(300).ListItem.Property(widgetPath),studios.xml)]] | [[Integer.IsEqual(Window(Home).Property(MenuBarFocus),302) + String.Contains(Container(302).ListItem.Property(widgetPath),years.xml)] | [[!Integer.IsEqual(Window(Home).Property(MenuBarFocus),302) | String.IsEmpty(Container(302).ListItem.Property(widgetType))] + String.Contains(Container(300).ListItem.Property(widgetPath),years.xml)]]]]</visible>
                         <control type="image">
                             <include>Defs_Shadow_Opaque</include>
                             <aspectratio aligny="center">scale</aspectratio>
@@ -111,7 +111,19 @@
                         <control type="image">
                             <aspectratio aligny="center">scale</aspectratio>
                             <texture background="true"  colordiffuse="main_fg_100" fallback="DefaultAddonNone.png">$INFO[$PARAM[container]ListItem.Icon]</texture>
-                            <visible>[!Container.Content(genres) + !Container.Content(studios) + !Window.IsVisible(Home)] | ListItem.IsParentFolder | [Window.IsVisible(Home) + [[[Integer.IsEqual(Window(Home).Property(MenuBarFocus),302) + !String.Contains(Container(302).ListItem.Property(widgetPath),genres.xml)] | [[!Integer.IsEqual(Window(Home).Property(MenuBarFocus),302) | String.IsEmpty(Container(302).ListItem.Property(widgetType))] + !String.Contains(Container(300).ListItem.Property(widgetPath),genres.xml)]] + [[Integer.IsEqual(Window(Home).Property(MenuBarFocus),302) + !String.Contains(Container(302).ListItem.Property(widgetPath),studios.xml)] | [[!Integer.IsEqual(Window(Home).Property(MenuBarFocus),302) | String.IsEmpty(Container(302).ListItem.Property(widgetType))] + !String.Contains(Container(300).ListItem.Property(widgetPath),studios.xml)]]]]</visible>
+                            <visible>[!Container.Content(genres) + !Container.Content(studios) + !Container.Content(countries) + !Container.Content(years) + !Container.Content(directors) + !Window.IsVisible(Home)] | ListItem.IsParentFolder | [Window.IsVisible(Home) + [[[Integer.IsEqual(Window(Home).Property(MenuBarFocus),302) + !String.Contains(Container(302).ListItem.Property(widgetPath),genres.xml)] | [[!Integer.IsEqual(Window(Home).Property(MenuBarFocus),302) | String.IsEmpty(Container(302).ListItem.Property(widgetType))] + !String.Contains(Container(300).ListItem.Property(widgetPath),genres.xml)]] + [[Integer.IsEqual(Window(Home).Property(MenuBarFocus),302) + !String.Contains(Container(302).ListItem.Property(widgetPath),studios.xml)] | [[!Integer.IsEqual(Window(Home).Property(MenuBarFocus),302) | String.IsEmpty(Container(302).ListItem.Property(widgetType))] + !String.Contains(Container(300).ListItem.Property(widgetPath),studios.xml)]] + [[Integer.IsEqual(Window(Home).Property(MenuBarFocus),302) + !String.Contains(Container(302).ListItem.Property(widgetPath),years.xml)] | [[!Integer.IsEqual(Window(Home).Property(MenuBarFocus),302) | String.IsEmpty(Container(302).ListItem.Property(widgetType))] + !String.Contains(Container(300).ListItem.Property(widgetPath),years.xml)]]]]</visible>
+                        </control>
+                        <control type="textbox">
+                            <left>30</left>
+                            <right>30</right>
+                            <top>30</top>
+                            <bottom>30</bottom>
+                            <align>center</align>
+                            <aligny>center</aligny>
+                            <label>$INFO[$PARAM[container]ListItem.Label]</label>
+                            <textcolor>main_fg_70</textcolor>
+                            <font>font_object_postertext</font>
+                            <visible>[Container.Content(years) | Container.Content(directors) | Container.Content(countries) | [Window.IsVisible(Home) + [[Integer.IsEqual(Window(Home).Property(MenuBarFocus),302) + String.Contains(Container(302).ListItem.Property(widgetPath),years.xml)] | [[!Integer.IsEqual(Window(Home).Property(MenuBarFocus),302) | String.IsEmpty(Container(302).ListItem.Property(widgetType))] + String.Contains(Container(300).ListItem.Property(widgetPath),years.xml)]]]] + !ListItem.IsParentFolder</visible>
                         </control>
                         <control type="image">
                             <bordersize>80</bordersize>
@@ -412,9 +424,11 @@
                 <onup>50</onup>
                 <ondown>9400</ondown>
                 <width>1246</width>
-                <visible>String.IsEqual(Container.SortMethod,$LOCALIZE[556]) | String.IsEqual(Container.SortMethod,$LOCALIZE[557]) | String.IsEqual(Container.SortMethod,$LOCALIZE[558])</visible>
+                <visible>String.IsEqual(Container.SortMethod,$LOCALIZE[551]) | String.IsEqual(Container.SortMethod,$LOCALIZE[556]) | String.IsEqual(Container.SortMethod,$LOCALIZE[557]) | String.IsEqual(Container.SortMethod,$LOCALIZE[558])</visible>
                 <visible>!Container.Content(seasons)</visible>
+                <visible>!Control.IsVisible(54)</visible>
                 <visible>!Skin.HasSetting(DisableAlphabetStrip)</visible>
+                <visible>Container.HasNext | Container.HasPrevious</visible>
                 <itemlayout height="48" width="46">
                     <control type="label">
                         <aligny>center</aligny>

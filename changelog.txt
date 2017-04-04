@@ -1,3 +1,9 @@
+[B]0.9.29[/B]
+Add ability to switch to list view anywhere.
+Add alphabet strip for sortby:name
+Default Container.Content() to square (with ability to switch to list from view opts)
+Add large titles in box for years / countries / directors
+
 [B]0.9.28[/B]
 Add default submenu widgets
 Revert to use db values for duration (option to toggle skin helper in skin settings)

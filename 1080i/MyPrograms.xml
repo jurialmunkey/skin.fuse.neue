@@ -16,6 +16,16 @@
         </include>
         
         <include>Statusbar</include>
+
+        <control type="group">
+            <visible allowhiddenfocus="true">ControlGroup(6000).HasFocus()</visible>
+            <include>Defs_Options_Menu</include>
+            <control type="grouplist" id="6000">
+                <include>Defs_Options_Grouplist</include>
+                <include>Defs_Options_StandardButtons</include>
+            </control>
+        </control>
+        
     </controls>
 
 </window>

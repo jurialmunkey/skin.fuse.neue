@@ -86,6 +86,27 @@
         <width>466</width>
     </include>
 
+    <include name="Defs_Options_StandardButtons">
+        <control type="button" id="2">
+            <description>Viewmode</description>
+            <include>Defs_Context_Button</include>
+        </control>
+        <control type="button" id="6003">
+            <description>Sort By</description>
+            <label>$INFO[Control.GetLabel(3)]</label>
+            <onclick>SendClick(3)</onclick>
+            <visible>Control.IsVisible(3)</visible>
+            <visible>Control.IsEnabled(3)</visible>
+            <include>Defs_Context_Button</include>
+        </control>
+        <control type="togglebutton" id="4">
+            <label>$LOCALIZE[580]: $LOCALIZE[584]</label>
+            <altlabel>$LOCALIZE[580]: $LOCALIZE[585]</altlabel>
+            <usealttexture>Container.SortDirection(Descending)</usealttexture>
+            <include>Defs_Context_Button</include>
+        </control>
+    </include>
+
     <!-- Widget Content -->
     <variable name="Defs_Widget_Content">
         <value condition="[String.IsEqual(Container(300).ListItem.Property(widget),weather) + [Control.HasFocus(300) | String.IsEmpty(Container(302).ListItem.Property(widget))] | [String.IsEqual(Container(302).ListItem.Property(widget),weather) + !Control.HasFocus(300)]]">noop</value>
