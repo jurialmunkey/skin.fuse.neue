@@ -33,6 +33,7 @@
                 <visible>!Window.IsVisible(DialogMusicInfo.xml)</visible>
                 <visible>$EXP[Expression_ShowBigPosterHome]</visible>
                 <visible>!$EXP[Expression_ShowWeatherWidget]</visible>
+                <visible>!$EXP[Expression_ShowSystemInfoWidget]</visible>
                 <include content="Object_BigPoster">
                     <param name="container" value="Container(301)." />
                     <param name="visible" value="true" />
@@ -45,6 +46,7 @@
                 <visible>!Window.IsVisible(DialogMusicInfo.xml)</visible>
                 <visible>!$EXP[Expression_ShowBigPosterHome]</visible>
                 <visible>!$EXP[Expression_ShowWeatherWidget]</visible>
+                <visible>!$EXP[Expression_ShowSystemInfoWidget]</visible>
                 <include content="Object_BigPoster">
                     <param name="container" value="Container(301)." />
                     <param name="visible" value="true" />

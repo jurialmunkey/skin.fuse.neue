@@ -13,6 +13,7 @@
             <control type="group">
                 <visible>!Player.HasMedia</visible>
                 <visible>!$EXP[Expression_ShowWeatherWidget]</visible>
+                <visible>!$EXP[Expression_ShowSystemInfoWidget]</visible>
                 <include>Statusbar_ItemCount</include>
             </control>
             <control type="group">

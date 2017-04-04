@@ -3,6 +3,8 @@ Add ability to switch to list view anywhere.
 Add alphabet strip for sortby:name
 Default Container.Content() to square (with ability to switch to list from view opts)
 Add large titles in box for years / countries / directors
+Add system info widget
+Fix weather fanart issue when weather fanart not installed
 
 [B]0.9.28[/B]
 Add default submenu widgets

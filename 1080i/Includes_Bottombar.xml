@@ -20,6 +20,11 @@
                 <visible>Window.IsVisible(home)</visible>
                 <include condition="Window.IsVisible(home)">Weather</include>
             </control>
+            <control type="group">
+                <visible>$EXP[Expression_ShowSystemInfoWidget]</visible>
+                <visible>Window.IsVisible(home)</visible>
+                <include condition="Window.IsVisible(home)">Object_SystemInfoWidget</include>
+            </control>
         </control> 
     </include>
 
@@ -50,7 +55,7 @@
         <control type="group">
             <include>Animation_FadeInOut_Conditional</include>
             <visible>[!Window.IsVisible(DialogVideoInfo.xml) + !Window.IsVisible(DialogMusicInfo.xml) + !Window.IsVisible(DialogAddonInfo.xml) + !Window.IsVisible(DialogPVRInfo.xml)] | Window.IsVisible(script-script.extendedinfo-VideoList.xml)</visible>
-            <visible>!$EXP[Expression_ShowWeatherWidget]</visible>
+            <visible>!$EXP[Expression_ShowWeatherWidget] + !$EXP[Expression_ShowSystemInfoWidget]</visible>
             <include condition="!Window.IsVisible(script-script.extendedinfo-VideoList.xml)">Bottombar_BusySpinner</include>
         </control>
     </include>
@@ -296,7 +301,7 @@
     <include name="Bottombar_HomeInfo">
         <control type="group">
             <visible>[Control.IsVisible(301) + !Container(301).IsUpdating + !Integer.IsEqual(Container(301).NumItems,0)] | Window.IsVisible(script-script.extendedinfo-DialogInfo.xml) | Window.IsVisible(script-script.extendedinfo-DialogVideoInfo.xml) | Window.IsVisible(script-script.extendedinfo-VideoList.xml)</visible>
-            <visible>!$EXP[Expression_ShowWeatherWidget]</visible>
+            <visible>!$EXP[Expression_ShowWeatherWidget] + !$EXP[Expression_ShowSystemInfoWidget]</visible>
             <control type="group">
                 <left>614</left>
                 <right>514</right>

@@ -3,6 +3,7 @@
 
     <!-- Playlist -->
     <widget label="8">Weather</widget>
+    <widget label="10511">SystemInfo</widget>
     <widgetPlaylists>True</widgetPlaylists>
 
     <!-- Browse for Backgrounds -->
@@ -46,6 +47,8 @@
     <icon labelID="19020">special://skin/extras/icons/livetv.png</icon>
     <icon labelID="2">special://skin/extras/icons/songs.png</icon>
     <icon labelID="1">special://skin/extras/icons/pictures.png</icon>
+    <icon labelID="10511">special://skin/extras/icons/sysinfo.png</icon>
+    <icon labelID="systeminfo">special://skin/extras/icons/sysinfo.png</icon>
     <icon labelID="8">special://skin/extras/icons/sun.png</icon>
     <icon labelID="24001">special://skin/extras/icons/addons.png</icon>
     <icon labelID="14036">special://skin/extras/icons/network.png</icon>
