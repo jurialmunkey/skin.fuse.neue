@@ -464,6 +464,25 @@
                         <onclick>Skin.ToggleSetting(UseHoursMinutes)</onclick>
                     </control>
 
+                    <control type="radiobutton" id="9278" description="Enable full fanart mode">
+                        <visible>ControlGroup(9100).HasFocus(9107)</visible>
+                        <onback>300</onback>
+                        <include>Defs_Settings_Button</include>
+                        <label>$LOCALIZE[31129]</label>
+                        <selected>!Skin.HasSetting(DisableFullFanartMode)</selected>
+                        <onclick>Skin.ToggleSetting(DisableFullFanartMode)</onclick>
+                    </control>
+
+                    <control type="radiobutton" id="9279" description="Allow fanart movement">
+                        <visible>ControlGroup(9100).HasFocus(9107)</visible>
+                        <onback>300</onback>
+                        <include>Defs_Settings_Button</include>
+                        <label>$LOCALIZE[31128]</label>
+                        <enable>!Skin.HasSetting(DisableFullFanartMode)</enable>
+                        <selected>Skin.HasSetting(AllowFanartMovement) + !Skin.HasSetting(DisableFullFanartMode)</selected>
+                        <onclick>Skin.ToggleSetting(AllowFanartMovement)</onclick>
+                    </control>
+
                     <control type="button" id="9274" description="Customise Shutdown Menu">
                         <visible>ControlGroup(9100).HasFocus(9107)</visible>
                         <onback>300</onback>

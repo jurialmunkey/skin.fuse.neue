@@ -12,6 +12,7 @@
         <include>Topbar</include>
         <include>Bottombar</include>
         <control type="group">
+            <include>Animation_Bottombar</include>
             <visible>!Window.IsVisible(DialogMusicInfo.xml)</visible>
             <include content="Object_BigPoster">
                 <param name="discart" value="false" />

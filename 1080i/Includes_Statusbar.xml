@@ -245,6 +245,86 @@
     </include>
 
     <include name="Statusbar_Menubar">
+        <control type="button" id="9300" description="Fanart Display">
+            <width>10</width>
+            <height>10</height>
+            <bottom>-10</bottom>
+            <visible allowhiddenfocus="true">false</visible>
+            <onfocus>SetProperty(HideBottomBar,1,Home)</onfocus>
+            
+            <ondown>ClearProperty(HideBottomBar,Home)</ondown>
+            <onup>ClearProperty(HideBottomBar,Home)</onup>
+            <onback>ClearProperty(HideBottomBar,Home)</onback>
+            <oninfo>ClearProperty(HideBottomBar,Home)</oninfo>
+            <onclick>ClearProperty(HideBottomBar,Home)</onclick>
+            <onclick condition="Skin.HasSetting(AllowFanartMovement)">AlarmClock(Clickit,Action(Select),00:00,silent)</onclick>
+
+            <onleft condition="Skin.HasSetting(AllowFanartMovement) + Control.IsVisible(301)">Control.Move(301,-1)</onleft>
+            <onleft condition="Skin.HasSetting(AllowFanartMovement) + Control.IsVisible(50)">Control.Move(50,-1)</onleft>
+            <onleft condition="Skin.HasSetting(AllowFanartMovement) + Control.IsVisible(51)">Control.Move(51,-1)</onleft>
+            <onleft condition="Skin.HasSetting(AllowFanartMovement) + Control.IsVisible(52)">Control.Move(52,-1)</onleft>
+            <onleft condition="Skin.HasSetting(AllowFanartMovement) + Control.IsVisible(53)">Control.Move(53,-1)</onleft>
+            <onleft condition="Skin.HasSetting(AllowFanartMovement) + Control.IsVisible(54)">Control.Move(54,-1)</onleft>
+
+            <onright condition="Skin.HasSetting(AllowFanartMovement) + Control.IsVisible(301)">Control.Move(301,1)</onright>
+            <onright condition="Skin.HasSetting(AllowFanartMovement) + Control.IsVisible(50)">Control.Move(50,1)</onright>
+            <onright condition="Skin.HasSetting(AllowFanartMovement) + Control.IsVisible(51)">Control.Move(51,1)</onright>
+            <onright condition="Skin.HasSetting(AllowFanartMovement) + Control.IsVisible(52)">Control.Move(52,1)</onright>
+            <onright condition="Skin.HasSetting(AllowFanartMovement) + Control.IsVisible(53)">Control.Move(53,1)</onright>
+            <onright condition="Skin.HasSetting(AllowFanartMovement) + Control.IsVisible(54)">Control.Move(54,1)</onright>
+
+            <onleft condition="!Skin.HasSetting(AllowFanartMovement)">ClearProperty(HideBottomBar,Home)</onleft>
+            <onright condition="!Skin.HasSetting(AllowFanartMovement)">ClearProperty(HideBottomBar,Home)</onright>
+
+            <onleft condition="!Skin.HasSetting(AllowFanartMovement) + Control.IsVisible(301)">SetFocus(301)</onleft>
+            <onleft condition="!Skin.HasSetting(AllowFanartMovement) + Control.IsVisible(50)">SetFocus(50)</onleft>
+            <onleft condition="!Skin.HasSetting(AllowFanartMovement) + Control.IsVisible(51)">SetFocus(51)</onleft>
+            <onleft condition="!Skin.HasSetting(AllowFanartMovement) + Control.IsVisible(52)">SetFocus(52)</onleft>
+            <onleft condition="!Skin.HasSetting(AllowFanartMovement) + Control.IsVisible(53)">SetFocus(53)</onleft>
+            <onleft condition="!Skin.HasSetting(AllowFanartMovement) + Control.IsVisible(54)">SetFocus(54)</onleft>
+
+            <onright condition="!Skin.HasSetting(AllowFanartMovement) + Control.IsVisible(301)">SetFocus(301)</onright>
+            <onright condition="!Skin.HasSetting(AllowFanartMovement) + Control.IsVisible(50)">SetFocus(50)</onright>
+            <onright condition="!Skin.HasSetting(AllowFanartMovement) + Control.IsVisible(51)">SetFocus(51)</onright>
+            <onright condition="!Skin.HasSetting(AllowFanartMovement) + Control.IsVisible(52)">SetFocus(52)</onright>
+            <onright condition="!Skin.HasSetting(AllowFanartMovement) + Control.IsVisible(53)">SetFocus(53)</onright>
+            <onright condition="!Skin.HasSetting(AllowFanartMovement) + Control.IsVisible(54)">SetFocus(54)</onright>
+
+            <ondown condition="Control.IsVisible(301)">SetFocus(301)</ondown>
+            <ondown condition="Control.IsVisible(50)">SetFocus(50)</ondown>
+            <ondown condition="Control.IsVisible(51)">SetFocus(51)</ondown>
+            <ondown condition="Control.IsVisible(52)">SetFocus(52)</ondown>
+            <ondown condition="Control.IsVisible(53)">SetFocus(53)</ondown>
+            <ondown condition="Control.IsVisible(54)">SetFocus(54)</ondown>
+
+            <onup condition="Control.IsVisible(301)">SetFocus(301)</onup>
+            <onup condition="Control.IsVisible(50)">SetFocus(50)</onup>
+            <onup condition="Control.IsVisible(51)">SetFocus(51)</onup>
+            <onup condition="Control.IsVisible(52)">SetFocus(52)</onup>
+            <onup condition="Control.IsVisible(53)">SetFocus(53)</onup>
+            <onup condition="Control.IsVisible(54)">SetFocus(54)</onup>
+
+            <onback condition="Control.IsVisible(301)">SetFocus(301)</onback>
+            <onback condition="Control.IsVisible(50)">SetFocus(50)</onback>
+            <onback condition="Control.IsVisible(51)">SetFocus(51)</onback>
+            <onback condition="Control.IsVisible(52)">SetFocus(52)</onback>
+            <onback condition="Control.IsVisible(53)">SetFocus(53)</onback>
+            <onback condition="Control.IsVisible(54)">SetFocus(54)</onback>
+
+            <oninfo condition="Control.IsVisible(301)">SetFocus(301)</oninfo>
+            <oninfo condition="Control.IsVisible(50)">SetFocus(50)</oninfo>
+            <oninfo condition="Control.IsVisible(51)">SetFocus(51)</oninfo>
+            <oninfo condition="Control.IsVisible(52)">SetFocus(52)</oninfo>
+            <oninfo condition="Control.IsVisible(53)">SetFocus(53)</oninfo>
+            <oninfo condition="Control.IsVisible(54)">SetFocus(54)</oninfo>
+
+            <onclick condition="Control.IsVisible(301)">SetFocus(301)</onclick>
+            <onclick condition="Control.IsVisible(50)">SetFocus(50)</onclick>
+            <onclick condition="Control.IsVisible(51)">SetFocus(51)</onclick>
+            <onclick condition="Control.IsVisible(52)">SetFocus(52)</onclick>
+            <onclick condition="Control.IsVisible(53)">SetFocus(53)</onclick>
+            <onclick condition="Control.IsVisible(54)">SetFocus(54)</onclick>
+        </control>
         <control type="grouplist" id="9400">
             <orientation>horizontal</orientation>
             <left>8</left>
@@ -252,6 +332,7 @@
             <align>left</align>
             <itemgap>-24</itemgap>
             <usecontrolcoords>true</usecontrolcoords>
+            <ondown condition="!Skin.HasSetting(DisableFullFanartMode)">9300</ondown>
             <onback condition="Window.IsVisible(Home)">301</onback>
             <onback condition="!Window.IsVisible(Home)">50</onback>
             <onup condition="Control.IsVisible(8000) + !Control.IsVisible(54)">8000</onup>

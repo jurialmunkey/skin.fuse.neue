@@ -2,6 +2,7 @@
 <!-- Foundation -->
 <window id="2003">
     <defaultcontrol always="true">8</defaultcontrol>
+    
     <onload>ClearProperty(FocusedList,Home)</onload>
     <onunload>ClearProperty(FocusedList,Home)</onunload>
     <onload>ClearProperty(ListFanartContent,Home)</onload>

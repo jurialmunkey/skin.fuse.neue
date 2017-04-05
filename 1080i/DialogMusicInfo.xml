@@ -2,6 +2,7 @@
 <!-- Foundation -->
 <window id="2001">
     <defaultcontrol always="true">9000</defaultcontrol>
+    
     <onload>AlarmClock(RotateDisc,SetProperty(RotateDisc,1,Home),00:01,silent)</onload>
     <onunload>ClearProperty(RotateDisc,Home)</onunload>
     <controls>

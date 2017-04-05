@@ -629,6 +629,16 @@ msgctxt "#31127"
 msgid "Movies Spotlight"
 msgstr ""
 
+#: /1080i/SkinSettings.xml
+msgctxt "#31128"
+msgid "Allow scrolling through items when in full fanart mode"
+msgstr ""
+
+#: /1080i/SkinSettings.xml
+msgctxt "#31129"
+msgid "Enable full fanart mode (press down from status bar)"
+msgstr ""
+
 msgctxt "#31132"
 msgid "Reset home menu shortcuts to defaults"
 msgstr ""
