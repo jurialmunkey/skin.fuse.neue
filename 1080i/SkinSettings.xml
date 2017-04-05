@@ -525,6 +525,16 @@
                         <selected>System.HasAddon(script.skin.helper.skinbackup)</selected>
                         <include>Defs_Settings_Button</include>
                     </control>
+                    <control type="radiobutton" id="9298">
+                        <visible>ControlGroup(9100).HasFocus(9108)</visible>
+                        <onback>300</onback>
+                        <label>script.toolbox</label>
+                        <label2>$INFO[System.AddonVersion(script.toolbox)]        </label2>
+                        <onclick condition="!System.HasAddon(script.toolbox)">InstallAddon(script.toolbox)</onclick>
+                        <onclick condition="System.HasAddon(script.toolbox)">Addon.OpenSettings(script.toolbox)</onclick>
+                        <selected>System.HasAddon(script.toolbox)</selected>
+                        <include>Defs_Settings_Button</include>
+                    </control>
                     <control type="radiobutton" id="9285">
                         <visible>ControlGroup(9100).HasFocus(9108)</visible>
                         <onback>300</onback>

@@ -404,7 +404,6 @@
                     <control type="image">
                         <bordersize>10</bordersize>
                         <aspectratio scalediffuse="false">scale</aspectratio>
-                        <aspectratio aligny="center">scale</aspectratio>
                         <texture colordiffuse="main_fg_100" background="true">$INFO[ListItem.Icon]</texture>
                     </control>
                 </control>
