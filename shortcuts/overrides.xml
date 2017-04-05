@@ -362,9 +362,10 @@
     <widgetdefaultnode labelID="1039" group="24001" label="Picture Addons" type="addons" path="addons://sources/image" target="pictures">PictureAddons</widgetdefaultnode>
     <widgetdefaultnode labelID="1043" group="24001" label="Program Addons" type="addons" path="addons://sources/executable" target="programs">ProgramAddons</widgetdefaultnode>
     <widgetdefaultnode labelID="1038" group="24001" label="Music Addons" type="addons" path="addons://sources/audio" target="music">MusicAddons</widgetdefaultnode>
+    <widgetdefault labelID="8" group="24001">Weather</widgetdefault>
 
     <!-- Settings -->
-    <widgetdefault labelID="settings" group="mainmenu">Weather</widgetdefault>
+    <widgetdefault labelID="settings" group="mainmenu">SystemInfo</widgetdefault>
 
     <!-- GROUPINGS -->
     <!-- Main Grouping -->

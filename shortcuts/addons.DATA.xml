@@ -35,4 +35,11 @@
         <thumb />
         <action>ActivateWindow(Videos,addons://sources/video,return)</action>
     </shortcut>
+    <shortcut>
+        <label>$LOCALIZE[8]</label>
+        <label2 />
+        <icon>DefaultWeather.png</icon>
+        <thumb />
+        <action>ActivateWindow(Weather)</action>
+    </shortcut>
 </shortcuts>
