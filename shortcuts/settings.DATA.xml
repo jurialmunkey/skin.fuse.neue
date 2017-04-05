@@ -28,4 +28,18 @@
 		<thumb />
 		<action>ActivateWindow(EventLog,events://,return)</action>
 	</shortcut>
+    <shortcut>
+        <label>$LOCALIZE[1036]</label>
+        <label2>32034</label2>
+        <icon>DefaultFavourites.png</icon>
+        <thumb />
+        <action>ActivateWindow(favourites)</action>
+    </shortcut>
+    <shortcut>
+        <label>$LOCALIZE[20077]</label>
+        <label2>32034</label2>
+        <icon>DefaultFavourites.png</icon>
+        <thumb />
+        <action>ActivateWindow(skinsettings)</action>
+    </shortcut>
 </shortcuts>
