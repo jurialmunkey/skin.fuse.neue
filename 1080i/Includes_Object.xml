@@ -379,6 +379,13 @@
         </definition>
     </include>
 
+    <include name="Object_AlphabetStrip_Skipper">
+        <control type="button">
+            <visible>false</visible>
+            <onfocus condition="!String.IsEmpty(Container(8001).ListItem.Property(NotAvailable)) + Container(8001).OnNext">Control.Move(8001,1)</onfocus>
+            <onfocus condition="!String.IsEmpty(Container(8001).ListItem.Property(NotAvailable)) + Container(8001).OnPrevious">Control.Move(8001,-1)</onfocus>
+        </control>
+    </include>
     <include name="Object_AlphabetStrip">
         <control type="group">
             <visible>[Window.IsVisible(Home) + ![String.IsEqual(Container(300).ListItem.Property(widget),weather) + [Control.HasFocus(300) | String.IsEmpty(Container(302).ListItem.Property(widget))] | [String.IsEqual(Container(302).ListItem.Property(widget),weather) + !Control.HasFocus(300)]]] | !Window.IsVisible(Home)</visible>
@@ -461,6 +468,7 @@
                         <textcolor>Selected</textcolor>
                         <animation effect="fade" start="100" end="10" time="0" condition="!String.IsEmpty(ListItem.Property(NotAvailable))">Conditional</animation>
                     </control>
+                    <include condition="Skin.HasSetting(ContextPosition)">Object_AlphabetStrip_Skipper</include>
                 </focusedlayout>
                 <content>plugin://script.skin.helper.service/?action=alphabet&amp;reload=$INFO[Container.NumItems]</content>
             </control>
