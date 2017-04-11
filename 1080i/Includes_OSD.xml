@@ -27,7 +27,7 @@
                     </control>
                     <control type="image">
                         <include>Defs_Shadow</include>
-                        <texture>$INFO[Player.Art(thumb)]</texture>
+                        <texture>$INFO[MusicPlayer.Cover]</texture>
                     </control>
                 </control>
                 <control type="group" description="info">
@@ -47,13 +47,14 @@
                             <width>100%</width>
                             <textcolor>main_fg_100</textcolor>
                             <font>font_musicvis_title</font>
+                            <scroll>true</scroll>
                             <label>$INFO[Player.Title]</label>
                         </control>
                         <control type="grouplist">
                             <itemgap>0</itemgap>
                             <orientation>horizontal</orientation>
                             <height>70</height>
-                            <width>100%</width>
+                            <width>1050</width>
                             <control type="label">
                                 <aligny>top</aligny>
                                 <width>80</width>
@@ -64,9 +65,10 @@
                             </control>
                             <control type="label">
                                 <aligny>top</aligny>
-                                <width>auto</width>
+                                <width>970</width>
                                 <textcolor>main_fg_70</textcolor>
                                 <font>font_musicvis_album</font>
+                                <scroll>true</scroll>
                                 <label>$INFO[MusicPlayer.Artist]</label>
                             </control>
                         </control>
@@ -74,7 +76,7 @@
                             <itemgap>0</itemgap>
                             <orientation>horizontal</orientation>
                             <height>80</height>
-                            <width>100%</width>
+                            <width>1050</width>
                             <control type="label">
                                 <aligny>top</aligny>
                                 <width>80</width>
@@ -85,9 +87,10 @@
                             </control>
                             <control type="label">
                                 <aligny>top</aligny>
-                                <width>auto</width>
+                                <width>970</width>
                                 <textcolor>main_fg_70</textcolor>
                                 <font>font_musicvis_album</font>
+                                <scroll>true</scroll>
                                 <label>$INFO[MusicPlayer.Album]</label>
                             </control>
                         </control>
@@ -189,12 +192,13 @@
                             <height>48</height>
                             <aspectratio>stretch</aspectratio>
                             <texture border="24,12,24,12">diffuse/shadowspot.png</texture>
-                            <visible>!String.IsEmpty(Player.Art(tvshow.poster)) | !String.IsEmpty(Player.Art(thumb))</visible>
+                            <visible>!String.IsEmpty(Player.Art(tvshow.poster)) | !String.IsEmpty(VideoPlayer.Cover)</visible>
                         </control>
                         <control type="image">
                             <include>Defs_Shadow_Opaque</include>
                             <aspectratio aligny="bottom">keep</aspectratio>
-                            <texture>$INFO[Player.Art(thumb)]</texture>
+                            <texture>$INFO[VideoPlayer.Cover]</texture>
+                            <visible>String.IsEmpty(Player.Art(tvshow.poster))</visible>
                         </control>
                         <control type="image">
                             <include>Defs_Shadow_Opaque</include>
