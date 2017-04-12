@@ -99,5 +99,6 @@
                 <scrollspeed>80</scrollspeed>
             </control>
         </control>
+        <include>OSD_Music_Info</include>
     </controls>
 </window>

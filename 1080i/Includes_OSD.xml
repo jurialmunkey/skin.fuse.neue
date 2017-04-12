@@ -1,6 +1,14 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <includes>
-    <include name="OSD_Music">
+    <include name="OSD_Music_Seekbar">
+        <control type="group">
+            <visible>Player.Seeking | Player.DisplayAfterSeek | Player.Paused | Player.Forwarding | Player.Rewinding | Player.ShowInfo | Window.IsActive(musicosd) | Window.IsActive(videoosd) | Window.IsVisible(script-cu-lrclyrics-main.xml) | Window.IsActive(DialogFullScreenInfo.xml)</visible>
+            <animation effect="fade" start="0" end="100" time="300">VisibleChange</animation>
+            <include>Statusbar_Info_Clock</include>
+        </control>
+    </include>
+
+    <include name="OSD_Music_Info">
         <control type="group">
             <visible>Player.Seeking | Player.DisplayAfterSeek | Player.Paused | Player.Forwarding | Player.Rewinding | Player.ShowInfo | Window.IsActive(musicosd) | Window.IsActive(videoosd) | Window.IsVisible(script-cu-lrclyrics-main.xml) | Window.IsActive(DialogFullScreenInfo.xml)</visible>
             <include>Animation_FadeIn</include>
@@ -154,19 +162,13 @@
 
             
         </control>
-        <control type="group">
-            <visible>Player.Seeking | Player.DisplayAfterSeek | Player.Paused | Player.Forwarding | Player.Rewinding | Player.ShowInfo | Window.IsActive(musicosd) | Window.IsActive(videoosd) | Window.IsVisible(script-cu-lrclyrics-main.xml) | Window.IsActive(DialogFullScreenInfo.xml)</visible>
-            <animation effect="fade" start="0" end="100" time="300">VisibleChange</animation>
-            <include>Statusbar_Info_Clock</include>
-        </control>
     </include>
 
-    <include name="OSD_Video">
+    <include name="OSD_Video_Seekbar">
         <control type="group">
             <visible>Player.Caching | Player.Seeking | Player.DisplayAfterSeek | Player.Paused | Player.Forwarding | Player.Rewinding | Player.ShowInfo | Window.IsActive(musicosd) | Window.IsActive(videoosd) | Window.IsVisible(script-cu-lrclyrics-main.xml) | Window.IsActive(DialogFullScreenInfo.xml) | Window.IsVisible(DialogPlayerProcessInfo.xml)</visible>
             <include>Animation_FadeIn</include>
             <include>Animation_FadeOut</include>
-
             <control type="group">
                 <visible>Player.ShowInfo | Window.IsActive(DialogFullScreenInfo.xml)</visible>
                 <visible>!Window.IsVisible(DialogPlayerProcessInfo.xml)</visible>
@@ -214,6 +216,7 @@
                         <control type="grouplist">
                             <top>200</top>
                             <left>40</left>
+                            <usecontrolcoords>true</usecontrolcoords>
                             <bottom>0</bottom>
                             <right>0</right>
                             <align>bottom</align>
@@ -238,40 +241,38 @@
                                 <orientation>horizontal</orientation>
                                 <height>70</height>
                                 <width>100%</width>
-                                <visible>!VideoPlayer.Content(episodes)</visible>
-                                <visible>!String.IsEmpty(VideoPlayer.Director)</visible>
+                                <visible>[String.IsEmpty(VideoPlayer.VideoCodec) + String.IsEmpty(VideoPlayer.VideoAspect) + String.IsEmpty(VideoPlayer.AudioCodec) + String.IsEmpty(VideoPlayer.AudioChannels)] | !Skin.HasSetting(ShowOSDVideoCodec)</visible>
                                 <control type="label">
                                     <aligny>top</aligny>
                                     <width>80</width>
                                     <label>31281</label>
                                     <font>font_musicvis_album</font>
                                     <animation effect="fade" start="100" end="50" condition="true">Conditional</animation>
+                                    <visible>!VideoPlayer.Content(episodes)</visible>
+                                    <visible>!String.IsEmpty(VideoPlayer.Director)</visible>
                                 </control>
                                 <control type="label">
                                     <aligny>top</aligny>
                                     <width>auto</width>
                                     <font>font_musicvis_album</font>
                                     <label>$INFO[VideoPlayer.Director]</label>
+                                    <visible>!VideoPlayer.Content(episodes)</visible>
+                                    <visible>!String.IsEmpty(VideoPlayer.Director)</visible>
                                 </control>
-                            </control>
-                            <control type="grouplist">
-                                <itemgap>0</itemgap>
-                                <orientation>horizontal</orientation>
-                                <height>70</height>
-                                <width>100%</width>
-                                <visible>VideoPlayer.Content(episodes)</visible>
                                 <control type="label">
                                     <aligny>top</aligny>
                                     <width>auto</width>
                                     <label>$INFO[VideoPlayer.Season,,x]$INFO[VideoPlayer.Episode,,. ]</label>
                                     <font>font_musicvis_album</font>
                                     <animation effect="fade" start="100" end="50" condition="true">Conditional</animation>
+                                    <visible>VideoPlayer.Content(episodes)</visible>
                                 </control>
                                 <control type="label">
                                     <aligny>top</aligny>
                                     <width>auto</width>
                                     <font>font_musicvis_album</font>
                                     <label>$INFO[VideoPlayer.Title]</label>
+                                    <visible>VideoPlayer.Content(episodes)</visible>
                                 </control>
                                 <control type="label">
                                     <aligny>center</aligny>
@@ -279,7 +280,79 @@
                                     <width>auto</width>
                                     <font>font_videoplayer_premiered</font>
                                     <label>$INFO[VideoPlayer.Premiered,  (,)]</label>
+                                    <visible>VideoPlayer.Content(episodes)</visible>
                                 </control>
+                            </control>
+                            <control type="grouplist">
+                                <itemgap>0</itemgap>
+                                <orientation>horizontal</orientation>
+                                <height>70</height>
+                                <width>720</width>
+                                <visible>!String.IsEmpty(VideoPlayer.VideoCodec) | !String.IsEmpty(VideoPlayer.VideoAspect) | !String.IsEmpty(VideoPlayer.AudioCodec) | !String.IsEmpty(VideoPlayer.AudioChannels)</visible>
+                                <visible>Skin.HasSetting(ShowOSDVideoCodec)</visible>
+                                <control type="label">
+                                    <aligny>top</aligny>
+                                    <width>80</width>
+                                    <label>31281</label>
+                                    <font>font_musicvis_album</font>
+                                    <animation effect="fade" start="100" end="50" condition="true">Conditional</animation>
+                                    <visible>!VideoPlayer.Content(episodes)</visible>
+                                    <visible>!String.IsEmpty(VideoPlayer.Director)</visible>
+                                </control>
+                                <control type="label">
+                                    <aligny>top</aligny>
+                                    <width>640</width>
+                                    <font>font_musicvis_album</font>
+                                    <label>$INFO[VideoPlayer.Director]</label>
+                                    <visible>!VideoPlayer.Content(episodes)</visible>
+                                    <visible>!String.IsEmpty(VideoPlayer.Director)</visible>
+                                </control>
+                                <control type="label">
+                                    <aligny>top</aligny>
+                                    <width>auto</width>
+                                    <label>$INFO[VideoPlayer.Season,,x]$INFO[VideoPlayer.Episode,,. ]</label>
+                                    <font>font_musicvis_album</font>
+                                    <animation effect="fade" start="100" end="50" condition="true">Conditional</animation>
+                                    <visible>VideoPlayer.Content(episodes)</visible>
+                                </control>
+                                <control type="label">
+                                    <aligny>top</aligny>
+                                    <width>auto</width>
+                                    <font>font_musicvis_album</font>
+                                    <label>$INFO[VideoPlayer.Title]</label>
+                                    <visible>VideoPlayer.Content(episodes)</visible>
+                                </control>
+                                <control type="label">
+                                    <aligny>center</aligny>
+                                    <height>80</height>
+                                    <width>auto</width>
+                                    <font>font_videoplayer_premiered</font>
+                                    <label>$INFO[VideoPlayer.Premiered,  (,)]</label>
+                                    <visible>VideoPlayer.Content(episodes)</visible>
+                                </control>
+                            </control>
+                            <control type="group">
+                                <top>-75</top>
+                                <height>70</height>
+                                <width>100%</width>
+                                <visible>!Skin.HasSetting(UseColorFlags)</visible>
+                                <visible>Skin.HasSetting(ShowOSDVideoCodec)</visible>
+                                <include content="Object_Flags">
+                                    <param name="source" value="VideoPlayer." />
+                                    <param name="align" value="right" />
+                                    <param name="colordiffuse" value="main_fg_70" />
+                                </include>
+                            </control>
+                            <control type="group">
+                                <top>-75</top>
+                                <height>70</height>
+                                <width>100%</width>
+                                <visible>Skin.HasSetting(UseColorFlags)</visible>
+                                <visible>Skin.HasSetting(ShowOSDVideoCodec)</visible>
+                                <include content="Object_Flags">
+                                    <param name="source" value="VideoPlayer." />
+                                    <param name="directory" value="color" />
+                                </include>
                             </control>
                             <control type="textbox">
                                 <aligny>top</aligny>
@@ -295,6 +368,7 @@
             <include>Statusbar_Info_Clock</include>
         </control>
     </include>
+
 
     <include name="OSD_Controls">
 

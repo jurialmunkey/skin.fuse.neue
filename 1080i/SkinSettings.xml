@@ -286,6 +286,14 @@
                         <onclick>Skin.ToggleSetting(ArtistSlideshow.Animate)</onclick>
                         <enable>Skin.HasSetting(musicvis.fanartfallback) | [!Skin.HasSetting(ArtistSlideShow.Disabled) + System.HasAddon(script.artistslideshow)]</enable>
                     </control>
+                    <control type="radiobutton" id="9238" description="Media Flags">
+                        <visible>ControlGroup(9100).HasFocus(9103)</visible>
+                        <onback>300</onback>
+                        <include>Defs_Settings_Button</include>
+                        <label>$LOCALIZE[31130]</label>
+                        <selected>Skin.HasSetting(ShowOSDVideoCodec)</selected>
+                        <onclick>Skin.ToggleSetting(ShowOSDVideoCodec)</onclick>
+                    </control>
                     <control type="radiobutton" id="9235" description="Dont pause on information">
                         <visible>ControlGroup(9100).HasFocus(9103)</visible>
                         <onback>300</onback>

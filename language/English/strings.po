@@ -639,6 +639,11 @@ msgctxt "#31129"
 msgid "Enable full fanart mode (press down from status bar)"
 msgstr ""
 
+#: /1080i/SkinSettings.xml
+msgctxt "#31130"
+msgid "Show media flags with video osd info"
+msgstr ""
+
 msgctxt "#31132"
 msgid "Reset home menu shortcuts to defaults"
 msgstr ""

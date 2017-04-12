@@ -6,8 +6,8 @@
     <visible>[VideoPlayer.IsFullscreen | Window.IsVisible(MusicVisualisation.xml)] + [Window.IsVisible(musicosd) | Window.IsVisible(videoosd) | Window.IsVisible(fullscreeninfo) | Window.IsVisible(DialogPlayerProcessInfo.xml) | Player.Caching | Player.Seeking | Player.DisplayAfterSeek | Player.Paused | Player.Forwarding | Player.Rewinding | Player.ShowInfo | !String.IsEmpty(Window(home).Property(osdshowinfo)) | Window.IsVisible(script-cu-lrclyrics-main.xml) | Window.IsVisible(DialogFullScreenInfo.xml)]</visible>
     <controls>
 
-        <include condition="Window.IsVisible(MusicVisualisation.xml)">OSD_Music</include>
-        <include condition="Window.IsVisible(VideoFullScreen.xml)">OSD_Video</include>
+        <include condition="Window.IsVisible(MusicVisualisation.xml)">OSD_Music_Seekbar</include>
+        <include condition="Window.IsVisible(VideoFullScreen.xml)">OSD_Video_Seekbar</include>
 
     </controls>
 
