@@ -31,7 +31,7 @@
                     <right>0</right>
                     <onup>9000</onup>
                     <orientation>horizontal</orientation>
-                    <itemlayout height="40" width="640">
+                    <itemlayout height="40" width="384">
                         <control type="label">
                             <left>20</left>
                             <right>20</right>
@@ -43,7 +43,7 @@
                             <textcolor>panel_fg_70</textcolor>
                         </control>
                     </itemlayout>
-                    <focusedlayout height="40" width="640">
+                    <focusedlayout height="40" width="384">
                         <control type="image">
                             <texture colordiffuse="$VAR[ColorHighlight]">common/white.png</texture>
                         </control>
@@ -99,6 +99,30 @@
                             <visible>!Skin.HasSetting(ArtistSlideshow.Animate)</visible>
                             <onclick>Skin.ToggleSetting(ArtistSlideshow.Animate)</onclick>
                             <visible>Skin.HasSetting(musicvis.fanartfallback) | [!Skin.HasSetting(ArtistSlideShow.Disabled) + System.HasAddon(script.artistslideshow)]</visible>
+                        </item>
+
+                        <!-- Colour overlay -->
+                        <item>
+                            <label>$LOCALIZE[31131]: $LOCALIZE[16041]</label>
+                            <visible>!Skin.HasSetting(HideOSDDiffuseColors)</visible>
+                            <onclick>Skin.ToggleSetting(HideOSDDiffuseColors)</onclick>
+                        </item>
+                        <item>
+                            <label>$LOCALIZE[31131]: $LOCALIZE[16039]</label>
+                            <visible>Skin.HasSetting(HideOSDDiffuseColors)</visible>
+                            <onclick>Skin.ToggleSetting(HideOSDDiffuseColors)</onclick>
+                        </item>
+
+                        <!-- Scroll text overlay -->
+                        <item>
+                            <label>$LOCALIZE[31142]: $LOCALIZE[16041]</label>
+                            <visible>!Skin.HasSetting(HideOSDScrollingText)</visible>
+                            <onclick>Skin.ToggleSetting(HideOSDScrollingText)</onclick>
+                        </item>
+                        <item>
+                            <label>$LOCALIZE[31142]: $LOCALIZE[16039]</label>
+                            <visible>Skin.HasSetting(HideOSDScrollingText)</visible>
+                            <onclick>Skin.ToggleSetting(HideOSDScrollingText)</onclick>
                         </item>
 
                         <!-- Show Fanart -->

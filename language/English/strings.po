@@ -644,6 +644,11 @@ msgctxt "#31130"
 msgid "Show media flags with video osd info"
 msgstr ""
 
+#: /1080i/MusicOSD.xml
+msgctxt "#31131"
+msgid "Colour overlay"
+msgstr ""
+
 msgctxt "#31132"
 msgid "Reset home menu shortcuts to defaults"
 msgstr ""
@@ -682,6 +687,11 @@ msgstr ""
 
 msgctxt "#31141"
 msgid "Youtube"
+msgstr ""
+
+#: /1080i/MusicOSD.xml
+msgctxt "#31142"
+msgid "Scrolling text"
 msgstr ""
 
 msgctxt "#31143"
