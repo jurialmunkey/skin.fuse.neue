@@ -1,3 +1,8 @@
+[B]0.9.30[/B]
+Add show info for full fanart mode
+Add codec info to video osd info
+Some font cleanup
+
 [B]0.9.29[/B]
 Add ability to switch to list view anywhere.
 Add alphabet strip for sortby:name

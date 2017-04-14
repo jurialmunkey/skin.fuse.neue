@@ -93,7 +93,215 @@
             </control>
             
         </control>
+
+        <include content="Global_Background_InfoFanart" condition="!Window.IsVisible(Home)">
+            <param name="container" value="" />
+        </include>
+        <include content="Global_Background_InfoFanart" condition="Window.IsVisible(Home)">
+            <param name="container" value="Container(301)." />
+        </include>
         
+    </include>
+
+    <include name="Global_Background_InfoFanart">
+        <param name="container" default="" />
+        <definition>
+            <control type="group">
+                <visible>Skin.HasSetting(FanartDisplayInfo)</visible>
+                <visible>!String.IsEmpty(Window(Home).Property(HideBottomBar))</visible>
+                <visible>!Player.HasMedia | [!Skin.HasSetting(global.showvideo) + Player.HasVideo] | [!Skin.HasSetting(global.showvisualisation) + Player.HasAudio]</visible>
+                <include>Animation_FadeIn_Delay</include>
+                <include>Animation_FadeOut</include>   
+                <control type="image">
+                    <bottom>0</bottom>
+                    <top>0</top>
+                    <texture>common/dim-gradient.png</texture>
+                </control>
+                <control type="group">
+                    <control type="group">
+                        <width>480</width>
+                        <height>720</height>
+                        <left>SidePad</left>
+                        <bottom>SidePad</bottom>
+                        <control type="image">
+                            <centerbottom>0</centerbottom>
+                            <width>100%</width>
+                            <height>48</height>
+                            <aspectratio>stretch</aspectratio>
+                            <texture border="24,12,24,12">diffuse/shadowspot.png</texture>
+                            <visible>!String.IsEmpty($PARAM[container]ListItem.Art(tvshow.poster)) | !String.IsEmpty($PARAM[container]ListItem.Art(poster))</visible>
+                        </control>
+                        <control type="image">
+                            <include>Defs_Shadow_Opaque</include>
+                            <aspectratio aligny="bottom">keep</aspectratio>
+                            <texture>$INFO[$PARAM[container]ListItem.Art(poster)]</texture>
+                            <visible>String.IsEmpty($PARAM[container]ListItem.Art(tvshow.poster))</visible>
+                        </control>
+                        <control type="image">
+                            <include>Defs_Shadow_Opaque</include>
+                            <texture>$INFO[$PARAM[container]ListItem.Art(tvshow.poster)]</texture>
+                            <visible>!String.IsEmpty($PARAM[container]ListItem.Art(tvshow.poster))</visible>
+                        </control>
+                    </control>
+                    <control type="group" description="info">
+                        <left>560</left>
+                        <right>SidePad</right>
+                        <top>310</top>
+                        <bottom>SidePad</bottom>
+                        <control type="grouplist">
+                            <top>200</top>
+                            <left>40</left>
+                            <usecontrolcoords>true</usecontrolcoords>
+                            <bottom>0</bottom>
+                            <right>0</right>
+                            <align>bottom</align>
+                            <control type="label">
+                                <aligny>top</aligny>
+                                <height>95</height>
+                                <width>100%</width>
+                                <font>font_musicvis_title</font>
+                                <label>$INFO[$PARAM[container]ListItem.Title]</label>
+                                <visible>!Container.Content(episodes)</visible>
+                            </control>
+                            <control type="label">
+                                <aligny>top</aligny>
+                                <height>95</height>
+                                <width>100%</width>
+                                <font>font_musicvis_title</font>
+                                <label>$INFO[$PARAM[container]ListItem.TvShowTitle]</label>
+                                <visible>Container.Content(episodes)</visible>
+                            </control>
+                            <control type="grouplist">
+                                <itemgap>0</itemgap>
+                                <orientation>horizontal</orientation>
+                                <height>70</height>
+                                <width>100%</width>
+                                <visible>String.IsEmpty($PARAM[container]ListItem.VideoCodec) + String.IsEmpty($PARAM[container]ListItem.VideoAspect) + String.IsEmpty($PARAM[container]ListItem.AudioCodec) + String.IsEmpty($PARAM[container]ListItem.AudioChannels)</visible>
+                                <control type="label">
+                                    <aligny>top</aligny>
+                                    <width>80</width>
+                                    <label>31281</label>
+                                    <font>font_musicvis_album</font>
+                                    <animation effect="fade" start="100" end="50" condition="true">Conditional</animation>
+                                    <visible>!Container.Content(episodes)</visible>
+                                    <visible>!String.IsEmpty($PARAM[container]ListItem.Director)</visible>
+                                </control>
+                                <control type="label">
+                                    <aligny>top</aligny>
+                                    <width>auto</width>
+                                    <font>font_musicvis_album</font>
+                                    <label>$INFO[$PARAM[container]ListItem.Director]</label>
+                                    <visible>!Container.Content(episodes)</visible>
+                                    <visible>!String.IsEmpty($PARAM[container]ListItem.Director)</visible>
+                                </control>
+                                <control type="label">
+                                    <aligny>top</aligny>
+                                    <width>auto</width>
+                                    <label>$INFO[$PARAM[container]ListItem.Season,,x]$INFO[$PARAM[container]ListItem.Episode,,. ]</label>
+                                    <font>font_musicvis_album</font>
+                                    <animation effect="fade" start="100" end="50" condition="true">Conditional</animation>
+                                    <visible>Container.Content(episodes)</visible>
+                                </control>
+                                <control type="label">
+                                    <aligny>top</aligny>
+                                    <width>auto</width>
+                                    <font>font_musicvis_album</font>
+                                    <label>$INFO[$PARAM[container]ListItem.Title]</label>
+                                    <visible>Container.Content(episodes)</visible>
+                                </control>
+                                <control type="label">
+                                    <aligny>center</aligny>
+                                    <height>80</height>
+                                    <width>auto</width>
+                                    <font>font_videoplayer_premiered</font>
+                                    <label>$INFO[$PARAM[container]ListItem.Premiered,  (,)]</label>
+                                    <visible>Container.Content(episodes)</visible>
+                                </control>
+                            </control>
+                            <control type="grouplist">
+                                <itemgap>0</itemgap>
+                                <orientation>horizontal</orientation>
+                                <height>70</height>
+                                <width>720</width>
+                                <visible>!String.IsEmpty($PARAM[container]ListItem.VideoCodec) | !String.IsEmpty($PARAM[container]ListItem.VideoAspect) | !String.IsEmpty($PARAM[container]ListItem.AudioCodec) | !String.IsEmpty($PARAM[container]ListItem.AudioChannels)</visible>
+                                <control type="label">
+                                    <aligny>top</aligny>
+                                    <width>80</width>
+                                    <label>31281</label>
+                                    <font>font_musicvis_album</font>
+                                    <animation effect="fade" start="100" end="50" condition="true">Conditional</animation>
+                                    <visible>!Container.Content(episodes)</visible>
+                                    <visible>!String.IsEmpty($PARAM[container]ListItem.Director)</visible>
+                                </control>
+                                <control type="label">
+                                    <aligny>top</aligny>
+                                    <width>640</width>
+                                    <font>font_musicvis_album</font>
+                                    <scroll>true</scroll>
+                                    <label>$INFO[$PARAM[container]ListItem.Director]</label>
+                                    <visible>!Container.Content(episodes)</visible>
+                                    <visible>!String.IsEmpty($PARAM[container]ListItem.Director)</visible>
+                                </control>
+                                <control type="label">
+                                    <aligny>top</aligny>
+                                    <width>auto</width>
+                                    <label>$INFO[$PARAM[container]ListItem.Season,,x]$INFO[$PARAM[container]ListItem.Episode,,. ]</label>
+                                    <font>font_musicvis_album</font>
+                                    <animation effect="fade" start="100" end="50" condition="true">Conditional</animation>
+                                    <visible>Container.Content(episodes)</visible>
+                                </control>
+                                <control type="label">
+                                    <aligny>top</aligny>
+                                    <width>auto</width>
+                                    <font>font_musicvis_album</font>
+                                    <label>$INFO[$PARAM[container]ListItem.Title]</label>
+                                    <visible>Container.Content(episodes)</visible>
+                                </control>
+                                <control type="label">
+                                    <aligny>center</aligny>
+                                    <height>80</height>
+                                    <width>auto</width>
+                                    <font>font_videoplayer_premiered</font>
+                                    <label>$INFO[$PARAM[container]ListItem.Premiered,  (,)]</label>
+                                    <visible>Container.Content(episodes)</visible>
+                                </control>
+                            </control>
+                            <control type="group">
+                                <top>-75</top>
+                                <height>70</height>
+                                <right>-30</right>
+                                <left>30</left>
+                                <visible>!Skin.HasSetting(UseColorFlags)</visible>
+                                <include content="Object_Flags">
+                                    <param name="source" value="$PARAM[container]ListItem." />
+                                    <param name="align" value="right" />
+                                    <param name="colordiffuse" value="main_fg_70" />
+                                </include>
+                            </control>
+                            <control type="group">
+                                <top>-75</top>
+                                <height>70</height>
+                                <right>-30</right>
+                                <left>30</left>
+                                <visible>Skin.HasSetting(UseColorFlags)</visible>
+                                <include content="Object_Flags">
+                                    <param name="source" value="$PARAM[container]ListItem." />
+                                    <param name="directory" value="color" />
+                                    <param name="align" value="right" />
+                                </include>
+                            </control>
+                            <control type="textbox">
+                                <aligny>top</aligny>
+                                <height max="128">auto</height>
+                                <width>100%</width>
+                                <font>font_plotbox</font>
+                                <label>$INFO[$PARAM[container]ListItem.Plot]</label>
+                            </control>
+                        </control>
+                    </control>
+                </control>
+            </control>
+        </definition>
     </include>
 
     <include name="Global_Background_Settings">

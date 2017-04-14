@@ -251,11 +251,10 @@
             <bottom>-10</bottom>
             <visible allowhiddenfocus="true">false</visible>
             <onfocus>SetProperty(HideBottomBar,1,Home)</onfocus>
-            
             <ondown>ClearProperty(HideBottomBar,Home)</ondown>
             <onup>ClearProperty(HideBottomBar,Home)</onup>
             <onback>ClearProperty(HideBottomBar,Home)</onback>
-            <oninfo>ClearProperty(HideBottomBar,Home)</oninfo>
+            <oninfo>Skin.ToggleSetting(FanartDisplayInfo)</oninfo>
             <onclick>ClearProperty(HideBottomBar,Home)</onclick>
             <onclick condition="Skin.HasSetting(AllowFanartMovement)">AlarmClock(Clickit,Action(Select),00:00,silent)</onclick>
 
@@ -311,12 +310,12 @@
             <onback condition="Control.IsVisible(53)">SetFocus(53)</onback>
             <onback condition="Control.IsVisible(54)">SetFocus(54)</onback>
 
-            <oninfo condition="Control.IsVisible(301)">SetFocus(301)</oninfo>
+            <!-- <oninfo condition="Control.IsVisible(301)">SetFocus(301)</oninfo>
             <oninfo condition="Control.IsVisible(50)">SetFocus(50)</oninfo>
             <oninfo condition="Control.IsVisible(51)">SetFocus(51)</oninfo>
             <oninfo condition="Control.IsVisible(52)">SetFocus(52)</oninfo>
             <oninfo condition="Control.IsVisible(53)">SetFocus(53)</oninfo>
-            <oninfo condition="Control.IsVisible(54)">SetFocus(54)</oninfo>
+            <oninfo condition="Control.IsVisible(54)">SetFocus(54)</oninfo> -->
 
             <onclick condition="Control.IsVisible(301)">SetFocus(301)</onclick>
             <onclick condition="Control.IsVisible(50)">SetFocus(50)</onclick>
