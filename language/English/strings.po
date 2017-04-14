@@ -413,7 +413,7 @@ msgstr ""
 
 #: /1080i/SkinSettings.xml
 msgctxt "#31079"
-msgid "Pause video when opening information from OSD"
+msgid "Pause video when opening extended info"
 msgstr ""
 
 #: /1080i/SkinSettings.xml
@@ -700,6 +700,11 @@ msgstr ""
 
 msgctxt "#31144"
 msgid "Widgets"
+msgstr ""
+
+#: /1080i/SkinSettings.xml
+msgctxt "#31145"
+msgid "Show poster and plot when video is paused"
 msgstr ""
 
 msgctxt "#31146"

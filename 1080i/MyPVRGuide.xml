@@ -35,7 +35,7 @@
                             <width>200</width>
                             <align>left</align>
                             <aligny>top</aligny>
-                            <font>EPGTimeline</font>
+                            <font>font_epg_timeline</font>
                             <label>$INFO[ListItem.Label]</label>
                             <textcolor>main_fg_30</textcolor>
                         </control>

@@ -34,7 +34,7 @@
                             <left>30</left>
                             <right>30</right>
                             <align>left</align>
-                            <font>Button</font>
+                            <font>font_button</font>
                             <textcolor>dialog_fg_70</textcolor>
                             <label>$INFO[ListItem.Label]$INFO[ListItem.Label2, [COLOR=dialog_fg_30](,)[/COLOR]]</label>
                         </control>
@@ -59,7 +59,7 @@
                             <left>30</left>
                             <right>30</right>
                             <align>left</align>
-                            <font>Button</font>
+                            <font>font_button</font>
                             <textcolor>Selected</textcolor>
                             <label>$INFO[ListItem.Label]$INFO[ListItem.Label2, [COLOR=dialog_fg_70](,)[/COLOR]]</label>
                         </control>

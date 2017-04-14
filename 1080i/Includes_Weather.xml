@@ -50,7 +50,7 @@
                     <left>0</left>
                     <align>center</align>
                     <aligny>center</aligny>
-                    <font>EpisodeNumber</font>
+                    <font>font_weather_currenttemp</font>
                     <textcolor>main_fg_100</textcolor>
                     <label fallback="N/A">$INFO[Window(Weather).Property(Current.Temperature),[B],[/B]°]</label>
                 </control>
@@ -286,7 +286,7 @@
                 <left>0</left>
                 <right>0</right>
                 <align>center</align>
-                <font>LargeBold</font>
+                <font>font_weather_temp</font>
                 <textcolor>panel_fg_100</textcolor>
                 <label fallback="N/A">$INFO[Window(Weather).Property($PARAM[day].HighTemp),[B],[/B]°]$INFO[Window(Weather).Property($PARAM[day].LowTemp), ,°]</label>
             </control>

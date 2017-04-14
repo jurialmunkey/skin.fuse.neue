@@ -170,7 +170,7 @@
             <include>Animation_FadeIn</include>
             <include>Animation_FadeOut</include>
             <control type="group">
-                <visible>Player.ShowInfo | Window.IsActive(DialogFullScreenInfo.xml)</visible>
+                <visible>Player.ShowInfo | Window.IsActive(DialogFullScreenInfo.xml) | [Player.Paused + Skin.HasSetting(ShowInfoPaused)]</visible>
                 <visible>!Window.IsVisible(DialogPlayerProcessInfo.xml)</visible>
                 <include>Animation_FadeIn</include>
                 <include>Animation_FadeOut</include>

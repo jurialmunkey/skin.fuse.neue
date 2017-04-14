@@ -670,7 +670,7 @@
                         <aligny>center</aligny>
                         <align>center</align>
                         <label>$INFO[ListItem.Label]</label>
-                        <font>Large</font>
+                        <font>font_squareview_years</font>
                         <textcolor>main_fg_70</textcolor>
                         <visible>[Container.Content(years) | $PARAM[years]] + !ListItem.IsParentFolder</visible>
                     </control>
@@ -771,7 +771,7 @@
                         <aligny>center</aligny>
                         <align>center</align>
                         <label>$INFO[ListItem.Label]</label>
-                        <font>Large</font>
+                        <font>font_squareview_years</font>
                         <textcolor>Selected</textcolor>
                         <visible>[Container.Content(years) | $PARAM[years]] + !ListItem.IsParentFolder</visible>
                     </control>

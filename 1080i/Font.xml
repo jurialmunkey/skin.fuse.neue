@@ -155,7 +155,6 @@
             <filename>RobotoCondensed-Light.ttf</filename>
             <size>80</size>
         </font>
-
         <font>
             <name>font_systeminfo_skinversion</name>
             <filename>RobotoCondensed-Bold.ttf</filename>
@@ -166,28 +165,43 @@
             <filename>RobotoCondensed-Bold.ttf</filename>
             <size>32</size>
         </font>
-
         <font>
-            <name>LargeBold</name>
+            <name>font_weather_temp</name>
             <filename>RobotoCondensed-Bold.ttf</filename>
             <size>48</size>
         </font>
         <font>
-            <name>Large</name>
+            <name>font_squareview_years</name>
             <filename>RobotoCondensed-Regular.ttf</filename>
             <size>48</size>
         </font>
         <font>
-            <name>Lyrics</name>
-            <filename>RobotoCondensed-Light.ttf</filename>
-            <size>48</size>
-        </font>
-
-        <font>
-            <name>EpisodeNumber</name>
+            <name>font_weather_currenttemp</name>
             <filename>RobotoCondensed-Bold.ttf</filename>
             <size>100</size>
         </font>
+        <font>
+            <name>font_startup_logo</name>
+            <filename>RobotoCondensed-Bold.ttf</filename>
+            <size>100</size>
+        </font>
+        <font>
+            <name>font_epg_timeline</name>
+            <filename>RobotoCondensed-Regular.ttf</filename>
+            <size>18</size>
+        </font>
+        <font>
+            <name>font_dialog_minilabel</name>
+            <filename>RobotoCondensed-Regular.ttf</filename>
+            <size>24</size>
+        </font>
+        <font>
+            <name>font_button</name>
+            <style>uppercase</style>
+            <filename>RobotoCondensed-Regular.ttf</filename>
+            <size>24</size>
+        </font>
+
         <font>
             <name>Medium</name>
             <filename>RobotoCondensed-Regular.ttf</filename>
@@ -198,7 +212,6 @@
             <filename>RobotoCondensed-Bold.ttf</filename>
             <size>38</size>
         </font>
-
         <font>
             <name>Small</name>
             <filename>RobotoCondensed-Regular.ttf</filename>
@@ -209,8 +222,6 @@
             <filename>RobotoCondensed-Bold.ttf</filename>
             <size>32</size>
         </font>
-
-
         <font>
             <name>Tiny</name>
             <filename>RobotoCondensed-Regular.ttf</filename>
@@ -220,49 +231,6 @@
             <name>TinyBold</name>
             <filename>RobotoCondensed-Bold.ttf</filename>
             <size>26</size>
-        </font>
-        <font>
-            <name>Mini</name>
-            <filename>RobotoCondensed-Regular.ttf</filename>
-            <size>24</size>
-        </font>
-        <font>
-            <name>Button</name>
-            <style>uppercase</style>
-            <filename>RobotoCondensed-Regular.ttf</filename>
-            <size>24</size>
-        </font>
-
-        <font>
-            <name>Flag</name>
-            <style>uppercase</style>
-            <filename>RobotoCondensed-Bold.ttf</filename>
-            <size>22</size>
-        </font>
-        <font>
-            <name>EPGTimeline</name>
-            <filename>RobotoCondensed-Regular.ttf</filename>
-            <size>18</size>
-        </font>
-        
-        <font>
-            <name>HomeFO</name>
-            <style>uppercase</style>
-            <filename>RobotoCondensed-Bold.ttf</filename>
-            <size>48</size>
-        </font>
-        <font>
-            <name>HomeIcon</name>
-            <style>uppercase</style>
-            <filename>RobotoCondensed-Bold.ttf</filename>
-            <size>26</size>
-        </font>
-
-        <font>
-            <name>WidgetSelector</name>
-            <style>uppercase</style>
-            <filename>RobotoCondensed-Bold.ttf</filename>
-            <size>22</size>
         </font>
 
         <!-- Required for system -->

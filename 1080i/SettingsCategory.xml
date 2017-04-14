@@ -153,7 +153,7 @@
 
         <control type="label" id="14">
             <textoffsetx>50</textoffsetx>
-            <font>Button</font>
+            <font>font_button</font>
             <textcolor>panel_fg_30</textcolor>
             <include>Defs_Settings_Button</include>
         </control>

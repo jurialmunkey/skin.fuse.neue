@@ -100,7 +100,7 @@
         <top>18</top>
         <width>496</width>
         <height>135</height>
-        <font>Mini</font>
+        <font>font_dialog_minilabel</font>
         <textcolor>dialog_fg_70</textcolor>
         <selectedcolor>dialog_fg_70</selectedcolor>
         <label>$INFO[ListItem.Label2]</label>
@@ -110,7 +110,7 @@
         <width>300</width>
         <height>70</height>
         <align>center</align>
-        <font>Button</font>
+        <font>font_button</font>
         <textcolor>dialog_fg_70</textcolor>
         <texturefocus colordiffuse="$VAR[ColorHighlight]" border="5">common/box.png</texturefocus>
     </include>
@@ -209,7 +209,7 @@
 
 
     <include name="Dialog_Info_Buttons">
-        <font>Button</font>
+        <font>font_button</font>
         <disabledcolor>main_fg_30</disabledcolor>
         <textcolor>main_fg_70</textcolor>
         <width>auto</width>
