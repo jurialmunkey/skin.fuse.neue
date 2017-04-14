@@ -303,6 +303,7 @@
                                     <aligny>top</aligny>
                                     <width>640</width>
                                     <font>font_musicvis_album</font>
+                                    <scroll>true</scroll>
                                     <label>$INFO[VideoPlayer.Director]</label>
                                     <visible>!VideoPlayer.Content(episodes)</visible>
                                     <visible>!String.IsEmpty(VideoPlayer.Director)</visible>
@@ -334,7 +335,8 @@
                             <control type="group">
                                 <top>-75</top>
                                 <height>70</height>
-                                <width>100%</width>
+                                <right>-30</right>
+                                <left>30</left>
                                 <visible>!Skin.HasSetting(UseColorFlags)</visible>
                                 <visible>Skin.HasSetting(ShowOSDVideoCodec)</visible>
                                 <include content="Object_Flags">
@@ -346,7 +348,8 @@
                             <control type="group">
                                 <top>-75</top>
                                 <height>70</height>
-                                <width>100%</width>
+                                <right>-30</right>
+                                <left>30</left>
                                 <visible>Skin.HasSetting(UseColorFlags)</visible>
                                 <visible>Skin.HasSetting(ShowOSDVideoCodec)</visible>
                                 <include content="Object_Flags">
