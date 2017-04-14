@@ -46,6 +46,7 @@
     </include>
 
     <include name="Topbar_OnFocus">
+        <onfocus>ClearProperty(HideBottomBar,Home)</onfocus>
         <onfocus>SetProperty(ShowTopbar,1,Home)</onfocus>
         <onfocus>SetProperty(ShowInfobar,0,Home)</onfocus>
         <onfocus>ClearProperty(ContextModifier,Home)</onfocus>
