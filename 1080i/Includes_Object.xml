@@ -52,7 +52,6 @@
                     <visible>$PARAM[discart]</visible>
                     <visible>!ListItem.IsCollection + !Container(301).ListItem.IsCollection</visible>
                     <visible>!Skin.HasSetting(HideDiscArt)</visible>
-                    <!-- <visible>!String.IsEmpty(Window(Home).Property(SkinHelper.ListItem.Art.DiscArt)) | !String.IsEmpty(ListItem.Art(discart)) | !String.IsEmpty(Container(301).ListItem.Art(discart))</visible> -->
                     <visible>String.IsEmpty(Window(Home).Property(FocusedList))</visible>
                     <control type="image">
                         <width>424</width>
