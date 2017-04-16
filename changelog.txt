@@ -1,3 +1,8 @@
+[B]0.9.31[/B]
+Add ability to show info from osd by pressing up (or down from submenu blade)
+Fix playlist not showing.
+Add shuffle, save, repeat, clear to playlist options.
+
 [B]0.9.30[/B]
 Add show info for full fanart mode
 Add codec info to video osd info
