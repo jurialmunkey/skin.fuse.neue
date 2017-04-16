@@ -30,6 +30,7 @@
                     <left>0</left>
                     <right>0</right>
                     <onup>9000</onup>
+                    <ondown>Action(Info)</ondown>
                     <orientation>horizontal</orientation>
                     <itemlayout height="40" width="384">
                         <control type="label">
@@ -169,6 +170,7 @@
                     <onright>11</onright>
                     <onleft>6</onleft>
                     <ondown>9003</ondown>
+                    <onup>Action(Info)</onup>
                     <orientation>horizontal</orientation>
                     <usecontrolcoords>true</usecontrolcoords>
                     <include>OSD_Controls_Music_Left</include>
@@ -178,6 +180,7 @@
                     <height>100%</height>
                     <itemgap>32</itemgap>
                     <onleft>3</onleft>
+                    <onup>Action(Info)</onup>
                     <onright>4</onright>
                     <ondown>9003</ondown>
                     <orientation>horizontal</orientation>
@@ -192,6 +195,7 @@
                     <width>690</width>
                     <onleft>17</onleft>
                     <onright>1</onright>
+                    <onup>Action(Info)</onup>
                     <ondown>9003</ondown>
                     <orientation>horizontal</orientation>
                     <usecontrolcoords>true</usecontrolcoords>

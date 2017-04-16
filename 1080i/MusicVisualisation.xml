@@ -60,6 +60,8 @@
             <visible>!Window.IsVisible(script-cu-lrclyrics-main.xml)</visible>
             <animation effect="fade" time="600" delay="600">Visible</animation>
             <animation effect="fade" time="600">Hidden</animation>
+            <include>Animation_FadeIn</include>
+            <include>Animation_FadeOut</include>
             <control type="label">
                 <description>Now Playing</description>
                 <left>0</left>
