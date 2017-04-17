@@ -424,6 +424,7 @@
                     <height>40</height>
                     <texture colordiffuse="9f000000">common/white.png</texture>
                     <visible>String.IsEmpty(ListItem.Art(landscape)) | [![String.IsEqual(Container.SortMethod,$LOCALIZE[556]) | String.IsEqual(Container.SortMethod,$LOCALIZE[557]) | String.IsEqual(Container.SortMethod,$LOCALIZE[558])] + !Window.IsVisible(Home)]</visible>
+                    <visible>!Container.Content(tvshows) | [Container.Content(tvshows) + !Skin.HasSetting(HideTvShowLabels)]</visible>
                     <visible>!ListItem.IsParentFolder</visible>
                 </control>
                 <control type="label">
@@ -437,6 +438,7 @@
                     <textcolor>bfededed</textcolor>
                     <label>$INFO[ListItem.Label]</label>
                     <visible>String.IsEmpty(ListItem.Art(landscape)) | [![String.IsEqual(Container.SortMethod,$LOCALIZE[556]) | String.IsEqual(Container.SortMethod,$LOCALIZE[557]) | String.IsEqual(Container.SortMethod,$LOCALIZE[558])] + !Window.IsVisible(Home)]</visible>
+                    <visible>!Container.Content(tvshows) | [Container.Content(tvshows) + !Skin.HasSetting(HideTvShowLabels)]</visible>
                     <visible>!ListItem.IsParentFolder</visible>
                 </control>
                 <control type="label">
@@ -451,6 +453,7 @@
                     <label>$INFO[ListItem.Label2]</label>
                     <visible>[![String.IsEqual(Container.SortMethod,$LOCALIZE[556]) | String.IsEqual(Container.SortMethod,$LOCALIZE[557]) | String.IsEqual(Container.SortMethod,$LOCALIZE[558])] + !Window.IsVisible(Home)]</visible>
                     <visible>!ListItem.IsParentFolder</visible>
+                    <visible>!Container.Content(tvshows) | [Container.Content(tvshows) + !Skin.HasSetting(HideTvShowLabels)]</visible>
                 </control>
                 <include>View_WatchedOverlay</include>
             </itemlayout>
@@ -491,6 +494,7 @@
                     <height>40</height>
                     <texture colordiffuse="9f000000">common/white.png</texture>
                     <visible>String.IsEmpty(ListItem.Art(landscape)) | [![String.IsEqual(Container.SortMethod,$LOCALIZE[556]) | String.IsEqual(Container.SortMethod,$LOCALIZE[557]) | String.IsEqual(Container.SortMethod,$LOCALIZE[558])] + !Window.IsVisible(Home)]</visible>
+                    <visible>!Container.Content(tvshows) | [Container.Content(tvshows) + !Skin.HasSetting(HideTvShowLabels)]</visible>
                     <visible>!ListItem.IsParentFolder</visible>
                 </control>
                 <control type="label">
@@ -504,6 +508,7 @@
                     <textcolor>Selected</textcolor>
                     <label>$INFO[ListItem.Label]</label>
                     <visible>String.IsEmpty(ListItem.Art(landscape)) | [![String.IsEqual(Container.SortMethod,$LOCALIZE[556]) | String.IsEqual(Container.SortMethod,$LOCALIZE[557]) | String.IsEqual(Container.SortMethod,$LOCALIZE[558])] + !Window.IsVisible(Home)]</visible>
+                    <visible>!Container.Content(tvshows) | [Container.Content(tvshows) + !Skin.HasSetting(HideTvShowLabels)]</visible>
                     <visible>!ListItem.IsParentFolder</visible>
                 </control>
                 <control type="label">
@@ -518,6 +523,7 @@
                     <label>$INFO[ListItem.Label2]</label>
                     <visible>[![String.IsEqual(Container.SortMethod,$LOCALIZE[556]) | String.IsEqual(Container.SortMethod,$LOCALIZE[557]) | String.IsEqual(Container.SortMethod,$LOCALIZE[558])] + !Window.IsVisible(Home)]</visible>
                     <visible>!ListItem.IsParentFolder</visible>
+                    <visible>!Container.Content(tvshows) | [Container.Content(tvshows) + !Skin.HasSetting(HideTvShowLabels)]</visible>
                 </control>
                 
                 <include>View_WatchedOverlay</include>

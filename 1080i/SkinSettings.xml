@@ -354,15 +354,6 @@
                         <onclick>Skin.ToggleSetting(TvShowPosters)</onclick>
                     </control>
 
-                    <!-- <control type="radiobutton" id="9248">
-                        <visible>ControlGroup(9100).HasFocus(9104)</visible>
-                        <onback>300</onback>
-                        <label>$LOCALIZE[31091]</label>
-                        <onclick>Skin.ToggleSetting(SeasonList)</onclick>
-                        <selected>Skin.HasSetting(SeasonList)</selected>
-                        <include>Defs_Settings_Button</include>
-                    </control> -->
-
                     <control type="radiobutton" id="9244">
                         <visible>ControlGroup(9100).HasFocus(9104)</visible>
                         <onback>300</onback>
@@ -393,6 +384,15 @@
                         <label>$LOCALIZE[31073]</label>
                         <onclick>Skin.ToggleSetting(HideDiscArt)</onclick>
                         <selected>!Skin.HasSetting(HideDiscArt)</selected>
+                        <include>Defs_Settings_Button</include>
+                    </control>
+                    <control type="radiobutton" id="9248">
+                        <visible>ControlGroup(9100).HasFocus(9104)</visible>
+                        <onback>300</onback>
+                        <label>$LOCALIZE[31151]</label>
+                        <visible>!Skin.HasSetting(TvShowPosters)</visible>
+                        <onclick>Skin.ToggleSetting(HideTvShowLabels)</onclick>
+                        <selected>Skin.HasSetting(HideTvShowLabels)</selected>
                         <include>Defs_Settings_Button</include>
                     </control>
                     
