@@ -167,6 +167,16 @@
                         <onclick>Skin.ToggleSetting(ReturnHomeOnFocus)</onclick>
                     </control>
 
+                    <control type="radiobutton" id="9218" description="Statusbar Gradient">
+                        <visible>ControlGroup(9100).HasFocus(9101)</visible>
+                        <onback>300</onback>
+                        <include>Defs_Settings_Button</include>
+                        <label>$LOCALIZE[31148]</label>
+                        <visible>String.IsEqual(Skin.CurrentTheme,SKINDEFAULT)</visible>
+                        <selected>Skin.HasSetting(StatusbarGradient)</selected>
+                        <onclick>Skin.ToggleSetting(StatusbarGradient)</onclick>
+                    </control>
+
                     <control type="radiobutton" id="9217" description="Make bottombar transparent">
                         <visible>ControlGroup(9100).HasFocus(9101)</visible>
                         <onback>300</onback>
@@ -175,6 +185,8 @@
                         <selected>Skin.HasSetting(EnableTransparency)</selected>
                         <onclick>Skin.ToggleSetting(EnableTransparency)</onclick>
                     </control>
+
+                    
 
                     <!-- ========== -->
                     <!-- Background -->

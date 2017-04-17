@@ -715,6 +715,11 @@ msgctxt "#31147"
 msgid "Extra Info"
 msgstr ""
 
+#: /1080i/SkinSettings.xml
+msgctxt "#31148"
+msgid "Flatten statusbar gradient"
+msgstr ""
+
 msgctxt "#31149"
 msgid "Replace widget fanart with background"
 msgstr ""

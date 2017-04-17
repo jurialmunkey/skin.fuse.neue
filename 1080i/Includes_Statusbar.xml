@@ -73,6 +73,14 @@
             <bottom>0</bottom>
             <top>0</top>
             <texture>common/gradient-solid.png</texture>
+            <visible>!Skin.HasSetting(StatusbarGradient)</visible>
+        </control>
+        <control type="image">
+            <bottom>0</bottom>
+            <top>0</top>
+            <aspectratio>scale</aspectratio>
+            <texture>common/gradient-solid.png</texture>
+            <visible>Skin.HasSetting(StatusbarGradient)</visible>
         </control>
         <control type="image">
             <top>0</top>
