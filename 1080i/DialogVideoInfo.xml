@@ -293,12 +293,14 @@
 
                 <!-- Ratings -->
                 <control type="group">
+                    <visible>!Container.Content(episodes)</visible>
                     <visible>!Skin.HasSetting(UseColorFlags)</visible>
                     <include content="Object_Ratings">
                         <param name="directory" value="monochrome" />
                     </include>
                 </control>
                 <control type="group">
+                    <visible>!Container.Content(episodes)</visible>
                     <visible>Skin.HasSetting(UseColorFlags)</visible>
                     <include content="Object_Ratings">
                         <param name="directory" value="color" />
