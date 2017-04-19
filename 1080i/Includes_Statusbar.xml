@@ -339,18 +339,25 @@
             <align>left</align>
             <itemgap>-24</itemgap>
             <usecontrolcoords>true</usecontrolcoords>
-            <ondown condition="!Skin.HasSetting(DisableFullFanartMode)">9300</ondown>
-            <onback condition="Window.IsVisible(Home)">301</onback>
-            <onback condition="!Window.IsVisible(Home)">50</onback>
-            <onup condition="Control.IsVisible(8000) + !Control.IsVisible(54)">8000</onup>
-            <onup condition="Control.IsVisible(60) + !Control.IsVisible(54)">60</onup>
-            <onup condition="Control.IsVisible(54)">54</onup>
-            <onup condition="!Control.IsVisible(8000) + !Control.IsVisible(60) + Window.IsVisible(Home)">301</onup>
-            <onup condition="!Control.IsVisible(8000) + !Control.IsVisible(60) + !Window.IsVisible(Home)">50</onup>
-            <onright condition="Window.IsVisible(Home)">301</onright>
-            <onright condition="!Window.IsVisible(Home)">50</onright>
-            <onleft condition="Window.IsVisible(Home)">301</onleft>
-            <onleft condition="!Window.IsVisible(Home)">50</onleft>
+            <ondown condition="!Window.IsVisible(LoginScreen.xml) + !Skin.HasSetting(DisableFullFanartMode)">9300</ondown>
+            <onback condition="!Window.IsVisible(LoginScreen.xml) + Window.IsVisible(Home)">301</onback>
+            <onback condition="!Window.IsVisible(LoginScreen.xml) + !Window.IsVisible(Home)">50</onback>
+            <onup condition="!Window.IsVisible(LoginScreen.xml) + Control.IsVisible(8000) + !Control.IsVisible(54)">8000</onup>
+            <onup condition="!Window.IsVisible(LoginScreen.xml) + Control.IsVisible(60) + !Control.IsVisible(54)">60</onup>
+            <onup condition="!Window.IsVisible(LoginScreen.xml) + Control.IsVisible(54)">54</onup>
+            <onup condition="!Window.IsVisible(LoginScreen.xml) + !Control.IsVisible(8000) + !Control.IsVisible(60) + Window.IsVisible(Home)">301</onup>
+            <onup condition="!Window.IsVisible(LoginScreen.xml) + !Control.IsVisible(8000) + !Control.IsVisible(60) + !Window.IsVisible(Home)">50</onup>
+            <onright condition="!Window.IsVisible(LoginScreen.xml) + Window.IsVisible(Home)">301</onright>
+            <onright condition="!Window.IsVisible(LoginScreen.xml) + !Window.IsVisible(Home)">50</onright>
+            <onleft condition="!Window.IsVisible(LoginScreen.xml) + Window.IsVisible(Home)">301</onleft>
+            <onleft condition="!Window.IsVisible(LoginScreen.xml) + !Window.IsVisible(Home)">50</onleft>
+
+            <onup condition="Window.IsVisible(LoginScreen.xml)">52</onup>
+            <ondown condition="Window.IsVisible(LoginScreen.xml)">52</ondown>
+            <onleft condition="Window.IsVisible(LoginScreen.xml)">52</onleft>
+            <onright condition="Window.IsVisible(LoginScreen.xml)">52</onright>
+            <onback condition="Window.IsVisible(LoginScreen.xml)">52</onback>
+
             <control type="button" id="9699">
                 <label>Context Menu</label>
                 <texturenofocus colordiffuse="main_fg_70" border="42,0,8,0">buttons/options.png</texturenofocus>
@@ -381,6 +388,7 @@
                 <visible>Skin.HasSetting(global.kioskmode) | [Window.IsVisible(home) + !Control.IsVisible(9603)] | [!Window.IsVisible(home) +  !Control.IsVisible(3) + !Control.IsVisible(9600)]</visible>
                 <visible>System.HasAddon(script.globalsearch)</visible>
                 <visible>!Control.IsVisible(9699)</visible>
+                <visible>!Window.IsVisible(LoginScreen.xml)</visible>
             </control>
             <control type="button" id="9603">
                 <onclick>Weather.LocationNext</onclick>

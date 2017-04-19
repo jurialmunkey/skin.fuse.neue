@@ -17,8 +17,8 @@
                 <top>360</top>
                 <width>650</width>
                 <height>360</height>
-                <onleft>61</onleft>
-                <onright>noop</onright>
+                <onleft>9400</onleft>
+                <onright>9400</onright>
                 <onup>52</onup>
                 <ondown>52</ondown>
                 <pagecontrol>61</pagecontrol>
@@ -47,6 +47,7 @@
                     <control type="group">
                         <animation effect="slide" start="0,120" end="0,0" time="300" reversible="false" tween="back" easing="out" condition="Container(52).OnPrevious">Focus</animation>
                         <animation effect="slide" start="0,-120" end="0,0" time="300" reversible="false" tween="back" easing="out" condition="Container(52).OnNext">Focus</animation>
+                        <visible>Control.HasFocus(52)</visible>
                         <left>8</left>
                         <centertop>50%</centertop>
                         <width>111</width>
