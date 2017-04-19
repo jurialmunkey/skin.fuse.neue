@@ -737,6 +737,11 @@ msgctxt "#31152"
 msgid "Furniture"
 msgstr ""
 
+#: /1080i/Includes_Statusbar.xml
+msgctxt "#31153"
+msgid "Sort by:"
+msgstr ""
+
 msgctxt "#31168"
 msgid "Startup video or music playlist"
 msgstr ""
