@@ -54,10 +54,9 @@
                         <label>$LOCALIZE[31008]</label>
                         <altlabel>$LOCALIZE[31012]</altlabel>
                         <include>Defs_Context_Button</include>
-                        <usealttexture>System.HasAddon(resource.images.weatherfanart.multi) + String.IsEqual(Skin.String(weather.fanart.path),resource://resource.images.weatherfanart.multi/)</usealttexture>
-                        <enable>!System.HasAddon(resource.images.weatherfanart.multi) | !String.IsEqual(Skin.String(weather.fanart.path),resource://resource.images.weatherfanart.multi/)</enable>
+                        <usealttexture>System.HasAddon(resource.images.weatherfanart.multi)</usealttexture>
+                        <enable>!System.HasAddon(resource.images.weatherfanart.multi)</enable>
                         <onclick condition="!System.HasAddon(resource.images.weatherfanart.multi)">InstallAddon(resource.images.weatherfanart.multi)</onclick>
-                        <onclick>Skin.SetString(weather.fanart.path,resource://resource.images.weatherfanart.multi/)</onclick>
                     </control>
                 </control>
             </control>
