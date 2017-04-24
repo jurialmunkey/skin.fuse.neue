@@ -1,7 +1,12 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <includes>
-    <variable name="Label_WidgetName">
-        <value condition="Window.IsVisible(Home) + !String.IsEmpty(Container(302).ListItem.Property(WidgetName))">$INFO[Container(302).ListItem.Property(WidgetName)]</value>
+    <variable name="Label_NextRecordingHeader">
+        <value condition="Pvr.IsRecording">$LOCALIZE[19158]...</value>
+        <value condition="Pvr.HasTimer">$LOCALIZE[19157]...</value>
+    </variable>
+    <variable name="Label_NextRecording">
+        <value condition="Pvr.IsRecording">[COLOR=$VAR[ColorHighlight]]$INFO[Pvr.NowRecordingTitle,,][/COLOR]$INFO[Pvr.NowRecordingChannel,  ,]</value>
+        <value condition="Pvr.HasTimer">[COLOR=$VAR[ColorHighlight]]$INFO[Pvr.NextRecordingTitle,,][/COLOR]$INFO[Pvr.NextRecordingDateTime,  ,]$INFO[Pvr.NextRecordingChannel,  ,]</value>
     </variable>
 
     <variable name="Label_Top250">
