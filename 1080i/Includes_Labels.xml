@@ -1,5 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <includes>
+    <variable name="Label_WidgetName">
+        <value condition="Window.IsVisible(Home) + !String.IsEmpty(Container(302).ListItem.Property(WidgetName))">$INFO[Container(302).ListItem.Property(WidgetName)]</value>
+    </variable>
+
     <variable name="Label_Top250">
         <value condition="Integer.IsGreater(Window(home).Property(SkinHelper.ListItem.IMDB.Top250),0)">$INFO[Window(Home).Property(SkinHelper.ListItem.IMDB.Top250),  •  $LOCALIZE[368] #,]</value>
     </variable>
@@ -201,6 +205,7 @@
         <value condition="Window.IsVisible(script-script.extendedinfo-DialogVideoInfo.xml) | Window.IsVisible(script-script.extendedinfo-DialogInfo.xml)"></value>
         <value condition="Window.IsVisible(DialogVideoInfo.xml) + [!String.IsEmpty(Window(Home).Property(FocusedList)) | Control.HasFocus(9501) | Control.HasFocus(9502)]"></value>
         <value condition="Window.IsVisible(MyPVRGuide.xml) + Player.HasVideo + Skin.HasSetting(global.showvideo)"></value>
+        <value condition="Window.IsVisible(MyPVRGuide.xml)">$INFO[ListItem.Plot]</value>
         <value condition="Window.IsVisible(MyPVRChannels.xml) | Window.IsVisible(MyPVRRecordings.xml) | Window.IsVisible(MyPVRTimers.xml) | Window.IsVisible(MyPVRSearch.xml)"></value>
         <value condition="Window.IsVisible(Home) + !Window.IsVisible(DialogVideoInfo.xml) + !Window.IsVisible(DialogMusicInfo.xml)">$VAR[Label_Widget_Plot]</value>
         <value condition="![Container.Content(movies) | Container.Content(episodes) | Container.Content(seasons) | Container.Content(sets) | Container.Content(actors) | Container.Content(tvshows) | Container.Content(videos)]"></value>
