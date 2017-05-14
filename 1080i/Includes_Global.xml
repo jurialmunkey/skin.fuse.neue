@@ -388,7 +388,7 @@
         <value condition="Window.IsVisible(1101) + !String.IsEmpty(Window(Home).Property(SkinHelper.AllMoviesBackground.Wall))">$INFO[Window(Home).Property(SkinHelper.AllMoviesBackground.Wall)]</value>
         <value condition="Window.IsVisible(1102) + !String.IsEmpty(Window(Home).Property(SkinHelper.AllTvShowsBackground.Wall))">$INFO[Window(Home).Property(SkinHelper.AllTvShowsBackground.Wall)]</value>
         <value condition="Window.IsVisible(1103) + !String.IsEmpty(Window(Home).Property(SkinHelper.AllMusicBackground.Wall))">$INFO[Window(Home).Property(SkinHelper.AllMusicBackground.Wall)]</value>
-        <value condition="[Window.IsVisible(1101) | Window.IsVisible(1102) | Window.IsVisible(1103) | Window.IsVisible(1104) | Window.IsVisible(1105) | Window.IsVisible(1106) | Window.IsVisible(1107) | Window.IsVisible(1108) | Window.IsVisible(1109) | Window.IsVisible(1110) | Window.IsVisible(1111)] + !String.IsEmpty(Window(Home).Property(SkinHelper.AllMoviesBackground.Wall))">$INFO[Window(Home).Property(SkinHelper.AllMoviesBackground.Wall)]</value>
+        <value condition="[Window.IsVisible(1101) | Window.IsVisible(1102) | Window.IsVisible(1103) | Window.IsVisible(1104) | Window.IsVisible(1105) | Window.IsVisible(1106) | Window.IsVisible(1107) | Window.IsVisible(1108) | Window.IsVisible(1109) | Window.IsVisible(1111)] + !String.IsEmpty(Window(Home).Property(SkinHelper.AllMoviesBackground.Wall))">$INFO[Window(Home).Property(SkinHelper.AllMoviesBackground.Wall)]</value>
 
         <!-- Pictures -->
         <value condition="Window.IsVisible(MyPics.xml) + !String.IsEmpty(ListItem.FileNameAndPath)">$INFO[ListItem.FileNameAndPath]</value>

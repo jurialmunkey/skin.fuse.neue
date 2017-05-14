@@ -40,7 +40,6 @@
                         <height>40</height>
                         <textcolor>main_fg_30</textcolor>
                         <label>$INFO[ListItem.Label2]</label>
-                        <font>Font-ListInfo</font>
                     </control>
                 </itemlayout>
                 <focusedlayout height="120">
@@ -80,7 +79,6 @@
                             <textcolor>Selected</textcolor>
                             <animation effect="fade" start="100" end="75" condition="true">Conditional</animation>
                             <label>$INFO[ListItem.Label2]</label>
-                            <font>Font-ListInfo</font>
                         </control>
                     </control>
                 </focusedlayout>

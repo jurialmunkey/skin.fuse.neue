@@ -78,7 +78,7 @@
                     </control>
                     <control type="label" id="5333">
                         <textoffsetx>30</textoffsetx>
-                        <font>Font-ListInfo-Small-Bold</font>
+                        <font>SmallBold</font>
                         <align>left</align>
                         <include>Defs_Context_Button</include>
                         <label>$ADDON[script.extendedinfo 32023]</label>

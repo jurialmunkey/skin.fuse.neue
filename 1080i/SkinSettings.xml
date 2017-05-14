@@ -78,7 +78,7 @@
                     </control>
 
                     <control type="togglebutton" id="9108" description="Dependencies">
-                        <usealttexture>!Control.HasFocus(300) + !Control.HasFocus(302) + ControlGroup(9100).HasFocus(9018)</usealttexture>
+                        <usealttexture>!Control.HasFocus(300) + !Control.HasFocus(302) + ControlGroup(9100).HasFocus(9108)</usealttexture>
                         <alttexturenofocus colordiffuse="$VAR[ColorHighlight]">common/white.png</alttexturenofocus>
                         <width>450</width>
                         <onback>300</onback>

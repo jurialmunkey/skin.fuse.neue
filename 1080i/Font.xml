@@ -56,11 +56,6 @@
             <size>24</size>
         </font>
         <font>
-            <name>font_castlist_label</name>
-            <filename>RobotoCondensed-Bold.ttf</filename>
-            <size>24</size>
-        </font>
-        <font>
             <name>font_castlist_label2</name>
             <filename>RobotoCondensed-Regular.ttf</filename>
             <size>24</size>
