@@ -1,3 +1,6 @@
+[B]1.0.0[/B]
+Version bump for repo inclusion
+
 [B]0.9.31[/B]
 Add ability to show info from osd by pressing up (or down from submenu blade)
 Fix playlist not showing.

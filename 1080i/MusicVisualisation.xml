@@ -70,7 +70,6 @@
                 <label>$INFO[MusicPlayer.Title,  ,]$INFO[MusicPlayer.Title,  ,]$INFO[MusicPlayer.Title,  ,]$INFO[MusicPlayer.Title,  ,]$INFO[MusicPlayer.Title,  ,]$INFO[MusicPlayer.Title,  ,]$INFO[MusicPlayer.Title,  ,]$INFO[MusicPlayer.Title,  ,]$INFO[MusicPlayer.Title,  ,]$INFO[MusicPlayer.Title,  ,]$INFO[MusicPlayer.Title,  ,]$INFO[MusicPlayer.Title,  ,]$INFO[MusicPlayer.Title,  ,]$INFO[MusicPlayer.Title,  ,]$INFO[MusicPlayer.Title,  ,]$INFO[MusicPlayer.Title,  ,]$INFO[MusicPlayer.Title,  ,]$INFO[MusicPlayer.Title,  ,]$INFO[MusicPlayer.Title,  ,]$INFO[MusicPlayer.Title,  ,]$INFO[MusicPlayer.Title,  ,]$INFO[MusicPlayer.Title,  ,]$INFO[MusicPlayer.Title,  ,]$INFO[MusicPlayer.Title,  ,]$INFO[MusicPlayer.Title,  ,]</label>
                 <scroll>true</scroll>
                 <font>font_musicvis_biggest</font>
-                <pauseatend>0</pauseatend>
                 <textcolor>77ffffff</textcolor>
                 <align>left</align>
             </control>
@@ -81,7 +80,6 @@
                 <width>2150</width>
                 <label>$INFO[MusicPlayer.Artist, ,]$INFO[MusicPlayer.Artist, ,]$INFO[MusicPlayer.Artist,,]$INFO[MusicPlayer.Artist,,]$INFO[MusicPlayer.Artist, ,]$INFO[MusicPlayer.Artist, ,]$INFO[MusicPlayer.Artist, ,]$INFO[MusicPlayer.Artist, ,]$INFO[MusicPlayer.Artist, ,]$INFO[MusicPlayer.Artist, ,]$INFO[MusicPlayer.Artist, ,]$INFO[MusicPlayer.Artist,,]$INFO[MusicPlayer.Artist,,]$INFO[MusicPlayer.Artist, ,]$INFO[MusicPlayer.Artist, ,]$INFO[MusicPlayer.Artist, ,]$INFO[MusicPlayer.Artist, ,]$INFO[MusicPlayer.Artist, ,]</label>
                 <scroll>true</scroll>
-                <pauseatend>0</pauseatend>
                 <font>font_musicvis_bigger</font>
                 <textcolor>44cccccc</textcolor>
                 <align>left</align>
@@ -94,7 +92,6 @@
                 <width>2150</width>
                 <label>$INFO[MusicPlayer.Album, ,]$INFO[MusicPlayer.Album, ,]$INFO[MusicPlayer.Album, ,]$INFO[MusicPlayer.Album, ,]$INFO[MusicPlayer.Album, ,]$INFO[MusicPlayer.Album, ,]$INFO[MusicPlayer.Album, ,]$INFO[MusicPlayer.Album, ,]$INFO[MusicPlayer.Album, ,]$INFO[MusicPlayer.Album, ,]$INFO[MusicPlayer.Album, ,]$INFO[MusicPlayer.Album, ,]$INFO[MusicPlayer.Album, ,]$INFO[MusicPlayer.Album, ,]$INFO[MusicPlayer.Album, ,]$INFO[MusicPlayer.Album, ,]$INFO[MusicPlayer.Album, ,]$INFO[MusicPlayer.Album, ,]$INFO[MusicPlayer.Album, ,]$INFO[MusicPlayer.Album, ,]</label>
                 <scroll>true</scroll>
-                <pauseatend>0</pauseatend>
                 <font>font_musicvis_big</font>
                 <textcolor>99cccccc</textcolor>
                 <align>left</align>
