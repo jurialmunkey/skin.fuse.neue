@@ -380,8 +380,8 @@
             <description>Skip Back</description>
             <width>48</width>
             <height>48</height>
-            <label></label>
-            <font>noop</font>
+            <label/>
+            <font/>
             <texturefocus colordiffuse="$VAR[ColorHighlight]">osd/record.png</texturefocus>
             <texturenofocus colordiffuse="main_fg_70">osd/record.png</texturenofocus>
             <usealttexture>Player.Recording</usealttexture>
@@ -400,8 +400,8 @@
             <description>Skip Back</description>
             <width>48</width>
             <height>48</height>
-            <label></label>
-            <font>noop</font>
+            <label/>
+            <font/>
             <texturefocus colordiffuse="$VAR[ColorHighlight]" flipx="true">osd/next.png</texturefocus>
             <texturenofocus colordiffuse="main_fg_70" flipx="true">osd/next.png</texturenofocus>
             <onclick>PlayerControl(Previous)</onclick>
@@ -414,8 +414,8 @@
             <description>Rewind</description>
             <width>48</width>
             <height>48</height>
-            <label></label>
-            <font>noop</font>
+            <label/>
+            <font/>
             <texturefocus colordiffuse="$VAR[ColorHighlight]" flipx="true">osd/ff.png</texturefocus>
             <texturenofocus colordiffuse="main_fg_70" flipx="true">osd/ff.png</texturenofocus>
             <onclick>PlayerControl(Rewind)</onclick>
@@ -428,9 +428,9 @@
             <description>Play/Pause</description>
             <width>48</width>
             <height>48</height>
-            <label></label>
+            <label/>
             <altlabel></altlabel>
-            <font>noop</font>
+            <font/>
             <texturefocus colordiffuse="$VAR[ColorHighlight]">osd/pause.png</texturefocus>
             <texturenofocus colordiffuse="main_fg_70">osd/pause.png</texturenofocus>
             <usealttexture>Player.Paused | Player.Forwarding | Player.Rewinding</usealttexture>
@@ -448,8 +448,8 @@
             <description>Stop</description>
             <width>48</width>
             <height>48</height>
-            <label></label>
-            <font>noop</font>
+            <label/>
+            <font/>
             <texturefocus colordiffuse="$VAR[ColorHighlight]">osd/stop.png</texturefocus>
             <texturenofocus colordiffuse="main_fg_70">osd/stop.png</texturenofocus>
             <onclick>PlayerControl(Stop)</onclick>
@@ -462,8 +462,8 @@
             <description>Fast Forward</description>
             <width>48</width>
             <height>48</height>
-            <label></label>
-            <font>noop</font>
+            <label/>
+            <font/>
             <texturefocus colordiffuse="$VAR[ColorHighlight]">osd/ff.png</texturefocus>
             <texturenofocus colordiffuse="main_fg_70">osd/ff.png</texturenofocus>
             <onclick>PlayerControl(Forward)</onclick>
@@ -476,8 +476,8 @@
             <description>Next</description>
             <width>48</width>
             <height>48</height>
-            <label></label>
-            <font>noop</font>
+            <label/>
+            <font/>
             <texturefocus colordiffuse="$VAR[ColorHighlight]">osd/next.png</texturefocus>
             <texturenofocus colordiffuse="main_fg_70">osd/next.png</texturenofocus>
             <onclick>PlayerControl(Next)</onclick>

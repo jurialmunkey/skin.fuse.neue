@@ -130,9 +130,9 @@
                     <textcolor>main_fg_70</textcolor>
                     <focusedcolor>Selected</focusedcolor>
                     <texturefocus colordiffuse="$VAR[ColorHighlight]">common/gradient-diffuse.png</texturefocus>
-                    <texturenofocus colordiffuse="00ffffff">noop</texturenofocus>
-                    <alttexturefocus colordiffuse="00ffffff">noop</alttexturefocus>
-                    <alttexturenofocus colordiffuse="00ffffff">noop</alttexturenofocus>
+                    <texturenofocus/>
+                    <alttexturefocus/>
+                    <alttexturenofocus/>
                     <usealttexture>Control.HasFocus($PARAM[listid])</usealttexture>
                     <onleft>$PARAM[onleft]</onleft>
                     <onright>$PARAM[onright]</onright>

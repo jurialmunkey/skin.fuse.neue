@@ -174,7 +174,7 @@
 
                     <control type="label" id="25">
                         <description>Spacer</description>
-                        <font>noop</font>
+                        <font/>
                         <height>25</height>
                     </control>
 

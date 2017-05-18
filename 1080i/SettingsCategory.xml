@@ -96,8 +96,8 @@
                     <textcolor>panel_fg_70</textcolor>
                     <align>left</align>
                     <textoffsetx>0</textoffsetx>
-                    <texturenofocus>noop</texturenofocus>
-                    <texturefocus>noop</texturefocus>
+                    <texturenofocus/>
+                    <texturefocus/>
                     <focusedcolor>$VAR[ColorHighlight]</focusedcolor>
                     <ondown>3</ondown>
                     <onback>300</onback>
