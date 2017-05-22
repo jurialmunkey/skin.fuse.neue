@@ -202,6 +202,11 @@
         <value condition="!String.IsEmpty(Container.FolderName)">$INFO[Container.FolderName]</value>
     </variable>
 
+    <variable name="Label_OverlayPlot">
+        <value condition="!String.IsEmpty(ListItem.Plot)">$INFO[ListItem.Plot]</value>
+        <value>$INFO[Window(Home).Property(SkinHelper.ListItem.Plot)]</value>
+    </variable>
+    
     <variable name="Label_Plot">
         <value condition="Skin.HasSetting(HidePlot) + !Window.IsActive(DialogVideoInfo.xml) + !Window.IsActive(script-script.extendedinfo-DialogVideoInfo.xml) + !Window.IsActive(script-script.extendedinfo-DialogInfo.xml)"></value>
         <value condition="Window.IsVisible(MyWeather.xml)"></value>
@@ -264,6 +269,8 @@
         <value condition="Control.HasFocus(9232)">$LOCALIZE[31050]</value>
         <value condition="Control.HasFocus(9233)">$LOCALIZE[31051]</value>
         <value condition="Control.HasFocus(9234)">$LOCALIZE[31052]</value>
+        <value condition="Control.HasFocus(9236)">$LOCALIZE[31156]</value>
+        <value condition="Control.HasFocus(9237)">$LOCALIZE[31157]</value>
         <value condition="Control.HasFocus(9242)">$LOCALIZE[31053]</value>
         <value condition="Control.HasFocus(9243)">$LOCALIZE[31054]</value>
         <value condition="Control.HasFocus(9244)">$LOCALIZE[31055]</value>
@@ -274,6 +281,8 @@
         <value condition="Control.HasFocus(9272)">$LOCALIZE[31061]</value>
         <value condition="Control.HasFocus(9273)">$LOCALIZE[31062]</value>
         <value condition="Control.HasFocus(9274)">$LOCALIZE[31063]</value>
+        <value condition="Control.HasFocus(9275)">$LOCALIZE[31154]</value>
+        <value condition="Control.HasFocus(9278)">$LOCALIZE[31155]</value>
         <value condition="Control.HasFocus(9261)">$LOCALIZE[31064]</value>
         <value condition="Control.HasFocus(9262)">$LOCALIZE[31065]</value>
         <value condition="Control.HasFocus(9263)">$LOCALIZE[31066]</value>

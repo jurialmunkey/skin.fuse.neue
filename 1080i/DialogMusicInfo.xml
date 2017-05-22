@@ -67,6 +67,7 @@
                 <align>left</align>
                 <top>954</top>
                 <height>60</height>
+                <onup>SetFocus(9601)</onup>
                 <include>Dialog_Info_Button_Grouplist</include>
 
                 <control type="button" id ="8">
@@ -114,6 +115,7 @@
         </include>
 
         <include>Statusbar_Info_Clock</include>
+        <include>Object_PlotOverlay</include>
 
     </controls>
 
