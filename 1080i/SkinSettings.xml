@@ -414,6 +414,7 @@
                         <include>Defs_Settings_Button</include>
                         <label>31286</label>
                         <label2>$INFO[Skin.String(focuscolor.name)]</label2>
+                        <onclick condition="!System.HasAddon(script.skin.helper.colorpicker)">InstallAddon(script.skin.helper.colorpicker)</onclick>
                         <onclick>RunScript(script.skin.helper.colorpicker,skinstring=focuscolor.name)</onclick>
                     </control>
                     <control type="radiobutton" id="9252">
