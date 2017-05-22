@@ -189,6 +189,7 @@
                         <include>Defs_Settings_Button</include>
                         <label>31150</label>
                         <label2>$INFO[Skin.String(fanart.fallback)]</label2>
+                        <onclick condition="!System.HasAddon(script.toolbox)">InstallAddon(script.toolbox)</onclick>
                         <onclick>SetProperty(Dialog.1.Label,$LOCALIZE[16018])</onclick>
                         <onclick>SetProperty(Dialog.1.BuiltIn,Skin.Reset(fanart.fallback))</onclick>
                         <onclick>SetProperty(Dialog.2.Label,$LOCALIZE[31271])</onclick>
