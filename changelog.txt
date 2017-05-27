@@ -1,3 +1,6 @@
+[B]1.0.2[/B]
+Fixed list actors scroll.
+
 [B]1.0.1[/B]
 Add plot overlay for video/music info.
 

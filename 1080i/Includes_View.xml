@@ -223,7 +223,7 @@
         </control>
     </include>
     <include name="View_Actors">
-        <control type="panel" id="52">
+        <control type="fixedlist" id="52">
             <visible>Container.Content(actors)</visible>
             <include content="View_Square_Layout">
                 <param name="actors" value="true" />
