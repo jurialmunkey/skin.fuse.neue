@@ -117,6 +117,25 @@
                 </focusedlayout>
             </control>
 
+            <control type="image">
+                <centerleft>50%</centerleft>
+                <bottom>-32</bottom>
+                <height>16</height>
+                <width>16</width>
+                <visible>Control.IsVisible(6)</visible>
+                <visible>Container(6).HasNext</visible>
+                <texture colordiffuse="dialog_fg_70">common/arrow-small.png</texture>
+            </control>
+            <control type="image">
+                <centerleft>50%</centerleft>
+                <top>-32</top>
+                <height>16</height>
+                <width>16</width>
+                <visible>Control.IsVisible(6)</visible>
+                <visible>Container(6).HasPrevious</visible>
+                <texture colordiffuse="dialog_fg_70" flipy="true">common/arrow-small.png</texture>
+            </control>
+
             <!-- Buttons -->
             <control type="grouplist" id="8000">
                 <include>Dialog_Standard_Right_Grouplist</include>
