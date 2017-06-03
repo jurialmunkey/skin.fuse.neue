@@ -53,18 +53,18 @@
                             </control>
                         </control>
                     </itemlayout>
-                    <itemlayout width="320" height="271.25" condition="Integer.IsEqual(Window(home).Property(TVGuide.ThumbType),2) | Integer.IsEqual(Window(home).Property(TVGuide.ThumbType),1)">
+                    <itemlayout width="320" height="284" condition="Integer.IsEqual(Window(home).Property(TVGuide.ThumbType),2) | Integer.IsEqual(Window(home).Property(TVGuide.ThumbType),1)">
                         <control type="image">
                             <left>30</left>
                             <right>30</right>
                             <top>10</top>
                             <height>146.25</height>
-                            <texture background="true">$INFO[ListItem.Property(fanart)]</texture>
+                            <texture background="true" fallback="special://skin/fanart.jpg">$INFO[ListItem.Property(Fanart)]</texture>
                         </control>
                         <control type="group">
                             <left>10</left>
                             <right>10</right>
-                            <bottom>10</bottom>
+                            <bottom>20</bottom>
                             <height>95</height>
                             <control type="label">
                                 <align>center</align>
@@ -136,13 +136,13 @@
                             </control>
                         </control>
                     </focusedlayout>
-                    <focusedlayout width="320" height="271.25" condition="Integer.IsEqual(Window(home).Property(TVGuide.ThumbType),2) | Integer.IsEqual(Window(home).Property(TVGuide.ThumbType),1)">
+                    <focusedlayout width="320" height="284" condition="Integer.IsEqual(Window(home).Property(TVGuide.ThumbType),2) | Integer.IsEqual(Window(home).Property(TVGuide.ThumbType),1)">
                         <control type="image">
                             <left>30</left>
                             <right>30</right>
                             <top>10</top>
                             <height>146.25</height>
-                            <texture background="true">$INFO[ListItem.Property(fanart)]</texture>
+                            <texture background="true" fallback="special://skin/fanart.jpg">$INFO[ListItem.Property(Fanart)]</texture>
                         </control>
                         <control type="image">
                             <left>23</left>
@@ -154,7 +154,7 @@
                         <control type="group">
                             <left>10</left>
                             <right>10</right>
-                            <bottom>10</bottom>
+                            <bottom>20</bottom>
                             <height>95</height>
                             <control type="label">
                                 <align>center</align>
