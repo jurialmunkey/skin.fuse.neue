@@ -53,12 +53,12 @@
                             </control>
                         </control>
                     </itemlayout>
-                    <itemlayout width="320" height="237.5" condition="Integer.IsEqual(Window(home).Property(TVGuide.ThumbType),2) | Integer.IsEqual(Window(home).Property(TVGuide.ThumbType),1)">
+                    <itemlayout width="320" height="271.25" condition="Integer.IsEqual(Window(home).Property(TVGuide.ThumbType),2) | Integer.IsEqual(Window(home).Property(TVGuide.ThumbType),1)">
                         <control type="image">
-                            <left>60</left>
-                            <right>60</right>
+                            <left>30</left>
+                            <right>30</right>
                             <top>10</top>
-                            <height>112.5</height>
+                            <height>146.25</height>
                             <texture background="true">$INFO[ListItem.Property(fanart)]</texture>
                         </control>
                         <control type="group">
@@ -136,19 +136,19 @@
                             </control>
                         </control>
                     </focusedlayout>
-                    <focusedlayout width="320" height="237.5" condition="Integer.IsEqual(Window(home).Property(TVGuide.ThumbType),2) | Integer.IsEqual(Window(home).Property(TVGuide.ThumbType),1)">
+                    <focusedlayout width="320" height="271.25" condition="Integer.IsEqual(Window(home).Property(TVGuide.ThumbType),2) | Integer.IsEqual(Window(home).Property(TVGuide.ThumbType),1)">
                         <control type="image">
-                            <left>60</left>
-                            <right>60</right>
+                            <left>30</left>
+                            <right>30</right>
                             <top>10</top>
-                            <height>112.5</height>
+                            <height>146.25</height>
                             <texture background="true">$INFO[ListItem.Property(fanart)]</texture>
                         </control>
                         <control type="image">
-                            <left>53</left>
+                            <left>23</left>
                             <top>3</top>
-                            <right>53</right>
-                            <height>126.5</height>
+                            <right>23</right>
+                            <height>160.25</height>
                             <texture colordiffuse="$VAR[ColorHighlight]" border="20">common/selectbox.png</texture>
                         </control>
                         <control type="group">
