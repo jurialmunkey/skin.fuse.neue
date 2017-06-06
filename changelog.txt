@@ -1,5 +1,7 @@
 [B]1.0.2[/B]
 Fixed list actors scroll.
+Fix mouse seek.
+Fix some next aired stuff
 
 [B]1.0.1[/B]
 Add plot overlay for video/music info.
