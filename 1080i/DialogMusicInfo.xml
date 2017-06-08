@@ -20,6 +20,7 @@
                 <!-- Tracks -->
                 <control type="group">
                     <height>32</height>
+                    <visible>!Container.Content(artists)</visible>
                     <control type="label">
                         <left>0</left>
                         <width>160</width>
@@ -34,7 +35,7 @@
                         <textcolor>main_fg_70</textcolor>
                         <font>Tiny</font>
                         <aligny>top</aligny>
-                        <label fallback="19055">$INFO[Window(Home).Property(SkinHelper.ListItem.AlbumCount),, $LOCALIZE[132]   ]$INFO[Window(Home).Property(SkinHelper.ListItem.SongCount),, $LOCALIZE[134]   ]$INFO[Window(Home).Property(SkinHelper.ListItem.Duration),$LOCALIZE[180] ,]</label>
+                        <label fallback="19055">$INFO[Window(Home).Property(SkinHelper.ListItem.SongCount),, $LOCALIZE[134]   ]$INFO[Window(Home).Property(SkinHelper.ListItem.Duration),$LOCALIZE[180] ,]</label>
                     </control>
                 </control>
                 <!-- Description -->
