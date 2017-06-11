@@ -338,6 +338,18 @@
                         <onclick>RunScript(script.image.resource.select,property=weather.icons&amp;type=resource.images.weathericons)</onclick>
                     </control>
                     
+                    <!-- <control type="radiobutton" id="9341">
+                        <visible>ControlGroup(9100).HasFocus(9104)</visible>
+                        <onback>300</onback>
+                        <label>Show big poster</label>
+                        <selected>!Skin.HasSetting(HideBigPoster)</selected>
+                        <include>Defs_Settings_Button</include>
+                        <onclick>Skin.ToggleSetting(HideBigPoster)</onclick>
+                        <onclick>ReloadSkin()</onclick>
+                        <onclick>SetFocus(9104)</onclick>
+                        <onclick>AlarmClock(setfo,SetFocus(9341),00:00,silent)</onclick>
+                    </control> -->
+
                     <control type="radiobutton" id="9242">
                         <visible>ControlGroup(9100).HasFocus(9104)</visible>
                         <onback>300</onback>
@@ -450,6 +462,8 @@
                         <selected>Skin.HasSetting(DisableAlphabetStrip)</selected>
                         <onclick>Skin.ToggleSetting(DisableAlphabetStrip)</onclick>
                         <onclick>ReloadSkin()</onclick>
+                        <onclick>SetFocus(9107)</onclick>
+                        <onclick>AlarmClock(setfo,SetFocus(9272),00:00,silent)</onclick>
                     </control>
                     
                     <control type="radiobutton" id="9273" description="Kiosk Mode">

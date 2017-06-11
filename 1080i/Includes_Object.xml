@@ -38,6 +38,7 @@
         <definition>
 
             <control type="group">
+                <visible>!Skin.HasSetting(HideBigPoster)</visible>
                 <left>SidePad</left>
                 <bottom>78</bottom>
                 <width>504</width>
@@ -501,8 +502,8 @@
 
     <include name="Object_Scrollbar">
         <control type="button" id="61">
-            <left>614</left>
-            <width>1226</width>
+            <left>info_left</left>
+            <width>info_width</width>
             <bottom>94</bottom>
             <height>8</height>
             <visible allowhiddenfocus="true">false</visible>
@@ -515,8 +516,8 @@
         </control>
         <control type="scrollbar" id="60">
             <onback>50</onback>
-            <left>614</left>
-            <width>1226</width>
+            <left>info_left</left>
+            <width>info_width</width>
             <bottom>94</bottom>
             <orientation>horizontal</orientation>
             <height>8</height>
