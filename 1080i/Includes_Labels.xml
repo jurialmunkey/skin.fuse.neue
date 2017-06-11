@@ -225,7 +225,7 @@
 
     <variable name="Label_Rating">
         <value condition="Window.IsVisible(Home) + !String.IsEmpty(Container(301).ListItem.Rating)">$INFO[Container(301).ListItem.Rating]$VAR[Label_Top250]</value>
-        <value condition="!String.IsEmpty(ListItem.Rating)">$INFO[ListItem.Rating]$VAR[Label_Top250, ,]</value>
+        <value condition="!String.IsEmpty(ListItem.Rating)">$INFO[ListItem.Rating]$VAR[Label_Top250]</value>
         <value>0.0$VAR[Label_Top250]</value>
     </variable>
 
