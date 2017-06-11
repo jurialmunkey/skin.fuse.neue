@@ -120,7 +120,7 @@
     </include>
 
     <include name="View_Hub_1101">
-        <control type="panel" id="50">
+        <control type="fixedlist" id="50">
             <include>View_Hub_Onclick</include>
             <include content="View_Square_Layout">
                 <param name="id" value="50" />
@@ -129,7 +129,7 @@
         </control>
     </include>
     <include name="View_Hub_1102">
-        <control type="panel" id="50">
+        <control type="fixedlist" id="50">
             <include>View_Hub_Onclick</include>
             <include content="View_Square_Layout">
                 <param name="id" value="50" />
@@ -138,7 +138,7 @@
         </control>
     </include>
     <include name="View_Hub_1103">
-        <control type="panel" id="50">
+        <control type="fixedlist" id="50">
             <include>View_Hub_Onclick</include>
             <include content="View_Square_Layout">
                 <param name="id" value="50" />
@@ -147,7 +147,7 @@
         </control>
     </include>
     <include name="View_Hub_1104">
-        <control type="panel" id="50">
+        <control type="fixedlist" id="50">
             <include>View_Hub_Onclick</include>
             <include content="View_Square_Layout">
                 <param name="id" value="50" />
@@ -156,7 +156,7 @@
         </control>
     </include>
     <include name="View_Hub_1105">
-        <control type="panel" id="50">
+        <control type="fixedlist" id="50">
             <include>View_Hub_Onclick</include>
             <include content="View_Square_Layout">
                 <param name="id" value="50" />
@@ -165,7 +165,7 @@
         </control>
     </include>
     <include name="View_Hub_1106">
-        <control type="panel" id="50">
+        <control type="fixedlist" id="50">
             <include>View_Hub_Onclick</include>
             <include content="View_Square_Layout">
                 <param name="id" value="50" />
@@ -174,7 +174,7 @@
         </control>
     </include>
     <include name="View_Hub_1107">
-        <control type="panel" id="50">
+        <control type="fixedlist" id="50">
             <include>View_Hub_Onclick</include>
             <include content="View_Square_Layout">
                 <param name="id" value="50" />
@@ -183,7 +183,7 @@
         </control>
     </include>
     <include name="View_Hub_1108">
-        <control type="panel" id="50">
+        <control type="fixedlist" id="50">
             <include>View_Hub_Onclick</include>
             <include content="View_Square_Layout">
                 <param name="id" value="50" />
@@ -192,7 +192,7 @@
         </control>
     </include>
     <include name="View_Hub_1109">
-        <control type="panel" id="50">
+        <control type="fixedlist" id="50">
             <include>View_Hub_Onclick</include>
             <include content="View_Square_Layout">
                 <param name="id" value="50" />
