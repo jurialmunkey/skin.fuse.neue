@@ -756,6 +756,11 @@ msgctxt "#31157"
 msgid "A scrolling text effect showing artist, album and song info overlayed on the music visualisation background."
 msgstr ""
 
+#: /1080i/SkinSettings.xml
+msgctxt "#31158"
+msgid "Automatically show visualisation after starting a song"
+msgstr ""
+
 msgctxt "#31168"
 msgid "Startup video or music playlist"
 msgstr ""
