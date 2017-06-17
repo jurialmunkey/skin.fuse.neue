@@ -74,6 +74,11 @@
                 <control type="button" id ="8">
                     <description>Play</description>
                     <label>208</label>
+                    <onclick condition="System.HasAddon(script.playalbum) + String.IsEqual(ListItem.DBType,album)">RunScript(script.playalbum,albumid=$INFO[ListItem.DBID])</onclick>
+                    <onclick condition="System.HasAddon(script.playalbum) + String.IsEqual(ListItem.DBType,song)">RunScript(script.playalbum,songid=$INFO[ListItem.DBID])</onclick>
+                    <onclick condition="System.HasAddon(script.playalbum)">Action(close)</onclick>
+                    <onclick condition="!System.HasAddon(script.playalbum)">InstallAddon(script.playalbum)</onclick>
+                    <visible>[String.IsEqual(ListItem.DBType,album) | String.IsEqual(ListItem.DBType,song)] + !String.IsEmpty(ListItem.Dbid)</visible>
                     <include>Dialog_Info_Buttons</include>
                 </control>
 
