@@ -761,6 +761,11 @@ msgctxt "#31158"
 msgid "Automatically show visualisation after starting a song"
 msgstr ""
 
+#: /1080i/SkinSettings.xml
+msgctxt "#31159"
+msgid "Show current video cache level in progress bar"
+msgstr ""
+
 msgctxt "#31168"
 msgid "Startup video or music playlist"
 msgstr ""

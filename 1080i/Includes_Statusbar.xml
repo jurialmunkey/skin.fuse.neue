@@ -36,6 +36,7 @@
             <visible>Player.Playing | Player.Paused | Player.Caching</visible>
             <visible>!Player.Seeking</visible>
             <visible>Player.HasMedia</visible>
+            <visible>!Skin.HasSetting(HideCacheProgress)</visible>
         </control>
         <control type="progress">
             <width>100%</width>
