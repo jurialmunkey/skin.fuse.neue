@@ -199,7 +199,7 @@
         <value condition="[Window.IsVisible(MyPVRChannels.xml) | Window.IsVisible(MyPVRSearch.xml) | Window.IsVisible(MyPVRRecordings.xml) | Window.IsVisible(MyPVRTimers.xml)] + [!String.IsEmpty(ListItem.EndTime) | !String.IsEmpty(ListItem.Plot)]">$INFO[ListItem.EndTime,$LOCALIZE[31106] ,]$INFO[ListItem.Plot,  •  ,]</value>
         <value condition="String.Contains(Container.FolderPath,/tvshows/)">$LOCALIZE[20343]$INFO[Container.FolderName,  •  ,]</value>
         <value condition="String.Contains(Container.FolderPath,/movies/)">$LOCALIZE[20342]$INFO[Container.FolderName,  •  ,]</value>
-        <value condition="!String.IsEmpty(System.CurrentWindow) + !Window.IsVisible(SettingsCategory.xml) + !Window.IsVisible(Settings.xml)">$INFO[System.CurrentWindow]$INFO[Container.FolderName,  •  ,]</value>
+        <value condition="!String.IsEmpty(System.CurrentWindow) + !Window.IsVisible(SettingsCategory.xml) + !Window.IsVisible(Settings.xml)">$INFO[System.CurrentWindow]$INFO[Container.FolderName,  •  ,]$INFO[ListItem.Premiered,  •  ,]</value>
         <value condition="!String.IsEmpty(Container.FolderName)">$INFO[Container.FolderName]</value>
     </variable>
 
