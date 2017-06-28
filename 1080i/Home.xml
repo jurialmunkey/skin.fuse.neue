@@ -64,6 +64,7 @@
             <animation effect="slide" end="0,100" tween="cubic" time="300" condition="Window.IsActive(DialogNotification.xml) | Window.IsActive(DialogExtendedProgressBar.xml)">Conditional</animation>
             <include>Animation_Notification_Follow</include>
             <visible>Pvr.IsRecording | Pvr.HasTimer</visible>
+            <visible>!Skin.HasSetting(home.pvrnotification)</visible>
             <control type="group">
                 <control type="image">
                     <include>Dialog_Notification_Icon</include>
