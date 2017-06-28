@@ -86,6 +86,7 @@
                 <texture background="true">$VAR[Image_ClearLogo]</texture>
                 <visible>!Player.HasMedia | [!Skin.HasSetting(global.showvideo) + Player.HasVideo] | [!Skin.HasSetting(global.showvisualisation) + Player.HasAudio]</visible>
                 <visible>!Skin.HasSetting(global.hidefanart) | Window.IsVisible(home)</visible>
+                <visible>!ListItem.IsCollection + !Container(301).ListItem.IsCollection</visible>
                 <visible>!Skin.HasSetting(HideClearLogo)</visible>
                 <visible>[!$EXP[Expression_ShowWeatherWidget] + !$EXP[Expression_ShowSystemInfoWidget]] | !Window.IsVisible(Home)</visible>
                 <visible>!Integer.IsEqual(Window(Home).Property(FocusedList),9502)</visible>

@@ -3,7 +3,7 @@
 <includes>
     <expression name="Expression_ReplaceWindowHome">[!Window.IsVisible(home) + !Window.IsVisible(SettingsCategory.xml) + !Window.IsVisible(FileManager.xml) + !Window.IsVisible(AddonBrowser.xml) + !Window.IsVisible(Settings.xml) + !Window.IsVisible(SkinSettings.xml) + !Window.IsVisible(SettingsProfile.xml) + !Window.IsVisible(SettingsSystemInfo.xml) + !Window.IsVisible(EventLog.xml) + Skin.HasSetting(ReturnHomeOnFocus)]</expression>
 
-    <expression name="Expression_InfoSlide">[[!String.IsEmpty(Control.GetLabel(9399)) | ListItem.IsCollection] + String.IsEqual(Window(Home).Property(ShowInfobar),1)]</expression>
+    <expression name="Expression_InfoSlide">[[!String.IsEmpty(Control.GetLabel(9399)) | [!Skin.HasSetting(HidePlot) + ListItem.IsCollection]] + String.IsEqual(Window(Home).Property(ShowInfobar),1)]</expression>
 
     <expression name="Expression_InfoSlide_Home">[!Integer.IsEqual(Container(301).NumItems,0) + Control.IsVisible(301) + !Container(301).IsUpdating + !String.IsEmpty(Control.GetLabel(9399)) + String.IsEqual(Window(Home).Property(ShowInfobar),1)]</expression>
 
