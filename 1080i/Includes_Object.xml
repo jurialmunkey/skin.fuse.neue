@@ -207,7 +207,7 @@
                     <centertop>50%</centertop>
                     <height>64</height>
                     <texture colordiffuse="$PARAM[colordiffuse]">flags/$PARAM[directory]/other/hdtv.png</texture>
-                    <visible>String.Contains($PARAM[container]$PARAM[source]FileNameAndPath,hdtv)</visible>
+                    <visible>String.Contains($PARAM[container]$PARAM[source]FileNameAndPath,hdtv) | String.Contains($PARAM[container]$PARAM[source]FileNameAndPath,pdtv) | String.Contains($PARAM[container]$PARAM[source]FileNameAndPath,dsr)</visible>
                 </control>
      
                 <control type="image">
