@@ -89,7 +89,7 @@
                 <visible>!ListItem.IsCollection + !Container(301).ListItem.IsCollection</visible>
                 <visible>!Skin.HasSetting(HideClearLogo)</visible>
                 <visible>[!$EXP[Expression_ShowWeatherWidget] + !$EXP[Expression_ShowSystemInfoWidget]] | !Window.IsVisible(Home)</visible>
-                <visible>!Integer.IsEqual(Window(Home).Property(FocusedList),9502)</visible>
+                <visible>String.IsEmpty(Window(Home).Property(FocusedList))</visible>
                 <animation effect="fade" start="100" end="0" time="450" easing="out" tween="sine" reversible="true" condition="Control.HasFocus(300) | Control.HasFocus(302) | [!Control.HasFocus(301) + Window.IsVisible(Home) + Skin.HasSetting(home.dontshowfanart)]">Conditional</animation>
                 <animation effect="slide" start="0" end="0,80" condition="Skin.HasSetting(ShowTopbar)">Conditional</animation>
                 <animation effect="zoom" start="100" end="75" center="auto" condition="Skin.HasSetting(ShowTopbar)">Conditional</animation>

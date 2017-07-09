@@ -177,7 +177,7 @@
                 <height>120</height>
                 <orientation>horizontal</orientation>
                 <align>$PARAM[align]</align>
-                <itemgap>8</itemgap>
+                <itemgap>0</itemgap>
                 <centertop>50%</centertop>
                 <usecontrolcoords>true</usecontrolcoords>
                 
