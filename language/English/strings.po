@@ -766,6 +766,26 @@ msgctxt "#31159"
 msgid "Show current video cache level in progress bar"
 msgstr ""
 
+#: /1080i/script-nextup-notification-PostPlayInfo.xml
+msgctxt "#31160"
+msgid "Next Up"
+msgstr ""
+
+#: /1080i/script-nextup-notification-PostPlayInfo.xml
+msgctxt "#31161"
+msgid "Show/Hide Spoilers"
+msgstr ""
+
+#: /1080i/script-nextup-notification-PostPlayInfo.xml
+msgctxt "#31162"
+msgid "Playing Next..."
+msgstr ""
+
+#: /1080i/script-nextup-notification-PostPlayInfo.xml
+msgctxt "#31163"
+msgid "Previous"
+msgstr ""
+
 msgctxt "#31168"
 msgid "Startup video or music playlist"
 msgstr ""
