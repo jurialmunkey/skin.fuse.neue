@@ -34,17 +34,15 @@
                 <onleft>102</onleft>
                 <onright>noop</onright>
                 <onup>noop</onup>
-                <control type="button" id="202">
+                <control type="radiobutton" id="202">
                     <height>64</height>
-                    <width>auto</width>
+                    <width>300</width>
                     <label>$LOCALIZE[31161]</label>
                     <align>right</align>
                     <textoffsetx>1</textoffsetx>
                     <texturefocus colordiffuse="$VAR[ColorHighlight]" border="10">common/underline.png</texturefocus>
                     <focusedcolor>$VAR[ColorHighlight]</focusedcolor>
                     <font>TinyBold</font>
-                    <onclick condition="String.IsEmpty(Window.Property(showplot))">SetProperty(showplot,1)</onclick>
-                    <onclick condition="!String.IsEmpty(Window.Property(showplot))">ClearProperty(showplot)</onclick>
                     <texturenofocus/>
                     <texturefocus/>
                 </control>
