@@ -252,7 +252,7 @@
     </variable>
 
     <variable name="Label_VideoHWDecoder">
-        <value condition="Player.Process(Label_VideoHWDecoder)">HW</value>
+        <value condition="Player.Process(videohwdecoder)">HW</value>
         <value>SW</value>
     </variable>
 
