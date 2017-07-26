@@ -555,6 +555,14 @@
                         <onclick>RunScript(script.skinshortcuts,type=manage&amp;group=powermenu)</onclick>
                     </control>
 
+                    <control type="radiobutton" id="9266" description="Minimal busy loader">
+                        <visible>ControlGroup(9100).HasFocus(9107)</visible>
+                        <onback>300</onback>
+                        <include>Defs_Settings_Button</include>
+                        <label>$LOCALIZE[31165]</label>
+                        <selected>Skin.HasSetting(hide.busydialog)</selected>
+                        <onclick>Skin.ToggleSetting(hide.busydialog)</onclick>
+                    </control>
                     <!-- ============ -->
                     <!-- Dependencies -->
                     <!-- ============ -->
