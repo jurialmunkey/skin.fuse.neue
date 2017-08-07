@@ -846,6 +846,11 @@ msgctxt "#31177"
 msgid "Are you sure you want to remove the settings shortcut?[CR]Please ensure that you have an alternative method of accessing settings before you remove this shortcut."
 msgstr ""
 
+#: /1080i/SkinSettings.xml
+msgctxt "#31178"
+msgid "Autoscroll when idle inside library"
+msgstr ""
+
 msgctxt "#31181"
 msgid "Select icon"
 msgstr ""

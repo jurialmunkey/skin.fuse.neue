@@ -185,6 +185,16 @@
                         <onclick>Skin.ToggleSetting(DisableAutoScroll)</onclick>
                     </control>
 
+                    <control type="radiobutton" id="9220" description="Autoscroll">
+                        <visible>ControlGroup(9100).HasFocus(9101)</visible>
+                        <onback>300</onback>
+                        <include>Defs_Settings_Button</include>
+                        <label>$LOCALIZE[31178]</label>
+                        <enable>!Skin.HasSetting(DisableAutoScroll)</enable>
+                        <selected>Skin.HasSetting(AutoScrollLibrary)</selected>
+                        <onclick>Skin.ToggleSetting(AutoScrollLibrary)</onclick>
+                    </control>
+
                     
 
                     

@@ -237,6 +237,7 @@
         <definition>
             <control type="$PARAM[listtype]" id="50">
                 <visible>Container.Content(movies) | Container.Content(sets) | Container.Content(seasons) | [Container.Content(musicvideos) + Window.IsVisible(MyVideoNav.xml) + Skin.HasSetting(MusicVideoConcerts)] | [Container.Content(tvshows) + Skin.HasSetting(TvShowPosters)]</visible>
+                <autoscroll time="10000">System.IdleTime(3) + Skin.HasSetting(AutoScrollLibrary) + !Skin.HasSetting(DisableAutoScroll)</autoscroll>
                 <include>View_Posters_Layout</include>
             </control>
         </definition>
@@ -246,6 +247,7 @@
         <definition>
             <control type="$PARAM[listtype]" id="51">
                 <visible>Container.Content(episodes) | Container.Content(videos) | [Container.Content(tvshows) + !Skin.HasSetting(TvShowPosters)]</visible>
+                <autoscroll time="10000">System.IdleTime(3) + Skin.HasSetting(AutoScrollLibrary) + !Skin.HasSetting(DisableAutoScroll)</autoscroll>
                 <include>View_Landscape_Layout</include>
             </control>
         </definition>
@@ -254,6 +256,7 @@
         <param name="listtype" default="fixedlist" />
         <definition>
             <control type="$PARAM[listtype]" id="52">
+                <autoscroll time="10000">System.IdleTime(3) + Skin.HasSetting(AutoScrollLibrary) + !Skin.HasSetting(DisableAutoScroll)</autoscroll>
                 <visible>Container.Content(actors)</visible>
                 <include content="View_Square_Layout">
                     <param name="actors" value="true" />
@@ -267,6 +270,7 @@
         <definition>
             <control type="$PARAM[listtype]" id="53">
                 <visible>![Container.Content(episodes) | Container.Content(actors) | Container.Content(movies) | Container.Content(sets) | Container.Content(seasons) | Container.Content(tvshows) | Container.Content(songs) | Container.Content(files) | Container.Content(playlists) | Container.Content(tags) | [Container.Content(musicvideos) + Window.IsVisible(MyVideoNav.xml) + Skin.HasSetting(MusicVideoConcerts)]]</visible>
+                <autoscroll time="10000">System.IdleTime(3) + Skin.HasSetting(AutoScrollLibrary) + !Skin.HasSetting(DisableAutoScroll)</autoscroll>
                 <include>View_Square_Layout</include>
             </control>
         </definition>
@@ -276,6 +280,7 @@
         <definition>
             <control type="$PARAM[listtype]" id="54">
                 <!-- <visible>Container.Content(songs) | Container.Content(files) | Window.IsVisible(MyPlaylist.xml) | Container.Content(directors) | Container.Content() | Container.Content(playlists) | Container.Content(tags) | [Container.Content(seasons) + Skin.HasSetting(SeasonList)]</visible> -->
+                <autoscroll time="10000">System.IdleTime(3) + Skin.HasSetting(AutoScrollLibrary) + !Skin.HasSetting(DisableAutoScroll)</autoscroll>
                 <include>View_List_Layout</include>
             </control>
         </definition>
