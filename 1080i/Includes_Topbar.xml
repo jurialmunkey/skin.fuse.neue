@@ -7,7 +7,7 @@
         <control type="button">
             <visible allowhiddenfocus="true">false</visible>
             <top>0</top>
-            <height>400</height>
+            <height>300</height>
             <onfocus>SetProperty(ShowInfobar,0,Home)</onfocus>
             <onfocus>SetProperty(ShowTopbar,1,Home)</onfocus>
         </control>
