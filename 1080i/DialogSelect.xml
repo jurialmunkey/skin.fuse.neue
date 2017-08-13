@@ -81,9 +81,10 @@
             <control type="panel" id="6">
                 <include>Dialog_Standard_List_Left</include>
                 <onleft>8000</onleft>
-                <onright>8000</onright>
+                <onright>60</onright>
                 <onup>6</onup>
                 <ondown>6</ondown>
+                <pagecontrol>60</pagecontrol>
                 <itemlayout height="138" width="700">
                     <control type="image">
                         <include>Dialog_Standard_List_Left_Icon</include>
@@ -141,7 +142,8 @@
                 <include>Dialog_Standard_Right_Grouplist</include>
                 <onleft condition="Control.IsVisible(3)">3</onleft>
                 <onright condition="Control.IsVisible(3)">3</onright>
-                <onleft condition="Control.IsVisible(6)">6</onleft>
+                <onleft condition="Control.IsVisible(60)">60</onleft>
+                <onleft condition="!Control.IsVisible(60) + Control.IsVisible(6)">6</onleft>
                 <onright condition="Control.IsVisible(6)">6</onright>
                 <animation effect="slide" start="0" end="22,-100" condition="!Control.IsVisible(6)">Conditional</animation>
                 <control type="button" id="5">
@@ -175,7 +177,19 @@
                 <height>687</height>
                 <width>1</width>
                 <texture colordiffuse="dialog_fg_12">common/white.png</texture>
+                <visible>Control.IsVisible(6) + !Control.IsVisible(60)</visible>
+            </control>
+            <control type="scrollbar" id="60">
+                <orientation>vertical</orientation>
+                <left>700</left>
+                <width>8</width>
+                <top>120</top>
+                <height>687</height>
+                <onleft>6</onleft>
+                <onright>8000</onright>
                 <visible>Control.IsVisible(6)</visible>
+                <texturesliderbackground colordiffuse="dialog_fg_12">osd/progress-end.png</texturesliderbackground>
+                <texturesliderbar colordiffuse="dialog_fg_12">osd/progress-end.png</texturesliderbar>
             </control>
 
         </control>
