@@ -22,13 +22,13 @@
     <variable name="Label_NumItems">
         <value condition="Window.IsVisible(LoginScreen.xml)">$LOCALIZE[10029]</value>
         <value condition="!String.IsEqual(Container.NumItems,0) + !String.IsEmpty(Container.NumItems) + !Container.IsUpdating">[COLOR=$VAR[ColorHighlight]]$INFO[Container.NumItems,,[/COLOR] $LOCALIZE[31101]]</value>
-        <value condition="!String.IsEqual(Container(301).NumItems,0) + !String.IsEmpty(Container(301).NumItems) + !Container(301).IsUpdating">[COLOR=$VAR[ColorHighlight]]$INFO[Container(301).NumItems,,[/COLOR] $LOCALIZE[31101]]</value>
+        <value condition="!String.IsEqual(Container(301).NumItems,0) + !String.IsEmpty(Container(301).NumItems) + ![Container(301).IsUpdating + Integer.IsEqual(Container(301).NumItems,0)]">[COLOR=$VAR[ColorHighlight]]$INFO[Container(301).NumItems,,[/COLOR] $LOCALIZE[31101]]</value>
         <value condition="!String.IsEqual(Container(50).NumItems,0) + !String.IsEmpty(Container(50).NumItems) + !Container(50).IsUpdating">[COLOR=$VAR[ColorHighlight]]$INFO[Container(50).NumItems,,[/COLOR] $LOCALIZE[31101]]</value>
     </variable>
 
     <variable name="Label_NumPages">
         <value condition="!String.IsEqual(Container.NumPages,0) + !String.IsEmpty(Container.NumPages) + !Container.IsUpdating">[COLOR=$VAR[ColorHighlight]]$INFO[Container.CurrentPage,,[/COLOR] $LOCALIZE[20163] ][COLOR=$VAR[ColorHighlight]]$INFO[Container.NumPages,,[/COLOR] $LOCALIZE[31243]]</value>
-        <value condition="!String.IsEqual(Container(301).NumPages,0) + !String.IsEmpty(Container(301).NumPages) + !Container(301).IsUpdating">[COLOR=$VAR[ColorHighlight]]$INFO[Container(301).CurrentPage,,[/COLOR] $LOCALIZE[20163] ][COLOR=$VAR[ColorHighlight]]$INFO[Container(301).NumPages,,[/COLOR] $LOCALIZE[31243]]</value>
+        <value condition="!String.IsEqual(Container(301).NumPages,0) + !String.IsEmpty(Container(301).NumPages) + ![Container(301).IsUpdating + Integer.IsEqual(Container(301).NumItems,0)]">[COLOR=$VAR[ColorHighlight]]$INFO[Container(301).CurrentPage,,[/COLOR] $LOCALIZE[20163] ][COLOR=$VAR[ColorHighlight]]$INFO[Container(301).NumPages,,[/COLOR] $LOCALIZE[31243]]</value>
         <value condition="!String.IsEqual(Container(50).NumPages,0) + !String.IsEmpty(Container(50).NumPages) + !Container(50).IsUpdating">[COLOR=$VAR[ColorHighlight]]$INFO[Container(50).CurrentPage,,[/COLOR] $LOCALIZE[20163] ][COLOR=$VAR[ColorHighlight]]$INFO[Container(50).NumPages,,[/COLOR] $LOCALIZE[31243]]</value>
     </variable>
 
@@ -129,8 +129,8 @@
         <value condition="!String.IsEqual(Container(301).ListItem.Title,Container(301).ListItem.TvShowTitle) + !String.IsEmpty(Container(301).ListItem.TvShowTitle)">$INFO[Container(301).ListItem.TvShowTitle,,  •  ]$INFO[Container(301).ListItem.Premiered,,  •  ]$VAR[Label_Duration,,  •  ]$INFO[Container(301).ListItem.EndTime,$LOCALIZE[31106] ,  •  ]$VAR[Label_Rating]</value>
         <value condition="!String.IsEqual(Container(301).ListItem.Title,Container(301).ListItem.TvShowTitle) + String.IsEmpty(Container(301).ListItem.TvShowTitle) + [!String.IsEmpty(Container(301).ListItem.Year) | !String.IsEmpty(Container(301).ListItem.Duration) | !String.IsEmpty(Container(301).ListItem.Rating)]">$INFO[Container(301).ListItem.Year,,  •  ]$VAR[Label_Duration,,  •  ]$INFO[Container(301).ListItem.EndTime,$LOCALIZE[31106] ,  •  ]$VAR[Label_Rating]</value>
         <value condition="String.IsEqual(Container(301).ListItem.Title,Container(301).ListItem.TvShowTitle) + [!String.IsEmpty(Container(301).ListItem.Episode) | !String.IsEmpty(Container(301).ListItem.Duration) | !String.IsEmpty(Container(301).ListItem.Rating)]">$INFO[Container(301).ListItem.Episode,, $LOCALIZE[20360]  •  ]$INFO[Container(301).ListItem.Property(UnWatchedEpisodes),, $LOCALIZE[16101]  •  ]$VAR[Label_Duration,,  •  ]$VAR[Label_Rating]</value>
-        <value condition="!Container(301).IsUpdating + !Integer.IsEqual(Container(301).NumItems) + !String.IsEmpty(Container(302).ListItem.Property(widgetName))">$INFO[Container(302).ListItem.Property(widgetName)]</value>
-        <value condition="!Container(301).IsUpdating + !Integer.IsEqual(Container(301).NumItems) + !String.IsEmpty(Container(300).ListItem.Property(widgetName))">$INFO[Container(300).ListItem.Property(widgetName)]</value>
+        <value condition="![Container(301).IsUpdating + Integer.IsEqual(Container(301).NumItems,0)] + !Integer.IsEqual(Container(301).NumItems) + !String.IsEmpty(Container(302).ListItem.Property(widgetName))">$INFO[Container(302).ListItem.Property(widgetName)]</value>
+        <value condition="![Container(301).IsUpdating + Integer.IsEqual(Container(301).NumItems,0)] + !Integer.IsEqual(Container(301).NumItems) + !String.IsEmpty(Container(300).ListItem.Property(widgetName))">$INFO[Container(300).ListItem.Property(widgetName)]</value>
     </variable>
 
     <variable name="Label_VideoInfo_Title">
