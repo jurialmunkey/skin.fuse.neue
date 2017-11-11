@@ -1,0 +1,1118 @@
+# Kodi Media Center language file
+# Addon Name: (fuse)neue
+# Addon id: skin.fuse.neue
+# Addon Provider: jurialmunkey
+msgid ""
+msgstr ""
+"POT-Creation-Date: 2014-10-26 17:05+0000\n"
+"PO-Revision-Date: 2017-11-02 13:17+0200\n"
+"Last-Translator: A. Dambledore\n"
+"Language-Team: Eng2Heb\n"
+"Language: he_IL\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+"Project-Id-Version: \n"
+
+#: /1080i/SkinSettings.xml
+msgctxt "#31000"
+msgid "Enable skin helper backgrounds for hub windows"
+msgstr "אפשר רקעים של skin helper עבור חלונות הרכזת"
+
+#: /1080i/DialogVideoInfo.xml
+msgctxt "#31001"
+msgid "Revenue"
+msgstr "הכנסה"
+
+#: /1080i/Includes_Furniture.xml
+msgctxt "#31002"
+msgid "Current Conditions"
+msgstr "תנאים נוכחיים"
+
+#: /1080i/Includes_Furniture.xml
+msgctxt "#31003"
+msgid "Current conditions"
+msgstr "תנאים נוכחיים"
+
+#: /1080i/Includes_Furniture.xml
+msgctxt "#31004"
+msgid "Sunset at"
+msgstr "שקיעה ב-"
+
+#: /1080i/Includes_Furniture.xml
+msgctxt "#31005"
+msgid "Sunrise at"
+msgstr "זריחה ב-"
+
+#: /1080i/Includes_Furniture.xml
+msgctxt "#31006"
+msgid "Weather provided by"
+msgstr "נתוני מזג אוויר סופקו על-ידי"
+
+#: /1080i/Includes_Furniture.xml
+msgctxt "#31007"
+msgid "Weather forecast for"
+msgstr "תחזית מזג האוויר עבור"
+
+#: /1080i/SkinSettings.xml
+msgctxt "#31008"
+msgid "Install weather fanart"
+msgstr "התקן פאנארט מזג אוויר"
+
+#: /1080i/SkinSettings.xml
+msgctxt "#31009"
+msgid "Complete"
+msgstr "הושלם"
+
+#: /1080i/SkinSettings.xml
+msgctxt "#31010"
+msgid "Weather fanart successfully installed"
+msgstr "פאנארט למזג האוויר הותקן בהצלחה"
+
+#: /1080i/MyWeather.xml
+msgctxt "#31011"
+msgid "Default weather icons"
+msgstr "סמלי ברירת המחדל למזג אוויר"
+
+#: /1080i/MyWeather.xml
+msgctxt "#31012"
+msgid "Weather fanart installed"
+msgstr "פאנארט מזג אוויר מותקן"
+
+#: /1080i/SkinSettings.xml
+msgctxt "#31013"
+msgid "Set weather icons"
+msgstr "הגדר סמלילי מזג אוויר"
+
+#: /1080i/MyVideoNav.xml
+msgctxt "#31014"
+msgid "Show extra fanart"
+msgstr "הצג אקסטרה פאנארט"
+
+#: /1080i/SkinSettings.xml
+msgctxt "#31015"
+msgid "Prefer colour media flags"
+msgstr "צבע מועדף לדגלוני מדיה"
+
+#: /1080i/SkinSettings.xml
+msgctxt "#31016"
+msgid "Prefer posters for music videos"
+msgstr "פוסטר מועדף לסרטוני מוזיקה"
+
+#: /shortcuts/overrides.xml
+msgctxt "#31017"
+msgid "Smart Shortcuts"
+msgstr "קיצור דרך חכם"
+
+#: /shortcuts/overrides.xml
+msgctxt "#31018"
+msgid "Common Shortcut"
+msgstr "קיצור דרך משותף"
+
+#: /1080i/script-globalsearch-main.xml
+msgctxt "#31019"
+msgid "Close"
+msgstr "סגירה"
+
+#: /1080i/script-globalsearch-main.xml
+msgctxt "#31020"
+msgid "mins"
+msgstr "‎דקות"
+
+#: /1080i/SkinSettings.xml
+msgctxt "#31021"
+msgid "Colors"
+msgstr "‎צבעים"
+
+#: /1080i/SkinSettings.xml
+msgctxt "#31022"
+msgid "Prefer animated artwork where available"
+msgstr "תשתמש בגרפיקה מונפשת כשהגרפיקה זמינה"
+
+#: /1080i/Includes_Statusbar.xml
+msgctxt "#31023"
+msgid "Fullscreen"
+msgstr "מסך מלא"
+
+#: /1080i/SkinSettings.xml
+msgctxt "#31024"
+msgid "Miscellaneous"
+msgstr "שונות"
+
+#: /1080i/SkinSettings.xml
+msgctxt "#31025"
+msgid "Prefer scrollbars"
+msgstr "העדף בסרגלי גלילה"
+
+#: /1080i/SkinSettings.xml
+msgctxt "#31026"
+msgid "Prefer fanart for episodes on home screen"
+msgstr "פאנארט מועדף עבור פרקים במסך הבית"
+
+#: /1080i/SkinSettings.xml
+msgctxt "#31027"
+msgid "Customise power menu"
+msgstr "התאמה אישית של תפריט כיבוי"
+
+#: /1080i/SkinSettings.xml
+msgctxt "#31028"
+msgid "Reset skin settings to defaults (WARNING: This will reset your home menu to skin defaults)"
+msgstr "איפוס הגדרות המעטפת לברירת מחדל (אזהרה - אפשרות זו תבטל את כל השינויים שנעשו במעטפת)"
+
+#: /1080i/SkinSettings.xml
+msgctxt "#31029"
+msgid "Use posters instead of landscape art for tvshows"
+msgstr "תשתמש בפוסטרים במקום אמנות נוף עבור סדרות"
+
+#: /1080i/SkinSettings.xml
+msgctxt "#31030"
+msgid "Backup / Restore"
+msgstr "גיבוי / שחזור"
+
+#: /1080i/SkinSettings.xml
+msgctxt "#31031"
+msgid "Backup skin settings"
+msgstr "הגדרות גיבוי מעטפת"
+
+#: /1080i/SkinSettings.xml
+msgctxt "#31032"
+msgid "Restore skin settings"
+msgstr "הגדרות שיחזור מעטפת"
+
+#: /1080i/SkinSettings.xml
+msgctxt "#31033"
+msgid "Backup and restore settings"
+msgstr "הגדרות המעטפת לגיבוי ושחזור"
+
+#: /1080i/SkinSettings.xml
+msgctxt "#31034"
+msgid "Change backup and restore path"
+msgstr "שנה גיבוי ונתיב שחזור"
+
+#: /1080i/Includes_Labels.xml
+msgctxt "#31035"
+msgid "hrs"
+msgstr " שעות "
+
+#: /1080i/Includes_Labels.xml
+msgctxt "#31036"
+msgid "hr"
+msgstr "שעות"
+
+#: /1080i/Includes_View.xml
+msgctxt "#31037"
+msgid "Posters"
+msgstr "פוסטרים"
+
+#: /1080i/Includes_View.xml
+msgctxt "#31038"
+msgid "Landscape"
+msgstr "תמונת נוף"
+
+#: /1080i/Includes_View.xml
+msgctxt "#31039"
+msgid "Tiles"
+msgstr "אריח"
+
+#: /1080i/SkinSettings.xml
+msgctxt "#31040"
+msgid "Prefer posters for tvshows"
+msgstr "העדף פוסטרים לסדרות"
+
+#: /1080i/Includes_Labels.xml
+msgctxt "#31041"
+msgid "Customise your home menu items, widgets, and backgrounds."
+msgstr "התאמה אישית של תפריט הבית שלך פריטים, רקעים, וישומונים."
+
+#: /1080i/Includes_Labels.xml
+msgctxt "#31042"
+msgid "Set a default widget or background that will be used if no widget is set for that home menu item."
+msgstr "הגדר יישומון או רקע ברירת המחדל שבו ייעשה שימוש אם אין יישומון מוגדר עבור אותו פריט בתפריט הבית."
+
+#: /1080i/Includes_Labels.xml
+msgctxt "#31043"
+msgid "Show your custom set background (or default skin background) instead of widget fanart."
+msgstr "הצג רקע מוגדר אישית (או רקע מעטפת ברירת המחדל) במקום יישומון פאנארט."
+
+#: /1080i/Includes_Labels.xml
+msgctxt "#31044"
+msgid "Always display the top menubar even when it doesn't have focus."
+msgstr "תמיד תציג את סרגל התפריטים העליון גם כאשר אין לו במה להתמקד."
+
+#: /1080i/Includes_Labels.xml
+msgctxt "#31045"
+msgid "Pressing back in the library will open the top bar directly rather than going home first."
+msgstr "לחיצה על \\'חזור\\' בספרייה תפתח את הסרגל העליון ישירות ולא תחזור קודם למסך הבית."
+
+#: /1080i/Includes_Labels.xml
+msgctxt "#31046"
+msgid "Whenever the top menubar is opened from the library the skin will return to the home screen to display your widgets."
+msgstr "כאשר סרגל התפריט העליון נפתח מהספרייה, המעטפת תחזור למסך הבית כדי להציג את היישומונים שלך."
+
+#: /1080i/Includes_Labels.xml
+msgctxt "#31047"
+msgid "This disables fanart in the library and shows the fallback image instead."
+msgstr "הפעולה הזו מבטלת את הפאנארט בספרייה ומראה את תמונת האיחזור במקום."
+
+#: /1080i/Includes_Labels.xml
+msgctxt "#31048"
+msgid "Set a fallback image for when no fanart is available."
+msgstr "הגדר תמונת איחזור כאשר הפאנארט לא זמין."
+
+#: /1080i/Includes_Labels.xml
+msgctxt "#31049"
+msgid "Show artist fanart stored from the library database on the music visualisation screen."
+msgstr "הצג פאנארט אמן שמאוחסן במסד הנתונים של הספרייה במסך חיזוי מוסיקה."
+
+#: /1080i/Includes_Labels.xml
+msgctxt "#31050"
+msgid "Use artist slideshow addon to display artist fanart on the music visualisation screen."
+msgstr "תשתמש בהרחבת slideshow להצגת פאנארט אמן על מסך חיזוי מוסיקה."
+
+#: /1080i/Includes_Labels.xml
+msgctxt "#31051"
+msgid "Make the artist fanart slightly transparent so that the music visualisation shows through."
+msgstr "הפוך את פאנארט האמן מעט שקוף כך שחיזוי המוסיקה ייראה דרכו."
+
+#: /1080i/Includes_Labels.xml
+msgctxt "#31052"
+msgid "Use a pan and zoom effect on the artist fanart in the music visualisation."
+msgstr "תשתמש באפקט תזוזה ואקט זום על פאנארט אמן בחיזוי מוסיקה."
+
+#: /1080i/Includes_Labels.xml
+msgctxt "#31053"
+msgid "Use poster aspect for musicvideos. Useful if your music videos are dvd concerts."
+msgstr "השתמש ביחס תצוגת פוסטר עבור סרטוני מוזיקה. שימושי אם סרטוני מוזיקה שלך הם קונצרטים ב-DVD."
+
+#: /1080i/Includes_Labels.xml
+msgctxt "#31054"
+msgid "Use poster aspect for tvshows instead of landscape fanart."
+msgstr "השתמש ביחס תצוגה של פוסטר לסדרות במקום פאנארט נוף."
+
+#: /1080i/Includes_Labels.xml
+msgctxt "#31055"
+msgid "Use skinhelper to provide animated posters and fanart. These can be downloaded from the context menu."
+msgstr "תשתמש ב-skinhelper כדי לספק כרזות ופאנארט מונפשים. ניתן להוריד אותם דרך תפריט הקישור."
+
+#: /1080i/Includes_Labels.xml
+msgctxt "#31056"
+msgid "Show fanart instead of episode thumbs on home widgets. Useful to prevent spoilers."
+msgstr "הצג פאנארט במקום תמונות ממוזערות של פרקים על יישומוני הבית. אפשרות זו שימושית למניעת ספוילרים."
+
+#: /1080i/Includes_Labels.xml
+msgctxt "#31057"
+msgid "Use skinhelper to provide random fanart background walls for hub windows."
+msgstr "תשתמש ב-skinhelper כדי לספק רקע פאנארט אקראי עבור חלונות הרכזת."
+
+#: /1080i/Includes_Labels.xml
+msgctxt "#31058"
+msgid "Change the highlight focus colour used throughout the skin."
+msgstr "שנה את צבע המיקוד שבשימוש בכל רחבי המעטפת."
+
+#: /1080i/Includes_Labels.xml
+msgctxt "#31059"
+msgid "Use colour instead of white for resolution, aspectratio, and codec media flags."
+msgstr "השתמש בצבע במקום לבן לרזולוציה, יחס תצוגה ודגלי מדיה ."
+
+#: /1080i/Includes_Labels.xml
+msgctxt "#31060"
+msgid "Set a music or video playlist that will run when kodi starts."
+msgstr "בחר תמונה, ווידאו או צליל שיופעלו כאשר קודי עולה."
+
+#: /1080i/Includes_Labels.xml
+msgctxt "#31061"
+msgid "Disable the alphabet strip and always use scrollbars instead."
+msgstr "בטל את רצועת האלפבית, תשתמש תמיד בפסי גלילה במקום הרצועה."
+
+#: /1080i/Includes_Labels.xml
+msgctxt "#31062"
+msgid "Disable changing view settings and some settings buttons in information dialogs."
+msgstr "השבת את שינוי הגדרות התצוגה וכמה לחצני הגדרות בתיבות הדו-שיח של מידע."
+
+#: /1080i/Includes_Labels.xml
+msgctxt "#31063"
+msgid "Change the items displayed in the power menu."
+msgstr "שינוי הפריטים המוצגים בתפריט הכיבוי."
+
+#: /1080i/Includes_Labels.xml
+msgctxt "#31064"
+msgid "Backup your skin settings and home menu shortcuts to a zipfile. Useful to migrate settings to a new setup."
+msgstr "גיבוי הגדרות המעטפת שלך, קיצורי דרך ואת תפריט הבית לקובץ zip. הפעולה שימושית להעברת הגדרות להתקנה חדשה."
+
+#: /1080i/Includes_Labels.xml
+msgctxt "#31065"
+msgid "Restore your skin settings, shortcuts, and widgets from a backup file."
+msgstr "לשחזר את הגדרות המעטפת קיצורי דרך והיישומונים מקובץ גיבוי."
+
+#: /1080i/Includes_Labels.xml
+msgctxt "#31066"
+msgid "Change the location where skin backup files are saved."
+msgstr "שנה את המיקום שבו נשמרים קבצי גיבוי של המעטפת."
+
+#: /1080i/Includes_Labels.xml
+msgctxt "#31067"
+msgid "Reset all your skin settings, shortcuts, and widgets to default skin settings. This will not change any kodi system settings."
+msgstr "אפס את כל הגדרות המעטפת, קיצורי הדרך והיישומונים להגדרות המעטפת המוגדרות כברירת מחדל. פעולה זו לא תשנה את הגדרות מערכת הקודי."
+
+#: /1080i/Includes_Weather.xml
+msgctxt "#31068"
+msgid "Cloud cover"
+msgstr "עטיפת ענן"
+
+#: /1080i/Includes_Weather.xml
+msgctxt "#31069"
+msgid "Cloud cover is "
+msgstr "עטיפת הענן היא "
+
+#: /1080i/Includes_Weather.xml
+msgctxt "#31070"
+msgid "Cloud Cover"
+msgstr "עטיפת ענן"
+
+#: /1080i/Includes_Labels.xml
+msgctxt "#31071"
+msgid "IMDB Top250"
+msgstr "IMDB Top250"
+
+#: /1080i/SkinSettings.xml
+msgctxt "#31072"
+msgid "Show clearlogo in upper right corner of fanart"
+msgstr "הצג סמל שקוף בפינה הימנית העליונה של הפאנארט"
+
+#: /1080i/SkinSettings.xml
+msgctxt "#31073"
+msgid "Show discart"
+msgstr "הצג גרפיקת דיסק"
+
+#: /1080i/SkinSettings.xml
+msgctxt "#31074"
+msgid "Make bottom bar transparent"
+msgstr "הפוך את הסרגל התחתון לשקוף"
+
+#: /1080i/SkinSettings.xml
+msgctxt "#31075"
+msgid "Apply transparency to bottom bar"
+msgstr "החל שקיפות לסרגל התחתון"
+
+#: /1080i/SkinSettings.xml
+msgctxt "#31076"
+msgid "Enable transparency"
+msgstr "אפשר שקיפות"
+
+#: /1080i/Includes_Labels.xml
+msgctxt "#31077"
+msgid "Add a slight transparency to the top and bottom bars."
+msgstr "הוסף שקיפות קלה לפסים העליונים והתחתונים."
+
+#: /1080i/Includes_Labels.xml
+msgctxt "#31078"
+msgid "Ended"
+msgstr "הסתיים"
+
+#: /1080i/SkinSettings.xml
+msgctxt "#31079"
+msgid "Pause video when opening extended info"
+msgstr "השהה וידאו בעת פתיחת מידע מורחב"
+
+#: /1080i/SkinSettings.xml
+msgctxt "#31080"
+msgid "Artwork button downloads all available artwork (as specified in artwork downloader settings)"
+msgstr "לחצן הגרפיקה מוריד את כל הגרפיקה הזמינה (כמפורט בהגדרות של הורדת גרפיקה)"
+
+#: /1080i/SkinSettings.xml
+msgctxt "#31081"
+msgid "Hide plot"
+msgstr "הסתר עלילה"
+
+#: /1080i/DialogPlayerProcessInfo.xml
+msgctxt "#31082"
+msgid "Video process information"
+msgstr "פרטי תהליך וידאו"
+
+#: /1080i/DialogPlayerProcessInfo.xml
+msgctxt "#31083"
+msgid "Framerate"
+msgstr "קצב פריימים"
+
+#: /1080i/DialogPlayerProcessInfo.xml
+msgctxt "#31084"
+msgid "Aspect Ratio"
+msgstr "יחס תצוגה"
+
+#: /1080i/Includes_OSD.xml
+msgctxt "#31085"
+msgid "Codec Info"
+msgstr "מיגע על הקודק"
+
+#: /1080i/Includes_OSD.xml
+msgctxt "#31086"
+msgid "Extended Info"
+msgstr "‎מידע מורחב"
+
+#: /1080i/SkinSettings.xml
+msgctxt "#31087"
+msgid "Show colour overlay effect"
+msgstr "הצג באפקט שכבת צבע"
+
+#: /1080i/SkinSettings.xml
+msgctxt "#31088"
+msgid "Show scrolling text effect"
+msgstr "הצג באפקט טקסט נגלל"
+
+#: /1080i/SkinSettings.xml
+msgctxt "#31089"
+msgid "Position context menu based on focused item"
+msgstr "מיקום תפריט הקישור מבוסס על פריט ממוקד"
+
+#: /1080i/SkinSettings.xml
+msgctxt "#31090"
+msgid "Display duration format as X HRS XX MINS"
+msgstr "הצג את משך הניגון בפורמט X שעות XX דקות"
+
+#: /1080i/SkinSettings.xml
+msgctxt "#31091"
+msgid "Prefer list view for seasons"
+msgstr "העדף תצוגת רשימה עבור עונות"
+
+#: /1080i/Includes_Object.xml
+msgctxt "#31092"
+msgid "System Name"
+msgstr "שם מערכת"
+
+#: /1080i/Includes_Object.xml
+msgctxt "#31093"
+msgid "Gateway Address"
+msgstr "כתובות השער"
+
+#: /1080i/Includes_Object.xml
+msgctxt "#31094"
+msgid "Network and Storage"
+msgstr "רשת ואחסון"
+
+#: /1080i/Includes_Object.xml
+msgctxt "#31095"
+msgid "Video Encoder"
+msgstr "מקודד וידאו"
+
+#: /1080i/Includes_Object.xml
+msgctxt "#31096"
+msgid "Memory"
+msgstr "זיכרון"
+
+#: /1080i/Includes_Object.xml
+msgctxt "#31097"
+msgid "Fan Speed"
+msgstr "מהירות המאוורר"
+
+#: /1080i/Includes_Object.xml
+msgctxt "#31098"
+msgid "CPU Info"
+msgstr "מידע על המעבד"
+
+#: /1080i/Includes_Object.xml
+msgctxt "#31099"
+msgid "CPU Usage"
+msgstr "שימוש מעבד"
+
+#: /1080i/Includes_Object.xml
+msgctxt "#31100"
+msgid "Processor, Memory and Video"
+msgstr "מעבד, זיכרון ווידאו"
+
+msgctxt "#31101"
+msgid "items"
+msgstr "פריטים"
+
+msgctxt "#31102"
+msgid "min"
+msgstr "דקות"
+
+msgctxt "#31103"
+msgid "Live TV"
+msgstr "‎טלוויזיה"
+
+msgctxt "#31104"
+msgid "Used Memory"
+msgstr "זיכרון בשימוש"
+
+msgctxt "#31105"
+msgid "Spotlight"
+msgstr "באור הזרקור"
+
+msgctxt "#31106"
+msgid "Ends "
+msgstr "מסתיים "
+
+msgctxt "#31107"
+msgid "Video Stream"
+msgstr "הזרמת  וידאו"
+
+msgctxt "#31108"
+msgid "Current Menu"
+msgstr "תפריט נוכחי"
+
+msgctxt "#31109"
+msgid "Customise home menu"
+msgstr "‎התאמה אישית של תפריט הבית"
+
+msgctxt "#31110"
+msgid "Background"
+msgstr "ברקע"
+
+msgctxt "#31111"
+msgid "Show now playing video in background"
+msgstr "הצג וידאו שמנגן עכשיו ברקע"
+
+msgctxt "#31112"
+msgid "Submenu"
+msgstr "תת תפריט"
+
+msgctxt "#31113"
+msgid "No Timer"
+msgstr "ללא שעון עצר"
+
+msgctxt "#31114"
+msgid "Now Playing"
+msgstr "מנגן"
+
+msgctxt "#31115"
+msgid "Show header"
+msgstr "‎הצג כותרת"
+
+msgctxt "#31116"
+msgid "DVD Menu"
+msgstr "תפריט DVD"
+
+msgctxt "#31117"
+msgid "3D Mode"
+msgstr "מצב תלת מימד"
+
+msgctxt "#31118"
+msgid "Show artist slideshow"
+msgstr "הצג הצגת שקופיות של אמן"
+
+msgctxt "#31119"
+msgid "Show visualisation behind slideshow"
+msgstr "‎הצג אפקט חיזוי מאחורי מצגת אמן"
+
+msgctxt "#31120"
+msgid "Animate artist slideshow"
+msgstr "‎הנפש מצגת אמן"
+
+msgctxt "#31121"
+msgid "Show fanart"
+msgstr "הצג  פאנארט"
+
+msgctxt "#31122"
+msgid "Ongoing Episodes"
+msgstr "פרקים מתמשכים"
+
+msgctxt "#31123"
+msgid "Resumable Movies"
+msgstr "סרטים הניתנים לחידוש"
+
+msgctxt "#31124"
+msgid "Recent Movies"
+msgstr "סרטים אחרונים"
+
+msgctxt "#31125"
+msgid "Recent Episodes"
+msgstr "פרקים אחרונים"
+
+msgctxt "#31126"
+msgid "Episodes Spotlight"
+msgstr "זרקור פרקים"
+
+msgctxt "#31127"
+msgid "Movies Spotlight"
+msgstr "זרקור סרטים"
+
+#: /1080i/SkinSettings.xml
+msgctxt "#31128"
+msgid "Allow scrolling through items when in full fanart mode"
+msgstr "אפשר גלילה בפריטים כאשר פאנארט במצב מלא"
+
+#: /1080i/SkinSettings.xml
+msgctxt "#31129"
+msgid "Enable full fanart mode"
+msgstr "הפעלת מצב פאנארט מלא"
+
+#: /1080i/SkinSettings.xml
+msgctxt "#31130"
+msgid "Show media flags with video osd info"
+msgstr "הצג דגלי מדיה עם מסך תצוגת מידע וידאו"
+
+#: /1080i/MusicOSD.xml
+msgctxt "#31131"
+msgid "Colour overlay"
+msgstr "שכבת צבע"
+
+msgctxt "#31132"
+msgid "Reset home menu shortcuts to defaults"
+msgstr "אפס את קיצורי הדרך של התפריט הבית לברירות המחדל"
+
+msgctxt "#31133"
+msgid "Hide watched"
+msgstr "הסתר פריטים שנצפו"
+
+msgctxt "#31134"
+msgid "Trending Movies"
+msgstr "‎סרטים טרנדיים"
+
+msgctxt "#31135"
+msgid "Trending Shows"
+msgstr "סדרות טרנדיות"
+
+msgctxt "#31136"
+msgid "Airing Shows"
+msgstr "סדרות משודרות"
+
+msgctxt "#31137"
+msgid "Premiering Shows"
+msgstr "סדרות בכורה"
+
+msgctxt "#31138"
+msgid "Content Loading"
+msgstr "‎תוכן נטען"
+
+msgctxt "#31139"
+msgid "Box Office"
+msgstr "בקופות"
+
+msgctxt "#31140"
+msgid "Budget"
+msgstr "תקציב"
+
+msgctxt "#31141"
+msgid "Youtube"
+msgstr "‎יו-טיוב"
+
+#: /1080i/MusicOSD.xml
+msgctxt "#31142"
+msgid "Scrolling text"
+msgstr "טקסט גלילה"
+
+msgctxt "#31143"
+msgid "Set weather fanart"
+msgstr "‎הגדר פאנארט מזג אוויר"
+
+msgctxt "#31144"
+msgid "Widgets"
+msgstr "יישומונים"
+
+#: /1080i/SkinSettings.xml
+msgctxt "#31145"
+msgid "Show poster and plot when video is paused"
+msgstr "הצג פוסטר ועלילה כאשר הווידאו מושהה"
+
+msgctxt "#31146"
+msgid "Animate fanart"
+msgstr "‎הנפשת פאנארט"
+
+msgctxt "#31147"
+msgid "Extra Info"
+msgstr "‎מידע נוסף"
+
+#: /1080i/SkinSettings.xml
+msgctxt "#31148"
+msgid "Flatten statusbar gradient"
+msgstr "שטח באופן הדרגתי את שורת המצב"
+
+msgctxt "#31149"
+msgid "Replace widget fanart with background"
+msgstr "החלף יישומון פאנארט עם הרקע"
+
+msgctxt "#31150"
+msgid "Set fallback image"
+msgstr "הגדר תמונה לאיחזור"
+
+#: /1080i/SkinSettings.xml
+msgctxt "#31151"
+msgid "Hide tvshow labels"
+msgstr "הסתר תוויות סדרות"
+
+msgctxt "#31152"
+msgid "Furniture"
+msgstr "ריהוט"
+
+#: /1080i/Includes_Statusbar.xml
+msgctxt "#31153"
+msgid "Sort by:"
+msgstr "מיין לפי:"
+
+#: /1080i/Includes_Labels.xml
+msgctxt "#31154"
+msgid "Only show plot when pressing info."
+msgstr "הצג רק עלילה בעת הקשה על פרטים."
+
+#: /1080i/Includes_Labels.xml
+msgctxt "#31155"
+msgid "Enable showing full fanart by pressing down from the statusbar."
+msgstr "אפשר הצגת פאנארט מלא על ידי לחיצה מטה משורת המצב."
+
+#: /1080i/Includes_Labels.xml
+msgctxt "#31156"
+msgid "Apply a color changing overlay effect to music visualisation background."
+msgstr "החל אפקט שכבת שינוי צבע לרקע מוסיקה להדמיה."
+
+#: /1080i/Includes_Labels.xml
+msgctxt "#31157"
+msgid "A scrolling text effect showing artist, album and song info overlayed on the music visualisation background."
+msgstr "אפקט טקסט נגלל המציג את האמן, האלבום ואת פרטי השיר על גבי רקע החיזוי של המוסיקה."
+
+#: /1080i/SkinSettings.xml
+msgctxt "#31158"
+msgid "Automatically show visualisation after starting a song"
+msgstr "פתח חיזוי אוטומטית לאחר הפעלת שיר"
+
+#: /1080i/SkinSettings.xml
+msgctxt "#31159"
+msgid "Show current video cache level in progress bar"
+msgstr "הצג את רמת המטמון הנוכחית של הווידאו בסרגל ההתקדמות"
+
+#: /1080i/script-nextup-notification-PostPlayInfo.xml
+msgctxt "#31160"
+msgid "Next Up"
+msgstr "השידור הבא"
+
+#: /1080i/script-nextup-notification-PostPlayInfo.xml
+msgctxt "#31161"
+msgid "Show/Hide Spoilers"
+msgstr "הצג או הסתר ספוילרים"
+
+#: /1080i/script-nextup-notification-PostPlayInfo.xml
+msgctxt "#31162"
+msgid "Playing Next..."
+msgstr "הניגון הבא..."
+
+#: /1080i/script-nextup-notification-PostPlayInfo.xml
+msgctxt "#31163"
+msgid "Previous"
+msgstr "הקודם"
+
+#: /1080i/DialogBusy.xml
+msgctxt "#31164"
+msgid "Kodi is busy"
+msgstr "קודי עסוק"
+
+#: /1080i/SkinSettings.xml
+msgctxt "#31165"
+msgid "Use minimal busy loader"
+msgstr "תשתמש בעיצוב מינמלי לסטטוס עסוק"
+
+#: /1080i/SkinSettings.xml
+msgctxt "#31166"
+msgid "Show PVR recording notifications"
+msgstr "הצג הודעות הקלטות PVR"
+
+#: /1080i/SkinSettings.xml
+msgctxt "#31167"
+msgid "Widgets autoscroll"
+msgstr "גלילה אוטומטית ליישומונים"
+
+msgctxt "#31168"
+msgid "Startup video or music playlist"
+msgstr "סרטון פתיח או רשימת ניגון"
+
+msgctxt "#31169"
+msgid "Extras"
+msgstr "‎תוספות"
+
+msgctxt "#31170"
+msgid "Cinema Experience"
+msgstr "חוויית קולנוע"
+
+msgctxt "#31171"
+msgid "Video Extras"
+msgstr "תוספות וידאו"
+
+msgctxt "#31172"
+msgid "Show music visualisation in background"
+msgstr "הצג חיזוי מוזיקה ברקע"
+
+msgctxt "#31173"
+msgid "Recently added"
+msgstr "נוסף לאחרונה"
+
+msgctxt "#31174"
+msgid "Recently played"
+msgstr "‎נוגן לאחרונה"
+
+msgctxt "#31175"
+msgid "Play random"
+msgstr "נגן אקראי"
+
+msgctxt "#31176"
+msgid "Delete Settings Shortcut"
+msgstr "מחק קיצור דרך להגדרות"
+
+msgctxt "#31177"
+msgid "Are you sure you want to remove the settings shortcut?[CR]Please ensure that you have an alternative method of accessing settings before you remove this shortcut."
+msgstr "‎האם אתה בטוח שברצונך להסיר את קיצור הדרך להגדרות?[CR]אנא ודא שיש לך שיטה חלופית לגישה להגדרות לפני שאתה מסיר את קיצור הדרך הזה."
+
+#: /1080i/SkinSettings.xml
+msgctxt "#31178"
+msgid "Autoscroll when idle inside library"
+msgstr "גלילה אוטומטית בעת העדר פעילות בתוך הספרייה"
+
+msgctxt "#31181"
+msgid "Select icon"
+msgstr "בחר סמליל"
+
+msgctxt "#31187"
+msgid "Random Albums"
+msgstr "אלבומים אקראיים"
+
+msgctxt "#31188"
+msgid "Recent Albums"
+msgstr "אלבומים אחרונים"
+
+msgctxt "#31189"
+msgid "Recommended Albums"
+msgstr "‎אלבומים מומלצים"
+
+msgctxt "#31191"
+msgid "Directed by"
+msgstr "בימוי"
+
+msgctxt "#31194"
+msgid "View Options"
+msgstr "הצג אפשרויות"
+
+msgctxt "#31195"
+msgid "Reload Skin"
+msgstr "טען מעטפת מחדש"
+
+msgctxt "#31199"
+msgid "Kiosk mode"
+msgstr "‎מצב קיוסק"
+
+msgctxt "#31203"
+msgid "Artwork"
+msgstr "גרפיקה"
+
+msgctxt "#31204"
+msgid "Similar to"
+msgstr "‎דומה ל-"
+
+msgctxt "#31205"
+msgid "Released by"
+msgstr "שוחרר על ידי"
+
+msgctxt "#31206"
+msgid "Similar"
+msgstr "‎דומה"
+
+msgctxt "#31207"
+msgid "themoviedb.org"
+msgstr "themoviedb.org"
+
+msgctxt "#31208"
+msgid "In Cinemas"
+msgstr "‎בבתי הקולנוע"
+
+msgctxt "#31209"
+msgid "Upcoming"
+msgstr "‎בקרוב"
+
+msgctxt "#31210"
+msgid "Popular"
+msgstr "פופולרי"
+
+msgctxt "#31211"
+msgid "Top Rated"
+msgstr "מדורגים הכי גבוה"
+
+msgctxt "#31212"
+msgid "Airing"
+msgstr "‎משודר"
+
+msgctxt "#31213"
+msgid "Today"
+msgstr "היום"
+
+msgctxt "#31214"
+msgid "Show plot"
+msgstr "הצג עלילה"
+
+msgctxt "#31215"
+msgid "Unwatched"
+msgstr "לא נצפה"
+
+msgctxt "#31220"
+msgid "Next Aired"
+msgstr "הבא שישודר"
+
+msgctxt "#31223"
+msgid "Upcoming Movies"
+msgstr "סרטים שיגיעו בקרוב"
+
+msgctxt "#31224"
+msgid "Popular Movies"
+msgstr "‎סרטים פופולריים"
+
+msgctxt "#31225"
+msgid "Top Rated Movies"
+msgstr "‎סרטים בדירוג גבוה"
+
+msgctxt "#31226"
+msgid "Popular TV Shows"
+msgstr "סדרות פופולריות"
+
+msgctxt "#31227"
+msgid "Top Rated TV Shows"
+msgstr "סדרות בדירוג גבוה"
+
+msgctxt "#31228"
+msgid "On Air TV Shows"
+msgstr "סדרות שמשודרות כעת"
+
+msgctxt "#31229"
+msgid "TV Shows Airing Today"
+msgstr "סדרות שמשודרות היום"
+
+msgctxt "#31232"
+msgid "Reset path"
+msgstr "אפס נתיב"
+
+msgctxt "#31236"
+msgid "Now playing..."
+msgstr "מנגן כעת..."
+
+msgctxt "#31241"
+msgid "Additional info"
+msgstr "מידע נוסף"
+
+msgctxt "#31242"
+msgid "Provided by themoviedb.org"
+msgstr "‎מוגש על ידי themoviedb.org"
+
+msgctxt "#31243"
+msgid "pages"
+msgstr "‎דפים"
+
+msgctxt "#31251"
+msgid "Weather Fanart"
+msgstr "פאנארט מזג אוויר"
+
+msgctxt "#31252"
+msgid "Weather Forecast"
+msgstr "תחזית מזג האוויר"
+
+msgctxt "#31259"
+msgid "Extra fanart"
+msgstr "פאנארט נוסף"
+
+msgctxt "#31261"
+msgid "Widget aspect"
+msgstr "היבט יישומון"
+
+msgctxt "#31262"
+msgid "Poster"
+msgstr "פוסטר"
+
+msgctxt "#31263"
+msgid "Square"
+msgstr "מרובע"
+
+msgctxt "#31264"
+msgid "Thumbnail"
+msgstr "תמונה ממוזערת"
+
+msgctxt "#31265"
+msgid "Fanart"
+msgstr "פאנארט"
+
+msgctxt "#31266"
+msgid "Widget"
+msgstr "יישומונים"
+
+msgctxt "#31267"
+msgid "Action"
+msgstr "פעולה"
+
+msgctxt "#31268"
+msgid "Label"
+msgstr "תווית"
+
+msgctxt "#31269"
+msgid "Fallback widget"
+msgstr "יישומון שיחזור"
+
+msgctxt "#31270"
+msgid "Video / Music OSD"
+msgstr "מסך תצוגת וידאו / מוסיקה"
+
+msgctxt "#31271"
+msgid "Single Image"
+msgstr "תמונה בודדת"
+
+msgctxt "#31272"
+msgid "Multi Image"
+msgstr "תמונות מרובות"
+
+msgctxt "#31279"
+msgid "Video decoder"
+msgstr "מקודד ווידאו"
+
+msgctxt "#31280"
+msgid "Pixel format"
+msgstr "פורמט פיקסל"
+
+msgctxt "#31281"
+msgid "by"
+msgstr "על ידי"
+
+msgctxt "#31282"
+msgid "on"
+msgstr "פועל"
+
+msgctxt "#31283"
+msgid "Always show the home menubar"
+msgstr "הצג תמיד את סרגל תפריטי הבית"
+
+#: MPAA Rating
+msgctxt "#31284"
+msgid "Classification"
+msgstr "סיווג"
+
+msgctxt "#31285"
+msgid "Pressing back opens home menubar"
+msgstr "לחיצה על חזרה פותחת סרגל תפריטי הבית"
+
+msgctxt "#31286"
+msgid "Select highlight colour"
+msgstr "בחר צבע הדגשה"
+
+msgctxt "#31287"
+msgid "Reset to default"
+msgstr "אתחל לברירת מחדל"
+
+msgctxt "#31288"
+msgid "Always show widgets (return home on focusing menubar)"
+msgstr "הצג תמיד יישומונים (חזרה לבית ממוקדת בסרגל תפריטים)"
+
+msgctxt "#31289"
+msgid "Awards"
+msgstr "פרסים"
+
+msgctxt "#31290"
+msgid "Consensus"
+msgstr "קבלת החלטות בהסכמה"
+
+msgctxt "#31291"
+msgid "Hub items"
+msgstr "פריטי רכזת"
+
+msgctxt "#31292"
+msgid "Hub"
+msgstr "רכזת"
+
+msgctxt "#31293"
+msgid "Addon hub"
+msgstr "רכזת הרחבה"
+
+msgctxt "#31294"
+msgid "Hubs"
+msgstr "רכזות (Hubs)"
