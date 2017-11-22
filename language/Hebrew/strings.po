@@ -5,7 +5,7 @@
 msgid ""
 msgstr ""
 "POT-Creation-Date: 2014-10-26 17:05+0000\n"
-"PO-Revision-Date: 2017-11-02 13:17+0200\n"
+"PO-Revision-Date: 2017-11-13 14:15+0200\n"
 "Last-Translator: A. Dambledore\n"
 "Language-Team: Eng2Heb\n"
 "Language: he_IL\n"
@@ -23,7 +23,7 @@ msgstr "אפשר רקעים של skin helper עבור חלונות הרכזת"
 #: /1080i/DialogVideoInfo.xml
 msgctxt "#31001"
 msgid "Revenue"
-msgstr "הכנסה"
+msgstr "הכנסות"
 
 #: /1080i/Includes_Furniture.xml
 msgctxt "#31002"
@@ -118,12 +118,12 @@ msgstr "סגירה"
 #: /1080i/script-globalsearch-main.xml
 msgctxt "#31020"
 msgid "mins"
-msgstr "‎דקות"
+msgstr "דקות"
 
 #: /1080i/SkinSettings.xml
 msgctxt "#31021"
 msgid "Colors"
-msgstr "‎צבעים"
+msgstr "צבעים"
 
 #: /1080i/SkinSettings.xml
 msgctxt "#31022"
@@ -168,7 +168,7 @@ msgstr "תשתמש בפוסטרים במקום אמנות נוף עבור סדר
 #: /1080i/SkinSettings.xml
 msgctxt "#31030"
 msgid "Backup / Restore"
-msgstr "גיבוי / שחזור"
+msgstr "גיבוי ושחזור"
 
 #: /1080i/SkinSettings.xml
 msgctxt "#31031"
@@ -193,7 +193,7 @@ msgstr "שנה גיבוי ונתיב שחזור"
 #: /1080i/Includes_Labels.xml
 msgctxt "#31035"
 msgid "hrs"
-msgstr " שעות "
+msgstr "שעות"
 
 #: /1080i/Includes_Labels.xml
 msgctxt "#31036"
@@ -443,12 +443,12 @@ msgstr "יחס תצוגה"
 #: /1080i/Includes_OSD.xml
 msgctxt "#31085"
 msgid "Codec Info"
-msgstr "מיגע על הקודק"
+msgstr "מידע על המקודד"
 
 #: /1080i/Includes_OSD.xml
 msgctxt "#31086"
 msgid "Extended Info"
-msgstr "‎מידע מורחב"
+msgstr "מידע מורחב"
 
 #: /1080i/SkinSettings.xml
 msgctxt "#31087"
@@ -530,7 +530,7 @@ msgstr "דקות"
 
 msgctxt "#31103"
 msgid "Live TV"
-msgstr "‎טלוויזיה"
+msgstr "טלוויזיה חיה"
 
 msgctxt "#31104"
 msgid "Used Memory"
@@ -554,11 +554,11 @@ msgstr "תפריט נוכחי"
 
 msgctxt "#31109"
 msgid "Customise home menu"
-msgstr "‎התאמה אישית של תפריט הבית"
+msgstr "התאמה אישית של תפריט הבית"
 
 msgctxt "#31110"
 msgid "Background"
-msgstr "ברקע"
+msgstr "רקע"
 
 msgctxt "#31111"
 msgid "Show now playing video in background"
@@ -566,7 +566,7 @@ msgstr "הצג וידאו שמנגן עכשיו ברקע"
 
 msgctxt "#31112"
 msgid "Submenu"
-msgstr "תת תפריט"
+msgstr "תת-תפריט"
 
 msgctxt "#31113"
 msgid "No Timer"
@@ -578,7 +578,7 @@ msgstr "מנגן"
 
 msgctxt "#31115"
 msgid "Show header"
-msgstr "‎הצג כותרת"
+msgstr "הצג כותרת"
 
 msgctxt "#31116"
 msgid "DVD Menu"
@@ -594,11 +594,11 @@ msgstr "הצג הצגת שקופיות של אמן"
 
 msgctxt "#31119"
 msgid "Show visualisation behind slideshow"
-msgstr "‎הצג אפקט חיזוי מאחורי מצגת אמן"
+msgstr "הצג אפקט חיזוי מאחורי מצגת אמן"
 
 msgctxt "#31120"
 msgid "Animate artist slideshow"
-msgstr "‎הנפש מצגת אמן"
+msgstr "הנפש מצגת אמן"
 
 msgctxt "#31121"
 msgid "Show fanart"
@@ -658,7 +658,7 @@ msgstr "הסתר פריטים שנצפו"
 
 msgctxt "#31134"
 msgid "Trending Movies"
-msgstr "‎סרטים טרנדיים"
+msgstr "סרטים טרנדיים"
 
 msgctxt "#31135"
 msgid "Trending Shows"
@@ -674,11 +674,11 @@ msgstr "סדרות בכורה"
 
 msgctxt "#31138"
 msgid "Content Loading"
-msgstr "‎תוכן נטען"
+msgstr "התוכן נטען"
 
 msgctxt "#31139"
 msgid "Box Office"
-msgstr "בקופות"
+msgstr "שוברי קופות"
 
 msgctxt "#31140"
 msgid "Budget"
@@ -686,7 +686,7 @@ msgstr "תקציב"
 
 msgctxt "#31141"
 msgid "Youtube"
-msgstr "‎יו-טיוב"
+msgstr "יו-טיוב"
 
 #: /1080i/MusicOSD.xml
 msgctxt "#31142"
@@ -695,7 +695,7 @@ msgstr "טקסט גלילה"
 
 msgctxt "#31143"
 msgid "Set weather fanart"
-msgstr "‎הגדר פאנארט מזג אוויר"
+msgstr "הגדר פאנארט מזג אוויר"
 
 msgctxt "#31144"
 msgid "Widgets"
@@ -708,11 +708,11 @@ msgstr "הצג פוסטר ועלילה כאשר הווידאו מושהה"
 
 msgctxt "#31146"
 msgid "Animate fanart"
-msgstr "‎הנפשת פאנארט"
+msgstr "הנפשת פאנארט"
 
 msgctxt "#31147"
 msgid "Extra Info"
-msgstr "‎מידע נוסף"
+msgstr "מידע נוסף"
 
 #: /1080i/SkinSettings.xml
 msgctxt "#31148"
@@ -817,7 +817,7 @@ msgstr "סרטון פתיח או רשימת ניגון"
 
 msgctxt "#31169"
 msgid "Extras"
-msgstr "‎תוספות"
+msgstr "תוספות"
 
 msgctxt "#31170"
 msgid "Cinema Experience"
@@ -837,7 +837,7 @@ msgstr "נוסף לאחרונה"
 
 msgctxt "#31174"
 msgid "Recently played"
-msgstr "‎נוגן לאחרונה"
+msgstr "נוגן לאחרונה"
 
 msgctxt "#31175"
 msgid "Play random"
@@ -849,7 +849,7 @@ msgstr "מחק קיצור דרך להגדרות"
 
 msgctxt "#31177"
 msgid "Are you sure you want to remove the settings shortcut?[CR]Please ensure that you have an alternative method of accessing settings before you remove this shortcut."
-msgstr "‎האם אתה בטוח שברצונך להסיר את קיצור הדרך להגדרות?[CR]אנא ודא שיש לך שיטה חלופית לגישה להגדרות לפני שאתה מסיר את קיצור הדרך הזה."
+msgstr "האם אתה בטוח שברצונך להסיר את קיצור הדרך להגדרות?[CR]אנא ודא שיש לך שיטה חלופית לגישה להגדרות לפני שאתה מסיר את קיצור הדרך הזה."
 
 #: /1080i/SkinSettings.xml
 msgctxt "#31178"
@@ -870,7 +870,7 @@ msgstr "אלבומים אחרונים"
 
 msgctxt "#31189"
 msgid "Recommended Albums"
-msgstr "‎אלבומים מומלצים"
+msgstr "אלבומים מומלצים"
 
 msgctxt "#31191"
 msgid "Directed by"
@@ -886,7 +886,7 @@ msgstr "טען מעטפת מחדש"
 
 msgctxt "#31199"
 msgid "Kiosk mode"
-msgstr "‎מצב קיוסק"
+msgstr "מצב קיוסק"
 
 msgctxt "#31203"
 msgid "Artwork"
@@ -894,7 +894,7 @@ msgstr "גרפיקה"
 
 msgctxt "#31204"
 msgid "Similar to"
-msgstr "‎דומה ל-"
+msgstr "דומה ל-"
 
 msgctxt "#31205"
 msgid "Released by"
@@ -902,7 +902,7 @@ msgstr "שוחרר על ידי"
 
 msgctxt "#31206"
 msgid "Similar"
-msgstr "‎דומה"
+msgstr "דומה"
 
 msgctxt "#31207"
 msgid "themoviedb.org"
@@ -910,11 +910,11 @@ msgstr "themoviedb.org"
 
 msgctxt "#31208"
 msgid "In Cinemas"
-msgstr "‎בבתי הקולנוע"
+msgstr "בבתי הקולנוע"
 
 msgctxt "#31209"
 msgid "Upcoming"
-msgstr "‎בקרוב"
+msgstr "בקרוב"
 
 msgctxt "#31210"
 msgid "Popular"
@@ -926,7 +926,7 @@ msgstr "מדורגים הכי גבוה"
 
 msgctxt "#31212"
 msgid "Airing"
-msgstr "‎משודר"
+msgstr "משודר"
 
 msgctxt "#31213"
 msgid "Today"
@@ -950,11 +950,11 @@ msgstr "סרטים שיגיעו בקרוב"
 
 msgctxt "#31224"
 msgid "Popular Movies"
-msgstr "‎סרטים פופולריים"
+msgstr "סרטים פופולריים"
 
 msgctxt "#31225"
 msgid "Top Rated Movies"
-msgstr "‎סרטים בדירוג גבוה"
+msgstr "סרטים בדירוג גבוה"
 
 msgctxt "#31226"
 msgid "Popular TV Shows"
@@ -986,11 +986,11 @@ msgstr "מידע נוסף"
 
 msgctxt "#31242"
 msgid "Provided by themoviedb.org"
-msgstr "‎מוגש על ידי themoviedb.org"
+msgstr "מוגש על ידי themoviedb.org"
 
 msgctxt "#31243"
 msgid "pages"
-msgstr "‎דפים"
+msgstr "דפים"
 
 msgctxt "#31251"
 msgid "Weather Fanart"
@@ -1006,7 +1006,7 @@ msgstr "פאנארט נוסף"
 
 msgctxt "#31261"
 msgid "Widget aspect"
-msgstr "היבט יישומון"
+msgstr "יחס תצוגה ליישומון"
 
 msgctxt "#31262"
 msgid "Poster"
