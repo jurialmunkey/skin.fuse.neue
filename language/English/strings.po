@@ -1111,3 +1111,7 @@ msgstr ""
 msgctxt "#31294"
 msgid "Hubs"
 msgstr ""
+
+msgctxt "#31295"
+msgid "Special Features"
+msgstr ""
