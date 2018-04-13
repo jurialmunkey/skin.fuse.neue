@@ -330,6 +330,15 @@
                         <include>Dialog_Info_Buttons</include>
                         <visible>!String.IsEmpty(ListItem.Trailer)</visible>
                     </control>
+                    
+                    <control type="button" id="146">
+                        <description>Special Features button</description>
+                        <label>31295</label>
+                        <onclick>Action(close)</onclick>
+                        <onclick>RunScript(plugin.video.specialfeatures,listitem)</onclick>
+                        <include>Dialog_Info_Buttons</include>
+                        <visible>String.IsEqual(Window(home).Property(SpecialFeatures.Visible),true)</visible>
+                    </control>
 
                     <control type="button" id="9003">
                         <label>206</label>
